@@ -2,13 +2,13 @@
 
 The Middleman is a command-line tool for creating static websites using all the shortcuts and tools of the modern web development environment. 
 
-Middleman assumes familiarity with the command-line. The Ruby language and the Sinatra web framework form the base of the tool and familiarity with both will go a long way in helping users understand why Middleman works the way it does.
+Middleman assumes familiarity with the command-line. The Ruby language and the Sinatra web framework form the base of the tool. Familiarity with both will go a long way in helping users understand why Middleman works the way it does.
 
 ## Installation
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman. 
 
-Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed using the Mac App Store.
+Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id422352214?mt=12).
 
 Windows users will need to install Ruby using [The RubyInstaller for Windows]. Windows users should also install [The RubyInstall DevKit] to install Middleman's compiled dependencies.
 
@@ -34,6 +34,8 @@ The mm-init command will setup a Middleman project directory for your new site. 
 
 ### The Skeleton
 
+Every new project creates a basic web development skeleton for you. This automates the construction of a hierarchy of folders and files that you use in all of your projects.
+
 A brand-new project folder will contain a source/ directory, a config.rb file and a config.ru file. The source directory is where you will build your website. The skeleton project contains folders for javascript, css and images, but you can change these to match your own personal preferences.
 
 The config.rb file contains settings for Middleman and commented documentation on how to enable complex features such as compile-time compression and "blog mode."
@@ -42,7 +44,7 @@ The config.ru file describes how the site should be loaded by a Rack-enabled web
 
 ### Project Templates
 
-In addition to the basic skeleton, Middleman comes with another, slightly different project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the -t or --template command-line flags. To start a new project based on HTML5 Boilerplate run:
+In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the -t or --template command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
     mm-init my_new_boilerplate_project --template=html5
 
@@ -58,14 +60,20 @@ This will list my custom mobile framework and I can create new projects based on
 
 ## The Development Cycle (mm-server)
 
-The vast majority of time spent using Middleman will be in the Development Cycle. From the command-line, start the preview webserver from inside your project directory:
+The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as HAML, SASS, etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
+
+The vast majority of time spent using Middleman will be in the Development Cycle. 
+
+From the command-line, start the preview webserver from inside your project directory:
 
     cd my_project
     mm-server
 
 This will start a local web server running at: http://localhost:4567/
 
-You can create and edit files in the source/ folder and see the changes reflected on the preview webserver. However, changes to the config.rb file will require mm-server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.
+You can create and edit files in the source/ folder and see the changes reflected on the preview webserver.
+
+Note that changes to the config.rb file will require mm-server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.
 
 ## Exporting the Static Site (mm-build)
 
