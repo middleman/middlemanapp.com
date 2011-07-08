@@ -34,7 +34,7 @@ The mm-init command will setup a Middleman project directory for your new site. 
 
 ### The Skeleton
 
-Every new project creates a basic web development skeleton for you. This automates the construction of a hierarchy of folders and files that you use in all of your projects.
+Every new project creates a basic web development skeleton for you. This automates the construction of a hierarchy of folders and files that you can use in all of your projects.
 
 A brand-new project folder will contain a source/ directory, a config.rb file and a config.ru file. The source directory is where you will build your website. The skeleton project contains folders for javascript, css and images, but you can change these to match your own personal preferences.
 
