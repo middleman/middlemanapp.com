@@ -28,7 +28,9 @@ The uses of each of these commands will be covered below.
 
 ## Starting a New Site: mm-init
 
-The mm-init command will setup a Middleman project directory for your new site. Simply point the command at the folder for your new site and Middleman will build a skeleton project in that directory (or create the directory for you).
+To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing directory or have Middleman create one for you using the mm-init command.
+
+Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).
 
     mm-init my_new_project
 
