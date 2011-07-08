@@ -1,9 +1,29 @@
 @import "compass"
 @import "blueprint"
 
+$blueprint-font-size: 14px
 +blueprint-typography
 
+body
+  text-rendering: optimizeLegibility
+  
 #frame
   +container
-  
+
+.container
+  +clearfix
+
+header
+  border-bottom: 1px solid #ccc
+
 #main
+  +column(17)
+  +append(1)
+  -webkit-hyphens: auto
+
+aside
+  +column(6, true)
+
+footer
+  border-top: 1px solid #ccc
+  padding: 1em 0

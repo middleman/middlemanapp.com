@@ -8,7 +8,7 @@ Middleman assumes familiarity with the command-line. The Ruby language and the S
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman. 
 
-Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed using the Mac App Store.
+Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires Xcode. Xcode can be installed using the Mac App Store.
 
 Windows users will need to install Ruby using [The RubyInstaller for Windows]. Windows users should also install [The RubyInstall DevKit] to install Middleman's compiled dependencies.
 

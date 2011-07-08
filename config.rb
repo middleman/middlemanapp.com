@@ -1,16 +1,16 @@
-# CodeRay syntax highlighting in Haml
-# activate :code_ray
+# require "redcarpet"
+# ::Tilt.prefer(Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate)
 
 set :markdown, :layout_engine => :slim
 
-require 'coderay'
-require 'rack/codehighlighter'
-
-use Rack::Codehighlighter, :coderay, 
-  :markdown => true, 
-  :element => "pre>code", 
-  :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, 
-  :logging => false
+# require 'coderay'
+# require 'rack/codehighlighter'
+# 
+# use Rack::Codehighlighter, :coderay, 
+#   :markdown => true, 
+#   :element => "pre>code", 
+#   :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, 
+#   :logging => false
 
 # Build-specific configuration
 configure :build do

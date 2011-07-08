@@ -11,24 +11,30 @@ html
       header
         h1 Middleman Guides
         h2 Hand-crafted tutorials for static frontend development
+        
+      .container
+        article#main role="main"
+          == yield
       
-        nav
-          ul
-            li== link_to "Getting Started", "guides/getting-started.html"
-            li== link_to "Templating Engines", "guides/templating.html"
-            li== link_to "Static Blogs", "guides/blogs.html"
-            li== link_to "Local Data Sources (YAML)", "guides/local-yaml-data.html"
-            li== link_to "Remote Data Sources (REST)", "guides/remote-data.html"
-            li== link_to "Development API Proxies", "guides/proxies.html"
-            li== link_to "Custom Extensions", "guides/extensions.html"
-            li== link_to "Rack Middleware", "guides/rack-middleware.html"
-            li== link_to "Frontend Optimization", "guides/optimization.html"
+        aside
+          h3 More Guides
+          nav
+            ul
+              li== link_to "Getting Started", "/guides/getting-started.html"
+              li== link_to "Basics of Templates, Includes and Layouts", "/guides/basics-of-templates.html"
+              li== link_to "HTML Templating with Haml, Slim, Markdown and More"
+              li== link_to "CSS, SASS and SCSS"
+              li== link_to "Javascript and CoffeeScript"
+              li== link_to "Frontend Optimization", "/guides/optimization.html"
 
-      article#main role="main"
-        == yield
-      
-      aside
-        | Sidebar
+              /li== link_to "Local Data Sources (YAML)", "/guides/local-yaml-data.html"
+              /li== link_to "Remote Data Sources (REST)", "/guides/remote-data.html"
+              /li== link_to "Static Blogs", "/guides/blogs.html"
+              /li== link_to "Development API Proxies", "/guides/proxies.html"
+              /li== link_to "Custom Extensions", "/guides/extensions.html"
+              /li== link_to "Rack Middleware", "/guides/rack-middleware.html"
+
+          | This site is itself a Middleman project. Fork and contribute to the guides at: https://github.com/tdreyno/middleman-guides
         
       footer
         | Copyright
