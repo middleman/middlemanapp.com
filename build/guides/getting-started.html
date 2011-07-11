@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><link href="/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css" /></head><body><div id="frame"><header><h1>Middleman Guides</h1><h2>Hand-crafted tutorials for static frontend development</h2></header><div class="container"><article id="main" role="main"><h1>Getting Started</h1>
+
+<p>The Middleman is a command-line tool for creating static websites using all the shortcuts and tools of the modern web development environment.</p>
+
+<p>Middleman assumes familiarity with the command-line. The Ruby language and the Sinatra web framework form the base of the tool. Familiarity with both will go a long way in helping users understand why Middleman works the way it does.</p>
+
+<h2>Installation</h2>
+
+<p>Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.</p>
+
+<p>Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed via the <a href="http://itunes.apple.com/us/app/xcode/id422352214?mt=12">Mac App Store</a>.</p>
+
+<p>Windows users will need to install Ruby using <a href="http://rubyinstaller.org/">The RubyInstaller for Windows</a>. Windows users should also install <a href="http://rubyinstaller.org/add-ons/devkit/">The RubyInstall DevKit</a> to install Middleman's compiled dependencies.</p>
+
+<p>Once you have Ruby and RubyGems up and running, execute the following from the command line:</p>
+
+<pre><code>gem install middleman --pre
+</code></pre>
+
+<p>This will install Middleman, its dependencies and the command-line tools for using Middleman.</p>
+
+<p>The installation process will add three commands to your environment:</p>
+
+<ul>
+<li>mm-init</li>
+<li>mm-server</li>
+<li>mm-build</li>
+</ul>
+
+
+<p>The uses of each of these commands will be covered below.</p>
+
+<h2>Starting a New Site: mm-init</h2>
+
+<p>To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing directory or have Middleman create one for you using the mm-init command.</p>
+
+<p>Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).</p>
+
+<pre><code>mm-init my_new_project
+</code></pre>
+
+<h3>The Skeleton</h3>
+
+<p>Every new project creates a basic web development skeleton for you. This automates the construction of a hierarchy of folders and files that you can use in all of your projects.</p>
+
+<p>A brand-new project folder will contain a source/ directory, a config.rb file and a config.ru file. The source directory is where you will build your website. The skeleton project contains folders for javascript, css and images, but you can change these to match your own personal preferences.</p>
+
+<p>The config.rb file contains settings for Middleman and commented documentation on how to enable complex features such as compile-time compression and "blog mode."</p>
+
+<p>The config.ru file describes how the site should be loaded by a Rack-enabled webserver. This file is provided as a convenience for users wishing to host their Middleman site in development mode on a Rack-based host such as Heroku. In "blog mode" this file describes how the web server can serve static files from the Middleman build/ folder.</p>
+
+<h3>Project Templates</h3>
+
+<p>In addition to the default basic skeleton, Middleman comes with an optional project template based on the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project. Alternative templates can be accessed using the -t or --template command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:</p>
+
+<pre><code>mm-init my_new_boilerplate_project --template=html5
+</code></pre>
+
+<p>Finally, you can create your own custom template skeletons by creating folders in the ~/.middleman/ folder. For example, I can create a folder at ~/.middleman/mobile/ and fill it with files I intend to use on mobile projects</p>
+
+<p>If you run mm-init with the help flag, you will see a list of all the possible templates it has detected:</p>
+
+<pre><code>mm-init --help
+</code></pre>
+
+<p>This will list my custom mobile framework and I can create new projects based on it as before:</p>
+
+<pre><code>mm-init my_new_mobile_project --template=mobile
+</code></pre>
+
+<h2>The Development Cycle (mm-server)</h2>
+
+<p>The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as HAML, SASS, etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.</p>
+
+<p>The vast majority of time spent using Middleman will be in the Development Cycle.</p>
+
+<p>From the command-line, start the preview webserver from inside your project directory:</p>
+
+<pre><code>cd my_project
+mm-server
+</code></pre>
+
+<p>This will start a local web server running at: http://localhost:4567/</p>
+
+<p>You can create and edit files in the source/ folder and see the changes reflected on the preview webserver.</p>
+
+<p>Note that changes to the config.rb file will require mm-server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.</p>
+
+<h2>Exporting the Static Site (mm-build)</h2>
+
+<p>Finally, when you are ready to deliver static code or, in the case of "blog mode," host a static blog, you will need to build the site. Using the command-line, from the project folder, run mm-build:</p>
+
+<pre><code>cd my_project
+mm-build
+</code></pre>
+
+<p>This will create a static file for each file located in your source/ directory. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed.</p>
+</article><aside><h3>More Guides</h3><nav><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/basics-of-templates.html">Basics of Templates, Includes and Layouts</a></li><li><a href="javascript:void(0);">HTML Templating with Haml, Slim, Markdown and More</a></li><li><a href="javascript:void(0);">CSS, SASS and SCSS</a></li><li><a href="javascript:void(0);">Javascript, CoffeeScript and Sprockets</a></li><li><a href="/guides/optimization.html">Frontend Optimization</a></li></ul></nav>This site is itself a Middleman project. Fork and contribute to the guides at: https://github.com/tdreyno/middleman-guides</aside></div><footer>Copyright</footer></div><script src="/javascripts/site.js?1310404373" type="text/javascript"></script></body></html>
