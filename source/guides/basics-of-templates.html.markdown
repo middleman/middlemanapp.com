@@ -149,7 +149,7 @@ In your config.rb file, you can tell Middleman to use a specific templating lang
 
 In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your config.rb:
 
-  layout false
+  disable :layout
 
 ## Partials
 

@@ -1,7 +1,5 @@
 .sass-cache
-build
 .DS_Store
 .rvmrc
 bin
 .bundle
-Gemfile.lock
