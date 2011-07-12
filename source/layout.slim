@@ -6,6 +6,8 @@ html
     link href='/blog/feed.xml' rel='alternate' title='Middleman Blog' type='application/atom+xml'
     
     == stylesheet_link_tag :site
+    == stylesheet_link_tag "pygments/default"
+    
     title
       | Middleman Guides
       - if data.page.title

@@ -86,7 +86,7 @@ Given a page template in ERb:
 
 The combined final output in HTML will be:
 
-    :::html
+    :::erb
     <html>
     <head>
       <title>My Site</title>
