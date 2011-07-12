@@ -1,3 +1,7 @@
+---
+title: Getting Started
+---
+
 # Getting Started
 
 The Middleman is a command-line tool for creating static websites using all the shortcuts and tools of the modern web development environment. 
@@ -32,6 +36,7 @@ To get started we will need to create a project folder for Middleman to work out
 
 Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).
 
+    :::bash
     mm-init my_new_project
 
 ### The Skeleton
@@ -48,16 +53,19 @@ The config.ru file describes how the site should be loaded by a Rack-enabled web
 
 In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the -t or --template command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
+    :::bash
     mm-init my_new_boilerplate_project --template=html5
 
 Finally, you can create your own custom template skeletons by creating folders in the ~/.middleman/ folder. For example, I can create a folder at ~/.middleman/mobile/ and fill it with files I intend to use on mobile projects 
 
 If you run mm-init with the help flag, you will see a list of all the possible templates it has detected:
 
+    :::bash
     mm-init --help
 
 This will list my custom mobile framework and I can create new projects based on it as before:
 
+    :::bash
     mm-init my_new_mobile_project --template=mobile
 
 ## The Development Cycle (mm-server)
@@ -68,6 +76,7 @@ The vast majority of time spent using Middleman will be in the Development Cycle
 
 From the command-line, start the preview webserver from inside your project directory:
 
+    :::bash
     cd my_project
     mm-server
 
@@ -81,6 +90,7 @@ Note that changes to the config.rb file will require mm-server to be restarted b
 
 Finally, when you are ready to deliver static code or, in the case of "blog mode," host a static blog, you will need to build the site. Using the command-line, from the project folder, run mm-build:
 
+    :::bash
     cd my_project
     mm-build
     

@@ -1,27 +1,43 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><link href="/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css" /></head><body><div id="frame"><header><h1>Middleman Guides</h1><h2>Hand-crafted tutorials for static frontend development</h2></header><div class="container"><article id="main" role="main"><h1>Basics of Templates, Layouts and Partials</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
+<link href="/stylesheets/site.css?1310444524" media="screen" rel="stylesheet" type="text/css">
+<title>Middleman Guides</title>
+</head>
+<body>
+<div id="frame">
+<header><h1><a href="/">Middleman Guides</a></h1>
+<h2>Hand-crafted tutorials for static frontend development</h2></header><div class="container">
+<article id="main" role="main"><h1>Basics of Templates, Layouts and Partials</h1>
 
-<p>Middleman provides many templating languages to simplify your HTML development. The languages range from simply allow you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.</p>
+<p>Middleman provides many templating languages to simplify your HTML development. The languages range from simply allow you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML. </p>
 
 <h2>Templates</h2>
 
-<p>The default templating language is ERb. ERb looks exactly like HTML, except it allows you to add variables, call methods and use loops and if statements. The following sections of this guide will use ERb in their examples.</p>
+<p>The default templating language is ERb. ERb looks exactly like HTML, except it allows you to add variables, call methods and use loops and if statements. The following sections of this guide will use ERb in their examples. </p>
 
 <p>All template files in Middleman include the extension of that templating language in their file name. A simple index page written in ERb would be named "index.html.erb" which includes the full filename (index.html) and the ERb extension.</p>
 
 <p>To begin, this file would just contain normal HTML:</p>
 
-<pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Welcome&lt;/h1&gt;</span>
+</pre></div>
+
 
 <p>If we wanted to get fancy, we could add a loop:</p>
 
-<pre><code>&lt;h1&gt;Welcome&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;% 5.times do |num| %&gt;
-    &lt;li&gt;Count &lt;%= num %&gt;
-  &lt;% end %&gt;
-&lt;/ul&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Welcome&lt;/h1&gt;</span>
+<span class="x">&lt;ul&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="mi">5</span><span class="o">.</span><span class="n">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">num</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">    &lt;li&gt;Count </span><span class="cp">&lt;%=</span> <span class="n">num</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/ul&gt;</span>
+</pre></div>
+
 
 <h3>Other Templating Languages</h3>
 
@@ -31,70 +47,57 @@
 
 <p>Ruby developers may be familiar with <a href="http://haml-lang.com/">Haml</a> which is a white-space aware language that compiles to HTML. The same index page from above would be called "index.html.haml" and look like:</p>
 
-<pre><code>%h1 Welcome
-%ul
-  - 5.times do |num|
-    %li= "Count #{num}"
-</code></pre>
+
 
 <h4>Slim</h4>
 
 <p><a href="http://slim-lang.com/">Slim</a> is very similar to Haml, but it is even simpler and has more frequent updates and improvements. The same index page from above would be called "index.html.slim" and look like:</p>
 
-<pre><code>h1 Welcome
-ul
-  - 5.times do |num|
-    li Count #{num}
-</code></pre>
+
 
 <h4>Markdown</h4>
 
 <p><a href="http://daringfireball.net/projects/markdown/">Markdown</a> is a simple language that resembles text email and is optimized for writing text content and articles. In fact, <a href="https://raw.github.com/tdreyno/middleman-guides/master/source/guides/basics-of-templates.html.markdown">these guides are written in Markdown</a>. An example article in Markdown would be called "article.html.markdown" and look like:</p>
 
-<pre><code># Header
 
-A paragraph content
-
-## Sub-header
-
-* List item 1
-* List item 2
-</code></pre>
 
 <h2>Layouts</h2>
 
 <p>Layouts allow the common HTML surrounding individual pages to be shared across all your templates. Developers coming from PHP will be used to the concept of "header" and "footer" includes which they reference at the top and bottom of every page. The Ruby world, and Middleman, take an inverse approach. The "layout" includes both the header and footer and then wraps the individual page content.</p>
 
-<p>The most basic layout has some shared content and a "yield" call where templates will place their contents.</p>
+<p>The most basic layout has some shared content and a "yield" call where templates will place their contents. </p>
 
 <p>Here is an example layout using ERb:</p>
 
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;%= yield %&gt;
-&lt;/body&gt;
-&lt;/html&gt; 
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;head&gt;</span>
+<span class="x">  &lt;title&gt;My Site&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt; </span>
+</pre></div>
+
 
 <p>Given a page template in ERb:</p>
 
-<pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Hello World&lt;/h1&gt;</span>
+</pre></div>
+
 
 <p>The combined final output in HTML will be:</p>
 
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello World&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt; 
-</code></pre>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;title&gt;</span>My Site<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span> 
+</pre></div>
+
 
 <h3>Custom Layouts</h3>
 
@@ -104,66 +107,74 @@ A paragraph content
 
 <p>To create a new layout for admin, add another file to your source/ folder called "admin.erb". Let's assume the contents are:</p>
 
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Admin Area&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;%= yield %&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;head&gt;</span>
+<span class="x">  &lt;title&gt;Admin Area&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
+
 
 <p>Now, you need to specify which pages use this alternative layout. You can do this in two ways. If you want to apply this layout to a large group of pages, you can use the "page" command in your "config.rb". Let's assume you have a folder called "admin" in your source/ folder and all the templates in admin should use the admin layout. The config.rb would look like:</p>
 
-<pre><code>page "/admin/*", :layout =&gt; "admin"
-</code></pre>
+<div class="highlight"><pre><span class="n">page</span> <span class="s2">"/admin/*"</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="s2">"admin"</span>
+</pre></div>
 
-<p>This uses a wildcard in the page path to specify that any page under the admin folder should use the admin layout.</p>
+
+<p>This uses a wildcard in the page path to specify that any page under the admin folder should use the admin layout. </p>
 
 <p>You can also reference pages directly. For example, let's say we have a "login.html.erb" template which lives in the source folder, but should also have the admin layout. Let's use this example page template:</p>
 
-<pre><code>&lt;h1&gt;Login&lt;/h1&gt;
-&lt;form&gt;
-  &lt;input type="text" placeholder="Email"&gt;
-  &lt;input type="password"&gt;
-  &lt;input type="submit"&gt;
-&lt;/form&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Login&lt;/h1&gt;</span>
+<span class="x">&lt;form&gt;</span>
+<span class="x">  &lt;input type="text" placeholder="Email"&gt;</span>
+<span class="x">  &lt;input type="password"&gt;</span>
+<span class="x">  &lt;input type="submit"&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+</pre></div>
+
 
 <p>Now you can specify that this specific page has a custom template like this:</p>
 
-<pre><code>page "/login.html", :layout =&gt; "admin"
-</code></pre>
+<div class="highlight"><pre><span class="n">page</span> <span class="s2">"/login.html"</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="s2">"admin"</span>
+</pre></div>
+
 
 <p>Which would make the login page use the admin layout. As an alternative to specifying everything in the config.rb, you can set the layout on individual pages in their template file using [Front Matter]. Here is an example "login.html.erb" page which specifies its own layout.</p>
 
-<pre><code>---
-layout: admin
----
+<div class="highlight"><pre><span class="x">---</span>
+<span class="x">layout: admin</span>
+<span class="x">---</span>
 
-&lt;h1&gt;Login&lt;/h1&gt;
-&lt;form&gt;
-  &lt;input type="text" placeholder="Email"&gt;
-  &lt;input type="password"&gt;
-  &lt;input type="submit"&gt;
-&lt;/form&gt;
-</code></pre>
+<span class="x">&lt;h1&gt;Login&lt;/h1&gt;</span>
+<span class="x">&lt;form&gt;</span>
+<span class="x">  &lt;input type="text" placeholder="Email"&gt;</span>
+<span class="x">  &lt;input type="password"&gt;</span>
+<span class="x">  &lt;input type="submit"&gt;</span>
+<span class="x">&lt;/form&gt;</span>
+</pre></div>
+
 
 <h3>Using a Different Templating Language</h3>
 
-<p>By default, Middleman expects the templating language of the page and the layout to be the same. In the above example, we've used ERb for both. However, you may want to write your pages in Markdown or another simplified text language. Middleman will expect a layout.markdown file to exist, but Markdown doesn't generate structural HTML like body tags.</p>
+<p>By default, Middleman expects the templating language of the page and the layout to be the same. In the above example, we've used ERb for both. However, you may want to write your pages in Markdown or another simplified text language. Middleman will expect a layout.markdown file to exist, but Markdown doesn't generate structural HTML like body tags. </p>
 
 <p>In your config.rb file, you can tell Middleman to use a specific templating language for the layout that is different than the page templating language. For example:</p>
 
-<pre><code>set :markdown, :layout_engine =&gt; :erb
-</code></pre>
+<div class="highlight"><pre><span class="n">set</span> <span class="ss">:markdown</span><span class="p">,</span> <span class="ss">:layout_engine</span> <span class="o">=&gt;</span> <span class="ss">:erb</span>
+</pre></div>
+
 
 <h3>Disabling Layouts Entirely</h3>
 
 <p>In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your config.rb:</p>
 
-<p>  disable :layout</p>
+<div class="highlight"><pre><span class="n">disable</span> <span class="ss">:layout</span>
+</pre></div>
+
 
 <h2>Partials</h2>
 
@@ -171,38 +182,56 @@ layout: admin
 
 <p>Partial files are prefixed with an underscore and include the templating language extension you are using. Here is an example footer partial named "_footer.erb" that lives in the source folder:</p>
 
-<pre><code>&lt;footer&gt;
-  Copyright 2011
-&lt;/footer&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;footer&gt;</span>
+<span class="x">  Copyright 2011</span>
+<span class="x">&lt;/footer&gt;</span>
+</pre></div>
+
 
 <p>Now, we can include this partial in the default layout using the "render" method:</p>
 
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;%= yield %&gt;
-  &lt;%= render "footer" %&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;head&gt;</span>
+<span class="x">  &lt;title&gt;My Site&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
+
 
 <p>And in the admin layout:</p>
 
-<pre><code>&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Admin Area&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;%= yield %&gt;
-  &lt;%= render "footer" %&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre><span class="x">&lt;html&gt;</span>
+<span class="x">&lt;head&gt;</span>
+<span class="x">  &lt;title&gt;Admin Area&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+<span class="x">&lt;body&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/body&gt;</span>
+<span class="x">&lt;/html&gt;</span>
+</pre></div>
+
 
 <p>Now, any changes to "_footer.erb" will appear at the bottom of both layouts and any pages which use those layouts.</p>
 
 <p>If you find yourself copying and pasting content into multiple pages or layouts, it's probably a good idea to extract that content into a partial.</p>
-</article><aside><h3>More Guides</h3><nav><ul><li><a href="/guides/getting-started.html">Getting Started</a></li><li><a href="/guides/basics-of-templates.html">Basics of Templates, Includes and Layouts</a></li><li><a href="javascript:void(0);">HTML Templating with Haml, Slim, Markdown and More</a></li><li><a href="javascript:void(0);">CSS, SASS and SCSS</a></li><li><a href="javascript:void(0);">Javascript, CoffeeScript and Sprockets</a></li><li><a href="/guides/optimization.html">Frontend Optimization</a></li></ul></nav>This site is itself a Middleman project. Fork and contribute to the guides at: https://github.com/tdreyno/middleman-guides</aside></div><footer>Copyright</footer></div><script src="/javascripts/site.js?1310404373" type="text/javascript"></script></body></html>
+</article><aside><h3>All Guides</h3>
+<nav><ul>
+<li><a href="/guides/getting-started.html">Getting Started</a></li>
+<li><a href="/guides/basics-of-templates.html">Basics of Templates, Includes and Layouts</a></li>
+</ul></nav><h3>Blog Posts</h3>
+<ul><li>
+<small>Jul 11</small><br><a href="/blog/2011/07/11/brand-new-documentation.html">Brand New Documentation</a>
+</li></ul></aside>
+</div>
+<footer><p>This site is itself a Middleman project.<br>
+Fork and contribute to the guides <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p>
+</footer><a href="http://github.com/tdreyno/middleman"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://gs1.wac.edgecastcdn.net/80460E/assets/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+</div>
+<!-- Google Analytics --><script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-90027-21']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    ga.setAttribute('async', 'true');    document.documentElement.firstChild.appendChild(ga);  })();</script>
+</body>
+</html>

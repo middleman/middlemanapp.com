@@ -10,9 +10,9 @@ end
 
 group :development do
   gem "redcarpet"
+  gem "builder"
   gem "middleman", :git => "git://github.com/tdreyno/middleman.git"
   gem "heroku"
   gem "foreman"
   gem "rack-codehighlighter"
-  gem "coderay"
 end

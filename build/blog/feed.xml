@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Middleman Blog</title>
+  <subtitle>Hand-crafted for static frontend development</subtitle>
+  <id>http://middlemanapp.com</id>
+  <link href="http://middlemanapp.com"/>
+  <link href="http://middlemanapp.com/blog/feed.xml" rel="self"/>
+  <updated>2011-07-11T00:00:00-07:00</updated>
+  <author>
+    <name>Thomas Reynolds</name>
+  </author>
+  <entry>
+    <title>Brand New Documentation</title>
+    <link rel="alternate" href="/blog/2011/07/11/brand-new-documentation.html"/>
+    <id>/blog/2011/07/11/brand-new-documentation.html</id>
+    <published>2011-07-11T00:00:00-07:00</published>
+    <updated>2011-07-11T00:00:00-07:00</updated>
+    <author>
+      <name>Thomas Reynolds</name>
+    </author>
+    <summary type="html">&lt;h1&gt;Brand New Documentation&lt;/h1&gt;
+
+&lt;p&gt;Welcome to the new, and still under-development, Middleman Guides documentation site.&lt;/p&gt;
+
+&lt;p&gt;This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.&lt;/p&gt;
+</summary>
+    <content type="html"></content>
+  </entry>
+</feed>

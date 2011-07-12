@@ -15,14 +15,21 @@ body
 
 header
   border-bottom: 1px solid #ccc
+  h1
+    margin-bottom: 0
+  h2
+    margin-top: 0
 
 #main
-  +column(17)
+  +column(16)
   +append(1)
   -webkit-hyphens: auto
+  pre
+    border-left: 2px solid #ccc
+    padding-left: 1em
 
 aside
-  +column(6, true)
+  +column(7, true)
 
 footer
   border-top: 1px solid #ccc

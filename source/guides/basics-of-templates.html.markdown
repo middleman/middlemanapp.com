@@ -10,10 +10,12 @@ All template files in Middleman include the extension of that templating languag
 
 To begin, this file would just contain normal HTML:
 
+    :::erb
     <h1>Welcome</h1>
 
 If we wanted to get fancy, we could add a loop:
 
+    :::erb
     <h1>Welcome</h1>
     <ul>
       <% 5.times do |num| %>
@@ -29,6 +31,7 @@ Middleman comes with quite a few other templating languages.
 
 Ruby developers may be familiar with [Haml] which is a white-space aware language that compiles to HTML. The same index page from above would be called "index.html.haml" and look like:
 
+    :::haml
     %h1 Welcome
     %ul
       - 5.times do |num|
@@ -38,6 +41,7 @@ Ruby developers may be familiar with [Haml] which is a white-space aware languag
 
 [Slim] is very similar to Haml, but it is even simpler and has more frequent updates and improvements. The same index page from above would be called "index.html.slim" and look like:
 
+    :::slim
     h1 Welcome
     ul
       - 5.times do |num|
@@ -47,6 +51,7 @@ Ruby developers may be familiar with [Haml] which is a white-space aware languag
 
 [Markdown] is a simple language that resembles text email and is optimized for writing text content and articles. In fact, [these guides are written in Markdown]. An example article in Markdown would be called "article.html.markdown" and look like:
 
+    :::markdown
     # Header
     
     A paragraph content
@@ -64,6 +69,7 @@ The most basic layout has some shared content and a "yield" call where templates
 
 Here is an example layout using ERb:
 
+    :::erb
     <html>
     <head>
       <title>My Site</title>
@@ -75,10 +81,12 @@ Here is an example layout using ERb:
 
 Given a page template in ERb:
 
+    :::erb
     <h1>Hello World</h1>
 
 The combined final output in HTML will be:
 
+    :::html
     <html>
     <head>
       <title>My Site</title>
@@ -96,6 +104,7 @@ The default layout file lives in the source/ folder and is called "layout" and h
 
 To create a new layout for admin, add another file to your source/ folder called "admin.erb". Let's assume the contents are:
 
+    :::erb
     <html>
     <head>
       <title>Admin Area</title>
@@ -107,12 +116,14 @@ To create a new layout for admin, add another file to your source/ folder called
 
 Now, you need to specify which pages use this alternative layout. You can do this in two ways. If you want to apply this layout to a large group of pages, you can use the "page" command in your "config.rb". Let's assume you have a folder called "admin" in your source/ folder and all the templates in admin should use the admin layout. The config.rb would look like:
 
+    :::ruby
     page "/admin/*", :layout => "admin"
 
 This uses a wildcard in the page path to specify that any page under the admin folder should use the admin layout. 
 
 You can also reference pages directly. For example, let's say we have a "login.html.erb" template which lives in the source folder, but should also have the admin layout. Let's use this example page template:
 
+    :::erb
     <h1>Login</h1>
     <form>
       <input type="text" placeholder="Email">
@@ -122,10 +133,12 @@ You can also reference pages directly. For example, let's say we have a "login.h
 
 Now you can specify that this specific page has a custom template like this:
 
+    :::ruby
     page "/login.html", :layout => "admin"
 
 Which would make the login page use the admin layout. As an alternative to specifying everything in the config.rb, you can set the layout on individual pages in their template file using [Front Matter]. Here is an example "login.html.erb" page which specifies its own layout.
 
+    :::erb
     ---
     layout: admin
     ---
@@ -143,13 +156,15 @@ By default, Middleman expects the templating language of the page and the layout
 
 In your config.rb file, you can tell Middleman to use a specific templating language for the layout that is different than the page templating language. For example:
 
+    :::ruby
     set :markdown, :layout_engine => :erb
 
 ### Disabling Layouts Entirely
 
 In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your config.rb:
 
-  disable :layout
+    :::ruby
+    disable :layout
 
 ## Partials
 
@@ -157,12 +172,14 @@ Partials are a way of sharing content across pages to avoid duplication. Partial
 
 Partial files are prefixed with an underscore and include the templating language extension you are using. Here is an example footer partial named "_footer.erb" that lives in the source folder:
 
+    :::erb
     <footer>
       Copyright 2011
     </footer>
 
 Now, we can include this partial in the default layout using the "render" method:
 
+    :::erb
     <html>
     <head>
       <title>My Site</title>
@@ -175,6 +192,7 @@ Now, we can include this partial in the default layout using the "render" method
     
 And in the admin layout:
 
+    :::erb
     <html>
     <head>
       <title>Admin Area</title>
