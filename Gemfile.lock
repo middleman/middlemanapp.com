@@ -25,8 +25,8 @@ GEM
   remote: http://rubygems.org/
   specs:
     activesupport (3.0.9)
+    builder (3.0.0)
     chunky_png (1.2.0)
-    coderay (0.9.8)
     coffee-filter (0.1.1)
       coffee-script (>= 2.2.0)
       haml (>= 3.0.18)
@@ -114,7 +114,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coderay
+  builder
   foreman
   heroku
   middleman!
