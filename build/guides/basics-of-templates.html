@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1310444524" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1310445407" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman Guides</title>
 </head>
@@ -189,7 +189,7 @@
 </pre></div>
 
 
-<p>Now, we can include this partial in the default layout using the "render" method:</p>
+<p>Now, we can include this partial in the default layout using the "partial" method:</p>
 
 <div class="highlight"><pre><span class="x">&lt;html&gt;</span>
 <span class="x">&lt;head&gt;</span>
@@ -197,7 +197,7 @@
 <span class="x">&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
 <span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
-<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">partial</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 </pre></div>
@@ -211,7 +211,7 @@
 <span class="x">&lt;/head&gt;</span>
 <span class="x">&lt;body&gt;</span>
 <span class="x">  </span><span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><span class="x"></span>
-<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">render</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%=</span> <span class="n">partial</span> <span class="s2">"footer"</span> <span class="cp">%&gt;</span><span class="x"></span>
 <span class="x">&lt;/body&gt;</span>
 <span class="x">&lt;/html&gt;</span>
 </pre></div>

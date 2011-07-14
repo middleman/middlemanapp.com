@@ -177,7 +177,7 @@ Partial files are prefixed with an underscore and include the templating languag
       Copyright 2011
     </footer>
 
-Now, we can include this partial in the default layout using the "render" method:
+Now, we can include this partial in the default layout using the "partial" method:
 
     :::erb
     <html>
@@ -186,7 +186,7 @@ Now, we can include this partial in the default layout using the "render" method
     </head>
     <body>
       <%= yield %>
-      <%= render "footer" %>
+      <%= partial "footer" %>
     </body>
     </html>
     
@@ -199,7 +199,7 @@ And in the admin layout:
     </head>
     <body>
       <%= yield %>
-      <%= render "footer" %>
+      <%= partial "footer" %>
     </body>
     </html>
 
