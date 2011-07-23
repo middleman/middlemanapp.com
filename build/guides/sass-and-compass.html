@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
+<link href="/stylesheets/site.css?1310445407" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
+<title>Middleman Guides: Sass and Compass</title>
+</head>
+<body>
+<div id="frame">
+<header><h1><a href="/">Middleman Guides</a></h1>
+<h2>Hand-crafted tutorials for static frontend development</h2></header><div class="container">
+<article id="main" role="main"><h1>Sass and Compass</h1>
+
+<p>Probably the biggest advantage in using Middleman to accelerate your development is access to higher-level languages such as Sass, Haml and CoffeeScript which are quicker to code, but still compile to normal CSS, HTML and Javascript for deployment.</p>
+
+<p>If you are unfamiliar, Sass is a CSS preprocessor which provides a simpler syntax for authoring stylesheets and includes higher-level features such as variables, includes, mixins and selector inheritance. You can read more about Sass, and it's CSS-superset language SCSS, on the <a href="http://sass-lang.com/">Sass Lang website</a>.</p>
+
+<p>Middleman allows you to author Sass and SCSS files by appending the file extension for the language you wish to use to a CSS file. Here are some examples.</p>
+
+<p>A Sass file in source/stylesheets/login.css.sass using the whitespace-aware Sass syntax:</p>
+
+<pre>body
+  background: white
+  color: black
+
+#login
+  text-align: center
+  font-size: 20px
+  button
+    float: right
+</pre>
+
+<p>The same styles could also be expressed in the CSS-superset SCSS format in a file at source/stylesheets/login.css.scss:</p>
+
+<pre>body {
+  background: white;
+  color: black; }
+
+#login {
+  text-align: center;
+  font-size: 20px;
+  button {
+    float: right; }
+}
+</pre>
+
+<p>Both of these files will compile to the following build/stylesheets/site.css file:</p>
+
+<div class="highlight"><pre><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">background</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
+  <span class="k">color</span><span class="o">:</span> <span class="nb">black</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nf">#login</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="o">:</span> <span class="k">center</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nf">#login</span> <span class="nt">button</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+
+
+<h2>Compass</h2>
+
+<p>Compass is a set of mixins (Sass macros) to make common tasks more convenient (and include browser-specific hacks), functions for manipulating colors, a spite generation library and much more. You can read more on the <a href="http://compass-style.org/">official Compass website</a>.</p>
+
+<p>When using Middleman, Compass is automatically available in all Sass and SCSS files. Here are a few, examples of using Compass.</p>
+
+<p>CSS3 and Floats:</p>
+
+<pre>@import "compass"
+
+#main
+  +float-left
+  border: 1px solid black
+  +border-radius(5px)
+#sidebar
+  +float-right
+  +box-shadow(black 0 1px 2px)
+</pre>
+
+<p>Grids (using <a href="http://susy.oddbird.net/">Susy</a>):</p>
+
+<pre>@import "susy"
+
+#frame
+  +container
+  #main
+    +column(8)
+  #sidebar
+    +column(4)
+</pre>
+
+<p><a href="http://compass-style.org/help/tutorials/spriting/">Sprite</a> generation:</p>
+
+<pre>@import "compass"
+@import "icon/*.png"
++all-icon-sprites
+</pre>
+</article><aside><h3>All Guides</h3>
+<nav><ul>
+<li><a href="/guides/getting-started.html">Getting Started</a></li>
+<li><a href="/guides/migrating.html">Migrating to Middleman 2.0</a></li>
+<li><a href="/guides/basics-of-templates.html">Basics of Templates, Includes and Layouts</a></li>
+<li><a href="/guides/sass-and-compass.html">Sass and Compass</a></li>
+</ul></nav><h3>Blog Posts</h3>
+<ul><li>
+<small>Jul 11</small><br><a href="/blog/2011/07/11/brand-new-documentation.html">Brand New Documentation</a>
+</li></ul></aside>
+</div>
+<footer><p>This site is itself a Middleman project.<br>
+Fork and contribute to the guides <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p>
+</footer><a href="http://github.com/tdreyno/middleman"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://gs1.wac.edgecastcdn.net/80460E/assets/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+</div>
+<!-- Google Analytics --><script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-90027-21']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    ga.setAttribute('async', 'true');    document.documentElement.firstChild.appendChild(ga);  })();</script>
+</body>
+</html>
