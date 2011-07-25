@@ -2,6 +2,8 @@
 
 * http://awardwinningfjords.com/
 * http://pixelunion.net/
+* http://syrinxoon.net/
+* http://nathanleray.me
 
 ## Add your site!
 
