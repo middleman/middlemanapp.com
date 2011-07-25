@@ -1,6 +1,8 @@
 require "builder"
 require "redcarpet"
 
+Slim::Engine.set_default_options :pretty => true
+
 set :markdown, :layout_engine => :slim
 set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
 

@@ -48,6 +48,10 @@ html
                 small== article.date.strftime('%b %e')
                 br
                 == link_to article.title, article.url
+          
+          h3 Other
+          ul
+            li== link_to "Sites Built Using Middleman", "/built-using-middleman.html"
         
       footer
         markdown:
