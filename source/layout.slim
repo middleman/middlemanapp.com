@@ -27,19 +27,19 @@ html
           h3 All Guides
           nav
             ul
-              li== link_to "Getting Started", "/guides/getting-started.html"
-              li== link_to "Migrating to Middleman 2.0", "/guides/migrating.html"
-              li== link_to "Basics of Templates, Includes and Layouts", "/guides/basics-of-templates.html"
-              li== link_to "Sass and Compass", "/guides/sass-and-compass.html"
+              li== link_to "Getting Started", "/guides/getting-started"
+              li== link_to "Migrating to Middleman 2.0", "/guides/migrating"
+              li== link_to "Basics of Templates, Includes and Layouts", "/guides/basics-of-templates"
+              li== link_to "Sass and Compass", "/guides/sass-and-compass"
               / li== link_to "Javascript, CoffeeScript and Sprockets"
-              / li== link_to "Frontend Optimization", "/guides/optimization.html"
+              / li== link_to "Frontend Optimization", "/guides/optimization"
               / li== link_to "LiveReload", ""
-              / li== link_to "Local Data Sources (YAML)", "/guides/local-yaml-data.html"
-              /li== link_to "Remote Data Sources (REST)", "/guides/remote-data.html"
-              /li== link_to "Static Blogs", "/guides/blogs.html"
-              /li== link_to "Development API Proxies", "/guides/proxies.html"
-              /li== link_to "Custom Extensions", "/guides/extensions.html"
-              /li== link_to "Rack Middleware", "/guides/rack-middleware.html"
+              / li== link_to "Local Data Sources (YAML)", "/guides/local-yaml-data"
+              /li== link_to "Remote Data Sources (REST)", "/guides/remote-data"
+              /li== link_to "Static Blogs", "/guides/blogs"
+              /li== link_to "Development API Proxies", "/guides/proxies"
+              /li== link_to "Custom Extensions", "/guides/extensions"
+              /li== link_to "Rack Middleware", "/guides/rack-middleware"
           
           h3 Blog Posts
           ul
@@ -47,11 +47,11 @@ html
               li
                 small== article.date.strftime('%b %e')
                 br
-                == link_to article.title, article.url
+                == link_to article.title, article.url.gsub(/\.html$/, "")
           
           h3 Other
           ul
-            li== link_to "Sites Built Using Middleman", "/built-using-middleman.html"
+            li== link_to "Sites Built Using Middleman", "/built-using-middleman"
         
       footer
         markdown:
