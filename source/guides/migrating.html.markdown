@@ -4,7 +4,7 @@ title: Migrating to Middleman 2.0
 
 # Migrating to Middleman 2.0
 
-One of the biggest changes with Middleman 2.0 is the unification of both static files and template files into a single source directory. 
+One of the biggest changes with Middleman 2.0 is the unification of both static files and template files into a single source directory.
 
 In Middleman version 1, projects contained a public/ folder for static resources (images, javascripts and stylesheets) and a views/ folder for templated files (erb, haml, sass, coffee).
 
@@ -22,7 +22,7 @@ As a convenience, Middleman 2.0 comes with a single command for running this mig
 
     :::bash
     cd MY_PROJECT_FOLDER
-    mm-migrate
+    mm migrate
 
 ## Removed/Deprecated Methods
 
