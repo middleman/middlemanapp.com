@@ -7,19 +7,22 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css?1311553309" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman Guides</title>
+<title>Middleman Guides: LiveReload</title>
 </head>
 <body>
     <div id="frame">
       <header><h1><a href="/">Middleman Guides</a></h1>
         <h2>Hand-crafted tutorials for static frontend development</h2>
       </header><div class="container">
-        <article id="main" role="main"><h1>Welcome</h1>
-                    
-                    <p>Welcome to the new, and still under-development, Middleman Guides documentation site. </p>
-                    
-                    <p>This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.</p>
-                    </article><aside><h3>All Guides</h3>
+        <article id="main" role="main"><h1>LiveReload</h1>
+
+<p>Middleman comes with full support for the LiveReload browser extension via the Guard project. If you have installed the LiveReload extension in your browser, you can have Middleman automatically tell the browser to refresh upon changes to your source code. To do this, you will need to start the Middleman server in LiveReload mode:</p>
+
+<pre>middleman server --livereload
+</pre>
+
+<p>Now, browsers using the LiveReload extension can connect to Middleman and automatically refresh after you update your code.</p>
+</article><aside><h3>All Guides</h3>
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>

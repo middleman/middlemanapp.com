@@ -22,22 +22,22 @@ Once you have Ruby and RubyGems up and running, execute the following from the c
 
 This will install Middleman, its dependencies and the command-line tools for using Middleman.
 
-The installation process will add three commands to your environment:
+The installation process will add one new command to your environment, with 3 useful features:
 
-* mm init
-* mm server
-* mm build
+* middleman init
+* middleman server
+* middleman build
 
 The uses of each of these commands will be covered below.
 
-## Starting a New Site: mm init
+## Starting a New Site: middleman init
 
-To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing directory or have Middleman create one for you using the mm init command.
+To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing directory or have Middleman create one for you using the middleman init command.
 
 Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).
 
     :::bash
-    mm init my_new_project
+    middleman init my_new_project
 
 ### The Skeleton
 
@@ -54,21 +54,21 @@ The config.ru file describes how the site should be loaded by a Rack-enabled web
 In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the -t or --template command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
     :::bash
-    mm init my_new_boilerplate_project --template=html5
+    middleman init my_new_boilerplate_project --template=html5
 
 Finally, you can create your own custom template skeletons by creating folders in the ~/.middleman/ folder. For example, I can create a folder at ~/.middleman/mobile/ and fill it with files I intend to use on mobile projects
 
-If you run mm init with the help flag, you will see a list of all the possible templates it has detected:
+If you run middleman init with the help flag, you will see a list of all the possible templates it has detected:
 
     :::bash
-    mm init --help
+    middleman init --help
 
 This will list my custom mobile framework and I can create new projects based on it as before:
 
     :::bash
-    mm init my_new_mobile_project --template=mobile
+    middleman init my_new_mobile_project --template=mobile
 
-## The Development Cycle (mm server)
+## The Development Cycle (middleman server)
 
 The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as HAML, SASS, etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
 
@@ -78,21 +78,21 @@ From the command-line, start the preview webserver from inside your project dire
 
     :::bash
     cd my_project
-    mm server
+    middleman server
 
 This will start a local web server running at: http://localhost:4567/
 
 You can create and edit files in the source/ folder and see the changes reflected on the preview webserver.
 
-Note that changes to the config.rb file will require mm server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.
+Note that changes to the config.rb file will require middleman server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.
 
-## Exporting the Static Site (mm build)
+## Exporting the Static Site (middleman build)
 
-Finally, when you are ready to deliver static code or, in the case of "blog mode," host a static blog, you will need to build the site. Using the command-line, from the project folder, run mm build:
+Finally, when you are ready to deliver static code or, in the case of "blog mode," host a static blog, you will need to build the site. Using the command-line, from the project folder, run middleman build:
 
     :::bash
     cd my_project
-    mm build
+    middleman build
 
 This will create a static file for each file located in your source/ directory. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed.
 

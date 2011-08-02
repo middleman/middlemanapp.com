@@ -4,6 +4,26 @@ title: Migrating to Middleman 2.0
 
 # Migrating to Middleman 2.0
 
+In addition to dozens of new features, Middleman 2.0 has several changes to the way earlier versions managed projects.
+
+## Unified middleman command
+
+In previous versions, Middleman shipped with 3 commands: mm-init, mm-server and mm-build. These tools were responsible for the 3 phases of project development: creation, construction and compilation. In version 2.0, these 3 commands (along with a new migrate command) have been unified into a single command. These change was made to make the name of the command more obvious (middleman) than the abbreviated mm- prefix and to follow the lead of the Rails and Compass projects which uses a unified rails and compass command respectively.
+
+For the 2.0 series, the three old command will still be available to allow users time to migrate their scripts, tutorials and muscle memory to the new commands. In a future 2.x, these commands will be removed and only the new middleman command will be available.
+
+As of 2.0, the following commands are possible:
+
+    middleman init NEW_PROJECT_FOLDER
+    
+    middleman server
+    
+    middleman build
+    
+    middleman migrate
+
+## Unified source directory
+
 One of the biggest changes with Middleman 2.0 is the unification of both static files and template files into a single source directory.
 
 In Middleman version 1, projects contained a public/ folder for static resources (images, javascripts and stylesheets) and a views/ folder for templated files (erb, haml, sass, coffee).
@@ -22,7 +42,7 @@ As a convenience, Middleman 2.0 comes with a single command for running this mig
 
     :::bash
     cd MY_PROJECT_FOLDER
-    mm migrate
+    middleman migrate
 
 ## Removed/Deprecated Methods
 

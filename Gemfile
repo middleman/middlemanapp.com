@@ -11,7 +11,7 @@ end
 group :development do
   gem "redcarpet"
   gem "builder"
-  gem "middleman", :git => "git://github.com/tdreyno/middleman.git"
+  # gem "middleman", :path => "../middleman"
   gem "heroku"
   gem "foreman"
   gem "rack-codehighlighter"
