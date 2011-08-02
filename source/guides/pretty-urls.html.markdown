@@ -40,4 +40,13 @@ Or, you may want a PHP file:
 
     set :index_file, "index.php"
 
+### Opt-out
+
+If there are pages which you don't want automatically renamed, you can opt-out:
+
+    page "/i-really-want-the-extension.html", :directory_index => false
+
+### Manual Indexes
+
+If your template file is already named "index.html" it will pass through Middleman untouched. For example, "my-page/index.html.erb" will generate "/my-page/index.html" as you would expect.
     
