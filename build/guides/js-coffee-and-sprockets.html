@@ -7,19 +7,57 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css?1311553309" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman Guides</title>
+<title>Middleman Guides: Javascript, CoffeeScript and Sprockets</title>
 </head>
 <body>
     <div id="frame">
       <header><h1><a href="/">Middleman Guides</a></h1>
         <h2>Hand-crafted tutorials for static frontend development</h2>
       </header><div class="container">
-        <article id="main" role="main"><h1>Welcome</h1>
-                    
-                    <p>Welcome to the new, and still under-development, Middleman Guides documentation site. </p>
-                    
-                    <p>This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.</p>
-                    </article><aside><h3>All Guides</h3>
+        <article id="main" role="main"><h1>Javascript, CoffeeScript and Sprockets</h1>
+
+<p>Middleman 2.0 embraces the Rails 3.1 Asset Pipeline and includes both Sprockets and CoffeeScript.</p>
+
+<h2>Dependency Management (Sprockets)</h2>
+
+<p>Sprockets is a tool for managing libraries of Javascript (and CoffeeScript) code, declaring dependency management and include 3rd-party code. At its core, Sprockets makes a "require" method available inside your .js and .coffee files which can pull in the contents of an external file from your project or from a 3rd party gem.</p>
+
+<p>Say I have a file called "jquery.js" which contains the jQuery library and another file called "app.js.coffee" which contains my application code written in CoffeeScript. My app file can include jquery before it runs like so:</p>
+
+<pre>#= require "jquery"
+
+$(document).ready -&gt;
+  $(".item").pluginCode
+    param1: true
+    param2: "maybe"
+</pre>
+
+<p>The output of this file will be the jQuery library at the code and then the app code, compiled into Javascript, beneath.</p>
+
+<p>You could also write your app file in regular Javascript with a file named "app.js" which looks like this:</p>
+
+<pre>//= require "jquery"
+
+$(document).ready(function() {
+  $(".item").pluginCode({
+    param1: true,
+    param2: "maybe"
+  });
+});
+</pre>
+
+<p>The output would be identical.</p>
+
+<h2>CoffeeScript</h2>
+
+<p><a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a> is a white-space aware language which compiles to Javascript. Here's the blurb from their website:</p>
+<blockquote>
+<p>CoffeeScript is a little language that compiles into JavaScript. Underneath all of those embarrassing braces and semicolons, JavaScript has always had a gorgeous object model at its heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way.</p>
+
+<p>The golden rule of CoffeeScript is: "It's just JavaScript". The code compiles one-to-one into the equivalent JS, and there is no interpretation at runtime. You can use any existing JavaScript library seamlessly (and vice-versa). The compiled output is readable and pretty-printed, passes through JavaScript Lint without warnings, will work in every JavaScript implementation, and tends to run as fast or faster than the equivalent handwritten JavaScript.</p>
+</blockquote>
+<p>For more information, check out <a href="http://peepcode.com/products/coffeescript">the wonderful Peepcode screencast</a>.</p>
+</article><aside><h3>All Guides</h3>
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>

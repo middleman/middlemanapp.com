@@ -7,19 +7,41 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css?1311553309" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman Guides</title>
+<title>Middleman Guides: Frontend Optimization</title>
 </head>
 <body>
     <div id="frame">
       <header><h1><a href="/">Middleman Guides</a></h1>
         <h2>Hand-crafted tutorials for static frontend development</h2>
       </header><div class="container">
-        <article id="main" role="main"><h1>Welcome</h1>
-                    
-                    <p>Welcome to the new, and still under-development, Middleman Guides documentation site. </p>
-                    
-                    <p>This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.</p>
-                    </article><aside><h3>All Guides</h3>
+        <article id="main" role="main"><h1>Frontend Optimization</h1>
+
+<p>Middleman handles CSS minification and Javascript compression so you don't have to worry about it. Most libraries ship minified and compressed versions of their files for users to deploy, but these files are unreadable or editable. Middleman allows you to keep the original, commented files in our project so you can easily read them and edit them if needed. Then, when you build the project, Middleman will handle all the optimization for you.</p>
+
+<p>In your config.rb, activate the "minify_css" and "minify_javacript" features during the build of your site.</p>
+
+<pre>configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+</pre>
+
+<h2>Compressing Images</h2>
+
+<p>If you also want to compress images on build, you can use the <a href="https://github.com/tdreyno/middleman-smusher">Middleman Smusher extension</a> to dramatically shrink images using <a href="http://www.smushit.com/ysmush.it/">Yahoo's Smush.it tool</a>.</p>
+
+<p>To install:</p>
+
+<pre>gem install middleman-smusher
+</pre>
+
+<p>Then activate in your config.rb:</p>
+
+<pre>configure :build do
+  activate :smusher
+end
+</pre>
+</article><aside><h3>All Guides</h3>
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
