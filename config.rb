@@ -1,10 +1,12 @@
 require "builder"
 require "redcarpet"
 
-Slim::Engine.set_default_options :pretty => true
+set :slim, :pretty => true
 
 set :markdown, :layout_engine => :slim
 set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
+
+activate :directory_indexes
 
 activate :blog
 set :blog_permalink, "blog/:year/:month/:day/:title.html"
@@ -20,7 +22,7 @@ use Rack::Codehighlighter,
 
 # Build-specific configuration
 configure :build do
-  Compass.configuration do |config|
+  compass_config do |config|
     config.line_comments = false
   end
   

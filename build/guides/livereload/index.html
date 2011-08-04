@@ -5,27 +5,24 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1311553309" media="screen" rel="stylesheet" type="text/css">
-<link href="/stylesheets/pygments/default.css?1310445082" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman Guides</title>
+<link href="/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
+<title>Middleman Guides: LiveReload</title>
 </head>
 <body>
     <div id="frame">
       <header><h1><a href="/">Middleman Guides</a></h1>
         <h2>Hand-crafted tutorials for static frontend development</h2>
       </header><div class="container">
-        <article id="main" role="main"><h1>Sites Built Using Middleman</h1>
-          
-          <ul>
-<li>http://awardwinningfjords.com/</li>
-          <li>http://pixelunion.net/</li>
-          <li>http://syrinxoon.net/</li>
-          <li>http://nathanleray.me</li>
-          </ul>
-<h2>Add your site!</h2>
-          
-          <p>Fork <a href="https://github.com/tdreyno/middleman-guides">this repository on Github</a> and submit a pull request to add your site to the above list.</p>
-          </article><aside><h3>All Guides</h3>
+        <article id="main" role="main"><h1>LiveReload</h1>
+
+<p>Middleman comes with full support for the LiveReload browser extension via the Guard project. If you have installed <a href="https://github.com/mockko/livereload#readme">the LiveReload extension</a> in your browser, you can have Middleman automatically tell the browser to refresh upon changes to your source code. To do this, you will need to start the Middleman server in LiveReload mode:</p>
+
+<pre>middleman server --livereload
+</pre>
+
+<p>Now, browsers using the LiveReload extension can connect to Middleman and automatically refresh after you update your code.</p>
+</article><aside><h3>All Guides</h3>
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
