@@ -4,6 +4,7 @@
 * http://pixelunion.net/
 * http://syrinxoon.net/
 * http://nathanleray.me
+* http://dbooom.com/themes/html/stronghold/
 
 ## Add your site!
 
