@@ -16,14 +16,14 @@ body
 header
   border-bottom: 1px solid #ccc
   h1
+    text-align: center
     margin-bottom: 0
-  h2
+  h4
+    text-align: center
     margin-top: 0
 
 #main
-  +column(16)
-  +append(1)
-  -webkit-hyphens: auto
+  +column(17, true)
 
 pre
   background: #F8F8F8
@@ -32,7 +32,8 @@ pre
   margin: 1.5em 0
 
 aside
-  +column(7, true)
+  +column(6)
+  +append(1)
 
 footer
   border-top: 1px solid #ccc
