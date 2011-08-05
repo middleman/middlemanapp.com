@@ -1,11 +1,18 @@
 @import "compass"
 @import "blueprint"
 
+$link-color: #002b36
+$link-visited-color: $link-color
+$link-hover-color: $link-color
+$link-focus-color: $link-color
+$link-active-color: $link-color
+
 $blueprint-font-size: 14px
 +blueprint-typography
 
 body
   text-rendering: optimizeLegibility
+  background: #efe8d5
   
 #frame
   +container
@@ -32,8 +39,11 @@ pre
   margin: 1.5em 0
 
 aside
-  +column(6)
+  +column-base
+  width: 225px
   +append(1)
+  h1
+    +replace-text-with-dimensions("mm-blue-w-text.png")
 
 footer
   border-top: 1px solid #ccc
