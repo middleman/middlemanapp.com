@@ -7,7 +7,7 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman: Brand New Documentation</title>
+<title>Middleman: Individual Page Configuration (YAML Frontmatter)</title>
 </head>
 <body>
     <div id="frame">
@@ -40,12 +40,31 @@
 <li><a href="/built-using-middleman">Sites Built Using Middleman</a></li>
           </ul>
 <footer><p>This site is itself a Middleman project.
-            Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Brand New Documentation</h1>
-          
-          <p>Welcome to the new, and still under-development, Middleman Guides documentation site. </p>
-          
-          <p>This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.</p>
-          </article>
+            Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Individual Page Configuration (YAML Frontmatter)</h1>
+
+<p>YAML Frontmatter is similar to the [Local YAML Data] feature, except it works on a single template file and can also send configuration options directly to Middleman.</p>
+
+<p>Let's take a simple ERb template, adding some YAML variables and change the layout for this specific page.</p>
+
+<div class="highlight"><pre><span class="x">---</span>
+<span class="x">layout: "custom"</span>
+<span class="x">my_list:</span>
+<span class="x">  - one</span>
+<span class="x">  - two</span>
+<span class="x">  - three</span>
+<span class="x">---</span>
+
+<span class="x">&lt;h1&gt;List&lt;/h1&gt;</span>
+<span class="x">&lt;ol&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">my_list</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">f</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/ol&gt;</span>
+</pre></div>
+
+
+<p>YAML Frontmatter must come at the very top of the template and be separated from the rest of the current by a leading and trailing triple hyphen (<code>---</code>). Inside this block, you can create new variables which will be available in the template using the <code>data.page</code> object. The <code>layout</code> variable will pass directly to Middleman and change which layout is being used for rendering.</p>
+</article>
 </div>
     </div>
 <!-- Google Analytics --><script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-90027-21']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    ga.setAttribute('async', 'true');    document.documentElement.firstChild.appendChild(ga);  })();</script>

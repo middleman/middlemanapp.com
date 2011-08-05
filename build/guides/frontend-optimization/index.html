@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1312480347" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman: Frontend Optimization</title>
 </head>
@@ -18,14 +18,17 @@
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
-              <li><a href="/guides/basics-of-templates">Basics of Templates, Includes and Layouts</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts and Partials</a></li>
               <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
               <li><a href="/guides/pretty-urls">Pretty URLs (Directory Indexes)</a></li>
-              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration (YAML Frontmatter)</a></li>
               <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
               <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
             </ul></nav><h3>Blog Posts</h3>
           <ul>
 <li>
@@ -41,13 +44,14 @@
 
 <p>Middleman handles CSS minification and Javascript compression so you don't have to worry about it. Most libraries ship minified and compressed versions of their files for users to deploy, but these files are unreadable or editable. Middleman allows you to keep the original, commented files in our project so you can easily read them and edit them if needed. Then, when you build the project, Middleman will handle all the optimization for you.</p>
 
-<p>In your config.rb, activate the "minify_css" and "minify_javacript" features during the build of your site.</p>
+<p>In your <code>config.rb</code>, activate the <code>minify_css</code> and <code>minify_javacript</code> features during the build of your site.</p>
 
-<pre>configure :build do
-  activate :minify_css
-  activate :minify_javascript
-end
-</pre>
+<div class="highlight"><pre><span class="n">configure</span> <span class="ss">:build</span> <span class="k">do</span>
+  <span class="n">activate</span> <span class="ss">:minify_css</span>
+  <span class="n">activate</span> <span class="ss">:minify_javascript</span>
+<span class="k">end</span>
+</pre></div>
+
 
 <h2>Compressing Images</h2>
 
@@ -55,15 +59,17 @@ end
 
 <p>To install:</p>
 
-<pre>gem install middleman-smusher
-</pre>
+<div class="highlight"><pre>gem install middleman-smusher
+</pre></div>
 
-<p>Then activate in your config.rb:</p>
 
-<pre>configure :build do
-  activate :smusher
-end
-</pre>
+<p>Then activate in your <code>config.rb</code>:</p>
+
+<div class="highlight"><pre><span class="n">configure</span> <span class="ss">:build</span> <span class="k">do</span>
+  <span class="n">activate</span> <span class="ss">:smusher</span>
+<span class="k">end</span>
+</pre></div>
+
 </article>
 </div>
     </div>

@@ -8,9 +8,9 @@ Middleman 2.0 embraces the Rails 3.1 Asset Pipeline and includes both Sprockets 
 
 ## Dependency Management (Sprockets)
 
-Sprockets is a tool for managing libraries of Javascript (and CoffeeScript) code, declaring dependency management and include 3rd-party code. At its core, Sprockets makes a "require" method available inside your .js and .coffee files which can pull in the contents of an external file from your project or from a 3rd party gem.
+Sprockets is a tool for managing libraries of Javascript (and CoffeeScript) code, declaring dependency management and include 3rd-party code. At its core, Sprockets makes a `require` method available inside your .js and .coffee files which can pull in the contents of an external file from your project or from a 3rd party gem.
 
-Say I have a file called "jquery.js" which contains the jQuery library and another file called "app.js.coffee" which contains my application code written in CoffeeScript. My app file can include jquery before it runs like so:
+Say I have a file called `jquery.js` which contains the jQuery library and another file called `app.js.coffee` which contains my application code written in CoffeeScript. My app file can include jquery before it runs like so:
 
     #= require "jquery"
     
@@ -21,7 +21,7 @@ Say I have a file called "jquery.js" which contains the jQuery library and anoth
 
 The output of this file will be the jQuery library at the code and then the app code, compiled into Javascript, beneath.
 
-You could also write your app file in regular Javascript with a file named "app.js" which looks like this:
+You could also write your app file in regular Javascript with a file named `app.js` which looks like this:
 
     //= require "jquery"
 

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1312480347" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman: Getting Started</title>
 </head>
@@ -18,14 +18,17 @@
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
-              <li><a href="/guides/basics-of-templates">Basics of Templates, Includes and Layouts</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts and Partials</a></li>
               <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
               <li><a href="/guides/pretty-urls">Pretty URLs (Directory Indexes)</a></li>
-              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration (YAML Frontmatter)</a></li>
               <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
               <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
             </ul></nav><h3>Blog Posts</h3>
           <ul>
 <li>
@@ -39,7 +42,7 @@
 <footer><p>This site is itself a Middleman project.
             Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Getting Started</h1>
 
-<p>The Middleman is a command-line tool for creating static websites using all the shortcuts and tools of the modern web development environment.</p>
+<p>Middleman is a command-line tool for creating static websites using all the shortcuts and tools of the modern web development environment.</p>
 
 <p>Middleman assumes familiarity with the command-line. The Ruby language and the Sinatra web framework form the base of the tool. Familiarity with both will go a long way in helping users understand why Middleman works the way it does.</p>
 
@@ -49,12 +52,11 @@
 
 <p>Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed via the <a href="http://itunes.apple.com/us/app/xcode/id422352214?mt=12">Mac App Store</a>.</p>
 
-<p>Windows users will need to install Ruby using <a href="http://rubyinstaller.org/">The RubyInstaller for Windows</a>. Windows users should also install <a href="http://rubyinstaller.org/add-ons/devkit/">The RubyInstall DevKit</a> to install Middleman's compiled dependencies.</p>
-
 <p>Once you have Ruby and RubyGems up and running, execute the following from the command line:</p>
 
-<pre>gem install middleman --pre
-</pre>
+<div class="highlight"><pre>gem install middleman --pre
+</pre></div>
+
 
 <p>This will install Middleman, its dependencies and the command-line tools for using Middleman.</p>
 
@@ -69,7 +71,7 @@
 
 <h2>Starting a New Site: middleman init</h2>
 
-<p>To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing directory or have Middleman create one for you using the middleman init command.</p>
+<p>To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing folder or have Middleman create one for you using the middleman init command.</p>
 
 <p>Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).</p>
 
@@ -81,21 +83,31 @@
 
 <p>Every new project creates a basic web development skeleton for you. This automates the construction of a hierarchy of folders and files that you can use in all of your projects.</p>
 
-<p>A brand-new project folder will contain a source/ directory, a config.rb file and a config.ru file. The source directory is where you will build your website. The skeleton project contains folders for javascript, css and images, but you can change these to match your own personal preferences.</p>
+<p>A brand-new project will contain a <code>source</code> folder and a <code>config.rb</code> file. The source folder is where you will build your website. The skeleton project contains folders for javascript, css and images, but you can change these to match your own personal preferences.</p>
 
-<p>The config.rb file contains settings for Middleman and commented documentation on how to enable complex features such as compile-time compression and "blog mode."</p>
+<p>The <code>config.rb</code> file contains settings for Middleman and commented documentation on how to enable complex features such as compile-time compression and "blog mode."</p>
 
-<p>The config.ru file describes how the site should be loaded by a Rack-enabled webserver. This file is provided as a convenience for users wishing to host their Middleman site in development mode on a Rack-based host such as Heroku. In "blog mode" this file describes how the web server can serve static files from the Middleman build/ folder.</p>
+<h4>config.ru</h4>
+
+<p>A config.ru file describes how the site should be loaded by a Rack-enabled webserver. This file is provided as a convenience for users wishing to host their Middleman site in development mode on a Rack-based host such as Heroku.</p>
+
+<p>To include a boilerplate <code>config.ru</code> file in your project, add the <code>--rack</code> flag to the init command:</p>
+
+<pre>###bash
+middleman init my_new_project --rack
+</pre>
+
+<p>In "blog mode" this file describes how the web server can serve static files from the Middleman <code>build</code> folder.</p>
 
 <h3>Project Templates</h3>
 
-<p>In addition to the default basic skeleton, Middleman comes with an optional project template based on the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project. Alternative templates can be accessed using the -t or --template command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:</p>
+<p>In addition to the default basic skeleton, Middleman comes with an optional project template based on the <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a> project. Alternative templates can be accessed using the <code>-t</code> or <code>--template</code> command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:</p>
 
 <div class="highlight"><pre>middleman init my_new_boilerplate_project --template<span class="o">=</span>html5
 </pre></div>
 
 
-<p>Finally, you can create your own custom template skeletons by creating folders in the ~/.middleman/ folder. For example, I can create a folder at ~/.middleman/mobile/ and fill it with files I intend to use on mobile projects</p>
+<p>Finally, you can create your own custom template skeletons by creating folders in the <code>~/.middleman/</code> folder. For example, I can create a folder at <code>~/.middleman/mobile/</code> and fill it with files I intend to use on mobile projects.</p>
 
 <p>If you run middleman init with the help flag, you will see a list of all the possible templates it has detected:</p>
 
@@ -115,7 +127,7 @@
 
 <p>The vast majority of time spent using Middleman will be in the Development Cycle.</p>
 
-<p>From the command-line, start the preview webserver from inside your project directory:</p>
+<p>From the command-line, start the preview web-server from inside your project folder:</p>
 
 <div class="highlight"><pre><span class="nb">cd </span>my_project
 middleman server
@@ -124,20 +136,30 @@ middleman server
 
 <p>This will start a local web server running at: http://localhost:4567/</p>
 
-<p>You can create and edit files in the source/ folder and see the changes reflected on the preview webserver.</p>
+<p>You can create and edit files in the <code>source</code> folder and see the changes reflected on the preview web-server.</p>
 
-<p>Note that changes to the config.rb file will require middleman server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.</p>
+<p>Note that changes to the <code>config.rb</code> file will require middleman server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.</p>
+
+<h3>Unadorned middleman command</h3>
+
+<p>Running <code>middleman</code> without any commands is the same as starting a server.</p>
+
+<div class="highlight"><pre>middleman
+</pre></div>
+
+
+<p>This will do exactly the same thing as <code>middleman server</code>.</p>
 
 <h2>Exporting the Static Site (middleman build)</h2>
 
-<p>Finally, when you are ready to deliver static code or, in the case of "blog mode," host a static blog, you will need to build the site. Using the command-line, from the project folder, run middleman build:</p>
+<p>Finally, when you are ready to deliver static code or, in the case of "blog mode", host a static blog, you will need to build the site. Using the command-line, from the project folder, run <code>middleman build</code>:</p>
 
 <div class="highlight"><pre><span class="nb">cd </span>my_project
 middleman build
 </pre></div>
 
 
-<p>This will create a static file for each file located in your source/ directory. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed.</p>
+<p>This will create a static file for each file located in your <code>source</code> folder. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed.</p>
 </article>
 </div>
     </div>

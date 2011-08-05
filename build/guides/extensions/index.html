@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1312480347" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman: Custom Extensions</title>
 </head>
@@ -18,14 +18,17 @@
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
-              <li><a href="/guides/basics-of-templates">Basics of Templates, Includes and Layouts</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts and Partials</a></li>
               <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
               <li><a href="/guides/pretty-urls">Pretty URLs (Directory Indexes)</a></li>
-              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration (YAML Frontmatter)</a></li>
               <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
               <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
             </ul></nav><h3>Blog Posts</h3>
           <ul>
 <li>
@@ -54,21 +57,21 @@
 </pre></div>
 
 
-<p>All features must be namespaced under the Middleman::Features prefix. This module must be accessible to your config.rb file. Either define it directly in that file, or define it in another ruby file and "require" it in config.rb</p>
+<p>All features must be namespaced under the <code>Middleman::Features</code> prefix. This module must be accessible to your <code>config.rb</code> file. Either define it directly in that file, or define it in another ruby file and <code>require</code> it in <code>config.rb</code></p>
 
-<p>Finally, once your module is included, you must activate it in config.rb:</p>
+<p>Finally, once your module is included, you must activate it in <code>config.rb</code>:</p>
 
 <div class="highlight"><pre><span class="n">activate</span> <span class="ss">:my_feature</span>
 </pre></div>
 
 
-<p>The "name" of your feature is the lowercased and underscored version of the original "MyFeature" module name.</p>
+<p>The name of your feature is the lowercased and underscored version of the original <code>MyFeature</code> module name.</p>
 
-<p>In the "MyFeature" extension, the registered method will be called as soon as the "activate" command is run. The "app" variable is a Middleman::Base class. Using this class, you can augment the Middleman environment.</p>
+<p>In the <code>MyFeature</code> extension, the registered method will be called as soon as the <code>activate</code> command is run. The <code>app</code> variable is a <code>Middleman::Base</code> class. Using this class, you can augment the Middleman environment.</p>
 
 <h2>Setting variables</h2>
 
-<p>The Middleman::Base class can be used to change settings (variables using the set command) in your extension.</p>
+<p>The <code>Middleman::Base</code> class can be used to change settings (variables using the set command) in your extension.</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -96,7 +99,7 @@
 
 <h2>Adding Methods to config.rb</h2>
 
-<p>Methods available inside config.rb as simply class methods of Middleman::Base. Let's add a new method to be used in the config.rb:</p>
+<p>Methods available inside <code>config.rb</code> as simply class methods of <code>Middleman::Base</code>. Let's add a new method to be used in the <code>config.rb</code>:</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -115,11 +118,11 @@
 </pre></div>
 
 
-<p>By extending the Middleman::Base class, available as "app", we've added a "say_hello" method to the environment which simply prints "Hello." Internally, these methods are used to build lists of paths and requests which will be processed later in the app.</p>
+<p>By extending the <code>Middleman::Base</code> class, available as <code>app</code>, we've added a <code>say_hello</code> method to the environment which simply prints "Hello". Internally, these methods are used to build lists of paths and requests which will be processed later in the app.</p>
 
 <h2>after_configuration Callback</h2>
 
-<p>Sometimes you will want to wait until the config.rb has been parsed to run code. For example, if you rely on the :css_dir variable, you should wait until it has been set. For this, we'll use a callback:</p>
+<p>Sometimes you will want to wait until the <code>config.rb</code> has been parsed to run code. For example, if you rely on the <code>:css_dir</code> variable, you should wait until it has been set. For this, we'll use a callback:</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -137,7 +140,7 @@
 
 <h3>Compass Callback</h3>
 
-<p>Similarly, if you're extension relies on variable and settings within Compass to be ready, use the "compass_config" callback.</p>
+<p>Similarly, if you're extension relies on variable and settings within Compass to be ready, use the <code>compass_config</code> callback.</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -174,14 +177,15 @@
 </pre></div>
 
 
-<p>Now, inside your templates, you will have access to a "make_a_link" method. Here's an example using an ERb template:</p>
+<p>Now, inside your templates, you will have access to a <code>make_a_link</code> method. Here's an example using an ERb template:</p>
 
-<pre>&lt;h1&gt;&lt;%= make_a_link("http://example.com", "Click me") %&gt;&lt;/h1&gt;
-</pre>
+<div class="highlight"><pre><span class="x">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="n">make_a_link</span><span class="p">(</span><span class="s2">"http://example.com"</span><span class="p">,</span> <span class="s2">"Click me"</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="x">&lt;/h1&gt;</span>
+</pre></div>
+
 
 <h2>Request Callback</h2>
 
-<p>The request callback allows you to do processing before Middleman renders the page. This can be useful for returning data from another source, or failing early. The internal :front_matter extension uses this hook to parse YAML inside the template files before the templates are rendered.</p>
+<p>The request callback allows you to do processing before Middleman renders the page. This can be useful for returning data from another source, or failing early. The internal <code>:front_matter</code> extension uses this hook to parse YAML inside the template files before the templates are rendered.</p>
 
 <p>Here's an example:</p>
 
@@ -199,7 +203,7 @@
 </pre></div>
 
 
-<p>The above sets the :currently_requested_path value at the beginning of each request. Notice the return value of "true." All blocks using "before_processing" must return either true or false. True allows the processing to continue after the callback in run. False halts the processing immediately. Internal extensions use this ability to set 404 headers on missing files and halt processing if they don't exist.</p>
+<p>The above sets the <code>:currently_requested_path</code> value at the beginning of each request. Notice the return value of "true." All blocks using <code>before_processing</code> must return either true or false. True allows the processing to continue after the callback in run. False halts the processing immediately. Internal extensions use this ability to set 404 headers on missing files and halt processing if they don't exist.</p>
 
 <h2>build_reroute Callback</h2>
 
@@ -233,7 +237,7 @@
 
 <h2>after_build Callback</h2>
 
-<p>This callback is used to execute code after the build process has finished. The middleman-smusher extension uses this feature to compress all the images in the build directory after it has been build. It's also conceivable to integrate a deployment script after build.</p>
+<p>This callback is used to execute code after the build process has finished. The <a href="https://github.com/tdreyno/middleman-smusher">middleman-smusher</a> extension uses this feature to compress all the images in the build folder after it has been build. It's also conceivable to integrate a deployment script after build.</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -250,7 +254,7 @@
 
 <h2>Sinatra</h2>
 
-<p>The Middleman::Base class is an extension of Sinatra. Therefore the "app" variable also has access to Sinatra routes for additional customization:</p>
+<p>The Middleman::Base class is an extension of Sinatra. Therefore the <code>app</code> variable also has access to Sinatra routes for additional customization:</p>
 
 <div class="highlight"><pre><span class="k">module</span> <span class="nn">Middleman::Features::MyFeature</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -265,7 +269,10 @@
 </pre></div>
 
 
-<p>The above will show a page with the contents "World" for all request to: http://localhost:4567/hello</p>
+<p>The above will show a page with the contents "World" for all request to: </p>
+
+<pre>http://localhost:4567/hello
+</pre>
 
 <p>Be aware, this only effects the Middleman preview server, not the built output.</p>
 </article>

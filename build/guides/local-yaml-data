@@ -7,7 +7,7 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman: Brand New Documentation</title>
+<title>Middleman: Local YAML Data</title>
 </head>
 <body>
     <div id="frame">
@@ -40,12 +40,43 @@
 <li><a href="/built-using-middleman">Sites Built Using Middleman</a></li>
           </ul>
 <footer><p>This site is itself a Middleman project.
-            Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Brand New Documentation</h1>
-          
-          <p>Welcome to the new, and still under-development, Middleman Guides documentation site. </p>
-          
-          <p>This site provides documentation for Middleman version 2.0 and will look respectable in time for the big release.</p>
-          </article>
+            Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Local YAML Data</h1>
+
+<p>Sometimes it is useful to extract the data content of a page from the rendering. This way some team members can concentrate on building up the database on content, while another team member can build the structure of the site. Local YAML Data allows you to create <code>.yml</code> files in a folder called <code>data</code> and makes this information available in your templates.</p>
+
+<p>Here's an example file at <code>data/people.yml</code> with the contents:</p>
+
+<div class="highlight"><pre><span class="l-Scalar-Plain">friends</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Tom</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Dick</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Harry</span>
+</pre></div>
+
+
+<p>Now, anywhere in our template files, we will have access to this data:</p>
+
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Friends&lt;/h1&gt;</span>
+<span class="x">&lt;ol&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="n">data</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">friends</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">f</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">&lt;/ol&gt;</span>
+</pre></div>
+
+
+<p>Which will render:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Friends<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Tom<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Dick<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Harry<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div>
+
+
+<p>Notice that the name of the <code>.yml</code> file (people) is the name of the object which stores the data in your template: <code>data.people</code>.</p>
+</article>
 </div>
     </div>
 <!-- Google Analytics --><script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-90027-21']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    ga.setAttribute('async', 'true');    document.documentElement.firstChild.appendChild(ga);  })();</script>

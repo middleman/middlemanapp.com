@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1312480347" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman: Dynamic Pages</title>
 </head>
@@ -18,14 +18,17 @@
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
-              <li><a href="/guides/basics-of-templates">Basics of Templates, Includes and Layouts</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts and Partials</a></li>
               <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
               <li><a href="/guides/pretty-urls">Pretty URLs (Directory Indexes)</a></li>
-              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration (YAML Frontmatter)</a></li>
               <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
               <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
             </ul></nav><h3>Blog Posts</h3>
           <ul>
 <li>
@@ -39,37 +42,39 @@
 <footer><p>This site is itself a Middleman project.
             Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.</p> </footer></aside><article id="main" role="main"><h1>Dynamic Pages</h1>
 
-<p>Middleman 2.0 has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example config.rb setup:</p>
+<p>Middleman 2.0 has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example <code>config.rb</code> setup:</p>
 
-<pre>["tom", "dick", "harry"].each do |name|
-  page "/about/#{name}.html", :proxy =&gt; "/about/template.html" do
-    @person_name = name
-  end
-end
-</pre>
+<div class="highlight"><pre><span class="o">[</span><span class="s2">"tom"</span><span class="p">,</span> <span class="s2">"dick"</span><span class="p">,</span> <span class="s2">"harry"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+  <span class="n">page</span> <span class="s2">"/about/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="ss">:proxy</span> <span class="o">=&gt;</span> <span class="s2">"/about/template.html"</span> <span class="k">do</span>
+    <span class="vi">@person_name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
 
 <p>When this project is built, four files will be output:</p>
 
 <ul>
-<li>/about/tom.html (with @person_name equalling "tom" in the template)</li>
-<li>/about/dick.html (with @person_name equalling "dick" in the template)</li>
-<li>/about/harry.html (with @person_name equalling "tom" in the template)</li>
-<li>/about/template.html (with @person_name being nil in the template)</li>
+<li>/about/tom.html (with <code>@person_name</code> equalling "tom" in the template)</li>
+<li>/about/dick.html (with <code>@person_name</code> equalling "dick" in the template)</li>
+<li>/about/harry.html (with <code>@person_name</code> equalling "tom" in the template)</li>
+<li>/about/template.html (with <code>@person_name</code> being nil in the template)</li>
 </ul>
 <p>In most cases, you will not want to generate the template itself without the @person_name variable, so you can tell Middleman to ignore it:</p>
 
-<pre>["tom", "dick", "harry"].each do |name|
-  page "/about/#{name}.html", :proxy =&gt; "/about/template.html", :ignore =&gt; true do
-    @person_name = name
-  end
-end
-</pre>
+<div class="highlight"><pre><span class="o">[</span><span class="s2">"tom"</span><span class="p">,</span> <span class="s2">"dick"</span><span class="p">,</span> <span class="s2">"harry"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+  <span class="n">page</span> <span class="s2">"/about/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="ss">:proxy</span> <span class="o">=&gt;</span> <span class="s2">"/about/template.html"</span><span class="p">,</span> <span class="ss">:ignore</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span>
+    <span class="vi">@person_name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
 
-<p>Now, only the "tom", "dick" and "harry" files will be output.</p>
+
+<p>Now, only the <code>about/tom.html</code>, <code>about/dick.html</code> and <code>about/harry.html</code> files will be output.</p>
 
 <h2>Arbitrary Ignores</h2>
 
-<p>It is also possible to ignore arbitrary paths when building a site using the new "ignore" method in your config.rb:</p>
+<p>It is also possible to ignore arbitrary paths when building a site using the new <code>ignore</code> method in your <code>config.rb</code>:</p>
 
 <pre>ignore "/ignore-this-template.html"
 </pre>

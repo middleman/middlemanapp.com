@@ -10,7 +10,7 @@ If you are unfamiliar, Sass is a CSS preprocessor which provides a simpler synta
 
 Middleman allows you to author Sass and SCSS files by appending the file extension for the language you wish to use to a CSS file. Here are some examples.
 
-A Sass file in source/stylesheets/login.css.sass using the whitespace-aware Sass syntax:
+A Sass file in `source/stylesheets/login.css.sass` using the whitespace-aware Sass syntax:
 
     body
       background: white
@@ -22,7 +22,7 @@ A Sass file in source/stylesheets/login.css.sass using the whitespace-aware Sass
       button
         float: right
 
-The same styles could also be expressed in the CSS-superset SCSS format in a file at source/stylesheets/login.css.scss:
+The same styles could also be expressed in the CSS-superset SCSS format in a file at `source/stylesheets/login.css.scss`:
 
     body {
       background: white;
@@ -35,7 +35,7 @@ The same styles could also be expressed in the CSS-superset SCSS format in a fil
         float: right; }
     }
 
-Both of these files will compile to the following build/stylesheets/site.css file:
+Both of these files will compile to the following `build/stylesheets/site.css` file:
 
     :::css
     body {
@@ -82,7 +82,6 @@ Grids (using [Susy]):
     @import "compass"
     @import "icon/*.png"
     +all-icon-sprites
-
 
 [Sass Lang website]: http://sass-lang.com/
 [official Compass website]: http://compass-style.org/

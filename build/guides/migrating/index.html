@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
-<link href="/stylesheets/site.css?1312480347" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/site.css?1312528618" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
 <title>Middleman: Migrating to Middleman 2.0</title>
 </head>
@@ -18,14 +18,17 @@
           <nav><ul>
 <li><a href="/guides/getting-started">Getting Started</a></li>
               <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
-              <li><a href="/guides/basics-of-templates">Basics of Templates, Includes and Layouts</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts and Partials</a></li>
               <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
               <li><a href="/guides/pretty-urls">Pretty URLs (Directory Indexes)</a></li>
-              <li><a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a></li>
               <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration (YAML Frontmatter)</a></li>
               <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
               <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
             </ul></nav><h3>Blog Posts</h3>
           <ul>
 <li>
@@ -43,28 +46,26 @@
 
 <h2>Unified middleman command</h2>
 
-<p>In previous versions, Middleman shipped with 3 commands: mm-init, mm-server and mm-build. These tools were responsible for the 3 phases of project development: creation, construction and compilation. In version 2.0, these 3 commands (along with a new migrate command) have been unified into a single command. These change was made to make the name of the command more obvious (middleman) than the abbreviated mm- prefix and to follow the lead of the Rails and Compass projects which uses a unified rails and compass command respectively.</p>
+<p>In previous versions, Middleman shipped with 3 commands: <code>mm-init</code>, <code>mm-server</code> and <code>mm-build</code>. These tools were responsible for the 3 phases of project development: creation, construction and compilation. In version 2.0, these 3 commands (along with a new migrate command) have been unified into a single command. These change was made to make the name of the command more obvious (<code>middleman</code>) than the abbreviated mm- prefix and to follow the lead of the Rails and Compass projects which uses a unified <code>rails</code> and <code>compass</code> command respectively.</p>
 
 <p>For the 2.0 series, the three old command will still be available to allow users time to migrate their scripts, tutorials and muscle memory to the new commands. In a future 2.x, these commands will be removed and only the new middleman command will be available.</p>
 
 <p>As of 2.0, the following commands are possible:</p>
 
-<pre>middleman init NEW_PROJECT_FOLDER
+<ul>
+<li><code>middleman init NEW_PROJECT_FOLDER</code></li>
+<li><code>middleman server</code></li>
+<li><code>middleman build</code></li>
+<li><code>middleman migrate</code></li>
+<li><code>middleman version</code></li>
+</ul>
+<h2>Unified Source Folder</h2>
 
-middleman server
+<p>One of the biggest changes with Middleman 2.0 is the unification of both static files and template files into a single source folder.</p>
 
-middleman build
+<p>In Middleman version 1, projects contained a <code>public</code> folder for static resources (images, javascripts and stylesheets) and a <code>views</code> folder for templated files (erb, haml, sass, coffee).</p>
 
-middleman migrate
-</pre>
-
-<h2>Unified source directory</h2>
-
-<p>One of the biggest changes with Middleman 2.0 is the unification of both static files and template files into a single source directory.</p>
-
-<p>In Middleman version 1, projects contained a public/ folder for static resources (images, javascripts and stylesheets) and a views/ folder for templated files (erb, haml, sass, coffee).</p>
-
-<p>This awkward split is a remnant of the way Rails 3.0 and earlier divided files into static and templated content. This split, and the poor naming, caused problems for new users. Therefore, Middleman 2.0 has combined these folders into a single source/ directory. The entirety of your project, both static and templated files, live along side each other.</p>
+<p>This awkward split is a remnant of the way Rails 3.0 and earlier divided files into static and templated content. This split, and the poor naming, caused problems for new users. Therefore, Middleman 2.0 has combined these folders into a single <code>source</code> folder. The entirety of your project, both static and templated files, live along side each other.</p>
 
 <p>Middleman 2.0 does not offer a backwards compatibility mode. Old project must merge their folders to update Middleman. The process for doing this is fairly simple. From the terminal:</p>
 
@@ -88,17 +89,17 @@ middleman migrate
 
 <h3>enable -&gt; activate</h3>
 
-<p>In your config.rb, you should be using activate to enable features like so:</p>
+<p>In your <code>config.rb</code>, you should be using activate to enable features like so:</p>
 
 <div class="highlight"><pre><span class="n">activate</span> <span class="ss">:relative_assets</span>
 </pre></div>
 
 
-<p>In the past, "enable" also worked. This old name has been removed. Always use "activate."</p>
+<p>In the past, <code>enable</code> also worked. This old name has been removed. Always use <code>activate</code>.</p>
 
 <h3>mime (add new mime types)</h3>
 
-<p>This method allowed the addition of new mime types to Middleman. This is now available higher up the stack, provided by Sinatra, as "mime_type." Use as before:</p>
+<p>This method allowed the addition of new mime types to Middleman. This is now available higher up the stack, provided by Sinatra, as <code>mime_type</code>. Use as before:</p>
 
 <div class="highlight"><pre><span class="n">mime_type</span> <span class="s2">"pdf"</span><span class="p">,</span> <span class="s2">"application/pdf"</span>
 </pre></div>
@@ -110,7 +111,7 @@ middleman migrate
 
 <h3>Ugly Haml</h3>
 
-<p>The Ugly Haml feature told Haml to output unindented text. This was useful as a means of obfuscation. The "ugly_haml" feature has been removed from Middleman 2.0, but you can still achieve the same effect by setting the Haml options directly:</p>
+<p>The Ugly Haml feature told Haml to output unindented text. This was useful as a means of obfuscation. The <code>ugly_haml</code> feature has been removed from Middleman 2.0, but you can still achieve the same effect by setting the Haml options directly:</p>
 
 <div class="highlight"><pre><span class="n">set</span> <span class="ss">:haml</span><span class="p">,</span> <span class="p">{</span> <span class="ss">:ugly</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="p">}</span>
 </pre></div>

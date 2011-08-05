@@ -18,20 +18,20 @@ The most basic extension looks like:
       end
     end
 
-All features must be namespaced under the Middleman::Features prefix. This module must be accessible to your config.rb file. Either define it directly in that file, or define it in another ruby file and "require" it in config.rb
+All features must be namespaced under the `Middleman::Features` prefix. This module must be accessible to your `config.rb` file. Either define it directly in that file, or define it in another ruby file and `require` it in `config.rb`
 
-Finally, once your module is included, you must activate it in config.rb:
+Finally, once your module is included, you must activate it in `config.rb`:
 
     :::ruby
     activate :my_feature
 
-The "name" of your feature is the lowercased and underscored version of the original "MyFeature" module name.
+The name of your feature is the lowercased and underscored version of the original `MyFeature` module name.
 
-In the "MyFeature" extension, the registered method will be called as soon as the "activate" command is run. The "app" variable is a Middleman::Base class. Using this class, you can augment the Middleman environment.
+In the `MyFeature` extension, the registered method will be called as soon as the `activate` command is run. The `app` variable is a `Middleman::Base` class. Using this class, you can augment the Middleman environment.
 
 ## Setting variables
 
-The Middleman::Base class can be used to change settings (variables using the set command) in your extension.
+The `Middleman::Base` class can be used to change settings (variables using the set command) in your extension.
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -57,7 +57,7 @@ You can also use this ability to create new settings which can be accessed later
 
 ## Adding Methods to config.rb
 
-Methods available inside config.rb as simply class methods of Middleman::Base. Let's add a new method to be used in the config.rb:
+Methods available inside `config.rb` as simply class methods of `Middleman::Base`. Let's add a new method to be used in the `config.rb`:
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -75,11 +75,11 @@ Methods available inside config.rb as simply class methods of Middleman::Base. L
       end
     end
 
-By extending the Middleman::Base class, available as "app", we've added a "say_hello" method to the environment which simply prints "Hello." Internally, these methods are used to build lists of paths and requests which will be processed later in the app.
+By extending the `Middleman::Base` class, available as `app`, we've added a `say_hello` method to the environment which simply prints "Hello". Internally, these methods are used to build lists of paths and requests which will be processed later in the app.
 
 ## after_configuration Callback
 
-Sometimes you will want to wait until the config.rb has been parsed to run code. For example, if you rely on the :css_dir variable, you should wait until it has been set. For this, we'll use a callback:
+Sometimes you will want to wait until the `config.rb` has been parsed to run code. For example, if you rely on the `:css_dir` variable, you should wait until it has been set. For this, we'll use a callback:
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -96,7 +96,7 @@ Sometimes you will want to wait until the config.rb has been parsed to run code.
 
 ### Compass Callback
 
-Similarly, if you're extension relies on variable and settings within Compass to be ready, use the "compass_config" callback.
+Similarly, if you're extension relies on variable and settings within Compass to be ready, use the `compass_config` callback.
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -131,13 +131,14 @@ Helpers are methods available inside your template. To add helper methods, we do
       end
     end
 
-Now, inside your templates, you will have access to a "make_a_link" method. Here's an example using an ERb template:
+Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERb template:
 
+    :::erb
     <h1><%= make_a_link("http://example.com", "Click me") %></h1>
 
 ## Request Callback
 
-The request callback allows you to do processing before Middleman renders the page. This can be useful for returning data from another source, or failing early. The internal :front_matter extension uses this hook to parse YAML inside the template files before the templates are rendered.
+The request callback allows you to do processing before Middleman renders the page. This can be useful for returning data from another source, or failing early. The internal `:front_matter` extension uses this hook to parse YAML inside the template files before the templates are rendered.
 
 Here's an example:
 
@@ -154,7 +155,7 @@ Here's an example:
       end
     end
 
-The above sets the :currently_requested_path value at the beginning of each request. Notice the return value of "true." All blocks using "before_processing" must return either true or false. True allows the processing to continue after the callback in run. False halts the processing immediately. Internal extensions use this ability to set 404 headers on missing files and halt processing if they don't exist.
+The above sets the `:currently_requested_path` value at the beginning of each request. Notice the return value of "true." All blocks using `before_processing` must return either true or false. True allows the processing to continue after the callback in run. False halts the processing immediately. Internal extensions use this ability to set 404 headers on missing files and halt processing if they don't exist.
 
 ## build_reroute Callback
 
@@ -187,7 +188,7 @@ During the build cycle, you can hook into any file which Middleman is intending 
 
 ## after_build Callback
 
-This callback is used to execute code after the build process has finished. The middleman-smusher extension uses this feature to compress all the images in the build directory after it has been build. It's also conceivable to integrate a deployment script after build.
+This callback is used to execute code after the build process has finished. The [middleman-smusher] extension uses this feature to compress all the images in the build folder after it has been build. It's also conceivable to integrate a deployment script after build.
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -203,7 +204,7 @@ This callback is used to execute code after the build process has finished. The 
 
 ## Sinatra 
 
-The Middleman::Base class is an extension of Sinatra. Therefore the "app" variable also has access to Sinatra routes for additional customization:
+The Middleman::Base class is an extension of Sinatra. Therefore the `app` variable also has access to Sinatra routes for additional customization:
 
     :::ruby
     module Middleman::Features::MyFeature
@@ -217,6 +218,10 @@ The Middleman::Base class is an extension of Sinatra. Therefore the "app" variab
       end
     end
 
-The above will show a page with the contents "World" for all request to: http://localhost:4567/hello
+The above will show a page with the contents "World" for all request to: 
+
+    http://localhost:4567/hello
 
 Be aware, this only effects the Middleman preview server, not the built output.
+
+[middleman-smusher]: https://github.com/tdreyno/middleman-smusher
