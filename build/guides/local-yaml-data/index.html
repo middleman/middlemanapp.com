@@ -7,7 +7,7 @@
 <link href="/blog/feed.xml" rel="alternate" title="Middleman Blog" type="application/atom+xml">
 <link href="/stylesheets/site.css" media="screen" rel="stylesheet" type="text/css">
 <link href="/stylesheets/pygments/solarized.css?1312479203" media="screen" rel="stylesheet" type="text/css">
-<title>Middleman: Individual Page Configuration (YAML Frontmatter)</title>
+<title>Middleman: Local YAML Data</title>
 </head>
 <body>
     <div id="frame">
@@ -42,30 +42,42 @@
 <footer><p>This site is itself a Middleman project.
             Fork &amp; contribute <a href="https://github.com/tdreyno/middleman-guides">on GitHub</a>.<br><br>
             Middleman is open-source software licensed under the <a href="https://github.com/tdreyno/middleman/blob/master/LICENSE">MIT License</a>.<br><br>
-            © 2011 <a href="http://awardwinningfjords.com">Thomas Reynolds</a></p> </footer></aside><article id="main" role="main"><h1>Individual Page Configuration (YAML Frontmatter)</h1>
+            © 2011 <a href="http://awardwinningfjords.com">Thomas Reynolds</a></p> </footer></aside><article id="main" role="main"><h1>Local YAML Data</h1>
 
-<p>YAML Frontmatter is similar to the [Local YAML Data] feature, except it works on a single template file and can also send configuration options directly to Middleman.</p>
+<p>Sometimes it is useful to extract the data content of a page from the rendering. This way some team members can concentrate on building up the database on content, while another team member can build the structure of the site. Local YAML Data allows you to create <code>.yml</code> files in a folder called <code>data</code> and makes this information available in your templates.</p>
 
-<p>Let's take a simple ERb template, adding some YAML variables and change the layout for this specific page.</p>
+<p>Here's an example file at <code>data/people.yml</code> with the contents:</p>
 
-<div class="highlight"><pre><span class="x">---</span>
-<span class="x">layout: "custom"</span>
-<span class="x">my_list:</span>
-<span class="x">  - one</span>
-<span class="x">  - two</span>
-<span class="x">  - three</span>
-<span class="x">---</span>
+<div class="highlight"><pre><span class="l-Scalar-Plain">friends</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Tom</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Dick</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">Harry</span>
+</pre></div>
 
-<span class="x">&lt;h1&gt;List&lt;/h1&gt;</span>
+
+<p>Now, anywhere in our template files, we will have access to this data:</p>
+
+<div class="highlight"><pre><span class="x">&lt;h1&gt;Friends&lt;/h1&gt;</span>
 <span class="x">&lt;ol&gt;</span>
-<span class="x">  </span><span class="cp">&lt;%</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">my_list</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
+<span class="x">  </span><span class="cp">&lt;%</span> <span class="n">data</span><span class="o">.</span><span class="n">people</span><span class="o">.</span><span class="n">friends</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="cp">%&gt;</span><span class="x"></span>
 <span class="x">  &lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">f</span> <span class="cp">%&gt;</span><span class="x">&lt;/li&gt;</span>
 <span class="x">  </span><span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><span class="x"></span>
 <span class="x">&lt;/ol&gt;</span>
 </pre></div>
 
 
-<p>YAML Frontmatter must come at the very top of the template and be separated from the rest of the current by a leading and trailing triple hyphen (<code>---</code>). Inside this block, you can create new variables which will be available in the template using the <code>data.page</code> object. The <code>layout</code> variable will pass directly to Middleman and change which layout is being used for rendering.</p>
+<p>Which will render:</p>
+
+<div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Friends<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Tom<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Dick<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Harry<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div>
+
+
+<p>Notice that the name of the <code>.yml</code> file (people) is the name of the object which stores the data in your template: <code>data.people</code>.</p>
 </article>
 </div>
     </div>
