@@ -9,9 +9,11 @@ html
     == stylesheet_link_tag "pygments/solarized"
     
     title
-      | Middleman Guides
+      | Middleman: 
       - if data.page.title
-        | : #{data.page.title}
+        | #{data.page.title}
+      - else
+        | Hand-crafted frontend development
     
   body
     #frame
@@ -19,7 +21,7 @@ html
         aside
           header
             h1== link_to "Middleman", "/"
-            h4 Hand-crafted static frontend development
+            h4 Hand-crafted frontend development
 
           h3 All Guides
           nav
@@ -36,7 +38,7 @@ html
               / li== link_to "Local Data Sources (YAML)", "/guides/local-yaml-data"
               /li== link_to "Remote Data Sources (REST)", "/guides/remote-data"
               /li== link_to "Static Blogs", "/guides/blogs"
-              /li== link_to "Custom Extensions", "/guides/extensions"
+              li== link_to "Custom Extensions", "/guides/extensions"
               /li== link_to "Rack Middleware", "/guides/rack-middleware"
           
           h3 Blog Posts
@@ -53,8 +55,8 @@ html
 
           footer
             markdown:
-              This site is itself a Middleman project.<br />
-              Fork and contribute to the guides [on GitHub].
+              This site is itself a Middleman project.
+              Fork &amp; contribute [on GitHub].
               [on GitHub]: https://github.com/tdreyno/middleman-guides
               
         article#main role="main"

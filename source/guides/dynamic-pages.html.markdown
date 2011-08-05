@@ -33,4 +33,4 @@ Now, only the "tom", "dick" and "harry" files will be output.
 
 It is also possible to ignore arbitrary paths when building a site using the new "ignore" method in your config.rb:
 
-    ignore "/ignore-this-tempalte.html"
+    ignore "/ignore-this-template.html"
