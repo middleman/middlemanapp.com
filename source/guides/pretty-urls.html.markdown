@@ -47,7 +47,7 @@ Or, you may want a PHP file:
 
 If there are pages which you don't want automatically renamed, you can opt-out:
 
-    ::ruby
+    :::ruby
     page "/i-really-want-the-extension.html", :directory_index => false
 
 ### Manual Indexes
