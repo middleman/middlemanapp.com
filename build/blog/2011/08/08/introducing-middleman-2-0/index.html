@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<link href="/stylesheets/site.css?1312569832" media="screen" rel="stylesheet" type="text/css">
+<link href="/stylesheets/pygments/solarized.css?1312599932" media="screen" rel="stylesheet" type="text/css">
+<title>Middleman: Introducing Middleman 2.0</title>
+</head>
+<body>
+    <div id="frame">
+      <div class="container">
+        <aside><header><h1><a href="/">Middleman</a></h1>
+            <h4>Hand-crafted frontend development</h4>
+          </header><nav><ul>
+<li><a href="/guides/getting-started">Getting Started</a></li>
+              <li><a href="/guides/migrating">Migrating to Middleman 2.0</a></li>
+              <li><a href="/guides/templates-layouts-partials">Templates, Layouts &amp; Partials</a></li>
+              <li><a href="/guides/sass-and-compass">Sass and Compass</a></li>
+              <li><a href="/guides/coffeescript-sprockets">CoffeeScript &amp; Sprockets</a></li>
+              <li><a href="/guides/dynamic-pages">Dynamic Pages</a></li>
+              <li><a href="/guides/pretty-urls">Pretty URLs</a></li>
+              <li><a href="/guides/frontend-optimization">Frontend Optimization</a></li>
+              <li><a href="/guides/individual-page-configuration">Individual Page Configuration</a></li>
+              <li><a href="/guides/livereload">LiveReload</a></li>
+              <li><a href="/guides/local-yaml-data">Local YAML Data</a></li>
+              <li><a href="/guides/extensions">Custom Extensions</a></li>
+              <li><a href="/guides/rack-middleware">Rack Middleware</a></li>
+              <li class="div"><a href="/built-using-middleman">Sites Built Using Middleman</a></li>
+            </ul></nav><footer><p>© 2011 <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.<br>
+            Middleman is open-source software licensed under the <a href="https://github.com/tdreyno/middleman/blob/master/LICENSE">MIT License</a>.</p> </footer></aside><article id="main" role="main"><h1>Introducing Middleman 2.0</h1>
+
+<p>Middleman 2.0 is a huge release featuring a refactored core, a unified source folder, a unified command line, tons of new features and a <a href="http://middlemanapp.com">full documentation website</a>.</p>
+
+<p>As always, install via RubyGems:</p>
+
+<div class="highlight"><pre>gem install middleman
+</pre></div>
+
+
+<p>For more information, read the <a href="/guides/getting-started">Getting Started</a> guide.</p>
+
+<p>Here's a quick overview of everything that's changed.</p>
+
+<h2>Unified Source Folder</h2>
+
+<p>The <code>public</code> and <code>views</code> folders have been combined into a single <code>source</code> folder which contains all of your files. Use the <a href="/guides/migrating">migration tool</a> to quickly update your folder structure, or manually combine the folders.</p>
+
+<h2>Unified Command</h2>
+
+<p>The old commands, <code>mm-init</code>, <code>mm-server</code> and <code>mm-build</code>, have been combined into a single <code>middleman</code> command with the following subcommands:</p>
+
+<ul>
+<li><code>middleman init</code></li>
+<li><code>middleman server</code></li>
+<li><code>middleman build</code></li>
+</ul>
+<h2>New Features</h2>
+
+<p>Here are the most interesting new features of Middleman 2.0.</p>
+
+<h3>Sprockets</h3>
+
+<p>Sprockets is a tool for Javascript dependency management. Using Sprockets you can include other Javascript and CoffeeScript files into your scripts. </p>
+
+<div class="highlight"><pre><span class="c1">//= require "another_file"</span>
+
+<span class="kd">function</span> <span class="nx">my_javascript</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Read more in the <a href="/guides/js-coffee-and-sprockets">Javascript, CoffeeScript and Sprockets</a> guide.</p>
+
+<h3>Dynamic Pages</h3>
+
+<p>Dynamic pages allow you to generate HTML for files which share a single template. </p>
+
+<div class="highlight"><pre><span class="o">[</span><span class="s2">"tom"</span><span class="p">,</span> <span class="s2">"dick"</span><span class="p">,</span> <span class="s2">"harry"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+  <span class="n">page</span> <span class="s2">"/about/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="ss">:proxy</span> <span class="o">=&gt;</span> <span class="s2">"/about/template.html"</span> <span class="k">do</span>
+    <span class="vi">@person_name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>Read more in the <a href="/guides/dynamic-pages">Dynamic Pages</a> guide.</p>
+
+<h3>Pretty URLs</h3>
+
+<p>Pretty URLs (aka Directory Indexes) let you generate folders for each HTML file in your project which results in a pretty, extension-less URL in common web-servers.</p>
+
+<div class="highlight"><pre><span class="n">activate</span> <span class="ss">:directory_indexes</span>
+</pre></div>
+
+
+<p>Now <code>source/my-page.html</code> will generate <code>build/my-page/index.html</code>.</p>
+
+<p>Read more in the <a href="/guides/pretty-urls">Pretty URLs</a> guide.</p>
+
+<h3>YAML Frontmatter</h3>
+
+<p>YAML Frontmatter lets you add in-template variables at the top of a page, which are also available in the layout, and to configure which layout the page uses.</p>
+
+<div class="highlight"><pre><span class="x">---</span>
+<span class="x">layout: "login"</span>
+<span class="x">page_name: "Login"</span>
+<span class="x">---</span>
+
+<span class="x">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">page_name</span> <span class="cp">%&gt;</span><span class="x">&lt;/h1&gt;</span>
+</pre></div>
+
+
+<p>The above <code>login.html.erb</code> file will be rendered using the <code>login.erb</code> layout file.</p>
+
+<p>Read more in the <a href="/guides/individual-page-configuration">Individual Page Configuration</a> guide.</p>
+
+<h3>LiveReload</h3>
+
+<p>By default, LiveReload will monitor your <code>config.rb</code> file and automatically restart the Middleman server if it changes. This means, activating new features no longer requires a server restart.</p>
+
+<p>In addition, you can have LiveReload monitor your project files as well and instruct the web-browser to reload when they change using the <a href="https://github.com/mockko/livereload#readme">LiveReload Extension</a> and the <code>--livereload</code> flag.</p>
+
+<div class="highlight"><pre>middleman server --livereload
+</pre></div>
+
+
+<h2>Migrating to 2.0</h2>
+
+<p>Updating old projects to Middleman 2.0 is very easy. Simply use the new <code>migrate</code> command:</p>
+
+<div class="highlight"><pre>middleman migrate
+</pre></div>
+
+
+<p>Read more about the migration edge cases in the <a href="/guides/migrating">Migrating to Middleman 2.0</a> guide.</p>
+
+<h2>Support</h2>
+
+<p>If there are any issues or regressions, please log bugs on the <a href="https://github.com/tdreyno/middleman/issues">Github Issue Tracker</a>.</p>
+</article>
+</div>
+    </div>
+<!-- Google Analytics --><script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-90027-21']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    ga.setAttribute('async', 'true');    document.documentElement.firstChild.appendChild(ga);  })();</script>
+</body>
+</html>

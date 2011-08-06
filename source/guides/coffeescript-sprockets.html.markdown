@@ -1,8 +1,8 @@
 ---
-title: Javascript, CoffeeScript and Sprockets
+title: CoffeeScript &amp; Sprockets
 ---
 
-# Javascript, CoffeeScript and Sprockets
+# CoffeeScript &amp; Sprockets
 
 Middleman 2.0 embraces the Rails 3.1 Asset Pipeline and includes both Sprockets and CoffeeScript.
 

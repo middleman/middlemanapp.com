@@ -24,4 +24,4 @@ Let's take a simple ERb template, adding some YAML variables and change the layo
       <% end %>
     </ol>
 
-YAML Frontmatter must come at the very top of the template and be separated from the rest of the current by a leading and trailing triple hyphen (`---`). Inside this block, you can create new variables which will be available in the template using the `data.page` object. The `layout` variable will pass directly to Middleman and change which layout is being used for rendering.
+YAML Frontmatter must come at the very top of the template and be separated from the rest of the current by a leading and trailing triple hyphen `---`. Inside this block, you can create new variables which will be available in the template using the `data.page` object. The `layout` variable will pass directly to Middleman and change which layout is being used for rendering.

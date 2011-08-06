@@ -8,7 +8,7 @@ In addition to dozens of new features, Middleman 2.0 has several changes to the 
 
 ## Unified middleman command
 
-In previous versions, Middleman shipped with 3 commands: `mm-init`, `mm-server` and `mm-build`. These tools were responsible for the 3 phases of project development: creation, construction and compilation. In version 2.0, these 3 commands (along with a new migrate command) have been unified into a single command. These change was made to make the name of the command more obvious (`middleman`) than the abbreviated mm- prefix and to follow the lead of the Rails and Compass projects which uses a unified `rails` and `compass` command respectively.
+In previous versions, Middleman shipped with 3 commands: `mm-init`, `mm-server` and `mm-build`. These tools were responsible for the 3 phases of project development: creation, construction and compilation. In version 2.0, these 3 commands (along with a new migrate command) have been unified into a single command. These change was made to make the name of the command, `middleman`, more obvious than the abbreviated mm- prefix and to follow the lead of the Rails and Compass projects which uses a unified `rails` and `compass` command respectively.
 
 For the 2.0 series, the three old command will still be available to allow users time to migrate their scripts, tutorials and muscle memory to the new commands. In a future 2.x, these commands will be removed and only the new middleman command will be available.
 

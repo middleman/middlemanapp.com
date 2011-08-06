@@ -1,6 +1,17 @@
 require "builder"
 require "redcarpet"
 
+helpers do
+  def is_guide_page?
+    request.path_info =~ /guides/
+  end
+  
+  def edit_guide_url
+    file_name = request.path_info.split("guides/").last
+    "https://github.com/tdreyno/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
+  end
+end
+
 set :slim, :pretty => true
 
 set :markdown, :layout_engine => :slim
