@@ -80,11 +80,16 @@ aside
   footer  
     border-top: 1px solid #c6bda8
     background: #c6bda8
-    padding: 1em 0
-    text-align: center
+    padding: 1em 10px
+    +clearfix
+    p
+      margin: 0
+      &.left
+        +float-left
+      &.right
+        +float-right
+  @import "pygments/solarized"
 
 footer
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
   font-size: 10px
-  
-@import "pygments/solarized"

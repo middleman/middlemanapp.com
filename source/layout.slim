@@ -42,31 +42,29 @@ html
               li.div== link_to "Sites Built Using Middleman", "/built-using-middleman"
 
           footer
-            markdown:
-              &copy; 2011 [Thomas Reynolds].<br />
-              Middleman is open-source software licensed under the [MIT License].
-              
-              [Thomas Reynolds]: http://awardwinningfjords.com
-              [MIT License]: https://github.com/tdreyno/middleman/blob/master/LICENSE
+            a href="http://www.pledgie.com/campaigns/15807" style="display: block; width: 149px; margin: 0 auto;"
+              img src="http://www.pledgie.com/campaigns/15807.png" alt="Click here to lend your support to Middleman"
               
         article#main role="main"
           == yield
-          - if is_guide_page?
-            footer
-              == link_to "Fork and edit this guide on Github", edit_guide_url
+          footer
+            p.left 
+              | &copy; 2011 
+              == link_to "Thomas Reynolds", "http://awardwinningfjords.com"
+            - if is_guide_page?
+              p.right== link_to "Fork and edit this guide on Github", edit_guide_url
 
     == javascript_include_tag "site"
-
+    
     | <!-- Google Analytics -->
-    | <script type="text/javascript">
-    |   var _gaq = _gaq || [];
-    |   _gaq.push(['_setAccount', 'UA-90027-21']);
-    |   _gaq.push(['_trackPageview']);
-    |
-    |   (function() {
-    |     var ga = document.createElement('script');
-    |     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    |     ga.setAttribute('async', 'true');
-    |     document.documentElement.firstChild.appendChild(ga);
-    |   })();
-    | </script>
+    javascript:
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-21']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
