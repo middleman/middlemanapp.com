@@ -11,7 +11,7 @@ end
 group :development do
   gem "redcarpet"
   gem "builder"
-  gem "middleman", "2.0.0.rc98"
+  gem "middleman", "2.0.0.rc99"
   gem "heroku"
   gem "rack-codehighlighter"
 end
