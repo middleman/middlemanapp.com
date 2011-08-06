@@ -2,16 +2,11 @@ source "http://rubygems.org"
 
 gem "thin"
 gem "rack-contrib"
-
-group :production do
-  # gem "dalli"
-  # gem "rack-cache"
-end
+gem "rack-force_domain"
 
 group :development do
   gem "redcarpet"
   gem "builder"
-  gem "middleman", "2.0.0.rc99"
-  gem "heroku"
+  gem "middleman", "~>2.0.0"
   gem "rack-codehighlighter"
 end
