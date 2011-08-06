@@ -19,7 +19,7 @@ tt, code
   +border-radius(4px)
   +box-shadow(black 0 1px 1px inset, white 0 1px 0)
   //-webkit-font-smoothing: antialiased
-  padding: 3px 4px
+  padding: 2px 4px
   
 body
   text-rendering: optimizeLegibility
@@ -43,7 +43,10 @@ aside
       margin: 20px 0 0 0
       a
         display: block
-        +replace-text-with-dimensions("mm-blue-w-text.png")
+        +hide-text
+        width: image-width("mm-blue-w-text.png")
+        height: image-height("mm-blue-w-text.png")
+        background: inline-image("mm-blue-w-text.png") no-repeat
         +border-radius(4px)
     h4
       display: none
@@ -83,3 +86,5 @@ aside
 footer
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif
   font-size: 10px
+  
+@import "pygments/solarized"
