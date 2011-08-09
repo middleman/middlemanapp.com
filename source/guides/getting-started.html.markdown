@@ -52,10 +52,24 @@ A config.ru file describes how the site should be loaded by a Rack-enabled webse
 
 To include a boilerplate `config.ru` file in your project, add the `--rack` flag to the init command:
 
-    ###bash
+    :::bash
     middleman init my_new_project --rack
 
 In "blog mode" this file describes how the web server can serve static files from the Middleman `build` folder.
+
+#### Gemfile
+
+Middleman will respect a Bundler Gemfile for locking down your gem dependencies. To use a Gemfile, first you must have Bundler installed:
+
+    :::bash
+    gem install bundler
+
+When creating a new project, Middleman can generate a Gemfile for you:
+
+    :::bash
+    middleman init my_new_project --bundler
+
+This will create a Gemfile specifying the same version of Middleman you are using. This will lock Middleman to this specific release series (the 2.x series, for example).
 
 ### Project Templates
 
