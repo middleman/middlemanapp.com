@@ -4,3 +4,4 @@
 bin
 .bundle
 build
+Gemfile.lock
