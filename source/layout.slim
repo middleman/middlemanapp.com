@@ -40,6 +40,7 @@ html
               li== link_to "Rack Middleware", "/guides/rack-middleware"
           
               li.div== link_to "Sites Built Using Middleman", "/built-using-middleman"
+              li== link_to "Community Extensions", "/community-extensions"
 
           footer
             a href="http://www.pledgie.com/campaigns/15807" style="display: block; width: 149px; margin: 0 auto;"
@@ -49,8 +50,9 @@ html
           == yield
           footer
             p.left 
-              | &copy; 2011 
-              == link_to "Thomas Reynolds", "http://awardwinningfjords.com"
+              | &copy; 2011&nbsp;
+              | <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.&nbsp;
+              | Hosting provided by <a href="http://phpfog.com">PHP Fog</a>
             - if is_guide_page?
               p.right== link_to "Fork and edit this guide on Github", edit_guide_url
 
