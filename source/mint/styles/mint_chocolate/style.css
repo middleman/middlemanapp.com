@@ -1,0 +1,863 @@
+/* 
+----------------------------------------------------------------------------- 
+DEFAULT POSITIONING
+-----------------------------------------------------------------------------*/
+@import url("../../app/styles/base.css");
+
+/* 
+----------------------------------------------------------------------------- 
+BASIC
+-----------------------------------------------------------------------------*/
+body
+{	
+	color: #FFF;
+	background-color: #25201A;
+}
+
+a
+{
+	color: #BCE27F;
+}
+
+a:hover
+{
+	color: #FFF;
+}
+
+form span
+{
+	border: 1px solid #1B1813;
+}
+
+ul.errors
+{
+	color: #181511;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+HEADER
+-----------------------------------------------------------------------------*/
+#header
+{
+	border-top: 1px solid #110F0C;
+	background-color: #181511;
+	color: #625346;
+}
+
+.mini #header h1,
+.display #header h1 a,
+.preferences #header h1 a
+{
+	background: url(images/logo.gif) top left no-repeat;
+}
+
+.display #header,
+.preferences #header
+{
+	background: #181511 url(images/bg-round-bottom-right.gif) bottom right no-repeat;
+}
+
+.display #header h1,
+.preferences #header h1
+{
+	background: #181511 url(images/bg-round-bottom-left.gif) bottom right no-repeat;
+}
+
+/*
+----------------------------------------------------------------------------- 
+UPDATES AVAILABLE BUTTON
+-----------------------------------------------------------------------------*/
+#header a.update-btn
+{
+	color: #0A0907;
+	background: url(images/bg-update-right.gif) top right no-repeat;
+}
+
+#header a.update-btn span
+{
+	background: url(images/bg-update-left.gif) top left no-repeat;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+PANES ROW
+-----------------------------------------------------------------------------*/
+#header-container
+{
+	background: url(images/bg-fog.png) bottom left repeat-x;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+PAGE BUTTONS
+-----------------------------------------------------------------------------*/
+#header .pages
+{
+	background: url(images/bg-pages-right.gif) top right no-repeat;
+}
+
+#header .pages li
+{
+	background: url(images/bg-pages-divider.gif) top left no-repeat;
+}
+
+#header .pages li a,
+#header .pages li a:hover
+{
+	color: #0A0907;
+}
+
+#header .pages li.first-child,
+#header .pages li.only-child
+{
+	background-image: url(images/bg-pages-left.gif);
+}
+
+/* 
+----------------------------------------------------------------------------- 
+MINI
+-----------------------------------------------------------------------------*/
+.mini #header
+{
+	background: #181511 url(images/bg-mini-bottom.gif) bottom left no-repeat;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+MINI PANE
+-----------------------------------------------------------------------------*/
+.mini .pane
+{
+	color: #625346;
+	background: #181511 url(images/bg-mini-top.gif) top left no-repeat;
+}
+
+.mini .pane .footer
+{
+	background: url(images/bg-mini-bottom.gif) bottom left no-repeat;
+}
+
+.pane h1,
+#preferences h1
+{
+	color: #625346;
+	text-shadow: #14110E 1px 1px 1px;
+}
+
+.mini .pane form
+{
+	color: #625346;
+	background: #25201A url(images/bg-mini-form-well-top.gif) top left no-repeat;
+}
+
+.mini .pane form h2,
+#preferences h5
+{
+	background: #181511 url(images/bg-mini-form-well-top.gif) bottom left no-repeat;
+}
+
+.mini .pane form fieldset,
+#preferences fieldset
+{
+	color: #FFF;
+	background: url(images/bg-mini-form-well-bottom.gif) bottom left no-repeat;
+}
+
+.mini .pane form strong
+{
+	color: #FFF;
+}
+
+.display .pane
+{
+	background: #181511 url(images/bg-round-top-left.gif) top left no-repeat;
+}
+
+.display .pane h1
+{
+	background: url(images/bg-round-top-right.gif) top right no-repeat;
+}
+
+.display .pane .footer
+{
+	background: url(images/bg-pane-bottom-left.gif) bottom left no-repeat;
+}
+
+.display .pane .footer div
+{
+	background: url(images/bg-pane-bottom-right.gif) bottom right no-repeat;
+}
+
+.display .pane .content
+{
+	background: #25201A url(images/bg-pane-right.gif) top right repeat-y;
+}
+
+.content .content-container
+{
+	background: url(images/bg-pane-top-left.gif) top left no-repeat;
+}
+
+.display table th
+{
+	color: #625346;
+	background-color: #181511;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #16130F;
+}
+
+.display table th.first-child
+{
+	background-image: url(images/bg-th-left.gif);
+	background-position: top left;
+}
+
+.display table th.last-child
+{
+	background-image: url(images/bg-th-right.gif);
+	background-position: top right;
+}
+
+.display table th.focus
+{
+	color: #E9F08F;
+}
+
+.display table.striped tr.alt td,
+.display table.visits table.striped tr.alt td,
+.display table.two-columns table.striped tr.alt td
+{
+	background-color: #231E18;
+}
+
+.display table tr:hover td,
+.display table.visits td tr:hover td,
+.display table.two-columns td tr:hover td
+{
+	background-color: #211C17;
+}
+
+.display table.striped tr:hover td,
+.display table.visits  table.striped tr:hover td,
+.display table.two-columns  table.striped tr:hover td,
+.display table.striped tr.alt:hover td,
+.display table.visits  table.striped tr.alt:hover td,
+.display table.two-columns  table.striped tr.alt:hover td
+{
+	background-color: #211C17;
+}
+
+.display table td.focus span
+{
+	color: #625346;
+} 
+
+.display table td.focus span a
+{
+	color: #917F6E;
+}
+
+.display table td.focus span a:hover
+{
+	color: #FFF;
+}
+
+.display table tr.insig td,
+.display table tr td.insig
+{
+	color: #625346;
+}
+
+
+/*
+----------------------------------------------------------------------------- 
+FEED BUTTON
+-----------------------------------------------------------------------------*/
+a.feed-btn
+{
+	bottom: -3px;
+	right: 3px;
+	color: #0A0907;
+	background: url(images/bg-feed-right.gif) top right no-repeat;
+}
+
+a.feed-btn span
+{
+	background: url(images/bg-feed-left.gif) top left no-repeat;
+	padding-bottom: 6px;
+}
+
+/*
+----------------------------------------------------------------------------- 
+VISITS TABLE
+-----------------------------------------------------------------------------*/
+.display table.visits tr:hover td,
+.display table.two-columns tr:hover td
+{
+	background-color: transparent;
+}
+
+.display table.visits td.focus
+{
+	color: #625346;
+}
+
+/*
+----------------------------------------------------------------------------- 
+GRAPH TABLE
+-----------------------------------------------------------------------------*/
+
+.content div.graph table tr:hover td,
+.content div.graph table tr:hover td
+{
+	background-color: transparent;
+}
+
+.content div.graph table th
+{
+	background: transparent;
+	border: none;
+}
+
+.content div.graph table tr td.accent
+{
+	background: url(images/bg-graph-accent.gif) bottom left repeat;
+}
+
+.graph .label
+{
+	color: #625346;
+	left: 2px;
+}
+
+.graph td:first-child .label
+{
+	left: 0;
+}
+
+.graph .accent .label
+{
+	background-color: #625346;
+	color: #0A0907;
+}
+
+.content div.graph table tr td
+{
+	background: url(images/bg-graph.gif) 0 100% repeat;
+}
+
+.graph .bar .total
+{
+	background: url(images/bg-graph-total.gif) bottom left repeat;
+}
+
+.graph .bar .unique
+{
+	background: url(images/bg-graph-unique.gif) bottom left repeat;
+}
+
+.graph .key
+{
+	color: #FFF;
+}
+
+.graph .key em
+{
+	color: #566E3D;
+}
+
+.graph .bar .total span
+{
+	background: url(images/bg-graph-total-top.gif) top left no-repeat;
+}
+
+.graph .bar .unique span
+{
+	height: 2px;
+	background: url(images/bg-graph-unique-top.gif) top left no-repeat;
+}
+
+.graph .bar .unique span.equal
+{
+	height: 1px;
+	background: url(images/bg-graph-unique-top.gif) bottom left no-repeat;
+}
+
+.graph .accent .bar .total
+{
+	background-image: url(images/bg-graph-total-accent.gif);
+}
+
+.graph .accent .bar .unique
+{
+	background-image: url(images/bg-graph-unique-accent.gif);
+}
+
+.graph .accent  .bar .total span
+{
+	background-image: url(images/bg-graph-total-accent-top.gif);
+}
+
+.graph .accent  .bar .unique span
+{
+	background-image: url(images/bg-graph-unique-accent-top.gif);
+}
+
+.graph li
+{
+	color: #FFF;
+	background-color: #25201A;
+}
+
+.graph td:first-child .bar .total span
+{
+	background-position: -2px 0;
+}
+
+.content div.graph table tr td:first-child,
+.graph td:first-child .bar .total,
+.graph td:first-child .bar .unique,
+.graph td:first-child .bar .unique span,
+.graph td:first-child .bar .unique span.equal
+{
+	background-position: -2px 100%;
+}
+
+/*
+----------------------------------------------------------------------------- 
+COMPARISON GRAPH
+-----------------------------------------------------------------------------*/
+.compare .increase
+{
+	background-image: url(images/bg-graph-total.gif);
+}
+
+.compare .increase span
+{
+	background-image: url(images/bg-graph-total-top.gif);
+}
+
+.compare .decrease
+{
+	background-image: url(images/bg-graph-unique.gif);
+}
+
+.accent .increase
+{
+	background-image: url(images/bg-graph-total-accent.gif);
+}
+
+.accent .decrease
+{
+	background-image: url(images/bg-graph-unique-accent.gif);
+}
+
+.accent .increase span
+{
+	background-image: url(images/bg-graph-total-accent-top.gif);
+}
+
+/*
+----------------------------------------------------------------------------- 
+FOLDER-RELATED
+-----------------------------------------------------------------------------*/
+.display table tr.folder td.focus,
+.display table tr.folder-open td.focus
+{
+	background-image: url(images/bg-arrow.gif);
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+}
+
+.display table tr.insig.folder td.focus,
+.display table tr.insig.folder-open td.focus
+{
+	background-image: url(images/bg-arrow-insig.gif);
+}
+
+.display table tr.first-child.folder td.focus
+{
+	background-position: 0 4px;
+}
+
+.display table tr.folder-open td.focus
+{
+	background-position: 0 -78px;
+}
+
+.display table tr.first-child.folder-open td.focus
+{
+	background-position: 0 -76px;
+}
+
+/**/
+.display table tr.loading td.focus,
+.display table tr.insig.loading td.focus
+{
+	background-image: url(images/spinner.gif);
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+}
+
+.display table tr.first-child.loading td.focus
+{
+	background-position: 0 6px;
+}
+
+/**/
+.folder-contents-open tr td
+{
+	color: #625346;
+	background-color: #181511;
+}
+
+.display table .folder-contents-open tr.first-child td,
+.display table .folder-contents-open tr.only-child td
+{
+	background: #181511 url(images/bg-folder-content-top.gif) top left repeat-x;
+}
+
+.display table .folder-contents-open tr.last-child td
+{
+	background: #181511 url(images/bg-folder-content-bottom.gif) bottom left repeat-x;
+}
+
+.display table .folder-contents-open tr.alt td
+{
+	background-color: #16130F;
+}
+
+.display table .folder-contents-open tr:hover td
+{
+	background-color: #14110D;
+}
+
+.display table .folder-contents-open tr:hover td,
+.display table .folder-contents-open tr.alt:hover td
+{
+	background-color: #14110D;
+}
+
+.display table .folder-contents-open tr.insig td
+{
+	color: #3A3329;
+}
+
+/*
+----------------------------------------------------------------------------- 
+ADDITIONAL INFO
+-----------------------------------------------------------------------------*/
+.display table .folder-contents-open tr.additional-info td,
+.display table .folder-contents-open tr.additional-info:hover td
+{
+	color: #FFF;
+	background-color: #14110D;
+}
+
+.display table .folder-contents-open tr.additional-info td.additional-info-content th
+{
+	background: none;
+	border: none;
+	color: #E9F08F;
+}
+
+/*
+----------------------------------------------------------------------------- 
+PREFERENCES
+-----------------------------------------------------------------------------*/
+#preferences
+{
+	background: #181511 url(images/bg-prefs-top.gif) top left no-repeat;
+	color: #625346;
+}
+
+#preferences form
+{
+	background: url(images/bg-prefs-form.gif) top left repeat-y;
+}
+
+#preferences .footer
+{
+	background: url(images/bg-prefs-form-divider.gif) top left repeat-x;
+}
+
+#preferences .footer div
+{
+	background: #181511 url(images/bg-prefs-bottom.gif) bottom left no-repeat;
+}
+#preferences .mint-column,
+#preferences .pane-column,
+#preferences .pepper-column
+{
+	background: url(images/bg-prefs-form-divider.gif) top left repeat-x;
+}
+
+.pane-column p
+{
+	color: #625346;
+}
+
+#preferences h2
+{
+	background: #ABDB6C url(images/bg-prefs-head.gif) right top repeat-y;
+	border-bottom: 1px solid #292929;
+	color: #333;
+}
+
+#preferences .pepper-column h2
+{
+	background-image: none;
+}
+
+#preferences fieldset
+{
+	background-color: #25201A;
+}
+
+#preferences fieldset p.loading
+{
+	background: url(images/spinner-prefs.gif) 0 0 no-repeat;
+}
+
+.pepper-column h3
+{
+	color: #FFF;
+	text-shadow: #14110E 1px 1px 1px;
+}
+
+.pepper-prefs li
+{
+	background: url(images/bg-prefs-form-divider.gif) top left repeat-x;
+}
+
+.pepper-prefs li.first-child
+{
+	background-image: none;
+}
+
+p.desc
+{
+	color: #C4B7A1;
+}
+
+.request-feedback
+{
+	color: #E9F08F;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+EULA
+-----------------------------------------------------------------------------*/
+#eula span
+{
+	border-color: #231E18;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+MINI TABS
+-----------------------------------------------------------------------------*/
+.mini ul.tabs li.active,
+.display ul.tabs li.active
+{
+	background: #25201A url(images/bg-tab-left.gif) top left no-repeat;
+}
+
+.mini ul.tabs li.active a,
+.display ul.tabs li.active a
+{
+	background: url(images/bg-tab-right.gif) top right no-repeat;
+}
+
+.mini ul.tabs li.last-child.active a,
+.display ul.tabs li.last-child.active a,
+.display ul.tabs li.only-child.active a
+{
+	background: url(images/bg-tab-last.gif) top right no-repeat;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+DISPLAY TABS
+-----------------------------------------------------------------------------*/
+.display ul.tabs
+{
+	background: url(images/bg-pane-top-right.gif) bottom right no-repeat;
+}
+
+.display ul.tabs li a.loading,
+.display ul.tabs li a.loading:hover
+{
+	background: url(images/spinner-d.gif) 0 4px no-repeat;
+	color: #625346;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+PEPPER PREFERENCE TABS
+-----------------------------------------------------------------------------*/
+#preferences .pepper-column h2
+{
+	border-bottom: 1px solid #1B1714;
+}
+
+.pepper-column ul.tabs
+{
+	border-top: 3px solid #231E18;
+	background: #27211C url(images/bg-prefs-tab-well-right.gif) top right repeat-y;
+}
+
+.pepper-prefs
+{
+	background: url(images/bg-prefs-pepper-top.gif) top left repeat-x;
+}
+
+.pepper-column ul.tabs li a
+{
+	color: #FFF;
+}
+
+.pepper-column ul.tabs li a:hover
+{
+	color: #BCE27F;
+}
+
+.pepper-column ul.tabs li.active
+{
+	background: url(images/bg-prefs-tab-left.gif) top left no-repeat;
+}
+
+.pepper-column ul.tabs li.active a,
+.pepper-column ul.tabs li.active a:hover
+{
+	color: #FFF;
+	background: url(images/bg-prefs-tab-right.gif) top right no-repeat;
+}
+
+#preferences h3 a
+{
+	color: #FFF;
+}
+
+.explanation
+{
+	color: #E9F08F;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+PEPPER FILTERS
+-----------------------------------------------------------------------------*/
+ul.filters li a
+{
+	color: #625346;
+}
+
+ul.filters li a:hover
+{
+	color: #FFF;
+}
+
+ul.filters li.active
+{
+	background: url(images/bg-prefs-tab-left.gif) top left no-repeat;
+}
+
+ul.filters li.active a
+{
+	color: #FFF;
+	background: url(images/bg-prefs-tab-right.gif) top right no-repeat;
+}
+
+ul.filters li a.loading
+{
+	background: url(images/spinner.gif) 6px 0 no-repeat;
+	color: #BCE27F;
+}
+
+ul.filters li.active a,
+ul.filters li.active a:hover
+{
+	color: #0A0907;
+}
+
+.scroll-filters ul.filters
+{
+	background-color: #25201A;
+}
+
+a.image-search
+{
+	background: url(images/icon-image-search.png) 100% 3px no-repeat;
+}
+
+span a.image-search
+{
+	background-position: 100% 1px;
+}
+
+a.clicked
+{
+	background: url(images/icon-clicked.png) 100% 0 no-repeat;
+}
+
+
+/* 
+----------------------------------------------------------------------------- 
+SORTABLE LIST STYLES
+-----------------------------------------------------------------------------*/
+dl.sortable dt
+{
+	color: #FFF;
+}
+
+dl.sortable dt span
+{
+	color: #3A3129;
+}
+
+dl.sortable dd
+{
+	background: url(images/bg-drag.gif) top left no-repeat;
+}
+
+dl.sortable dd:hover,
+dl.sortable .drag
+{
+	background-position: 0 -24px;
+}
+
+dl.sortable dd span
+{
+	color: #FFF;
+	background-color: transparent;
+}
+
+dl.sortable dd.disabled span
+{
+	color: #433930;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+PROGRESS BAR
+-----------------------------------------------------------------------------*/
+.progress
+{
+	background: url(images/bg-progress.gif) left top no-repeat;
+}
+.progress .bar
+{
+	background: url(images/bg-progress-bar.gif) right top no-repeat;
+}
+
+/* 
+----------------------------------------------------------------------------- 
+FOOTER
+-----------------------------------------------------------------------------*/
+#donotremove
+{
+	color: #625346;
+}

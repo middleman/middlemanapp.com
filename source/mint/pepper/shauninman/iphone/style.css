@@ -1,0 +1,217 @@
+/* CSS originally contributed by Richard Herrera <http://doctyper.com/archives/200707/make-your-mint-iphone-friendly/> */
+body
+{
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: #ABDB6C;
+}
+.display #single-column,
+.display #single-column #header
+{
+	width: auto !important;
+}
+.display #header,
+.display #single-column #header
+{
+	margin: 0 5px;
+}
+#container
+{
+	margin: 0 5px;
+}
+.display .pane, .display .pane-column
+{
+	margin: 0;
+	min-width: 0;
+	width: 100%;
+}
+.display #donotremove,
+.display #single-column #donotremove
+{
+	margin: 5px 0 0;
+}
+.spacer
+{
+	height: 5px;
+	clear: both;
+}
+body.display
+{
+	padding-top: 35px;
+}
+a.update-btn
+{
+	display: none;
+}
+#header h2
+{
+	/* !important is required because the style to hide the tagline when an update is available is applied inline */
+	visibility: visible !important;
+}
+body[orientation='portrait'] #header h2
+{
+	/* See note above about !important */
+	visibility: hidden !important;
+}
+body[orientation='portrait'] td a
+{
+	display: inline-block;
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: top;
+}
+body[orientation='portrait'] td span a
+{
+	max-width: 160px;
+}
+#pane-list
+{
+	margin: 0 -20px 0 -6px;
+}
+#pane-list select
+{
+	position: relative;
+	top: -1px;
+	width: 64px;
+	margin-right: 21px;
+}
+#header .panes div
+{
+	padding: 0 4px 0 2px;
+}
+body[orientation='portrait'] .visits .left,
+body[orientation='portrait'] .visits .right
+{
+	display: block;
+}
+body[orientation='portrait'].display table.visits td.left
+{
+	padding: 0 0 2px;
+}
+body[orientation='portrait'] ul.tabs a span
+{
+	display: none;
+}
+body[orientation='landscape'] .pane h1 abbr
+{
+	visibility: hidden;
+}
+body[orientation='landscape'] .pane h1:before
+{
+	content: attr(title);
+}
+
+.preferences
+{
+	padding: 0 5px;
+}
+body[orientation='portrait'].preferences #container
+{
+	width: 310px;
+}
+body[orientation='landscape'].preferences #container
+{
+	width: 470px;
+}
+/* 
+doesn't make any sense but without the following the previous 
+widths are not applied in newer versions of MobileSafari.app
+*/
+body.preferences,
+body[orientation='portrait'].preferences,
+body[orientation='landscape'].preferences
+{
+	border-right: 1px solid white;
+}
+
+.preferences #header
+{
+	margin: 0 0 5px;
+}
+body[orientation='portrait'].preferences #header h2
+{
+	/* See note above about !important */
+	visibility: visible !important;
+}
+.preferences #header .pages li
+{
+	display: none;
+}
+.preferences #header .pages li.first-child
+{
+	display: block;
+	padding-right: 11px;
+}
+.preferences #preferences h2,
+.preferences .pane-column
+{
+	display: none;
+}
+#preferences .mint-column,
+#preferences .pane-column,
+#preferences .pepper-column
+{
+	float: none;
+	width: auto;
+}
+#preferences h5,
+#preferences fieldset
+{
+	width: auto;
+	margin-right: 8px;
+	background-image: none;
+}
+#preferences h5
+{
+	background-color: transparent;
+}
+#preferences fieldset
+{
+	padding-top: 5px;
+	-webkit-border-radius: 5px;
+}
+#preferences form
+{
+	background-image: none;
+}
+#preferences
+{
+	background-image: none;
+	-webkit-border-radius: 6px;
+	margin: -1px;
+	padding: 1px;
+}
+#preferences .footer div
+{
+	background-color: transparent;
+	background-image: none;
+}
+#preferences em.iphone
+{
+	font-style: italic;
+}
+
+#pane-container .pane.unloaded
+{
+	background-image: none;
+	-webkit-border-radius: 5px;
+}
+
+.pane.unloaded .tabs,
+.pane.unloaded .content,
+.pane.unloaded .footer
+{
+	display: none;
+}
+
+#pane-container .pane.unloaded h1
+{
+	background-image: none;
+}
+
+.pane.unloaded .load-tab-btn.tabs
+{
+	display: block;
+	background-image: none;
+}
