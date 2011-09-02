@@ -1,7 +1,7 @@
 Middleman Guides
 ================
 
-These are the source files that power [the middleman site](http://middlemanapp.com/). It is 
+These are the source files that power the [middleman site](http://middlemanapp.com/), 
 a [middleman](https://github.com/tdreyno/middleman) powered static page.
 
 Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He stands-watch 
@@ -24,8 +24,8 @@ If you have questions, answers can be found on our [community  forum](https://co
 Please help Middleman flesh out its documentation. We'll merge in any reasonable
 extensions to our website docs, and give credit for your help!
 
-The site templates are written in [slim](http://slim-lang.com/) and the guides are written 
-in [markdown](http://daringfireball.net/projects/markdown/).
+The site templates are written in [Slim](http://slim-lang.com/) and the guides are written 
+in [Markdown](http://daringfireball.net/projects/markdown/).
 
 ## Copyright
 
