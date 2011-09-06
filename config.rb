@@ -19,11 +19,6 @@ set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
 
 activate :directory_indexes
 
-activate :blog
-set :blog_permalink, "blog/:year/:month/:day/:title.html"
-set :blog_layout_engine, :slim
-page "/blog/feed.xml", :layout => false
-
 require 'rack/codehighlighter'
 use Rack::Codehighlighter, 
   :pygments_api,
