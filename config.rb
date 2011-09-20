@@ -1,6 +1,8 @@
 require "builder"
 require "redcarpet"
 
+mime_type :php, 'application/x-httpd-php'
+
 helpers do
   def is_guide_page?
     request.path_info =~ /guides/
