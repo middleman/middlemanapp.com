@@ -1,4 +1,4 @@
-#= require "jquery-1.6.2"
+#= require "jquery-1.6.4"
 #= require "jquery.pjax"
 
 $('h1 a, nav a').pjax '#main', 

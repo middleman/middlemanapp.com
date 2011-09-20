@@ -15,7 +15,7 @@ end
 set :slim, :pretty => true
 
 set :markdown, :layout_engine => :slim
-set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
+set :markdown_engine, :redcarpet
 
 activate :directory_indexes
 
