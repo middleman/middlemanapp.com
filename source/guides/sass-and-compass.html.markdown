@@ -68,7 +68,7 @@ CSS3 and Floats:
 
 The same code in SCSS:
 
-    @import "compass"
+    @import "compass";
     
     #main {
       @include float-left;
