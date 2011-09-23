@@ -66,6 +66,18 @@ CSS3 and Floats:
       +float-right
       +box-shadow(black 0 1px 2px)
 
+The same code in SCSS:
+
+    @import "compass"
+    
+    #main {
+      @include float-left;
+      border: 1px solid black;
+      @include border-radius(5px); }
+    #sidebar {
+      @include float-right;
+      @include box-shadow(black 0 1px 2px); }
+
 Grids (using [Susy]):
 
     @import "susy"
