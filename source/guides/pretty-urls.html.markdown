@@ -8,7 +8,7 @@ By default Middleman will output the files exactly as you have described them in
 
     http://example.com/about-us.html
 
-This makes sense for a static website, but many file the .html distasteful and would prefer a clean (or pretty) extension-less URL. There are two ways to accomplish this.
+This makes sense for a static website, but many find the .html distasteful and would prefer a clean (or pretty) extension-less URL. There are two ways to accomplish this.
 
 ## Ruby Web-server
 
