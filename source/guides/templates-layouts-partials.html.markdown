@@ -208,8 +208,25 @@ Now, any changes to `_footer.erb` will appear at the bottom of both layouts and 
 
 If you find yourself copying and pasting content into multiple pages or layouts, it's probably a good idea to extract that content into a partial.
 
+After you start using partials, you may find you want to call it in different ways by passing variables. You can do this by:
+
+    :::erb
+    <%= partial(:paypal_donate_button, :locals => {:amount => 1, :amount_text => "Pay $1"}) %>
+    <%= partial(:paypal_donate_button, :locals => {:amount => 2, :amount_text => "Pay $2}) %>
+
+Then, within the partial, you can set the text appropriately as follows:
+
+    :::erb
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
+      <input type="submit" value=<%= amount_text %> >
+    </form>
+
+Read the Padrino partial helper documentation for more information.
+
 [Haml]: http://haml-lang.com/
 [Slim]: http://slim-lang.com/
 [Markdown]: http://daringfireball.net/projects/markdown/
 [these guides are written in Markdown]: https://raw.github.com/tdreyno/middleman-guides/master/source/guides/basics-of-templates.html.markdown
 [Individual Page Configuration]: /guides/per-template-config.html
+[Padrino partial helper]: http://www.padrinorb.com/api/classes/Padrino/Helpers/RenderHelpers.html
