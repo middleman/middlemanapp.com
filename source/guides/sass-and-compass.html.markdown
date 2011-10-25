@@ -50,7 +50,7 @@ Both of these files will compile to the following `build/stylesheets/login.css` 
 
 ## Compass
 
-Compass is a set of mixins (Sass macros) to make common tasks more convenient (and include browser-specific hacks), functions for manipulating colors, a spite generation library and much more. You can read more on the [official Compass website].
+Compass is a set of mixins (Sass macros) to make common tasks more convenient (and include browser-specific hacks), functions for manipulating colors, a sprite generation library and much more. You can read more on the [official Compass website].
 
 When using Middleman, Compass is automatically available in all Sass and SCSS files. Here are a few, examples of using Compass.
 
