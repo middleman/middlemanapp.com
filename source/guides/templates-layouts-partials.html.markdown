@@ -222,7 +222,7 @@ Then, within the partial, you can set the text appropriately as follows:
       <input type="submit" value=<%= amount_text %> >
     </form>
 
-Read the Padrino partial helper documentation for more information.
+Read the [Padrino partial helper] documentation for more information.
 
 [Haml]: http://haml-lang.com/
 [Slim]: http://slim-lang.com/
