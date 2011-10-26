@@ -47,6 +47,15 @@ Tag helpers are the basic building blocks used to construct html "tags" within a
 
 The tag and `content_tag` are for building arbitrary html tags with a name and specified options. If the tag contains "content" within then `content_tag` is used. For example:
 
+    :::erb
+    <%= tag :img, :src => "/my_image.png" %>
+      # => <img src='/my_image.png'>
+    
+    <%= content_tag :p, :class => "stuff" do %>
+      Hello
+    <% end %>
+      # => <p class='stuff'>Hello</p>
+  
 The input_tag is used to build tags that are related to accepting input from the user:
 
     :::ruby
