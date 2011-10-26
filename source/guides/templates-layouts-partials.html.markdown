@@ -228,5 +228,5 @@ Read the [Padrino partial helper] documentation for more information.
 [Slim]: http://slim-lang.com/
 [Markdown]: http://daringfireball.net/projects/markdown/
 [these guides are written in Markdown]: https://raw.github.com/tdreyno/middleman-guides/master/source/guides/basics-of-templates.html.markdown
-[Individual Page Configuration]: /guides/per-template-config.html
+[Individual Page Configuration]: /guides/individual-page-configuration
 [Padrino partial helper]: http://www.padrinorb.com/api/classes/Padrino/Helpers/RenderHelpers.html
