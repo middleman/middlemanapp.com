@@ -43,6 +43,32 @@ Or, you may want a PHP file:
     :::ruby
     set :index_file, "index.php"
 
+If you prefer to build `.html` pages and then strip them with Apache, it is useful to add the following at the end of your `config.rb` file (or in the existing section if you have it already):
+
+    :::ruby
+    configure :development do 
+      activate :directory_indexes
+    end
+
+This will allow you to build links in your pages like `/product` and click on them, even though your build will generate a page called `product.html`.
+
+FYI, the following `.htaccess` commands will configure Apache to serve your html pages without the extensions:
+
+    
+    RewriteEngine on
+
+    # special case the root
+    RewriteRule ^$ /index.html [L]
+
+    # look for file and stop if found
+    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} -f
+    RewriteRule ^(.+) %{DOCUMENT_ROOT}/$1 [L]
+
+    # now add a .html on the end and see if that works
+    RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}.html -f
+    RewriteRule ^(.+) %{DOCUMENT_ROOT}/$1.html [L]
+
+
 ### Opt-out
 
 If there are pages which you don't want automatically renamed, you can opt-out:
