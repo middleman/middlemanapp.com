@@ -12,7 +12,7 @@ The default templating language is ERb. ERb looks exactly like HTML, except it a
 
 All template files in Middleman include the extension of that templating language in their file name. A simple index page written in ERb would be named `index.html.erb` which includes the full filename, `index.html`, and the ERb extension.
 
-To begin, this file would just contain normal HTML:
+To begin, this file would just contain normal HTML: 
 
     :::erb
     <h1>Welcome</h1>
@@ -29,38 +29,35 @@ If we wanted to get fancy, we could add a loop:
 
 ### Other Templating Languages
 
-Middleman comes with quite a few other templating languages.
+Middleman ships with support for the ERb, Haml, Sass, Scss and CoffeeScript engines. The Tilt library to enable support for many different templating engines. Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work:
 
-#### Haml
-
-Ruby developers may be familiar with [Haml] which is a white-space aware language that compiles to HTML. The same index page from above would be called `index.html.haml` and look like:
-
-    %h1 Welcome
-    %ul
-      - 5.times do |num|
-        %li= "Count #{num}"
-
-#### Slim
-
-[Slim] is very similar to Haml, but it is even simpler and has more frequent updates and improvements. The same index page from above would be called `index.html.slim` and look like:
-
-    h1 Welcome
-    ul
-      - 5.times do |num|
-        li Count #{num}
-
-#### Markdown
-
-[Markdown] is a simple language that resembles text email and is optimized for writing text content and articles. In fact, [these guides are written in Markdown]. An example article in Markdown would be called `article.html.markdown` and look like:
-
-    # Header
-    
-    A paragraph content
-    
-    ## Sub-header
-    
-    * List item 1
-    * List item 2
+ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
+------------------------|------------------------|----------------------------
+ERB                     | .erb, .rhtml           | included
+Interpolated String     | .str                   | included
+Haml                    | .haml                  | included
+Sass                    | .sass                  | included
+Scss                    | .scss                  | included
+Slim                    | .slim                  | slim
+Erubis                  | .erb, .rhtml, .erubis  | erubis
+Less CSS                | .less                  | less
+Builder                 | .builder               | builder
+Liquid                  | .liquid                | liquid
+RDiscount               | .markdown, .mkd, .md   | rdiscount
+Redcarpet               | .markdown, .mkd, .md   | redcarpet
+BlueCloth               | .markdown, .mkd, .md   | bluecloth
+Kramdown                | .markdown, .mkd, .md   | kramdown
+Maruku                  | .markdown, .mkd, .md   | maruku
+RedCloth                | .textile               | redcloth
+RDoc                    | .rdoc                  | rdoc
+Radius                  | .radius                | radius
+Markaby                 | .mab                   | markaby
+Nokogiri                | .nokogiri              | nokogiri
+CoffeeScript            | .coffee                | coffee-script
+Creole (Wiki markup)    | .wiki, .creole         | creole
+WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
+Yajl                    | .yajl                  | yajl-ruby
+Stylus                  | .styl                  | ruby-stylus
 
 ## Layouts
 

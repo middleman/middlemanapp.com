@@ -1,4 +1,5 @@
 require "builder"
+require "slim"
 require "redcarpet"
 
 mime_type :php, 'application/x-httpd-php'
@@ -16,7 +17,7 @@ end
 
 set :slim, :pretty => true
 
-set :markdown, :layout_engine => :slim
+set :markdown, :layout_engine => :slim, :tables => true
 set :markdown_engine, :redcarpet
 
 activate :directory_indexes
