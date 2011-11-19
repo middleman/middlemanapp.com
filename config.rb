@@ -1,3 +1,4 @@
+require "slim"
 require "builder"
 require "redcarpet"
 
@@ -5,11 +6,11 @@ mime_type :php, 'application/x-httpd-php'
 
 helpers do
   def is_guide_page?
-    request.path_info =~ /guides/
+    current_path =~ /guides/
   end
   
   def edit_guide_url
-    file_name = request.path_info.split("guides/").last
+    file_name = current_path.split("guides/").last
     "https://github.com/tdreyno/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
   end
 end
