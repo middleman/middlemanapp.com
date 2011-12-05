@@ -142,6 +142,34 @@ Format helpers also includes a number of useful text manipulation functions such
     highlight('Lorem dolor sit', 'dolor') 
       # => "Lorem <strong class="highlight">dolor</strong> sit"
 
+## Lorem Ipsum & Placehold.it helpers
+
+The [Frank project], a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. I'm adapted this code for Middleman (god bless the MIT license).
+
+To use placeholder text:
+
+    lorem.sentence      # returns a single sentence
+    lorem.words 5       # returns 5 individual words
+    lorem.word
+    lorem.paragraphs 10 # returns 10 paragraphs 
+    lorem.paragraph
+    lorem.date          # accepts a strftime format argument
+    lorem.name
+    lorem.first_name
+    lorem.last_name
+    lorem.email
+
+And to use placeholder images:
+
+    lorem.image('300x400')
+      #=> http://placehold.it/300x400
+    lorem.image('300x400', :background_color => '333', :color => 'fff')
+      #=> http://placehold.it/300x400/333/fff
+    lorem.image('300x400', :random_color => true)
+      #=> http://placehold.it/300x400/f47av7/9fbc34d
+    lorem.image('300x400', :text => 'blah')
+      #=> http://placehold.it/300x400&text=blah
+
 ## Custom Defined Helpers
 
 In addition to the helpers provided by Middleman out of the box, you can also add your own helper methods and classes that will be accessible within any controller or view automatically.
@@ -156,3 +184,4 @@ To define a helper method, use the `helpers` block in `config.rb`:
     end
 
 [view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
+[Frank project]: https://github.com/blahed/frank
