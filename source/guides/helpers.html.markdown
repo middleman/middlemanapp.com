@@ -183,5 +183,20 @@ To define a helper method, use the `helpers` block in `config.rb`:
       end
     end
 
+Alternatively, you can created external Ruby modules which contain helpers and include them. External Ruby files belong in the `lib` directory. If you were to extract the above helpers into a file named `lib/custom_helpers.rb`, you'd have to create a module:
+
+    :::ruby
+    module CustomHelpers
+      def some_method
+        # ...do something here...
+      end
+    end
+
+Then in `config.rb`:
+
+    :::ruby
+    require "lib/custom_helpers"
+    helpers CustomHelpers
+
 [view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
 [Frank project]: https://github.com/blahed/frank
