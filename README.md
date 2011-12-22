@@ -2,7 +2,7 @@ Middleman Guides
 ================
 
 These are the source files that power the [middleman site](http://middlemanapp.com/), 
-a [middleman](https://github.com/tdreyno/middleman) powered static page.
+a [middleman](https://github.com/middlemanapp/middleman) powered static page.
 
 Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He stands-watch 
 over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient 

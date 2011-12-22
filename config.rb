@@ -7,12 +7,12 @@ mime_type :php, 'application/x-httpd-php'
 
 helpers do
   def is_guide_page?
-    current_path =~ /guides/
+    request.path =~ /guides/
   end
   
   def edit_guide_url
-    file_name = current_path.split("guides/").last
-    "https://github.com/tdreyno/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
+    file_name = request.path.split("guides/").last
+    "https://github.com/middlemanapp/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
   end
 end
 
