@@ -10,5 +10,5 @@ Bugs can be reported on the [Github Issue Tracker].
 
 [Follow Middleman on Twitter].
 
-[Github Issue Tracker]: https://github.com/middlemanapp/middleman/issues
+[Github Issue Tracker]: https://github.com/middleman/middleman/issues
 [Follow Middleman on Twitter]: https://twitter.com/#!/middlemanapp

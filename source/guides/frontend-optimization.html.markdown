@@ -30,5 +30,5 @@ Then activate in your `config.rb`:
       activate :smusher
     end
 
-[Middleman Smusher extension]: https://github.com/middlemanapp/middleman-smusher
+[Middleman Smusher extension]: https://github.com/middleman/middleman-smusher
 [Yahoo's Smush.it tool]: http://www.smushit.com/ysmush.it/

@@ -224,4 +224,4 @@ The above will show a page with the contents "World" for all request to:
 
 Be aware, this only effects the Middleman preview server, not the built output.
 
-[middleman-smusher]: https://github.com/middlemanapp/middleman-smusher
+[middleman-smusher]: https://github.com/middleman/middleman-smusher

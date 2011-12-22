@@ -12,7 +12,7 @@ helpers do
   
   def edit_guide_url
     file_name = request.path.split("guides/").last
-    "https://github.com/middlemanapp/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
+    "https://github.com/middleman/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
   end
 end
 
