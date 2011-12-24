@@ -24,8 +24,9 @@ set :markdown_engine, :redcarpet
 activate :directory_indexes
 
 require 'rack/codehighlighter'
+require "pygments"
 use Rack::Codehighlighter, 
-  :pygments_api,
+  :pygments,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
