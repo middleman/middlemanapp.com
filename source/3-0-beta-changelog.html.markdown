@@ -1,8 +1,8 @@
 ---
-title: Middleman 3.0 Changelog
+title: Middleman 3.0 Beta Changelog
 ---
 
-# Middleman 3.0 Changelog
+# Middleman 3.0 Beta Changelog
 
 * Rewritten to work directly with Rack (Sinatra apps can still be mounted)
 * Finally support Compass in Sprockets! Thanks to @xdite and @petebrowne
