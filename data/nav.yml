@@ -1,0 +1,71 @@
+-
+  name: "Main"
+  pages:
+    -
+      title: "Getting Started"
+      path:  "/guides/getting-started"
+    -
+      title: "Migrating to Middleman 2.0"
+      path:  "/guides/migrating"
+    -
+      title: "Templates, Layouts &amp; Partials"
+      path:  "/guides/templates-layouts-partials"
+    -
+      title: "Template Helpers"
+      path:  "/guides/helpers"
+    -
+      title: "Sass and Compass"
+      path:  "/guides/sass-and-compass"
+    -
+      title: "CoffeeScript &amp; Sprockets"
+      path:  "/guides/coffeescript-sprockets"
+    -
+      title: "Dynamic Pages"
+      path:  "/guides/dynamic-pages"
+    -
+      title: "Pretty URLs"
+      path:  "/guides/pretty-urls"
+    -
+      title: "Frontend Optimization"
+      path:  "/guides/frontend-optimization"
+    -
+      title: "Individual Page Configuration"
+      path:  "/guides/individual-page-configuration"
+    -
+      title: "Local YAML Data"
+      path:  "/guides/local-yaml-data"
+    -
+      title: "Custom Extensions"
+      path:  "/guides/extensions"
+    -
+      title: "Rack Middleware"
+      path:  "/guides/rack-middleware"
+    -
+      title: "Speeding Things Up"
+      path:  "/guides/speeding-up"
+
+-
+  name: "Extensions"
+  pages:
+    -
+      title: "Blog Extension"
+      path:  "/guides/blog"
+    -
+      title: "Localization (i18n)"
+      path:  "/guides/localization"
+    -
+      title: "Remote API Proxy"
+      path:  "/guides/remote-api"
+    -
+      title: "LiveReload"
+      path:  "/guides/livereload"
+
+-
+  name: "Community"
+  pages:
+    -
+      title: "Sites Built Using Middleman"
+      path:  "/built-using-middleman"
+    -
+      title: "Community Extensions"
+      path:  "/community-extensions"
