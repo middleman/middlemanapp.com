@@ -18,13 +18,15 @@
 
           <nav>
             <ul>
-              <% first_group = true %>
               <% data.nav.each do |g| %>
-                <% g.pages.each_with_index do |p, i| %>
-                  <% class_name = (!first_group && i === 0) ? " class='div'" : "" %>
-                  <li<%= class_name %>><%= link_to p.title, p.path %></li>
-                <% end %>
-                <% first_group = false %>
+                <li>
+                  <h6><%= g.name %></h6>
+                  <ul>
+                    <% g.pages.each_with_index do |p, i| %>
+                      <li><%= link_to p.title, p.path %></li>
+                    <% end %>
+                  </ul>
+                </li>
               <% end %>
             </ul>
           </nav>

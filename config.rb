@@ -1,3 +1,4 @@
+require "slim"
 require "builder"
 
 require "lib/guide_helpers"

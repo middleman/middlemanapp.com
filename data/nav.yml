@@ -1,67 +1,84 @@
 -
-  name: "Main"
+  name: "Getting Started"
+  desc: "Lorem"
   pages:
     -
       title: "Getting Started"
-      path:  "/guides/getting-started"
+      path:  "/getting-started/welcome"
     -
-      title: "Migrating to Middleman 2.0"
-      path:  "/guides/migrating"
+      title: "Migrating to Middleman 3.0"
+      path:  "/getting-started/migrating"
+    -
+      title: "Changelog"
+      path:  "/getting-started/changelog"
+-
+  name: "Templates"
+  desc: "Lorem"
+  pages: 
     -
       title: "Templates, Layouts &amp; Partials"
-      path:  "/guides/templates-layouts-partials"
+      path:  "/templates/templates-layouts-partials"
     -
       title: "Template Helpers"
-      path:  "/guides/helpers"
+      path:  "/templates/helpers"
     -
       title: "Sass and Compass"
-      path:  "/guides/sass-and-compass"
+      path:  "/templates/sass-and-compass"
     -
       title: "CoffeeScript &amp; Sprockets"
-      path:  "/guides/coffeescript-sprockets"
-    -
-      title: "Dynamic Pages"
-      path:  "/guides/dynamic-pages"
-    -
-      title: "Pretty URLs"
-      path:  "/guides/pretty-urls"
-    -
-      title: "Frontend Optimization"
-      path:  "/guides/frontend-optimization"
+      path:  "/templates/coffeescript-sprockets"
+-
+  name: "Metadata"
+  desc: "Lorem"
+  pages: 
     -
       title: "Individual Page Configuration"
-      path:  "/guides/individual-page-configuration"
+      path:  "/individual-page-configuration"
     -
       title: "Local YAML Data"
-      path:  "/guides/local-yaml-data"
+      path:  "/local-yaml-data"
+-
+  name: "Advanced"
+  desc: "Lorem"
+  pages: 
     -
-      title: "Custom Extensions"
-      path:  "/guides/extensions"
+      title: "Dynamic Pages"
+      path:  "/advanced/dynamic-pages"
+    -
+      title: "Pretty URLs"
+      path:  "/advanced/pretty-urls"
+    -
+      title: "Frontend Optimization"
+      path:  "/advanced/frontend-optimization"
     -
       title: "Rack Middleware"
-      path:  "/guides/rack-middleware"
+      path:  "/advanced/rack-middleware"
     -
       title: "Speeding Things Up"
-      path:  "/guides/speeding-up"
-
+      path:  "/advanced/speeding-up"
 -
   name: "Extensions"
+  desc: "Lorem"
   pages:
     -
+      title: "Custom Extensions"
+      path:  "/extensions/custom"
+    -
       title: "Blog Extension"
-      path:  "/guides/blog"
+      path:  "/extensions/blog"
     -
       title: "Localization (i18n)"
-      path:  "/guides/localization"
+      path:  "/extensions/localization"
     -
       title: "Remote API Proxy"
-      path:  "/guides/remote-api"
+      path:  "/extensions/remote-api"
     -
       title: "LiveReload"
-      path:  "/guides/livereload"
+      path:  "/extensions/livereload"
 
 -
   name: "Community"
+  desc: "Lorem"
   pages:
     -
       title: "Sites Built Using Middleman"
