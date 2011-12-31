@@ -32,8 +32,9 @@ body {
   position: relative; }
 
 aside {
-  position: fixed;
   width: 225px;
+  float: left;
+  display: inline;
   top: 0;
   header {
     margin-bottom: 10px;

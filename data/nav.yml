@@ -33,10 +33,10 @@
   pages: 
     -
       title: "Individual Page Configuration"
-      path:  "/individual-page-configuration"
+      path:  "/metadata/individual-page-configuration"
     -
       title: "Local YAML Data"
-      path:  "/local-yaml-data"
+      path:  "/metadata/local-yaml-data"
 -
   name: "Advanced"
   desc: "Lorem"
@@ -82,7 +82,7 @@
   pages:
     -
       title: "Sites Built Using Middleman"
-      path:  "/built-using-middleman"
+      path:  "/community/built-using-middleman"
     -
       title: "Community Extensions"
-      path:  "/community-extensions"
+      path:  "/community/3rd-party-extensions"
