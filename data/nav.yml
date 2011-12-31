@@ -33,10 +33,10 @@
   pages: 
     -
       title: "Individual Page Configuration"
-      path:  "/metadata/individual-page-configuration"
+      path:  "/metadata/yaml-frontmatter"
     -
       title: "Local YAML Data"
-      path:  "/metadata/local-yaml-data"
+      path:  "/metadata/local-data"
 -
   name: "Advanced"
   desc: "Lorem"
