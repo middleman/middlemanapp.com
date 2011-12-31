@@ -1,19 +1,19 @@
 -
   name: "Getting Started"
-  desc: "Lorem"
+  desc: "Basics of Middleman"
   pages:
     -
-      title: "Getting Started"
+      title: "Creating Your First Project"
       path:  "/getting-started/welcome"
+    # -
+    #   title: "Migrating to Middleman 3.0"
+    #   path:  "/getting-started/migrating"
     -
-      title: "Migrating to Middleman 3.0"
-      path:  "/getting-started/migrating"
-    -
-      title: "Changelog"
+      title: "Middleman Changelog"
       path:  "/getting-started/changelog"
 -
   name: "Templates"
-  desc: "Lorem"
+  desc: "Powerful templates which compile to HTML, CSS & JS"
   pages: 
     -
       title: "Templates, Layouts &amp; Partials"
@@ -29,7 +29,7 @@
       path:  "/templates/coffeescript-sprockets"
 -
   name: "Metadata"
-  desc: "Lorem"
+  desc: "Structured data about pages"
   pages: 
     -
       title: "Individual Page Configuration"
@@ -39,7 +39,7 @@
       path:  "/metadata/local-data"
 -
   name: "Advanced"
-  desc: "Lorem"
+  desc: "Dive deeper"
   pages: 
     -
       title: "Dynamic Pages"
@@ -58,7 +58,7 @@
       path:  "/advanced/speeding-up"
 -
   name: "Extensions"
-  desc: "Lorem"
+  desc: "WARNING: EXTENSIONS NOT UPGRADED TO 3.0 YET"
   pages:
     -
       title: "Custom Extensions"
@@ -78,7 +78,7 @@
 
 -
   name: "Community"
-  desc: "Lorem"
+  desc: "More extensions and support"
   pages:
     -
       title: "Sites Built Using Middleman"
@@ -86,3 +86,9 @@
     -
       title: "Community Extensions"
       path:  "/community/3rd-party-extensions"
+    -
+      title: "Forum"
+      path:  "http://convore.com/middleman"
+    -
+      title: "Wiki"
+      path:  "https://github.com/middleman/middleman/wiki"

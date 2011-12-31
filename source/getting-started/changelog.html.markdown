@@ -4,6 +4,7 @@ title: Middleman 3.0 Beta Changelog
 
 # Middleman 3.0 Beta Changelog
 
+* Split into 3 gems (middleman-core, middleman-more and middleman which simply includes both)
 * Rewritten to work directly with Rack (Sinatra apps can still be mounted)
 * Finally support Compass in Sprockets! Thanks to @xdite and @petebrowne
 * Sitemap object representing the known world
@@ -23,3 +24,5 @@ title: Middleman 3.0 Beta Changelog
 * Yard code docs: http://rubydoc.info/github/middleman/middleman
 * Added MM_ROOT environmental variable
 * activating extensions can now take an options hash
+* Don't re-minify files with ".min" in their name
+* Serve purely static folders directly (without source/ and config.rb)
