@@ -19,7 +19,7 @@ Then activate the extension in your `config.rb`:
 Next, we will mount the Twitter Search API inside our app in `config.rb`:
 
     :::ruby
-    proxy '/twitter', "http://search.twitter.com"
+    proxy '/twitter', :to => "search.twitter.com"
 
 Finally, from our front-end we can now do local AJAX to get remote search results. Here's an example using jQuery:
 
