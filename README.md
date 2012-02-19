@@ -17,7 +17,7 @@ Then run `bundle exec middleman server` to start the server at `http://localhost
 
 ## Mailing List
 
-If you have questions, answers can be found on our [community  forum](https://convore.com/middleman/).
+If you have questions, answers can be found on our [community  forum](http://forum.middlemanapp.com/).
 
 ## Contributing
 
