@@ -157,6 +157,13 @@ In your `config.rb` file, you can tell Middleman to use a specific templating la
     :::ruby
     set :markdown, :layout_engine => :erb
 
+Notice that if you are using `.md` as the extension of your markdown template file instead of `.markdown`, and using `.rhtml` as the extension of your ERB layout file instead of `.erb`, the config above should be changed to the following:
+
+    :::ruby
+    set :md, :layout_engine => :rhtml
+
+That is to say, these two symbols are literally the file extensions, not template engine names.
+
 ### Disabling Layouts Entirely
 
 In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your `config.rb`:
