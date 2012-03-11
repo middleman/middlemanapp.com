@@ -9,6 +9,11 @@ Middleman 2.1 ships with an official extension to support blogging, articles and
     :::bash
     gem install middleman-blog
 
+Or if you are using Bundler, you should specify it in your `Gemfile`:
+
+    :::ruby
+    gem "middleman-blog"
+
 Then activate the extension in your `config.rb`:
 
     :::ruby
