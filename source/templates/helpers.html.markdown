@@ -144,7 +144,7 @@ Format helpers also includes a number of useful text manipulation functions such
 
 ## Lorem Ipsum & Placehold.it helpers
 
-The [Frank project], a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. I'm adapted this code for Middleman (god bless the MIT license).
+The [Frank project], a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. I've adapted this code for Middleman (god bless the MIT license).
 
 To use placeholder text:
 
