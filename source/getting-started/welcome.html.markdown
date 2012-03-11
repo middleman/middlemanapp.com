@@ -117,6 +117,15 @@ Running `middleman` without any commands is the same as starting a server.
 
 This will do exactly the same thing as `middleman server`.
 
+### When something goes wrong
+
+Under some circumstances(one known case is under Windows, see [here](https://github.com/middleman/middleman/issues/101)), `middleman` might not work as expected, try using a full command instead:
+
+    :::bash
+    middleman server -p 4567 -e deveplopment
+
+Under some circumstances(say if your config file has gone wild), middleman server might not be able to boot itself, and no error output can be seen on the console, don't panic, just try `middleman build` to see the full trace of the problem and fix it.
+
 ## Exporting the Static Site (middleman build)
 
 Finally, when you are ready to deliver static code or, in the case of "blog mode", host a static blog, you will need to build the site. Using the command-line, from the project folder, run `middleman build`:
