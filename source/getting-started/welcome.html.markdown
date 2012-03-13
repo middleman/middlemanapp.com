@@ -122,7 +122,7 @@ This will do exactly the same thing as `middleman server`.
 Under some circumstances(one known case is under Windows, see [here](https://github.com/middleman/middleman/issues/101)), `middleman` might not work as expected, try using a full command instead:
 
     :::bash
-    middleman server -p 4567 -e deveplopment
+    middleman server -p 4567 -e development
 
 Under some circumstances(say if your config file has gone wild), middleman server might not be able to boot itself, and no error output can be seen on the console, don't panic, just try `middleman build` to see the full trace of the problem and fix it.
 
