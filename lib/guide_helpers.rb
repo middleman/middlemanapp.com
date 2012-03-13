@@ -9,12 +9,7 @@ module GuideHelpers
     title
   end
   
-  def is_guide_page?
-    request.path =~ /guides/
-  end
-  
   def edit_guide_url
-    file_name = request.path.split("guides/").last
-    "https://github.com/middleman/middleman-guides/blob/master/source/guides/#{file_name}.markdown"
+    "https://github.com/middleman/middleman-guides/blob/master/source/#{current_page.path}.markdown"
   end
 end
