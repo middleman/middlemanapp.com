@@ -13,10 +13,10 @@ $blueprint-grid-columns: 22;
 @include blueprint-typography;
 
 tt, code {
-  background: #002b36;
-  color: #efe8d5;
+  font-size: .95em;
+  background: #F8F8F8;
   @include border-radius(4px);
-  @include box-shadow(black 0 1px 1px inset, white 0 1px 0);
+  @include box-shadow(#A89A7A 0 1px 1px inset, white 0 1px 0);
   padding: 2px 4px; }
   
 body {
