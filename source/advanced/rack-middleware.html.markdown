@@ -8,19 +8,26 @@ Rack is a system of classes that can modify content on-the-fly and intercept req
 
 Middleman has full access to Rack Middleware which opens up an expansive universe of libraries which work with Middleman.
 
-## Example
+## Example: Syntax Highlighting
 
-This site is written in Middleman and features many code blocks which have syntax highlighting. This syntax highlighting is accomplished outside the scope of Middleman. This site renders `<code>` blocks and then Rack Middleware takes over an enhances those blocks with syntax highlight. The middleware in use is called `Rack::Codehighlighter`. Here's how it can be used in your `config.rb`:
+This site is written in Middleman and features many code blocks which have syntax highlighting. This syntax highlighting is accomplished outside the scope of Middleman. This site renders `<code>` blocks and then Rack Middleware takes over an enhances those blocks with syntax highlight. The middleware in use is called [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter). Here's how it can be used in your `config.rb`:
   
     :::ruby
     require 'rack/codehighlighter'
+    require "pygments"
     use Rack::Codehighlighter, 
-      :pygments_api,
+      :pygments,
       :element => "pre>code",
       :pattern => /\A:::([-_+\w]+)\s*\n/,
       :markdown => true
 
-The above block required the `rack/codehighlighter` library, which must first be installed via RubyGems. Then the `use` command tells Middleman to use this middleware. The rest is standard Rack Middleware setup, passing some variables to the middleware itself instructing the syntax highlighter on how to locate code blocks and which backend to use for parsing the syntax.
+Make sure you add the right dependencies to your `Gemfile` to make those work:
+  
+    :::ruby
+    gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
+    gem "pygments.rb"
+
+The above block required the `rack/codehighlighter` and `pygments.rb` libraries. Then the `use` command tells Middleman to use this middleware. The rest is standard Rack Middleware setup, passing some variables to the middleware itself instructing the syntax highlighter on how to locate code blocks and which backend to use for parsing the syntax.
 
 ### Build Cycle
 
