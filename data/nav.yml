@@ -49,7 +49,7 @@
       path:  "/advanced/pretty-urls"
     -
       title: "File Size Optimization"
-      path:  "/advanced/frontend-optimization"
+      path:  "/advanced/file-size-optimization"
     -
       title: "Rack Middleware"
       path:  "/advanced/rack-middleware"
