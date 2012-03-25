@@ -51,6 +51,9 @@
       title: "File Size Optimization"
       path:  "/advanced/file-size-optimization"
     -
+      title: "Improving Cacheability"
+      path:  "/advanced/improving-cacheability"
+    -
       title: "Rack Middleware"
       path:  "/advanced/rack-middleware"
     -
