@@ -48,7 +48,7 @@
       title: "Pretty URLs"
       path:  "/advanced/pretty-urls"
     -
-      title: "Frontend Optimization"
+      title: "File Size Optimization"
       path:  "/advanced/frontend-optimization"
     -
       title: "Rack Middleware"
