@@ -49,7 +49,7 @@ The path for viewing your posts can be easily changed in `config.rb`:
     :::ruby
     set :blog_permalink, "blog/:year/:title.html"
 
-Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally different from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`.
+Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally different from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/advanced/pretty-urls) feature if you want your blog posts to appear as directories instead of HTML files.
 
 ## Summary
 
