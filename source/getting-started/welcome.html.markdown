@@ -12,7 +12,7 @@ Middleman assumes familiarity with the command-line. The Ruby language and the S
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
-Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires XCode. XCode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id422352214?mt=12).
+Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires Xcode. code can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately, if you have a free Apple Developer account, you can just install Command Line Tools for Xcode from their [downloads page](https://developer.apple.com/downloads/index.action).
 
 Once you have Ruby and RubyGems up and running, execute the following from the command line:
 
@@ -31,7 +31,7 @@ The uses of each of these commands will be covered below.
 
 ## Starting a New Site: middleman init
 
-To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing folder or have Middleman create one for you using the middleman init command.
+To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing folder or have Middleman create one for you using the `middleman init` command.
 
 Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).
 
@@ -46,6 +46,10 @@ A brand-new project will contain a `source` folder and a `config.rb` file. The s
 
 The `config.rb` file contains settings for Middleman and commented documentation on how to enable complex features such as compile-time compression and "blog mode."
 
+#### Gemfile
+
+Middleman will respect a Bundler Gemfile for locking down your gem dependencies. When creating a new project, Middleman will generate a Gemfile for you which specifies the same version of Middleman you are using. This will lock Middleman to this specific release series (the 2.x series, for example).
+
 #### config.ru
 
 A config.ru file describes how the site should be loaded by a Rack-enabled webserver. This file is provided as a convenience for users wishing to host their Middleman site in development mode on a Rack-based host such as Heroku.
@@ -54,22 +58,6 @@ To include a boilerplate `config.ru` file in your project, add the `--rack` flag
 
     :::bash
     middleman init my_new_project --rack
-
-In "blog mode" this file describes how the web server can serve static files from the Middleman `build` folder.
-
-#### Gemfile
-
-Middleman will respect a Bundler Gemfile for locking down your gem dependencies. To use a Gemfile, first you must have Bundler installed:
-
-    :::bash
-    gem install bundler
-
-When creating a new project, Middleman can generate a Gemfile for you:
-
-    :::bash
-    middleman init my_new_project --bundler
-
-This will create a Gemfile specifying the same version of Middleman you are using. This will lock Middleman to this specific release series (the 2.x series, for example).
 
 ### Project Templates
 
@@ -92,7 +80,7 @@ This will list my custom mobile framework and I can create new projects based on
 
 ## The Development Cycle (middleman server)
 
-The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as HAML, SASS, etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
+The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as [HAML](http://haml-lang.com), [SASS](http://sass-lang.com), etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
 
 The vast majority of time spent using Middleman will be in the Development Cycle.
 
@@ -100,20 +88,20 @@ From the command-line, start the preview web-server from inside your project fol
 
     :::bash
     cd my_project
-    middleman server
+    bundle exec middleman server
 
 This will start a local web server running at: http://localhost:4567/
 
 You can create and edit files in the `source` folder and see the changes reflected on the preview web-server.
 
-Note that changes to the `config.rb` file will require middleman server to be restarted before they take effect. You can stop the preview server from the command-line using CTRL-C.
+You can stop the preview server from the command-line using CTRL-C.
 
 ### Unadorned middleman command
 
 Running `middleman` without any commands is the same as starting a server.
 
     :::bash
-    middleman
+    bundle exec middleman
 
 This will do exactly the same thing as `middleman server`.
 
@@ -132,8 +120,8 @@ Finally, when you are ready to deliver static code or, in the case of "blog mode
 
     :::bash
     cd my_project
-    middleman build
+    bundle exec middleman build
 
-This will create a static file for each file located in your `source` folder. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed.
+This will create a static file for each file located in your `source` folder. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed. You can pass a `--clean` flag to `middleman build` to have it clean out any files from the build directory that are left over from earlier builds but would no longer be produced.
 
 [HTML5 Boilerplate]: http://html5boilerplate.com/
