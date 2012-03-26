@@ -48,7 +48,7 @@
       title: "Dynamic Pages"
       path:  "/advanced/dynamic-pages"
     -
-      title: "Pretty URLs"
+      title: "Pretty URLs (Directory Indexes)"
       path:  "/advanced/pretty-urls"
     -
       title: "File Size Optimization"
