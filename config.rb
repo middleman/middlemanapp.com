@@ -17,6 +17,8 @@ use Rack::Codehighlighter,
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
 
+activate :relative_assets
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
