@@ -92,6 +92,7 @@ aside {
     @include box-shadow(darken(#c6bda8, 15) 0 1px 1px inset, white 0 1px 0);
     padding: 0.5em 1em;
     margin: 1.5em 0;
+    overflow: auto;
     @include border-radius(4px); }
   footer {
     border-top: 1px solid #c6bda8;
@@ -123,14 +124,16 @@ footer {
       @include prepend(1);
       @include column(7, true);
     }
+    &:nth-child(odd) {
+      clear: left;
+    }
     h3 {
-      margin-bottom: 0.5em;
+      margin-bottom: 0.1em;
     }
     p {
-//      display: none;
+      margin-bottom: 0.5em;
     }
     ul {
-      
     }
   }
 }

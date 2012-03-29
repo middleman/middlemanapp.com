@@ -4,7 +4,7 @@ title: CoffeeScript &amp; Sprockets
 
 # CoffeeScript &amp; Sprockets
 
-Middleman 2.0 embraces the Rails 3.1 Asset Pipeline and includes both Sprockets and CoffeeScript.
+Middleman embraces the Rails 3.1 Asset Pipeline and includes both Sprockets and CoffeeScript.
 
 ## Dependency Management (Sprockets)
 
@@ -33,6 +33,8 @@ You could also write your app file in regular Javascript with a file named `app.
     });
 
 The output would be identical.
+
+Note that you shouldn't use Sprockets' dependency management system for SASS files - you should use [SASS partials](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#partials) instead.
 
 ## CoffeeScript
 

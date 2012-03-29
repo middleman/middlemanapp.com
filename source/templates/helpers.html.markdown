@@ -183,7 +183,7 @@ To define a helper method, use the `helpers` block in `config.rb`:
       end
     end
 
-Alternatively, you can created external Ruby modules which contain helpers and include them. External Ruby files belong in the `lib` directory. If you were to extract the above helpers into a file named `lib/custom_helpers.rb`, you'd have to create a module:
+Alternatively, you can created external Ruby modules which contain helpers and include them. You can put files in the `lib` directory. For example, if you were to extract the above helpers into a file named `lib/custom_helpers.rb`, you could create a module:
 
     :::ruby
     module CustomHelpers
@@ -197,6 +197,8 @@ Then in `config.rb`:
     :::ruby
     require "lib/custom_helpers"
     helpers CustomHelpers
+
+An even easier way is to put your helpers in the `helpers` directory and name them after their module (i.e., `CustomHelpers` lives in `helpers/custom_helpers.rb`). Then, Middleman will automatically load them and register them as helpers. 
 
 [view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
 [Frank project]: https://github.com/blahed/frank

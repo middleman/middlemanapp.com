@@ -32,6 +32,9 @@
   desc: "Structured data about pages"
   pages: 
     -
+      title: "The Sitemap"
+      path: "/metadata/sitemap"
+    -
       title: "Individual Page Configuration"
       path:  "/metadata/yaml-frontmatter"
     -
@@ -45,11 +48,14 @@
       title: "Dynamic Pages"
       path:  "/advanced/dynamic-pages"
     -
-      title: "Pretty URLs"
+      title: "Pretty URLs (Directory Indexes)"
       path:  "/advanced/pretty-urls"
     -
-      title: "Frontend Optimization"
-      path:  "/advanced/frontend-optimization"
+      title: "File Size Optimization"
+      path:  "/advanced/file-size-optimization"
+    -
+      title: "Improving Cacheability"
+      path:  "/advanced/improving-cacheability"
     -
       title: "Rack Middleware"
       path:  "/advanced/rack-middleware"
@@ -58,7 +64,7 @@
       path:  "/advanced/speeding-up"
 -
   name: "Extensions"
-  desc: "WARNING: EXTENSIONS NOT UPGRADED TO 3.0 YET"
+  desc: "WARNING: NOT ALL EXTENSION ARE UPGRADED TO 3.0 YET"
   pages:
     -
       title: "Custom Extensions"
@@ -92,3 +98,13 @@
     -
       title: "Wiki"
       path:  "https://github.com/middleman/middleman/wiki"
+-
+  name: "Code"
+  desc: "Source code and code docs"
+  pages:
+    -
+      title: "Repositories"
+      path:  "https://github.com/middleman/"
+    -
+      title: "Code Documentation"
+      path:  "http://rubydoc.info/find/github?q=middleman"

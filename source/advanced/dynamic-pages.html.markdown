@@ -4,7 +4,7 @@ title: Dynamic Pages
 
 # Dynamic Pages
 
-Middleman 2.0 has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example `config.rb` setup:
+Middleman has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example `config.rb` setup:
 
     :::ruby
     ["tom", "dick", "harry"].each do |name|
@@ -36,3 +36,5 @@ Now, only the `about/tom.html`, `about/dick.html` and `about/harry.html` files w
 It is also possible to ignore arbitrary paths when building a site using the new `ignore` method in your `config.rb`:
 
     ignore "/ignore-this-template.html"
+
+You can give ignore exact source paths, filename globs, or regexes.
