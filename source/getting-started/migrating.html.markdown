@@ -1,8 +1,12 @@
 ---
-title: Migrating to Middleman 2.0
+title: Migrating from earlier versions
 ---
 
-# Migrating to Middleman 2.0
+# Migrating to Middleman 3 from 2
+
+TODO: What's been changed? Middleman-blog works totally different.
+
+# Migrating to Middleman 2 from 1
 
 In addition to dozens of new features, Middleman 2.0 has several changes to the way earlier versions managed projects.
 

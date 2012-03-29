@@ -21,8 +21,10 @@ If you are using a Rack-based web-server, you can use the `Rack::TryStatic` midd
 The same `about-us.html` file would be accessible at:
 
     http://example.com/about-us
+    
+However, serving your site via Rack somewhat defeats the purpose of generating a static site.
 
-## Apache (and compatible server)
+## Apache (and compatible servers)
 
 If you are not using a Rack-based web-server, you can use the Directory Indexes feature to tell Middleman to create a folder for each `.html` file and place the built template file as the index of that folder. In your `config.rb`:
 
@@ -49,6 +51,10 @@ If there are pages which you don't want automatically renamed, you can opt-out:
 
     :::ruby
     page "/i-really-want-the-extension.html", :directory_index => false
+
+`page` works with regexes or file globs if you want to turn off indexes for many files at once.
+
+You can also add a `directory_index: false` key to your page's [YAML Frontmatter](/metadata/yaml-frontmatter) to disable directory indexes.
 
 ### Manual Indexes
 
