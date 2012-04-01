@@ -14,7 +14,7 @@ module GuideHelpers
   end
   
   def edit_guide_url
-    file_name = request.path.split("guides/").last
+    file_name = request.path.split("guides/").last.sub('/index','')
     "https://github.com/middleman/middleman-guides/blob/2x/source/guides/#{file_name}.markdown"
   end
 end
