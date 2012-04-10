@@ -94,6 +94,14 @@ The combined final output in HTML will be:
     </body>
     </html> 
 
+Regarding file extensions and parsers, layouts have a different function from templates in the building process, so care should be taken in giving them the right extension. Here is why:
+
+As you might have gathered from the section on templates, file extensions are significant. For example, naming a layout file `layout.html.erb` would tell the language parser that it should take this file, which is erb and turn it into html.
+
+In a sense, reading the extensions from right to left, will tell you the parsings that the file will undergo, ending up as a file in the format of the leftmost extension. In the case of the example, converting an erb file to an html file when serving, and when building the file. 
+
+Unlike templates, layouts should not be rendered to html. Giving a layout file the leftmost extension `.html` will cause an error when building. Therefore, you should stick to the template language extension only, i.e.: `layout.erb`.
+
 ### Custom Layouts
 
 By default, Middleman will use the same layout file for every page in your site. However, you may want to use multiple layouts and specify which pages use these other layouts. For example, you may have a "public" site and an "admin" site which would each have their own layout files.
