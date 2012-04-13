@@ -36,3 +36,27 @@ If you own the API you are connecting to, chances are you will deploy your stati
 If you don't own the API, either you can build a proxy into your backend (useful for redundancy and avoiding API downtime) or use a service like [Strobe] which provides static frontend hosting and an integrated API proxy.
 
 [Strobe]: http://www.strobecorp.com/
+
+
+## Cross-origin resource sharing (CORS)
+
+If you own the API you are connecting to, you can also provide support for CORS by supplying the appropriate response headers to the client.
+
+For example, with a Sinatra application:
+
+    :::ruby
+    headers 'Access-Control-Allow-Origin' => '*',
+        'Access-Control-Allow-Methods' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH',
+        'Access-Control-Allow-Headers' => 'Content-Type, Authorization',
+        'Access-Control-Allow-Credentials' => 'true',
+        'Access-Control-Max-Age' => '1728000',
+        'Allow' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH'
+
+Make sure to add support in your application for OPTIONS requests from the client.
+
+See these links for more information:
+
+* http://www.w3.org/TR/cors/
+* http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+* http://enable-cors.org/
+* https://developer.mozilla.org/en/http_access_control
