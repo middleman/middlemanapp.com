@@ -59,6 +59,19 @@ WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
 Yajl                    | .yajl                  | yajl-ruby
 Stylus                  | .styl                  | ruby-stylus
 
+## Markdown
+
+[Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [RedCarpet](https://github.com/tanoku/redcarpet). You can customize you Markdown options in `config.rb`:
+
+    :::ruby
+    set :markdown, :fenced_code_blocks => true, :autolink => true
+
+See the [RedCarpet docs](https://github.com/tanoku/redcarpet) for more customization options. You can also enable [SmartyPants](http://daringfireball.net/projects/smartypants/) rendering for your templates, which will give you automatic curly quotes, em-dashes, and ellipses, by adding this to `config.rb`:
+
+    :::ruby
+    Redcarpet::Render::HTML.send :include, Redcarpet::Render::SmartyPants
+
+
 ## Layouts
 
 Layouts allow the common HTML surrounding individual pages to be shared across all your templates. Developers coming from PHP will be used to the concept of "header" and "footer" includes which they reference at the top and bottom of every page. The Ruby world, and Middleman, take an inverse approach. The "layout" includes both the header and footer and then wraps the individual page content.
@@ -156,21 +169,6 @@ Which would make the login page use the admin layout. As an alternative to speci
       <input type="submit">
     </form>
 
-### Using a Different Templating Language
-
-By default, Middleman expects the templating language of the page and the layout to be the same. In the above example, we've used ERb for both. However, you may want to write your pages in Markdown or another simplified text language. Middleman will expect a layout.markdown file to exist, but Markdown doesn't generate structural HTML like body tags. 
-
-In your `config.rb` file, you can tell Middleman to use a specific templating language for the layout that is different than the page templating language. For example:
-
-    :::ruby
-    set :markdown, :layout_engine => :erb
-
-Notice that if you are using `.md` as the extension of your markdown template file instead of `.markdown`, and using `.rhtml` as the extension of your ERB layout file instead of `.erb`, the config above should be changed to the following:
-
-    :::ruby
-    set :md, :layout_engine => :rhtml
-
-That is to say, these two symbols are literally the file extensions, not template engine names.
 
 ### Disabling Layouts Entirely
 
