@@ -64,13 +64,11 @@ Stylus                  | .styl                  | ruby-stylus
 [Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [RedCarpet](https://github.com/tanoku/redcarpet). You can customize you Markdown options in `config.rb`:
 
     :::ruby
-    set :markdown, :fenced_code_blocks => true, :autolink => true
+    set :markdown, :fenced_code_blocks => true, 
+                   :autolink => true, 
+                   :smartypants => true
 
-See the [RedCarpet docs](https://github.com/tanoku/redcarpet) for more customization options. You can also enable [SmartyPants](http://daringfireball.net/projects/smartypants/) rendering for your templates, which will give you automatic curly quotes, em-dashes, and ellipses, by adding this to `config.rb`:
-
-    :::ruby
-    Redcarpet::Render::HTML.send :include, Redcarpet::Render::SmartyPants
-
+See the [RedCarpet docs](https://github.com/tanoku/redcarpet) for more customization options. 
 
 ## Layouts
 
