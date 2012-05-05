@@ -61,14 +61,15 @@ Stylus                  | .styl                  | ruby-stylus
 
 ## Markdown
 
-[Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [RedCarpet](https://github.com/tanoku/redcarpet). You can customize you Markdown options in `config.rb`:
+[Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [Maruku](http://maruku.rubyforge.org/), though [RedCarpet is suggested](/advanced/speeding-up) for speed and extra features. You can customize you Markdown options in `config.rb`:
 
     :::ruby
+    set :markdown_engine, :redcarpet
     set :markdown, :fenced_code_blocks => true, 
                    :autolink => true, 
                    :smartypants => true
 
-See the [RedCarpet docs](https://github.com/tanoku/redcarpet) for more customization options. 
+See the [Maruku](http://maruku.rubyforge.org/) or [RedCarpet](https://github.com/tanoku/redcarpet) docs for more customization options. 
 
 ## Layouts
 
