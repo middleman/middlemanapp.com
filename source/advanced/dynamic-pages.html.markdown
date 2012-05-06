@@ -17,7 +17,7 @@ When this project is built, four files will be output:
 
 * /about/tom.html (with `@person_name` equalling "tom" in the template)
 * /about/dick.html (with `@person_name` equalling "dick" in the template)
-* /about/harry.html (with `@person_name` equalling "tom" in the template)
+* /about/harry.html (with `@person_name` equalling "harry" in the template)
 * /about/template.html (with `@person_name` being nil in the template)
 
 In most cases, you will not want to generate the template itself without the @person_name variable, so you can tell Middleman to ignore it:
