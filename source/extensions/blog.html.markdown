@@ -127,6 +127,7 @@ Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/
 
 For example, the following shows the 5 most-recent articles and their summary:
 
+    :::erb
     <% blog.articles[0...5].each do |article| %>
       <article>
         <h1>
@@ -142,6 +143,7 @@ For example, the following shows the 5 most-recent articles and their summary:
 
 You can also get access to the tag data for a tag archive:
 
+    :::erb
     <ul>
       <% blog.tags.each do |tag, articles| %>
         <li>
@@ -156,6 +158,7 @@ You can also get access to the tag data for a tag archive:
     
 Or similarly for a calendar list:
     
+    :::erb
     <ul>
       <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
         <li>
@@ -171,10 +174,11 @@ Or similarly for a calendar list:
 
 Or if you added a `published` flag to your front matter:
 
+    :::erb
     <h1>Published Articles</h1>
     <% blog.articles.select {|a| a.page.data[:published] }.each do |article| %>
-      …
-	<% end %>
+      ...
+    <% end %>
 
 ## Helpers
 
