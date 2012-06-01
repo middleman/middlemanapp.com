@@ -78,16 +78,23 @@ The same code in SCSS:
       @include float-right;
       @include box-shadow(black 0 1px 2px); }
 
-Grids (using [Susy]):
+Grids (using [Susy 1.0.x](http://susy.oddbird.net/)):
 
     @import "susy"
+
+    $total-columns  : 12;             // a 12-column grid
+    $column-width   : 4em;            // each column is 4em wide
+    $gutter-width   : 1em;            // 1em gutters between columns
+    $grid-padding   : $gutter-width;  // grid-padding equal to gutters
     
-    #frame
+    #page
       +container
-      #main
-        +column(8)
+      #header, #footer
+        clear: both
+      #content
+        +span-columns(8, 12)
       #sidebar
-        +column(4)
+        +span-columns(4 omega, 12)
 
 [Sprite] generation:
 
