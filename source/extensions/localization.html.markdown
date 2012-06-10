@@ -13,7 +13,6 @@ The extension provides a new api for enabling localization in your `config.rb`:
 
     :::ruby
     activate :i18n
-    localize
 
 By default this will search the `locales` folder in the root of your project for YAML files representing each locale you want to support. The YAML file is a set of keys and values for each string you need to localize in your site. The keys, which is how you will refer to these strings in your templates, must be the same in each locale, but the values will change. Here are two example YAML files.
 
@@ -52,7 +51,7 @@ Each individual language is accessible in its own namespaced path. By default, t
 You can change this with the `:path` option, but remember: the URL will always include the name of the YAML file:
 
     :::ruby
-    localize :path => "/langs/:locale/"
+    activate :i18n, :path => "/langs/:locale/"
 
 Now the paths would be:
 
@@ -63,7 +62,7 @@ Now the paths would be:
 If you are unhappy using the YAML file names as part of your path, you can remap them to different values.
 
     :::ruby
-    localize :path => "/langs/:locale/", 
+    activate :i18n, :path => "/langs/:locale/", 
       :lang_map => { :en => :english, :es => :spanish, :fr => :french }
 
 Now the paths would be:
@@ -101,14 +100,14 @@ By default, the contents of `source/localizable` will be built in multiple langu
 
     :::ruby
     # Look in `source/language_specific` instead
-    localize :templates_dir => "language_specific"
+    activate :i18n, :templates_dir => "language_specific"
 
 ## Manually specifying languages
 
 If you'd prefer specify a list of supported languages rather than automatically discovering files in `locales/`, you can use the `:langs` option:
 
     :::ruby
-    localize :langs => [:en] # Ignore all languages except :en
+    activate :i18n, :langs => [:en] # Ignore all languages except :en
 
 ## Default (Root) Language
 
@@ -121,6 +120,6 @@ By default, the first language (either specified by `:langs` or discovered in yo
 You can change the default or disable mounting a specific language at the root entirely using the `:mount_at_root` option:
 
     :::ruby
-    localize :mount_at_root => :es # Mount spanish at root instead
+    activate :i18n, :mount_at_root => :es # Mount spanish at root instead
     # or
-    localize :mount_at_root => false # All languages will be prefixed
+    activate :i18n, :mount_at_root => false # All languages will be prefixed
