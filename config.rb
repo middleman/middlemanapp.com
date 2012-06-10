@@ -18,6 +18,7 @@ use Rack::Codehighlighter,
   :markdown => true
 
 activate :relative_assets
+activate :asset_hash
 
 # Build-specific configuration
 configure :build do
@@ -26,7 +27,4 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
-  
-  # Enable cache buster
-  activate :cache_buster
 end
