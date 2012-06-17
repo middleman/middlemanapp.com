@@ -17,6 +17,8 @@ Now, refer to your assets as normal, with their original filename. You can use h
 
 However, because this extension works by rewriting your files to reference the renamed assets, it's possible the extension might mess up and miss a reference, or do something you don't want to your code. In that case, you might have to fall back to the older cache buster method.
 
+If you want to exclude any files from being renamed, pass the `:ignore` option when activating `:asset_hash`, and give it one or more globs, regexes, or procs that identify the files to ignore. Likewise, you can pass an `:exts` option to change which file extensions are renamed.
+
 ## Cache buster in query string
 
 The second approach is to append a value to the end of URLs that reference your assets. For example, instead of referencing `my_image.png` you'd reference `my_image.png?1234115152`. The extra info at the end of the URL is enough to tell many (but not all) browsers and proxies to cache that file separately from the same file with a different cache buster value. To use this, activate the `:cache_buster` extension in your `config.rb`:
