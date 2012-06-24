@@ -42,3 +42,15 @@ title: Middleman 3.0 Beta Changelog
 * JavaScript and CSS are minified no matter where they are in the site, including in inline code blocks.
 * Files with just a template extension get output with the correct exension (foo.erb => foo.html)
 * `link_to` is smart about source paths, and can produce relative URLs with the `:relative` option or the sitewide `:relative_links` setting.
+* Include vendored assets in sprockets path.
+* Finally support Compass in Sprockets! Thanks to @xdite and @petebrowne
+* Moved Sprockets into an extension
+* Support loading Less @imports
+* Doing a build now shows identical files
+* asset_hash, minify_javascript, and minify_css can now accept regexes, globs, 
+  and procs
+* The `link_to` helper can now accept a sitemap Resource as a URL
+* UTF-8 is now the new default encoding for data and templates
+* New :encoding setting that allows users to change default encoding
+* You may now use the `use` method with a block when adding Rack middleware
+* automatic_directory_matcher
