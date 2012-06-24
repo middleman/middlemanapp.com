@@ -18,7 +18,7 @@ The most basic extension looks like:
       end
     end
     
-    ::Middleman::Extensions.register(:my_feature, MyFeature, "~> 3.0.0") 
+    ::Middleman::Extensions.register(:my_feature, MyFeature) 
     
 This module must be accessible to your `config.rb` file. Either define it directly in that file, or define it in another ruby file and `require` it in `config.rb`
 
@@ -27,13 +27,36 @@ Finally, once your module is included, you must activate it in `config.rb`:
     :::ruby
     activate :my_feature
 
-The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Extensions#register-class_method) method lets you choose a name for your extension as well as provide a version restriction stating which versions of Middleman your extension is compatible with.
+The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
 
-In the `MyFeature` extension, the `registered` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Base`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Base) class. Using this class, you can augment the Middleman environment.
+In the `MyFeature` extension, the `registered` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Base) class. Using this class, you can augment the Middleman environment.
 
+`activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. 
+
+    :::ruby
+    module MyFeature
+      # All the options for this extension
+      class Options < Struct.new(:foo, :bar); end
+      
+      class << self
+        def registered(app, options={}, &block)
+        options = Options.new(options_hash)
+        yield options if block_given?
+      end
+    end
+    
+    # Two ways to configure this extension
+    activate :my_feature, :foo => 'whatever'
+    activate :my_feature do |f|
+      f.foo = 'whatever'
+      f.bar = 'something else'
+    end
+    
+Passing options to `activate` is generally preferred to setting global variables via `set` to configure your extension (see the next section).
+    
 ## Setting variables
 
-The `Middleman::Base` class can be used to change settings (variables using the set command) in your extension.
+The [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/Middleman/Application) class can be used to change global settings (variables using the `set` command) that can be used in your extension.
 
     :::ruby
     module MyFeature
@@ -51,15 +74,24 @@ You can also use this ability to create new settings which can be accessed later
     module MyFeature
       class << self
         def registered(app)
-          app.set :my_feature_interal_array, %w(one two three)
+          app.set :my_feature_setting, %w(one two three)
+          app.send :include, Helpers
         end
         alias :included :registered
       end
+      
+      module Helpers
+        def my_helper
+          my_feature_setting.to_sentence
+        end
+      end
     end
+    
+ `set` adds a new method to `Middleman::Application`, meaning you can read the value of your variable via `my_feature_setting` elsewhere. However, consider using `activate` options instead of global settings when only your extension needs a particular value.
 
 ## Adding Methods to config.rb
 
-Methods available inside `config.rb` as simply class methods of `Middleman::Base`. Let's add a new method to be used in the `config.rb`:
+Methods available inside `config.rb` as simply class methods of `Middleman::Application`. Let's add a new method to be used in the `config.rb`:
 
     :::ruby
     module MyFeature
@@ -77,7 +109,7 @@ Methods available inside `config.rb` as simply class methods of `Middleman::Base
       end
     end
 
-By extending the `Middleman::Base` class, available as `app`, we've added a `say_hello` method to the environment which simply prints "Hello". Internally, these methods are used to build lists of paths and requests which will be processed later in the app.
+By extending the `Middleman::Application` class, available as `app`, we've added a `say_hello` method to the environment which simply prints "Hello". Internally, these methods are used to build lists of paths and requests which will be processed later in the app.
 
 ## after_configuration Callback
 
@@ -159,20 +191,35 @@ Here's an example:
 
 The above sets the `:currently_requested_path` value at the beginning of each request. Notice the return value of "true." All blocks using `before_processing` must return either true or false.
 
-## sitemap.reroute Callback
+## Sitemap Extensions
 
-You can use the [`sitemap.reroute`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Sitemap/Store#reroute-instance_method) callback to change the path files get output to. The [`:directory_indexes`](/advanced/pretty-urls) extension uses this feature to reroute normal pages to their directory-index version.
+You can modify or add pages in the [sitemap](/metadata/sitemap) by creating a Sitemap extension. The [`:directory_indexes`](/advanced/pretty-urls) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/extensions/blog/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
 
     :::ruby
     module MyFeature
       class << self
         def registered(app)
           app.after_configuration do
-          sitemap.reroute do |destination, page|
-            destination.gsub("original", "new")
+            sitemap.register_resource_list_manipulator(
+              :my_feature,
+              MyFeatureManipulator.new(self),
+              false
+            )
           end
         end
         alias :included :registered
+      end
+      
+      class MyFeatureManipulator
+        def initialize(app)
+          @app = app
+        end
+        
+        def manipulate_resource_list(resources)
+          resources.each do |resource|
+             resource.destination_path.gsub!("original", "new")
+          end
+        end
       end
     end
 
