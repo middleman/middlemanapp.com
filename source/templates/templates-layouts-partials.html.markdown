@@ -4,7 +4,7 @@ title: Templates, Layouts &amp; Partials
 
 # Templates, Layouts &amp; Partials
 
-Middleman provides many templating languages to simplify your HTML development. The languages range from simply allow you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.
+Middleman provides many templating languages to simplify your HTML development. The languages range from simply allowing you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.
 
 ## Templates
 
