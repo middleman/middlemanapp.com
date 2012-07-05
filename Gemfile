@@ -1,8 +1,7 @@
-source "http://rubygems.org"
+source :rubygems
 
 gem "redcarpet"
 gem "builder"
-gem "middleman", :git => "git://github.com/middleman/middleman.git"
-gem "slim"
+gem "middleman", "3.0.0.rc.4"
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 gem "pygments.rb"

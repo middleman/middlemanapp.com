@@ -1,97 +1,28 @@
 -
   name: "Getting Started"
   desc: "Basics of Middleman"
-  pages:
-    -
-      title: "Creating Your First Project"
-      path:  "/getting-started/welcome"
-    # -
-    #   title: "Migrating to Middleman 3.0"
-    #   path:  "/getting-started/migrating"
-    -
-      title: "Middleman Changelog"
-      path:  "/getting-started/changelog"
+  directory: "getting-started"
 -
   name: "Templates"
   desc: "Powerful templates which compile to HTML, CSS & JS"
-  pages: 
-    -
-      title: "Templates, Layouts &amp; Partials"
-      path:  "/templates/templates-layouts-partials"
-    -
-      title: "Template Helpers"
-      path:  "/templates/helpers"
-    -
-      title: "Sass and Compass"
-      path:  "/templates/sass-and-compass"
-    -
-      title: "CoffeeScript &amp; Sprockets"
-      path:  "/templates/coffeescript-sprockets"
+  directory: "templates"
 -
   name: "Metadata"
   desc: "Structured data about pages"
-  pages: 
-    -
-      title: "The Sitemap"
-      path: "/metadata/sitemap"
-    -
-      title: "Individual Page Configuration"
-      path:  "/metadata/yaml-frontmatter"
-    -
-      title: "Local YAML Data"
-      path:  "/metadata/local-data"
+  directory: "metadata"
 -
   name: "Advanced"
   desc: "Dive deeper"
-  pages: 
-    -
-      title: "Dynamic Pages"
-      path:  "/advanced/dynamic-pages"
-    -
-      title: "Pretty URLs (Directory Indexes)"
-      path:  "/advanced/pretty-urls"
-    -
-      title: "File Size Optimization"
-      path:  "/advanced/file-size-optimization"
-    -
-      title: "Improving Cacheability"
-      path:  "/advanced/improving-cacheability"
-    -
-      title: "Rack Middleware"
-      path:  "/advanced/rack-middleware"
-    -
-      title: "Speeding Things Up"
-      path:  "/advanced/speeding-up"
+  directory: "advanced"
 -
   name: "Extensions"
-  desc: "WARNING: NOT ALL EXTENSION ARE UPGRADED TO 3.0 YET"
-  pages:
-    -
-      title: "Custom Extensions"
-      path:  "/extensions/custom"
-    -
-      title: "Blog Extension"
-      path:  "/extensions/blog"
-    -
-      title: "Localization (i18n)"
-      path:  "/extensions/localization"
-    -
-      title: "Remote API Proxy"
-      path:  "/extensions/remote-api"
-    -
-      title: "LiveReload"
-      path:  "/extensions/livereload"
-
+  desc: "Official Extensions"
+  directory: "extensions"
 -
   name: "Community"
   desc: "More extensions and support"
+  directory: "community"
   pages:
-    -
-      title: "Sites Built Using Middleman"
-      path:  "/community/built-using-middleman"
-    -
-      title: "Community Extensions"
-      path:  "/community/3rd-party-extensions"
     -
       title: "Forum"
       path:  "http://forum.middlemanapp.com/"

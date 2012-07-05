@@ -1,8 +1,8 @@
 ---
-title: Middleman 3.0 Beta Changelog
+title: Middleman 3.0 Changelog
 ---
 
-# Middleman 3.0 Beta Changelog
+# Middleman 3.0 Changelog
 
 * Split into 3 gems (`middleman-core`, `middleman-more` and `middleman` which simply includes both)
 * Rewritten to work directly with Rack (Sinatra apps can still be mounted)

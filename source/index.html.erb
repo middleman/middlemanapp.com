@@ -1,0 +1,21 @@
+<h1>Middleman Guides</h1>
+
+<p>Welcome to the Middleman documentation site.</p>
+
+<p>Middleman is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.</p>
+
+<p>Bugs can be reported on the <a href="https://github.com/middleman/middleman/issues">Github Issue Tracker</a>. <a href="https://twitter.com/middlemanapp">Follow Middleman on Twitter</a>.</p>
+
+<div class="tutorials">
+  <% data.nav.each do |g| %>
+    <div class="block">
+      <h3><%= g.name %></h3>
+      <p><%= g.desc %></p>
+      <ul>
+        <% pages_for_group(g.name).each_with_index do |p, i| %>
+          <li><%= link_to p.title, p.path %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

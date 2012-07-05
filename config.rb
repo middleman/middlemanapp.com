@@ -1,12 +1,8 @@
-require "slim"
 require "builder"
-
-require "lib/guide_helpers"
-helpers GuideHelpers
 
 activate :directory_indexes
 
-set :markdown, :layout_engine => :slim, :tables => true, :autolink => true
+set :markdown, :tables => true, :autolink => true
 set :markdown_engine, :redcarpet
 
 require 'rack/codehighlighter'
@@ -16,9 +12,6 @@ use Rack::Codehighlighter,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
-
-activate :relative_assets
-activate :asset_hash
 
 # Build-specific configuration
 configure :build do
