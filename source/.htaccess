@@ -16,7 +16,6 @@ RewriteRule ^guides/remote-api/?$ /extensions/remote-api [R=301,L]
 
 # Getting Started
 RewriteRule ^guides/getting-started/?$ /getting-started/welcome [R=301,L]
-RewriteRule ^guides/migrating/?$ /getting-started/migrating [R=301,L]
 
 # Metadata
 RewriteRule ^guides/individual-page-configuration/?$ /metadata/yaml-frontmatter [R=301,L]
