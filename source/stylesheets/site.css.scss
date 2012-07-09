@@ -12,7 +12,7 @@ $blueprint-grid-columns: 22;
 @import "blueprint";
 @include blueprint-typography;
 
-tt, code {
+tt {
   font-size: .95em;
   background: #F8F8F8;
   @include border-radius(4px);
@@ -108,8 +108,6 @@ aside {
     }
   }
 }
-
-@import "_pygments/solarized";
 
 footer {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;

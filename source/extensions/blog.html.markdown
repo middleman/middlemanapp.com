@@ -6,24 +6,20 @@ title: Blogging Extension
 
 Middleman has an official extension to support blogging, articles and tagging. `middleman-blog` ships as an extension and must be installed to use. Simply specify the gem in your `Gemfile`:
 
-    :::ruby
     gem "middleman-blog"
     
 Or install it by hand if you're not using Bundler:
     
-    :::bash
     gem install middleman-blog
 
 Then activate the extension in your `config.rb`:
 
-    :::ruby
     activate :blog do |blog|
       # set options on blog
     end
     
 Alternatively, you can generate a fresh project already setup for blogging:
 
-    :::bash
     middleman init MY_BLOG_PROJECT --template=blog
 
 If you already have a Middleman project, you can re-run `middleman init` with the blog template option to generate the sample [`index.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/index.html.erb), [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb), [`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb), and [`feed.xml`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/feed.xml.builder), or you can write those yourself. You can see [what gets generated](https://github.com/middleman/middleman-blog/tree/master/lib/middleman-blog/template/source) on GitHub.
@@ -48,14 +44,12 @@ As a shortcut, you can run `middleman article TITLE` and Middleman will create a
 
 The base path for your blog defaults to `/` (the root of your website) but can be overridden in `config.rb`:
 
-    :::ruby
     activate :blog do |blog|
       # set options on blog
     end
 
 The permalink for viewing your posts can be easily changed as well:
 
-    :::ruby
     activate :blog do |blog|
       blog.permalink = "blog/:year/:title.html"
     end
@@ -68,7 +62,6 @@ By default, articles can be truncated when viewed outside their permalink page. 
 
 This can be changed in `config.rb`:
 
-    :::ruby
     activate :blog do |blog|
       blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
     end
@@ -93,7 +86,6 @@ Now you can find this article listed on `tags/blogging.html`.
 
 This path can be changed in `config.rb`:
 
-    :::ruby
     activate :blog do |blog|
       blog.taglink = "categories/:tag.html"
     end
@@ -112,7 +104,6 @@ In templates, you can use the [`blog_year_path`](http://rubydoc.info/github/midd
 
 You can set a specific [layout](/templates/templates-layouts-partials) to be used for all articles in your `config.rb`:
   
-    :::ruby
     activate :blog do |blog|
       blog.layout = "blog_layout"
     end
@@ -127,7 +118,6 @@ Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/
 
 For example, the following shows the 5 most-recent articles and their summary:
 
-    :::erb
     <% blog.articles[0...5].each do |article| %>
       <article>
         <h1>
@@ -143,7 +133,6 @@ For example, the following shows the 5 most-recent articles and their summary:
 
 You can also get access to the tag data for a tag archive:
 
-    :::erb
     <ul>
       <% blog.tags.each do |tag, articles| %>
         <li>
@@ -158,7 +147,6 @@ You can also get access to the tag data for a tag archive:
     
 Or similarly for a calendar list:
     
-    :::erb
     <ul>
       <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
         <li>
@@ -174,7 +162,6 @@ Or similarly for a calendar list:
 
 Or if you added a `published` flag to your front matter:
 
-    :::erb
     <h1>Published Articles</h1>
     <% blog.articles.select {|a| a.page.data[:published] }.each do |article| %>
       ...

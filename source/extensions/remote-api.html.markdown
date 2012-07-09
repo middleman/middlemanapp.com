@@ -1,5 +1,6 @@
 ---
 title: Remote API Proxy Extension
+hidden: true
 ---
 
 # Remote API Proxy Extension
@@ -8,25 +9,21 @@ Middleman 2.1 ships with an official extension to support loading remote APIs du
 
 The Remote API Proxy allows you to mount a remote API, Twitter Search for example, inside your domain during development. Simply install the gem:
 
-    :::bash
     gem install middleman-proxy
 
 Then activate the extension in your `config.rb`:
 
-    :::ruby
     require "middleman-proxy"
     
     activate :proxy
 
 Next, we will mount the Twitter Search API inside our app in `config.rb`:
 
-    :::ruby
     proxy "/api_path", :to => "your-api-hostname.com"
     proxy "/ssl_api_path", :to => "your-other-api-hostname.com", :secure => true
 
 Finally, from our front-end we can now do local AJAX to get remote search results. Here's an example using jQuery:
 
-    :::javascript
     $.get("/twitter/search.json", { q: "@middlemanapp" }, function(data) {
       // Handle the search results for @middlemanapp
     });
@@ -47,7 +44,6 @@ If you own the API you are connecting to, you can also provide support for CORS 
 
 For example, with a Sinatra application:
 
-    :::ruby
     headers 'Access-Control-Allow-Origin' => '*',
         'Access-Control-Allow-Methods' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH',
         'Access-Control-Allow-Headers' => 'Content-Type, Authorization',

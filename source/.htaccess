@@ -6,12 +6,12 @@ RewriteRule ^guides/frontend-optimization/?$ /advanced/frontend-optimization [R=
 RewriteRule ^guides/pretty-urls/?$ /advanced/pretty-urls [R=301,L]
 RewriteRule ^guides/rack-middleware/?$ /advanced/rack-middleware [R=301,L]
 RewriteRule ^guides/speeding-up/?$ /advanced/speeding-up [R=301,L]
+RewriteRule ^guides/localization/?$ /advanced/localization [R=301,L]
 
 # Extensions
 RewriteRule ^guides/blog/?$ /extensions/blog [R=301,L]
 RewriteRule ^guides/extensions/?$ /extensions/custom [R=301,L]
 RewriteRule ^guides/livereload/?$ /extensions/livereload [R=301,L]
-RewriteRule ^guides/localization/?$ /extensions/localization [R=301,L]
 RewriteRule ^guides/remote-api/?$ /extensions/remote-api [R=301,L]
 
 # Getting Started

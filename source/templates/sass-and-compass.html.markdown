@@ -37,7 +37,6 @@ The same styles could also be expressed in the CSS-superset SCSS format in a fil
 
 Both of these files will compile to the following `build/stylesheets/login.css` file:
 
-    :::css
     body {
       background: white;
       color: black; }

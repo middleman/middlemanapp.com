@@ -8,7 +8,6 @@ YAML Frontmatter is similar to the [Local YAML Data] feature, except it works on
 
 Let's take a simple ERb template, adding some YAML variables and change the layout for this specific page.
 
-    :::erb
     ---
     layout: "custom"
     my_list:

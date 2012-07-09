@@ -12,7 +12,6 @@ Middleman has full access to Rack Middleware which opens up an expansive univers
 
 This site is written in Middleman and features many code blocks which have syntax highlighting. This syntax highlighting is accomplished outside the scope of Middleman. This site renders `<code>` blocks and then Rack Middleware takes over an enhances those blocks with syntax highlight. The middleware in use is called [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter). Here's how it can be used in your `config.rb`:
   
-    :::ruby
     require 'rack/codehighlighter'
     require "pygments"
     use Rack::Codehighlighter, 
@@ -23,7 +22,6 @@ This site is written in Middleman and features many code blocks which have synta
 
 Make sure you add the right dependencies to your `Gemfile` to make those work:
   
-    :::ruby
     gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
     gem "pygments.rb"
 

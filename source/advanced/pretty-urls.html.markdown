@@ -14,7 +14,6 @@ This makes sense for a static website, but many find the .html distasteful and w
 
 If you are using a Rack-based web-server, you can use the `Rack::TryStatic` middleware found in the [rack-contrib] project. In your `config.ru` (or Rails Rack configuration), add the following:
 
-    :::ruby
     require "rack/contrib/try_static"
     use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html']
 
@@ -28,7 +27,6 @@ However, serving your site via Rack somewhat defeats the purpose of generating a
 
 If you are not using a Rack-based web-server, you can use the Directory Indexes feature to tell Middleman to create a folder for each `.html` file and place the built template file as the index of that folder. In your `config.rb`:
 
-    :::ruby
     activate :directory_indexes
 
 Now when the above project is built, the `about-us.html.erb` file will be output as `about-us/index.html`. When placed in an Apache compatible web-server, the page would be available at:
@@ -37,19 +35,16 @@ Now when the above project is built, the `about-us.html.erb` file will be output
     
 If you prefer a different file be output, you can use the `index_file` variable. For example, IIS uses default.html:
 
-    :::ruby
     set :index_file, "default.html"
 
 Or, you may want a PHP file:
 
-    :::ruby
     set :index_file, "index.php"
 
 ### Opt-out
 
 If there are pages which you don't want automatically renamed, you can opt-out:
 
-    :::ruby
     page "/i-really-want-the-extension.html", :directory_index => false
 
 `page` works with regexes or file globs if you want to turn off indexes for many files at once.

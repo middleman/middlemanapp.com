@@ -20,7 +20,6 @@ Each page can also find other pages related to it in the site hierarchy. The `pa
 
 You can use the sitemap information to create new [dynamic pages] from `config.rb` (this is how the [blog extension](/extensions/blog) creates tag pages), but you need to be a little careful, because the sitemap isn't populated until *after* `config.rb` has already been run. To get around this, you need to register a callback for the application's `ready` event. As an example, let's say we've added a "category" element to the [frontmatter] of our pages, and we want to create category pages dynamically for each category. To do that, we'd add this to `config.rb`:
 
-    :::ruby
     ready do
       sitemap.pages.group_by {|p| p.data["category"] }.each do |category, pages|
         page "/categories/#{category}.html", :proxy => "category.html" do

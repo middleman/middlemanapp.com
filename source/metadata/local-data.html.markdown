@@ -8,7 +8,6 @@ Sometimes it is useful to extract the data content of a page from the rendering.
 
 Here's an example file at `data/people.yml` with the contents:
 
-    :::yaml
     friends:
       - Tom
       - Dick
@@ -16,7 +15,6 @@ Here's an example file at `data/people.yml` with the contents:
 
 Now, anywhere in our template files, we will have access to this data:
 
-    :::erb
     <h1>Friends</h1>
     <ol>
       <% data.people.friends.each do |f| %>
@@ -26,7 +24,6 @@ Now, anywhere in our template files, we will have access to this data:
 
 Which will render:
 
-    :::html
     <h1>Friends</h1>
     <ol>
       <li>Tom</li>

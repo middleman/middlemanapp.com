@@ -6,7 +6,6 @@ title: Dynamic Pages
 
 Middleman has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example `config.rb` setup:
 
-    :::ruby
     ["tom", "dick", "harry"].each do |name|
       page "/about/#{name}.html", :proxy => "/about/template.html" do
         @person_name = name
@@ -22,7 +21,6 @@ When this project is built, four files will be output:
 
 In most cases, you will not want to generate the template itself without the @person_name variable, so you can tell Middleman to ignore it:
 
-    :::ruby
     ["tom", "dick", "harry"].each do |name|
       page "/about/#{name}.html", :proxy => "/about/template.html", :ignore => true do
         @person_name = name

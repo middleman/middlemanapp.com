@@ -23,8 +23,8 @@ module GuideHelpers
     return pages unless group
     
     if group.directory
-      pages << sitemap.resources.select { |r| 
-        r.path.include? group.directory
+      pages << sitemap.resources.select { |r|
+        r.path.include?(group.directory) && !r.data.hidden
       }.map do |r|
         ::Middleman::Util.recursively_enhance({
           :title => r.data.title,

@@ -8,7 +8,6 @@ Middleman extensions are Ruby classes which can hook into various points of the 
 
 The most basic extension looks like:
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -24,7 +23,6 @@ This module must be accessible to your `config.rb` file. Either define it direct
 
 Finally, once your module is included, you must activate it in `config.rb`:
 
-    :::ruby
     activate :my_feature
 
 The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
@@ -33,7 +31,6 @@ In the `MyFeature` extension, the `registered` method will be called as soon as 
 
 `activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. 
 
-    :::ruby
     module MyFeature
       # All the options for this extension
       class Options < Struct.new(:foo, :bar); end
@@ -58,7 +55,6 @@ Passing options to `activate` is generally preferred to setting global variables
 
 The [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/Middleman/Application) class can be used to change global settings (variables using the `set` command) that can be used in your extension.
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -70,7 +66,6 @@ The [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/Mi
 
 You can also use this ability to create new settings which can be accessed later in your extension.
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -93,7 +88,6 @@ You can also use this ability to create new settings which can be accessed later
 
 Methods available inside `config.rb` as simply class methods of `Middleman::Application`. Let's add a new method to be used in the `config.rb`:
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -115,7 +109,6 @@ By extending the `Middleman::Application` class, available as `app`, we've added
 
 Sometimes you will want to wait until the `config.rb` has been executed to run code. For example, if you rely on the `:css_dir` variable, you should wait until it has been set. For this, we'll use a callback:
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -132,7 +125,6 @@ Sometimes you will want to wait until the `config.rb` has been executed to run c
 
 Similarly, if you're extension relies on variable and settings within Compass to be ready, use the `compass_config` callback.
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -149,7 +141,6 @@ Similarly, if you're extension relies on variable and settings within Compass to
 
 Helpers are methods available inside your template. To add helper methods, we do the following:
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -167,7 +158,6 @@ Helpers are methods available inside your template. To add helper methods, we do
 
 Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERb template:
 
-    :::erb
     <h1><%= make_a_link("http://example.com", "Click me") %></h1>
 
 ## Request Callback
@@ -176,7 +166,6 @@ The request callback allows you to do processing before Middleman renders the pa
 
 Here's an example:
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -195,7 +184,6 @@ The above sets the `:currently_requested_path` value at the beginning of each re
 
 You can modify or add pages in the [sitemap](/metadata/sitemap) by creating a Sitemap extension. The [`:directory_indexes`](/advanced/pretty-urls) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/extensions/blog/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
@@ -227,7 +215,6 @@ You can modify or add pages in the [sitemap](/metadata/sitemap) by creating a Si
 
 This callback is used to execute code after the build process has finished. The [middleman-smusher] extension uses this feature to compress all the images in the build folder after it has been built. It's also conceivable to integrate a deployment script after build.
 
-    :::ruby
     module MyFeature
       class << self
         def registered(app)
