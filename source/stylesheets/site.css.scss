@@ -25,10 +25,10 @@ body {
   margin: 0; }
 
 #header {
-  background-color: #E1D7BE;
-  padding: 30px 0 40px;
+  padding: 40px 0 40px;
   border-bottom: 1px solid darken(#E1D7BE, 5%);
   // box-shadow: 0 0 1px 1px rgba(#fff, 0.6) ;
+  background: #E1D7BE inline-image("header.bg.png") no-repeat center top;
 
   h1 {
     width: 225px;
@@ -37,6 +37,7 @@ body {
   h2 {
     font-size: 36px;
     font-family: 'Questrial', sans-serif;
+    text-shadow: 0 0 10px #fff;
   }
 
   text-align: center;
@@ -66,14 +67,17 @@ body {
 #install {
   text-align: center;
   margin: -15px 0 40px;
-
+  font-family: 'Arvo', serif;
+  
   b {
     background-color: #002B36;
-    padding: 15px 30px;
+    padding: 15px 25px;
     color: #F1E7D6;
     border-radius:5px;
     font-size: 24px;
+    font-weight: normal;
     line-height: 1.2;
+    word-spacing: 0.3em;
     box-shadow: 0 0 4px 1px rgba(#fff, 0.7);
   }
 }
