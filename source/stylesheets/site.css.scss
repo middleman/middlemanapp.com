@@ -31,6 +31,15 @@ body {
   @include pie-clearfix;
   position: relative; }
 
+.logo {
+  display: block;
+  @include hide-text;
+  width: image-width("mm-blue-w-text.png");
+  height: image-height("mm-blue-w-text.png");
+  background: inline-image("mm-blue-w-text.png") no-repeat;
+  @include border-radius(4px);
+}
+
 aside {
   width: 225px;
   float: left;
@@ -40,13 +49,6 @@ aside {
     margin-bottom: 10px;
     h1 {
       margin: 20px 0 0 0;
-      a {
-        display: block;
-        @include hide-text;
-        width: image-width("mm-blue-w-text.png");
-        height: image-height("mm-blue-w-text.png");
-        background: inline-image("mm-blue-w-text.png") no-repeat;
-        @include border-radius(4px); }
     }
     h4 {
       display: none;

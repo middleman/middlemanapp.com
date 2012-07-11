@@ -9,34 +9,11 @@
   <body>
     <div id="frame">
       <div class="container">
-        <aside>
-          <header>
-            <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
-            <h4>Hand-crafted frontend development</h4>
-          </header>
+        <header>
+          <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
+          <h2>makes developing stand-alone websites simple</h2>
+        </header>
 
-          <nav>
-            <ul>
-              <% data.nav.each do |g| %>
-                <li>
-                  <h6><%= g.name %></h6>
-                  <ul>
-                    <% pages_for_group(g.name).each_with_index do |p, i| %>
-                      <li><%= link_to p.title, p.path %></li>
-                    <% end %>
-                  </ul>
-                </li>
-              <% end %>
-            </ul>
-          </nav>
-          
-          <footer>
-            <a href="http://www.pledgie.com/campaigns/15807">
-              <img src="http://www.pledgie.com/campaigns/15807.png" alt="Click here to lend your support to Middleman">
-            </a>
-          </footer>
-        </aside>
-              
         <article id="main" role="main">
           <%= yield %>
           
