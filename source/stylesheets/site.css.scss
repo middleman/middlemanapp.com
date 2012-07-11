@@ -7,7 +7,7 @@ $link-focus-color:   $link-color;
 $link-active-color:  $link-color;
 
 $blueprint-font-size: 14px;
-$blueprint-grid-columns: 22;
+$blueprint-grid-columns: 24;
 
 @import "blueprint";
 @include blueprint-typography;
@@ -23,6 +23,60 @@ body {
   text-rendering: optimizeLegibility;
   background: #efe8d5;
   margin: 0; }
+
+#header {
+  background-color: #E1D7BE;
+  padding: 30px 0 40px;
+  border-bottom: 1px solid darken(#E1D7BE, 5%);
+  // box-shadow: 0 0 1px 1px rgba(#fff, 0.6) ;
+
+  h1 {
+    width: 225px;
+    margin: 0 auto 0;
+  }
+  h2 {
+    font-size: 36px;
+    font-family: 'Questrial', sans-serif;
+  }
+
+  text-align: center;
+}
+#footer {
+  background-color: #E1D7BE;
+  padding: 20px 0 20px;
+  margin-top: 30px;
+
+  p {
+    margin: 0;
+  }
+  a {
+    @include hover_link;
+  }
+
+  .inner {
+    @include container;
+  }
+
+  .copyright {
+    @include float-left; }
+  .link {
+    @include float-right; }
+}
+
+#install {
+  text-align: center;
+  margin: -15px 0 40px;
+
+  b {
+    background-color: #002B36;
+    padding: 15px 30px;
+    color: #F1E7D6;
+    border-radius:5px;
+    font-size: 24px;
+    line-height: 1.2;
+    box-shadow: 0 0 4px 1px rgba(#fff, 0.7);
+  }
+}
   
 #frame {
   @include container; }
@@ -113,25 +167,27 @@ aside {
 
 footer {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .tutorials {
   @include pie-clearfix;
   .block {
-    @include column(7);
-    &:nth-child(even) {
-      @include prepend(1);
-      @include column(7, true);
+    @include column(8);
+    &:nth-child(3n) {
+      margin-right: 0;
     }
-    &:nth-child(odd) {
+    &:nth-child(3n+1) {
       clear: left;
     }
     h3 {
       margin-bottom: 0.1em;
+      color: #002B36; 
+      font-weight: bold;
     }
     p {
       margin-bottom: 0.5em;
+      color: darken(#C8BCA9, 40%);
     }
     ul {
     }

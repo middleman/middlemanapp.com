@@ -4,29 +4,30 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Questrial" %>
     <title><%= page_title %></title>
   </head>
   <body>
-    <div id="frame">
-      <div class="container">
-        <header>
-          <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
-          <h2>makes developing stand-alone websites simple</h2>
-        </header>
+    <header id="header">
+      <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
+      <h2>makes developing stand-alone websites simple</h2>
+    </header>
 
-        <article id="main" role="main">
+        <section role="main">
           <%= yield %>
           
-          <footer>
-            <p class="left">
-              &copy; 2011&nbsp;
-              <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.
-            </p>
-            <p class="right"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
-          </footer>
-        </article>
+        </section>
+    <footer id="footer">
+      <div class="inner">
+        
+      <p class="copyright">
+        &copy; 2011&nbsp;
+        <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.
+      </p>
+      <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
       </div>
-    </div>
+
+    </footer>
     
     <%= javascript_include_tag "highlight.pack" %>
     <%= stylesheet_link_tag "solarized_light" %>
