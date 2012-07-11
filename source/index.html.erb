@@ -1,12 +1,16 @@
-<h1>Middleman Guides</h1>
+---
+layout: home.erb
+---
 
-<p>Welcome to the Middleman documentation site.</p>
+<div id="install">
+  <p><b>gem install middleman</b></p>
+</div>
 
-<p>Middleman is a static site generator based on Sinatra. Providing dozens of templating languages (Haml, Sass, Compass, Slim, CoffeeScript, and more). Makes minification, compression, cache busting, Yaml data (and more) an easy part of your development cycle.</p>
+<div id="frame" class="container">
 
-<p>Bugs can be reported on the <a href="https://github.com/middleman/middleman/issues">Github Issue Tracker</a>. <a href="https://twitter.com/middlemanapp">Follow Middleman on Twitter</a>.</p>
+<p class="intro">Middleman is a static site generator using all the shortcuts and tools in modern web development. <%= link_to 'Getting started', 'getting-started/welcome' %>.</p>
 
-<div class="tutorials">
+<nav id="documents">
   <% data.nav.each do |g| %>
     <div class="block">
       <h3><%= g.name %></h3>
@@ -18,4 +22,6 @@
       </ul>
     </div>
   <% end %>
+</nav>
+
 </div>
