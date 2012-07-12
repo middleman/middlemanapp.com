@@ -48,10 +48,13 @@ body {
   margin-top: 30px;
 
   p {
+    color: #9A7546;
     margin: 0;
   }
   a {
+    color: #9A7546;
     @include hover_link;
+
   }
 
   .inner {
