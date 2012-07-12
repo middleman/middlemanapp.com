@@ -16,18 +16,17 @@
           </header>
 
           <nav>
-            <ul>
               <% data.nav.each do |g| %>
-                <li>
-                  <h6><%= g.name %></h6>
+                <div>
+                  <h3><%= g.name %></h3>
+                  <p><%= g.desc %></p>
                   <ul>
                     <% pages_for_group(g.name).each_with_index do |p, i| %>
                       <li><%= link_to p.title, p.path %></li>
                     <% end %>
                   </ul>
-                </li>
+                </div>
               <% end %>
-            </ul>
           </nav>
           
           <footer>

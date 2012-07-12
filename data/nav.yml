@@ -4,7 +4,7 @@
   directory: "getting-started"
 -
   name: "Templates"
-  desc: "Powerful templates which compile to HTML, CSS & JS"
+  desc: "Powerful templates which compile"
   directory: "templates"
 -
   name: "Metadata"
