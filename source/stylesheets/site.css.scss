@@ -191,6 +191,13 @@ footer {
   font-size: 13px;
 }
 
+.intro {
+  color: #957642;
+  font-size: 15px;
+  margin: 10px auto;
+  text-align: center;
+}
+
 #documents {
   @include pie-clearfix;
   .block {
