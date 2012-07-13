@@ -1,0 +1,35 @@
+.logo {
+  @include hide-text;
+  @include border-radius(4px);
+
+  display: block;
+  width: image-width("mm-blue-w-text.png");
+  height: image-height("mm-blue-w-text.png");
+  background: inline-image("mm-blue-w-text.png") no-repeat;
+}
+
+
+#footer {
+  background-color: #E1D7BE;
+  padding: 20px 0 20px;
+  margin-top: 30px;
+  font-size: 13px;
+
+  p {
+    color: #9A7546;
+    margin: 0;
+  }
+  a {
+    color: #9A7546;
+    @include hover_link;
+
+  }
+
+  .inner {
+    @include container;
+  }
+  .copyright {
+    @include float-left; }
+  .link {
+    @include float-right; }
+}

@@ -1,0 +1,55 @@
+#hero {
+  padding: 40px 0 40px;
+  border-bottom: 1px solid darken(#E1D7BE, 5%);
+  background: #E1D7BE inline-image("header.bg.png") no-repeat center top;
+
+  h1 {
+    width: 225px;
+    margin: 0 auto 0;
+  }
+  h2 {
+    font-size: 36px;
+    font-family: 'Questrial', sans-serif;
+    text-shadow: 0 0 10px #fff;
+  }
+
+  text-align: center;
+}
+
+#install {
+  text-align: center;
+  margin: -15px 0 40px;
+  font-family: 'Arvo', serif;
+  
+  b {
+    background-color: darken(#E3D6C0, 40%);
+    padding: 15px 25px;
+    color: #F1E7D6;
+    border-radius:5px;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
+    word-spacing: 0.3em;
+    box-shadow: 0 0 4px 1px rgba(#fff, 0.7), 0 1px 4px 0 darken(#E3D6C0, 60%) inset;
+  }
+}
+  
+.intro {
+  color: #957642;
+  font-size: 15px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.grid {
+  @include pie-clearfix;
+  .block {
+    @include column(8);
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+   }
+}

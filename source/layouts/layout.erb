@@ -1,38 +1,25 @@
 <% wrap_layout :base do %>
-    <div id="frame">
-      <div class="container">
-        <aside>
-          <header>
-            <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
-            <h4>Hand-crafted frontend development</h4>
-          </header>
+  <div class="container">
+    <aside>
+      <header>
+        <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
+        <h4>Hand-crafted frontend development</h4>
+      </header>
 
-          <nav>
-              <% data.nav.each do |g| %>
-                <div>
-                  <h3><%= g.name %></h3>
-                  <p><%= g.desc %></p>
-                  <ul>
-                    <% pages_for_group(g.name).each_with_index do |p, i| %>
-                      <li><%= link_to p.title, p.path %></li>
-                    <% end %>
-                  </ul>
-                </div>
-              <% end %>
-          </nav>
+      <nav>
+         <%= partial 'layouts/nav' %>
+      </nav>
+      
+      <footer>
+        <a href="http://www.pledgie.com/campaigns/15807">
+          <img src="http://www.pledgie.com/campaigns/15807.png" alt="Click here to lend your support to Middleman">
+        </a>
+      </footer>
+    </aside>
           
-          <footer>
-            <a href="http://www.pledgie.com/campaigns/15807">
-              <img src="http://www.pledgie.com/campaigns/15807.png" alt="Click here to lend your support to Middleman">
-            </a>
-          </footer>
-        </aside>
-              
-        <article id="main" role="main">
+    <article id="main" role="main">
+      <%= yield %>
+    </article>
 
-          <%= yield %>
-          
-        </article>
-      </div>
-    </div>
+  </div>
 <% end %>

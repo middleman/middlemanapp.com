@@ -1,27 +1,26 @@
 ---
-layout: home.erb
+layout: base.erb
 ---
 
-<div id="install">
-  <p><b>gem install middleman</b></p>
-</div>
+<header id="hero">
+  <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
+  <h2>makes developing websites simple</h2>
+</header>
 
-<div id="frame" class="container">
+<section role="main">
+  <div id="install">
+    <p><b>gem install middleman</b></p>
+  </div>
 
-  <p class="intro">Middleman is a static site generator using all the shortcuts and tools in modern web development. <%= link_to 'Getting started', 'getting-started/welcome' %>.</p>
+  <div class="container">
 
-  <nav id="documents">
-    <% data.nav.each do |g| %>
-      <div class="block">
-        <h3><%= g.name %></h3>
-        <p><%= g.desc %></p>
-        <ul>
-          <% pages_for_group(g.name).each_with_index do |p, i| %>
-            <li><%= link_to p.title, p.path %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-</nav>
+    <p class="intro">Middleman is a static site generator using all the shortcuts and tools in modern web development. <%= link_to 'Getting started', 'getting-started/welcome' %>.</p>
 
-</div>
+    <nav class="grid">
+      <%= partial 'layouts/nav' %>
+    </nav>
+
+  </div>  
+</section>
+
+
