@@ -1,66 +1,12 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <%= stylesheet_link_tag "site" %>
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Questrial|Arvo" %>
-    <title><%= page_title %></title>
-  </head>
-  <body>
+<% wrap_layout :base do %>
     <header id="header">
       <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
       <h2>makes developing websites simple</h2>
     </header>
 
-        <section role="main">
-          <%= yield %>
-          
-        </section>
-    <footer id="footer">
-      <div class="inner">
-        
-      <p class="copyright">
-        &copy; 2011&nbsp;
-        <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.
-      </p>
-      <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
-      </div>
+    <section role="main">
+      <%= yield %>
+      
+    </section>
 
-    </footer>
-    
-    <%= javascript_include_tag "highlight.pack" %>
-    <%= stylesheet_link_tag "solarized_light" %>
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/javascripts/jquery-1.7.2.js"><\/script>')</script>
-
-    <%= javascript_include_tag "site" %>
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-90027-21']);
-      _gaq.push(['_trackPageview']);
-    
-      (function() {
-        var ga = document.createElement('script');
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        ga.setAttribute('async', 'true');
-        document.documentElement.firstChild.appendChild(ga);
-      })();
-    </script>
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4ef39d56613f5d017b000004');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
-    </script>
-  </body>
-</html>
+<% end %>

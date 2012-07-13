@@ -8,20 +8,20 @@ layout: home.erb
 
 <div id="frame" class="container">
 
-<p class="intro">Middleman is a static site generator using all the shortcuts and tools in modern web development. <%= link_to 'Getting started', 'getting-started/welcome' %>.</p>
+  <p class="intro">Middleman is a static site generator using all the shortcuts and tools in modern web development. <%= link_to 'Getting started', 'getting-started/welcome' %>.</p>
 
-<nav id="documents">
-  <% data.nav.each do |g| %>
-    <div class="block">
-      <h3><%= g.name %></h3>
-      <p><%= g.desc %></p>
-      <ul>
-        <% pages_for_group(g.name).each_with_index do |p, i| %>
-          <li><%= link_to p.title, p.path %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <nav id="documents">
+    <% data.nav.each do |g| %>
+      <div class="block">
+        <h3><%= g.name %></h3>
+        <p><%= g.desc %></p>
+        <ul>
+          <% pages_for_group(g.name).each_with_index do |p, i| %>
+            <li><%= link_to p.title, p.path %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 </nav>
 
 </div>
