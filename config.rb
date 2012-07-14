@@ -1,5 +1,7 @@
 require "builder"
 
+set :layout, :article
+
 activate :directory_indexes
 
 set :markdown, :tables => true, :autolink => true

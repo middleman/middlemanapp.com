@@ -1,29 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Questrial|Arvo" %>
+    <title><%= page_title %></title>
+  </head>
+  <body>
+    <%= yield %>
 
-<% wrap_layout :base do %>
-  <header id="header">
-    <div class="container">
-      <h1><%= link_to "Middleman", "/", {class: 'logo'} %></h1>
-      <p class="console">$ gem install middleman</p>
-     
-    </div>
-  </header>
+    <footer id="footer">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2011 <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.
+        </p>
+        <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
+      </div>
+    </footer>
+    
+    <%= javascript_include_tag "highlight.pack" %>
+    <%= stylesheet_link_tag "solarized_light" %>
+    <script>hljs.initHighlightingOnLoad();</script>
 
-
-  <div class="container">
-    <nav id="tos">
-
-      <%= partial 'layouts/nav' %>
-      
-      <footer>
-        <a href="http://www.pledgie.com/campaigns/15807">
-          <img src="http://www.pledgie.com/campaigns/15807.png" alt="Click here to lend your support to Middleman">
-        </a>
-      </footer>
-          
-
-    </nav>
-    <article id="main" role="main">
-      <%= yield %>
-    </article>
-  </div>
-<% end %>
+    <%= partial 'layouts/tracking' %>
+  </body>
+</html>
