@@ -45,7 +45,7 @@ As a shortcut, you can run `middleman article TITLE` and Middleman will create a
 The base path for your blog defaults to `/` (the root of your website) but can be overridden in `config.rb`:
 
     activate :blog do |blog|
-      # set options on blog
+      blog.prefix = "blog"
     end
 
 The permalink for viewing your posts can be easily changed as well:
