@@ -24,8 +24,7 @@ If you have questions, answers can be found on our [community  forum](http://for
 Please help Middleman flesh out its documentation. We'll merge in any reasonable
 extensions to our website docs, and give credit for your help!
 
-The site templates are written in [Slim](http://slim-lang.com/) and the guides are written 
-in [Markdown](http://daringfireball.net/projects/markdown/).
+The guides are written in [Markdown](http://daringfireball.net/projects/markdown/).
 
 ## Copyright
 
