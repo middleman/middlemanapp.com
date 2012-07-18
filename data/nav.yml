@@ -29,13 +29,3 @@
     -
       title: "Wiki"
       path:  "https://github.com/middleman/middleman/wiki"
--
-  name: "Code"
-  desc: "Source code and code docs"
-  pages:
-    -
-      title: "Repositories"
-      path:  "https://github.com/middleman/"
-    -
-      title: "Code Documentation"
-      path:  "http://rubydoc.info/find/github?q=middleman"
