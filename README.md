@@ -28,4 +28,4 @@ The guides are written in [Markdown](http://daringfireball.net/projects/markdown
 
 ## Copyright
 
-Copyright (c) 2010 Thomas Reynolds. See LICENSE for details.
+Copyright (c) Thomas Reynolds. [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/).

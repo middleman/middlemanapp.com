@@ -4,16 +4,17 @@ body {
   margin: 0; }
 
 .logo {
-  @include hide-text;
+  //@include hide-text;
   @include border-radius(4px);
+  overflow: hidden;
 
   display: block;
-  width: image-width("mm-blue-w-text.png");
-  height: image-height("mm-blue-w-text.png");
-  background: inline-image("mm-blue-w-text.png") no-repeat;
+  width: 225px;
+  height: 225px;
+  //background: image-url("mm-blue-w-text.svg") no-repeat;
+  //background-size: 255px 255px;
   box-shadow: 0 0 5px 1px #F3E9D8;
 }
-
 
 .container {
   @include container;
