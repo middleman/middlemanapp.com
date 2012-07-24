@@ -72,6 +72,8 @@ This will list my custom mobile framework and I can create new projects based on
 
     middleman init my_new_mobile_project --template=mobile
 
+There are also a number of [community-developed project templates](/community/3rd-party-project-templates/).
+
 ## The Development Cycle (middleman server)
 
 The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as [HAML](http://haml-lang.com), [SASS](http://sass-lang.com), etc) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
