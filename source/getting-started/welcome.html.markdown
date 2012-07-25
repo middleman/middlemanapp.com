@@ -16,7 +16,9 @@ Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Mid
 
 Once you have Ruby and RubyGems up and running, execute the following from the command line:
 
-    gem install middleman
+``` bash
+gem install middleman
+```
 
 This will install Middleman, its dependencies and the command-line tools for using Middleman.
 
@@ -34,7 +36,9 @@ To get started we will need to create a project folder for Middleman to work out
 
 Simply point the command at the folder for your new site and Middleman will build a skeleton project in that folder (or create the folder for you).
 
-    middleman init my_new_project
+``` bash
+middleman init my_new_project
+```
 
 ### The Skeleton
 
@@ -54,23 +58,31 @@ A config.ru file describes how the site should be loaded by a Rack-enabled webse
 
 To include a boilerplate `config.ru` file in your project, add the `--rack` flag to the init command:
 
-    middleman init my_new_project --rack
+``` bash
+middleman init my_new_project --rack
+```
 
 ### Project Templates
 
 In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the `-t` or `--template` command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
-    middleman init my_new_boilerplate_project --template=html5
+``` bash
+middleman init my_new_boilerplate_project --template=html5
+```
 
 Finally, you can create your own custom template skeletons by creating folders in the `~/.middleman/` folder. For example, I can create a folder at `~/.middleman/mobile/` and fill it with files I intend to use on mobile projects.
 
 If you run middleman init with the help flag, you will see a list of all the possible templates it has detected:
 
-    middleman init --help
+``` bash
+middleman init --help
+```
 
 This will list my custom mobile framework and I can create new projects based on it as before:
 
-    middleman init my_new_mobile_project --template=mobile
+``` bash
+middleman init my_new_mobile_project --template=mobile
+```
 
 There are also a number of [community-developed project templates](/community/3rd-party-project-templates/).
 
@@ -82,8 +94,10 @@ The vast majority of time spent using Middleman will be in the Development Cycle
 
 From the command-line, start the preview web-server from inside your project folder:
 
-    cd my_project
-    bundle exec middleman server
+``` bash
+cd my_project
+bundle exec middleman server
+```
 
 This will start a local web server running at: http://localhost:4567/
 
@@ -95,7 +109,9 @@ You can stop the preview server from the command-line using CTRL-C.
 
 Running `middleman` without any commands is the same as starting a server.
 
-    bundle exec middleman
+``` bash
+bundle exec middleman
+```
 
 This will do exactly the same thing as `middleman server`.
 
@@ -103,7 +119,9 @@ This will do exactly the same thing as `middleman server`.
 
 Under some circumstances(one known case is under Windows, see [here](https://github.com/middleman/middleman/issues/101)), `middleman` might not work as expected, try using a full command instead:
 
-    middleman server -p 4567 -e development
+``` bash
+middleman server -p 4567 -e development
+```
 
 Under some circumstances(say if your config file has gone wild), middleman server might not be able to boot itself, and no error output can be seen on the console, don't panic, just try `middleman build` to see the full trace of the problem and fix it.
 
@@ -111,8 +129,10 @@ Under some circumstances(say if your config file has gone wild), middleman serve
 
 Finally, when you are ready to deliver static code or, in the case of "blog mode", host a static blog, you will need to build the site. Using the command-line, from the project folder, run `middleman build`:
 
-    cd my_project
-    bundle exec middleman build
+``` bash
+cd my_project
+bundle exec middleman build
+```
 
 This will create a static file for each file located in your `source` folder. Template files will be compiled, static files will be copied and any enabled build-time features (such as compression) will be executed. You can pass a `--clean` flag to `middleman build` to have it clean out any files from the build directory that are left over from earlier builds but would no longer be produced.
 

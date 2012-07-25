@@ -9,25 +9,32 @@ Middleman 2.1 ships with an official extension to support loading remote APIs du
 
 The Remote API Proxy allows you to mount a remote API, Twitter Search for example, inside your domain during development. Simply install the gem:
 
-    gem install middleman-proxy
+``` bash
+gem install middleman-proxy
+```
 
 Then activate the extension in your `config.rb`:
 
-    require "middleman-proxy"
-    
-    activate :proxy
+``` ruby
+require "middleman-proxy"
+
+activate :proxy
+```
 
 Next, we will mount the Twitter Search API inside our app in `config.rb`:
 
-    proxy "/api_path", :to => "your-api-hostname.com"
-    proxy "/ssl_api_path", :to => "your-other-api-hostname.com", :secure => true
+``` ruby
+proxy "/api_path", :to => "your-api-hostname.com"
+proxy "/ssl_api_path", :to => "your-other-api-hostname.com", :secure => true
+```
 
 Finally, from our front-end we can now do local AJAX to get remote search results. Here's an example using jQuery:
 
-    $.get("/twitter/search.json", { q: "@middlemanapp" }, function(data) {
-      // Handle the search results for @middlemanapp
-    });
-
+``` javascript
+$.get("/twitter/search.json", { q: "@middlemanapp" }, function(data) {
+  // Handle the search results for @middlemanapp
+});
+```
 
 ## Production
 
@@ -37,19 +44,20 @@ If you don't own the API, either you can build a proxy into your backend (useful
 
 [Strobe]: http://www.strobecorp.com/
 
-
 ## Cross-origin resource sharing (CORS)
 
 If you own the API you are connecting to, you can also provide support for CORS by supplying the appropriate response headers to the client.
 
 For example, with a Sinatra application:
 
-    headers 'Access-Control-Allow-Origin' => '*',
-        'Access-Control-Allow-Methods' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH',
-        'Access-Control-Allow-Headers' => 'Content-Type, Authorization',
-        'Access-Control-Allow-Credentials' => 'true',
-        'Access-Control-Max-Age' => '1728000',
-        'Allow' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH'
+``` ruby
+headers 'Access-Control-Allow-Origin' => '*',
+    'Access-Control-Allow-Methods' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH',
+    'Access-Control-Allow-Headers' => 'Content-Type, Authorization',
+    'Access-Control-Allow-Credentials' => 'true',
+    'Access-Control-Max-Age' => '1728000',
+    'Allow' => 'GET, PUT, POST, OPTIONS, HEAD, DELETE, PATCH'
+```
 
 Make sure to add support in your application for OPTIONS requests from the client.
 

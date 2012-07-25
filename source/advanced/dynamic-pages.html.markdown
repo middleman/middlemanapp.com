@@ -6,11 +6,13 @@ title: Dynamic Pages
 
 Middleman has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example `config.rb` setup:
 
-    ["tom", "dick", "harry"].each do |name|
-      page "/about/#{name}.html", :proxy => "/about/template.html" do
-        @person_name = name
-      end
-    end
+``` ruby
+["tom", "dick", "harry"].each do |name|
+  page "/about/#{name}.html", :proxy => "/about/template.html" do
+    @person_name = name
+  end
+end
+```
 
 When this project is built, four files will be output:
 
@@ -21,11 +23,13 @@ When this project is built, four files will be output:
 
 In most cases, you will not want to generate the template itself without the @person_name variable, so you can tell Middleman to ignore it:
 
-    ["tom", "dick", "harry"].each do |name|
-      page "/about/#{name}.html", :proxy => "/about/template.html", :ignore => true do
-        @person_name = name
-      end
-    end
+``` ruby
+["tom", "dick", "harry"].each do |name|
+  page "/about/#{name}.html", :proxy => "/about/template.html", :ignore => true do
+    @person_name = name
+  end
+end
+```
 
 Now, only the `about/tom.html`, `about/dick.html` and `about/harry.html` files will be output.
 
@@ -33,6 +37,8 @@ Now, only the `about/tom.html`, `about/dick.html` and `about/harry.html` files w
 
 It is also possible to ignore arbitrary paths when building a site using the new `ignore` method in your `config.rb`:
 
-    ignore "/ignore-this-template.html"
+``` ruby
+ignore "/ignore-this-template.html"
+```
 
 You can give ignore exact source paths, filename globs, or regexes.

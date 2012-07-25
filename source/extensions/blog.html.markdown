@@ -6,21 +6,29 @@ title: Blogging Extension
 
 Middleman has an official extension to support blogging, articles and tagging. `middleman-blog` ships as an extension and must be installed to use. Simply specify the gem in your `Gemfile`:
 
-    gem "middleman-blog"
-    
+``` ruby
+gem "middleman-blog"
+```
+
 Or install it by hand if you're not using Bundler:
-    
-    gem install middleman-blog
+
+``` bash
+gem install middleman-blog
+```
 
 Then activate the extension in your `config.rb`:
 
-    activate :blog do |blog|
-      # set options on blog
-    end
-    
+``` ruby
+activate :blog do |blog|
+  # set options on blog
+end
+```
+
 Alternatively, you can generate a fresh project already setup for blogging:
 
-    middleman init MY_BLOG_PROJECT --template=blog
+``` bash
+middleman init MY_BLOG_PROJECT --template=blog
+```
 
 If you already have a Middleman project, you can re-run `middleman init` with the blog template option to generate the sample [`index.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/index.html.erb), [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb), [`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb), and [`feed.xml`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/feed.xml.builder), or you can write those yourself. You can see [what gets generated](https://github.com/middleman/middleman-blog/tree/master/lib/middleman-blog/template/source) on GitHub.
 
@@ -30,11 +38,13 @@ Like Middleman itself, the blog extension is focused on individual files. Each a
 
 Let's say I want to create a new post about Middleman. I would create a file at `source/2011-10-18-middleman.html.markdown`. The minimum contents of this file are a `title` entry in the frontmatter:
 
-    --- 
-    title: My Middleman Blog Post    
-    ---
+``` html
+--- 
+title: My Middleman Blog Post
+---
 
-    Hello World
+Hello World
+```
 
 If you want, you can specify a full date and time as a `date` entry in the front matter, to help with ordering multiple posts from the same day. You can also include a list of `tags` in the front matter to generate tag pages.
 
@@ -44,15 +54,19 @@ As a shortcut, you can run `middleman article TITLE` and Middleman will create a
 
 The base path for your blog defaults to `/` (the root of your website) but can be overridden in `config.rb`:
 
-    activate :blog do |blog|
-      blog.prefix = "blog"
-    end
+``` ruby
+activate :blog do |blog|
+  blog.prefix = "blog"
+end
+```
 
 The permalink for viewing your posts can be easily changed as well:
 
-    activate :blog do |blog|
-      blog.permalink = "blog/:year/:title.html"
-    end
+``` ruby
+activate :blog do |blog|
+  blog.permalink = "blog/:year/:title.html"
+end
+```
 
 Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally different from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/advanced/pretty-urls) feature if you want your blog posts to appear as directories instead of HTML files.
 
@@ -62,9 +76,11 @@ By default, articles can be truncated when viewed outside their permalink page. 
 
 This can be changed in `config.rb`:
 
-    activate :blog do |blog|
-      blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
-    end
+``` ruby
+activate :blog do |blog|
+  blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
+end
+```
 
 You can use the summary in templates from the [`summary`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#summary-instance_method) attribute of a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle).
 
@@ -74,21 +90,25 @@ What would blogging be without organizing articles around tags? Simply add a `ta
 
 The default template produces a [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb) template for you that produces a page for each tag at `tags/TAGNAME.html`. Adding a couple tags to the above example would look like this: 
 
-    --- 
-    title: My Middleman Blog Post
-    date: 2011/10/18
-    tags: blogging, middleman, hello, world
-    ---
+``` html
+--- 
+title: My Middleman Blog Post
+date: 2011/10/18
+tags: blogging, middleman, hello, world
+---
 
-    Hello World
+Hello World
+```
 
 Now you can find this article listed on `tags/blogging.html`.
 
 This path can be changed in `config.rb`:
 
-    activate :blog do |blog|
-      blog.taglink = "categories/:tag.html"
-    end
+``` ruby
+activate :blog do |blog|
+  blog.taglink = "categories/:tag.html"
+end
+```
 
 Now you can find this article listed on `categories/blogging.html`.
 
@@ -103,10 +123,12 @@ In templates, you can use the [`blog_year_path`](http://rubydoc.info/github/midd
 ## Layouts
 
 You can set a specific [layout](/templates/templates-layouts-partials) to be used for all articles in your `config.rb`:
-  
-    activate :blog do |blog|
-      blog.layout = "blog_layout"
-    end
+
+``` ruby
+activate :blog do |blog|
+  blog.layout = "blog_layout"
+end
+```
 
 If you want to wrap each article in a bit of structure before inserting it into a layout, you can use Middleman's [nested layouts](/templates/nested-layouts) feature to create an article layout that is then wrapped with your main layout.
 
@@ -118,54 +140,62 @@ Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/
 
 For example, the following shows the 5 most-recent articles and their summary:
 
-    <% blog.articles[0...5].each do |article| %>
-      <article>
-        <h1>
-          <a href="<%= article.url %>"><%= article.title %></a>
-          <time><%= article.date.strftime('%b %e %Y') %></time>
-        </h1>
-    
-        <%= article.summary %>
-    
-        <a href="<%= article.url %>">Read more</a></div>
-      </article>
-    <% end %>
+``` html
+<% blog.articles[0...5].each do |article| %>
+  <article>
+    <h1>
+      <a href="<%= article.url %>"><%= article.title %></a>
+      <time><%= article.date.strftime('%b %e %Y') %></time>
+    </h1>
+
+    <%= article.summary %>
+
+    <a href="<%= article.url %>">Read more</a></div>
+  </article>
+<% end %>
+```
 
 You can also get access to the tag data for a tag archive:
 
-    <ul>
-      <% blog.tags.each do |tag, articles| %>
-        <li>
-          <h5><%= tag %></h5>
-          <ul>
-            <% articles.each do |article| %>
-              <li><a href="<%= article.url %>"><%= article.title %></a></li>
-            <% end %>
-          </ul>
-      <% end %>
-    </ul>
-    
+``` html
+<ul>
+  <% blog.tags.each do |tag, articles| %>
+    <li>
+      <h5><%= tag %></h5>
+      <ul>
+        <% articles.each do |article| %>
+          <li><a href="<%= article.url %>"><%= article.title %></a></li>
+        <% end %>
+      </ul>
+  <% end %>
+</ul>
+```
+
 Or similarly for a calendar list:
-    
-    <ul>
-      <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-        <li>
-          <h5><%= year %></h5>
-          <ul>
-            <% articles.each do |article| %>
-              <li><a href="<%= article.url %>"><%= article.title %></a></li>
-            <% end %>
-          </ul>
-        </li>
-      <% end %>
-    </ul>
+
+``` html
+<ul>
+  <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+    <li>
+      <h5><%= year %></h5>
+      <ul>
+        <% articles.each do |article| %>
+          <li><a href="<%= article.url %>"><%= article.title %></a></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+```
 
 Or if you added a `published` flag to your front matter:
 
-    <h1>Published Articles</h1>
-    <% blog.articles.select {|a| a.page.data[:published] }.each do |article| %>
-      ...
-    <% end %>
+``` html
+<h1>Published Articles</h1>
+<% blog.articles.select {|a| a.page.data[:published] }.each do |article| %>
+  ...
+<% end %>
+```
 
 ## Helpers
 

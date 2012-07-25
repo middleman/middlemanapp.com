@@ -12,40 +12,46 @@ Middleman allows you to author Sass and SCSS files by appending the file extensi
 
 A Sass file in `source/stylesheets/login.css.sass` using the whitespace-aware Sass syntax:
 
-    body
-      background: white
-      color: black
-      
-    #login
-      text-align: center
-      font-size: 20px
-      button
-        float: right
+``` sass
+body
+  background: white
+  color: black
+  
+#login
+  text-align: center
+  font-size: 20px
+  button
+    float: right
+```
 
 The same styles could also be expressed in the CSS-superset SCSS format in a file at `source/stylesheets/login.css.scss`:
 
-    body {
-      background: white;
-      color: black; }
+``` scss
+body {
+  background: white;
+  color: black; }
 
-    #login {
-      text-align: center;
-      font-size: 20px;
-      button {
-        float: right; }
-    }
+#login {
+  text-align: center;
+  font-size: 20px;
+  button {
+    float: right; }
+}
+```
 
 Both of these files will compile to the following `build/stylesheets/login.css` file:
 
-    body {
-      background: white;
-      color: black; }
+``` css
+body {
+  background: white;
+  color: black; }
 
-    #login {
-      text-align: center;
-      font-size: 20px; }
-      #login button {
-        float: right; }
+#login {
+  text-align: center;
+  font-size: 20px; }
+  #login button {
+    float: right; }
+```
 
 ## Compass
 
@@ -55,51 +61,59 @@ When using Middleman, Compass is automatically available in all Sass and SCSS fi
 
 CSS3 and Floats:
 
-    @import "compass"
-    
-    #main
-      +float-left
-      border: 1px solid black
-      +border-radius(5px)
-    #sidebar
-      +float-right
-      +box-shadow(black 0 1px 2px)
+``` sass
+@import "compass"
+
+#main
+  +float-left
+  border: 1px solid black
+  +border-radius(5px)
+#sidebar
+  +float-right
+  +box-shadow(black 0 1px 2px)
+```
 
 The same code in SCSS:
 
-    @import "compass";
-    
-    #main {
-      @include float-left;
-      border: 1px solid black;
-      @include border-radius(5px); }
-    #sidebar {
-      @include float-right;
-      @include box-shadow(black 0 1px 2px); }
+``` scss
+@import "compass";
+
+#main {
+  @include float-left;
+  border: 1px solid black;
+  @include border-radius(5px); }
+#sidebar {
+  @include float-right;
+  @include box-shadow(black 0 1px 2px); }
+```
 
 Grids (using [Susy 1.0.x](http://susy.oddbird.net/)):
 
-    @import "susy"
+``` sass
+@import "susy"
 
-    $total-columns  : 12;             // a 12-column grid
-    $column-width   : 4em;            // each column is 4em wide
-    $gutter-width   : 1em;            // 1em gutters between columns
-    $grid-padding   : $gutter-width;  // grid-padding equal to gutters
-    
-    #page
-      +container
-      #header, #footer
-        clear: both
-      #content
-        +span-columns(8, 12)
-      #sidebar
-        +span-columns(4 omega, 12)
+$total-columns  : 12;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+#page
+  +container
+  #header, #footer
+    clear: both
+  #content
+    +span-columns(8, 12)
+  #sidebar
+    +span-columns(4 omega, 12)
+```
 
 [Sprite] generation:
 
-    @import "compass"
-    @import "icon/*.png"
-    +all-icon-sprites
+``` sass
+@import "compass"
+@import "icon/*.png"
++all-icon-sprites
+```
 
 [Sass Lang website]: http://sass-lang.com/
 [official Compass website]: http://compass-style.org/

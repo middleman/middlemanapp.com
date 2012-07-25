@@ -4,7 +4,7 @@ set :layout, :article
 
 activate :directory_indexes
 
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
 set :markdown_engine, :redcarpet
 
 # Build-specific configuration

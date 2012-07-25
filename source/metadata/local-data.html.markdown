@@ -8,27 +8,33 @@ Sometimes it is useful to extract the data content of a page from the rendering.
 
 Here's an example file at `data/people.yml` with the contents:
 
-    friends:
-      - Tom
-      - Dick
-      - Harry
+``` yaml
+friends:
+  - Tom
+  - Dick
+  - Harry
+```
 
 Now, anywhere in our template files, we will have access to this data:
 
-    <h1>Friends</h1>
-    <ol>
-      <% data.people.friends.each do |f| %>
-      <li><%= f %></li>
-      <% end %>
-    </ol>
+``` html
+<h1>Friends</h1>
+<ol>
+  <% data.people.friends.each do |f| %>
+  <li><%= f %></li>
+  <% end %>
+</ol>
+```
 
 Which will render:
 
-    <h1>Friends</h1>
-    <ol>
-      <li>Tom</li>
-      <li>Dick</li>
-      <li>Harry</li>
-    </ol>
+``` html
+<h1>Friends</h1>
+<ol>
+  <li>Tom</li>
+  <li>Dick</li>
+  <li>Harry</li>
+</ol>
+```
 
 Notice that the name of the `.yml` file (people) is the name of the object which stores the data in your template: `data.people`.

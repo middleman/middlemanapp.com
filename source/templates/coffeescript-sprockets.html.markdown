@@ -12,25 +12,29 @@ Sprockets is a tool for managing libraries of Javascript (and CoffeeScript) code
 
 Say I have a file called `jquery.js` which contains the jQuery library and another file called `app.js.coffee` which contains my application code written in CoffeeScript. My app file can include jquery before it runs like so:
 
-    #= require "jquery"
-    
-    $(document).ready ->
-      $(".item").pluginCode
-        param1: true
-        param2: "maybe"
+``` coffeescript
+#= require "jquery"
+
+$(document).ready ->
+  $(".item").pluginCode
+    param1: true
+    param2: "maybe"
+```
 
 The output of this file will be the jQuery library at the code and then the app code, compiled into Javascript, beneath.
 
 You could also write your app file in regular Javascript with a file named `app.js` which looks like this:
 
-    //= require "jquery"
+``` javascript
+//= require "jquery"
 
-    $(document).ready(function() {
-      $(".item").pluginCode({
-        param1: true,
-        param2: "maybe"
-      });
-    });
+$(document).ready(function() {
+  $(".item").pluginCode({
+    param1: true,
+    param2: "maybe"
+  });
+});
+```
 
 The output would be identical.
 

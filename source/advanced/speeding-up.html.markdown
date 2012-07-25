@@ -14,18 +14,22 @@ The latest version of Ruby, version 1.9.3, is much faster than its predecessor. 
 
 Use `therubyracer` which uses the Google Chrome engine to compile Javascript. Using a faster JSON parser can also speed up Javascript minification. In your Gemfile:
 
-    gem 'therubyracer' # faster ExecJS
-    gem 'oj'           # faster JSON
-    # gem 'yajl-ruby'  # if 'oj' doesn't work for you
-    
+``` ruby
+gem 'therubyracer' # faster ExecJS
+gem 'oj'           # faster JSON
+# gem 'yajl-ruby'  # if 'oj' doesn't work for you
+```
+
 Don't forget to run `bundle install`!
 
 ## Markdown
 
 Middleman includes `maruku` for rendering Markdown by default, but you can use the `redcarpet` gem for a speed boost (and some nice features):
 
-    # in Gemfile
-    gem 'redcarpet' # faster ExecJS
-    
-    # in config.rb
-    set :markdown_engine, :redcarpet
+``` ruby
+# in Gemfile
+gem 'redcarpet' # faster ExecJS
+
+# in config.rb
+set :markdown_engine, :redcarpet
+```

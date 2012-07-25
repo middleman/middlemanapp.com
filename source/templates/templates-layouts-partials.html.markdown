@@ -14,16 +14,20 @@ All template files in Middleman include the extension of that templating languag
 
 To begin, this file would just contain normal HTML: 
 
-    <h1>Welcome</h1>
+``` html
+<h1>Welcome</h1>
+```
 
 If we wanted to get fancy, we could add a loop:
 
-    <h1>Welcome</h1>
-    <ul>
-      <% 5.times do |num| %>
-        <li>Count <%= num %>
-      <% end %>
-    </ul>
+``` html
+<h1>Welcome</h1>
+<ul>
+  <% 5.times do |num| %>
+    <li>Count <%= num %>
+  <% end %>
+</ul>
+```
 
 ### Other Templating Languages
 
@@ -61,10 +65,12 @@ Stylus                  | .styl                  | ruby-stylus
 
 [Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [Maruku](http://maruku.rubyforge.org/), though [RedCarpet is suggested](/advanced/speeding-up) for speed and extra features. You can customize you Markdown options in `config.rb`:
 
-    set :markdown_engine, :redcarpet
-    set :markdown, :fenced_code_blocks => true, 
-                   :autolink => true, 
-                   :smartypants => true
+``` ruby
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true,
+               :autolink => true, 
+               :smartypants => true
+```
 
 See the [Maruku](http://maruku.rubyforge.org/) or [RedCarpet](https://github.com/tanoku/redcarpet) docs for more customization options. 
 
@@ -76,29 +82,35 @@ The most basic layout has some shared content and a `yield` call where templates
 
 Here is an example layout using ERb:
 
-    <html>
-    <head>
-      <title>My Site</title>
-    </head>
-    <body>
-      <%= yield %>
-    </body>
-    </html> 
+``` html
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html> 
+```
 
 Given a page template in ERb:
 
-    <h1>Hello World</h1>
+``` html
+<h1>Hello World</h1>
+```
 
 The combined final output in HTML will be:
 
-    <html>
-    <head>
-      <title>My Site</title>
-    </head>
-    <body>
-      <h1>Hello World</h1>
-    </body>
-    </html> 
+``` html
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body>
+  <h1>Hello World</h1>
+</body>
+</html>
+```
 
 Regarding file extensions and parsers, layouts have a different function from templates in the building process, so care should be taken in giving them the right extension. Here is why:
 
@@ -116,6 +128,7 @@ The default layout file lives in the `source` folder and is called "layout" and 
 
 To create a new layout for admin, add another file to your `source` folder called "admin.erb". Let's assume the contents are:
 
+``` html
     <html>
     <head>
       <title>Admin Area</title>
@@ -124,45 +137,55 @@ To create a new layout for admin, add another file to your `source` folder calle
       <%= yield %>
     </body>
     </html>
+```
 
 Now, you need to specify which pages use this alternative layout. You can do this in two ways. If you want to apply this layout to a large group of pages, you can use the "page" command in your `config.rb`. Let's assume you have a folder called "admin" in your `source` folder and all the templates in admin should use the admin layout. The `config.rb` would look like:
 
-    page "/admin/*", :layout => "admin"
+``` ruby
+page "/admin/*", :layout => "admin"
+```
 
 This uses a wildcard in the page path to specify that any page under the admin folder should use the admin layout. 
 
 You can also reference pages directly. For example, let's say we have a `login.html.erb` template which lives in the source folder, but should also have the admin layout. Let's use this example page template:
 
-    <h1>Login</h1>
-    <form>
-      <input type="text" placeholder="Email">
-      <input type="password">
-      <input type="submit">
-    </form>
+``` html
+<h1>Login</h1>
+<form>
+  <input type="text" placeholder="Email">
+  <input type="password">
+  <input type="submit">
+</form>
+```
 
 Now you can specify that this specific page has a custom template like this:
 
-    page "/login.html", :layout => "admin"
+``` ruby
+page "/login.html", :layout => "admin"
+```
 
 Which would make the login page use the admin layout. As an alternative to specifying everything in the `config.rb`, you can set the layout on individual pages in their template file using [Individual Page Configuration]. Here is an example `login.html.erb` page which specifies its own layout.
 
-    ---
-    layout: admin
-    ---
-    
-    <h1>Login</h1>
-    <form>
-      <input type="text" placeholder="Email">
-      <input type="password">
-      <input type="submit">
-    </form>
+``` html
+---
+layout: admin
+---
 
+<h1>Login</h1>
+<form>
+  <input type="text" placeholder="Email">
+  <input type="password">
+  <input type="submit">
+</form>
+```
 
 ### Disabling Layouts Entirely
 
 In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your `config.rb`:
 
-    disable :layout
+``` ruby
+disable :layout
+```
 
 ## Partials
 
@@ -170,33 +193,39 @@ Partials are a way of sharing content across pages to avoid duplication. Partial
 
 Partial files are prefixed with an underscore and include the templating language extension you are using. Here is an example footer partial named `_footer.erb` that lives in the `source` folder:
 
-    <footer>
-      Copyright 2011
-    </footer>
+``` html
+<footer>
+  Copyright 2011
+</footer>
+```
 
 Now, we can include this partial in the default layout using the "partial" method:
 
-    <html>
-    <head>
-      <title>My Site</title>
-    </head>
-    <body>
-      <%= yield %>
-      <%= partial "footer" %>
-    </body>
-    </html>
-    
+``` html
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body>
+  <%= yield %>
+  <%= partial "footer" %>
+</body>
+</html>
+```
+
 And in the admin layout:
 
-    <html>
-    <head>
-      <title>Admin Area</title>
-    </head>
-    <body>
-      <%= yield %>
-      <%= partial "footer" %>
-    </body>
-    </html>
+``` html
+<html>
+<head>
+  <title>Admin Area</title>
+</head>
+<body>
+  <%= yield %>
+  <%= partial "footer" %>
+</body>
+</html>
+```
 
 Now, any changes to `_footer.erb` will appear at the bottom of both layouts and any pages which use those layouts.
 
@@ -204,15 +233,19 @@ If you find yourself copying and pasting content into multiple pages or layouts,
 
 After you start using partials, you may find you want to call it in different ways by passing variables. You can do this by:
 
-    <%= partial(:paypal_donate_button, :locals => {:amount => 1, :amount_text => "Pay $1"}) %>
-    <%= partial(:paypal_donate_button, :locals => {:amount => 2, :amount_text => "Pay $2}) %>
+``` html
+<%= partial(:paypal_donate_button, :locals => {:amount => 1, :amount_text => "Pay $1"}) %>
+<%= partial(:paypal_donate_button, :locals => {:amount => 2, :amount_text => "Pay $2}) %>
+```
 
 Then, within the partial, you can set the text appropriately as follows:
 
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-      <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
-      <input type="submit" value=<%= amount_text %> >
-    </form>
+``` html
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
+  <input type="submit" value=<%= amount_text %> >
+</form>
+```
 
 Read the [Padrino partial helper] documentation for more information.
 
