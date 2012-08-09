@@ -12,7 +12,7 @@ Middleman assumes familiarity with the command-line. The Ruby language and the S
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
-Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires Xcode. code can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately, if you have a free Apple Developer account, you can just install Command Line Tools for Xcode from their [downloads page](https://developer.apple.com/downloads/index.action).
+Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires Xcode. Xcode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately, if you have a free Apple Developer account, you can just install Command Line Tools for Xcode from their [downloads page](https://developer.apple.com/downloads/index.action).
 
 Once you have Ruby and RubyGems up and running, execute the following from the command line:
 
@@ -71,6 +71,25 @@ If you run middleman init with the help flag, you will see a list of all the pos
 This will list my custom mobile framework and I can create new projects based on it as before:
 
     middleman init my_new_mobile_project --template=mobile
+    
+### Included Project Templates
+
+Middleman ships with a number of basic project templates:
+
+**[HTML5 Boilerplate](http://html5boilerplate.com/)** 
+
+    middleman init my_new_mobile_project --template=html5
+
+**[HTML5 Boilerplate: HAML & SCSS](https://github.com/dannyprose/Middleman-HTML5BP-HAML)**
+
+    middleman init my_new_mobile_project --template=html5-haml
+    
+**[SMACSS](https://github.com/nsteiner/middleman-smacss)**
+
+    middleman init my_new_mobile_project --template=smacss
+
+
+### Community Project Templates
 
 There are also a number of [community-developed project templates](/community/3rd-party-project-templates/).
 
