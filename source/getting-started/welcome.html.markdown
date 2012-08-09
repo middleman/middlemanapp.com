@@ -83,6 +83,30 @@ This will list my custom mobile framework and I can create new projects based on
 ``` bash
 middleman init my_new_mobile_project --template=mobile
 ```
+    
+### Included Project Templates
+
+Middleman ships with a number of basic project templates:
+
+**[HTML5 Boilerplate](http://html5boilerplate.com/)** 
+
+``` bash
+middleman init my_new_mobile_project --template=html5
+```
+
+**[HTML5 Boilerplate: HAML & SCSS](https://github.com/dannyprose/Middleman-HTML5BP-HAML)**
+
+``` bash
+middleman init my_new_mobile_project --template=html5-haml
+```
+
+**[SMACSS](https://github.com/nsteiner/middleman-smacss)**
+
+``` bash
+middleman init my_new_mobile_project --template=smacss
+```
+
+### Community Project Templates
 
 There are also a number of [community-developed project templates](/community/3rd-party-project-templates/).
 
