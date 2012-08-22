@@ -41,7 +41,7 @@ module MyFeature
   class Options < Struct.new(:foo, :bar); end
   
   class << self
-    def registered(app, options={}, &block)
+    def registered(app, options_hash={}, &block)
     options = Options.new(options_hash)
     yield options if block_given?
   end
