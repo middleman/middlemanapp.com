@@ -60,6 +60,8 @@ activate :blog do |blog|
 end
 ```
 
+All other settings (`permalink`, `tag_path`, etc.) are added on to `prefix`, so you don't need to repeat it in every setting.
+
 The permalink for viewing your posts can be easily changed as well:
 
 ``` ruby
