@@ -72,6 +72,31 @@ end
 
 Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally different from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/advanced/pretty-urls) feature if you want your blog posts to appear as directories instead of HTML files.
 
+### Draft Articles
+
+Articles can be marked as draft in the frontmatter:
+
+``` html
+---
+title: Work In Progress
+published: false
+---
+
+Unfinished Draft
+```
+
+Unpublished articles will only appear in development mode.
+
+An articles with a date that is in the future is also considered unpublished; if you use a `cron` job to regenerate your site on a regular basis, this can be used to automatically publish articles at a specified time.
+
+### Timezone
+
+To get accurate publication times in your RSS feed, and for automatically publishing articles on a precise schedule, set your blog's timezone in `config.rb`:
+
+``` ruby
+Time.zone = "Tokyo"
+```
+
 ## Summary
 
 By default, articles can be truncated when viewed outside their permalink page. The blogging extension looks for `READMORE` in your article text and only shows content before this text on the homepage, but strips this metadata on the permalink page.
@@ -121,6 +146,59 @@ Many blogging engines produce pages that list out all articles for a specific ye
 If you only want certain calendar pages (say, year but not day), or if you want different templates for each type of calendar page, you can set `blog.year_template`, `blog.month_template`, and `blog.day_template` individually. Setting `blog.calendar_template` is just a shortcut for setting them all to the same thing. 
 
 In templates, you can use the [`blog_year_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_year_path-instance_method), [`blog_month_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_month_path-instance_method), and [`blog_day_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_day_path-instance_method) helpers to generate links to your calendar pages. You can customize what those links look like with the `blog.year_link`, `blog.month_link`, and `blog.day_link` settings. By default, your calendar pages will look like `/2012.html`, `/2012/03.html`, and `/2012/03/15.html` for year, month, and day, respectively.
+
+## Pagination
+
+Long lists of articles can be split across multiple pages. A template will be split into pages if it has
+
+``` html
+---
+pageable: true
+---
+```
+
+in the frontmatter, and pagination is enabled for the site in `config.rb`:
+
+``` ruby
+activate :blog do |blog|
+  blog.paginate = true
+end
+```
+By default the second and subsequent pages will have links that look like `/2012/page/2.html`; this can be customized, along with the default number of articles per page, in `config.rb`. For example:
+
+``` ruby
+activate :blog do |blog|
+  blog.paginate = true
+  blog.page_link = "p:num"
+  blog.per_page = 20
+end
+```
+
+will result in up to 20 articles per page and links that look like `/2012/p2.html`. The `per_page` parameter can also be set for an individual template in the template's frontmatter.
+
+Pageable templates can then use the following variables:
+
+``` ruby
+paginate       # Set to true if pagination is enabled for this site.
+per_page       # The number of articles per page.
+
+page_articles  # The list of articles to display on this page.
+articles       # The complete list of articles for the template,
+
+page_number    # The number of this page.
+num_pages      # The total number of pages. Use with page_number for
+               # displaying "Page X of Y"
+
+page_start     # The number of the first article on this page.
+page_end       # The number of the last article on this page.
+               # Use with articles.length to show "Articles X to Y of Z"
+
+next_page      # The page resources for the next and previous pages
+prev_page      # in the sequence, or nil if there is no adjacent page.
+               # including this and all other pages.
+```
+
+If `paginate` is false and `per_page` is set in the template frontmatter, the `page_articles` variable will be set to the first `per_page` items in `articles`. This simplifies the creation of templates that can be used with and without pagination enabled.
 
 ## Layouts
 
@@ -190,14 +268,34 @@ Or similarly for a calendar list:
 </ul>
 ```
 
-Or if you added a `published` flag to your front matter:
+Or if you added a `public` flag to your front matter:
 
 ``` html
-<h1>Published Articles</h1>
-<% blog.articles.select {|a| a.page.data[:published] }.each do |article| %>
+<h1>Public Articles</h1>
+<% blog.articles.select {|a| a.page.data[:public] }.each do |article| %>
   ...
 <% end %>
 ```
+
+## Article Subdirectory
+
+A subdirectory named according to a blog article without the extensions can be filled with files that will be copied to the right place in the build output. For example, the following directory structure:
+
+```
+source/2011-10-18-middleman.html.markdown
+source/2011-10-18-middleman/photo.jpg
+source/2011-10-18-middleman/source_code.rb
+```
+
+might be output (if [`directory_indexes`](/advanced/pretty-urls) is turned on) as:
+
+```
+build/2011/10/18/middleman/index.html
+build/2011/10/18/middleman/photo.jpg
+build/2011/10/18/middleman/source_code.rb
+```
+
+This allows files (e.g. images) that belong to a single blog article to be kept with that article in the source and in the output. Depending on your blog structure, this may make it possible to use relative links in your article, although you need to be careful if your article content is used elsewhere in your site, e.g. calendar and tag pages.
 
 ## Helpers
 
