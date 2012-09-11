@@ -234,8 +234,8 @@ If you find yourself copying and pasting content into multiple pages or layouts,
 After you start using partials, you may find you want to call it in different ways by passing variables. You can do this by:
 
 ``` html
-<%= partial(:paypal_donate_button, :locals => {:amount => 1, :amount_text => "Pay $1"}) %>
-<%= partial(:paypal_donate_button, :locals => {:amount => 2, :amount_text => "Pay $2}) %>
+<%= partial(:paypal_donate_button, :locals => { :amount => 1, :amount_text => "Pay $1" }) %>
+<%= partial(:paypal_donate_button, :locals => { :amount => 2, :amount_text => "Pay $2" }) %>
 ```
 
 Then, within the partial, you can set the text appropriately as follows:
