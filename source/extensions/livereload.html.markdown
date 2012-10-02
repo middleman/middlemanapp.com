@@ -5,12 +5,24 @@ hidden: true
 
 # LiveReload
 
-Middleman provides an official extension to support for the LiveReload browser extension. Simply install the gem:
+Middleman provides an official extension for livereloading functionality. Simply install the gem:
 
 ``` bash
 gem install middleman-livereload
 ```
 
-If you have installed [the LiveReload extension] in your browser, you can have Middleman automatically tell the browser to refresh upon changes to your source code. Now, browsers using the LiveReload extension can connect to Middleman and automatically refresh after you update your code.
+Add `middleman-livereload` to your Gemfile and open your `config.rb` and add
 
-[the LiveReload extension]: https://github.com/mockko/livereload#readme
+``` ruby
+activate :livereload
+```
+
+Simply start middleman webserver again.
+
+``` bash
+middleman server
+```
+
+Your browser will reload changed pages automatically.
+
+NOTE: [middleman 3.0.4 breaks middleman-livereload](https://github.com/middleman/middleman-livereload/issues/10)
