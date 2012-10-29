@@ -124,9 +124,9 @@ Unlike templates, layouts should not be rendered to html. Giving a layout file t
 
 By default, Middleman will use the same layout file for every page in your site. However, you may want to use multiple layouts and specify which pages use these other layouts. For example, you may have a "public" site and an "admin" site which would each have their own layout files.
 
-The default layout file lives in the `source` folder and is called "layout" and has the extension of the templating language you are using. The default is `layout.erb`.
+The default layout file lives in the `source` folder and is called "layout" and has the extension of the templating language you are using. The default is `layout.erb`. Any alternate layouts you create should live in `source/layouts`
 
-To create a new layout for admin, add another file to your `source` folder called "admin.erb". Let's assume the contents are:
+To create a new layout for admin, add another file to your `source/layouts` folder called "admin.erb". Let's assume the contents are:
 
 ``` html
     <html>
@@ -158,7 +158,7 @@ You can also reference pages directly. For example, let's say we have a `login.h
 </form>
 ```
 
-Now you can specify that this specific page has a custom template like this:
+Now you can specify that this specific page has a custom layout like this:
 
 ``` ruby
 page "/login.html", :layout => "admin"

@@ -23,15 +23,13 @@ You can use the sitemap information to create new [dynamic pages] from `config.r
 ``` ruby
 ready do
   sitemap.pages.group_by {|p| p.data["category"] }.each do |category, pages|
-    page "/categories/#{category}.html", :proxy => "category.html" do
-      @category = category
-      @pages = pages
-    end
+    proxy "/categories/#{category}.html", "category.html", 
+      :locals => { :category => category, :pages => pages }
   end
 end
 ```
 
-Then I could make a `category.html.erb` that uses the `@category` and `@pages` variables to build a category listing for each category.
+Then I could make a `category.html.erb` that uses the `category` and `pages` variables to build a category listing for each category.
 
 [dynamic pages]: /advanced/dynamic-pages 
 [frontmatter]: /metadata/yaml-frontmatter
