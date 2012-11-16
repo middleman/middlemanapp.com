@@ -8,8 +8,6 @@ Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He s
 over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient 
 markup.
 
-[![Click here to lend your support to  Middleman](https://www.pledgie.com/campaigns/15807.png)](http://www.pledgie.com/campaigns/15807)
-
 ## How to run the site locally
 
 Clone this repo and using Ruby 1.9.2 run `bundle install`.
@@ -25,6 +23,10 @@ Please help Middleman flesh out its documentation. We'll merge in any reasonable
 extensions to our website docs, and give credit for your help!
 
 The guides are written in [Markdown](http://daringfireball.net/projects/markdown/).
+
+## Donate
+
+Please, [help support the Middleman team with a donation](https://spb.io/s/4dXbHBorC3).
 
 ## Copyright
 
