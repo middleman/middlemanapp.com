@@ -20,6 +20,7 @@ body {
   @include container;
   @include pie-clearfix;
   position: relative; 
+  overflow: visible;
 }
 
 
@@ -28,7 +29,6 @@ body {
   font-weight: normal;
   line-height: 1.2;
   word-spacing: 0.3em;
-
 }
 
 #footer {

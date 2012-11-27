@@ -11,9 +11,8 @@
   }
 
   p {
-
-  @include column(17, true);
-  @include prepend(7);
+    @include column(17, true);
+    @include prepend(7);
 
     font-family: 'Arvo', serif;
     margin: 15px 0;
@@ -21,7 +20,6 @@
   }
   .container {
     overflow: visible;
-
   }
 
 }
