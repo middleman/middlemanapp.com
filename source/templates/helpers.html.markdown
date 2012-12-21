@@ -17,7 +17,7 @@ Padrino provides a `link_to` function that you can use to make link tags. At its
 `link_to` can also take a block, allowing you to provide more complex content for the link:
 
 ``` html
-<%= link_to 'http://mysite.com' do %>
+<% link_to 'http://mysite.com' do %>
   <%= image_tag 'mylogo.png' %>
 <% end %>
 ```
