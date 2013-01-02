@@ -3,14 +3,15 @@
     <div class="container">
       <h1><%= link_to image_tag("mm-blue-w-text.svg", :width => 225, :height => 225, :alt => "Middleman"), "/", { :class => 'logo' } %></h1>
       <p class="console">$ gem install middleman</p>
+      <a class="toc-nav-link icon-arrow-down" href="#toc">Menu</a>
     </div>
   </header>
 
   <div class="container">
-    <nav id="tos">
+    <nav id="toc">
       <%= partial 'layouts/nav' %>
     </nav>
-    
+
     <article id="main" role="main">
       <%= yield %>
     </article>

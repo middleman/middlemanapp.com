@@ -1,0 +1,171 @@
+/*
+**  Table of Contents
+**  1.  Base
+**  2.  Index
+**  3.  Articles
+*/
+
+
+/*      Base
+----------------------------------------------------- */
+
+@media screen and ( max-width: $two-column ){
+  #support {
+    width: 100%;
+    @include remove-omega;
+    .donate {
+      @include span-columns(8);
+    }
+    .one {
+      @include span-columns(16);
+      @include omega;
+    }
+  }
+}
+
+@media screen and ( max-width: $one-column ) {
+  #support {
+    .donate,
+    .one {
+      @include reset-columns;
+    }
+  }
+  #footer {
+    .link {
+      @include float-left;
+    }
+  }
+}
+
+/*      Index
+----------------------------------------------------- */
+
+@media screen and ( max-width: $two-column ) {
+  .grid {
+    @include span-columns(24);
+  }
+}
+
+@media screen and ( max-width: $one-column ) {
+  #hero {
+    background: $xlight-brown;
+  }
+  #install {
+    text-align: center;
+    margin: -15px 0 40px 0;
+    p{
+      display: block;
+      color: $xlight-brown;
+      @include border-radius(0);
+      background-color: $navy;
+      @include box-shadow( none );
+    }
+    b {
+      font-size: 24px;
+    }
+  }
+  .grid {
+    .toc-block {
+      @include span-columns(24);
+      @include remove-nth-omega(3n);
+    }
+  }
+
+}
+
+/*      Articles
+----------------------------------------------------- */
+
+@media screen and ( max-width: container-outer-width($total-columns) ) {
+  #header {
+    h1 {
+      left: gutter();
+    }
+  }
+}
+
+@media screen and ( max-width: $two-column ) {
+  #header {
+    p {
+      text-align: right;
+    }
+  }
+  #toc {
+    @include span-columns(6);
+  }
+  #main {
+    @include span-columns(16);
+  }
+}
+
+
+@media screen and ( max-width: $one-column ) {
+  #header {
+    h1 {
+      bottom: -22px;
+      width: 180px;
+      left: 0;
+      .logo {
+        width: 100%;
+        text-align: center;
+        background: $navy;
+        @include border-radius(0);
+        img {
+          width: 180px;
+          height: 180px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    p {
+      display: none;
+    }
+    .toc-nav-link {
+      @include span-columns(1, 2);
+      @include omega;
+      font-family: $display-monospace-font-family;
+      color: $navy;
+      font-weight: bold;
+      text-align: right;
+      padding: 14px 0 16px 0;
+      @include box-sizing( border-box );
+      text-decoration: none;
+      &:before{
+        margin-right: .5em;
+        font-size: 130%;
+        line-height: 1;
+        vertical-align: bottom;
+      }
+    }
+  }
+  #toc {
+    @include span-columns(24);
+    @include omega;
+    height: 0;
+    overflow: hidden;
+    &:target{
+      padding: 1em 0 5em 0;
+      height: auto;
+    }
+    a {
+      font-size: 120%;
+    }
+  }
+  #main {
+    @include span-columns(24);
+    @include squish(0,0);
+    @include remove-omega;
+    font-size: 120%;
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1.5em;
+    }
+    // p {
+    //   font-size: 120%;
+    // }
+  }
+}
