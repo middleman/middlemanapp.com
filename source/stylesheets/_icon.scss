@@ -1,4 +1,6 @@
-/*  Font Awesome
+/*  
+
+    Font Awesome
     the iconic font designed for use with Twitter Bootstrap
     -------------------------------------------------------
     The full suite of pictographic icons, examples, and documentation
@@ -20,20 +22,22 @@
     Twitter: http://twitter.com/fortaweso_me
     Work: Lead Product Designer @ http://kyruus.com
 
-    */
+*/
 
 @import "compass/css3/font-face";
 $fontAwesomePath: "/stylesheets/font/fontawesome-webfont" !default;
 
 @include font-face(
-    'FontAwesome',
-    font-files(
-        "#{$fontAwesomePath}.woff", woff,
-        "#{$fontAwesomePath}.ttf", truetype,
-        "#{$fontAwesomePath}.svg#FontAwesomeRegular", svg),
-    '#{$fontAwesomePath}.eot',
-    normal,
-    normal);
+  'FontAwesome',
+  font-files(
+    "#{$fontAwesomePath}.woff", woff,
+    "#{$fontAwesomePath}.ttf", truetype,
+    "#{$fontAwesomePath}.svg#FontAwesomeRegular", svg
+  ),
+  '#{$fontAwesomePath}.eot',
+  normal,
+  normal
+);
 
 /*  Font Awesome styles
     ------------------------------------------------------- */
@@ -84,7 +88,6 @@ ul.icons {
   list-style-type: none;
   margin-left: 2em;
   text-indent: -.8em;
-
   li {
     [class^="icon-"],
     [class*=" icon-"] {

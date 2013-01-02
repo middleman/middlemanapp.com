@@ -1,41 +1,54 @@
 @import "compass";
 @import "compass/reset";
-@import "blueprint";
+@import "susy";
 
+/*			Settings for Susy
+--------------------------------------------------- */
+
+$total-columns  : 24;
+$column-width   : 2.5em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+
+/*			Settings for Project
+--------------------------------------------------- */
+
+$base-font-size: 14px; // leave the px off
+$body-line-height: 1.5;
+$default-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+$display-font-family: 'Questrial', $default-font-family;
+$monospace-font-family: "andale mono", "lucida console", monospace;
+$display-monospace-font-family: 'Arvo', $monospace-font-family;
+
+$two-column: 1080px;
+$one-column: 660px;
+
+
+/*			Colors
+--------------------------------------------------- */
+
+$xlight-brown: #efe8d5;
+$light-brown: #e1d7be;
+$mid-brown: #957642;
+$dark-brown: #655740;
+
+$navy: #002b36;
+
+$copy-color: $dark-brown;
+$heading-color: $navy;
+$link-color: $navy;
+
+@import "mixins";
+@import "typography";
 @import "icon";
 @import "base";
-@import "layout";
 @import "nav";
+@import "support";
+@import "articles";
 @import "index";
 
 @import "solarized_light";
 
-$link-color: #002b36;
-$link-visited-color: $link-color;
-$link-hover-color:   $link-color;
-$link-focus-color:   $link-color;
-$link-active-color:  $link-color;
+@import "mediaqueries";
 
-$blueprint-font-size: 14px;
-$blueprint-grid-columns: 24;
-
-@include blueprint-typography;
-
-body .one .bsa_it_ad { background: transparent; border: none; font-family: inherit; padding: 0 15px 0 10px; margin: 0; text-align: right; }
-body .one .bsa_it_ad:hover img { -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; }
-body .one .bsa_it_ad .bsa_it_i { display: block; padding: 0; float: none; margin: 0 0 5px; }
-body .one .bsa_it_ad .bsa_it_i img { padding: 0; border: none; }
-body .one .bsa_it_ad .bsa_it_t { padding: 6px 0; }
-body .one .bsa_it_ad .bsa_it_d { padding: 0; font-size: 12px; color: #333; }
-body .one .bsa_it_p { display: none; }
-body #bsap_aplink, body #bsap_aplink:hover { display: block; font-size: 10px; margin: 12px 15px 0; text-align: right; }
-
-#support {
-  position: absolute;
-  background: #E1D6C1;
-  border: 1px solid darken(#E1D6C1, 5%);
-  @include border-radius(3px);
-  top: 0;
-  right: -210px;
-  width: 170px; 
-  padding: 10px; }

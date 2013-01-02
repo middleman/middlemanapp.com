@@ -1,19 +1,15 @@
 body {
   text-rendering: optimizeLegibility;
-  background: #efe8d5 inline-image("main.bg.png");
-  margin: 0; }
+  background: $xlight-brown inline-image("main.bg.png");
+  margin: 0; 
+}
 
 .logo {
-  //@include hide-text;
   @include border-radius(4px);
   overflow: hidden;
-
   display: block;
   width: 225px;
   height: 225px;
-  //background: image-url("mm-blue-w-text.svg") no-repeat;
-  //background-size: 255px 255px;
-  box-shadow: 0 0 5px 1px #F3E9D8;
 }
 
 .container {
@@ -25,30 +21,29 @@ body {
 
 
 .console {
-  font-family: 'Arvo', serif;
+  font-family: $display-monospace-font-family;
   font-weight: normal;
   line-height: 1.2;
   word-spacing: 0.3em;
 }
 
 #footer {
-  background-color: #E1D7BE;
-  padding: 20px 0 20px;
+  background-color: $light-brown;
+  padding: 20px 0;
   margin-top: 30px;
-  font-size: 13px;
-
   p {
-    color: #9A7546;
+    color: $mid-brown;
     margin: 0;
+    font-size: 13px;
   }
   a {
-    color: #9A7546;
+    color: $mid-brown;
     @include hover_link;
-
   }
-
   .copyright {
-    @include float-left; }
+    @include float-left; 
+  }
   .link {
-    @include float-right; }
+    @include float-right; 
+  }
 }
