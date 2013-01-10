@@ -19,7 +19,7 @@ end
 
 If you are already using a compressed file that includes `.min` in its filename, Middleman won't touch it. This can be good for libraries like jQuery which are carefully compressed by their authors ahead of time.
 
-You can customize how the JavaScript compressor works by setting the `:compressor` option when activating the `:minify_javascript` extension in `config.rb` to a custom instance of Uglifier. See (Uglifier's docs)[https://github.com/lautis/uglifier] for details. For example, you could enable unsafe optimizations and mangle top-level variable names like this:
+You can customize how the JavaScript compressor works by setting the `:compressor` option when activating the `:minify_javascript` extension in `config.rb` to a custom instance of Uglifier. See [Uglifier's docs](https://github.com/lautis/uglifier) for details. For example, you could enable unsafe optimizations and mangle top-level variable names like this:
 
 ``` ruby
 set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
