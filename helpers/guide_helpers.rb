@@ -1,3 +1,5 @@
+require "pathname"
+
 module GuideHelpers
   def page_title
     title = "Middleman: "
@@ -10,7 +12,8 @@ module GuideHelpers
   end
   
   def edit_guide_url
-    "https://github.com/middleman/middleman-guides/blob/master/source/#{current_page.path}.markdown"
+    p = Pathname(current_page.source_file).relative_path_from(Pathname(root))
+    "https://github.com/middleman/middleman-guides/blob/master/#{p}"
   end
   
   def pages_for_group(group_name)
@@ -24,7 +27,7 @@ module GuideHelpers
     
     if group.directory
       pages << sitemap.resources.select { |r|
-        r.path.include?(group.directory) && !r.data.hidden
+        r.path.match(%r{^#{group.directory}}) && !r.data.hidden
       }.map do |r|
         ::Middleman::Util.recursively_enhance({
           :title => r.data.title,

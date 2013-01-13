@@ -168,3 +168,18 @@ dl {
     margin-left: 1.5em;
   }
 }
+
+/*      Tables
+-------------------------------------------------------------- */
+table {
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+th, td {
+  padding: 2px 10px 2px 0;
+}

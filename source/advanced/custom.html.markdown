@@ -31,7 +31,7 @@ activate :my_feature
 
 The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
 
-In the `MyFeature` extension, the `registered` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Base) class. Using this class, you can augment the Middleman environment.
+In the `MyFeature` extension, the `registered` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Application) class. Using this class, you can augment the Middleman environment.
 
 `activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. 
 
@@ -204,7 +204,7 @@ The above sets the `:currently_requested_path` value at the beginning of each re
 
 ## Sitemap Extensions
 
-You can modify or add pages in the [sitemap](/metadata/sitemap) by creating a Sitemap extension. The [`:directory_indexes`](/advanced/pretty-urls) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/extensions/blog/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
+You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
 
 ``` ruby
 module MyFeature

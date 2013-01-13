@@ -1,11 +1,38 @@
-    <% data.nav.each do |g| %>
-      <div class="toc-block">
-        <h3><%= g.name %></h3>
-        <p><%= g.desc %></p>
-        <ul>
-          <% pages_for_group(g.name).each_with_index do |p, i| %>
-            <li><%= link_to p.title, p.path %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+<div class="toc-block">
+  <h3>Middleman Basics</h3>
+  <ul>
+      <li><a href="/getting-started/">Getting Started</a></li>
+      <li><a href="/templates/">Templates</a></li>
+      <li><a href="/helpers/">Template Helpers</a></li>
+      <li><a href="/frontmatter/">Frontmatter</a></li>
+      <li><a href="/dynamic-pages/">Dynamic Pages</a></li>
+      <li><a href="/asset-pipeline/">Asset Pipeline</a></li>
+      <li><a href="/pretty-urls/">Pretty URLs (Directory Indexes)</a></li>
+      <li><a href="/livereload/">LiveReload</a></li>
+      <li><a href="/blogging/">Blogging</a></li>
+  </ul>
+</div>
+
+<div class="toc-block">
+  <h3>Advanced Features</h3>
+  <ul>
+      <li><a href="/advanced/local-data/">Local Data</a></li>
+      <li><a href="/advanced/localization/">Localization (i18n)</a></li>
+      <li><a href="/advanced/sitemap/">The Sitemap</a></li>
+      <li><a href="/advanced/rack-middleware/">Rack Middleware</a></li>
+      <li><a href="/advanced/custom/">Custom Extensions</a></li>
+      <li><a href="/advanced/file-size-optimization/">File Size Optimization</a></li>
+      <li><a href="/advanced/improving-cacheability/">Improving Cacheability</a></li>
+  </ul>
+</div>
+
+<div class="toc-block">
+  <h3>Community</h3>
+  <ul>
+      <li><a href="/community/3rd-party-extensions/">Community Extensions</a></li>
+      <li><a href="/community/3rd-party-project-templates/">Community Project Templates</a></li>
+      <li><a href="/community/built-using-middleman/">Sites Built Using Middleman</a></li>
+      <li><a href="http://forum.middlemanapp.com/">Community Forum</a></li>
+      <li><a href="https://github.com/middleman/middleman">GitHub Repository</a></li>
+  </ul>
+</div>

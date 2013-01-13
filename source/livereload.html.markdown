@@ -1,6 +1,5 @@
 ---
 title: LiveReload
-hidden: true
 ---
 
 # LiveReload

@@ -29,7 +29,7 @@ end
 
 Now, only the `about/tom.html`, `about/dick.html` and `about/harry.html` files will be output.
 
-## Arbitrary Ignores
+## Ignoring Files
 
 It is also possible to ignore arbitrary paths when building a site using the new `ignore` method in your `config.rb`:
 

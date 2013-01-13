@@ -1,12 +1,12 @@
 ---
-title: Templates, Layouts &amp; Partials
+title: Templates
 ---
 
-# Templates, Layouts &amp; Partials
+# Templates
 
-Middleman provides many templating languages to simplify your HTML development. The languages range from simply allowing you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.
+Middleman provides many templating languages to simplify your HTML development. The languages range from simply allowing you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.  Middleman ships with support for the ERb, Haml, Sass, Scss and CoffeeScript engines. Many more engines can be enabled by including their Tilt-enabled gems. [See the list below](#toc_7).
 
-## Templates
+## Template Basics
 
 The default templating language is ERb. ERb looks exactly like HTML, except it allows you to add variables, call methods and use loops and if statements. The following sections of this guide will use ERb in their examples. 
 
@@ -28,51 +28,6 @@ If we wanted to get fancy, we could add a loop:
   <% end %>
 </ul>
 ```
-
-### Other Templating Languages
-
-Middleman ships with support for the ERb, Haml, Sass, Scss and CoffeeScript engines. The Tilt library to enable support for many different templating engines. Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work:
-
-ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
-------------------------|------------------------|----------------------------
-ERB                     | .erb, .rhtml           | included
-Interpolated String     | .str                   | included
-Haml                    | .haml                  | included
-Sass                    | .sass                  | included
-Scss                    | .scss                  | included
-Slim                    | .slim                  | slim
-Erubis                  | .erb, .rhtml, .erubis  | erubis
-Less CSS                | .less                  | less
-Builder                 | .builder               | builder
-Liquid                  | .liquid                | liquid
-RDiscount               | .markdown, .mkd, .md   | rdiscount
-Redcarpet               | .markdown, .mkd, .md   | redcarpet
-BlueCloth               | .markdown, .mkd, .md   | bluecloth
-Kramdown                | .markdown, .mkd, .md   | kramdown
-Maruku                  | .markdown, .mkd, .md   | maruku
-RedCloth                | .textile               | redcloth
-RDoc                    | .rdoc                  | rdoc
-Radius                  | .radius                | radius
-Markaby                 | .mab                   | markaby
-Nokogiri                | .nokogiri              | nokogiri
-CoffeeScript            | .coffee                | coffee-script
-Creole (Wiki markup)    | .wiki, .creole         | creole
-WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
-Yajl                    | .yajl                  | yajl-ruby
-Stylus                  | .styl                  | ruby-stylus
-
-## Markdown
-
-[Markdown](http://daringfireball.net/projects/markdown/) is a popular template language that is readable even as plain text. Middleman's default Markdown renderer is [Maruku](http://maruku.rubyforge.org/), though [RedCarpet is suggested](/advanced/speeding-up) for speed and extra features. You can customize you Markdown options in `config.rb`:
-
-``` ruby
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true,
-               :autolink => true, 
-               :smartypants => true
-```
-
-See the [Maruku](http://maruku.rubyforge.org/) or [RedCarpet](https://github.com/tanoku/redcarpet) docs for more customization options. 
 
 ## Layouts
 
@@ -164,7 +119,7 @@ Now you can specify that this specific page has a custom layout like this:
 page "/login.html", :layout => "admin"
 ```
 
-Which would make the login page use the admin layout. As an alternative to specifying everything in the `config.rb`, you can set the layout on individual pages in their template file using [Individual Page Configuration]. Here is an example `login.html.erb` page which specifies its own layout.
+Which would make the login page use the admin layout. As an alternative to specifying everything in the `config.rb`, you can set the layout on individual pages in their template file using [Frontmatter]. Here is an example `login.html.erb` page which specifies its own layout.
 
 ``` html
 ---
@@ -177,6 +132,52 @@ layout: admin
   <input type="password">
   <input type="submit">
 </form>
+```
+
+### Nested Layouts
+
+Nested layouts allow you to create a stack of layouts. The easiest to understand use-case is the `middleman-blog` extension. Blog Articles are a subset of the entire site's content. They should contain additional content and structure, but should still end up wrapped by the site-wide structure (header, footer, etc).
+
+Here's what a simple default layout might look like:
+
+``` html
+<html>
+  <body>
+    <header>Header</header>
+    <%= yield %>
+    <footer>Footer</footer>
+  </body>
+</html>
+```
+
+Let's say we have a blog article `blog/my-article.html.markdown`. I could then tell all the blog articles to use a `article_layout` layout instead of the default `layout`. In `config.rb`:
+
+``` ruby
+page "blog/*", :layout => :article_layout
+```
+
+That `layouts/article_layout.erb` layout would look like this
+
+``` html
+<% wrap_layout :layout do %>
+  <article>
+    <%= yield %>
+  </article>
+<% end %>
+```
+
+Like a normal layout, `yield` is where the resulting template content is placed. In this example, you've end up with the following output:
+
+``` html
+<html>
+  <body>
+    <header>Header</header>
+    <article>
+      <!-- Contents of my template/blog article -->
+    </article>
+    <footer>Footer</footer>
+  </body>
+</html>
 ```
 
 ### Disabling Layouts Entirely
@@ -249,9 +250,36 @@ Then, within the partial, you can set the text appropriately as follows:
 
 Read the [Padrino partial helper] documentation for more information.
 
+### Other Templating Languages
+
+Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work:
+
+ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
+------------------------|------------------------|----------------------------
+Slim                    | .slim                  | slim
+Erubis                  | .erb, .rhtml, .erubis  | erubis
+Less CSS                | .less                  | less
+Builder                 | .builder               | builder
+Liquid                  | .liquid                | liquid
+RDiscount               | .markdown, .mkd, .md   | rdiscount
+Redcarpet               | .markdown, .mkd, .md   | redcarpet
+BlueCloth               | .markdown, .mkd, .md   | bluecloth
+Kramdown                | .markdown, .mkd, .md   | kramdown
+Maruku                  | .markdown, .mkd, .md   | maruku
+RedCloth                | .textile               | redcloth
+RDoc                    | .rdoc                  | rdoc
+Radius                  | .radius                | radius
+Markaby                 | .mab                   | markaby
+Nokogiri                | .nokogiri              | nokogiri
+CoffeeScript            | .coffee                | coffee-script
+Creole (Wiki markup)    | .wiki, .creole         | creole
+WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
+Yajl                    | .yajl                  | yajl-ruby
+Stylus                  | .styl                  | ruby-stylus
+
 [Haml]: http://haml-lang.com/
 [Slim]: http://slim-lang.com/
 [Markdown]: http://daringfireball.net/projects/markdown/
 [these guides are written in Markdown]: https://raw.github.com/middleman/middleman-guides/master/source/guides/basics-of-templates.html.markdown
-[Individual Page Configuration]: /guides/individual-page-configuration
+[Frontmatter]: /frontmatter/
 [Padrino partial helper]: http://www.padrinorb.com/api/classes/Padrino/Helpers/RenderHelpers.html
