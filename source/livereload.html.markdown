@@ -22,6 +22,4 @@ Then simply restart the middleman webserver.
 middleman server
 ```
 
-Your browser will reload changed pages automatically.
-
-NOTE: [middleman 3.0.4 breaks middleman-livereload](https://github.com/middleman/middleman-livereload/issues/10)
+Your browser will now reload changed pages automatically.
