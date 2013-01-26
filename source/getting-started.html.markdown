@@ -64,7 +64,7 @@ middleman init my_new_project --rack
 
 ### Project Templates
 
-In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the `-t` or `--template` command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
+In addition to the default basic skeleton, Middleman comes with an optional project template based on the [HTML5 Boilerplate] project. Alternative templates can be accessed using the `-T` or `--template` command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
 ``` bash
 middleman init my_new_boilerplate_project --template=html5
@@ -147,7 +147,7 @@ Under some circumstances(one known case is under Windows, see [here](https://git
 middleman server -p 4567 -e development
 ```
 
-Under some circumstances(say if your config file has gone wild), middleman server might not be able to boot itself, and no error output can be seen on the console, don't panic, just try `middleman build` to see the full trace of the problem and fix it.
+Under some circumstances(say if your config file has gone wild), `middleman server` might not be able to boot itself, and no error output can be seen on the console, don't panic, just try `middleman build` to see the full trace of the problem and fix it.
 
 ## Exporting the Static Site (middleman build)
 
