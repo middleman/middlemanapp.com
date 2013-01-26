@@ -10,18 +10,16 @@ Middleman provides an official extension for livereloading functionality. Simply
 gem install middleman-livereload
 ```
 
-Add `middleman-livereload` to your Gemfile and open your `config.rb` and add
+Add `middleman-livereload` to your Gemfile, open your `config.rb` and add
 
 ``` ruby
 activate :livereload
 ```
 
-Simply start middleman webserver again.
+Then simply restart the middleman webserver.
 
 ``` bash
 middleman server
 ```
 
-Your browser will reload changed pages automatically.
-
-NOTE: [middleman 3.0.4 breaks middleman-livereload](https://github.com/middleman/middleman-livereload/issues/10)
+Your browser will now reload changed pages automatically.
