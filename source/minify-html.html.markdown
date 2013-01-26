@@ -4,7 +4,7 @@ title: Minify HTML
 
 # Minify HTML
 
-Middleman provides an official extension for minifying it's html output. Simply install the gem:
+Middleman provides an official extension for minifying its html output. Simply install the gem:
 
 ``` bash
 gem install middleman-minify-html
