@@ -10,13 +10,13 @@ Middleman provides an official extension for livereloading functionality. Simply
 gem install middleman-livereload
 ```
 
-Add `middleman-livereload` to your Gemfile and open your `config.rb` and add
+Add `middleman-livereload` to your Gemfile, open your `config.rb` and add
 
 ``` ruby
 activate :livereload
 ```
 
-Simply start middleman webserver again.
+Then simply restart the middleman webserver.
 
 ``` bash
 middleman server
