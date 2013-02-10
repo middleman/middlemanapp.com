@@ -14,10 +14,15 @@
     width: 100%;
     @include remove-omega;
     .donate {
-      @include span-columns(8);
+      @include span-columns(6);
+    }
+    .sponsor {
+      h4 { display: none; }
+      @include span-columns(9);
+      img { float: left; margin-right: 10px; }
     }
     .one {
-      @include span-columns(16);
+      @include span-columns(9);
       @include omega;
     }
   }

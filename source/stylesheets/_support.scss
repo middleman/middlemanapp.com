@@ -7,9 +7,27 @@
   @include omega;
   margin-top: 2em;
 
+  h4 {
+	  margin-bottom: 0.5em;
+  }
   .donate{
+  	padding: 1em 1em 0 1em;
+  	@include box-sizing( border-box );
+  	p { margin: 0; }
+  }
+
+  .sponsor{
   	padding: 1em;
   	@include box-sizing( border-box );
+  	img {
+  		margin-bottom: 5px;
+  	}
+  	a {
+	  	display: block;
+	  	font-weight: bold;
+	  	text-decoration: none;
+	  	line-height: 1.2;
+  	}
   }
 
 	.one {
