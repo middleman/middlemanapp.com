@@ -10,7 +10,7 @@ Middleman has full access to Rack Middleware which opens up an expansive univers
 
 ## Example: Syntax Highlighting
 
-This site is written in Middleman and features many code blocks which have syntax highlighting. This syntax highlighting is accomplished outside the scope of Middleman. This site renders `<code>` blocks and then Rack Middleware takes over an enhances those blocks with syntax highlight. The middleware in use is called [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter). Here's how it can be used in your `config.rb`:
+This site is written in Middleman and features many code blocks which have syntax highlighting. This syntax highlighting is accomplished outside the scope of Middleman. This site renders `<code>` blocks and then Rack Middleware takes over and enhances those blocks with syntax highlight. The middleware in use is called [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter). Here's how it can be used in your `config.rb`:
 
 ``` ruby
 require 'rack/codehighlighter'
