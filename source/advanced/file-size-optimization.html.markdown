@@ -29,7 +29,7 @@ If you want to exclude any files from being minified, pass the `:ignore` option 
 
 ## GZIP text files
 
-It's a good idea to [serve compressed files](http://developer.yahoo.com/performance/rules.html#gzip) to user agents that can handle it. Many web servers have the ability to gzip files on the fly, but that requires CPU work every time the file is served, and as a result most servers don't perform the maximum compression. Middleman can produce gripped versions of your HTML, CSS, and JavaScript alongside your regular files, and you can instruct your web server to serve those pre-gzipped files directly. First, enable the `:gzip` extension:
+It's a good idea to [serve compressed files](http://developer.yahoo.com/performance/rules.html#gzip) to user agents that can handle it. Many web servers have the ability to gzip files on the fly, but that requires CPU work every time the file is served, and as a result most servers don't perform the maximum compression. Middleman can produce gzipped versions of your HTML, CSS, and JavaScript alongside your regular files, and you can instruct your web server to serve those pre-gzipped files directly. First, enable the `:gzip` extension:
 
 ``` ruby
 activate :gzip
