@@ -32,6 +32,17 @@ middleman init MY_BLOG_PROJECT --template=blog
 
 If you already have a Middleman project, you can re-run `middleman init` with the blog template option to generate the sample [`index.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/index.html.erb), [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb), [`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb), and [`feed.xml`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/feed.xml.builder), or you can write those yourself. You can see [what gets generated](https://github.com/middleman/middleman-blog/tree/master/lib/middleman-blog/template/source) on GitHub.
 
+Because sitemap manipulators tend to be order-dependent, if you are using [`directory_indexes`](/pretty-urls/), you'll want to make sure that you activate it *after* you activate the blog extension. For example:
+
+``` ruby
+activate :blog do |blog|
+  # set options on blog
+end
+
+activate :directory_indexes
+page "/404.html", directory_index: false
+```
+
 ## Articles
 
 Like Middleman itself, the blog extension is focused on individual files. Each article is its own file, using any template language you like. The default filename structure for articles is  `:year-:month-:day-:title.html`. When you want to create a new article, place it in the correct path and include the basic [frontmatter](/frontmatter/) to get going. You can set the `blog.sources` option while activating `:blog` in your `config.rb` to change where and in what format Middleman should look for articles.
