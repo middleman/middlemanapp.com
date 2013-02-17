@@ -27,6 +27,7 @@ The second approach is to append a value to the end of URLs that reference your 
 ``` ruby
 activate :cache_buster
 ```
+Note that this approach is more likely to cause your assets to never be cached, this is further explained at "[Testing ye olde “querystring cache busting” trick blog post](http://blog.solid1pxred.com/post/248906562/testing-ye-olde-querystring-cache-busting-trick)".
 
 Now, to use cache-safe URLs, you must use [asset path helpers](http://www.padrinorb.com/api/Padrino/Helpers/AssetTagHelpers.html) like `image_path` or `javascript_include_tag`. Make sure to use [Compass helpers](http://compass-style.org/reference/compass/helpers/urls/) in your SASS too (`image-url`, etc.). For JavaScript, you'll need to make ERb templates like `my script.js.erb` and call asset helpers via ERb tags to output the right values. If you forget one, your users will still get the file (since the copy on the server just has a normal name) but they might not see changes.
 
