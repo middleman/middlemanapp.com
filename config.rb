@@ -7,6 +7,14 @@ activate :directory_indexes
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
 set :markdown_engine, :redcarpet
 
+activate :relative_assets
+
+activate :fjords do |config|
+  config.username = Bundler.settings["fjords_username"]
+  config.password = Bundler.settings["fjords_password"]
+  config.domain = "middlemanapp.com"
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
