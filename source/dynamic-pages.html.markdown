@@ -4,9 +4,10 @@ title: Dynamic Pages
 
 # Dynamic Pages
 
-Middleman has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. Here's an example `config.rb` setup:
+Middleman has the ability to generate pages which do not have a one-to-one relationship with their template files. What this means is that you can have a single template which generates multiple files based on variables. To create a proxy, you use the `proxy` method in your `config.rb`, and give the path you want to create, and then the path to the template you want to use (without any templating file extensions). Here's an example `config.rb` setup:
 
 ``` ruby
+# Assumes the file source/about/template.html.erb exists
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }
 end
