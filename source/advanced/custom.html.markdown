@@ -137,7 +137,7 @@ end
 
 ### Compass Callback
 
-Similarly, if you're extension relies on variable and settings within Compass to be ready, use the `compass_config` callback.
+Similarly, if your extension relies on variable and settings within Compass to be ready, use the `compass_config` callback.
 
 ``` ruby
 module MyFeature
