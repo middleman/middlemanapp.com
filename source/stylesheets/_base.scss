@@ -47,3 +47,16 @@ body {
     @include float-right; 
   }
 }
+
+code {
+  background-color: #F8F8F8;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+pre code {
+  margin: 0px;
+  padding: 2px;
+  display: block;
+}
