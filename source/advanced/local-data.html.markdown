@@ -38,3 +38,16 @@ Which will render:
 ```
 
 Notice that the name of the `.yml` file (people) is the name of the object which stores the data in your template: `data.people`.
+
+The same as yaml, you can use json to store your data.
+You may use `data/people.json` instead of the above example:
+
+``` json
+{
+  "friends": [
+    "Tom",
+    "Dick",
+    "Harry"
+  ]
+}
+```
