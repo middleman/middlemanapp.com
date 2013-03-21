@@ -12,13 +12,13 @@ The most basic extension looks like:
 module MyFeature
   class << self
     def registered(app)
-      
+
     end
     alias :included :registered
   end
 end
 
-::Middleman::Extensions.register(:my_feature, MyFeature) 
+::Middleman::Extensions.register(:my_feature, MyFeature)
 ```
 
 This module must be accessible to your `config.rb` file. Either define it directly in that file, or define it in another ruby file and `require` it in `config.rb`
@@ -33,13 +33,13 @@ The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman
 
 In the `MyFeature` extension, the `registered` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Application) class. Using this class, you can augment the Middleman environment.
 
-`activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. 
+`activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension.
 
 ``` ruby
 module MyFeature
   # All the options for this extension
   class Options < Struct.new(:foo, :bar); end
-  
+
   class << self
     def registered(app, options_hash={}, &block)
     options = Options.new(options_hash)
@@ -56,7 +56,7 @@ end
 ```
 
 Passing options to `activate` is generally preferred to setting global variables via `set` to configure your extension (see the next section).
-    
+
 ## Setting variables
 
 The [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/Middleman/Application) class can be used to change global settings (variables using the `set` command) that can be used in your extension.
@@ -83,7 +83,7 @@ module MyFeature
     end
     alias :included :registered
   end
-  
+
   module Helpers
     def my_helper
       my_feature_setting.to_sentence
@@ -106,7 +106,7 @@ module MyFeature
     end
     alias :included :registered
   end
-  
+
   module ClassMethods
     def say_hello
       puts "Hello"
@@ -220,12 +220,12 @@ module MyFeature
     end
     alias :included :registered
   end
-  
+
   class MyFeatureManipulator
     def initialize(app)
       @app = app
     end
-    
+
     def manipulate_resource_list(resources)
       resources.each do |resource|
          resource.destination_path.gsub!("original", "new")

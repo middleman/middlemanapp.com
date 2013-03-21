@@ -18,7 +18,7 @@ use Rack::TryStatic, :root => "build", :urls => %w[/], :try => ['.html']
 ```
 
 The same `about-us.html` file would be accessible at: `http://example.com/about-us`
-    
+
 However, serving your site via Rack somewhat defeats the purpose of generating a static site.
 
 ## Apache (and compatible servers)

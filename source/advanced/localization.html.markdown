@@ -62,7 +62,7 @@ Now the paths would be:
 If you are unhappy using the YAML file names as part of your path, you can remap them to different values.
 
 ``` ruby
-activate :i18n, :path => "/langs/:locale/", 
+activate :i18n, :path => "/langs/:locale/",
   :lang_map => { :en => :english, :es => :spanish, :fr => :french }
 ```
 
@@ -91,7 +91,7 @@ es:
     hello: "hola"
 ```
 
-Now, the files would be output as: 
+Now, the files would be output as:
 
 * /hello.html
 * /es/hola.html
