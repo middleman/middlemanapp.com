@@ -1,11 +1,11 @@
 Middleman Guides
 ================
 
-These are the source files that power the [middleman site](http://middlemanapp.com/), 
+These are the source files that power the [middleman site](http://middlemanapp.com/),
 a [middleman](https://github.com/middleman/middleman) powered static page.
 
-Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He stands-watch 
-over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient 
+Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He stands-watch
+over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient
 markup.
 
 ## How to run the site locally
