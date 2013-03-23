@@ -17,7 +17,7 @@ This site is written in Middleman and features many code blocks which have synta
 ``` ruby
 require 'rack/codehighlighter'
 require "pygments"
-use Rack::Codehighlighter, 
+use Rack::Codehighlighter,
   :pygments,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
