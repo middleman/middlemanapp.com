@@ -22,7 +22,7 @@ You can use the sitemap information to create new [dynamic pages] from `config.r
 
 ``` ruby
 ready do
-  sitemap.pages.group_by {|p| p.data["category"] }.each do |category, pages|
+  sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
     proxy "/categories/#{category}.html", "category.html", 
       :locals => { :category => category, :pages => pages }
   end
