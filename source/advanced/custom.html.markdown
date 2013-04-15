@@ -42,8 +42,9 @@ module MyFeature
 
   class << self
     def registered(app, options_hash={}, &block)
-    options = Options.new(options_hash)
-    yield options if block_given?
+      options = Options.new(options_hash)
+      yield options if block_given?
+    end
   end
 end
 
