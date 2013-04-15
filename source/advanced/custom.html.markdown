@@ -245,7 +245,7 @@ module MyFeature
   class << self
     def registered(app)
       app.after_build do |builder|
-        builder.run my_deploy_script.sh
+        builder.run './my_deploy_script.sh'
       end
     end
     alias :included :registered
