@@ -9,8 +9,17 @@ markup.
 
 ## How to run the site locally
 
-Clone this repo and using Ruby 1.9.2 run `bundle install`.
-Then run `bundle exec middleman server` to start the server at `http://localhost:4567`
+Clone this repo and using Ruby 1.9.2 run:
+
+    $ bundle install
+
+Then run
+
+    $ bundle exec middleman server
+
+to start the server at
+
+    $ open http://localhost:4567
 
 ## Community Forum
 
