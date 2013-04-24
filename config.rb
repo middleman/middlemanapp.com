@@ -9,9 +9,12 @@ set :markdown_engine, :redcarpet
 
 activate :relative_assets
 
+# Live reload
+activate :livereload
+
 helpers do
-  def gzip_css_on_build(key)
-    o = stylesheet_link_tag(key)
+  def gzip_css_on_build(key, media = "screen")
+    o = stylesheet_link_tag(key, { :media => media})
     o.sub!(".css", ".css.gz") if build?
     o
   end
@@ -32,7 +35,7 @@ end
 # Build-specific configuration
 configure :build do
   activate :gzip
-  
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
