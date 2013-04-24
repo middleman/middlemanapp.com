@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <%= gzip_css_on_build "site" %>
+    <%= gzip_css_on_build "site", "all" %>
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Questrial|Arvo" %>
     <title><%= page_title %></title>
   </head>
@@ -22,7 +22,7 @@
     <!-- End BuySellAds Ad Code -->
 
     <%= yield %>
-    
+
     <footer id="footer">
       <div class="container">
         <p class="copyright">
@@ -31,7 +31,7 @@
         <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
       </div>
     </footer>
-    
+
     <%= gzip_js_on_build "highlight.pack" %>
     <%= gzip_css_on_build "solarized_light" %>
     <script>hljs.initHighlightingOnLoad();</script>
