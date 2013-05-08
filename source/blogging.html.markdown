@@ -40,7 +40,6 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-page "/404.html", directory_index: false
 ```
 
 ## Articles
@@ -61,7 +60,7 @@ If you want, you can specify a full date and time as a `date` entry in the front
 
 As a shortcut, you can run `middleman article TITLE` and Middleman will create a new article for you in the right place with the right filename.
 
-### Custom Paths
+## Custom Paths
 
 The base path for your blog defaults to `/` (the root of your website) but can be overridden in `config.rb`:
 
@@ -73,7 +72,7 @@ end
 
 All other settings (`permalink`, `tag_path`, etc.) are added on to `prefix`, so you don't need to repeat it in every setting.
 
-The permalink for viewing your posts can be easily changed as well:
+The permalink for viewing your posts can changed on its own as well:
 
 ``` ruby
 activate :blog do |blog|
@@ -81,9 +80,9 @@ activate :blog do |blog|
 end
 ```
 
-Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally different from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
+Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally independent from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
 
-### Draft Articles
+## Draft Articles
 
 Articles can be marked as draft in the frontmatter:
 
@@ -100,7 +99,7 @@ Unpublished articles will only appear in development mode.
 
 An articles with a date that is in the future is also considered unpublished; if you use a `cron` job to regenerate your site on a regular basis, this can be used to automatically publish articles at a specified time.
 
-### Timezone
+## Timezone
 
 To get accurate publication times in your RSS feed, and for automatically publishing articles on a precise schedule, set your blog's timezone in `config.rb`:
 
@@ -121,6 +120,18 @@ end
 ```
 
 You can use the summary in templates from the [`summary`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#summary-instance_method) attribute of a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle).
+
+`summary` is actually a method which takes an optional length to chop summaries down to, and a string to use when the text is truncated:
+
+```erb
+<%= article.summary(250, '>>') =>
+```
+
+This would produce a summary of no more than 250 characters, followed by ">>".
+
+Note that, in order to provide HTML-aware summaries, you must add `gem 'nokogiri'` to your `Gemfile` in order to use summaries.
+
+If you have your own method of generating summaries, you can set `blog.summary_generator` to a `Proc` that takes the rendered blog post, desired length, and ellipsis string and produces a summary.
 
 ## Tags
 

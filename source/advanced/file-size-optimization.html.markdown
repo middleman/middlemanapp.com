@@ -27,6 +27,13 @@ set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
 
 If you want to exclude any files from being minified, pass the `:ignore` option when activating these extensions, and give it one or more globs, regexes, or procs that identify the files to ignore. Likewise, you can pass an `:exts` option to change which file extensions are renamed.
 
+You can speed up your JavaScript minification (and CoffeeScript builds) by including these gems in your `Gemfile`:
+
+```ruby
+gem 'therubyracer' # faster JS compiles
+gem 'oj' # faster JS compiles
+```
+
 ## GZIP text files
 
 It's a good idea to [serve compressed files](http://developer.yahoo.com/performance/rules.html#gzip) to user agents that can handle it. Many web servers have the ability to gzip files on the fly, but that requires CPU work every time the file is served, and as a result most servers don't perform the maximum compression. Middleman can produce gzipped versions of your HTML, CSS, and JavaScript alongside your regular files, and you can instruct your web server to serve those pre-gzipped files directly. First, enable the `:gzip` extension:
@@ -54,6 +61,24 @@ configure :build do
   activate :smusher
 end
 ```
+
+It's slightly harder to set up, but [`middleman-imageoptim`](https://github.com/plasticine/middleman-imageoptim) is faster and compresses better than `middleman-smusher`, and it doesn't require sending your images to a web service.
+
+## Minify HTML
+
+Middleman provides an official extension for minifying its HTML output. Simply install the gem:
+
+``` bash
+gem install middleman-minify-html
+```
+
+Add `middleman-minify-html` to your Gemfile, open your `config.rb` and add
+
+``` ruby
+activate :minify_html
+```
+
+You should notice whilst view-source:'ing that your HTML is now being minified.
 
 [Middleman Smusher extension]: https://github.com/middleman/middleman-smusher
 [Yahoo's Smush.it tool]: http://www.smushit.com/ysmush.it/

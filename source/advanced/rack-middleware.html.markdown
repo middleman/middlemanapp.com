@@ -33,7 +33,7 @@ gem "pygments.rb"
 
 The above block required the `rack/codehighlighter` and `pygments.rb` libraries. Then the `use` command tells Middleman to use this middleware. The rest is standard Rack Middleware setup, passing some variables to the middleware itself instructing the syntax highlighter on how to locate code blocks and which backend to use for parsing the syntax.
 
-### Build Cycle
+## Build Cycle
 
 The Rack Middleware is run on all requests, including those done during the build cycle. This means anything the Rack Middleware effects during preview will be present in the built files. However, be aware that once the project is built, it is a static site. Rack Middleware which does processing on requests, expecting things like cookies, sessions or variables, won't work once the site is built.
 

@@ -20,17 +20,6 @@ However, because this extension works by rewriting your files to reference the r
 
 If you want to exclude any files from being renamed, pass the `:ignore` option when activating `:asset_hash`, and give it one or more globs, regexes, or procs that identify the files to ignore. Likewise, you can pass an `:exts` option to change which file extensions are renamed.
 
-## Cache buster in query string
-
-The second approach is to append a value to the end of URLs that reference your assets. For example, instead of referencing `my_image.png` you'd reference `my_image.png?1234115152`. The extra info at the end of the URL is enough to tell many (but not all) browsers and proxies to cache that file separately from the same file with a different cache buster value. To use this, activate the `:cache_buster` extension in your `config.rb`:
-
-``` ruby
-activate :cache_buster
-```
-Note that this approach is more likely to cause your assets to never be cached, this is further explained at "[Testing ye olde “querystring cache busting” trick blog post](http://blog.solid1pxred.com/post/248906562/testing-ye-olde-querystring-cache-busting-trick)".
-
-Now, to use cache-safe URLs, you must use [asset path helpers](http://www.padrinorb.com/api/Padrino/Helpers/AssetTagHelpers.html) like `image_path` or `javascript_include_tag`. Make sure to use [Compass helpers](http://compass-style.org/reference/compass/helpers/urls/) in your SASS too (`image-url`, etc.). For JavaScript, you'll need to make ERb templates like `my script.js.erb` and call asset helpers via ERb tags to output the right values. If you forget one, your users will still get the file (since the copy on the server just has a normal name) but they might not see changes.
-
 ## Configuring your server
 
 Configuring your server to use far-future `Expires` and `Cache-Control` headers is different depending on which server you use. See Google's [page speed docs](https://code.google.com/speed/page-speed/docs/caching.html) for links on how to configure your particular server, and run [Google Page Speed](https://code.google.com/speed/page-speed/docs/extension.html) or [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) to check that you've configured things correctly.

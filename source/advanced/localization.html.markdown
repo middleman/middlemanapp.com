@@ -4,7 +4,7 @@ title: Localization (i18n)
 
 # Localization (i18n)
 
-The extension provides an api for enabling localization in your `config.rb`:
+The `:i18n` extension provides an way to localize your site. Activate it in your `config.rb`:
 
 ``` ruby
 activate :i18n
@@ -39,7 +39,14 @@ This would output two files:
 * /hello_world.html with contents: "Hello World"
 * /es/hello_world.html with contents: "Hola World"
 
-## URL Path
+You can use `t` as a shortcut for `I18n.t` in your templates:
+
+``` html
+    <%= t(:hello) %> World
+```
+
+
+## Localized Paths
 
 Each individual language is accessible in its own namespaced path. By default, the first language lives at the root of the site (see below to change this option). The default path is to simply use the language name (the name of the YAML file) in the path:
 
@@ -96,7 +103,7 @@ Now, the files would be output as:
 * /hello.html
 * /es/hola.html
 
-## Templates to Localize
+## Localizable Templates
 
 By default, the contents of `source/localizable` will be built in multiple languages while the rest of your templates will continue to work normally. The name of this folder can be changed with the `:templates_dir` option:
 
@@ -118,8 +125,8 @@ activate :i18n, :langs => [:en] # Ignore all languages except :en
 By default, the first language (either specified by `:langs` or discovered in your `locales/` folder) will be the "default" language and will be mounted at the root of your site. Given our two languages, files localized to `:en` will be at the root:
 
 * source/localizable/index.html.erb
-  * build/index.html is english
-  * build/es/index.html is spanish
+  * build/index.html is English
+  * build/es/index.html is Spanish
 
 You can change the default or disable mounting a specific language at the root entirely using the `:mount_at_root` option:
 
@@ -128,3 +135,10 @@ activate :i18n, :mount_at_root => :es # Mount spanish at root instead
 # or
 activate :i18n, :mount_at_root => false # All languages will be prefixed
 ```
+
+## Localizing Entire Templates
+
+It can be inefficient to put translations of large blocks of text into the locale YAML files. To help with this, Middleman offers a way to localize entire templates. For example, if you had `index.html`, you could create two templates, `index.en.html.erb` and `index.es.html.erb`. When the site is built, you'll get:
+
+* build/index.html is English
+* build/es/index.html is Spanish

@@ -4,22 +4,10 @@ title: LiveReload
 
 # LiveReload
 
-Middleman provides an official extension for livereloading functionality. Simply install the gem:
-
-``` bash
-gem install middleman-livereload
-```
-
-Add `middleman-livereload` to your Gemfile, open your `config.rb` and add
+Middleman comes with an extension that will automatically refresh your browser whenever you edit files in your site. Simply open your `config.rb` and add
 
 ``` ruby
 activate :livereload
-```
-
-Then simply restart the middleman webserver.
-
-``` bash
-middleman server
 ```
 
 Your browser will now reload changed pages automatically.
