@@ -31,8 +31,10 @@
         <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
       </div>
     </footer>
-    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
     <%= gzip_js_on_build "highlight.pack" %>
+    <%= gzip_js_on_build "toc" %>
     <%= gzip_css_on_build "solarized_light" %>
     <script>hljs.initHighlightingOnLoad();</script>
 
