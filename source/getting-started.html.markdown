@@ -108,7 +108,7 @@ middleman init my_new_mobile_project --template=mobile
 
 ### Community Project Templates
 
-There are also a number of [community-developed project templates](/community/3rd-party-project-templates/).
+There are also a number of [community-developed project templates](http://directory.middlemanapp.com/#/templates/all).
 
 ## The Development Cycle (middleman server)
 
