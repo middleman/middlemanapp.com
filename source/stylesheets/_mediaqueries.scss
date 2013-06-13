@@ -68,6 +68,9 @@
     b {
       font-size: 24px;
     }
+    #search {
+      display: none;
+    }
   }
   .grid {
     .toc-block {
@@ -92,7 +95,11 @@
 @media screen and ( max-width: $two-column ) {
   #header {
     p {
-      text-align: right;
+      display: none;
+    }
+    #search {
+      @include span-columns(24);
+      margin: 9px 0;
     }
   }
   #toc {
@@ -124,7 +131,7 @@
         }
       }
     }
-    p {
+    p, #search {
       display: none;
     }
     .toc-nav-link {

@@ -46,23 +46,7 @@ Then configure your server to serve those files. If you use Nginx, check out [th
 
 ## Compressing Images
 
-If you also want to compress images on build, you can use the [Middleman Smusher extension] to dramatically shrink images using [Yahoo's Smush.it tool], though it's probably a better idea to compress your images once using a tool like [PNGGauntlet](http://pnggauntlet.com) or [ImageOptim](http://imageoptim.pornel.net) rather than every time you build your site.
-
-To install:
-
-``` bash
-gem install middleman-smusher
-```
-
-Then activate in your `config.rb`:
-
-``` ruby
-configure :build do
-  activate :smusher
-end
-```
-
-It's slightly harder to set up, but [`middleman-imageoptim`](https://github.com/plasticine/middleman-imageoptim) is faster and compresses better than `middleman-smusher`, and it doesn't require sending your images to a web service.
+If you also want to compress images on build, try [`middleman-imageoptim`](https://github.com/plasticine/middleman-imageoptim).
 
 ## Minify HTML
 
@@ -79,6 +63,3 @@ activate :minify_html
 ```
 
 You should notice whilst view-source:'ing that your HTML is now being minified.
-
-[Middleman Smusher extension]: https://github.com/middleman/middleman-smusher
-[Yahoo's Smush.it tool]: http://www.smushit.com/ysmush.it/

@@ -9,7 +9,7 @@
     bottom: -35px;
   }
   p {
-    @include span-columns(17);
+    @include span-columns(10);
     @include push(6);
     font-family: $display-monospace-font-family;
     margin-top: 14px;
@@ -21,6 +21,11 @@
   }
   .toc-nav-link {
     display: none;
+  }
+  #search {
+    @include span-columns(7);
+    text-align: right;
+    margin-top: 9px;
   }
 }
 
