@@ -14,7 +14,7 @@ activate :relative_assets
 activate :fjords do |config|
   config.username = Bundler.settings["fjords_username"]
   config.password = Bundler.settings["fjords_password"]
-  config.domain = "beta.middlemanapp.com"
+  config.domain = "middlemanapp.com"
   config.gzip_assets = true
   config.cdn = true
 end
