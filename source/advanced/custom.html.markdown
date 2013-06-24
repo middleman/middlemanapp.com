@@ -30,9 +30,9 @@ Finally, once your module is included, you must activate it in `config.rb`:
 activate :my_feature
 ```
 
-The [`register`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
+The [`register`](http://rubydoc.info/gems/middleman/middleman/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
 
-In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Application) class.
+In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/gems/middleman/middleman/Middleman/Application) class.
 
 `activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. You define options with the `options` class method and then access them with `options`:
 
@@ -212,7 +212,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-The [`builder`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Cli/Build) parameter is the class that runs the build CLI, and you can use [Thor actions](http://rubydoc.info/github/wycats/thor/master/Thor/Actions) from it.
+The [`builder`](http://rubydoc.info/gems/middleman/middleman/Middleman/Cli/Build) parameter is the class that runs the build CLI, and you can use [Thor actions](http://rubydoc.info/github/wycats/thor/master/Thor/Actions) from it.
 
 ### compass_config
 

@@ -238,7 +238,7 @@ If you want to wrap each article in a bit of structure before inserting it into 
 
 The list of articles in your blog is accessible from templates as [`blog.articles`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#articles-instance_method), which returns a list of [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)s.
 
-Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) has some informative methods on it, and can also produce the [`Resource`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Sitemap/Resource) from the [sitemap](/advanced/sitemap) which has even more information (such as the [`data`](http://rubydoc.info/github/middleman/middleman/master/Middleman/Sitemap/Resource#data-instance_method) from your [frontmatter](/frontmatter/))
+Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) has some informative methods on it, and can also produce the [`Resource`](http://rubydoc.info/gems/middleman/middleman/Middleman/Sitemap/Resource) from the [sitemap](/advanced/sitemap) which has even more information (such as the [`data`](http://rubydoc.info/gems/middleman/middleman/Middleman/Sitemap/Resource#data-instance_method) from your [frontmatter](/frontmatter/))
 
 For example, the following shows the 5 most-recent articles and their summary:
 
