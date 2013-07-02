@@ -11,7 +11,7 @@ Middleman extensions are Ruby classes which can hook into various points of the 
 The most basic extension looks like:
 
 ``` ruby
-class MyFeature < Middleman::Extensio
+class MyFeature < Middleman::Extension
     def initialize(app, options_hash={}, &block)
       super
     end
