@@ -45,11 +45,11 @@ end
 If you want some configuration to apply only during build or development, you can put that in a block:
 
 ```ruby
-configure :development
+configure :development do
   set :debug_assets, true
 end
 
-configure :build
+configure :build do
   activate :minify_css
 end
 ```
