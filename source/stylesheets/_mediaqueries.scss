@@ -9,7 +9,7 @@
 /*      Base
 ----------------------------------------------------- */
 
-@media screen and ( max-width: $two-column ){
+@media screen and (min-width: $one-column+1) and ( max-width: $two-column ){
   #support {
     width: 100%;
     @include remove-omega;
@@ -18,11 +18,13 @@
     }
     .sponsor {
       h4 { display: none; }
-      @include span-columns(9);
-      img { float: left; margin-right: 10px; }
+      a {
+        @include span-columns(4);
+      }
+      // img { float: left; margin-right: 10px; }
     }
     .one {
-      @include span-columns(9);
+      @include span-columns(8);
       @include omega;
     }
   }
@@ -30,9 +32,10 @@
 
 @media screen and ( max-width: $one-column ) {
   #support {
-    .donate,
-    .one {
-      @include reset-columns;
+    width: 100%;
+    @include remove-omega;
+    .sponsor {
+      span { display: block; }
     }
   }
   #footer {
