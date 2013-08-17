@@ -30,9 +30,9 @@ Finally, once your module is included, you must activate it in `config.rb`:
 activate :my_feature
 ```
 
-The [`register`](http://rubydoc.info/gems/middleman/middleman/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
+The [`register`](http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
 
-In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/gems/middleman/middleman/Middleman/Application) class.
+In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application) class.
 
 `activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. You define options with the `options` class method and then access them with `options`:
 
@@ -60,7 +60,7 @@ Passing options to `activate` is generally preferred to setting global variables
 
 ## Setting variables
 
-The [`Middleman::Application`](http://rubydoc.info/github/middleman/middleman/Middleman/Application) class can be used to change global settings (variables using the `set` command) that can be used in your extension.
+The [`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application) class can be used to change global settings (variables using the `set` command) that can be used in your extension.
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -140,7 +140,7 @@ Now, inside your templates, you will have access to a `make_a_link` method. Here
 
 ## Sitemap Manipulators
 
-You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
+You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -212,7 +212,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-The [`builder`](http://rubydoc.info/gems/middleman/middleman/Middleman/Cli/Build) parameter is the class that runs the build CLI, and you can use [Thor actions](http://rubydoc.info/github/wycats/thor/master/Thor/Actions) from it.
+The [`builder`](http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build) parameter is the class that runs the build CLI, and you can use [Thor actions](http://rubydoc.info/github/wycats/thor/master/Thor/Actions) from it.
 
 ### compass_config
 
