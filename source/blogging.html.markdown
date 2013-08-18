@@ -109,15 +109,26 @@ Time.zone = "Tokyo"
 
 ## Summary
 
-By default, articles can be truncated when viewed outside their permalink page. The blogging extension looks for `READMORE` in your article text and only shows content before this text on the homepage, but strips this metadata on the permalink page.
+Middleman supports article truncation for cases when you'd like to show an article summary with a link to the article's permalink page, such as on the homepage. The blogging extension looks for the string `READMORE` in your article body and shows only the content before this text on the homepage. On the permalink page, this data is then stripped out.
 
-This can be changed in `config.rb`:
+You can configure the text that the blogging extension looks for to tell it to truncate in the `config.rb` file:
 
 ``` ruby
 activate :blog do |blog|
   blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
 end
 ```
+
+You can then show just the article summary, accompanied by a link to the full article, by adding the following lines on your homepage template (or wherever you'd like the summary to appear):
+
+``` erb
+<%= article.summary =>
+<%= link_to 'Read more…', article =>
+```
+
+_(Note that, if you're using the default layout, these lines will replace `<%= article.body =>`.)_
+
+This will then link to the article, where `READMORE` (or the text you have configured the extension to match on) will be removed.
 
 You can use the summary in templates from the [`summary`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#summary-instance_method) attribute of a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle).
 
