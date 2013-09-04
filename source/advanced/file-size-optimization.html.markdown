@@ -56,7 +56,13 @@ Middleman provides an official extension for minifying its HTML output. Simply i
 gem install middleman-minify-html
 ```
 
-Add `middleman-minify-html` to your Gemfile, open your `config.rb` and add
+Add `middleman-minify-html` to your `Gemfile`: 
+
+``` ruby
+gem "middleman-minify-html"
+```
+
+Then open your `config.rb` and add:
 
 ``` ruby
 activate :minify_html
