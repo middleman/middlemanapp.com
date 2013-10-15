@@ -32,6 +32,20 @@ Or, you may want a PHP file:
 set :index_file, "index.php"
 ```
 
+#### Warning about assets path
+
+When using directory indexes, calling assets (e.g. image files) by their filename only will fail. They need to be called with their full absolute path, like this:
+
+``` ruby
+![Amazing picture](/posts/2013-09-23-some-interesting-post/amazing-image.png)
+```
+
+To slightly automate this process, the markdown may be processed by ERB first. For exemple, in a file named `/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
+
+``` ruby
+![Amazing picture](<%= current_page.url %>some-image.png)
+```
+
 ## Opt-out
 
 If there are pages which you don't want automatically renamed, you can opt-out:
