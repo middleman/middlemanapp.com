@@ -263,7 +263,7 @@ For example, the following shows the 5 most-recent articles and their summary:
 
     <%= article.summary %>
 
-    <a href="<%= article.url %>">Read more</a></div>
+    <a href="<%= article.url %>">Read more</a>
   </article>
 <% end %>
 ```
