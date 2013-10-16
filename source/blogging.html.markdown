@@ -180,6 +180,39 @@ If you only want certain calendar pages (say, year but not day), or if you want 
 
 In templates, you can use the [`blog_year_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_year_path-instance_method), [`blog_month_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_month_path-instance_method), and [`blog_day_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_day_path-instance_method) helpers to generate links to your calendar pages. You can customize what those links look like with the `blog.year_link`, `blog.month_link`, and `blog.day_link` settings. By default, your calendar pages will look like `/2012.html`, `/2012/03.html`, and `/2012/03/15.html` for year, month, and day, respectively.
 
+## Custom Article Collections
+
+Middleman-Blog also supports the ability to group articles by other [frontmatter](/frontmatter/) data as well. A common example would be the ability to group artilces by a *category* attribute.
+
+```html
+---
+title: My Middleman Blog Post
+date: 2013/10/13
+category: HTML5
+---
+
+Hello World
+```
+
+You can configure Middleman-blog to generate `categories/html5.html` to view all articles within the HTML5 category. See the example configuration below:
+
+```ruby
+activate :blog do |blog|
+  blog.custom_collections = {
+    :category => {
+      :link => '/categories/:category.html',
+      :template => '/category.html'
+    }
+  }
+end
+```
+
+This will configure a collection based on the category attribute. You can specify the url structure for the custom pages and the template to use when building them. When building custom collections a new helper will be generated to access the collection page. 
+
+### Custom collection helpers
+
+In the example above a helper method named `category_path` will be generated. This will allow you to call `category_path('html5')` and generate the URL `categories/html5.html`.
+
 ## Pagination
 
 Long lists of articles can be split across multiple pages. A template will be split into pages if it has
