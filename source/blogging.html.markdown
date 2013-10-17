@@ -72,6 +72,8 @@ end
 
 All other settings (`permalink`, `tag_path`, etc.) are added on to `prefix`, so you don't need to repeat it in every setting.
 
+### Customizing Permalinks
+
 The permalink for viewing your posts can changed on its own as well:
 
 ``` ruby
@@ -80,7 +82,29 @@ activate :blog do |blog|
 end
 ```
 
-Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally independent from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
+Now, your articles will show up at: `blog/2011/blog.html`. Your permalink can be totally independent from the format your posts are stored at. By default, the permalink path is `:year/:month/:day/:title.html`. Permalinks can be made up of any components of the article date (:year, :month, :day), the title of the article, and any other frontmatter data that is used throughout your articles.
+
+For example, if you have a category frontmatter key in your articles and wanted to include that in your permalinks:
+
+```html
+---
+title: My Middleman Blog Post
+date: 2013/10/13
+category: HTML5
+---
+
+Hello World
+```
+
+``` ruby
+activate :blog do |blog|
+  blog.permalink = "blog/:category/:title.html"
+end
+```
+
+The article above would now be under: `blog/html5/my-middleman-blog-post.html`.
+
+You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
 
 ## Draft Articles
 
