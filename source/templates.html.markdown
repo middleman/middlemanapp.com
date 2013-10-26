@@ -298,7 +298,7 @@ CoffeeScript            | .coffee                | coffee-script
 Creole (Wiki markup)    | .wiki, .creole         | creole
 WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
 Yajl                    | .yajl                  | yajl-ruby
-Stylus                  | .styl                  | ruby-stylus
+Stylus                  | .styl                  | stylus
 
 [Haml]: http://haml-lang.com/
 [Slim]: http://slim-lang.com/
