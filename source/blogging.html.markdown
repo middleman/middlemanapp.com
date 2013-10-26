@@ -146,11 +146,11 @@ end
 You can then show just the article summary, accompanied by a link to the full article, by adding the following lines on your homepage template (or wherever you'd like the summary to appear):
 
 ``` erb
-<%= article.summary =>
-<%= link_to 'Read more…', article =>
+<%= article.summary %>
+<%= link_to 'Read more…', article %>
 ```
 
-_(Note that, if you're using the default layout, these lines will replace `<%= article.body =>`.)_
+_(Note that, if you're using the default layout, these lines will replace `<%= article.body %>`.)_
 
 This will then link to the article, where `READMORE` (or the text you have configured the extension to match on) will be removed.
 
@@ -159,7 +159,7 @@ You can use the summary in templates from the [`summary`](http://rubydoc.info/gi
 `summary` is actually a method which takes an optional length to chop summaries down to, and a string to use when the text is truncated:
 
 ```erb
-<%= article.summary(250, '>>') =>
+<%= article.summary(250, '>>') %>
 ```
 
 This would produce a summary of no more than 250 characters, followed by ">>".
