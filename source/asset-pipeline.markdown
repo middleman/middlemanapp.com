@@ -70,3 +70,4 @@ Middleman comes with [Compass] support out of the box. Compass is a powerful fra
 
 [Sprockets]: https://github.com/sstephenson/sprockets
 [Compass]: http://compass-style.org
+[Susy]: http://susy.oddbird.net
