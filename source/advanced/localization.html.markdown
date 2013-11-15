@@ -142,3 +142,5 @@ It can be inefficient to put translations of large blocks of text into the local
 
 * build/index.html is English
 * build/es/index.html is Spanish
+
+To use this localization method, be sure to put your files inside the `localizable` folder.
