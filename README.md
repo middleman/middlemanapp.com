@@ -1,16 +1,18 @@
 Middleman Guides
 ================
 
-These are the source files that power the [middleman site](http://middlemanapp.com/), 
-a [middleman](https://github.com/middleman/middleman) powered static page.
+These are the source files that power the [Middleman guides site](http://middlemanapp.com/),
+which is itself a [Middleman](https://github.com/middleman/middleman)-powered static page.
 
-Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. He stands-watch 
-over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient 
+The guides are the primary documentation for Middleman, explaining the core features and extensions as well as pointing out community extensions.
+
+Middleman is ever-vigilant against tag-soup, unreadable CSS and repetition. It stands-watch
+over your Haml, Sass, and CoffeeScript producing only the cleanest and most efficient
 markup.
 
 ## How to run the site locally
 
-Clone this repo and using Ruby 1.9.2 run `bundle install`.
+Make sure you have Ruby 1.9.3+ and Bundler installed, then clone this repo and run `bundle install`.
 Then run `bundle exec middleman server` to start the server at `http://localhost:4567`
 
 ## Mailing List

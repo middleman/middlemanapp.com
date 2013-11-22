@@ -52,6 +52,21 @@ set :relative_links, true
 
 You can still override individual links to not be relative by adding `:relative => false`.
 
+You can include query parameters or URL fragments in your links as well:
+
+```ruby
+<%= link_to 'My Form', '/form.html', :query => { :foo => 'bar' }, :fragment => 'deep' %>
+```
+
+Produces:
+
+```html
+<a href='/form.html?foo=bar#deep'>My Form</a>
+```
+
+If you just want the URL to a page without the link tag, use `url_for`. It powers all the magic in `link_to`, and is used in `form_tag` as well.
+
+
 ## Output Helpers
 
 Output helpers are a collection of important methods for managing, capturing and displaying output in various ways and is used frequently to support higher-level helper functions. There are three output helpers worth mentioning: `content_for`, `capture_html`, and `concat_content`.
@@ -136,6 +151,8 @@ Asset helpers are intended to help insert useful html onto a view template such 
 </body>
 </html>
 ```
+
+You can use `auto_stylesheet_link_tag` and `auto_javascript_include_tag` to generate stylesheet and JS includes based on the current path, so if your page is "contact.html", you'll get "contact.css" and "contact.js".
 
 ## Form Helpers
 
@@ -229,6 +246,22 @@ lorem.image('300x400', :random_color => true)
 lorem.image('300x400', :text => 'blah')
   #=> http://placehold.it/300x400&text=blah
 ```
+
+## Page Classes
+
+It can be useful to generate classes on the `body` tag that correspond to the site hierarchy. `page_classes` generates those classes. Imagine you have a page at `projects/rockets/saturn-v.html`, and the following in your layout:
+
+```erb
+<body class="<%= page_classes %>">
+```
+
+You'll get:
+
+```html
+<body class="projects rockets saturn-v">
+```
+
+This makes it easy to apply project-specific, or rocket-specific styles to the page.
 
 ## Custom Defined Helpers
 

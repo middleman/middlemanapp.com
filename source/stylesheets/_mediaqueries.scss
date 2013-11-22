@@ -9,7 +9,7 @@
 /*      Base
 ----------------------------------------------------- */
 
-@media screen and ( max-width: $two-column ){
+@media screen and (min-width: $one-column+1) and ( max-width: $two-column ){
   #support {
     width: 100%;
     @include remove-omega;
@@ -18,11 +18,13 @@
     }
     .sponsor {
       h4 { display: none; }
-      @include span-columns(9);
-      img { float: left; margin-right: 10px; }
+      a {
+        @include span-columns(4);
+      }
+      // img { float: left; margin-right: 10px; }
     }
     .one {
-      @include span-columns(9);
+      @include span-columns(8);
       @include omega;
     }
   }
@@ -30,9 +32,10 @@
 
 @media screen and ( max-width: $one-column ) {
   #support {
-    .donate,
-    .one {
-      @include reset-columns;
+    width: 100%;
+    @include remove-omega;
+    .sponsor {
+      span { display: block; }
     }
   }
   #footer {
@@ -68,6 +71,9 @@
     b {
       font-size: 24px;
     }
+    #search {
+      display: none;
+    }
   }
   .grid {
     .toc-block {
@@ -92,7 +98,11 @@
 @media screen and ( max-width: $two-column ) {
   #header {
     p {
-      text-align: right;
+      display: none;
+    }
+    #search {
+      @include span-columns(24);
+      margin: 9px 0;
     }
   }
   #toc {
@@ -124,7 +134,7 @@
         }
       }
     }
-    p {
+    p, #search {
       display: none;
     }
     .toc-nav-link {

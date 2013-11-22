@@ -17,16 +17,27 @@
   }
 
   .sponsor{
-  	padding: 1em;
+  	padding: 1em 0 0 0;
+  	h4 {
+	  	padding: 0 1em;
+  	}
   	@include box-sizing( border-box );
   	img {
   		margin-bottom: 5px;
   	}
   	a {
+  		padding: 1em;
 	  	display: block;
 	  	font-weight: bold;
 	  	text-decoration: none;
 	  	line-height: 1.2;
+	  	&#max {
+	  		img { margin-bottom: 0; }
+	  	}
+		@include transition;
+		&:hover {
+			background: $xlight-brown;
+		}
   	}
   }
 

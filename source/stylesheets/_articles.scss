@@ -9,7 +9,7 @@
     bottom: -35px;
   }
   p {
-    @include span-columns(17);
+    @include span-columns(10);
     @include push(6);
     font-family: $display-monospace-font-family;
     margin-top: 14px;
@@ -22,13 +22,18 @@
   .toc-nav-link {
     display: none;
   }
+  #search {
+    @include span-columns(8 omega);
+    text-align: right;
+    margin-top: 9px;
+  }
 }
 
 #toc {
   @include span-columns(5);
   margin-top: 15px;
   div:first-child h3{
-    margin-top: 0; 
+    margin-top: 0;
   }
   footer {
     margin: 20px 0;
@@ -44,7 +49,7 @@
   }
   h2,
   h3 {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   pre {
     background: #F8F8F8;
@@ -52,7 +57,7 @@
     padding: 0.5em 1em;
     margin: 1.5em 0;
     overflow: auto;
-    @include border-radius(4px); 
+    @include border-radius(4px);
   }
   footer {
     border-top: 1px solid #c6bda8;
@@ -62,11 +67,20 @@
     p {
       margin: 0;
       &.left {
-        @include float-left; 
+        @include float-left;
       }
       &.right {
-        @include float-right; 
+        @include float-right;
       }
     }
+  }
+}
+
+#generated-toc {
+  margin-bottom: 1.5em;
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 1.5em;
   }
 }

@@ -4,7 +4,7 @@ title: Templates
 
 # Templates
 
-Middleman provides many templating languages to simplify your HTML development. The languages range from simply allowing you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.  Middleman ships with support for the ERb, Haml, Sass, Scss and CoffeeScript engines. Many more engines can be enabled by including their Tilt-enabled gems. [See the list below](#toc_7).
+Middleman provides access to many templating languages to simplify your HTML development. The languages range from simply allowing you to use Ruby variables and loops in your pages, to providing a completely different format to write your pages in which compiles to HTML.  Middleman ships with support for the ERb, Haml, Sass, Scss and CoffeeScript engines. Many more engines can be enabled by including their Tilt-enabled gems. [See the list below](#toc_7).
 
 ## Template Basics
 
@@ -185,7 +185,10 @@ Like a normal layout, `yield` is where the resulting template content is placed.
 In some cases, you may not want to use a layout at all. This can be accomplished by setting the default layout to false in your `config.rb`:
 
 ``` ruby
-disable :layout
+set :layout, false
+
+# Or for an individual file:
+page '/foo.html', :layout => false
 ```
 
 ## Partials
@@ -250,9 +253,29 @@ Then, within the partial, you can set the text appropriately as follows:
 
 Read the [Padrino partial helper] documentation for more information.
 
-### Other Templating Languages
+## Template Engine Options
 
-Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work:
+You can set options for the various template engines in your `config.rb`:
+
+```ruby
+set :haml, { :ugly => true, :format => :html5 }
+```
+
+## Markdown
+
+You can choose your favorite Markdown library and set options for it in `config.rb`:
+
+```ruby
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+```
+
+When using RedCarpet, Middleman will handle links and image tags with its own helpers, meaning things like `:relative_links` and `:asset_hash` will do what you expect. However, the default Markdown engine is Kramdown because it's easier to install.
+
+
+## Other Templating Languages
+
+Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work (this list is from [Tilt](https://github.com/rtomayko/tilt/)):
 
 ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
 ------------------------|------------------------|----------------------------
@@ -275,7 +298,7 @@ CoffeeScript            | .coffee                | coffee-script
 Creole (Wiki markup)    | .wiki, .creole         | creole
 WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
 Yajl                    | .yajl                  | yajl-ruby
-Stylus                  | .styl                  | ruby-stylus
+Stylus                  | .styl                  | stylus
 
 [Haml]: http://haml-lang.com/
 [Slim]: http://slim-lang.com/
