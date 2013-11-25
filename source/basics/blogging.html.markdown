@@ -94,6 +94,17 @@ end
 
 The article above would now be under: `blog/html5/my-middleman-blog-post.html`.
 
+Information extracted from your `blog.sources` URL template can also be used in `blog.permalinks`. So for example if you had a config like this:
+
+``` ruby
+activate :blog do |blog|
+  blog.sources = "{category}/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{category}/{year}/{month}/{day}/{title}.html"
+end
+```
+
+You'd be able to put your article sources at `cats/2013-11-12-best-cats.html` and they'd get written out to `cats/2013/11/12/best-cats.html` without you having to specify a `category` in frontmatter. You can also access the category extracted from the source path via `current_article.metadata[:page]['category']`.
+
 You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
 
 
