@@ -62,7 +62,7 @@ Instead of providing the output url for `link_to`, provide either the *source pa
 <ul>
   <% blog.articles.each do |article| %>
     <li>
-      <%= link_to article.title, article.path, relative: true %> <%# Note `article.path` in the second argument %>
+      <%= link_to article.title, article.path, :relative => true %> <%# Note `article.path` in the second argument %>
     </li>
   <% end %>
 </ul>
@@ -70,7 +70,7 @@ Instead of providing the output url for `link_to`, provide either the *source pa
 <ul>
   <% sitemap.resources.select{|resource| resource.data.title}.each do |resource| %>
     <li>
-      <%= link_to resource.data.title, resource, relative: true %> <%# Note `resource` in the second argument %>
+      <%= link_to resource.data.title, resource, :relative => true %> <%# Note `resource` in the second argument %>
     </li>
   <% end %>
 </ul>
