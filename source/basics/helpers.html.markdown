@@ -52,6 +52,30 @@ set :relative_links, true
 
 You can still override individual links to not be relative by adding `:relative => false`.
 
+If the `link_to` helper fails to determine which page the URL provided belongs to, it will use the URL without modifying it. The `:relative_links` option will be ignored in this case, but the `:relative => true` argument will produce an error.
+
+Note that the [`url` method] of the [Sitemap](/advanced/sitemap/) Resource (also inherited by [Blogging](/blogging/) BlogArticle) returns an *output URL*. The `link_to` helper may be unable to match it to a *source path* of the corresponding page/article and thus will be unable to convert it to a relative URL. 
+
+Instead of providing the output url for `link_to`, provide either the *source path* via Resource/BlogArticle [`path` attribute] or simply pass the resource itself as the URL argument for `link_to`. Both will have `link_to` produce relative URLs:
+
+``` html
+<ul>
+  <% blog.articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article.path, :relative => true %> <%# Note `article.path` in the second argument %>
+    </li>
+  <% end %>
+</ul>
+
+<ul>
+  <% sitemap.resources.select{|resource| resource.data.title}.each do |resource| %>
+    <li>
+      <%= link_to resource.data.title, resource, :relative => true %> <%# Note `resource` in the second argument %>
+    </li>
+  <% end %>
+</ul>
+```
+
 You can include query parameters or URL fragments in your links as well:
 
 ```ruby
@@ -298,3 +322,5 @@ An even easier way is to put your helpers in the `helpers` directory and name th
 
 [view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
 [Frank project]: https://github.com/blahed/frank
+[`url` method]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#url-instance_method
+[`path` attribute]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#path-instance_method
