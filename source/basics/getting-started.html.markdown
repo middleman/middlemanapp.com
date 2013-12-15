@@ -73,7 +73,7 @@ run Middleman.server
 
 ### Project Templates
 
-In addition to the default basic skeleton, Middleman comes with several optional project templates based on the [HTML5 Boilerplate] project, [SMACSS], and [Mobile Boilerplate](http://html5boilerplate.com/mobile/). Middleman extensions (like [middleman-blog](/blogging/)) can contribute their own templates as well. Alternative templates can be accessed using the `-T` or `--template` command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
+In addition to the default basic skeleton, Middleman comes with several optional project templates based on the [HTML5 Boilerplate] project, [SMACSS], and [Mobile Boilerplate](http://html5boilerplate.com/mobile/). Middleman extensions (like [middleman-blog](/basics/blogging/)) can contribute their own templates as well. Alternative templates can be accessed using the `-T` or `--template` command-line flags. For example, to start a new project based on HTML5 Boilerplate, run this command:
 
 ``` bash
 middleman init my_new_boilerplate_project --template=html5

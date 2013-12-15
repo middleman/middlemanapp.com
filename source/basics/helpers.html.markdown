@@ -22,7 +22,7 @@ Padrino provides a `link_to` function that you can use to make link tags. At its
 <% end %>
 ```
 
-Middleman enhances the `link_to` helper to be aware of the [sitemap](/advanced/sitemap/). If you refer to pages in your source folder (with their file extension minus all the template extensions) then `link_to` will generate the correct link, even if you have extensions like [`:directory_indexes`](/pretty-urls/) on. For example, if you had a file `source/about.html` and `:directory_indexes` on, you could link to it like this:
+Middleman enhances the `link_to` helper to be aware of the [sitemap](/advanced/sitemap/). If you refer to pages in your source folder (with their file extension minus all the template extensions) then `link_to` will generate the correct link, even if you have extensions like [`:directory_indexes`](/basics/pretty-urls/) on. For example, if you had a file `source/about.html` and `:directory_indexes` on, you could link to it like this:
 
 ``` html
 <%= link_to 'About', '/about.html' %>
@@ -54,7 +54,7 @@ You can still override individual links to not be relative by adding `:relative 
 
 If the `link_to` helper fails to determine which page the URL provided belongs to, it will use the URL without modifying it. The `:relative_links` option will be ignored in this case, but the `:relative => true` argument will produce an error.
 
-Note that the [`url` method] of the [Sitemap](/advanced/sitemap/) Resource (also inherited by [Blogging](/blogging/) BlogArticle) returns an *output URL*. The `link_to` helper may be unable to match it to a *source path* of the corresponding page/article and thus will be unable to convert it to a relative URL. 
+Note that the [`url` method] of the [Sitemap](/advanced/sitemap/) Resource (also inherited by [Blogging](/basics/blogging/) BlogArticle) returns an *output URL*. The `link_to` helper may be unable to match it to a *source path* of the corresponding page/article and thus will be unable to convert it to a relative URL.
 
 Instead of providing the output url for `link_to`, provide either the *source path* via Resource/BlogArticle [`path` attribute] or simply pass the resource itself as the URL argument for `link_to`. Both will have `link_to` produce relative URLs:
 
