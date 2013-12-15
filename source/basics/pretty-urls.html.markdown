@@ -56,7 +56,7 @@ page "/i-really-want-the-extension.html", :directory_index => false
 
 `page` works with regexes or file globs if you want to turn off indexes for many files at once.
 
-You can also add a `directory_index: false` key to your page's [Frontmatter](/frontmatter/) to disable directory indexes.
+You can also add a `directory_index: false` key to your page's [Frontmatter](/basics/frontmatter/) to disable directory indexes.
 
 ## Manual Indexes
 

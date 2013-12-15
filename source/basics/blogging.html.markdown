@@ -28,11 +28,11 @@ If you already have a Middleman project, you can re-run `middleman init` with th
 
 The blog extension has many configuration options - you can see what they all are and what they do by going to `http://localhost:4567/__middleman/config/` in your preview server.
 
-**Note:** If you are using the [`directory_indexes`](/pretty-urls/) extension, you'll want to make sure that you activate it *after* you activate the blog extension.
+**Note:** If you are using the [`directory_indexes`](/basics/pretty-urls/) extension, you'll want to make sure that you activate it *after* you activate the blog extension.
 
 ## Articles
 
-Like Middleman itself, the blog extension is focused on individual files. Each article is its own file, using any template language you like. The default filename structure for articles is  `{year}-{month}-{day}-{title}.html`. When you want to create a new article, place it in the correct path and include some basic [frontmatter](/frontmatter/) to get going. You can set the `blog.sources` option while activating `:blog` in your `config.rb` to change where and in what format Middleman should look for articles.
+Like Middleman itself, the blog extension is focused on individual files. Each article is its own file, using any template language you like. The default filename structure for articles is  `{year}-{month}-{day}-{title}.html`. When you want to create a new article, place it in the correct path and include some basic [frontmatter](/basics/frontmatter/) to get going. You can set the `blog.sources` option while activating `:blog` in your `config.rb` to change where and in what format Middleman should look for articles.
 
 Let's say I want to create a new post about Middleman. I would create a file at `source/2011-10-18-middleman.html.markdown`. The minimum contents of this file are a `title` entry in the frontmatter:
 
@@ -105,7 +105,7 @@ end
 
 You'd be able to put your article sources at `cats/2013-11-12-best-cats.html` and they'd get written out to `cats/2013/11/12/best-cats.html` without you having to specify a `category` in frontmatter. You can also access the category extracted from the source path via `current_article.metadata[:page]['category']`.
 
-You might also consider enabling the [pretty urls](/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
+You might also consider enabling the [pretty urls](/basics/pretty-urls/) feature if you want your blog posts to appear as directories instead of HTML files.
 
 
 ## Layouts
@@ -124,7 +124,7 @@ If you want to wrap each article in a bit of structure before inserting it into 
 
 The list of articles in your blog is accessible from templates as [`blog.articles`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#articles-instance_method), which returns a list of [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)s.
 
-Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) has some informative methods on it, and it is also a [`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource) from the [sitemap](/advanced/sitemap) which has even more information (such as the [`data`](http://rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter/ResourceInstanceMethods#data-instance_method) from your [frontmatter](/frontmatter/)). Within layouts and even your articles themselves you can get the current article via `current_article`,
+Each [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) has some informative methods on it, and it is also a [`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource) from the [sitemap](/advanced/sitemap) which has even more information (such as the [`data`](http://rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter/ResourceInstanceMethods#data-instance_method) from your [frontmatter](/basics/frontmatter/)). Within layouts and even your articles themselves you can get the current article via `current_article`,
 
 For example, the following shows the 5 most-recent articles and their summary:
 
@@ -191,7 +191,7 @@ There are [several helpers](http://rubydoc.info/github/middleman/middleman-blog/
 
 ## Tags
 
-What would blogging be without organizing articles around tags? Simply add a `tag` entry to your articles' [frontmatter](/frontmatter/). Then, you can access the tags for a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) using the [`tag`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#tags-instance_method) method, and you can get a list of all tags with their associated article from [`blog.tags`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method). If you set the `blog.tag_template` setting in `config.rb` to a template (see [the default config.rb](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/config.tt)) you can render a page for each tag. The tag template has the local variable `tagname` set to the current tag and `articles` set to a list of articles with that tag, and you can use the [`tag_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method) helper to generate links to a particular tag page.
+What would blogging be without organizing articles around tags? Simply add a `tag` entry to your articles' [frontmatter](/basics/frontmatter/). Then, you can access the tags for a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle) using the [`tag`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#tags-instance_method) method, and you can get a list of all tags with their associated article from [`blog.tags`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method). If you set the `blog.tag_template` setting in `config.rb` to a template (see [the default config.rb](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/config.tt)) you can render a page for each tag. The tag template has the local variable `tagname` set to the current tag and `articles` set to a list of articles with that tag, and you can use the [`tag_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method) helper to generate links to a particular tag page.
 
 The default template produces a [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb) template for you that produces a page for each tag at `tags/{tag}.html`. Adding a couple tags to the above example would look like this:
 
@@ -341,7 +341,7 @@ Time.zone = "Tokyo"
 
 ## Custom Article Collections
 
-Middleman-Blog also supports the ability to group articles by other [frontmatter](/frontmatter/) data as well. A somewhat contrived example would be the ability to group artilces by a *category* attribute:
+Middleman-Blog also supports the ability to group articles by other [frontmatter](/basics/frontmatter/) data as well. A somewhat contrived example would be the ability to group artilces by a *category* attribute:
 
 ```html
 ---
@@ -378,7 +378,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-might be output (if [`directory_indexes`](/pretty-urls/) is turned on) as:
+might be output (if [`directory_indexes`](/basics/pretty-urls/) is turned on) as:
 
 ```
 build/2011/10/18/middleman/index.html
