@@ -10,7 +10,7 @@ The [sitemap](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap) is a re
 
 ## Seeing the Sitemap
 
-To understand exactly how Middleman sees your site, start the preview server and load up http://localhost:4567/__middleman/sitemap/. You'll be able to brows the whole sitemap and see the source path, destination (build) path, URL, and more for each resource in the sitemap. Pay special attention to the "path": you'll use that path to refer to files from `page`, `ignore` and `proxy` in `config.rb`, and from `link_to` and `url_for` in your templates.
+To understand exactly how Middleman sees your site, start the preview server and load up http://localhost:4567/__middleman/sitemap/. You'll be able to browse the whole sitemap and see the source path, destination (build) path, URL, and more for each resource in the sitemap. Pay special attention to the "path": you'll use that path to refer to files from `page`, `ignore` and `proxy` in `config.rb`, and from `link_to` and `url_for` in your templates.
 
 ## Accessing the Sitemap from Code
 
