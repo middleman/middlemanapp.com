@@ -72,7 +72,7 @@ Sprockets supports Bower, so you can add your Bower components path directly:
 
 ```ruby
 ready do
-  sprockets.append_path 'bower_components'
+  sprockets.append_path File.join root, 'bower_components'
 end
 ```
 
