@@ -1,0 +1,52 @@
+---
+layout: layout
+---
+
+<header id="hero">
+  <h1><%= link_to image_tag("mm-blue-w-text.svg", :width => 225, :height => 225, :alt => "Middleman"), "/jp/", { :class => 'logo' } %></h1>
+  <h2>web サイトの開発をシンプルに</h2>
+</header>
+
+<section role="main">
+  <div id="install">
+    <p><b class="console">$ gem install middleman</b></p>
+
+    <div id="search">
+      <form>
+        <input type="text" id="st-search-input" class="st-search-input" placeholder="Search the documentation" />
+      </form>
+      <div id="st-results-container"></div>
+      <script type="text/javascript">
+        var Swiftype = window.Swiftype || {};
+        (function() {
+          Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
+          Swiftype.inputElement = '#st-search-input';
+          Swiftype.resultContainingElement = '#st-results-container';
+          Swiftype.attachElement = '#st-search-input';
+          Swiftype.renderStyle = "overlay";
+
+          var script = document.createElement('script');
+          script.type = 'text/javascript';
+          script.async = true;
+          script.src = "//swiftype.com/embed.js";
+          var entry = document.getElementsByTagName('script')[0];
+          entry.parentNode.insertBefore(script, entry);
+        }());
+      </script>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="intro">Middleman はモダンな web 開発のあらゆるショートカットやツールを採用した静的サイトジェネレータです。<%= link_to 'はじめに', '/pf/basics/getting-started/' %>。</p>
+    <p class="intro sns">
+      <span><i class="icon-github"> <%= link_to 'Watch', 'https://github.com/middleman/middleman' %></i></span>
+      <span><i class="icon-twitter"> <%= link_to 'Follow @middlemanapp', 'http://twitter.com/middlemanapp' %></i></span>
+    </p>
+
+    <nav class="grid">
+      <%= partial 'layouts/nav' %>
+    </nav>
+
+    <%= partial "layouts/support" %>
+  </div>
+</section>

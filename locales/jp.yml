@@ -1,0 +1,33 @@
+---
+jp:
+  basics:
+    title: Middleman の基礎
+    getting_started: はじめに
+    templates: テンプレート
+    template_helpers: テンプレートヘルパ
+    frontmatter: Frontmatter
+    dynamic_pages: 動的ページ
+    asset_pipeline: アセットパイプライン
+    pretty_urls: きれいな URL (ディレクトリインデックス)
+    livereload: LiveReload
+    blogging: ブログ機能
+
+  advanced:
+    title: 高度な機能
+    configuration: 設定
+    local_data: ローカルデータ
+    localization: 他言語化 (i18n)
+    sitemap: サイトマップ
+    rack_middleware: Rack ミドルウェア
+    custom: カスタム拡張
+    file_size_optimization: ファイルサイズ最適化
+    improving_cacheability: キャッシュ機能の改善
+
+  community:
+    title: コミュニティ
+    extensions: 拡張機能
+    templates: プロジェクトテンプレート
+    deployment: デプロイ方法
+    forum: コミュニティフォーラム
+    github: GitHub リポジトリ
+    built_using_middleman: Middleman 採用サイト

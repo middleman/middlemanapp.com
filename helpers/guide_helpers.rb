@@ -40,4 +40,8 @@ module GuideHelpers
 
     pages.flatten
   end
+
+  def locale_prefix
+    (I18n.locale == :en) ? "" : "/" + I18n.locale.to_s
+  end
 end

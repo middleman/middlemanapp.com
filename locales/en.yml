@@ -1,0 +1,33 @@
+---
+en:
+  basics:
+    title: Middleman Basics
+    getting_started: Getting Started
+    templates: Templates
+    template_helpers: Template Helpers
+    frontmatter: Frontmatter
+    dynamic_pages: Dynamic Pages
+    asset_pipeline: Asset Pipeline
+    pretty_urls: Pretty URLs (Directory Indexes)
+    livereload: LiveReload
+    blogging: Blogging
+
+  advanced:
+    title: Advanced Features
+    configuration: Configuring Your Site
+    local_data: Local Data
+    localization: Localization (i18n)
+    sitemap: Tha Sitemap
+    rack_middleware: Rack Middleware
+    custom: Custom Extensions
+    file_size_optimization: File Size Optimization
+    improving_cacheability: Improving Cacheability
+
+  community:
+    title: Community
+    extensions: Extensions
+    templates: Project Templates
+    deployment: Deployment Solutions
+    forum: Community Forum
+    github: GitHub Repository
+    built_using_middleman: Sites Built Using Middleman
