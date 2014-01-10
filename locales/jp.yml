@@ -1,5 +1,6 @@
 ---
 jp:
+  # navigations
   basics:
     title: Middleman の基礎
     getting_started: はじめに
@@ -33,7 +34,15 @@ jp:
     built_using_middleman: Middleman 採用サイト
 
 
+  # index
   index:
     headline: web サイトの開発をシンプルに
     description: Middleman はモダンな web 開発のあらゆるショートカットやツールを採用した静的サイトジェネレータです。
     getting_started: はじめに
+
+  # community/built-using-middleman
+  built:
+    title: Middleman 採用サイト
+    mobile: Middleman を使ったモバイルアプリケーション
+    blog: Middleman を使ったブログ
+    fork: Github で Fork しサイトを追加してください

@@ -1,5 +1,6 @@
 ---
 en:
+  # navigations
   basics:
     title: Middleman Basics
     getting_started: Getting Started
@@ -33,7 +34,15 @@ en:
     built_using_middleman: Sites Built Using Middleman
 
 
+  # index
   index:
     headline: makes developing websites simple
     description: Middleman is a static site generator using all the shortcuts and tools in modern web development.
     getting_started: Getting started
+
+  # community/built-using-middleman
+  built:
+    title: Sites Built Using Middleman
+    mobile: Mobile Apps Built Using Middleman
+    blog: Blogs Using Middleman
+    fork: Fork and add your site on Github

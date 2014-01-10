@@ -1,9 +1,9 @@
 ---
-title: "Middleman 採用サイト"
+title: Sites Built Using Middleman
 published: true
 ---
 
-<h1>Middleman 採用サイト</h1>
+<h1><%= t("built.title") %></h1>
 
 <ul>
   <li><a href="http://sass-lang.com" target="_blank">http://sass-lang.com</a></li>
@@ -33,7 +33,7 @@ published: true
   <li><a href="http://plantednutrition.com/" target="_blank">http://plantednutrition.com/</a></li>
   <li><a href="http://sskb.umn.edu/" target="_blank">http://sskb.umn.edu/</a></li>
   <li><a href="https://www.findbigmail.com/" target="_blank">https://www.findbigmail.com/</a></li>
-  <li><a href="http://susy.oddbird.com/" target="_blank">http://susy.oddbird.com/</a></li>
+  <li><a href="http://susy.oddbird.net/" target="_blank">http://susy.oddbird.net/</a></li>
   <li><a href="http://sleede.com/" target="_blank">http://sleede.com/</a></li>
   <li><a href="http://www.cyclocane.com" target="_blank">http://www.cyclocane.com</a></li>
   <li><a href="http://merchantos.com" target="_blank">http://merchantos.com</a></li>
@@ -76,16 +76,16 @@ published: true
   <li><a href="http://www.librario.de/" target="_blank">http://www.librario.de</a></li>
   <li><a href="http://www.madebytally.com/" target="_blank">http://www.madebytally.com</a></li>
   <li><a href="http://www.alpine-lab.com" target="_blank">http://www.alpine-lab.com</a></li>
-  <li><a href="http://omegaverse.info" target="_blank">http://omegaverse.info</a> (<a href="http://github.com/movitto/omega">Omega</a> のデモサイト)</li>
+  <li><a href="http://omegaverse.info" target="_blank">http://omegaverse.info</a> (frontend to the <a href="http://github.com/movitto/omega">Omega</a> simulation)</li>
   <li><a href="http://nebulab.it" target="_blank">http://nebulab.it</a></li>
 </ul>
 
-<h1>Middleman を使ったモバイルアプリケーション</h1>
+<h1><%= t("built.mobile") %></h1>
 <ul>
   <li><a href="http://pollev.com/" target="_blank">http://pollev.com/</a></li>
 </ul>
 
-<h1>Middleman を使ったブログ</h1>
+<h1><%= t("built.blog") %></h1>
 
 <ul>
   <li><a href="http://awardwinningfjords.com/" target="_blank">http://awardwinningfjords.com/</a></li>
@@ -119,5 +119,5 @@ published: true
 </ul>
 
 <footer>
-  <%= link_to "Github でFork しサイトを追加してください", "https://github.com/middleman/middleman-guides/blob/master/source/community/built-using-middleman.html.erb" %>
+  <%= link_to t("built.fork"), "https://github.com/middleman/middleman-guides/blob/master/source/localizable/community/built-using-middleman.html.erb" %>
 </footer>
