@@ -31,3 +31,9 @@ en:
     forum: Community Forum
     github: GitHub Repository
     built_using_middleman: Sites Built Using Middleman
+
+
+  index:
+    headline: makes developing websites simple
+    description: Middleman is a static site generator using all the shortcuts and tools in modern web development.
+    getting_started: Getting started

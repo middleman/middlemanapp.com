@@ -31,3 +31,9 @@ jp:
     forum: コミュニティフォーラム
     github: GitHub リポジトリ
     built_using_middleman: Middleman 採用サイト
+
+
+  index:
+    headline: web サイトの開発をシンプルに
+    description: Middleman はモダンな web 開発のあらゆるショートカットやツールを採用した静的サイトジェネレータです。
+    getting_started: はじめに
