@@ -6,7 +6,7 @@ module GuideHelpers
     if data.page.title
       title << data.page.title
     else
-      title << "Hand-crafted frontend development"
+      title << t("index.sub_title")
     end
     title
   end

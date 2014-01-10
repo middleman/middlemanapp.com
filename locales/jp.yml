@@ -36,6 +36,7 @@ jp:
 
   # index
   index:
+    sub_title: 効率的な作業を可能にする Ruby 製の静的サイト生成ツール
     headline: web サイトの開発をシンプルに
     description: Middleman はモダンな web 開発のあらゆるショートカットやツールを採用した静的サイトジェネレータです。
     getting_started: はじめに

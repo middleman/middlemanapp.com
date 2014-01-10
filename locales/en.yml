@@ -36,6 +36,7 @@ en:
 
   # index
   index:
+    sub_title: Hand-crafted frontend development
     headline: makes developing websites simple
     description: Middleman is a static site generator using all the shortcuts and tools in modern web development.
     getting_started: Getting started
