@@ -45,5 +45,5 @@ end
 
 Then I could make a `category.html.erb` that uses the `category` and `pages` variables to build a category listing for each category.
 
-[dynamic pages]: /dynamic-pages/
-[frontmatter]: /frontmatter/
+[dynamic pages]: /basics/dynamic-pages/
+[frontmatter]: /basics/frontmatter/
