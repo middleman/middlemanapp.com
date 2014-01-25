@@ -118,7 +118,7 @@ activate :blog do |blog|
 end
 ```
 
-If you want to wrap each article in a bit of structure before inserting it into a layout, you can use Middleman's [nested layouts](/templates/#toc_4) feature to create an article layout that is then wrapped with your main layout.
+If you want to wrap each article in a bit of structure before inserting it into a layout, you can use Middleman's [nested layouts](/basics/templates/#toc_4) feature to create an article layout that is then wrapped with your main layout.
 
 ## Listing Articles
 
