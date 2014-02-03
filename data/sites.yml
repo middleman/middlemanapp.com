@@ -76,6 +76,7 @@ built:
   - url: http://nebulab.it
   - url: http://rubyconferences.org
     source: https://github.com/ruby-conferences/ruby-conferences-site
+  - url: http://theartificial.nl/
 mobile:
   - url: http://pollev.com
 blogs:
