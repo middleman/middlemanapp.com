@@ -247,7 +247,7 @@ Then, within the partial, you can set the text appropriately as follows:
 ``` html
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
   <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
-  <input type="submit" value=<%= amount_text %> >
+  <input type="submit" value="<%= amount_text %>" >
 </form>
 ```
 
