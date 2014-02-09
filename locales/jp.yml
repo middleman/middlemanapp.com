@@ -17,7 +17,7 @@ jp:
     title: 高度な機能
     configuration: 設定
     local_data: ローカルデータ
-    localization: 他言語化 (i18n)
+    localization: 多言語化 (i18n)
     sitemap: サイトマップ
     rack_middleware: Rack ミドルウェア
     custom: カスタム拡張
