@@ -247,7 +247,7 @@ admin レイアウトでは次のように:
 ``` html
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
   <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
-  <input type="submit" value=<%= amount_text %> >
+  <input type="submit" value="<%= amount_text %>" >
 </form>
 ```
 
