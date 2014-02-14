@@ -241,9 +241,12 @@ highlight('Lorem dolor sit', 'dolor')
 
 ## Lorem Ipsum & Placehold.it helpers
 
-The [Frank project], a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. I've adapted this code for Middleman (god bless the MIT license).
+The [Frank project], a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. We've adapted this code for Middleman (god bless the MIT license).
 
-To use placeholder text:
+For example, if you want to insert 5 sentences of lorem ipsum, you would write
+`<%= lorem.sentences 5 %>`
+
+Other methods available to be used for text:
 
 ``` ruby
 lorem.sentence      # returns a single sentence
