@@ -117,3 +117,5 @@ blogs:
   - url: http://schukin.com
   - url: http://fearmediocrity.co.uk
     source: https://github.com/FearMediocrity/fearmediocrity.co.uk
+  - url: http://lord.io
+    source: https://github.com/lord/blog
