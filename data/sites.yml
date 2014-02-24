@@ -78,6 +78,7 @@ built:
     source: https://github.com/ruby-conferences/ruby-conferences-site
   - url: http://theartificial.nl/
   - url: http://www.vpsland.com
+  - url: http://docs.fraudrankr.com/
 mobile:
   - url: http://pollev.com
 blogs:
