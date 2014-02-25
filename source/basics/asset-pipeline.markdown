@@ -60,7 +60,7 @@ Then you can refer to that asset directly from `script` tags or `javascript_incl
 
 ## Sprockets Import Path
 
-If you have assets in directories other than your `:js_dir` or `:css_dir`, you can make them importable by addin them to your Sprockets import path. Add this to your `config.rb`:
+If you have assets in directories other than your `:js_dir` or `:css_dir`, you can make them importable by adding them to your Sprockets import path. Add this to your `config.rb`:
 
 ```ruby
 ready do
