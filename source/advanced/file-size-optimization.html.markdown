@@ -25,6 +25,12 @@ You can customize how the JavaScript compressor works by setting the `:compresso
 set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
 ```
 
+If you have `asset_hash` activated, are building your site on multiple servers during deploy to sit behind a load balancer, and are compressing Javascript, ensure that mangling variables is disabled. If mangling is enabled, Uglifier will create different compressed versions of the Javascript on each machine, leading to different hashes in the filename and different references in each version of the HTML. For example:
+
+``` ruby
+set :js_compressor, Uglifier.new(:mangle => false)
+```
+
 If you want to exclude any files from being minified, pass the `:ignore` option when activating these extensions, and give it one or more globs, regexes, or procs that identify the files to ignore. Likewise, you can pass an `:exts` option to change which file extensions are renamed.
 
 You can speed up your JavaScript minification (and CoffeeScript builds) by including these gems in your `Gemfile`:
