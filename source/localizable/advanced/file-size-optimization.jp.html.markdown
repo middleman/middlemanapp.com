@@ -25,6 +25,12 @@ end
 set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
 ```
 
+`asset_hash` を有効にし, ロードバランサを使って複数サーバにサイトを構築, JavaScript の圧縮を行う場合には, mangle オプションが無効に指定されていることを確認してください。mangle オプションが有効な場合, Uglifier はサーバマシン毎に異なるバージョンの圧縮した JavaScript ファイルを作ります。そのファイルは異なるハッシュを含むファイル名で HTML の中の参照もバージョン毎に異なります。次のように設定します:
+
+``` ruby
+set :js_compressor, Uglifier.new(:mangle => false)
+```
+
 一部のファイルをミニファイ処理から除外したい場合, これらの拡張を有効化する際に `:ignore` オプションを渡し, 無視するファイルを識別する 1 つ以上のパターンマッチ, 正規表現や Proc を与えます。同じように, ファイル拡張子をリネームし変更するために `:exts` オプションを渡すこともできます。
 
 `Gemfile` に次の gem を追加することで, JavaScript の圧縮(さらには CoffeeScript のビルド) を高速化できます。
