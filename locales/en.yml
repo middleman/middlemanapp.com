@@ -11,6 +11,7 @@ en:
     asset_pipeline: Asset Pipeline
     pretty_urls: Pretty URLs (Directory Indexes)
     livereload: LiveReload
+    directory_structure: Directory Structure
     blogging: Blogging
 
   advanced:

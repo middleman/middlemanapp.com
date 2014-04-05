@@ -84,6 +84,8 @@ built:
   - url: http://www.viselectrica.it
   - url: http://www.shannonethomas.com/
   - url: http://ausca.com
+  - url: http://sourcey.com
+    source: https://github.com/sourcey/sourcey.com
 mobile:
   - url: http://pollev.com
 blogs:
