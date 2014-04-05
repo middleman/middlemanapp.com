@@ -11,7 +11,7 @@ jp:
     asset_pipeline: アセットパイプライン
     pretty_urls: きれいな URL (ディレクトリインデックス)
     livereload: LiveReload
-    directory_structure: Directory Structure    
+    directory_structure: ディレクトリ構造
     blogging: ブログ機能
 
   advanced:
