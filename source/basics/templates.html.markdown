@@ -24,7 +24,7 @@ If we wanted to get fancy, we could add a loop:
 <h1>Welcome</h1>
 <ul>
   <% 5.times do |num| %>
-    <li>Count <%= num %>
+    <li>Count <%= num %></li>
   <% end %>
 </ul>
 ```
