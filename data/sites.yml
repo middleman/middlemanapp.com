@@ -121,7 +121,7 @@ blogs:
   - url: http://robots.thoughtbot.com
   - url: http://abhra.in
   - url: http://blog.riemann.cc
-    source: https://github.com/rriemann/rriemann.github.io/tree/source
+    source: https://github.com/rriemann/blog
   - url: http://nebulab.it/blog
   - url: http://schukin.com
   - url: http://fearmediocrity.co.uk
