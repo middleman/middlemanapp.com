@@ -140,7 +140,7 @@ content_for(:head) { |param1, param2| ...content... }
 <%= tag :img, :src => "/my_image.png" %>
   # => <img src='/my_image.png'>
 
-<%= content_tag :p, :class => "stuff" do %>
+<% content_tag :p, :class => "stuff" do %>
   こんにちわ
 <% end %>
   # => <p class='stuff'>こんにちわ</p>

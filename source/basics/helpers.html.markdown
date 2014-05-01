@@ -140,7 +140,7 @@ The tag and `content_tag` are for building arbitrary html tags with a name and s
 <%= tag :img, :src => "/my_image.png" %>
   # => <img src='/my_image.png'>
 
-<%= content_tag :p, :class => "stuff" do %>
+<% content_tag :p, :class => "stuff" do %>
   Hello
 <% end %>
   # => <p class='stuff'>Hello</p>
