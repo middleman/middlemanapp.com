@@ -87,6 +87,9 @@ built:
   - url: http://ausca.com
   - url: http://sourcey.com
     source: https://github.com/sourcey/sourcey.com
+  - url: https://www.rainforestqa.com/
+  - url: https://docs.rainforestqa.com/
+    source: https://github.com/rainforestapp/docs
 mobile:
   - url: http://pollev.com
 blogs:
@@ -132,3 +135,4 @@ blogs:
   - url: http://www.sudandola.com
   - url: http://www.4l3c.org
   - url: http://davidmles.com
+  - url: https://blog.rainforestqa.com/
