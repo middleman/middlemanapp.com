@@ -110,7 +110,7 @@ end
 
 ## レイアウト
 
-`config.rb` ですべての記事に使われる [レイアウト](/jp/basics/templates/#toc_3) を指定することができます。
+`config.rb` ですべての記事に使われる [レイアウト](/jp/basics/templates/#レイアウト) を指定することができます。
 
 ``` ruby
 activate :blog do |blog|
@@ -118,7 +118,7 @@ activate :blog do |blog|
 end
 ```
 
-レイアウトに挿入する前に記事ごとにちょっとした構造で囲みたい場合, 記事レイアウトを構成してからメインのレイアウトで囲むために, Middleman の [入れ子レイアウト](/jp/basics/templates/#toc_4) 機能を使うことができます。
+レイアウトに挿入する前に記事ごとにちょっとした構造で囲みたい場合, 記事レイアウトを構成してからメインのレイアウトで囲むために, Middleman の [入れ子レイアウト](/jp/basics/templates/#入れ子レイアウト) 機能を使うことができます。
 
 ## 記事一覧
 
