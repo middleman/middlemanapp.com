@@ -110,7 +110,7 @@ You might also consider enabling the [pretty urls](/basics/pretty-urls/) feature
 
 ## Layouts
 
-You can set a specific [layout](/templates/#toc_3) to be used for all articles in your `config.rb`:
+You can set a specific [layout](/basics/templates/#layouts) to be used for all articles in your `config.rb`:
 
 ``` ruby
 activate :blog do |blog|
@@ -118,7 +118,7 @@ activate :blog do |blog|
 end
 ```
 
-If you want to wrap each article in a bit of structure before inserting it into a layout, you can use Middleman's [nested layouts](/basics/templates/#toc_4) feature to create an article layout that is then wrapped with your main layout.
+If you want to wrap each article in a bit of structure before inserting it into a layout, you can use Middleman's [nested layouts](/basics/templates/#nested-layouts) feature to create an article layout that is then wrapped with your main layout.
 
 ## Listing Articles
 
