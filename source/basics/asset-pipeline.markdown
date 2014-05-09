@@ -36,6 +36,18 @@ body {
 
 If you're using Sass you should stick with Sass' `@import` rule rather than using Sprockets directives.
 
+## Deploying combined assets only
+
+If you prefer to deploy only the combined (concatenated) assets to the `build` directory with `middleman build` command, you should use the underscore-names for your ingredient assets. Example: the main `/source/javascripts/all.js` file is used for all dependencies:
+
+``` javascript
+//= require "_jquery"
+//= require "_my_lib_code"
+//= require "_my_other_code"
+```
+
+and the `/source/javascripts/` directory should contain files: `_jquery.js`, `_my_lib_code.js`, `_my_other_code.js`. The resulting `/build/javascripts/` directory will contain the `all.js` file only, with all dependant code included.
+
 ## Asset Gems
 
 You can use assets from gems by including them in your `Gemfile`, like this:
