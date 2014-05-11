@@ -90,6 +90,8 @@ built:
   - url: https://www.rainforestqa.com/
   - url: https://docs.rainforestqa.com/
     source: https://github.com/rainforestapp/docs
+  - url: http://www.project-atomic.io/
+    source: https://github.com/projectatomic/atomic-site
 mobile:
   - url: http://pollev.com
 blogs:
