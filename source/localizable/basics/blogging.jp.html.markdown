@@ -32,7 +32,7 @@ middleman init MY_BLOG_PROJECT --template=blog
 
 ## 記事
 
-Middleman 自体がそうであるように, ブログ拡張は個別ファイルにフォーカスしています。それぞれの記事はファイルごとに好きなテンプレート言語を使用できます。記事のデフォルトのファイル名構造は `{year}-{month}-{day}-{title}.html` です。新しい記事を作りたい場合, 正しいパスに配置し, 動作させるために基本的な [Frontmatter](/jp/basics/frontmatter/) を記述します。`config.rb` で `:blog` が有効化されている場合, どのファイル形式で Middleman が記事を探すのか変更する `blog.source` オプションを設定できます。
+Middleman 自体がそうであるように, ブログ拡張は個別ファイルにフォーカスしています。それぞれの記事はファイルごとに好きなテンプレート言語を使用できます。記事のデフォルトのファイル名構造は `{year}-{month}-{day}-{title}.html` です。新しい記事を作りたい場合, 正しいパスに配置し, 動作させるために基本的な [Frontmatter](/jp/basics/frontmatter/) を記述します。`config.rb` で `:blog` が有効化されている場合, どのファイル形式で Middleman が記事を探すのか変更する `blog.sources` オプションを設定できます。
 
 Middleman に関する新しい投稿を作るとしましょう。`source/2011-10-18-middleman.html.markdown` を作ります。このファイルの最小限の内容は Frontmatter に `title` を入力したものです:
 
