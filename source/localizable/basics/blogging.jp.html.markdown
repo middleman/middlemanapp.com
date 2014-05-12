@@ -62,7 +62,7 @@ activate :blog do |blog|
 end
 ```
 
-あらゆるリンク設定 (`permalink`, `sources`, `taglink`, `year_link`, `month_link`, `day_link`) に `prefix` が追加されるので, 他の設定でこれを繰り返す必要はありません。テンプレートの置かれた場所 (`calendar_template`, `year_template`, `month_template`, `day_template`, や `tag_template`) には `prefix` が追加 *されない* ので注意してください。テンプレートを記事と同じ場所に配置したいのであれば, これからの設定に同じ prefix を追加してください。
+あらゆるリンク設定 (`permalink`, `sources`, `taglink`, `year_link`, `month_link`, `day_link`) に `prefix` が追加されるので, 他の設定でこれを繰り返す必要はありません。テンプレートの置かれた場所 (`calendar_template`, `year_template`, `month_template`, `day_template`, や `tag_template`) には `prefix` が追加 *されない* ので注意してください。テンプレートを記事と同じ場所に配置したいのであれば, これらの設定に同じ prefix を追加してください。
 
 投稿を閲覧するためのパーマリンクは次のように簡単に変更できます:
 
