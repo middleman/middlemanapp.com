@@ -134,7 +134,7 @@ content_for(:head) { |param1, param2| ...content... }
 
 Tag helpers are the basic building blocks used to construct html "tags" within a view template. There are three major functions for this category: `tag`, `content_tag` and `input_tag`.
 
-The tag and `content_tag` are for building arbitrary html tags with a name and specified options. If the tag contains "content" within then `content_tag` is used. For example:
+The `tag` and `content_tag` are for building arbitrary html tags with a name and specified options. If the tag contains "content" within then `content_tag` is used. For example:
 
 ``` html
 <%= tag :img, :src => "/my_image.png" %>
@@ -304,7 +304,7 @@ helpers do
 end
 ```
 
-Alternatively, you can created external Ruby modules which contain helpers and include them. You can put files in the `lib` directory. For example, if you were to extract the above helpers into a file named `lib/custom_helpers.rb`, you could create a module:
+Alternatively, you can create external Ruby modules which contain helpers and include them. You can put files in the `lib` directory. For example, if you were to extract the above helpers into a file named `lib/custom_helpers.rb`, you could create a module:
 
 ``` ruby
 module CustomHelpers
