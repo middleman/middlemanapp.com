@@ -92,6 +92,8 @@ built:
     source: https://github.com/rainforestapp/docs
   - url: http://www.project-atomic.io/
     source: https://github.com/projectatomic/atomic-site
+  - url: http://pi.tafkas.net/
+    source: https://github.com/Tafkas/my-raspberry-pi-site
 mobile:
   - url: http://pollev.com
 blogs:
