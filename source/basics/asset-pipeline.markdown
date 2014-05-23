@@ -63,9 +63,7 @@ Once you've added a dependency on these gems, any images and fonts from the gem 
 If you want to refer to a gem stylesheet or JS file directly from your HTML rather than including it in your own assets, you'll need to import it explicitly in `config.rb`:
 
 ```ruby
-ready do
-  sprockets.import_asset 'jquery-mobile'
-end
+sprockets.import_asset 'jquery-mobile'
 ```
 
 Then you can refer to that asset directly from `script` tags or `javascript_include_tag`.
@@ -75,17 +73,13 @@ Then you can refer to that asset directly from `script` tags or `javascript_incl
 If you have assets in directories other than your `:js_dir` or `:css_dir`, you can make them importable by adding them to your Sprockets import path. Add this to your `config.rb`:
 
 ```ruby
-ready do
-  sprockets.append_path '/my/shared/assets/'
-end
+sprockets.append_path '/my/shared/assets/'
 ```
 
 Sprockets supports Bower, so you can add your Bower components path directly:
 
 ```ruby
-ready do
-  sprockets.append_path File.join root, 'bower_components'
-end
+sprockets.append_path File.join root, 'bower_components'
 ```
 
 ## Compass

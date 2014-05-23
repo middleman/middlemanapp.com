@@ -51,9 +51,7 @@ gem "bootstrap-sass", :require => false
 アセットファイルとして追加せず, HTML から 直接 gem のスタイルシートや JS ファイルを参照したい場合, `config.rb` の中で明示的に読み込む必要があります。
 
 ```ruby
-ready do
-  sprockets.import_asset 'jquery-mobile'
-end
+sprockets.import_asset 'jquery-mobile'
 ```
 
 これで `script` タグや `javascript_include_tag` から直接参照することができます。
@@ -63,17 +61,13 @@ end
 `:js_dir` や `:css_dir` の他にもアセットディレクトリがある場合, Sprockets のインポートパスを追加することができます。`config.rb` に次の内容を追加してください:
 
 ```ruby
-ready do
-  sprockets.append_path '/my/shared/assets/'
-end
+sprockets.append_path '/my/shared/assets/'
 ```
 
 Sprockets supports Bower, so you can add your Bower components path directly:
 
 ```ruby
-ready do
-  sprockets.append_path 'bower_components'
-end
+sprockets.append_path 'bower_components'
 ```
 
 ## Compass
