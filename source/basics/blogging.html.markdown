@@ -64,7 +64,7 @@ end
 
 All other link settings (`permalink`, `sources`, `taglink`, `year_link`, `month_link`, `day_link`) are added on to `prefix`, so you don't need to repeat it in every setting. Note that template locations (`calendar_template`, `year_template`, `month_template`, `day_template`, and `tag_template`) do *not* get `prefix` added to them, so if you want them to be in the same place as your articles you should add the same prefix to those settings.
 
-The permalink for viewing your posts can changed on its own as well:
+The permalink for viewing your posts can be changed on its own as well:
 
 ``` ruby
 activate :blog do |blog|
