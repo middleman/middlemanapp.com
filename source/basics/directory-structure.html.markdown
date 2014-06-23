@@ -44,5 +44,5 @@ Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder cal
 
 ### Lib Directory
 
-The `lib` directory enables you to include external Ruby modules which contain [helpers](/basics/helpers/) for building your application. If you use Rails then you will be farmiliar with this layout.
+The `lib` directory enables you to include external Ruby modules which contain [helpers](/basics/helpers/) for building your application. If you use Rails then you will be familiar with this layout.
 
