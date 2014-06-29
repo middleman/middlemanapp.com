@@ -8,11 +8,11 @@ The default Middleman installation consists of a directory structure which looks
 
 ``` ruby
 mymiddlemansite/
++-- .gitignore
 +-- Gemfile
 +-- Gemfile.lock
 +-- config.rb
 +-- source
-    |   .gitignore
     +-- images
     ¦   +-- background.png
     ¦   +-- middleman.png
