@@ -1,4 +1,5 @@
 built:
+  - url: http://mokaproject.com/
   - url: http://frontcube.com
   - url: http://ravisuhag.com/
   - url: http://www.theverge.com/a/the-verge-50/intro
@@ -99,6 +100,7 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: http://snwh.org/
   - url: http://awardwinningfjords.com
   - url: http://blog.troutwine.us
   - url: http://blog.vanutsteen.nl
