@@ -145,4 +145,6 @@ blogs:
   - url: http://www.4l3c.org
   - url: http://davidmles.com
   - url: https://blog.rainforestqa.com/
+  - url: http://syui.github.io/middleman/
+    source: https://github.com/syui/middleman-simple-template
 
