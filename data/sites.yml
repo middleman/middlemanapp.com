@@ -7,6 +7,7 @@ built:
   - url: http://www.theverge.com/a/the-verge-50/intro
   - url: http://dahal.co
   - url: http://sass-lang.com
+    source: https://github.com/sass/sass-site
   - url: http://startexploding.com
   - url: http://sassandcompass.com
   - url: http://craftyblues.com
