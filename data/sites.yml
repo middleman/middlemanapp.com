@@ -7,6 +7,7 @@ built:
   - url: http://www.theverge.com/a/the-verge-50/intro
   - url: http://dahal.co
   - url: http://sass-lang.com
+    source: https://github.com/sass/sass-site
   - url: http://startexploding.com
   - url: http://sassandcompass.com
   - url: http://craftyblues.com
@@ -99,6 +100,8 @@ built:
     source: https://github.com/projectatomic/atomic-site
   - url: http://pi.tafkas.net/
     source: https://github.com/Tafkas/my-raspberry-pi-site
+  - url: http://jina.me
+    source: https://github.com/jina/jina.me
 mobile:
   - url: http://pollev.com
 blogs:
