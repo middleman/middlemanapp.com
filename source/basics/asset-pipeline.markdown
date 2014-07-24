@@ -110,6 +110,7 @@ and therefor this method is not available. But be careful, you might need to add
 
 ```ruby
 require 'rake/file_lists'
+require 'pathname'
 
 bower_directory = 'vendor/assets/components'
 
