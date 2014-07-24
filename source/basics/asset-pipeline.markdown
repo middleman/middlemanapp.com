@@ -82,6 +82,65 @@ Sprockets supports Bower, so you can add your Bower components path directly:
 sprockets.append_path File.join root, 'bower_components'
 ```
 
+To make your bower controlled assets - images, fonts etc. - available within
+your application, you need to import them using `sprockets.import_asset`. Given
+your component is called `jquery`, you can import all files mentioned in the
+[`main`-section](https://github.com/bower/bower.json-spec) of the `bower.json`
+by using the follwoing statement in your `config.rb`:
+
+```ruby
+sprockets.import_asset 'jquery'
+```
+
+If you prefer to import a specific asset you need to use its relative path,
+which is `<component_name>/<path_to_asset>`:
+
+```ruby
+sprockets.import_asset 'jquery/dist/jquery.js'
+```
+
+To automate this a bit, you can use file lists from
+[rake](https://github.com/jimweirich/rake). Another option might be
+[hike](https://github.com/sstephenson/hike). You CANNOT use
+`sprockets.each_file` for this, because `sprockets` on top-level in `config.rb`
+is a [faked sprocket
+environment](https://github.com/middleman/middleman-sprockets/blob/master/lib/middleman-sprockets/config_only_environment.rb)
+and therefor this method is not available. But be careful, you might need to add `gem
+"rake"` or `gem "hike"` to your project-`Gemfile` to make this work.
+
+```ruby
+require 'rake/file_lists'
+
+bower_directory = 'vendor/assets/components'
+
+# Build search patterns
+patterns = [
+  '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+  '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+  '.js',                                    # Javascript
+].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
+
+# Create file list and exclude unwanted files
+Rake::FileList.new(*patterns) do |l|
+  l.exclude(/src/)
+  l.exclude(/test/)
+  l.exclude(/demo/)
+  l.exclude { |f| !File.file? f }
+end.each do |f|
+  # Import relative paths
+  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
+end
+```
+
+## Helpers
+
+There are helpers available to be used within your `*.scss` files:
+
+* `image-path()`, `image-url()`
+* `font-path()`, `font-url()`
+
+Those helpers prepend the correct directory/url to your asset, e.g. `image-path('lightbox2/img/close.png')` becomes `images/lightbox2/img/close.png`. To reference a bower controlled asset you need to use its relative name `lightbox2/img/close.png` for an image which is part of the `lightbox2`-component.
+
 ## Compass
 
 Middleman comes with [Compass] support out of the box. Compass is a powerful framework for writing cross-browser stylesheets in Sass. Compass also has its own extensions, like [Susy], which you can use in Middleman. All of Sprockets' path helpers like `image-url` are hooked into the Middleman Sitemap, so other extensions (like `:asset_hash`) will affect your stylesheets too.
