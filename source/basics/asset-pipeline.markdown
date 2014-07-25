@@ -112,24 +112,26 @@ and therefor this method is not available. But be careful, you might need to add
 require 'rake/file_lists'
 require 'pathname'
 
-bower_directory = 'vendor/assets/components'
-
-# Build search patterns
-patterns = [
-  '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
-  '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
-  '.js',                                    # Javascript
-].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
-
-# Create file list and exclude unwanted files
-Rake::FileList.new(*patterns) do |l|
-  l.exclude(/src/)
-  l.exclude(/test/)
-  l.exclude(/demo/)
-  l.exclude { |f| !File.file? f }
-end.each do |f|
-  # Import relative paths
-  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
+configure :build do
+  bower_directory = 'vendor/assets/components'
+  
+  # Build search patterns
+  patterns = [
+    '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+    '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+    '.js',                                    # Javascript
+  ].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
+  
+  # Create file list and exclude unwanted files
+  Rake::FileList.new(*patterns) do |l|
+    l.exclude(/src/)
+    l.exclude(/test/)
+    l.exclude(/demo/)
+    l.exclude { |f| !File.file? f }
+  end.each do |f|
+    # Import relative paths
+    sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
+  end
 end
 ```
 
