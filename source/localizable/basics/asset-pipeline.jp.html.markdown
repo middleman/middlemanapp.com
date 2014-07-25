@@ -36,6 +36,18 @@ body {
 
 Sass を使う場合, Sprockets のファイル読み込み方法よりも Sass の `@Import` を使用すべきです。
 
+## 結合したアセットファイルのみデプロイ
+
+`middleman build` コマンドを使った場合に `build` ディレクトリに結合した (1 つにまとめた) アセットファイルのみデプロイしたい場合, 結合対象のアセットファイル名にアンダースコアを使う必要があります。例えば, メインの `/source/javascripts/all.js` は次の依存関係で利用されるます:
+
+``` javascript
+//= require "_jquery"
+//= require "_my_lib_code"
+//= require "_my_other_code"
+```
+
+そして `/source/javascripts/` ディレクトリには次のファイルが用意される必要があります: `_jquery.js`, `_my_lib_code.js`, `_my_other_code.js`。結果として `/build/javascripts/` ディレクトリには依存したコードを含む `all.js` だけがデプロイされます。
+
 ## アセット gem
 
 `Gemfile` で読み込まれた gem からアセットを使用することができます:
