@@ -102,6 +102,8 @@ built:
     source: https://github.com/Tafkas/my-raspberry-pi-site
   - url: http://jina.me
     source: https://github.com/jina/jina.me
+  - url: http://distantfutu.re
+    source: https://github.com/sgehrman/distantfuture
 mobile:
   - url: http://pollev.com
 blogs:
