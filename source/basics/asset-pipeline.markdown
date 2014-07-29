@@ -119,7 +119,7 @@ patterns = [
   '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
   '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
   '.js',                                    # Javascript
-].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
+].map { |e| File.join(bower_directory, "**", "*#{e}" ) }
 
 # Create file list and exclude unwanted files
 Rake::FileList.new(*patterns) do |l|
@@ -129,7 +129,7 @@ Rake::FileList.new(*patterns) do |l|
   l.exclude { |f| !File.file? f }
 end.each do |f|
   # Import relative paths
-  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
+  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(bower_directory))
 end
 ```
 
