@@ -99,6 +99,18 @@ which is `<component_name>/<path_to_asset>`:
 sprockets.import_asset 'jquery/dist/jquery.js'
 ```
 
+If you need to set an individual output directory, you can pass `#import_asset`
+a block. This block gets the logical path of the asset as `Pathname` and needs
+to return the output directory or `nil`.
+
+```ruby
+sprockets.import_asset 'jquery/dist/jquery.js' do |logical_path|
+  # returns dirname of logical_path
+  # => jquery/dist
+  logical_path.split.first
+end
+```
+
 To automate this a bit, you can use file lists from
 [rake](https://github.com/jimweirich/rake). Another option might be
 [hike](https://github.com/sstephenson/hike). You CANNOT use
@@ -112,26 +124,24 @@ and therefor this method is not available. But be careful, you might need to add
 require 'rake/file_lists'
 require 'pathname'
 
-configure :build do
-  bower_directory = 'vendor/assets/components'
-  
-  # Build search patterns
-  patterns = [
-    '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
-    '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
-    '.js',                                    # Javascript
-  ].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
-  
-  # Create file list and exclude unwanted files
-  Rake::FileList.new(*patterns) do |l|
-    l.exclude(/src/)
-    l.exclude(/test/)
-    l.exclude(/demo/)
-    l.exclude { |f| !File.file? f }
-  end.each do |f|
-    # Import relative paths
-    sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
-  end
+bower_directory = 'vendor/assets/components'
+
+# Build search patterns
+patterns = [
+  '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+  '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+  '.js',                                    # Javascript
+].map { |e| File.join(#{bower_directory}, "**", "*#{e}" ) }
+
+# Create file list and exclude unwanted files
+Rake::FileList.new(*patterns) do |l|
+  l.exclude(/src/)
+  l.exclude(/test/)
+  l.exclude(/demo/)
+  l.exclude { |f| !File.file? f }
+end.each do |f|
+  # Import relative paths
+  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
 end
 ```
 
