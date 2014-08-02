@@ -82,6 +82,66 @@ Sprockets supports Bower, so you can add your Bower components path directly:
 sprockets.append_path 'bower_components'
 ```
 
+bower で管理されたアセットファイル - 画像, フォントなど - を Middleman プロジェクトの中で利用するには,
+`sprockets.import_asset` を使って bower 管理下のファイルをインポートする必要があります。
+`jquery` が用意されている場合には次の書き方をします。`bower.json` の
+[`main` セクション](https://github.com/bower/bower.json-spec) に
+記載されているファイルを `config.rb` で次の構文を使ってインポートすることができます。
+
+```ruby
+sprockets.import_asset 'jquery'
+```
+
+特定のアセットファイルをインポートしたい場合には
+`<コンポーネント名>/<アセットファイルへのパス>` のように相対パスを使う必要があります:
+
+```ruby
+sprockets.import_asset 'jquery/dist/jquery.js'
+```
+
+この作業を少し自動化するには, [rake](https://github.com/jimweirich/rake) から
+ファイルリストを利用することができます。この他に [hike](https://github.com/sstephenson/hike) を
+使うこともできるでしょう。この方法では `sprockets.each_file` が使うことができません。
+`config.rb` にある `sprockets` は 
+[sprockets 環境のフェイク](https://github.com/middleman/middleman-sprockets/blob/master/lib/middleman-sprockets/config_only_environment.rb) なので
+このメソッドを使うことができません。
+注意してください。この動作を実現するために `gem "rake"` や `gem "hike"` を `Gemfile` に
+追加する必要があるかもしれません。
+
+```ruby
+require 'rake/file_lists'
+require 'pathname'
+
+bower_directory = 'vendor/assets/components'
+
+# 検索パターンを用意
+patterns = [
+  '.png',  '.gif', '.jpg', '.jpeg', '.svg', # 画像
+  '.eot',  '.otf', '.svc', '.woff', '.ttf', # フォント
+  '.js',                                    # Javascript
+].map { |e| File.join(bower_directory, "**", "*#{e}" ) }
+
+# ファイルリストを作り, 不要ファイルを除外
+Rake::FileList.new(*patterns) do |l|
+  l.exclude(/src/)
+  l.exclude(/test/)
+  l.exclude(/demo/)
+  l.exclude { |f| !File.file? f }
+end.each do |f|
+  # 相対パスをインポートする
+  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(bower_directory))
+end
+```
+
+## Helpers
+
+`*.scss` ファイルの中で利用できるヘルパがあります:
+
+* `image-path()`, `image-url()`
+* `font-path()`, `font-url()`
+
+これらのヘルパはアセットファイルへの正しいディレクトリ/ url をファイルパスとして追加します。例えば, `image-path('lightbox2/img/close.png')` が `images/lightbox2/img/close.png` になります。 bower 管理下のアセットファイルを参照するには `lightbox2`-component のファイルの 1 つである画像ファイル `lightbox2/img/close.png` を相対的な名前を指定する必要があります。
+
 ## Compass
 
 Middleman は柔軟な [Compass] サポートを備えています。Compass は Sass でクロスブラウザなスタイルシートを書くためのパワフルなフレームワークです。Compass は, [Susy] のように, Middleman で使用できる拡張機能です。`image-url` のような Sprockets パスヘルパは Middleman のサイトマップにフックされるので, その他の拡張( :asset_hash のような) もスタイルシートに影響します。
