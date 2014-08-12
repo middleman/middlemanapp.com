@@ -99,16 +99,23 @@ which is `<component_name>/<path_to_asset>`:
 sprockets.import_asset 'jquery/dist/jquery.js'
 ```
 
-If you need to set an individual output directory, you can pass `#import_asset`
+If you need to set an individual output path, you can pass `#import_asset`
 a block. This block gets the logical path of the asset as `Pathname` and needs
-to return the output directory or `nil`.
+to return the output path for the asset.
 
 ```ruby
-sprockets.import_asset 'jquery/dist/jquery.js' do |logical_path|
-  # returns dirname of logical_path
-  # => jquery/dist
-  logical_path.split.first
+sprockets.import_asset('jquery/dist/jquery.js') do |logical_path|
+  Pathname.new('javascripts_new.d') + logical_path
+  # => javascripts_new.d/jquery/dist/jquery.js
 end
+```
+
+Make sure to use parentheses for `#import_asset` if you are using curly braces
+for the block! Otherwise the block might get passed to another method and not
+to `#import_asset` and you wonder why the output path is not set correctly.
+
+```ruby
+sprockets.import_asset('jquery/dist/jquery.js') { |logical_path| Pathname.new('javascripts_new.d') + logical_path }
 ```
 
 To automate this a bit, you can use file lists from
@@ -141,7 +148,7 @@ Rake::FileList.new(*patterns) do |l|
   l.exclude { |f| !File.file? f }
 end.each do |f|
   # Import relative paths
-  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory}))
+  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory})))
 end
 ```
 
