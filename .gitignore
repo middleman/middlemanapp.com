@@ -9,3 +9,4 @@ source/mint/config/db.php
 .rbenv-version
 .mm-pid-*
 .ruby-version
+.divshot-cache
