@@ -38,11 +38,6 @@
       span { display: block; }
     }
   }
-  #footer {
-    .link {
-      @include float-left;
-    }
-  }
 }
 
 /*      Index

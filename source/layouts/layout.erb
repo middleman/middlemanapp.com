@@ -14,7 +14,8 @@
     <footer id="footer">
       <div class="container">
         <p class="copyright">
-          &copy; 2011-2014 <a href="http://awardwinningfjords.com">Thomas Reynolds</a>.
+          &copy; 2011-2014 <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>.<br>
+          Hosting graciously provided by <%= link_to "Divshot", "http://www.divshot.com" %>.
         </p>
         <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
       </div>
@@ -26,7 +27,6 @@
     <%= stylesheet_link_tag "solarized_light" %>
     <script>hljs.initHighlightingOnLoad();</script>
 
-    <script src='https://spacebox.io/embed/js/embed-v1.js'></script>
     <%= partial 'layouts/tracking' %>
   </body>
 </html>
