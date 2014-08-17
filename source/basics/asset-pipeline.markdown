@@ -128,7 +128,7 @@ and therefor this method is not available. But be careful, you might need to add
 "rake"` or `gem "hike"` to your project-`Gemfile` to make this work.
 
 ```ruby
-require 'rake/file_lists'
+require 'rake/file_list'
 require 'pathname'
 
 bower_directory = 'vendor/assets/components'
