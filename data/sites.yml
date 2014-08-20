@@ -104,6 +104,7 @@ built:
     source: https://github.com/jina/jina.me
   - url: http://distantfutu.re
     source: https://github.com/sgehrman/distantfuture
+  - url: http://www.ecosio.com
 mobile:
   - url: http://pollev.com
 blogs:
@@ -155,4 +156,5 @@ blogs:
   - url: http://syui.github.io/middleman/
     source: https://github.com/syui/middleman-simple-template
   - url: https://chareice.com
+  - url: http://www.ecosio.com/de/blog
 
