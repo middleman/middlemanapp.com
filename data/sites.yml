@@ -1,4 +1,5 @@
 built:
+  - url: https://www.simple.com
   - url: http://prototype-interactive.com/
   - url: http://www.mangrove.com
   - url: http://mokaproject.com/
@@ -108,6 +109,7 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: https://www.simple.com/blog
   - url: http://snwh.org/
   - url: http://awardwinningfjords.com
   - url: http://blog.troutwine.us
