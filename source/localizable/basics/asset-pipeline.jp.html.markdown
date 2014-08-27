@@ -148,7 +148,7 @@ Rake::FileList.new(*patterns) do |l|
   l.exclude { |f| !File.file? f }
 end.each do |f|
   # 相対パスをインポートする
-  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory})))
+  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(bower_directory)))
 end
 ```
 
