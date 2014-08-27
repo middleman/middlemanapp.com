@@ -99,6 +99,25 @@ sprockets.import_asset 'jquery'
 sprockets.import_asset 'jquery/dist/jquery.js'
 ```
 
+個別の出力パスを設定する必要がある場合には, `#import_asset` ブロックを
+渡すことができます。このブロックは `Pathname` としてアセットファイルの論理パスを取得し
+アセットファイルの出力パスを返します。
+
+```ruby
+sprockets.import_asset('jquery/dist/jquery.js') do |logical_path|
+  Pathname.new('javascripts_new.d') + logical_path
+  # => javascripts_new.d/jquery/dist/jquery.js
+end
+```
+
+ブロックで中括弧を使う場合には `#import_asset` に括弧を使ってください。
+そうでなければブロックに `#import_asset` ではない別のメソッドを渡してしまい
+正しい出力パスが得られない場合があります。
+
+```ruby
+sprockets.import_asset('jquery/dist/jquery.js') { |logical_path| Pathname.new('javascripts_new.d') + logical_path }
+```
+
 この作業を少し自動化するには, [rake](https://github.com/jimweirich/rake) から
 ファイルリストを利用することができます。この他に [hike](https://github.com/sstephenson/hike) を
 使うこともできるでしょう。この方法では `sprockets.each_file` が使うことができません。
@@ -109,7 +128,7 @@ sprockets.import_asset 'jquery/dist/jquery.js'
 追加する必要があるかもしれません。
 
 ```ruby
-require 'rake/file_lists'
+require 'rake/file_list'
 require 'pathname'
 
 bower_directory = 'vendor/assets/components'
@@ -129,7 +148,7 @@ Rake::FileList.new(*patterns) do |l|
   l.exclude { |f| !File.file? f }
 end.each do |f|
   # 相対パスをインポートする
-  sprockets.import_asset Pathname.new(f).relative_path_from(Pathname.new(bower_directory))
+  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(#{bower_directory})))
 end
 ```
 
