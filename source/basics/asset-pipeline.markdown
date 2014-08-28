@@ -86,7 +86,7 @@ To make your bower controlled assets - images, fonts etc. - available within
 your application, you need to import them using `sprockets.import_asset`. Given
 your component is called `jquery`, you can import all files mentioned in the
 [`main`-section](https://github.com/bower/bower.json-spec) of the `bower.json`
-by using the follwoing statement in your `config.rb`:
+by using the following statement in your `config.rb`:
 
 ```ruby
 sprockets.import_asset 'jquery'
