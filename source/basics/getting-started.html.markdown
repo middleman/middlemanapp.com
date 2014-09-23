@@ -100,13 +100,13 @@ Middleman ships with a number of basic project templates, including:
 **[HTML5 Boilerplate]** 
 
 ``` bash
-middleman init my_new_mobile_project --template=html5
+middleman init my_new_html5_project --template=html5
 ```
 
 **[SMACSS]**
 
 ``` bash
-middleman init my_new_mobile_project --template=smacss
+middleman init my_new_smacss_project --template=smacss
 ```
 
 **[Mobile Boilerplate](http://html5boilerplate.com/mobile/)**
