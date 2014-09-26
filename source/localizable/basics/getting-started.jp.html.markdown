@@ -90,7 +90,7 @@ middleman init --help
 このコマンドは私の独自モバイルテンプレートを表示し, 私は以前と同じように新しいプロジェクトを作ることができます:
 
 ``` bash
-middleman init my_new_mobile_project --template=mobile
+middleman init my_new_html5_project --template=html5
 ```
 
 ### 用意されているプロジェクトテンプレート
@@ -106,7 +106,7 @@ middleman init my_new_mobile_project --template=html5
 **[SMACSS]**
 
 ``` bash
-middleman init my_new_mobile_project --template=smacss
+middleman init my_new_smacss_project --template=smacss
 ```
 
 **[Mobile Boilerplate](http://html5boilerplate.com/mobile/)**
