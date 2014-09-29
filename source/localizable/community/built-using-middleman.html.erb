@@ -6,7 +6,7 @@ published: true
 <h1><%= t("built.title") %></h1>
 
 <ul>
-  <% for site in data.sites.built.each do %>
+  <% for site in data.sites.built.sort_by{ |s| s.title || s.url }.each do %>
     <%= partial "layouts/site", locals: { site: site } %>
   <% end %>
 </ul>
@@ -14,7 +14,7 @@ published: true
 <h1><%= t("built.mobile") %></h1>
 
 <ul>
-  <% for site in data.sites.mobile do %>
+  <% for site in data.sites.mobile.sort_by{ |s| s.title || s.url }.each do %>
     <%= partial "layouts/site", locals: { site: site } %>
   <% end %>
 </ul>
@@ -22,7 +22,7 @@ published: true
 <h1><%= t("built.blog") %></h1>
 
 <ul>
-  <% for site in data.sites.blogs do %>
+  <% for site in data.sites.blogs.sort_by{ |s| s.title || s.url }.each do %>
     <%= partial "layouts/site", locals: { site: site } %>
   <% end %>
 </ul>
