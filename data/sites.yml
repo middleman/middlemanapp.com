@@ -1,6 +1,7 @@
 built:
   - url: http://cascadingmedia.com
   - url: https://www.simple.com
+    title: "Simple"
   - url: http://prototype-interactive.com/
   - url: http://www.mangrove.com
   - url: http://mokaproject.com/
@@ -11,6 +12,7 @@ built:
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
   - url: http://sass-lang.com
+    title: "Saas"
     source: https://github.com/sass/sass-site
   - url: http://startexploding.com
   - url: http://sassandcompass.com
@@ -79,6 +81,7 @@ built:
   - url: http://tsumego.tasuki.org
     source: https://github.com/tasuk/tsumego-web
   - url: http://mailchimp.com
+    title: "MailChimp"
   - url: http://mandrill.com
   - url: http://www.librario.de
   - url: http://www.madebytally.com
@@ -89,11 +92,11 @@ built:
   - url: http://rubyconferences.org
     source: https://github.com/ruby-conferences/ruby-conferences-site
   - url: http://theartificial.nl/
+    title: "The Artificial"
   - url: http://www.vpsland.com
   - url: http://docs.fraudrankr.com/
   - url: http://waterforpeople.org
   - url: http://www.viselectrica.it
-  - url: http://www.shannonethomas.com/
   - url: http://ausca.com
   - url: http://sourcey.com
     source: https://github.com/sourcey/sourcey.com
@@ -147,6 +150,7 @@ blogs:
   - url: http://robots.thoughtbot.com
   - url: http://abhra.in
   - url: http://blog.riemann.cc
+    title: "Robert Riemann"
     source: https://github.com/rriemann/blog
   - url: http://nebulab.it/blog
   - url: http://schukin.com
@@ -154,6 +158,7 @@ blogs:
     source: https://github.com/FearMediocrity/fearmediocrity.co.uk
   - url: http://www.anthonycandaele.com/blog/
   - url: http://lord.io
+    title: "Robert Lord"
     source: https://github.com/lord/blog
   - url: http://blog.glebm.com/
   - url: http://www.sudandola.com
@@ -166,4 +171,8 @@ blogs:
   - url: http://www.ecosio.com/de/blog
   - url: http://apetyt-na-kuchnie.pl
   - url: http://emaxime.com
-
+  - url: http://www.shannonethomas.com/
+    title: "Shannon E Thomas"
+  - url: http://hans.gerwitz.com/
+    title: "Hans Gerwitz"
+    source: https://github.com/gerwitz/hans.gerwitz.com
