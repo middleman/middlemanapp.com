@@ -329,7 +329,7 @@ Unfinished Draft
 
 Draft articles will only appear in development mode.
 
-An article with a date that is in the future is also considered unpublished; if you use a `cron` job to regenerate your site on a regular basis, this can be used to automatically publish articles at a specified time.
+An article with a date that is in the future is also considered unpublished; if you use a `cron` job to regenerate your site on a regular basis, this can be used to automatically publish articles at a specified time. This behaviour can be disabled by setting `publish_future_dated` to `true`.
 
 ## Time Zone
 
