@@ -3,29 +3,15 @@ title: Sites Built Using Middleman
 published: true
 ---
 
-<h1><%= t("built.title") %></h1>
-
-<ul>
-  <% for site in sort_sites(data.sites.built) %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
-
-<h1><%= t("built.mobile") %></h1>
-
-<ul>
-  <% for site in sort_sites(data.sites.mobile) %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
-
-<h1><%= t("built.blog") %></h1>
-
-<ul>
-  <% for site in sort_sites(data.sites.blogs) %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
+<% sg = {"title" => data.sites.built, "site" => data.sites.mobile, "blogs" => data.sites.blogs} %>
+<% sg.each do |site_group, sites| %>
+  <h1><%= t("built.#{site_group}") %></h1>
+  <ul>
+    <% for site in sort_sites(sites) %>
+      <%= partial "layouts/site", locals: { site: site } %>
+    <% end %>
+  </ul>
+<% end %>
 
 <footer>
   <%= link_to t("built.fork"), "https://github.com/middleman/middleman-guides/blob/master/data/sites.yml" %>
