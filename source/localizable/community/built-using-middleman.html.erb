@@ -3,7 +3,7 @@ title: Sites Built Using Middleman
 published: true
 ---
 
-<% sg = {"title" => data.sites.built, "mobile" => data.sites.mobile, "blogs" => data.sites.blogs} %>
+<% sg = {"title" => data.sites.built, "mobile" => data.sites.mobile, "blog" => data.sites.blogs} %>
 <% sg.each do |site_group, sites| %>
   <h1><%= t("built.#{site_group}") %></h1>
   <ul>
