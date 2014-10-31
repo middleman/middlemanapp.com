@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
-gem "redcarpet"
+gem "bourbon"
 gem "builder"
-gem "susy"
 gem "middleman", "~> 3.3.2"
 gem "middleman-livereload"
+gem "neat"
+gem "redcarpet"
+gem "susy"
