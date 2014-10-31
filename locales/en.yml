@@ -3,36 +3,51 @@ en:
   # navigations
   basics:
     title: Middleman Basics
-    getting_started: Getting Started
-    templates: Templates
-    template_helpers: Template Helpers
-    frontmatter: Frontmatter
-    dynamic_pages: Dynamic Pages
-    asset_pipeline: Asset Pipeline
-    pretty_urls: Pretty URLs (Directory Indexes)
-    livereload: LiveReload
-    directory_structure: Directory Structure
     blogging: Blogging
+    build_deploy: Build & Deploy
+    development_cycle: Development Cycle
+    directory_structure: Directory Structure
+    frontmatter: Frontmatter
+    helper_methods: Helper Methods
+    install: Install
+    layouts: Layouts
+    partials: Partials
+    pretty_urls: Pretty URLs (Directory Indexes)
+    start_new_site: Start a New Site
+    templates: Templating Language
 
   advanced:
     title: Advanced Features
+    asset_pipeline: Asset Pipeline
     configuration: Configuring Your Site
-    local_data: Local Data
-    localization: Localization (i18n)
-    sitemap: The Sitemap
-    rack_middleware: Rack Middleware
-    custom: Custom Extensions
+    custom_extensions: Custom Extensions
+    data_files: Data Files
+    development_optimization: Development Optimization
+    dynamic_pages: Dynamic Pages
     file_size_optimization: File Size Optimization
     improving_cacheability: Improving Cacheability
+    localization: Localization (i18n)
+    performance_optimization: Performance Optimization
+    production_optimization: Production Optimization
+    project_templates: Project Templates
+    rack_middleware: Rack Middleware
+    sitemap: The Sitemap
+
+  open_source:
+    title: Contribute to Open Souce
+    custom_extension: Create a Custom Extension
+    deployment_solution: Deployment Solution
+    service: Add Your Service
+    template: Create a Template
 
   community:
     title: Community
-    extensions: Extensions
-    templates: Project Templates
+    built_using_middleman: Sites Built Using Middleman
     deployment: Deployment Solutions
+    extensions: Extensions
     forum: Community Forum
     github: GitHub Repository
-    built_using_middleman: Sites Built Using Middleman
+    templates: Project Templates
 
 
   # index

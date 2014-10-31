@@ -1,8 +1,8 @@
 ---
-title: Local Data
+title: Data Files
 ---
 
-# Local Data
+# Data Files
 
 Sometimes it is useful to extract the data content of a page from the rendering. This way some team members can concentrate on building up the database of content, while another team member can build the structure of the site. Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder called `data` and makes this information available in your templates. The `data` folder should be placed in the root of your project i.e. in the same folder as your project's `source` folder.
 
