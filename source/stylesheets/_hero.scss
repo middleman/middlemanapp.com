@@ -1,0 +1,52 @@
+.hero {
+  background: $base-accent-color;
+  text-align: center;
+}
+
+.hero-content-headline {
+  padding-bottom: 4em;
+  padding-top: 4em;
+}
+
+.hero-content-logo {
+  display: block;
+}
+
+.hero-headline {
+  color: rgba(black, 0.5);
+  font-size: $base-font-size * 1.8;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.hero-description {
+  display: inline-block;
+}
+
+.hero-description-item {
+  color: white;
+  float: left;
+  font-size: $base-font-size * 1.15;
+  margin-right: 0;
+
+  &:not(:last-child) {
+    margin-right: 1em;
+
+    &:after {
+      content: "|";
+      padding-left: 1em;
+    }
+  }
+}
+
+.hero-banner-container {
+  .browser {
+    @include span-columns(10 of 12);
+    @include shift(1);
+
+    @include media($medium-screen-up) {
+      @include span-columns(8 of 12);
+      @include shift(2);
+    }
+  } 
+}

@@ -1,0 +1,42 @@
+.top-nav {
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  a {
+    color: $top-nav-link-color;
+    font-weight: 700;
+
+    &:hover {
+      color: $top-nav-link-hover-color;
+    }
+  }
+}
+
+.logo-text {
+  font-size: $base-font-size;
+  font-weight: 700;
+  float: left;
+}
+
+.site-nav {
+  float: right;
+}
+
+.site-nav-item {
+  float: left;
+  margin-right: 2em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-nav-item .cta {
+  border: 3px solid $top-nav-link-color;
+  border-radius: $base-border-radius;
+  padding: 0.35em 0.5em;
+
+  &:hover {
+    border-color: $top-nav-link-hover-color;
+  }
+}

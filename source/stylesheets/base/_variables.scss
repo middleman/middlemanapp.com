@@ -1,8 +1,9 @@
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: "Fira Sans", $helvetica;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
+$monospace-font-family: "Fira Mono", "lucida console", monospace;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -24,31 +25,33 @@ $base-z-index: 0;
 
 // Colors
 $blue: #477DCA;
-$dark-gray: #333;
+$dark-gray: #4A4E56;
 $medium-gray: #999;
 $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+// Middleman colors
+$golden-yellow: #ECC561;
+$navy: #446184;
+$slate-gray: #8990A1;
+$translucent-gray: rgba(black, 0.25);
+$saturated-blue: #4280CA;
+
 // Background Color
 $base-background-color: white;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-font-color: $slate-gray;
+$base-accent-color: $golden-yellow;
+$secondary-accent-color: $saturated-blue;
 
 // Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$base-link-color: $secondary-accent-color;
+$hover-link-color: darken($base-link-color, 15);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
-
-// Flash Colors
-$alert-color: $light-yellow;
-$error-color: $light-red;
-$notice-color: lighten($base-accent-color, 40);
-$success-color: $light-green;
 
 // Border color
 $base-border-color: $light-gray;
@@ -63,3 +66,11 @@ $form-box-shadow: inset 0 1px 3px rgba(black,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
+
+// Browser Colors
+$browser-bar-color: #E3E0E0;
+$browser-body-color: $dark-gray;
+
+// Top Nav Variables
+$top-nav-link-color: white;
+$top-nav-link-hover-color: rgba($top-nav-link-color, 0.75);

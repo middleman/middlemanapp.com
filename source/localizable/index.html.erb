@@ -2,9 +2,47 @@
 layout: layout
 ---
 
-<header id="hero">
-  <h1><%= link_to image_tag("mm-blue-w-text.svg", :width => 225, :height => 225, :alt => "Middleman"), "#{locale_prefix}/", { :class => 'logo' } %></h1>
-  <h2><%= t("index.headline") %></h2>
+<header class="hero">
+  <aside class="top-nav container">
+    <h1 class="logo-text"><a href="/"><%= t("index.logo") %></a></h1>
+    <nav class="site-nav">
+      <ul>
+        <li class="site-nav-item">
+          <%= link_to "Contribute", "https://github.com/middleman/middleman",
+            target: "_blank" %>
+        </li>
+        <li class="site-nav-item">
+          <%= link_to t("index.docs"),
+            "#{locale_prefix}/basics/getting-started/", class: "cta" %>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="hero-content container">
+    <div class="hero-content-headline">
+      <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
+        class: "headline-content-logo" %>
+      <h2 class="hero-headline"><%= t("index.headline") %></h2>
+      <div class="hero-description">
+        <h3 class="hero-description-item">
+          <%= t("index.description.first") %>
+        </h3>
+        <h3 class="hero-description-item">
+          <%= t("index.description.second")%>
+        </h3>
+        <h3 class="hero-description-item">
+          <%= t("index.description.third")%>
+        </h3>
+      </div>
+    </div>
+    <div class="hero-banner-container container">
+      <div class="browser">
+<pre class="browser-body">
+<code>$ gem install middleman</code>
+</pre>
+      </div>
+    </div>
+  </div>
 </header>
 
 <section role="main">

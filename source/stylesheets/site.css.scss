@@ -1,54 +1,12 @@
-@import "compass";
+@charset "utf-8";
+
 @import "compass/reset";
-@import "susyone";
+@import "bourbon";
+@import "neat";
+@import "base/base";
+@import "fira-font";
 
-/*			Settings for Susy
---------------------------------------------------- */
-
-$total-columns  : 24;
-$column-width   : 2.5em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
-
-
-/*			Settings for Project
---------------------------------------------------- */
-
-$base-font-size: 14px; // leave the px off
-$body-line-height: 1.5;
-$default-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-$display-font-family: 'Questrial', $default-font-family;
-$monospace-font-family: "andale mono", "lucida console", monospace;
-$display-monospace-font-family: 'Arvo', $monospace-font-family;
-
-$two-column: 1080px;
-$one-column: 660px;
-
-
-/*			Colors
---------------------------------------------------- */
-
-$xlight-brown: #efe8d5;
-$light-brown: #e1d7be;
-$mid-brown: #957642;
-$dark-brown: #655740;
-
-$navy: #002b36;
-
-$copy-color: $dark-brown;
-$heading-color: $navy;
-$link-color: $navy;
-
-@import "mixins";
-@import "typography";
-@import "icon";
-@import "base";
-@import "nav";
-@import "support";
-@import "articles";
-@import "index";
-
-@import "solarized_light";
-
-@import "mediaqueries";
-
+@import "layout";
+@import "hero";
+@import "top-nav";
+@import "browser";
