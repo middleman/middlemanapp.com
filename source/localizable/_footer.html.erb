@@ -1,0 +1,31 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-column">
+      <article class="footer-site-information">
+        <p>
+          &copy; 2011-2014 <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>
+        </p>
+        <p class="footer-open-source-credit">
+          Maintained by the <%= link_to "core team",
+            "https://github.com/orgs/middleman/people" %> with help from
+            <%= link_to "contributors",
+              "https://github.com/middleman/middleman/graphs/contributors" %>.
+        </p>
+      </article>
+      <article class="footer-contact">
+        <ul class="footer-contact-list">
+          <li class="footer-contact-list-item twitter-link">
+            <%= link_to t("built.twitter"), "https://twitter.com/middlemanapp" %>
+          </li>
+          <li class="footer-contact-list-item github-link">
+            <%= link_to t("built.github"), "https://github.com/middleman/middleman" %>
+          </li>
+        </ul>
+      </article>
+    </div>
+    <div class="footer-column footer-right">
+      <p class="footer-credit">Site proudly designed by</p>
+      <%= image_tag "thoughtbot-logo.svg", class: "footer-thoughtbot-logo" %>
+    </div>
+  </div>
+</footer>

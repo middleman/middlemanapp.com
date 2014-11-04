@@ -6,7 +6,6 @@
 @import "base/base";
 @import "fira-font";
 
-@import "layout";
-@import "hero";
-@import "top-nav";
-@import "browser";
+@import "mixins/icon";
+
+@import "modules/modules";

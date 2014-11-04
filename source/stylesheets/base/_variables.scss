@@ -14,6 +14,12 @@ $h4-font-size: $base-font-size * 1.5;
 $h5-font-size: $base-font-size * 1.25;
 $h6-font-size: $base-font-size;
 
+// Font Weights
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 200;
+
 // Line height
 $base-line-height: 1.5;
 $header-line-height: 1.25;
@@ -38,14 +44,17 @@ $navy: #446184;
 $slate-gray: #8990A1;
 $translucent-gray: rgba(black, 0.25);
 $saturated-blue: #4280CA;
-
-// Background Color
-$base-background-color: white;
+$washed-out-gray: #F9F9F8;
 
 // Font Colors
 $base-font-color: $slate-gray;
 $base-accent-color: $golden-yellow;
 $secondary-accent-color: $saturated-blue;
+
+// Background Color
+$base-background-color: white;
+$base-hero-color: $base-accent-color;
+$base-footer-color: $washed-out-gray;
 
 // Link Colors
 $base-link-color: $secondary-accent-color;
@@ -67,6 +76,10 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
+// Icon Fonts
+$github-icon: "\f09b";
+$twitter-icon: "\f099";
+
 // Browser Colors
 $browser-bar-color: #E3E0E0;
 $browser-body-color: $dark-gray;
@@ -74,3 +87,7 @@ $browser-body-color: $dark-gray;
 // Top Nav Variables
 $top-nav-link-color: white;
 $top-nav-link-hover-color: rgba($top-nav-link-color, 0.75);
+
+// Footer Variables
+$footer-link-color: $medium-gray;
+$footer-link-hover-color: darken($footer-link-color, 10);

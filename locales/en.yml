@@ -68,4 +68,5 @@ en:
     title: Sites Built Using Middleman
     mobile: Mobile Apps Built Using Middleman
     blog: Blogs Using Middleman
-    fork: Fork and add your site on Github
+    twitter: "@middlemanapp"
+    github: GitHub
