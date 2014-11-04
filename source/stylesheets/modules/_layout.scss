@@ -2,3 +2,8 @@
   @include outer-container;
   padding: 0 1em;
 }
+
+#main {
+  @include span-columns(9);
+  @include omega(2n);
+}
