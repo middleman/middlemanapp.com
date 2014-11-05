@@ -8,6 +8,8 @@ activate :i18n
 
 activate :directory_indexes
 
+activate :autoprefixer
+
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
 set :markdown_engine, :redcarpet
 
