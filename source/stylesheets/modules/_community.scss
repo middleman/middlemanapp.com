@@ -1,0 +1,62 @@
+.community {
+  padding: 4em 0;
+}
+
+.community-title {
+  @include fill-parent;
+  @include clearfix;
+  color: $dark-gray;
+  text-align: center;
+}
+
+.community-feature-list {
+  @include fill-parent;
+  @include clearfix;
+  margin: 4em auto 2em;
+}
+
+.community-feature-item {
+  @include span-columns(6 of 12);
+  @include omega(2n);
+  padding-right: 1em;
+  margin-bottom: 2em;
+}
+
+.community-feature-text-wrapper a {
+  text-decoration: underline;
+}
+
+.community-feature-header {
+  color: $dark-gray;
+  font-size: $base-font-size * 1.15;
+  margin-bottom: 0.5em;
+}
+
+.community-social-links-list {
+  @include fill-parent;
+  @include clearfix;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.community-social-link-item {
+  display: inline;
+  margin-right: 1.5em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.community-social-link-item a {
+  border-radius: $base-border-radius;
+  border: 2px solid $navy;
+  color: $navy;
+  display: inline-block;
+  padding: 0.75em 1.25em;
+
+  &:hover {
+    border-color: darken($navy, 20);
+    color: darken($navy, 20);
+  }
+}
