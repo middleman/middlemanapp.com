@@ -1,0 +1,38 @@
+.example-sites {
+  @include clearfix;
+  background: $navy;
+  padding-bottom: 4em;
+  padding-top: 4em;
+  text-align: center;
+}
+
+.example-sites-title {
+  color: white;
+  margin-bottom: 2em;
+}
+
+.example-site-item {
+  margin-bottom: 2em;
+
+  @include media($medium-screen-up) {
+    @include span-columns(4 of 12);
+    margin-bottom: 0;
+  }
+}
+
+.example-site-screenshot {
+  @include transition(all 0.15s linear);
+
+  &:hover {
+    @include transform(scale(1.025));
+  }
+}
+
+.example-site-description {
+  margin-top: 0.5em;
+}
+
+.example-site-name {
+  color: $translucent-white;
+  font-size: $base-font-size;
+}
