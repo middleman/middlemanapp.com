@@ -12,7 +12,6 @@ en:
     install: Install
     layouts: Layouts
     partials: Partials
-    pretty_urls: Pretty URLs (Directory Indexes)
     start_new_site: Start a New Site
     templates: Templating Language
 
@@ -32,6 +31,7 @@ en:
     project_templates: Project Templates
     rack_middleware: Rack Middleware
     sitemap: The Sitemap
+    pretty_urls: Pretty URLs (Directory Indexes)
 
   open_source:
     title: Contribute to Open Souce

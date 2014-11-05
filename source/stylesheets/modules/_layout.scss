@@ -2,3 +2,41 @@
   @include outer-container;
   padding: 0 1em;
 }
+
+#main {
+  @include span-columns(8);
+  @include shift(1);
+}
+
+code {
+  background-color: #e4e4fd;
+  border-radius: $base-border-radius;
+  font-size: 1rem;
+  margin: 2px;
+  padding: .1em .5em;
+}
+
+pre {
+  white-space: pre;
+}
+
+pre code {
+  border: 1px solid rgb(221, 221, 221);
+  display: block;
+  margin: 1em 0;
+  padding: .7em;
+}
+
+main {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.3em 0 0.8em;
+  }
+
+  li{
+    margin: 0.75em;
+  }
+}

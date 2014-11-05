@@ -1,4 +1,4 @@
-## Partials
+# Partials
 
 Partials are a way of sharing content across pages to avoid duplication. Partials can be used in page templates and layouts. Let's continue our above example of having two layouts: one for normal pages and one for admin pages. These two layouts could have duplicate content, such as a footer. We will create a footer partial and use it in both layouts.
 

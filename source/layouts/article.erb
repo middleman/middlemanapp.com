@@ -1,33 +1,33 @@
 <% wrap_layout :layout do %>
   <header id="header">
     <div class="container">
-      <h1><%= link_to image_tag("mm-blue-w-text.svg", :width => 225, :height => 225, :alt => "Middleman"), "#{locale_prefix}/", { :class => 'logo' } %></h1>
-      <p class="console">$ gem install middleman</p>
-      <div id="search">
-        <form>
-          <input type="text" id="st-search-input" class="st-search-input" placeholder="Search the documentation" />
-        </form>
-        <div id="st-results-container"></div>
-        <script type="text/javascript">
-          var Swiftype = window.Swiftype || {};
-          (function() {
-            Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
-            Swiftype.inputElement = '#st-search-input';
-            Swiftype.resultContainingElement = '#st-results-container';
-            Swiftype.attachElement = '#st-search-input';
-            Swiftype.renderStyle = "overlay";
+      <!-- <h1><%= link_to image_tag("mm&#45;blue&#45;w&#45;text.svg", :width => 225, :height => 225, :alt => "Middleman"), "#{locale_prefix}/", { :class => 'logo' } %></h1> -->
+      <!-- <p class="console">$ gem install middleman</p> -->
+      <!-- <div id="search"> -->
+      <!--   <form> -->
+      <!--     <input type="text" id="st&#45;search&#45;input" class="st&#45;search&#45;input" placeholder="Search the documentation" /> -->
+      <!--   </form> -->
+      <!--   <div id="st&#45;results&#45;container"></div> -->
+      <!--   <script type="text/javascript"> -->
+      <!--     var Swiftype = window.Swiftype || {}; -->
+      <!--     (function() { -->
+      <!--       Swiftype.key = 'q3qjGN5LmX2oq6w1V47y'; -->
+      <!--       Swiftype.inputElement = '#st&#45;search&#45;input'; -->
+      <!--       Swiftype.resultContainingElement = '#st&#45;results&#45;container'; -->
+      <!--       Swiftype.attachElement = '#st&#45;search&#45;input'; -->
+      <!--       Swiftype.renderStyle = "overlay"; -->
+      <!--  -->
+      <!--       var script = document.createElement('script'); -->
+      <!--       script.type = 'text/javascript'; -->
+      <!--       script.async = true; -->
+      <!--       script.src = "//swiftype.com/embed.js"; -->
+      <!--       var entry = document.getElementsByTagName('script')[0]; -->
+      <!--       entry.parentNode.insertBefore(script, entry); -->
+      <!--     }()); -->
+      <!--   </script> -->
+      <!-- </div> -->
 
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = "//swiftype.com/embed.js";
-            var entry = document.getElementsByTagName('script')[0];
-            entry.parentNode.insertBefore(script, entry);
-          }());
-        </script>
-      </div>
-
-      <a class="toc-nav-link icon-arrow-down" href="#toc">Menu</a>
+      <!-- <a class="toc&#45;nav&#45;link icon&#45;arrow&#45;down" href="#toc">Menu</a> -->
     </div>
   </header>
 
@@ -36,10 +36,10 @@
       <%= partial 'layouts/nav' %>
     </nav>
 
-    <article id="main" role="main">
+    <main id="main" role="main">
       <%= yield %>
-    </article>
+    </main>
 
-    <%= partial "layouts/support" %>
+    <%# <%= partial "layouts/support" %>
   </div>
 <% end %>
