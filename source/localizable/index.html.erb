@@ -76,3 +76,81 @@ layout: layout
     <p class="intro"><%= t("index.description") %> <%= link_to t("index.getting_started"), "#{locale_prefix}/basics/getting-started/" %>.</p>
   </div>
 </section>
+
+<section class="community">
+  <div class="container">
+    <h4 class="community-title">
+      <%= t("community.title") %>
+    </h4>
+    <div class="community-feature-item">
+      <div class="community-feature-icon-wrapper">
+      </div>
+      <div class="community-feature-text-wrapper">
+        <h5 class="community-feature-header">
+          <%= t("community.extensions.header") %>
+        </h5>
+        <p>
+          <%= t("community.extensions.description") %>
+        </p>
+        <p>
+          <%= link_to t("community.extensions.link_text"), "/" %>
+        </p>
+      </div>
+    </div>
+    <div class="community-feature-item">
+      <div class="community-feature-icon-wrapper">
+      </div>
+      <div class="community-feature-text-wrapper">
+        <h5 class="community-feature-header">
+          <%= t("community.templates.header") %>
+        </h5>
+        <p>
+          <%= t("community.templates.description") %>
+        </p>
+        <p>
+          <%= link_to t("community.templates.link_text"), "/" %>
+        </p>
+      </div>
+    </div>
+    <div class="community-feature-item">
+      <div class="community-feature-icon-wrapper">
+      </div>
+      <div class="community-feature-text-wrapper">
+        <h5 class="community-feature-header">
+          <%= t("community.forum.header") %>
+        </h5>
+        <p>
+          <%= t("community.forum.description") %>
+        </p>
+        <p>
+          <%= link_to t("community.forum.link_text"), "/" %>
+        </p>
+      </div>
+    </div>
+    <div class="community-feature-item">
+      <div class="community-feature-icon-wrapper">
+      </div>
+      <div class="community-feature-text-wrapper">
+        <h5 class="community-feature-header">
+          <%= t("community.deployment.header") %>
+        </h5>
+        <p>
+          <%= t("community.deployment.description") %>
+        </p>
+        <p>
+          <%= link_to t("community.deployment.link_text"), "/" %>
+        </p>
+      </div>
+    </div>
+
+    <article class="community-social-links">
+      <ul>
+        <li class="github-link">
+          <%= link_to "Fork on GitHub", t("built.github") %>
+        </li>
+        <li class="twitter-link">
+          <%= link_to "Follow on Twitter", t("built.twitter") %>
+        </li>
+    </article>
+  </div>
+</section>
