@@ -3,20 +3,23 @@ layout: layout
 ---
 
 <header class="hero">
-  <%= partial 'partials/global_nav' %>
+  <%= partial "partials/global_nav" %>
   <div class="hero-content container">
-    <section class="hero-content-headline">
-      <h1 class="headline-content-logo">
-        <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/" %>
-      </h1>
+    <div class="hero-content-headline">
+      <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
+        class: "headline-content-logo" %>
       <h2 class="hero-headline"><%= t("index.headline") %></h2>
-
       <div class="hero-description">
-        <h3 class="hero-description-item"><%= t("index.description.first") %></h3>
-        <h3 class="hero-description-item"><%= t("index.description.second")%></h3>
-        <h3 class="hero-description-item"><%= t("index.description.third")%></h3>
+        <h3 class="hero-description-item">
+          <%= t("index.description.first") %>
+        </h3>
+        <h3 class="hero-description-item">
+          <%= t("index.description.second")%>
+        </h3>
+        <h3 class="hero-description-item">
+          <%= t("index.description.third")%>
+        </h3>
       </div>
-
     </div>
     <div class="hero-banner-container container">
       <div class="browser">
@@ -55,7 +58,34 @@ layout: layout
     </div>
   </div>
 
+<section class="marketing-animation">
+  <h1>Marketing animation goes here _____ </h1>
+</section>
+
+<section class="community">
   <div class="container">
-    <p class="intro"><%= t("index.description") %> <%= link_to t("index.getting_started"), "#{locale_prefix}/basics/getting-started/" %>.</p>
-  </div>
+    <h4 class="community-title">
+      <%= t("community.title") %>
+    </h4>
+    <h5 class="community-subtitle">
+      <%= t("community.subtitle") %>
+    </h5>
+  <article class="centered-content">
+    <%= link_to "Contribute to the open-source community",
+        "https://github.com/middleman/middleman", class: "community-cta" %>
+  </article>
+</section>
+
+<section class="featured">
+  <article class="community-social-block container">
+    <ul class="centered-content">
+      <li class="community-social-link-item github-link">
+        <%= link_to "Fork on GitHub",
+          "https://github.com/middleman/middleman", class: "community-social-link" %>
+      </li>
+      <li class="community-social-link-item twitter-link">
+        <%= link_to "Follow on Twitter",
+          "https://twitter.com/middlemanapp", class: "community-social-link"  %>
+      </li>
+  </article>
 </section>

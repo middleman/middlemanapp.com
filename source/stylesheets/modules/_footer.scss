@@ -15,6 +15,11 @@
       color: $footer-link-hover-color;
     }
   }
+
+  p {
+    font-size: $base-font-size;
+    margin: 0 auto 0.5em;
+  }
 }
 
 .footer-column {

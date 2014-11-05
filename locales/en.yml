@@ -44,14 +44,26 @@ en:
     template: Create a Template
 
   community:
-    title: Community
+    title: Open-Source Community
+    subtitle: Middleman benefits from an active community. Whether you need a question answered or want to contribute to open-source features, our community page will lead you in the right direction.
     built_using_middleman: Sites Built Using Middleman
-    deployment: Deployment Solutions
-    extensions: Extensions
-    forum: Community Forum
+    deployment:
+      header: Deployment Solutions
+      description: Whether you use Heroku or anything else to deploy, we'll help you do that.
+      link_text: See deployment solutions
+    extensions:
+      header: Extensions
+      description: Add new capabilities and features to your Middleman website.
+      link_text: See all extensions
+    forum:
+      header: Community Forum
+      description: Use the forum to chat with other folks about Middleman.
+      link_text: Visit forum
     github: GitHub Repository
-    templates: Project Templates
-
+    templates:
+      header: Project Templates
+      description: Create a project with pre-made templates using your favorite code libraries.
+      link_text: See project templates
 
   # index
   index:

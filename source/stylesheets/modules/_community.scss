@@ -1,0 +1,92 @@
+.community {
+  padding: 2em 0;
+
+  @include media($medium-screen-up) {
+    padding: 4em 0;
+  }
+}
+
+.community-title {
+  @include fill-parent;
+  @include clearfix;
+  color: $dark-gray;
+  text-align: center;
+  padding-bottom: 1em;
+
+  @include media($medium-screen-up) {
+    padding-bottom: 2em;
+  }
+}
+
+.community-subtitle {
+  @include fill-parent;
+  @include clearfix;
+  font-size: $base-font-size;
+  line-height: 1.5em;
+  margin: 0 auto 1.5em;
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    margin-bottom: 3em;
+    width: em(550);
+  }
+}
+
+.community-feature-header {
+  color: $dark-gray;
+  font-size: $base-font-size * 1.15;
+  margin-bottom: 0.5em;
+}
+
+.community-cta {
+  background-color: $secondary-accent-color;
+  border-radius: $base-border-radius;
+  color: white;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  padding: 0.75em 1.25em;
+  text-align: center;
+
+  &:hover {
+    background-color: darken($secondary-accent-color, 10);
+    color: white;
+  }
+}
+
+.community-social-block {
+  border-top: 1px solid $base-border-color;
+  padding: 2em $gutter;
+
+  @include media($medium-screen-up) {
+    padding: 4em $gutter;
+    width: em(550);
+  }
+}
+
+.community-social-link-item {
+  display: block;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin: auto 0 0 auto;
+  }
+
+  @include media($medium-screen-up) {
+    display: inline-block;
+    margin: auto 1.5em 0 auto;
+  }
+}
+
+.community-social-link {
+  border: 2px solid $navy;
+  border-radius: $base-border-radius;
+  color: $navy;
+  display: inline-block;
+  padding: 0.75em 1.25em;
+  width: 100%;
+
+  &:hover {
+    border-color: darken($navy, 20);
+    color: darken($navy, 20);
+  }
+}
