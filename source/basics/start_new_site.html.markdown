@@ -1,4 +1,4 @@
-## Starting a New Site: middleman init
+# Starting a New Site: middleman init
 
 To get started we will need to create a project folder for Middleman to work out of. You can do this using an existing folder or have Middleman create one for you using the `middleman init` command.
 

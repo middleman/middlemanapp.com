@@ -1,4 +1,4 @@
-## Installation
+# Installation
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
@@ -18,4 +18,4 @@ The installation process will add one new command to your environment, with 3 us
 * middleman server
 * middleman build
 
-The uses of each of these commands will be covered in [Start a New Site](#).
+The uses of each of these commands will be covered in [Start a New Site](/basics/start_new_site).

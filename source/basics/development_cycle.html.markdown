@@ -1,4 +1,4 @@
-## The Development Cycle (middleman server)
+# The Development Cycle (middleman server)
 
 The Middleman separates your development and production code from the start. This allows you to utilize a bevy of tools (such as [Haml](http://haml-lang.com), [Sass](http://sass-lang.com), [CoffeeScript](http://coffeescript.org/), etc.) during development that are unnecessary or undesirable in production.  We refer to these environments as The Development Cycle and the Static Site.
 
