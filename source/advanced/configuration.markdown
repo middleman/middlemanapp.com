@@ -6,9 +6,15 @@ title: Configuration
 
 ## Discovering Middleman's Settings
 
-Middleman is incredibly customizable, and extensions bring even more options to the table. Rather than trying to keep up exhaustive documentation on each and every setting, we've given Middleman the ability to tell you directly what settings are available.
+Middleman is incredibly customizable, and extensions bring even more options to
+the table. Rather than trying to keep up exhaustive documentation on each and
+every setting, we've given Middleman the ability to tell you directly what
+settings are available.
 
-Once your preview service is running, visit `http://localhost:4567/__middleman/config/` to see all the settings and extensions available to you. Each one will include the setting name, a short description, the default value, and what your site has it set to.
+Once your preview service is running, visit
+`http://localhost:4567/__middleman/config/` to see all the settings and
+extensions available to you. Each one will include the setting name, a short
+description, the default value, and what your site has it set to.
 
 ## Changing Settings
 
@@ -28,7 +34,9 @@ This is used for most of the global settings in Middleman.
 
 ## Configuring Extensions
 
-Extensions are generally configured when they are activated. For most extensions, you can either pass a hash of options when you `activate`, or use a block to tweak options:
+Extensions are generally configured when they are activated. For most
+extensions, you can either pass a hash of options when you `activate`, or use a
+block to tweak options:
 
 ```ruby
 activate :asset_hash, :exts => %w(.jpg) # Only hash for .jpg
@@ -42,7 +50,8 @@ end
 
 ## Environment-specific Settings
 
-If you want some configuration to apply only during build or development, you can put that in a block:
+If you want some configuration to apply only during build or development, you
+can put that in a block:
 
 ```ruby
 configure :development do

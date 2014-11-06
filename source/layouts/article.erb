@@ -1,32 +1,6 @@
 <% wrap_layout :layout do %>
   <header id="header">
     <%= partial 'partials/global_nav' %>
-
-    <section class="container">
-      <div id="search">
-        <form>
-          <input type="text" id="st-search-input" class="st-search-input" placeholder="Search the documentation" />
-        </form>
-        <div id="st-results-container"></div>
-        <script type="text/javascript">
-          var Swiftype = window.Swiftype || {};
-          (function() {
-            Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
-            Swiftype.inputElement = '#st-search-input';
-            Swiftype.resultContainingElement = '#st-results-container';
-            Swiftype.attachElement = '#st-search-input';
-            Swiftype.renderStyle = "overlay";
-
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = "//swiftype.com/embed.js";
-            var entry = document.getElementsByTagName('script')[0];
-            entry.parentNode.insertBefore(script, entry);
-          }());
-        </script>
-      </section>
-    </div>
   </header>
 
   <div class="container">

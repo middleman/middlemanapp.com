@@ -6,8 +6,8 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 pre code {
   display: block;
-  margin: 1em 0;
-  padding: .7em;
+  margin: 1.5em 0;
+  padding: .6em .7em;
 }
 
 pre .comment,

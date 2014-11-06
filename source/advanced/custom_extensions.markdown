@@ -4,7 +4,11 @@ title: Custom Extensions
 
 # Custom Extensions
 
-Middleman extensions are Ruby classes which can hook into various points of the Middleman system, add new features and manipulate content. This guide explains some of what's available, but you should read the middleman source and the source of plugins like middleman-blog to discover all the hooks and extension points.
+Middleman extensions are Ruby classes which can hook into various points of the
+Middleman system, add new features and manipulate content. This guide explains
+some of what's available, but you should read the middleman source and the
+source of plugins like middleman-blog to discover all the hooks and extension
+points.
 
 ## Basic Extension
 
@@ -21,7 +25,9 @@ end
 ::Middleman::Extensions.register(:my_feature, MyFeature)
 ```
 
-This module must be accessible to your `config.rb` file. Either define it directly in that file, or define it in another ruby file and `require` it in `config.rb`
+This module must be accessible to your `config.rb` file. Either define it
+directly in that file, or define it in another ruby file and `require` it in
+`config.rb`
 
 Finally, once your module is included, you must activate it in `config.rb`:
 
@@ -29,11 +35,19 @@ Finally, once your module is included, you must activate it in `config.rb`:
 activate :my_feature
 ```
 
-The [`register`](http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
+The [`register`](http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method)
+method lets you choose the name your extension is activated with. It can also
+take a block if you want to require files only when your extension is
+activated.
 
-In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is a [`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application) class.
+In the `MyFeature` extension, the `initialize` method will be called as soon as
+the `activate` command is run. The `app` variable is a
+[`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application)
+class.
 
-`activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. You define options with the `options` class method and then access them with `options`:
+`activate` can also take an options hash (which are passed to `register`) or a
+block which can be used to configure your extension. You define options with
+the `options` class method and then access them with `options`:
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -55,7 +69,8 @@ activate :my_feature do |f|
 end
 ```
 
-Passing options to `activate` is generally preferred to setting global variables via `set` to configure your extension (see the next section).
+Passing options to `activate` is generally preferred to setting global
+variables via `set` to configure your extension (see the next section).
 
 ## Setting variables
 
@@ -71,7 +86,8 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-You can also use this ability to create new settings which can be accessed later in your extension.
+You can also use this ability to create new settings which can be accessed
+later in your extension.
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -89,11 +105,15 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-`set` adds a new method to `Middleman::Application`, meaning you can read the value of your variable via `my_feature_setting` elsewhere. However, consider using `activate` options instead of global settings when only your extension needs a particular value.
+`set` adds a new method to `Middleman::Application`, meaning you can read the
+value of your variable via `my_feature_setting` elsewhere. However, consider
+using `activate` options instead of global settings when only your extension
+needs a particular value.
 
 ## Adding Methods to config.rb
 
-Methods available inside `config.rb` are simply class methods of `Middleman::Application`. Let's add a new method to be used in the `config.rb`:
+Methods available inside `config.rb` are simply class methods of
+`Middleman::Application`. Let's add a new method to be used in the `config.rb`:
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -110,11 +130,15 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-By extending the `Middleman::Application` class, available as `app`, we've added a `say_hello` method to the environment which simply prints "Hello". Internally, these methods are used to build lists of paths and requests which will be processed later in the app.
+By extending the `Middleman::Application` class, available as `app`, we've
+added a `say_hello` method to the environment which simply prints "Hello".
+Internally, these methods are used to build lists of paths and requests which
+will be processed later in the app.
 
 ## Adding Helpers
 
-Helpers are methods available inside your template. To add helper methods, we do the following:
+Helpers are methods available inside your template. To add helper methods, we
+do the following:
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -130,7 +154,8 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERb template:
+Now, inside your templates, you will have access to a `make_a_link` method.
+Here's an example using an ERb template:
 
 ``` html
 <h1><%= make_a_link("http://example.com", "Click me") %></h1>
@@ -139,7 +164,13 @@ Now, inside your templates, you will have access to a `make_a_link` method. Here
 
 ## Sitemap Manipulators
 
-You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/basics/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/basics/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
+You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a
+Sitemap extension. The [`:directory_indexes`](/basics/pretty_urls/) extension
+uses this feature to reroute normal pages to their directory-index version, and
+the [blog extension](/basics/blogging/) uses several plugins to generate tag
+and calendar pages. See [the `Sitemap::Store`
+class](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method)
+for more details.
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -157,11 +188,14 @@ end
 
 ## Callbacks
 
-There are many parts of the Middleman lifecycle that can be hooked into by extensions. These are some examples, but there are many more.
+There are many parts of the Middleman lifecycle that can be hooked into by
+extensions. These are some examples, but there are many more.
 
 ### after_configuration
 
-Sometimes you will want to wait until the `config.rb` has been executed to run code. For example, if you rely on the `:css_dir` variable, you should wait until it has been set. For this, we'll use a callback:
+Sometimes you will want to wait until the `config.rb` has been executed to run
+code. For example, if you rely on the `:css_dir` variable, you should wait
+until it has been set. For this, we'll use a callback:
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -178,7 +212,9 @@ end
 
 ### before
 
-The before callback allows you to do processing right before Middleman renders the page. This can be useful for returning data from another source, or failing early.
+The before callback allows you to do processing right before Middleman renders
+the page. This can be useful for returning data from another source, or failing
+early.
 
 Here's an example:
 
@@ -194,11 +230,16 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-The above sets the `:currently_requested_path` value at the beginning of each request. Notice the return value of "true." All blocks using `before` must return either true or false.
+The above sets the `:currently_requested_path` value at the beginning of each
+request. Notice the return value of "true." All blocks using `before` must
+return either true or false.
 
 ### after_build
 
-This callback is used to execute code after the build process has finished. The [middleman-smusher] extension uses this feature to compress all the images in the build folder after it has been built. It's also conceivable to integrate a deployment script after build.
+This callback is used to execute code after the build process has finished. The
+[middleman-smusher] extension uses this feature to compress all the images in
+the build folder after it has been built. It's also conceivable to integrate a
+deployment script after build.
 
 ``` ruby
 class MyFeature < Middleman::Extension
@@ -215,7 +256,8 @@ The [`builder`](http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build) par
 
 ### compass_config
 
-Similarly, if your extension relies on variable and settings within Compass to be ready, use the `compass_config` callback.
+Similarly, if your extension relies on variable and settings within Compass to
+be ready, use the `compass_config` callback.
 
 ``` ruby
 class MyFeature < Middleman::Extension

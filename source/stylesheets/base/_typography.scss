@@ -1,4 +1,5 @@
 body {
+  line-height: 2;
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
   color: $base-font-color;
@@ -13,14 +14,18 @@ h3,
 h4,
 h5,
 h6 {
+  color: $header-font-color;
   font-family: $header-font-family;
   line-height: $header-line-height;
+  margin-bottom: 0.3em;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
-
 h1 {
   font-size: $h1-font-size;
+  padding-bottom: 0.35em;
+  margin-bottom: 0.35em;
+  border-bottom: 1px solid darken($washed-out-gray, 5);
 }
 
 h2 {
@@ -44,8 +49,9 @@ h6 {
 }
 
 p {
-  font-size: $base-font-size * 1.3;
-  margin: ($base-spacing / 1.5) 0;
+  font-size: $base-font-size * 1.02;
+  margin: 0 0 ($base-spacing / 1.5);
+  line-height: 1.75;
 }
 
 a {
@@ -96,8 +102,8 @@ cite {
 code {
   background-color: lighten($slate-gray, 37);
   border-radius: $base-border-radius;
-  color: darken($slate-gray, 10);
   font-family: $monospace-font-family;
   font-size: 1rem;
-  padding: .1em .5em;
+  padding:  0.05em 0.5em;
+  overflow: scroll;
 }

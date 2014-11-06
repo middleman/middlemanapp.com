@@ -1,6 +1,6 @@
 .global-nav {
   background-color: $golden-yellow;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   padding: 1em 0;
 }
 
@@ -20,21 +20,25 @@
   margin-right: 2em;
 
   a {
-    color: $top-nav-link-color;
+    color: $global-nav-link-color;
 
     &:hover {
-      color: $top-nav-link-hover-color;
+      color: $global-nav-link-hover-color;
+    }
+
+    &.cta-link {
+      border: 3px solid $global-nav-link-color;
+      border-radius: $base-border-radius;
+      padding: .35em .5em;
+
+      &:hover {
+        background: white;
+        color: $base-accent-color;
+      }
     }
   }
 }
 
-a.cta-link {
-  border: 3px solid $top-nav-link-color;
-  border-radius: $base-border-radius;
-  padding: .35em .5em;
-
-  &:hover {
-    background: white;
-    color: $base-accent-color;
-  }
+.active {
+  border-left: 3px solid $saturated-blue;
 }

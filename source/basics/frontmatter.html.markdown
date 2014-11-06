@@ -4,11 +4,13 @@ title: Frontmatter
 
 # Frontmatter
 
-Frontmatter allows page-specific variables to be included at the top of a template using the YAML or JSON format.
+Frontmatter allows page-specific variables to be included at the top of a
+template using the YAML or JSON format.
 
 ## YAML Frontmatter
 
-Let's take a simple ERb template, adding some frontmatter variables to change the layout for this specific page.
+Let's take a simple ERb template, adding some frontmatter variables to change
+the layout for this specific page.
 
 ``` html
 ---
@@ -27,13 +29,19 @@ my_list:
 </ol>
 ```
 
-Frontmatter must come at the very top of the template and be separated from the rest of the content by a leading and trailing triple hyphen `---`. Inside this block, you can create new data which will be available in the template using the `current_page.data` hash. The `layout` setting will pass directly to Middleman and change which layout is being used for rendering. You can also set `ignore`, `directory_index`, and some other page properties in this way.
+Frontmatter must come at the very top of the template and be separated from the
+rest of the content by a leading and trailing triple hyphen `---`. Inside this
+block, you can create new data which will be available in the template using
+the `current_page.data` hash. The `layout` setting will pass directly to
+Middleman and change which layout is being used for rendering. You can also set
+`ignore`, `directory_index`, and some other page properties in this way.
 
 ## JSON Frontmatter
 
-You can also use JSON for your frontmatter. It's delimited by `;;;` and looks like this:
+You can also use JSON for your frontmatter. It's delimited by `;;;` and looks
+like this:
 
-``` html
+``` json
 ;;;
 "layout": "custom",
 "my_list": [

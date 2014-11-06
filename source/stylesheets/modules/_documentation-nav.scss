@@ -1,5 +1,34 @@
 #toc {
   @include span-columns(3);
+  border-radius: $base-border-radius;
+  border: 1px solid darken($washed-out-gray, 8);
+  height: 100vh;
+  overflow: scroll;
+  padding: .75em;
+}
+
+#search {
+  margin-bottom: 1em;
+}
+
+#st-search-input {
+  @extend input[type="search"];
+  @include fill-parent;
+  border: 1px solid $slate-gray;
+  margin-bottom: 0;
+  padding: 1em 1.9em;
+
+  &:focus, &:hover {
+    border: 1px solid $saturated-blue;
+  }
+
+  &:hover, &:active, &:focus {
+    box-shadow: none;
+  }
+
+  @include placeholder {
+    color: $translucent-gray;
+  }
 }
 
 .toc-block {
@@ -7,9 +36,25 @@
 }
 
 .docs-section-heading {
-  margin-bottom: 0.6em;
+  color: $translucent-gray;
+  font-size: $base-font-size * 0.85;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 2px;
+  padding: 0.75em 0.5em;
+  text-transform: uppercase;
 }
 
 .doc-item {
-  margin-bottom: .65em;
+  border-bottom: 1px dotted $base-border-color;
+
+  a {
+    color: darken($slate-gray, 20);
+    display: block;
+    padding: 0.34em 0.5em;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background: lighten($saturated-blue, 42);
+    }
+  }
 }

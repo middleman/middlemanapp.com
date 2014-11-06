@@ -1,6 +1,7 @@
 .footer {
   background: $base-footer-color;
   color: $medium-gray;
+  margin-top: 3em;
   padding: 1em 0;
 
   @include media($medium-screen-up) {

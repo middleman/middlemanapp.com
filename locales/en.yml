@@ -4,42 +4,47 @@ en:
     contribute: Contribute
     docs: Docs
     logo: Middleman
-  basics:
-    title: Middleman Basics
-    blogging: Blogging
-    build_deploy: Build & Deploy
-    development_cycle: Development Cycle
-    directory_structure: Directory Structure
-    frontmatter: Frontmatter
-    helper_methods: Helper Methods
-    install: Install
-    layouts: Layouts
-    partials: Partials
-    start_new_site: Start a New Site
-    templates: Templating Language
-
-  advanced:
-    title: Advanced Features
-    asset_pipeline: Asset Pipeline
-    configuration: Configuring Your Site
-    custom_extensions: Custom Extensions
-    data_files: Data Files
-    development_optimization: Development Optimization
-    dynamic_pages: Dynamic Pages
-    file_size_optimization: File Size Optimization
-    improving_cacheability: Improving Cacheability
-    localization: Localization (i18n)
-    performance_optimization: Performance Optimization
-    production_optimization: Production Optimization
-    project_templates: Project Templates
-    rack_middleware: Rack Middleware
-    sitemap: The Sitemap
-    pretty_urls: Pretty URLs (Directory Indexes)
-
+    search_placeholder: Search the docs
+    basics:
+      title: Basics
+      blogging: Blogging
+      build_deploy: Build & Deploy
+      development_cycle: Development Cycle
+      directory_structure: Directory Structure
+      frontmatter: Frontmatter
+      helper_methods: Helper Methods
+      install: Install
+      layouts: Layouts
+      partials: Partials
+      start_new_site: Start a New Site
+      templates: Templating Language
+    advanced:
+      title: Advanced
+      asset_pipeline: Asset Pipeline
+      configuration: Configuring Your Site
+      custom_extensions: Custom Extensions
+      data_files: Data Files
+      development_optimization: Development Optimization
+      dynamic_pages: Dynamic Pages
+      file_size_optimization: File Size Optimization
+      improving_cacheability: Improving Cacheability
+      localization: Localization (i18n)
+      performance_optimization: Performance Optimization
+      pretty_urls: Pretty URLs (Directory Indexes)
+      production_optimization: Production Optimization
+      project_templates: Project Templates
+      rack_middleware: Rack Middleware
+      sitemap: The Sitemap
+    community:
+      title: Open-Source Community
+      built_using_middleman: Sites Built Using Middleman
+      community_forum: Community Forum
+      custom_extensions: Custom Extensions
+      deployment_solution: Deployment Solution
+      github: GitHub Repository
+      project_templates: Project Templates
   open_source:
     title: Contribute to Open Souce
-    custom_extension: Create a Custom Extension
-    deployment_solution: Deployment Solution
     service: Add Your Service
     template: Create a Template
 
@@ -54,7 +59,7 @@ en:
       link_text: Read the docs to learn the basics
     third:
       header: Customize & deploy!
-      description: Build any site layout, from a simple landing page to a multi-page interactive site. Choose from open source deployment solutions and get your site up and running.  
+      description: Build any site layout, from a simple landing page to a multi-page interactive site. Choose from open source deployment solutions and get your site up and running.
       link_text: See advanced customizations
 
   community:
@@ -97,3 +102,4 @@ en:
     blog: Blogs Using Middleman
     twitter: "@middlemanapp"
     github: GitHub
+    source_code: source code

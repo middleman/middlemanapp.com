@@ -23,9 +23,11 @@ using Middleman.
 The installation process will add one new command to your environment, with 3
 useful features:
 
-* middleman init
-* middleman server
-* middleman build
+```bash
+$ middleman init
+$ middleman server
+$ middleman build
+```
 
 The uses of each of these commands will be covered in the next section, [Start
 a New Site](/basics/start_new_site).

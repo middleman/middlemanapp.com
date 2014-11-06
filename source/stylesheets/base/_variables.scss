@@ -14,11 +14,11 @@ $monospace-font-family: "Fira Mono", "lucida console", monospace;
 
 // Font Sizes
 $base-font-size: 1em;
-$h1-font-size: $base-font-size * 2.75;
-$h2-font-size: $base-font-size * 2;
-$h3-font-size: $base-font-size * 1.75;
-$h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.25;
+$h1-font-size: $base-font-size * 2.2;
+$h2-font-size: $base-font-size * 1.6;
+$h3-font-size: $base-font-size * 1.3;
+$h4-font-size: $base-font-size * 1.25;
+$h5-font-size: $base-font-size * 1.15;
 $h6-font-size: $base-font-size;
 
 // Font Weights
@@ -54,8 +54,9 @@ $saturated-blue: #4280CA;
 $washed-out-gray: #F9F9F8;
 
 // Font Colors
-$base-font-color: $slate-gray;
+$base-font-color: darken($slate-gray, 8);
 $base-accent-color: $golden-yellow;
+$header-font-color: $dark-gray;
 $secondary-accent-color: $saturated-blue;
 
 // Background Color
@@ -70,7 +71,7 @@ $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: lighten($translucent-gray, 60);
 $base-border: 1px solid $base-border-color;
 
 // Forms
@@ -78,7 +79,7 @@ $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
-$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow: inset 0 1px 3px rgba($slate-gray,0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
@@ -91,9 +92,9 @@ $twitter-icon: "\f099";
 $browser-bar-color: #E3E0E0;
 $browser-body-color: $dark-gray;
 
-// Top Nav Variables
-$top-nav-link-color: white;
-$top-nav-link-hover-color: rgba($top-nav-link-color, 0.75);
+// Global Nav Variables
+$global-nav-link-color: white;
+$global-nav-link-hover-color: rgba($global-nav-link-color, 0.75);
 
 // Footer Variables
 $footer-link-color: $medium-gray;

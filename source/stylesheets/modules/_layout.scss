@@ -8,3 +8,29 @@
   @include clearfix;
   text-align: center;
 }
+
+.main {
+  @include span-columns(8);
+  @include shift(0.3);
+}
+
+.built-with-middleman-link {
+  border-bottom: 1px dotted $translucent-gray;
+  display: block;
+  padding: .75em;
+}
+
+.built-with-middleman-link, .source-code-link {
+  transition: all .2s linear;
+
+  &:hover {
+    background: lighten($saturated-blue, 42);
+  }
+}
+
+.source-code-link {
+  background: $washed-out-gray;
+  padding: 0.2em 0.75em;
+  margin-bottom: 1em;
+  display: inline-block;
+}

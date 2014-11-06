@@ -6,9 +6,15 @@ title: Asset Pipeline
 
 ## Dependency Management
 
-[Sprockets] is a tool for managing libraries of JavaScript (and CoffeeScript) code, declaring dependency management and include 3rd-party code. At its core, Sprockets makes a `require` method available inside your .js and .coffee files which can pull in the contents of an external file from your project or from a 3rd party gem.
+[Sprockets] is a tool for managing libraries of JavaScript (and CoffeeScript)
+code, declaring dependency management and include 3rd-party code. At its core,
+Sprockets makes a `require` method available inside your .js and .coffee files
+which can pull in the contents of an external file from your project or from a
+3rd party gem.
 
-Say I have a file called `jquery.js` which contains the jQuery library and another file called `app.js` which contains my application code. My app file can include jquery before it runs like so:
+Say I have a file called `jquery.js` which contains the jQuery library and
+another file called `app.js` which contains my application code. My app file
+can include jquery before it runs like so:
 
 ``` javascript
 //= require "jquery"
@@ -34,11 +40,15 @@ body {
 
 ```
 
-If you're using Sass you should stick with Sass' `@import` rule rather than using Sprockets directives.
+If you're using Sass you should stick with Sass' `@import` rule rather than
+using Sprockets directives.
 
 ## Deploying combined assets only
 
-If you prefer to deploy only the combined (concatenated) assets to the `build` directory with `middleman build` command, you should use the underscore-names for your ingredient assets. Example: the main `/source/javascripts/all.js` file is used for all dependencies:
+If you prefer to deploy only the combined (concatenated) assets to the `build`
+directory with `middleman build` command, you should use the underscore-names
+for your ingredient assets. Example: the main `/source/javascripts/all.js` file
+is used for all dependencies:
 
 ``` javascript
 //= require "_jquery"
@@ -46,7 +56,10 @@ If you prefer to deploy only the combined (concatenated) assets to the `build` d
 //= require "_my_other_code"
 ```
 
-and the `/source/javascripts/` directory should contain files: `_jquery.js`, `_my_lib_code.js`, `_my_other_code.js`. The resulting `/build/javascripts/` directory will contain the `all.js` file only, with all dependant code included.
+and the `/source/javascripts/` directory should contain files: `_jquery.js`,
+`_my_lib_code.js`, `_my_other_code.js`. The resulting `/build/javascripts/`
+directory will contain the `all.js` file only, with all dependant code
+included.
 
 ## Asset Gems
 
@@ -56,21 +69,31 @@ You can use assets from gems by including them in your `Gemfile`, like this:
 gem "bootstrap-sass", :require => false
 ```
 
-The `:require => false` bit is important - many of these gems assume you're running in Rails, and break when they try to hook into Rails' or Compass' internals. Just avoid requiring the gems and Middleman will take care of the rest.
+The `:require => false` bit is important - many of these gems assume you're
+running in Rails, and break when they try to hook into Rails' or Compass'
+internals. Just avoid requiring the gems and Middleman will take care of the
+rest.
 
-Once you've added a dependency on these gems, any images and fonts from the gem will be included in your project automatically. JavaScript and CSS are also available to be `require`ed or `@import`ed into your own files.
+Once you've added a dependency on these gems, any images and fonts from the gem
+will be included in your project automatically. JavaScript and CSS are also
+available to be `require`ed or `@import`ed into your own files.
 
-If you want to refer to a gem stylesheet or JS file directly from your HTML rather than including it in your own assets, you'll need to import it explicitly in `config.rb`:
+If you want to refer to a gem stylesheet or JS file directly from your HTML
+rather than including it in your own assets, you'll need to import it
+explicitly in `config.rb`:
 
 ```ruby
 sprockets.import_asset 'jquery-mobile'
 ```
 
-Then you can refer to that asset directly from `script` tags or `javascript_include_tag`.
+Then you can refer to that asset directly from `script` tags or
+`javascript_include_tag`.
 
 ## Sprockets Import Path
 
-If you have assets in directories other than your `:js_dir` or `:css_dir`, you can make them importable by adding them to your Sprockets import path. Add this to your `config.rb`:
+If you have assets in directories other than your `:js_dir` or `:css_dir`, you
+can make them importable by adding them to your Sprockets import path. Add this
+to your `config.rb`:
 
 ```ruby
 sprockets.append_path '/my/shared/assets/'
@@ -159,11 +182,19 @@ There are helpers available to be used within your `*.scss` files:
 * `image-path()`, `image-url()`
 * `font-path()`, `font-url()`
 
-Those helpers prepend the correct directory/url to your asset, e.g. `image-path('lightbox2/img/close.png')` becomes `images/lightbox2/img/close.png`. To reference a bower controlled asset you need to use its relative name `lightbox2/img/close.png` for an image which is part of the `lightbox2`-component.
+Those helpers prepend the correct directory/url to your asset, e.g.
+`image-path('lightbox2/img/close.png')` becomes
+`images/lightbox2/img/close.png`. To reference a bower controlled asset you
+need to use its relative name `lightbox2/img/close.png` for an image which is
+part of the `lightbox2`-component.
 
 ## Compass
 
-Middleman comes with [Compass] support out of the box. Compass is a powerful framework for writing cross-browser stylesheets in Sass. Compass also has its own extensions, like [Susy], which you can use in Middleman. All of Sprockets' path helpers like `image-url` are hooked into the Middleman Sitemap, so other extensions (like `:asset_hash`) will affect your stylesheets too.
+Middleman comes with [Compass] support out of the box. Compass is a powerful
+framework for writing cross-browser stylesheets in Sass. Compass also has its
+own extensions, like [Susy], which you can use in Middleman. All of Sprockets'
+path helpers like `image-url` are hooked into the Middleman Sitemap, so other
+extensions (like `:asset_hash`) will affect your stylesheets too.
 
 [Sprockets]: https://github.com/sstephenson/sprockets
 [Compass]: http://compass-style.org
