@@ -2,3 +2,22 @@
   @include outer-container;
   padding: 0 1em;
 }
+
+.main {
+  @include span-columns(8);
+  @include shift(1);
+}
+
+main {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.3em 0 0.8em;
+  }
+
+  li{
+    margin: 0.75em;
+  }
+}

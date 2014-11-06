@@ -1,0 +1,41 @@
+.global-nav {
+  background-color: $golden-yellow;
+  margin-bottom: 4em;
+  padding: 1em 0;
+
+}
+
+.logo-text {
+  float: left;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+}
+
+.global-nav-list {
+  float: right;
+  line-height: 2em;
+}
+
+.global-nav-item {
+  display: inline-block;
+  margin-right: 2em;
+
+  a {
+    color: $top-nav-link-color;
+
+    &:hover {
+      color: $top-nav-link-hover-color;
+    }
+  }
+}
+
+a.cta-link {
+  border: 3px solid $top-nav-link-color;
+  border-radius: $base-border-radius;
+  padding: .35em .5em;
+
+  &:hover {
+    background: white;
+    color: $base-accent-color;
+  }
+}
