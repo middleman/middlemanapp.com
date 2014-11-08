@@ -43,6 +43,20 @@ en:
     service: Add Your Service
     template: Create a Template
 
+  introduction:
+    first:
+      header: Start a new site
+      description: Just install a gem and use one line of code to create a new Middleman site from the command line.
+      link_text: Get started now
+    second:
+      header: Here's what you get
+      description: You have all the files you need, now you're ready to go.
+      link_text: Read the docs to learn the basics
+    third:
+      header: Customize & deploy!
+      description: Build any site layout, from a simple landing page to a multi-page interactive site. Choose from open source deployment solutions and get your site up and running.  
+      link_text: See advanced customizations
+
   community:
     title: Open-Source Community
     subtitle: Middleman benefits from an active community. Whether you need a question answered or want to contribute to open-source features, our community page will lead you in the right direction.

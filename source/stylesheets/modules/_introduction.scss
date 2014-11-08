@@ -1,0 +1,87 @@
+.introduction-container {
+  border-bottom: 1px solid $base-border-color;
+  padding: 2em $gutter;
+
+  @include media($medium-screen-up) {
+    padding: 4em 0;
+  }
+}
+
+.introduction-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media($medium-screen-up) {
+    @include fill-parent;
+    @include clearfix;
+    display: block;
+    margin-bottom: 6em;
+  }
+}
+
+.introduction-item-graphic-wrapper,
+.introduction-item-text-wrapper {
+  padding: 0;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    padding: 2em;
+  }
+}
+
+.introduction-item-graphic-wrapper {
+  order: 1;
+  margin: 0 auto;
+}
+
+.introduction-item-text-wrapper {
+  order: 2;
+  margin-top: 2em;
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    margin-top: 4em;
+    text-align: left;
+  }
+}
+
+.introduction-browser {
+  width: em(300);
+
+  @include media($medium-screen-up) {
+    width: auto;
+  }
+}
+
+.introduction-browser-body {
+  height: em(200);
+
+  @include media($medium-screen-up) {
+    height: em(300);
+  }
+}
+
+.introduction-browser-window {
+  background: image_url("logos/middleman-logo.svg"), $base-accent-color;
+  background-size: em(80);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.introduction-item-header {
+  color: $dark-gray;
+}
+
+.introduction-item-text {
+  font-size: $base-font-size;
+}
+
+.introduction-link {
+  text-decoration: underline;
+}

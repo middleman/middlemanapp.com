@@ -1,4 +1,5 @@
 .browser {
+  position: relative;
   text-align: left;
 }
 
@@ -12,6 +13,22 @@
 
 .browser-body {
   background: $browser-body-color;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   padding: 1em;
+}
+
+.browser-code {
+  background: $browser-body-color;
+  margin: 0;
+  padding: 0;
+}
+
+.browser-text-editor-sidebar {
+  @include position(absolute, em(32) null 0px 0px);
+  @include size(em(80) auto);
+  background: lighten($browser-body-color, 10);
+
+  @include media($medium-screen-up) {
+    width: em(120);
+  }
 }
