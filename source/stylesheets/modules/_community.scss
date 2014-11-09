@@ -1,92 +1,146 @@
-.community {
-  padding: 2em 0;
-
-  @include media($medium-screen-up) {
-    padding: 4em 0;
-  }
+.community-main-title {
+  margin-top: 2em;
+  padding-bottom: 1em;
 }
 
-.community-title {
-  @include fill-parent;
-  @include clearfix;
+.contributions-title {
   color: $dark-gray;
-  text-align: center;
   padding-bottom: 1em;
 
   @include media($medium-screen-up) {
-    padding-bottom: 2em;
+    padding-bottom: 3em;
+    margin-top: 4em;
   }
 }
 
-.community-subtitle {
-  @include fill-parent;
-  @include clearfix;
-  font-size: $base-font-size;
-  line-height: 1.5em;
-  margin: 0 auto 1.5em;
-  text-align: center;
-
-  @include media($medium-screen-up) {
-    margin-bottom: 3em;
-    width: em(550);
-  }
-}
-
-.community-feature-header {
+.contributions-feature-header {
   color: $dark-gray;
   font-size: $base-font-size * 1.15;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
+}
+
+.contributions-feature-text {
+  font-size: $base-font-size;
+}
+
+.contributions-feature-link {
+  font-size: $base-font-size;
+  margin-bottom: 0em;
 }
 
 .community-cta {
-  background-color: $secondary-accent-color;
-  border-radius: $base-border-radius;
-  color: white;
-  display: inline-block;
-  font-weight: $font-weight-bold;
-  padding: 0.75em 1.25em;
-  text-align: center;
-
-  &:hover {
-    background-color: darken($secondary-accent-color, 10);
-    color: white;
-  }
+  @include button-filled($secondary-accent-color);
 }
 
-.community-social-block {
-  border-top: 1px solid $base-border-color;
-  padding: 2em $gutter;
-
-  @include media($medium-screen-up) {
-    padding: 4em $gutter;
-    width: em(550);
-  }
+.contributions-feature-icon-wrapper {
+  @include span-columns(1 of 4);
 }
 
-.community-social-link-item {
-  display: block;
-  margin-bottom: 1em;
+.contributions-feature-text-wrapper {
+  @include span-columns(3 of 4);
+}
+
+.contributions-feature-item {
+  padding: 1em 0;
+  margin-bottom: 2em;
 
   &:last-child {
-    margin: auto 0 0 auto;
+    margin-bottom: 0;
   }
 
   @include media($medium-screen-up) {
-    display: inline-block;
-    margin: auto 1.5em 0 auto;
+    @include span-columns(4 of 12);
+    margin-bottom: 0;
   }
 }
 
-.community-social-link {
-  border: 2px solid $navy;
-  border-radius: $base-border-radius;
-  color: $navy;
-  display: inline-block;
-  padding: 0.75em 1.25em;
-  width: 100%;
+.forum {
+  background-color: $navy;
+  padding: 4em 0;
+  margin: 6em 0;
+}
 
-  &:hover {
-    border-color: darken($navy, 20);
-    color: darken($navy, 20);
+.forum-item-graphic-wrapper,
+.forum-text-wrapper {
+  padding: 0;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    padding: 2em;
   }
+}
+
+.forum-item-graphic-wrapper {
+  margin: 0 auto;
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: block;
+    float: right;
+  }
+}
+
+.forum-browser {
+  width: em(300);
+
+  @include media($medium-screen-up) {
+    width: auto;
+  }
+
+}
+.forum-text-wrapper {
+  text-align: center;
+  margin: 0 auto;
+
+  @include media($medium-screen-up) {
+    margin-top: 4em;
+    text-align: left;
+  }
+}
+
+.forum-item-header {
+  color: white;
+  margin-bottom: 1em;
+
+  @include media($medium-screen-up) {
+    margin: 0 0 1em;
+  }
+}
+
+.forum-item-text {
+  color: white;
+  font-size: $base-font-size;
+  padding: 0 0 1em;
+
+  &:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  @include media($medium-screen-up) {
+    padding: 1em 0;
+  }
+}
+
+.forum-cta {
+  @include button-outline("fill", white, $navy);
+}
+
+.logos-title {
+  padding-bottom: 2em;
+}
+
+.logo-block {
+  text-align: center;
+}
+
+.logo-block li {
+  padding: 2em;
+  display: inline-block;
+}
+
+.logo-block img {
+  height: 50px;
+  opacity: 0.2;
 }

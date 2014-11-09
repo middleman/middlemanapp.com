@@ -3,9 +3,10 @@ layout: layout
 ---
 
 <header class="hero">
-  <%= partial "partials/global_nav" %>
+  <%= partial 'partials/global_nav' %>
   <section class="body-content-container wrap-container" data-waypoint="hero-content">
     <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
+
       class: "headline-content-logo" %>
 
     <h2 class="hero-headline"><%= t("index.headline") %></h2>
@@ -18,102 +19,105 @@ layout: layout
 </pre>
       </div>
     </div>
-  </div>
+  </section>
 </header>
 
-<section class="introduction">
-  <div class="introduction-container wrap-container" data-waypoint="introduction-container">
-    <div class="introduction-item">
-      <div class="introduction-item-graphic-wrapper">
-        <div class="introduction-browser browser">
-  <pre class="introduction-browser-body browser-body">
-<code class="browser-code">$ middleman init project</code>
-  </pre>
+<div class="body-content-container wrap-container">
+  <section class="introduction">
+    <div class="introduction-container" data-waypoint="introduction-container">
+      <div class="introduction-item">
+        <div class="introduction-item-graphic-wrapper">
+          <div class="introduction-browser browser">
+    <pre class="introduction-browser-body browser-body">
+  <code class="browser-code">$ middleman init project</code>
+    </pre>
+          </div>
+        </div>
+        <div class="introduction-item-text-wrapper">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.first.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.first.description") %>
+          </p>
+          <p class="introduction-item-text">
+            <%= link_to t("introduction.first.link_text"), "/",
+              class: "introduction-link" %>
+          </p>
         </div>
       </div>
-      <div class="introduction-item-text-wrapper">
-        <h4 class="introduction-item-header">
-          <%= t("introduction.first.header") %>
-        </h4>
-        <p class="introduction-item-text">
-          <%= t("introduction.first.description") %>
-        </p>
-        <p class="introduction-item-text">
-          <%= link_to t("introduction.first.link_text"), "/",
-            class: "introduction-link" %>
-        </p>
-      </div>
-    </div>
 
-    <div class="introduction-item">
-      <div class="introduction-item-text-wrapper">
-        <h4 class="introduction-item-header">
-          <%= t("introduction.second.header") %>
-        </h4>
-        <p class="introduction-item-text">
-          <%= t("introduction.second.description") %>
-        </p>
-        <p class="introduction-item-text">
-          <%= link_to t("introduction.second.link_text"), "/",
-            class: "introduction-link" %>
-        </p>
-      </div>
-      <div class="introduction-item-graphic-wrapper">
-        <div class="introduction-browser browser">
-          <div class="introduction-browser-body browser-body">
-            <div class="browser-text-editor-sidebar">
+      <div class="introduction-item">
+        <div class="introduction-item-text-wrapper">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.second.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.second.description") %>
+          </p>
+          <p class="introduction-item-text">
+            <%= link_to t("introduction.second.link_text"), "/",
+              class: "introduction-link" %>
+          </p>
+        </div>
+        <div class="introduction-item-graphic-wrapper">
+          <div class="introduction-browser browser">
+            <div class="introduction-browser-body browser-body">
+              <div class="browser-text-editor-sidebar">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="introduction-item">
-      <div class="introduction-item-graphic-wrapper">
-        <div class="introduction-browser browser">
-          <div class="introduction-browser-body introduction-browser-window browser-body">
+      <div class="introduction-item">
+        <div class="introduction-item-graphic-wrapper">
+          <div class="introduction-browser browser">
+            <div class="introduction-browser-body introduction-browser-window browser-body">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="introduction-item-text-wrapper">
-        <h4 class="introduction-item-header">
-          <%= t("introduction.third.header") %>
-        </h4>
-        <p class="introduction-item-text">
-          <%= t("introduction.third.description") %>
-        </p>
-        <p class="introduction-item-text">
-          <%= link_to t("introduction.third.link_text"), "/",
-            class: "introduction-link" %>
-        </p>
+        <div class="introduction-item-text-wrapper">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.third.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.third.description") %>
+          </p>
+          <p class="introduction-item-text">
+            <%= link_to t("introduction.third.link_text"), "/",
+              class: "introduction-link" %>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+    <hr>
+  </section>
+  <section class="community-preview">
+    <h4 class="community-title">
+      <%= t("community.title") %>
+    </h4>
+    <h5 class="community-subtitle">
+      <%= t("community.subtitle") %>
+    </h5>
+    <article class="centered-content">
+      <%= link_to "Contribute to the open-source community",
+        "#{locale_prefix}/community", class: "community-cta" %>
+    </article>
+    <hr>
+  <!--   <article class="community&#45;social&#45;block wrap&#45;container"> -->
+  <!--     <ul class="centered&#45;content"> -->
+  <!--       <li class="community&#45;social&#45;link&#45;item github&#45;link"> -->
+          <%# <%= link_to "Fork on GitHub",
+  # <!--           "https://github.com/middleman/middleman", class: "community&#45;social&#45;link" %>
+  <!--       </li> -->
+  <!--       <li class="community&#45;social&#45;link&#45;item twitter&#45;link"> -->
+          <%# <%= link_to "Follow on Twitter",
+  # <!--           "https://twitter.com/middlemanapp", class: "community&#45;social&#45;link"  %>
+  <!--       </li> -->
+  <!--   </article> -->
+  <!-- </section> -->
 
-<section class="community">
-  <h4 class="community-title">
-    <%= t("community.title") %>
-  </h4>
-  <h5 class="community-subtitle">
-    <%= t("community.subtitle") %>
-  </h5>
-  <article class="centered-content">
-    <%= link_to "Contribute to the open-source community",
-        "https://github.com/middleman/middleman", class: "community-cta" %>
-  </article>
-</section>
+  <%= partial "partials/logos" %>
+ </div>
 
-<section class="featured">
-  <article class="community-social-block wrap-container">
-    <ul class="centered-content">
-      <li class="community-social-link-item github-link">
-        <%= link_to "Fork on GitHub",
-          "https://github.com/middleman/middleman", class: "community-social-link" %>
-      </li>
-      <li class="community-social-link-item twitter-link">
-        <%= link_to "Follow on Twitter",
-          "https://twitter.com/middlemanapp", class: "community-social-link"  %>
-      </li>
-  </article>
-</section>

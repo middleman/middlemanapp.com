@@ -1,8 +1,10 @@
 @import "layout";
 @import "global-nav";
 @import "documentation-nav";
-@import "hero";
 @import "browser";
-@import "introduction";
 @import "community";
 @import "footer";
+
+@import "landing/hero";
+@import "landing/introduction";
+@import "landing/community";

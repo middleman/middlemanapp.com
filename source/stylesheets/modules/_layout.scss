@@ -10,7 +10,7 @@
 }
 
 .body-content-container {
-  margin-top: 4em;
+  padding-top: 4em;
   margin-bottom: 4em;
   position: relative;
 }
@@ -21,6 +21,11 @@
 
   &.stuck {
     @include shift(3.3);
+  }
+
+  h1 {
+    padding-bottom: 0.35em;
+    margin-bottom: 0.35em;
   }
 }
 
@@ -43,4 +48,13 @@
   padding: 0.2em 0.75em;
   margin-bottom: 1em;
   display: inline-block;
+}
+
+hr {
+  width: 75%;
+  margin: 2em auto;
+
+  @include media($medium-screen-up) {
+    margin: 4em auto;
+  }
 }
