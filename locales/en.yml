@@ -50,21 +50,28 @@ en:
 
   introduction:
     first:
-      header: Start a new site
-      description: Just install a gem and use one line of code to create a new Middleman site from the command line.
-      link_text: Get started now
+      header: Installation
+      description: Install the gem and run <code>middleman init
+        my_project</code> to create a new Middleman site from the command line.
+      link_text: See full install instructions
     second:
-      header: Here's what you get
-      description: You have all the files you need, now you're ready to go.
-      link_text: Read the docs to learn the basics
-    third:
-      header: Customize & deploy!
-      description: Build any site layout, from a simple landing page to a multi-page interactive site. Choose from open source deployment solutions and get your site up and running.
+      header: Customize Your Site
+      description: Check out the directory <code>cd my_project</code>.
+        Middleman works right out of the box. Start reading the docs to find
+        out what each directory is doing and how to customize your site.
       link_text: See advanced customizations
+    third:
+      header: Build and Deploy
+      description: Running one command, <code>bundle exec middleman
+        build</code>, exports the site in a production-ready format. Choose
+        from open source deployment solutions to get your site live.
+      link_text: See description of build
 
   community:
     title: Open-Source Community
-    subtitle: Middleman benefits from an active community. Whether you need a question answered or want to contribute to open-source features, our community page will lead you in the right direction.
+    subtitle: Middleman benefits from an active community. Whether you need a
+      question answered or want to contribute to open-source features, our
+      community page will lead you in the right direction.
     built_using_middleman: Sites Built Using Middleman
     deployment:
       header: Deployment Solutions
@@ -88,12 +95,10 @@ en:
   index:
     sub_title: Hand-crafted frontend development
     headline: Build static websites <br> with an easy-to-use framework
-    description: Middleman is a static site generator using all the shortcuts and tools in modern web development.
+    description: Middleman is a static site generator using all the shortcuts
+      and tools in modern web development.
     getting_started: Getting started
-    description:
-      first: Free
-      second: Open-Source
-      third: Static Site Generator
+    description: Free and Open Static Site Generator
 
   # community/built-using-middleman
   built:

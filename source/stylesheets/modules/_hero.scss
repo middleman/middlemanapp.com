@@ -3,11 +3,6 @@
   text-align: center;
 }
 
-.hero-content-headline {
-  padding-bottom: 4em;
-  padding-top: 4em;
-}
-
 .hero-content-logo {
   display: block;
 }
@@ -20,26 +15,17 @@
 }
 
 .hero-description {
-  display: inline-block;
-}
-
-.hero-description-item {
   color: white;
-  float: left;
   font-size: $base-font-size;
-  margin-right: 0;
+  display: inline-block;
+  margin: 0 0 2.5em;
 
   &:not(:last-child) {
-    margin-right: 1em;
-
-    &:after {
-      content: "|";
-      padding-left: 1em;
-    }
+    margin-right: 1.5em;
   }
 
   @include media($medium-screen-up) {
-    font-size: $base-font-size * 1.15;
+    font-size: $base-font-size * 1.25;
   }
 }
 

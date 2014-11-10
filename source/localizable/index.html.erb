@@ -4,24 +4,15 @@ layout: layout
 
 <header class="hero">
   <%= partial "partials/global_nav" %>
-  <div class="hero-content container">
-    <div class="hero-content-headline">
-      <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
-        class: "headline-content-logo" %>
-      <h2 class="hero-headline"><%= t("index.headline") %></h2>
-      <div class="hero-description">
-        <h3 class="hero-description-item">
-          <%= t("index.description.first") %>
-        </h3>
-        <h3 class="hero-description-item">
-          <%= t("index.description.second")%>
-        </h3>
-        <h3 class="hero-description-item">
-          <%= t("index.description.third")%>
-        </h3>
-      </div>
-    </div>
-    <div class="hero-banner-container container">
+
+  <section class="hero-content container">
+    <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
+      class: "headline-content-logo" %>
+
+    <h2 class="hero-headline"><%= t("index.headline") %></h2>
+    <h3 class="hero-description"><%= t("index.description") %></h3>
+
+    <div class="hero-banner-container">
       <div class="browser">
 <pre class="browser-body">
 <code class="browser-code">$ gem install middleman</code>
@@ -102,13 +93,12 @@ layout: layout
 </section>
 
 <section class="community">
-  <div class="container">
-    <h4 class="community-title">
-      <%= t("community.title") %>
-    </h4>
-    <h5 class="community-subtitle">
-      <%= t("community.subtitle") %>
-    </h5>
+  <h4 class="community-title">
+    <%= t("community.title") %>
+  </h4>
+  <h5 class="community-subtitle">
+    <%= t("community.subtitle") %>
+  </h5>
   <article class="centered-content">
     <%= link_to "Contribute to the open-source community",
         "https://github.com/middleman/middleman", class: "community-cta" %>

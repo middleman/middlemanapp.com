@@ -25,17 +25,18 @@
     &:hover {
       color: $global-nav-link-hover-color;
     }
+  }
+}
 
-    &.cta-link {
-      border: 3px solid $global-nav-link-color;
-      border-radius: $base-border-radius;
-      padding: .35em .5em;
+a.cta-link {
+  border: 1px solid $global-nav-link-color;
+  border-radius: $base-border-radius;
+  padding: .35em .5em;
 
-      &:hover {
-        background: white;
-        color: $base-accent-color;
-      }
-    }
+  &:hover {
+    background: rgba(0,0,0, 0.2);
+    color: white;
+    transition: all .15s linear;
   }
 }
 

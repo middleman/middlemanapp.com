@@ -10,7 +10,7 @@
 .introduction-item {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 
   &:last-child {
     margin-bottom: 0;
@@ -21,6 +21,12 @@
     @include clearfix;
     display: block;
     margin-bottom: 6em;
+  }
+
+  code {
+    color: $dark-gray;
+    font-size: .95rem;
+    padding: 0 .4em;
   }
 }
 
@@ -83,5 +89,33 @@
 }
 
 .introduction-link {
-  text-decoration: underline;
+  border-radius: $base-border-radius;
+  border: 1px solid darken($washed-out-gray, 5);
+  display: inline-block;
+  margin-top: 1em;
+  padding: .5em;
+
+  &:after {
+    @include size(16px);
+    color: $saturated-blue;
+    content: "\25B6";
+    display: inline-block;
+    font-size: .85em;
+    margin-left: .1em;
+    padding: 0.25em 0.2em 0.25em 0.3em;
+    position: relative;
+    text-align: center;
+    top: -1px;
+  }
+
+  &:hover {
+    border-color: lighten($saturated-blue, 38);
+    background-color: lighten($saturated-blue, 42);
+    transition: all .3s linear;
+
+    &:after {
+      transform: translate(5px, 0);
+      transition: all .15s linear;
+    }
+  }
 }
