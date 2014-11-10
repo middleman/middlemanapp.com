@@ -1,7 +1,20 @@
 .global-nav {
+  height: $global-nav-height;
+  transition: 0.3s ease all;
   background-color: $golden-yellow;
   margin-bottom: 2em;
   padding: 1em 0;
+}
+
+.global-nav.hidden {
+  transform: translate(0, -($global-nav-height));
+}
+
+.global-nav.active {
+  @include position(fixed, 0 0 null 0);
+  box-shadow: 0 1px 1px 0px rgba(0,0,0,0.35);
+  transform: translate(0, 0);
+  z-index: 1;
 }
 
 .logo-text {
@@ -31,15 +44,15 @@
 a.cta-link {
   border: 1px solid $global-nav-link-color;
   border-radius: $base-border-radius;
-  padding: .35em .5em;
+  padding: 0.35em 0.5em;
 
   &:hover {
     background: rgba(0,0,0, 0.2);
     color: white;
-    transition: all .15s linear;
+    transition: all 0.15s linear;
   }
 }
 
-.active {
+.doc-item-active {
   border-left: 3px solid $saturated-blue;
 }

@@ -3,8 +3,12 @@
   padding: 2em $gutter;
 
   @include media($medium-screen-up) {
-    padding: 4em 0;
+    padding: 6em 0 4em;
   }
+}
+
+.introduction-container.active {
+  margin-top: $global-nav-height;
 }
 
 .introduction-item {

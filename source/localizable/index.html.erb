@@ -5,7 +5,7 @@ layout: layout
 <header class="hero">
   <%= partial "partials/global_nav" %>
 
-  <section class="hero-content container">
+  <section class="hero-content container" data-js="hero-content">
     <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
       class: "headline-content-logo" %>
 
@@ -23,7 +23,7 @@ layout: layout
 </header>
 
 <section class="introduction">
-  <div class="introduction-container container">
+  <div class="introduction-container container" data-js="introduction-container">
     <div class="introduction-item">
       <div class="introduction-item-graphic-wrapper">
         <div class="introduction-browser browser">
