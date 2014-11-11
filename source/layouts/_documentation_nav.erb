@@ -1,107 +1,107 @@
-<div class="toc-block">
+<%= partial "partials/_documentation_search" %>
+<div class="toc-block-container">
+  <div class="toc-block">
+    <h3 class="docs-section-heading"><%= t("navigation.basics.title") %></h3>
+    <ul>
+      <li class="doc-item">
+      <%= active_link_to  t("navigation.basics.install"), "#{locale_prefix}/basics/install"%>
+      </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.start_new_site"), "#{locale_prefix}/basics/start_new_site" %>
+      </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.directory_structure"), "#{locale_prefix}/basics/directory-structure" %>
+      </li>
+      <li class="doc-item" >
+        <%= active_link_to t("navigation.basics.development_cycle"), "#{locale_prefix}/basics/development_cycle" %>
+      </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.build_deploy"), "#{locale_prefix}/basics/build_and_deploy" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.frontmatter"), "#{locale_prefix}/basics/frontmatter" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.templates"), "#{locale_prefix}/basics/templating_language" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.helper_methods"), "#{locale_prefix}/basics/helper_methods" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.layouts"), "#{locale_prefix}/basics/layouts" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.partials"), "#{locale_prefix}/basics/partials" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.basics.blogging"), "#{locale_prefix}/basics/blogging" %>
+        </li>
+    </ul>
+  </div>
 
-  <%= partial "partials/_documentation_search" %>
+  <div class="toc-block">
+    <h3 class="docs-section-heading"><%= t("navigation.advanced.title") %></h3>
+    <ul>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.configuration"), "#{locale_prefix}/advanced/configuration" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.project_templates"), "#{locale_prefix}/advanced/project_templates" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.dynamic_pages"), "#{locale_prefix}/advanced/dynamic_pages" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.data_files"), "#{locale_prefix}/advanced/data_files" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.localization"), "#{locale_prefix}/advanced/localization" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.asset_pipeline"), "#{locale_prefix}/advanced/asset_pipeline" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.rack_middleware"), "#{locale_prefix}/advanced/rack_middleware" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.sitemap"), "#{locale_prefix}/advanced/sitemap" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.pretty_urls"), "#{locale_prefix}/advanced/pretty_urls" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.improving_cacheability"), "#{locale_prefix}/advanced/improving_cacheability" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.file_size_optimization"), "#{locale_prefix}/advanced/file_size_optimization" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.advanced.custom_extensions"), "#{locale_prefix}/advanced/custom_extensions" %>
+        </li>
+    </ul>
+  </div>
 
-  <h3 class="docs-section-heading"><%= t("navigation.basics.title") %></h3>
-  <ul>
-    <li class="doc-item">
-    <%= active_link_to  t("navigation.basics.install"), "#{locale_prefix}/basics/install"%>
-    </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.start_new_site"), "#{locale_prefix}/basics/start_new_site" %>
-    </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.directory_structure"), "#{locale_prefix}/basics/directory-structure" %>
-    </li>
-    <li class="doc-item" >
-      <%= active_link_to t("navigation.basics.development_cycle"), "#{locale_prefix}/basics/development_cycle" %>
-    </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.build_deploy"), "#{locale_prefix}/basics/build_and_deploy" %>
+  <div class="toc-block">
+    <h3 class="docs-section-heading"><%= t("navigation.community.title") %></h3>
+    <ul>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.custom_extensions"), "http://directory.middlemanapp.com/#/extensions/all" %>
       </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.frontmatter"), "#{locale_prefix}/basics/frontmatter" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.templates"), "#{locale_prefix}/basics/templating_language" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.helper_methods"), "#{locale_prefix}/basics/helper_methods" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.layouts"), "#{locale_prefix}/basics/layouts" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.partials"), "#{locale_prefix}/basics/partials" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.basics.blogging"), "#{locale_prefix}/basics/blogging" %>
-      </li>
-  </ul>
-</div>
-
-<div class="toc-block">
-  <h3 class="docs-section-heading"><%= t("navigation.advanced.title") %></h3>
-  <ul>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.configuration"), "#{locale_prefix}/advanced/configuration" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.project_templates"), "#{locale_prefix}/advanced/project_templates" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.dynamic_pages"), "#{locale_prefix}/advanced/dynamic_pages" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.data_files"), "#{locale_prefix}/advanced/data_files" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.localization"), "#{locale_prefix}/advanced/localization" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.asset_pipeline"), "#{locale_prefix}/advanced/asset_pipeline" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.rack_middleware"), "#{locale_prefix}/advanced/rack_middleware" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.sitemap"), "#{locale_prefix}/advanced/sitemap" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.pretty_urls"), "#{locale_prefix}/advanced/pretty_urls" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.improving_cacheability"), "#{locale_prefix}/advanced/improving_cacheability" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.file_size_optimization"), "#{locale_prefix}/advanced/file_size_optimization" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.advanced.custom_extensions"), "#{locale_prefix}/advanced/custom_extensions" %>
-      </li>
-  </ul>
-</div>
-
-<div class="toc-block">
-  <h3 class="docs-section-heading"><%= t("navigation.community.title") %></h3>
-  <ul>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.custom_extensions"), "http://directory.middlemanapp.com/#/extensions/all" %>
-    </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.project_templates"), "http://directory.middlemanapp.com/#/templates/all" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.deployment_solution"), "http://directory.middlemanapp.com/#/extensions/deployment/all" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.community_forum"), "http://forum.middlemanapp.com/", target: "_blank"%>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.github"), "https://github.com/middleman/middleman", target: "_blank" %>
-      </li>
-    <li class="doc-item">
-      <%= active_link_to t("navigation.community.built_using_middleman"), "#{locale_prefix}/community/built_using_middleman" %>
-      </li>
-  </ul>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.project_templates"), "http://directory.middlemanapp.com/#/templates/all" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.deployment_solution"), "http://directory.middlemanapp.com/#/extensions/deployment/all" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.community_forum"), "http://forum.middlemanapp.com/", target: "_blank"%>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.github"), "https://github.com/middleman/middleman", target: "_blank" %>
+        </li>
+      <li class="doc-item">
+        <%= active_link_to t("navigation.community.built_using_middleman"), "#{locale_prefix}/community/built_using_middleman" %>
+        </li>
+    </ul>
+  </div>
 </div>

@@ -1,7 +1,7 @@
 $(function() {
-  var globalNav = $("[data-js='global-nav']");
-  var waypointHideTrigger = $("[data-js='hero-content']");
-  var waypointTrigger = $("[data-js='introduction-container']");
+  var globalNav = $("[data-waypoint='global-nav']");
+  var waypointHideTrigger = $("[data-waypoint='hero-content']");
+  var waypointTrigger = $("[data-waypoint='introduction-container']");
 
   waypointHideTrigger.waypoint(function() {
     globalNav.toggleClass("hidden");

@@ -5,7 +5,7 @@ layout: layout
 <header class="hero">
   <%= partial "partials/global_nav" %>
 
-  <section class="body-content-container wrap-container" data-js="hero-content">
+  <section class="body-content-container wrap-container" data-waypoint="hero-content">
     <%= link_to image_tag("logos/middleman-logo.svg"), "#{locale_prefix}/",
       class: "headline-content-logo" %>
 
@@ -23,7 +23,11 @@ layout: layout
 </header>
 
 <section class="introduction">
+<<<<<<< HEAD
   <div class="introduction-container wrap-container" data-js="introduction-container">
+=======
+  <div class="introduction-container container" data-waypoint="introduction-container">
+>>>>>>> eb12f89... Make sticky docs navigation
     <div class="introduction-item">
       <div class="introduction-item-graphic-wrapper">
         <div class="introduction-browser browser">

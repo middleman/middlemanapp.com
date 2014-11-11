@@ -1,9 +1,23 @@
 #toc {
-  @include span-columns(3);
-  border-radius: $base-border-radius;
-  height: 100vh;
+  background: white;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  overflow: hidden;
+}
+
+.sticky-wrapper {
+  @include span-columns(3 of 12);
+  height: 100%;
+}
+
+#toc.stuck {
+  position: fixed;
+  top: 0;
+}
+
+.toc-block-container {
   overflow: scroll;
-  padding: .75em;
+  height: 100vh;
 }
 
 #search {
