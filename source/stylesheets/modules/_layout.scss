@@ -9,6 +9,10 @@
   text-align: center;
 }
 
+.content-container {
+  margin-top: 4em;
+}
+
 .main {
   @include span-columns(8);
   @include shift(0.3);

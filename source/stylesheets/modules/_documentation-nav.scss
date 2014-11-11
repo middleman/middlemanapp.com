@@ -1,7 +1,6 @@
 #toc {
   @include span-columns(3);
   border-radius: $base-border-radius;
-  border: 1px solid darken($washed-out-gray, 8);
   height: 100vh;
   overflow: scroll;
   padding: .75em;
@@ -46,6 +45,10 @@
 
 .doc-item {
   border-bottom: 1px dotted $base-border-color;
+
+  &:last-child {
+    border: none;
+  }
 
   a {
     color: darken($slate-gray, 20);
