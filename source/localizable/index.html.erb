@@ -4,7 +4,7 @@ layout: layout
 
 <header class="hero">
   <%= partial "partials/global_nav" %>
-  <section class="hero-content container" data-js="hero-content">
+  <section class="body-content-container wrap-container" data-js="hero-content">
     <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
       class: "headline-content-logo" %>
 
@@ -22,7 +22,7 @@ layout: layout
 </header>
 
 <section class="introduction">
-  <div class="introduction-container container" data-js="introduction-container">
+  <div class="introduction-container wrap-container" data-js="introduction-container">
     <div class="introduction-item">
       <div class="introduction-item-graphic-wrapper">
         <div class="introduction-browser browser">
@@ -105,7 +105,7 @@ layout: layout
 </section>
 
 <section class="featured">
-  <article class="community-social-block container">
+  <article class="community-social-block wrap-container">
     <ul class="centered-content">
       <li class="community-social-link-item github-link">
         <%= link_to "Fork on GitHub",
