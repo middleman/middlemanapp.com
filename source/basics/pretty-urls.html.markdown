@@ -61,3 +61,7 @@ You can also add a `directory_index: false` key to your page's [Frontmatter](/ba
 ## Manual Indexes
 
 If your template file is already named `index.html` it will pass through Middleman untouched. For example, `my-page/index.html.erb` will generate `my-page/index.html` as you would expect.
+
+## Blogging
+
+If you are using the Middleman Blog extension, your `blog.permalink` format will override the directory indexes command. If you remove the file extension from the permalink (e.g., `blog.permalink = "{year}/{month}/{day}/{title}"` the extension will behave as you expect and generate an `index.html` in your article name directory.
