@@ -18,10 +18,10 @@
 .main {
   @include span-columns(8);
   @include shift(0.3);
-}
 
-.main.stuck {
-  @include shift(3.3);
+  &.stuck {
+    @include shift(3.3);
+  }
 }
 
 .built-with-middleman-link {
