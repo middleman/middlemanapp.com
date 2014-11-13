@@ -1,4 +1,4 @@
-.container {
+.wrap-container {
   @include outer-container;
   padding: 0 $gutter;
 }
@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.content-container {
+.body-content-container {
   margin-top: 4em;
 }
 
