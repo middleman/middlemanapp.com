@@ -15,7 +15,7 @@ built:
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
   - url: http://sass-lang.com
-    title: "Saas"
+    title: "Sass"
     source: https://github.com/sass/sass-site
   - url: http://startexploding.com
   - url: http://sassandcompass.com
