@@ -11,7 +11,7 @@ set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fence
 set :markdown_engine, :redcarpet
 
 configure :development do
-  activate :relative_assets
+  set :debug_assets, true
 end
 
 configure :build do
