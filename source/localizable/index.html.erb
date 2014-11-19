@@ -41,8 +41,8 @@ layout: layout
             <%= t("introduction.first.description") %>
           </p>
           <p class="introduction-item-text">
-            <%= link_to t("introduction.first.link_text"), "/",
-              class: "introduction-link" %>
+          <%= link_to t("introduction.first.link_text"),
+            "#{locale_prefix}/basics/install/", class: "introduction-link" %>
           </p>
         </div>
       </div>
@@ -56,7 +56,8 @@ layout: layout
             <%= t("introduction.second.description") %>
           </p>
           <p class="introduction-item-text">
-            <%= link_to t("introduction.second.link_text"), "/",
+          <%= link_to t("introduction.second.link_text"),
+            "#{locale_prefix}/advanced/configuration",
               class: "introduction-link" %>
           </p>
         </div>
@@ -85,8 +86,9 @@ layout: layout
             <%= t("introduction.third.description") %>
           </p>
           <p class="introduction-item-text">
-            <%= link_to t("introduction.third.link_text"), "/",
-              class: "introduction-link" %>
+          <%= link_to t("introduction.third.link_text"),
+            "#{locale_prefix}/basics/build_and_deploy", class:
+            "introduction-link" %>
           </p>
         </div>
       </div>
