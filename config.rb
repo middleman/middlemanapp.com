@@ -21,7 +21,6 @@ end
 
 helpers do
   def active_link_to(caption, url, options = {})
-    # Works assuming that there's not already a class on the link.
     if current_page.url == "#{url}/"
       options[:class] = "doc-item-active"
     end
@@ -29,3 +28,5 @@ helpers do
     link_to(caption, url, options)
   end
 end
+
+page "/localizable/community/built_using_middleman", layout: example

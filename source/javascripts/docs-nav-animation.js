@@ -1,10 +1,14 @@
 $(function() {
-  var $stickyEl = $("[data-waypoint='toc']");
+  var $stickyEl = $("[data-waypoint='sidebar']");
   var $stopEl   = $("[data-waypoint='footer']");
   var $verticalGutter = $stopEl.outerHeight();
   var $stickyElHeight = $stickyEl.outerHeight();
 
-  $stickyEl.waypoint("sticky", function() {
+  $stickyEl.waypoint("sticky", {
+    wrapper: "<aside class='sidebar-container' />"
+  },
+
+  function() {
     $("[data-waypoint='main']").toggleClass("stuck");
   });
 

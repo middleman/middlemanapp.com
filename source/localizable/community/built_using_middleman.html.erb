@@ -1,32 +1,32 @@
 ---
 title: Sites Built Using Middleman
+layout: example
 published: true
 ---
 
-<h1><%= t("built.title") %></h1>
+<article class="built-with-middleman-block">
+  <h2><%= t("built.title") %></h2>
+  <ul class="built-with-middleman-list">
+    <% for site in data.sites.built.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+      <%= partial "layouts/site", locals: { site: site } %>
+    <% end %>
+  </ul>
+</article>
 
-<ul class="built-with-middleman-list">
-  <% for site in data.sites.built.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
+<article class="built-with-middleman-block">
+  <h2><%= t("built.mobile") %></h2>
+  <ul class="built-with-middleman-list">
+    <% for site in data.sites.mobile.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+      <%= partial "layouts/site", locals: { site: site } %>
+    <% end %>
+  </ul>
+</article>
 
-<h1><%= t("built.mobile") %></h1>
-
-<ul class="built-with-middleman-list">
-  <% for site in data.sites.mobile.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
-
-<h1><%= t("built.blog") %></h1>
-
-<ul class="built-with-middleman-list">
-  <% for site in data.sites.blogs.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-    <%= partial "layouts/site", locals: { site: site } %>
-  <% end %>
-</ul>
-
-<footer>
-  <%= link_to t("built.fork"), "https://github.com/middleman/middleman-guides/blob/master/data/sites.yml" %>
-</footer>
+<article class="built-with-middleman-block">
+  <h2><%= t("built.blog") %></h2>
+  <ul class="built-with-middleman-list">
+    <% for site in data.sites.blogs.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+      <%= partial "layouts/site", locals: { site: site } %>
+    <% end %>
+  </ul>
+</article>

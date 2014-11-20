@@ -15,12 +15,19 @@
   position: relative;
 }
 
+.sidebar-container {
+  float: left;
+  height: 100%;
+  width: $sidebar-width;
+  word-wrap: break-word;
+}
+
 .main {
-  @include span-columns(8);
-  @include shift(0.3);
+  float: right;
+  width: $main-content-width;
 
   &.stuck {
-    @include shift(3.3);
+    margin-left: $sidebar-width;
   }
 
   h1 {

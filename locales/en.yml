@@ -105,6 +105,7 @@ help you do that."
     description: Middleman is a static site generator using all the shortcuts
       and tools in modern web development.
     getting_started: Getting started
+
   # community/built-using-middleman
   built:
     title: Sites Built Using Middleman
@@ -113,3 +114,4 @@ help you do that."
     twitter: "@middlemanapp"
     github: GitHub
     source_code: source code
+    fork: Fork and add your site on GitHub

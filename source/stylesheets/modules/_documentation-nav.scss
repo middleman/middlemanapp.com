@@ -1,23 +1,6 @@
-#toc {
-  background: white;
-  padding-top: .75em;
-  padding-bottom: .75em;
-  overflow: hidden;
-
-  &.stuck {
-    position: fixed;
-    top: 0;
-  }
-}
-
-.sticky-wrapper {
-  @include span-columns(3 of 12);
-  height: 100%;
-}
-
 .toc-block-container {
-  overflow: scroll;
   height: 100vh;
+  overflow: scroll;
 }
 
 #search {
