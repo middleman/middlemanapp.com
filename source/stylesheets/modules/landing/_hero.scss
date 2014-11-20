@@ -7,11 +7,14 @@
   display: block;
 }
 
+.hero-content-logo img {
+  @include size(em(300));
+}
+
 .hero-headline {
   color: rgba(black, 0.5);
   font-size: $base-font-size * 1.8;
   margin-bottom: 0.5em;
-  margin-top: 1em;
 }
 
 .hero-description {
