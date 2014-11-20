@@ -1,5 +1,14 @@
+.community-main-icon {
+  background: image-url("community-main-icon.svg") no-repeat;
+  background-size: 9em;
+  height: 7.5em;
+  margin: 0.5em auto 0;
+  text-align: center;
+  width: em(145);
+}
+
 .community-main-title {
-  margin-top: 2em;
+  margin-top: 1.5em;
   padding-bottom: 1em;
 }
 
