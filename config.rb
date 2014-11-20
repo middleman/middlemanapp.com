@@ -29,4 +29,4 @@ helpers do
   end
 end
 
-page "/localizable/community/built_using_middleman", layout: example
+page "/localizable/community/built_using_middleman", layout: :example
