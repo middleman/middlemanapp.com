@@ -35,9 +35,9 @@
 
 .browser-text-editor {
   @include position(absolute, em(32) null 0px 0px);
-  @include size(em(300) auto);
+  @include size(100% 90%);
   background-image: image-url("text-editor.jpg");
-  background-size: 300px 200px;
+  background-size: 100% 200px;
 
   @include media($medium-screen-up) {
     width: em(442);

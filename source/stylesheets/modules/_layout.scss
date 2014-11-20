@@ -10,51 +10,65 @@
 }
 
 .body-content-container {
-  padding-top: 4em;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
+  padding-top: 1em;
   position: relative;
+
+  @include media($medium-screen-up) {
+    padding-top: 4em;
+    margin-bottom: 4em;
+  }
 }
 
 .sidebar-container {
   float: left;
   height: 100%;
-  width: $sidebar-width;
+  width: 100%;
   word-wrap: break-word;
+
+  @include media($medium-screen-up) {
+    width: $medium-sidebar-width;
+  }
+
+  @include media($large-screen-up) {
+    width: $large-sidebar-width;
+  }
+
+  @include media($larger-screen-up) {
+    width: $larger-sidebar-width;
+  }
 }
 
 .main {
-  float: right;
-  width: $main-content-width;
+  @include media($medium-screen-up) {
+    float: right;
+    width: $medium-main-content-width;
 
-  &.stuck {
-    margin-left: $sidebar-width;
+    &.stuck {
+      margin-left: $medium-sidebar-width;
+    }
+  }
+
+  @include media($large-screen-up) {
+    width: $large-main-content-width;
+
+    &.stuck {
+      margin-left: $large-sidebar-width;
+    }
+  }
+
+  @include media($larger-screen-up) {
+    width: $larger-main-content-width;
+
+    &.stuck {
+      margin-left: $larger-sidebar-width;
+    }
   }
 
   h1 {
     padding-bottom: 0.35em;
     margin-bottom: 0.35em;
   }
-}
-
-.built-with-middleman-link {
-  border-bottom: 1px dotted $translucent-gray;
-  display: block;
-  padding: .75em;
-}
-
-.built-with-middleman-link, .source-code-link {
-  transition: all .2s linear;
-
-  &:hover {
-    background: lighten($saturated-blue, 42);
-  }
-}
-
-.source-code-link {
-  background: $washed-out-gray;
-  padding: 0.2em 0.75em;
-  margin-bottom: 1em;
-  display: inline-block;
 }
 
 hr {

@@ -1,6 +1,11 @@
 .toc-block-container {
+  display: none;
   height: 100vh;
   overflow: scroll;
+
+  @include media($medium-screen-up) {
+    display: block;
+  }
 }
 
 #search {

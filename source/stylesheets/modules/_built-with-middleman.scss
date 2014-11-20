@@ -13,6 +13,14 @@
   line-height: 60px;
 }
 
+.built-with-middleman-link, .source-code-link {
+  transition: all .2s linear;
+
+  &:hover {
+    background: lighten($saturated-blue, 42);
+  }
+}
+
 .built-with-middleman-link {
   border-bottom: none;
   display: inline;
@@ -29,6 +37,7 @@
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
   color: lighten($medium-gray, 10);
+  display: inline-block;
   float: right;
   font-size: $base-font-size * 0.75;
   font-weight: $font-weight-bold;

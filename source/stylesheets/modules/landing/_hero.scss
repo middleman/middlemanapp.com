@@ -4,7 +4,11 @@
 }
 
 .hero-content-logo {
-  display: block;
+  display: none;
+
+  @include media($medium-screen-up){
+    display: block;
+  }
 }
 
 .hero-content-logo img {
@@ -34,8 +38,7 @@
 
 .hero-banner-container {
   .browser {
-    @include span-columns(10 of 12);
-    @include shift(1);
+    @include fill-parent;
 
     @include media($medium-screen-up) {
       @include span-columns(8 of 12);

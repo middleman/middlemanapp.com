@@ -3,6 +3,7 @@
   transition: 0.3s ease all;
   background-color: $golden-yellow;
   padding: 1em 0;
+  position: relative;
 }
 
 .global-nav.hidden {
@@ -14,6 +15,25 @@
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.25);
   transform: translate(0, 0);
   z-index: 1;
+}
+
+.global-nav-middleman-signature {
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: inline-block;
+  }
+}
+
+.global-nav-middleman-logo {
+  @include size(em(44));
+  display: inline-block;
+  position: absolute;
+  top: em(7);
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
 }
 
 .logo-text {
@@ -30,6 +50,10 @@
 .global-nav-item {
   display: inline-block;
   margin-right: 2em;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   a {
     color: $global-nav-link-color;

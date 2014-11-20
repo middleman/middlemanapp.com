@@ -1,7 +1,10 @@
 <nav class="global-nav" data-waypoint="global-nav">
   <section class="wrap-container">
     <header class="global-nav-item logo-text">
-      <%= link_to t("navigation.logo"), "#{locale_prefix}/" %>
+      <%= link_to t("navigation.logo"), "#{locale_prefix}/", class:
+        "global-nav-middleman-signature" %>
+      <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/", class:
+        "global-nav-middleman-logo" %>
     </header>
 
     <ul class="global-nav-list">
