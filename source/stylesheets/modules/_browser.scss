@@ -32,3 +32,15 @@
     width: em(120);
   }
 }
+
+.browser-text-editor {
+  @include position(absolute, em(32) null 0px 0px);
+  @include size(em(300) auto);
+  background-image: image-url("text-editor.jpg");
+  background-size: 300px 200px;
+
+  @include media($medium-screen-up) {
+    width: em(442);
+    background-size: 442px 300px;
+  }
+}
