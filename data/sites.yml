@@ -117,6 +117,8 @@ built:
   - url: http://www.ecosio.com
   - url: http://alohafishmans.com
   - url: http://pomocni.owocni.org
+  - url: http://echobind.com
+    title: "Echobind"
 mobile:
   - url: http://pollev.com
 blogs:
@@ -182,3 +184,6 @@ blogs:
     source: https://github.com/gerwitz/hans.gerwitz.com
   - url: http://nicholasjohnson.com/
     title: "Nicholas Johnson"
+  - url: http://cball.me
+    title: "Level Up"
+    source: https://github.com/cball/cball.me
