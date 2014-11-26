@@ -187,3 +187,6 @@ blogs:
   - url: http://cball.me
     title: "Level Up"
     source: https://github.com/cball/cball.me
+  - url: http://devahoy.com/
+    title: "DevAhoy"
+    source: https://github.com/devahoy/devahoy-blog
