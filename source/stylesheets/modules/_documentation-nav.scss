@@ -53,13 +53,17 @@
   }
 
   a {
-    color: darken($slate-gray, 20);
+    color: darken($slate-gray, 10);
     display: block;
     padding: 0.34em 0.5em;
-    transition: all 0.2s linear;
+    transition: all 0.15s ease;
 
     &:hover {
-      background: lighten($saturated-blue, 42);
+      background: lighten($base-accent-color, 30);
     }
   }
+}
+
+.doc-item-active {
+  background: lighten($base-accent-color, 27);
 }

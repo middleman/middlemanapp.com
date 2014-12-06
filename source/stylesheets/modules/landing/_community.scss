@@ -12,8 +12,8 @@
 }
 
 .community-subtitle {
-  font-size: $base-font-size;
-  line-height: 1.5em;
+  font-size: $base-font-size * 1.2;
+  line-height: 1.9em;
   margin: 0 auto 1.5em;
 
   @include media($medium-screen-up) {
@@ -43,6 +43,6 @@
 }
 
 .community-social-link {
-  @include button-outline("darken", $navy);
+  @include button-outline("fill", $navy, white);
 }
 

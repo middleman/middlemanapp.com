@@ -16,23 +16,26 @@
 }
 
 .hero-headline {
-  color: rgba(black, 0.5);
-  font-size: $base-font-size * 1.8;
+  color: white;
+  font-size: $base-font-size * 2.2;
+  font-weight: 600;
   margin-bottom: 0.5em;
 }
 
 .hero-description {
-  color: white;
+  color: rgba(black, 0.45);
   font-size: $base-font-size;
   display: inline-block;
+  line-height: 1.4;
   margin: 0 0 2.5em;
+  width: 55%;
 
   &:not(:last-child) {
     margin-right: 1.5em;
   }
 
   @include media($medium-screen-up) {
-    font-size: $base-font-size * 1.25;
+    font-size: $base-font-size * 1.35;
   }
 }
 

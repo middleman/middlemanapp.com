@@ -5,8 +5,8 @@ layout: layout
 <header class="hero">
   <%= partial 'partials/global_nav' %>
   <section class="body-content-container wrap-container" data-waypoint="hero-content">
-    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/", class: "hero-content-logo" %>
-
+    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
+      class: "hero-content-logo" %>
     <h2 class="hero-headline"><%= t("index.headline") %></h2>
     <h3 class="hero-description"><%= t("index.description") %></h3>
 
@@ -23,15 +23,15 @@ layout: layout
 <div class="body-content-container wrap-container">
   <section class="introduction">
     <div class="introduction-container" data-waypoint="introduction-container">
-      <div class="introduction-item">
-        <div class="introduction-item-graphic-wrapper -left">
+      <div class="introduction-item second-graphic">
+        <div class="introduction-item-graphic-wrapper box-left">
           <div class="introduction-browser browser">
             <pre class="introduction-browser-body browser-body">
               <code class="browser-code">$ middleman init project</code>
             </pre>
           </div>
         </div>
-        <div class="introduction-item-text-wrapper -right">
+        <div class="introduction-item-text-wrapper box-right">
           <h4 class="introduction-item-header">
             <%= t("introduction.first.header") %>
           </h4>
@@ -40,13 +40,13 @@ layout: layout
           </p>
           <p class="introduction-item-text">
           <%= link_to t("introduction.first.link_text"),
-            "#{locale_prefix}/basics/install/", class: "introduction-link" %>
+            "#{locale_prefix}/basics/install/", class: "cta-link-body" %>
           </p>
         </div>
       </div>
 
-      <div class="introduction-item">
-        <div class="introduction-item-text-wrapper -left">
+      <div class="introduction-item third-graphic">
+        <div class="introduction-item-text-wrapper box-left">
           <h4 class="introduction-item-header">
             <%= t("introduction.second.header") %>
           </h4>
@@ -56,10 +56,10 @@ layout: layout
           <p class="introduction-item-text">
           <%= link_to t("introduction.second.link_text"),
             "#{locale_prefix}/advanced/configuration",
-              class: "introduction-link" %>
+              class: "cta-link-body" %>
           </p>
         </div>
-        <div class="introduction-item-graphic-wrapper -right">
+        <div class="introduction-item-graphic-wrapper box-right">
           <div class="introduction-browser browser">
             <div class="introduction-browser-body">
               <div class="browser-text-editor">
@@ -69,14 +69,14 @@ layout: layout
         </div>
       </div>
 
-      <div class="introduction-item">
-        <div class="introduction-item-graphic-wrapper -left">
+      <div class="introduction-item fourth-graphic">
+        <div class="introduction-item-graphic-wrapper box-left">
           <div class="introduction-browser browser">
             <div class="introduction-browser-body introduction-browser-window browser-body">
             </div>
           </div>
         </div>
-        <div class="introduction-item-text-wrapper -right">
+        <div class="introduction-item-text-wrapper box-right">
           <h4 class="introduction-item-header">
             <%= t("introduction.third.header") %>
           </h4>
@@ -86,7 +86,7 @@ layout: layout
           <p class="introduction-item-text">
           <%= link_to t("introduction.third.link_text"),
             "#{locale_prefix}/basics/build_and_deploy", class:
-            "introduction-link" %>
+            "cta-link-body" %>
           </p>
         </div>
       </div>

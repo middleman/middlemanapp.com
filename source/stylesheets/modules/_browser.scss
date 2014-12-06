@@ -4,8 +4,8 @@
 }
 
 .browser:before {
-  @include size(100% em(32));
-  background: $browser-bar-color inline-image("browser-bar-button-set.svg") no-repeat 0.66em 0.66em;
+  @include size(100% em(27));
+  background: $browser-bar-color inline-image("browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
   border-radius: $base-border-radius $base-border-radius 0 0;
   content: "";
   display: block;
@@ -21,6 +21,10 @@
   background: $browser-body-color;
   margin: 0;
   padding: 0;
+
+  .identifier {
+    color: white;
+  }
 }
 
 .browser-text-editor-sidebar {
@@ -34,7 +38,7 @@
 }
 
 .browser-text-editor {
-  @include position(absolute, em(32) null 0px 0px);
+  @include position(absolute, em(27) null 0px 0px);
   @include size(100% 90%);
   background-image: image-url("text-editor.jpg");
   background-size: 100% 200px;

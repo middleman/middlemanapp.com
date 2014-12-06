@@ -28,10 +28,20 @@ transparent) {
   @include button;
   border: 2px solid $font-color;
   color: $font-color;
+  background: -webkit-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: -moz-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: -o-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: linear-gradient($secondary-color 50%, $font-color 50%);
+  background-repeat: repeat;
+  -webkit-background-size: 100% 200%;
+  -moz-background-size: 100% 200%;
+  background-size: 100% 200%;
+  transition: all .3s ease-in-out;
 
   @if $type == "fill" {
 
     &:hover {
+      background-position: 200% 100%;
       background-color: $font-color;
       border-color: $font-color;
       color: $secondary-color;
@@ -41,7 +51,6 @@ transparent) {
   @else if $type == "darken" {
 
     &:hover {
-      background-color: $secondary-color;
       border-color: darken($font-color, 20);
       color: darken($font-color, 20);
     }
