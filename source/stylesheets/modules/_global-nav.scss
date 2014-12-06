@@ -11,9 +11,9 @@
 }
 
 .global-nav.active {
-  @include position(fixed, 0 0 null 0);
+  @include position(fixed, null 0px null 0px);
   box-shadow: 0 1px 3px 0px rgba(0,0,0,0.25);
-  transform: translate(0, 0);
+  transform: translate(0);
   z-index: 1;
 }
 
@@ -64,7 +64,7 @@
   }
 }
 
-a.cta-link {
+a.cta-link-nav {
   border: 1px solid $global-nav-link-color;
   border-radius: $base-border-radius;
   padding: 0.35em 0.5em;
@@ -74,8 +74,4 @@ a.cta-link {
     color: white;
     transition: all 0.15s linear;
   }
-}
-
-.doc-item-active {
-  border-left: 3px solid $saturated-blue;
 }

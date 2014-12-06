@@ -4,6 +4,7 @@
 //=require "_vendor/waypoints-sticky"
 
 //=require "_toc"
+//=require "_scroll-animation"
 //=require "_global-nav-animation"
 //=require "_docs-nav-animation"
 

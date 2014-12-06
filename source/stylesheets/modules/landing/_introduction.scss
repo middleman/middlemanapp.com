@@ -25,6 +25,32 @@
   }
 }
 
+.animate {
+  transition: all, ease .9s;
+}
+
+.box-left, .box-right {
+  position: relative;
+}
+
+.box-left {
+  left: -30px;
+
+  &.animate {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+.box-right {
+  right: -30px;
+
+  &.animate {
+    -webkit-transform: translateX(20px);
+    transform: translateX(-20px);
+  }
+}
+
 .introduction-item-graphic-wrapper,
 .introduction-item-text-wrapper {
   padding: 0;
@@ -98,34 +124,32 @@
   font-size: $base-font-size;
 }
 
-.introduction-link {
+.cta-link-body {
   border-radius: $base-border-radius;
-  border: 1px solid darken($washed-out-gray, 5);
+  border: 1px solid $navy;
   display: inline-block;
   margin-top: 1em;
-  padding: .5em;
+  padding: 0.2em 0.7em 0.2em 0.5em;
 
   &:after {
     @include size(16px);
-    color: $saturated-blue;
+    color: $navy;
     content: "\25B6";
     display: inline-block;
-    font-size: .85em;
-    margin-left: .1em;
-    padding: 0.25em 0.2em 0.25em 0.3em;
+    font-size: .75em;
     position: relative;
     text-align: center;
-    top: -1px;
+    left: 2px;
   }
 
   &:hover {
-    border-color: lighten($saturated-blue, 38);
-    background-color: lighten($saturated-blue, 42);
-    transition: all .3s linear;
+    border-color: $navy;
+    background-color: lighten($navy, 45);
+    transition: all .3s ease-in-out;
 
     &:after {
-      transform: translate(5px, 0);
-      transition: all .15s linear;
+      transform: translate(3px, 0);
+      transition: all .15s ease-in-out;
     }
   }
 }
