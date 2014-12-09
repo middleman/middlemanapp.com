@@ -165,6 +165,7 @@ That `layouts/article_layout.erb` layout would look like this
   </article>
 <% end %>
 ```
+**NB:** Haml/Slim users should use `= wrap_layout` here, be careful when translating ERB examples. All Padrino helpers require the equals sign in Haml/Slim since 3.3.2.
 
 Like a normal layout, `yield` is where the resulting template content is placed. In this example, you've end up with the following output:
 
