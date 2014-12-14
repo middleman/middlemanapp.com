@@ -22,13 +22,20 @@ If you are already using a compressed file that includes `.min` in its filename,
 You can customize how the JavaScript compressor works by setting the `:compressor` option when activating the `:minify_javascript` extension in `config.rb` to a custom instance of Uglifier. See [Uglifier's docs](https://github.com/lautis/uglifier) for details. For example, you could enable unsafe optimizations and mangle top-level variable names like this:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
+activate :minify_javascript, compressor: Uglifier.new(toplevel: true, unsafe: true)
 ```
 
 If you have `asset_hash` activated, are building your site on multiple servers during deploy to sit behind a load balancer, and are compressing Javascript, ensure that mangling variables is disabled. If mangling is enabled, Uglifier will create different compressed versions of the Javascript on each machine, leading to different hashes in the filename and different references in each version of the HTML. For example:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:mangle => false)
+activate :minify_javascript, compressor: Uglifier.new(mangle: false)
+```
+
+The `inline` option can be used to minify \<style> and \<script> tags in HTML:
+
+``` ruby
+activate :minify_css, inline: true
+activate :minify_javascript, inline: true
 ```
 
 If you want to exclude any files from being minified, pass the `:ignore` option when activating these extensions, and give it one or more globs, regexes, or procs that identify the files to ignore. Likewise, you can pass an `:exts` option to change which file extensions are renamed.
@@ -62,7 +69,7 @@ Middleman provides an official extension for minifying its HTML output. Simply i
 gem install middleman-minify-html
 ```
 
-Add `middleman-minify-html` to your `Gemfile`: 
+Add `middleman-minify-html` to your `Gemfile`:
 
 ``` ruby
 gem "middleman-minify-html"
