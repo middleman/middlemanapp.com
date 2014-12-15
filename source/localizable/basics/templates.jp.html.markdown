@@ -165,6 +165,7 @@ page "blog/*", :layout => :article_layout
   </article>
 <% end %>
 ```
+**注意:** Haml/Slim のユーザはこの場合では `= wrap_layout` を使うべきです。ERB の例を利用する場合には注意してください。Middleman v3.3.2 からすべての Padrino ヘルパは Haml/Slim を使う場合 = が必要です。
 
 通常のレイアウトと同じように, `yield` はテンプレートの出力内容が配置される場所です。この例では次の出力になります:
 
