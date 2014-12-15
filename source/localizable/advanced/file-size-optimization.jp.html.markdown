@@ -22,13 +22,20 @@ end
 `config.rb` で `:minify_javascript` 拡張を有効化する場合, `:compressor` オプションに Uglifier のカスタムインスタンスを設定することで JavaScript の圧縮方法をカスタマイズできます。詳細は [Uglifier's docs](https://github.com/lautis/uglifier) を参照してください。例えば, 次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
+activate :minify_javascript, compressor: Uglifier.new(toplevel: true, unsafe: true)
 ```
 
 `asset_hash` を有効にし, ロードバランサを使って複数サーバにサイトを構築, JavaScript の圧縮を行う場合には, mangle オプションが無効に指定されていることを確認してください。mangle オプションが有効な場合, Uglifier はサーバマシン毎に異なるバージョンの圧縮した JavaScript ファイルを作ります。そのファイルは異なるハッシュを含むファイル名で HTML の中の参照もバージョン毎に異なります。次のように設定します:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:mangle => false)
+activate :minify_javascript, compressor: Uglifier.new(mangle: false)
+```
+
+`inline` オプションは HTML 中の \<style> と \<script> タグの中身を圧縮するために使用できます:
+
+``` ruby
+activate :minify_css, inline: true
+activate :minify_javascript, inline: true
 ```
 
 一部のファイルをミニファイ処理から除外したい場合, これらの拡張を有効化する際に `:ignore` オプションを渡し, 無視するファイルを識別する 1 つ以上のパターンマッチ, 正規表現や Proc を与えます。同じように, ファイル拡張子をリネームし変更するために `:exts` オプションを渡すこともできます。
