@@ -190,3 +190,5 @@ blogs:
   - url: http://devahoy.com/
     title: "DevAhoy"
     source: https://github.com/devahoy/devahoy-blog
+  - url: https://tikhon.com/
+    title: "Tikhon Bernstam"
