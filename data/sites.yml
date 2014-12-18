@@ -192,3 +192,6 @@ blogs:
     source: https://github.com/devahoy/devahoy-blog
   - url: https://tikhon.com/
     title: "Tikhon Bernstam"
+  - url: http://jacbac.github.io/bibliotech/
+    title: "JacBac's bibliotech"
+    source: https://github.com/jacbac/bibliotech
