@@ -1,4 +1,6 @@
 built:
+  - url: http://doorman.it
+    title: Doorman - Evening Package Delivery on Request
   - url: http://crazydesigns.co.uk
   - url: http://cascadingmedia.com
   - url: https://www.simple.com
@@ -11,7 +13,7 @@ built:
   - url: http://frontcube.com
   - url: http://ravisuhag.com/
   - url: http://www.theverge.com/a/the-verge-50/intro
-  - url: http://dahal.co
+  - url: http://dahal.github.io
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
   - url: http://sass-lang.com
