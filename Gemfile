@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "bourbon"
 gem "builder"
 gem "jquery-middleman"
-gem "middleman", "~> 3.3.2"
+gem "middleman", '4.0.0.alpha.3'
 gem "middleman-autoprefixer"
 gem "middleman-livereload"
 gem "font-awesome-middleman"
