@@ -70,13 +70,36 @@ sprockets.import_asset 'jquery-mobile'
 
 ## Sprockets にパスを追加
 
-`:js_dir` や `:css_dir` の他にもアセットディレクトリがある場合, Sprockets のインポートパスを追加することができます。`config.rb` に次の内容を追加してください:
+`:js_dir` や `:css_dir` の他にもアセットディレクトリがある場合,
+Sprockets のインポートパスを追加することができます。`config.rb` に次の内容を追加してください。
+
+*注意* `#append_path` へのディレクトリの追加は 1 度だけだということに気をつけてください。
+そうでなければ `middleman` のサイトマップで重複した入力を取得してしまうでしょう。
+`# appended_paths` リストへの入力はディレクトリごとに 1 つの入力です。
+重複した入力は長いビルド処理, アセットファイルをミニファイする際のコンフリクトなどの原因になります。
+
+`config.rb` に次のように追加してください:
 
 ```ruby
-sprockets.append_path '/my/shared/assets/'
+# 文字列
+sprockets.append_path '/my/shared/assets1/'
+
+# Pathname もサポートします
+sprockets.append_path Pathname.new('/my/shared/assets2/')
 ```
 
-Sprockets supports Bower, so you can add your Bower components path directly:
+ディレクトリのリストを使って反復処理したい場合,
+各ディレクトリが 1 度だけ追加される小さいコードスニペットを使うことができます:
+
+```ruby
+%w(path1 longer/path2 longer/path3).each do |path|
+  next if sprockets.appended_paths.include? path
+
+  sprockets.append_path path
+end
+```
+
+Sprockets は Bower をサポートします。Bower のコンポーネントディレクトリのパスを直接追加します:
 
 ```ruby
 sprockets.append_path 'bower_components'

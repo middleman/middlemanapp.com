@@ -92,11 +92,32 @@ Then you can refer to that asset directly from `script` tags or
 ## Sprockets Import Path
 
 If you have assets in directories other than your `:js_dir` or `:css_dir`, you
-can make them importable by adding them to your Sprockets import path. Add this
-to your `config.rb`:
+can make them importable by adding them to your Sprockets import path. 
+
+*Warning* Make sure that you add a directory via `#append_path` only once,
+otherwise you will get duplicate entries in `middleman`'s site map - one entry
+for each directory entry in the `#appended_paths` list. This might cause
+doubled building times, build conflicts if you minify your assets etc.
+
+Add this to your `config.rb`:
 
 ```ruby
-sprockets.append_path '/my/shared/assets/'
+# String
+sprockets.append_path '/my/shared/assets1/'
+
+# Pathname is also supported
+sprockets.append_path Pathname.new('/my/shared/assets2/')
+```
+
+If you have a list of directories and want to iterate over it, you can use this
+small code snippet to make sure every directory is only added once:
+
+```ruby
+%w(path1 longer/path2 longer/path3).each do |path|
+  next if sprockets.appended_paths.include? path
+
+  sprockets.append_path path
+end
 ```
 
 Sprockets supports Bower, so you can add your Bower components path directly:

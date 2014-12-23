@@ -4,8 +4,7 @@ title: Localization (i18n)
 
 # Localization (i18n)
 
-The `:i18n` extension provides an way to localize your site. Activate it in
-your `config.rb`:
+The `:i18n` extension provides a way to localize your site. Activate it in your `config.rb`:
 
 ``` ruby
 activate :i18n

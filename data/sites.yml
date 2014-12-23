@@ -1,19 +1,23 @@
 built:
+  - url: http://doorman.it
+    title: Doorman - Evening Package Delivery on Request
   - url: http://crazydesigns.co.uk
   - url: http://cascadingmedia.com
   - url: https://www.simple.com
     title: "Simple"
+  - url: http://www.appsagainstebola.org
+    title: "AppsAgainstEbola.org"
   - url: http://prototype-interactive.com/
   - url: http://www.mangrove.com
   - url: http://mokaproject.com/
   - url: http://frontcube.com
   - url: http://ravisuhag.com/
   - url: http://www.theverge.com/a/the-verge-50/intro
-  - url: http://dahal.co
+  - url: http://dahal.github.io
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
   - url: http://sass-lang.com
-    title: "Saas"
+    title: "Sass"
     source: https://github.com/sass/sass-site
   - url: http://startexploding.com
   - url: http://sassandcompass.com
@@ -115,6 +119,8 @@ built:
   - url: http://www.ecosio.com
   - url: http://alohafishmans.com
   - url: http://pomocni.owocni.org
+  - url: http://echobind.com
+    title: "Echobind"
 mobile:
   - url: http://pollev.com
 blogs:
@@ -168,6 +174,7 @@ blogs:
   - url: https://blog.rainforestqa.com/
   - url: http://syui.github.io/middleman/
     source: https://github.com/syui/middleman-simple-template
+  - url: http://limekin.github.io/
   - url: https://chareice.com
   - url: http://www.ecosio.com/de/blog
   - url: http://apetyt-na-kuchnie.pl
@@ -179,3 +186,14 @@ blogs:
     source: https://github.com/gerwitz/hans.gerwitz.com
   - url: http://nicholasjohnson.com/
     title: "Nicholas Johnson"
+  - url: http://cball.me
+    title: "Level Up"
+    source: https://github.com/cball/cball.me
+  - url: http://devahoy.com/
+    title: "DevAhoy"
+    source: https://github.com/devahoy/devahoy-blog
+  - url: https://tikhon.com/
+    title: "Tikhon Bernstam"
+  - url: http://jacbac.github.io/bibliotech/
+    title: "JacBac's bibliotech"
+    source: https://github.com/jacbac/bibliotech
