@@ -5,18 +5,16 @@ layout: layout
 <header class="hero">
   <%= partial 'partials/global_nav' %>
   <section class="body-content-container wrap-container" data-waypoint="hero-content">
-    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
-
-      class: "hero-content-logo" %>
+    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/", class: "hero-content-logo" %>
 
     <h2 class="hero-headline"><%= t("index.headline") %></h2>
     <h3 class="hero-description"><%= t("index.description") %></h3>
 
     <div class="hero-banner-container">
       <div class="browser">
-<pre class="browser-body">
-<code class="browser-code">$ gem install middleman</code>
-</pre>
+        <pre class="browser-body">
+          <code class="browser-code">$ gem install middleman</code>
+        </pre>
       </div>
     </div>
   </section>
@@ -26,14 +24,14 @@ layout: layout
   <section class="introduction">
     <div class="introduction-container" data-waypoint="introduction-container">
       <div class="introduction-item">
-        <div class="introduction-item-graphic-wrapper">
+        <div class="introduction-item-graphic-wrapper -left">
           <div class="introduction-browser browser">
-    <pre class="introduction-browser-body browser-body">
-  <code class="browser-code">$ middleman init project</code>
-    </pre>
+            <pre class="introduction-browser-body browser-body">
+              <code class="browser-code">$ middleman init project</code>
+            </pre>
           </div>
         </div>
-        <div class="introduction-item-text-wrapper">
+        <div class="introduction-item-text-wrapper -right">
           <h4 class="introduction-item-header">
             <%= t("introduction.first.header") %>
           </h4>
@@ -48,7 +46,7 @@ layout: layout
       </div>
 
       <div class="introduction-item">
-        <div class="introduction-item-text-wrapper">
+        <div class="introduction-item-text-wrapper -left">
           <h4 class="introduction-item-header">
             <%= t("introduction.second.header") %>
           </h4>
@@ -61,7 +59,7 @@ layout: layout
               class: "introduction-link" %>
           </p>
         </div>
-        <div class="introduction-item-graphic-wrapper">
+        <div class="introduction-item-graphic-wrapper -right">
           <div class="introduction-browser browser">
             <div class="introduction-browser-body">
               <div class="browser-text-editor">
@@ -72,13 +70,13 @@ layout: layout
       </div>
 
       <div class="introduction-item">
-        <div class="introduction-item-graphic-wrapper">
+        <div class="introduction-item-graphic-wrapper -left">
           <div class="introduction-browser browser">
             <div class="introduction-browser-body introduction-browser-window browser-body">
             </div>
           </div>
         </div>
-        <div class="introduction-item-text-wrapper">
+        <div class="introduction-item-text-wrapper -right">
           <h4 class="introduction-item-header">
             <%= t("introduction.third.header") %>
           </h4>
@@ -107,19 +105,7 @@ layout: layout
         "#{locale_prefix}/community", class: "community-cta" %>
     </article>
     <hr>
-  <!--   <article class="community&#45;social&#45;block wrap&#45;container"> -->
-  <!--     <ul class="centered&#45;content"> -->
-  <!--       <li class="community&#45;social&#45;link&#45;item github&#45;link"> -->
-          <%# <%= link_to "Fork on GitHub",
-  # <!--           "https://github.com/middleman/middleman", class: "community&#45;social&#45;link" %>
-  <!--       </li> -->
-  <!--       <li class="community&#45;social&#45;link&#45;item twitter&#45;link"> -->
-          <%# <%= link_to "Follow on Twitter",
-  # <!--           "https://twitter.com/middlemanapp", class: "community&#45;social&#45;link"  %>
-  <!--       </li> -->
-  <!--   </article> -->
-  <!-- </section> -->
+  </section>
 
   <%= partial "partials/logos" %>
- </div>
-
+</div>

@@ -38,9 +38,10 @@
   @include size(100% 90%);
   background-image: image-url("text-editor.jpg");
   background-size: 100% 200px;
+  background-repeat: no-repeat;
 
   @include media($medium-screen-up) {
-    width: em(442);
-    background-size: 442px 300px;
+    // width: em(442);
+    background-size: 100% 100%;
   }
 }

@@ -34,6 +34,16 @@
     @include omega(2n);
     padding: 2em;
   }
+  &.-left {
+    @include media($medium-screen-up) {
+      padding-left: 0;
+    }
+  }
+  &.-right {
+    @include media($medium-screen-up) {
+      padding-right: 0;
+    }
+  }
 }
 
 .introduction-item-graphic-wrapper {
