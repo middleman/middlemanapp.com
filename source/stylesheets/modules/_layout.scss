@@ -69,6 +69,14 @@
     padding-bottom: 0.35em;
     margin-bottom: 0.35em;
   }
+
+  ol {
+    @extend %default-ol;
+  }
+
+  ul {
+    @extend %default-ul;
+  }
 }
 
 hr {

@@ -14,6 +14,7 @@ en:
       frontmatter: Frontmatter
       helper_methods: Helper Methods
       install: Install
+      upgrade-v4: Upgrading to v4
       layouts: Layouts
       partials: Partials
       start_new_site: Start a New Site
