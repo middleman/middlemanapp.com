@@ -1,3 +1,7 @@
+---
+title: Upgrading to v4
+---
+
 # Upgrading to v4
 
 With version 4, we're removing a lot of lesser used features in the core and replacing them with either better-supporting approaches which already existed or moving that functionality into an extension.

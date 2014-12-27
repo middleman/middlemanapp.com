@@ -1,3 +1,7 @@
+---
+title: Layouts
+---
+
 # Layouts
 
 Layouts allow the common HTML surrounding individual pages to be shared across
@@ -199,3 +203,5 @@ set :layout, false
 # Or for an individual file:
 page '/foo.html', :layout => false
 ```
+
+[Frontmatter]: /basics/frontmatter/

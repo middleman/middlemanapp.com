@@ -1,3 +1,7 @@
+---
+title: The Development Cycle
+---
+
 # The Development Cycle
 
 ## Middleman Server

@@ -1,10 +1,10 @@
 ---
-title: Template Engine Options
+title: テンプレートエンジンオプション
 ---
 
-## Template Engine Options
+## テンプレートエンジンオプション
 
-You can set options for the various template engines in your `config.rb`:
+`config.rb` にテンプレートエンジンのオプションを設定することができます:
 
 ```ruby
 set :haml, { :ugly => true, :format => :html5 }
@@ -12,20 +12,20 @@ set :haml, { :ugly => true, :format => :html5 }
 
 ## Markdown
 
-You can choose your favorite Markdown library and set options for it in `config.rb`:
+`config.rb` で一番好きな Markdown ライブラリを選び, オプションを設定することができます:
 
 ```ruby
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 ```
 
-When using RedCarpet, Middleman will handle links and image tags with its own helpers, meaning things like `:relative_links` and `:asset_hash` will do what you expect. However, the default Markdown engine is Kramdown because it's easier to install.
+RedCarpet を使う場合, Middleman はヘルパを用いて `:relative_links` や `:asset_hash` が行うようにリンクや画像タグを処理します。しかし, デフォルトの Markdown エンジンはインストールが簡単なことから Kramdown になっています。
 
-## Other Templating Languages
+## その他のテンプレート言語
 
-Here is the list of Tilt-enabled templating languages and the RubyGems which must be installed (and required in `config.rb`) for them to work (this list is from [Tilt](https://github.com/rtomayko/tilt/)):
+[Tilt](https://github.com/rtomayko/tilt/) 対応のテンプレート言語と RubyGems のリストです。動作させるにはインストール (`config.rb` で読み込む) しなければなりません。
 
-ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
+エンジン                | ファイル拡張子         | 必要なライブラリ
 ------------------------|------------------------|----------------------------
 Slim                    | .slim                  | slim
 Erubis                  | .erb, .rhtml, .erubis  | erubis

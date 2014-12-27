@@ -106,6 +106,8 @@ help you do that."
     description: Middleman is a static site generator using all the shortcuts
       and tools in modern web development.
     getting_started: Getting started
+    contribute: Contribute to the open-source community
+    see_middleman_sites: See All Middleman Sites
 
   # community/built-using-middleman
   built:

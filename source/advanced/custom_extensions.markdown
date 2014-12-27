@@ -56,7 +56,7 @@ class MyFeature < Middleman::Extension
 
   def initialize(app, options_hash={}, &block)
     super
-    
+
     puts options.foo
   end
 end
@@ -80,7 +80,7 @@ The [`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
- 
+
     app.set :css_dir, "lib/my/css"
   end
 end
@@ -93,7 +93,7 @@ later in your extension.
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
-   
+
     app.set :my_feature_setting, %w(one two three)
   end
 
@@ -160,7 +160,6 @@ Here's an example using an ERb template:
 ``` html
 <h1><%= make_a_link("http://example.com", "Click me") %></h1>
 ```
-
 
 ## Sitemap Manipulators
 
@@ -263,7 +262,7 @@ be ready, use the `compass_config` callback.
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
-    
+
     app.compass_config do |config|
       # config is the Compass.configuration object
       config.output_style = :compact

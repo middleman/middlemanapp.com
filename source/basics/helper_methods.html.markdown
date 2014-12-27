@@ -37,10 +37,12 @@ this:
 ``` html
 <%= link_to 'About', '/about.html' %>
 ```
+
 Produces:
 
 ```html
 <a href='/about/'>About</a>
+```
 
 You can also refer to source paths relative to your current page. Some people
 want their links to be relative to the current page. Pass `:relative => true`
@@ -296,7 +298,7 @@ adapted this code for Middleman (god bless the MIT license).
 
 For example, if you want to insert 5 sentences of lorem ipsum, you would write
 
-```ruby
+``` ruby
 <%= lorem.sentences 5 %>
 ```
 
@@ -334,13 +336,13 @@ It can be useful to generate classes on the `body` tag that correspond to the
 site hierarchy. `page_classes` generates those classes. Imagine you have a page
 at `projects/rockets/saturn-v.html`, and the following in your layout:
 
-```erb
+``` erb
 <body class="<%= page_classes %>">
 ```
 
 You'll get:
 
-```html
+``` html
 <body class="projects rockets saturn-v">
 ```
 

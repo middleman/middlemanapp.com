@@ -55,7 +55,7 @@ layout: layout
           </p>
           <p class="introduction-item-text">
           <%= link_to t("introduction.second.link_text"),
-            "#{locale_prefix}/advanced/configuration",
+            "#{locale_prefix}/advanced/configuration/",
               class: "introduction-link" %>
           </p>
         </div>
@@ -85,7 +85,7 @@ layout: layout
           </p>
           <p class="introduction-item-text">
           <%= link_to t("introduction.third.link_text"),
-            "#{locale_prefix}/basics/build_and_deploy", class:
+            "#{locale_prefix}/basics/build_and_deploy/", class:
             "introduction-link" %>
           </p>
         </div>
@@ -101,8 +101,8 @@ layout: layout
       <%= t("community.subtitle") %>
     </h5>
     <article class="centered-content">
-      <%= link_to "Contribute to the open-source community",
-        "#{locale_prefix}/community", class: "community-cta" %>
+      <%= link_to t("index.contribute"),
+        "#{locale_prefix}/community/", class: "community-cta" %>
     </article>
     <hr>
   </section>

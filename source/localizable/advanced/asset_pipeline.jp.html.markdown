@@ -6,9 +6,15 @@ title: アセットパイプライン
 
 ## 依存性管理
 
-[Sprockets] は Javascript (と CoffeeScript) のライブラリを管理するためのツールで, 依存性を宣言し 3rd パーティのコードを読み込みます。Sprockets は .js や .coffee のファイルの中で,  `require` メソッドを使えるようにし, プロジェクトまたは 3rd パーティ製の gem から外部ファイルを取り込むことができます。
+[Sprockets] は Javascript (と CoffeeScript) のライブラリを管理するためのツールで,
+依存性を宣言し 3rd パーティのコードを読み込みます。
+Sprockets は .js や .coffee のファイルの中で,  `require` メソッドを使えるようにし,
+プロジェクトまたは 3rd パーティ製の gem から外部ファイルを取り込むことが
+できます。
 
-jQuery ライブラリを含む `jquery.js` ファイルとアプリケーションコードが含まれる `app.js` があるとします。 次のようにすることで app ファイルは動作する前に jquery を読み込むことができます:
+jQuery ライブラリを含む `jquery.js` ファイルとアプリケーションコードが
+含まれる `app.js` があるとします。次のようにすることで app ファイルは
+動作する前に jquery を読み込むことができます:
 
 ``` javascript
 //= require "jquery"
@@ -34,11 +40,15 @@ body {
 
 ```
 
-Sass を使う場合, Sprockets のファイル読み込み方法よりも Sass の `@Import` を使用すべきです。
+Sass を使う場合, Sprockets のファイル読み込み方法ではなく
+Sass の `@Import` を使用すべきです。
 
 ## 結合したアセットファイルのみデプロイ
 
-`middleman build` コマンドを使った場合に `build` ディレクトリに結合した (1 つにまとめた) アセットファイルのみデプロイしたい場合, 結合対象のアセットファイル名にアンダースコアを使う必要があります。例えば, メインの `/source/javascripts/all.js` は次の依存関係で利用されます:
+`middleman build` コマンドを使った場合に `build` ディレクトリに
+結合した (1 つにまとめた) アセットファイルのみデプロイしたい場合,
+結合対象のアセットファイル名にアンダースコアを使う必要があります。
+例えば, メインの `/source/javascripts/all.js` は次の依存関係で利用されます:
 
 ``` javascript
 //= require "_jquery"
@@ -46,32 +56,43 @@ Sass を使う場合, Sprockets のファイル読み込み方法よりも Sass 
 //= require "_my_other_code"
 ```
 
-そして `/source/javascripts/` ディレクトリには次のファイルが用意される必要があります: `_jquery.js`, `_my_lib_code.js`, `_my_other_code.js`。結果として `/build/javascripts/` ディレクトリには依存したコードを含む `all.js` だけがデプロイされます。
+そして `/source/javascripts/` ディレクトリには次のファイルが用意される必要があります:
+`_jquery.js`, `_my_lib_code.js`, `_my_other_code.js`。
+結果として `/build/javascripts/` ディレクトリには依存したコードを含む
+`all.js` だけがデプロイされます。
 
 ## アセット gem
 
-`Gemfile` で読み込まれた gem からアセットを使用することができます:
+`Gemfile` で読み込まれた gem からアセットを使用できます:
 
 ```ruby
 gem "bootstrap-sass", :require => false
 ```
 
-`:require => false` はやや重要です。これらの多くの gem は Rails で使われるものと仮定されており, Rails や Compass 内部にフックしようとすると壊れます。gem を require することを回避し, Middleman は残り部分の面倒をみます。
+`:require => false` はやや重要です。多くの gem は Rails で使われるものと
+仮定されており, Rails や Compass 内部にフックしようとすると壊れます。
+gem を require することを回避し, Middleman は残り部分の
+面倒をみます。
 
-一度これらの gem の依存関係を追加すると, gem から画像やフォントが自動的に読み込まれます。JavaScript や CSS はファイルの中で `require` や `@import` すると使うことができます。
+一度これらの gem の依存関係を追加すると, gem から画像やフォントが
+自動的に読み込まれます。JavaScript や CSS はファイルの中で
+`require` や `@import` すると使うことができます。
 
-アセットファイルとして追加せず, HTML から 直接 gem のスタイルシートや JS ファイルを参照したい場合, `config.rb` の中で明示的に読み込む必要があります。
+アセットファイルとして追加せず,
+HTML から 直接 gem のスタイルシートや JS ファイルを参照したい場合,
+`config.rb` の中で明示的に読み込む必要があります。
 
 ```ruby
 sprockets.import_asset 'jquery-mobile'
 ```
 
-これで `script` タグや `javascript_include_tag` から直接参照することができます。
+これで `script` タグや `javascript_include_tag` から
+直接参照することができます。
 
 ## Sprockets にパスを追加
 
 `:js_dir` や `:css_dir` の他にもアセットディレクトリがある場合,
-Sprockets のインポートパスを追加することができます。`config.rb` に次の内容を追加してください。
+Sprockets のインポートパスを追加することができます。
 
 *注意* `#append_path` へのディレクトリの追加は 1 度だけだということに気をつけてください。
 そうでなければ `middleman` のサイトマップで重複した入力を取得してしまうでしょう。
@@ -175,18 +196,26 @@ end.each do |f|
 end
 ```
 
-## Helpers
+## ヘルパ
 
 `*.scss` ファイルの中で利用できるヘルパがあります:
 
 * `image-path()`, `image-url()`
 * `font-path()`, `font-url()`
 
-これらのヘルパはアセットファイルへの正しいディレクトリ/ url をファイルパスとして追加します。例えば, `image-path('lightbox2/img/close.png')` が `images/lightbox2/img/close.png` になります。 bower 管理下のアセットファイルを参照するには `lightbox2`-component のファイルの 1 つである画像ファイル `lightbox2/img/close.png` を相対的な名前を指定する必要があります。
+これらのヘルパはアセットファイルへの正しいディレクトリ/url をファイルパスとして追加します。
+例えば, `image-path('lightbox2/img/close.png')` が
+`images/lightbox2/img/close.png` になります。 bower 管理下のアセットファイルを参照するには
+`lightbox2`-component のファイルの 1 つである画像ファイル `lightbox2/img/close.png`
+を相対的な名前を指定する必要があります。
 
 ## Compass
 
-Middleman は柔軟な [Compass] サポートを備えています。Compass は Sass でクロスブラウザなスタイルシートを書くためのパワフルなフレームワークです。Compass は, [Susy] のように, Middleman で使用できる拡張機能です。`image-url` のような Sprockets パスヘルパは Middleman のサイトマップにフックされるので, その他の拡張( :asset_hash のような) もスタイルシートに影響します。
+Middleman は柔軟な [Compass] サポートを備えています。
+Compass は Sass でクロスブラウザなスタイルシートを書くためのパワフルなフレームワークです。
+Compass は, [Susy] のように, Middleman で使用できる拡張機能です。
+`image-url` のような Sprockets パスヘルパは Middleman のサイトマップにフックされるので,
+その他の拡張( :asset_hash のような) もスタイルシートに影響します。
 
 [Sprockets]: https://github.com/sstephenson/sprockets
 [Compass]: http://compass-style.org

@@ -1,3 +1,7 @@
+---
+title: Installation
+---
+
 # Installation
 
 Middleman is distributed using the RubyGems package manager. This means you
@@ -15,7 +19,9 @@ page](https://developer.apple.com/downloads/index.action).
 Once you have Ruby and RubyGems up and running, execute the following from the
 command line:
 
-``` bash gem install middleman ```
+```bash
+$ gem install middleman
+```
 
 This will install Middleman, its dependencies and the command-line tools for
 using Middleman.

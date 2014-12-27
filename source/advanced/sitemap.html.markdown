@@ -77,3 +77,6 @@ end
 
 Then I could make a `category.html.erb` that uses the `category` and `pages`
 variables to build a category listing for each category.
+
+[dynamic pages]: /advanced/dynamic_pages/
+[frontmatter]: /basics/frontmatter/

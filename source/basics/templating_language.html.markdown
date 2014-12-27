@@ -9,8 +9,8 @@ development. The languages range from simply allowing you to use Ruby variables
 and loops in your pages, to providing a completely different format to write
 your pages in which compiles to HTML.  Middleman ships with support for the
 ERb, Haml, Sass, Scss and CoffeeScript engines. Many more engines can be
-enabled by including their Tilt-enabled gems. [See the list
-below](#other-templating-languages).
+enabled by including their Tilt-enabled gems.
+[See the list](/basics/template_engine_options/).
 
 ## Template Basics
 
@@ -40,8 +40,3 @@ If we wanted to get fancy, we could add a loop:
 </ul>
 ```
 
-[Haml]: http://haml-lang.com/
-[Slim]: http://slim-lang.com/
-[Markdown]: http://daringfireball.net/projects/markdown/
-[these guides are written in Markdown]: https://raw.github.com/middleman/middleman-guides/master/source/guides/basics-of-templates.html.markdown
-[Frontmatter]: /basics/frontmatter/

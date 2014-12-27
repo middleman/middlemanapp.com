@@ -10,8 +10,6 @@ will be output as `about-us.html` when you build the project. If you were to
 place this project in the root of a web server at `example.com`, then this page
 would be accessible at: `http://example.com/about-us.html`
 
-
-
 Middleman provides the Directory Indexes extension to tell Middleman to create
 a folder for each `.html` file and place the built template file as the index
 of that folder. In your `config.rb`:

@@ -1,3 +1,7 @@
+---
+title: Partials
+---
+
 # Partials
 
 Partials are a way of sharing content across pages to avoid duplication.

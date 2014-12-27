@@ -4,11 +4,13 @@ title: Frontmatter
 
 # Frontmatter
 
-Frontmatter は YAML または JSON フォーマットでテンプレート上部に記述することができるページ固有の変数です。
+Frontmatter は YAML または JSON フォーマットでテンプレート上部に記述することができる
+ページ固有の変数です。
 
 ## YAML フォーマット
 
-簡単な ERb テンプレートに, 固有のページのレイアウトを変更する Frontmatter を追加します。
+簡単な ERb テンプレートに固有のページのレイアウトを変更する
+Frontmatter を追加します。
 
 ``` html
 ---
@@ -32,7 +34,8 @@ Frontmatter はテンプレートの最上部に記述し, 行頭から行末ま
 
 ## JSON フォーマット
 
-Frontmatter に JSON を使うこともできます。`;;;` で区切られ次のようになります:
+Frontmatter に JSON を使うこともできます。`;;;` で区切られ
+次のようになります:
 
 ``` html
 ;;;

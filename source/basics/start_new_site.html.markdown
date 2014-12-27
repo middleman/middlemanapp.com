@@ -1,3 +1,7 @@
+---
+title: Starting a New Site
+---
+
 # Starting a New Site
 
 To get started we will need to create a project folder for Middleman to work
@@ -55,6 +59,7 @@ If you've already initialized a project and just want the config.ru for linking
 with pow or other development server its contents are simply:
 
 ```
-require 'rubygems' require 'middleman/rack'
+require 'rubygems'
+require 'middleman/rack'
 run Middleman.server
 ```

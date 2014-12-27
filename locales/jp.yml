@@ -1,50 +1,119 @@
 ---
 jp:
-  # navigations
-  basics:
-    title: Middleman の基礎
-    getting_started: はじめに
-    templates: テンプレート
-    template_helpers: テンプレートヘルパ
-    frontmatter: Frontmatter
-    dynamic_pages: 動的ページ
-    asset_pipeline: アセットパイプライン
-    pretty_urls: きれいな URL (ディレクトリインデックス)
-    livereload: LiveReload
-    directory_structure: ディレクトリ構造
-    blogging: ブログ機能
+  navigation:
+    contribute: Contribute
+    docs: Docs
+    logo: Middleman
+    search_placeholder: ドキュメント検索
+    basics:
+      title: 基礎
+      blogging: ブログ機能
+      build_deploy: ビルド & デプロイ
+      development_cycle: 開発サイクル
+      directory_structure: ディレクトリ構造
+      frontmatter: Frontmatter
+      helper_methods: ヘルパーメソッド
+      install: インストール
+      upgrade-v4: v4 へのアップグレード
+      layouts: レイアウト
+      partials: パーシャル
+      start_new_site: 新しいサイトの作成
+      templates: テンプレート言語
+    advanced:
+      title: 高度な機能
+      asset_pipeline: アセットパイプライン
+      configuration: 設定
+      custom_extensions: カスタム拡張
+      data_files: データファイル
+      development_optimization: 開発の最適化
+      dynamic_pages: 動的ページ
+      file_size_optimization: ファイルサイズ最適化
+      improving_cacheability: キャッシュ機能の改善
+      localization: 多言語化 (i18n)
+      performance_optimization: パフォーマンス最適化
+      pretty_urls: きれいな URL (ディレクトリインデックス)
+      production_optimization: プロダクションの最適化
+      project_templates: プロジェクトテンプレート
+      rack_middleware: Rack ミドルウェア
+      sitemap: サイトマップ
+    community:
+      title: コミュニティ
+      built_using_middleman: Middleman 採用サイト
+      community_forum: コミュニティフォーラム
+      custom_extensions: 拡張機能
+      deployment_solution: デプロイ方法
+      github: GitHub リポジトリ
+      project_templates: プロジェクトテンプレート
+  open_source:
+    title: オープンソースへの貢献
+    service: サービスの追加
+    template: テンプレートを作る
 
-  advanced:
-    title: 高度な機能
-    configuration: 設定
-    local_data: ローカルデータ
-    localization: 多言語化 (i18n)
-    sitemap: サイトマップ
-    rack_middleware: Rack ミドルウェア
-    custom: カスタム拡張
-    file_size_optimization: ファイルサイズ最適化
-    improving_cacheability: キャッシュ機能の改善
+  introduction:
+    first:
+      header: インストール
+      description: gem をインストールし, 新たに Middleman を使ったサイトを作成するために
+        CLI から <code>middleman initmy_project</code> を実行します。
+      link_text: インストール方法を参照する
+    second:
+      header: サイトのカスタマイズ
+      description: <code>cd my_project</code> してください。
+        Middleman は細かい設定なしに動作します。各ディレクトリの意味や
+        サイトのカスタマイズの行い方を理解するためにドキュメントを読んでください。
+      link_text: カスタマイズ方法を参照する
+    third:
+      header: ビルドとデプロイ
+      description: <code>bundle exec middleman build</code> を実行するだけで,
+        プロダクション用のサイトデータを出力できます。
+        オープンソースのデプロイツールを利用することでサイトを公開できます。
+      link_text: ビルド方法の説明を参照する
 
   community:
-    title: コミュニティ
-    extensions: 拡張機能
-    templates: プロジェクトテンプレート
-    deployment: デプロイ方法
-    forum: コミュニティフォーラム
-    github: GitHub リポジトリ
-    built_using_middleman: Middleman 採用サイト
+    title: オープンソースコミュニティ
+    subtitle: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
+      オープンソースの機能に貢献したい時, コミュニティページが
+      正しい場所にあなたを導くでしょう。
+    main_text: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
+      オープンソースの機能に貢献したい時, Middleman を
+      最大限に活用するには以下の機能を参照してください。
+    built_using_middleman: Middleman 採用企業
+    forum:
+      header: コミュニティフォーラム
+      description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
+      link_text: フォーラムに移動する
 
+  contributions:
+    title: Middleman ユーザによる貢献
+    deployment:
+      header: デプロイ方法
+      description: "デプロイ先に Heroku やその他のサービスを使う場合, 私たちはそのデプロイを助けます。"
+      link_text: デプロイ方法を参照する
+    extensions:
+      header: 拡張機能
+      description: あなたの Middleman を使ったサイトに新しい機能を追加します。
+      link_text: すべての拡張機能を参照する
+    github: GitHub リポジトリ
+    templates:
+      header: プロジェクトテンプレート
+      description: あなたの好きなライブラリを採用しているテンプレートでプロジェクトを作成できます。
+      link_text: プロジェクトテンプレートを参照する
 
   # index
   index:
-    sub_title: 効率的な作業を可能にする Ruby 製の静的サイト生成ツール
-    headline: web サイトの開発をシンプルに
-    description: Middleman はモダンな web 開発のあらゆるショートカットやツールを採用した静的サイトジェネレータです。
+    sub_title: 作業を効率化するフロントエンド開発ツール
+    headline: 静的サイトを構築する<br> 使いやすいフレームワーク
+    description: Middleman はモダンな web 開発のショートカットやツールを
+      採用した静的サイトジェネレータです
     getting_started: はじめに
+    contribute: オープンソースコミュニティに貢献する
+    see_middleman_sites: Middleman 採用サイトを見る
 
   # community/built-using-middleman
   built:
     title: Middleman 採用サイト
-    mobile: Middleman を使ったモバイルアプリケーション
-    blog: Middleman を使ったブログ
+    mobile: Middleman 採用モバイルアプリケーション
+    blog: Middleman 採用ブログ
+    twitter: "@middlemanapp"
+    github: GitHub
+    source_code: ソースコード
     fork: Github で Fork しサイトを追加してください
