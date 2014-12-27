@@ -1,0 +1,51 @@
+.hero {
+  background: $base-hero-color;
+  text-align: center;
+}
+
+.hero-content-logo {
+  display: none;
+
+  @include media($medium-screen-up){
+    display: block;
+  }
+}
+
+.hero-content-logo img {
+  @include size(em(300));
+}
+
+.hero-headline {
+  color: white;
+  font-size: $base-font-size * 2.2;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.hero-description {
+  color: rgba(black, 0.45);
+  font-size: $base-font-size;
+  display: inline-block;
+  line-height: 1.4;
+  margin: 0 0 2.5em;
+  width: 55%;
+
+  &:not(:last-child) {
+    margin-right: 1.5em;
+  }
+
+  @include media($medium-screen-up) {
+    font-size: $base-font-size * 1.35;
+  }
+}
+
+.hero-banner-container {
+  .browser {
+    @include fill-parent;
+
+    @include media($medium-screen-up) {
+      @include span-columns(8 of 12);
+      @include shift(2);
+    }
+  }
+}

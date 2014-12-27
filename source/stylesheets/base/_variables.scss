@@ -1,0 +1,103 @@
+// Project Settings
+$prefix-for-webkit:    false;
+$prefix-for-mozilla:   false;
+$prefix-for-microsoft: false;
+$prefix-for-opera:     false;
+$prefix-for-spec:      false;
+
+// Typography
+$sans-serif: "Lato", $helvetica;
+$serif: $georgia;
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+$monospace-font-family: "Source Code Pro", "lucida console", monospace;
+
+// Font Sizes
+$base-font-size: 1em;
+$h1-font-size: $base-font-size * 2.2;
+$h2-font-size: $base-font-size * 1.6;
+$h3-font-size: $base-font-size * 1.3;
+$h4-font-size: $base-font-size * 1.25;
+$h5-font-size: $base-font-size * 1.15;
+$h6-font-size: $base-font-size;
+
+// Font Weights
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-normal: 400;
+$font-weight-light: 200;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Colors
+$blue: #477DCA;
+$dark-gray: #4A4E56;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Middleman colors
+$golden-yellow: #F3C859;
+$golden-yellow-dark: #B69642;
+$navy: #446184;
+$slate-gray: #8990A1;
+$translucent-gray: rgba(black, 0.25);
+$saturated-blue: #4280CA;
+$washed-out-gray: #F9F9F8;
+
+// Font Colors
+$base-font-color: darken($slate-gray, 8);
+$base-accent-color: $golden-yellow;
+$header-font-color: $dark-gray;
+$secondary-accent-color: $saturated-blue;
+
+// Background Color
+$base-background-color: white;
+$base-hero-color: $base-accent-color;
+$base-footer-color: $washed-out-gray;
+
+// Link Colors
+$base-link-color: $secondary-accent-color;
+$hover-link-color: darken($base-link-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: lighten($translucent-gray, 60);
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba($slate-gray,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
+
+// Icon Fonts
+$github-icon: "\f09b";
+$twitter-icon: "\f099";
+
+// Browser Colors
+$browser-bar-color: #DEDEDE;
+$browser-body-color: $dark-gray;
+
+// Global Nav Variables
+$global-nav-height: em(64);
+$global-nav-link-color: white;
+$global-nav-link-hover-color: rgba($global-nav-link-color, 0.75);
+
+// Footer Variables
+$footer-link-color: $medium-gray;
+$footer-link-hover-color: darken($footer-link-color, 10);

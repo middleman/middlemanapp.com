@@ -1,0 +1,69 @@
+.toc-block-container {
+  display: none;
+  height: 100vh;
+  overflow: scroll;
+
+  @include media($medium-screen-up) {
+    display: block;
+  }
+}
+
+#search {
+  margin-bottom: 1em;
+}
+
+#st-search-input {
+  @extend input[type="search"];
+  @include fill-parent;
+  border: 1px solid $slate-gray;
+  margin-bottom: 0;
+  padding: 1em 1.9em;
+
+  &:focus, &:hover {
+    border: 1px solid $saturated-blue;
+  }
+
+  &:hover, &:active, &:focus {
+    box-shadow: none;
+  }
+
+  @include placeholder {
+    color: $translucent-gray;
+  }
+}
+
+.toc-block {
+  margin-bottom: 2em;
+}
+
+.docs-section-heading {
+  color: $translucent-gray;
+  font-size: $base-font-size * 0.85;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 2px;
+  padding: 0.75em 0.5em;
+  text-transform: uppercase;
+}
+
+.doc-item {
+  border-bottom: 1px dotted $base-border-color;
+
+  &:last-child {
+    border: none;
+  }
+
+  a {
+    color: darken($slate-gray, 10);
+    display: block;
+    padding: 0.34em 0.5em;
+    transition: all 0.15s ease;
+
+    &:hover {
+      background: lighten($base-accent-color, 30);
+    }
+  }
+}
+
+.doc-item-active {
+  background: lighten($base-accent-color, 27);
+}

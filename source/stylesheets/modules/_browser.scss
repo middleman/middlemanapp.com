@@ -1,0 +1,51 @@
+.browser {
+  position: relative;
+  text-align: left;
+}
+
+.browser:before {
+  @include size(100% em(27));
+  background: $browser-bar-color inline-image("browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
+  border-radius: $base-border-radius $base-border-radius 0 0;
+  content: "";
+  display: block;
+}
+
+.browser-body {
+  background: $browser-body-color;
+  font-weight: $font-weight-bold;
+  padding: 1em;
+}
+
+.browser-code {
+  background: $browser-body-color;
+  margin: 0;
+  padding: 0;
+
+  .identifier {
+    color: white;
+  }
+}
+
+.browser-text-editor-sidebar {
+  @include position(absolute, em(32) null 0px 0px);
+  @include size(em(80) auto);
+  background: lighten($browser-body-color, 10);
+
+  @include media($medium-screen-up) {
+    width: em(120);
+  }
+}
+
+.browser-text-editor {
+  @include position(absolute, em(27) null 0px 0px);
+  @include size(100% 90%);
+  background-image: image-url("text-editor.jpg");
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+
+  @include media($medium-screen-up) {
+    // width: em(442);
+    background-size: 100% 100%;
+  }
+}

@@ -28,21 +28,31 @@ mymiddlemansite/
 
 ## Main Directories
 
-Middleman makes use of the `source`, `build`, `data` and `lib` directories for specific purposes. Each of these directories are siblings of the main Middleman directory.
+Middleman makes use of the `source`, `build`, `data` and `lib` directories for
+specific purposes. Each of these directories are siblings of the main Middleman
+directory.
 
 ### Source Directory
 
-The `source` directory contains your main website source files to be built, including your templates javascript, CSS and images.
+The `source` directory contains your main website source files to be built,
+including your templates javascript, CSS and images.
 
 ### Build Directory
 
-The `build` directory is where your static website files will be compiled and exported to.
+The `build` directory is where your static website files will be compiled and
+exported to.
 
 ### Data Directory
 
-Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder called `data` and makes this information available in your templates. The `data` folder should be placed in the root of your project i.e. in the same folder as your project's `source` folder. See the [Local Data](/advanced/local-data/) docs for more information.
+Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder
+called `data` and makes this information available in your templates. The
+`data` folder should be placed in the root of your project i.e. in the same
+folder as your project's `source` folder. See the [Local
+Data](/advanced/data_files/) docs for more information.
 
 ### Lib Directory
 
-The `lib` directory enables you to include external Ruby modules which contain [helpers](/basics/helpers/) for building your application. If you use Rails then you will be familiar with this layout.
+The `lib` directory enables you to include external Ruby modules which contain
+[helpers](/basics/helper_methods/) for building your application. If you use Rails
+then you will be familiar with this layout.
 

@@ -1,0 +1,77 @@
+.global-nav {
+  height: $global-nav-height;
+  transition: 0.3s ease all;
+  background-color: $golden-yellow;
+  padding: 1em 0;
+  position: relative;
+}
+
+.global-nav.hidden {
+  transform: translate(0, -($global-nav-height));
+}
+
+.global-nav.active {
+  @include position(fixed, null 0px null 0px);
+  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.25);
+  transform: translate(0);
+  z-index: 1;
+}
+
+.global-nav-middleman-signature {
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: inline-block;
+  }
+}
+
+.global-nav-middleman-logo {
+  @include size(em(44));
+  display: inline-block;
+  position: absolute;
+  top: em(7);
+
+  @include media($medium-screen-up) {
+    display: none;
+  }
+}
+
+.logo-text {
+  float: left;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+}
+
+.global-nav-list {
+  float: right;
+  line-height: 2em;
+}
+
+.global-nav-item {
+  display: inline-block;
+  margin-right: 2em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    color: $global-nav-link-color;
+
+    &:hover {
+      color: $global-nav-link-hover-color;
+    }
+  }
+}
+
+a.cta-link-nav {
+  border: 1px solid $global-nav-link-color;
+  border-radius: $base-border-radius;
+  padding: 0.35em 0.5em;
+
+  &:hover {
+    background: rgba(0,0,0, 0.2);
+    color: white;
+    transition: all 0.15s linear;
+  }
+}

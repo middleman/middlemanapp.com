@@ -1,0 +1,155 @@
+.introduction-container.active {
+  margin-top: $global-nav-height;
+}
+
+.introduction-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media($medium-screen-up) {
+    @include fill-parent;
+    @include clearfix;
+    display: block;
+    margin-bottom: 6em;
+  }
+
+  code {
+    color: $dark-gray;
+    font-size: .95rem;
+    padding: 0 .4em;
+  }
+}
+
+.animate {
+  transition: all, ease .9s;
+}
+
+.box-left, .box-right {
+  position: relative;
+}
+
+.box-left {
+  left: -30px;
+
+  &.animate {
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+.box-right {
+  right: -30px;
+
+  &.animate {
+    -webkit-transform: translateX(20px);
+    transform: translateX(-20px);
+  }
+}
+
+.introduction-item-graphic-wrapper,
+.introduction-item-text-wrapper {
+  padding: 0;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    padding: 2em;
+  }
+  &.-left {
+    @include media($medium-screen-up) {
+      padding-left: 0;
+    }
+  }
+  &.-right {
+    @include media($medium-screen-up) {
+      padding-right: 0;
+    }
+  }
+}
+
+.introduction-item-graphic-wrapper {
+  order: 1;
+  margin: 0 auto;
+  width: 100%;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+  }
+}
+
+.introduction-item-text-wrapper {
+  order: 2;
+  margin-top: 2em;
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    margin-top: 4em;
+    text-align: left;
+  }
+}
+
+.introduction-browser {
+  @include fill-parent;
+
+  @include media($medium-screen-up) {
+    width: auto;
+  }
+}
+
+.introduction-browser-body {
+  height: em(200);
+
+  @include media($medium-screen-up) {
+    height: em(300);
+  }
+}
+
+.introduction-browser-window {
+  background: image_url("middleman-logo.svg"), $base-accent-color;
+  background-size: em(80);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.introduction-item-header {
+  color: $dark-gray;
+}
+
+.introduction-item-text {
+  font-size: $base-font-size;
+}
+
+.cta-link-body {
+  border-radius: $base-border-radius;
+  border: 1px solid $navy;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.2em 0.7em 0.2em 0.5em;
+
+  &:after {
+    @include size(16px);
+    color: $navy;
+    content: "\25B6";
+    display: inline-block;
+    font-size: .75em;
+    position: relative;
+    text-align: center;
+    left: 2px;
+  }
+
+  &:hover {
+    border-color: $navy;
+    background-color: lighten($navy, 45);
+    transition: all .3s ease-in-out;
+
+    &:after {
+      transform: translate(3px, 0);
+      transition: all .15s ease-in-out;
+    }
+  }
+}

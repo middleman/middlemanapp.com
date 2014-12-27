@@ -1,0 +1,59 @@
+@mixin button {
+  box-sizing: border-box;
+  border-radius: $base-border-radius;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  padding: 0.75em 1.25em;
+  text-align: center;
+
+  &:hover {
+    border-radius: $base-border-radius;
+  }
+}
+
+@mixin button-filled($color) {
+  @include button;
+  background-color: $color;
+  color: white;
+
+  &:hover {
+    background-color: darken($color, 10);
+    color: white;
+  }
+}
+
+
+@mixin button-outline($type: "darken", $font-color: $navy, $secondary-color:
+transparent) {
+  @include button;
+  border: 2px solid $font-color;
+  color: $font-color;
+  background: -webkit-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: -moz-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: -o-linear-gradient($secondary-color 50%, $font-color 50%);
+  background: linear-gradient($secondary-color 50%, $font-color 50%);
+  background-repeat: repeat;
+  -webkit-background-size: 100% 200%;
+  -moz-background-size: 100% 200%;
+  background-size: 100% 200%;
+  transition: all .3s ease-in-out;
+
+  @if $type == "fill" {
+
+    &:hover {
+      background-position: 200% 100%;
+      background-color: $font-color;
+      border-color: $font-color;
+      color: $secondary-color;
+   }
+  }
+
+  @else if $type == "darken" {
+
+    &:hover {
+      border-color: darken($font-color, 20);
+      color: darken($font-color, 20);
+    }
+  }
+}
+

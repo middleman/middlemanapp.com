@@ -2,51 +2,110 @@
 layout: layout
 ---
 
-<header id="hero">
-  <h1><%= link_to image_tag("mm-blue-w-text.svg", :width => 225, :height => 225, :alt => "Middleman"), "#{locale_prefix}/", { :class => 'logo' } %></h1>
-  <h2><%= t("index.headline") %></h2>
+<header class="hero">
+  <%= partial 'partials/global_nav' %>
+  <section class="body-content-container wrap-container" data-waypoint="hero-content">
+    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
+      class: "hero-content-logo" %>
+    <h2 class="hero-headline"><%= t("index.headline") %></h2>
+    <h3 class="hero-description"><%= t("index.description") %></h3>
+
+    <div class="hero-banner-container">
+      <div class="browser">
+        <pre class="browser-body">
+          <code class="browser-code">$ gem install middleman</code>
+        </pre>
+      </div>
+    </div>
+  </section>
 </header>
 
-<section role="main">
-  <div id="install">
-    <p><b class="console">$ gem install middleman</b></p>
+<div class="body-content-container wrap-container">
+  <section class="introduction">
+    <div class="introduction-container" data-waypoint="introduction-container">
+      <div class="introduction-item second-graphic">
+        <div class="introduction-item-graphic-wrapper box-left">
+          <div class="introduction-browser browser">
+            <pre class="introduction-browser-body browser-body">
+              <code class="browser-code">$ middleman init project</code>
+            </pre>
+          </div>
+        </div>
+        <div class="introduction-item-text-wrapper box-right">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.first.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.first.description") %>
+          </p>
+          <p class="introduction-item-text">
+          <%= link_to t("introduction.first.link_text"),
+            "#{locale_prefix}/basics/install/", class: "cta-link-body" %>
+          </p>
+        </div>
+      </div>
 
-    <div id="search">
-      <form>
-        <input type="text" id="st-search-input" class="st-search-input" placeholder="Search the documentation" />
-      </form>
-      <div id="st-results-container"></div>
-      <script type="text/javascript">
-        var Swiftype = window.Swiftype || {};
-        (function() {
-          Swiftype.key = 'q3qjGN5LmX2oq6w1V47y';
-          Swiftype.inputElement = '#st-search-input';
-          Swiftype.resultContainingElement = '#st-results-container';
-          Swiftype.attachElement = '#st-search-input';
-          Swiftype.renderStyle = "overlay";
+      <div class="introduction-item third-graphic">
+        <div class="introduction-item-text-wrapper box-left">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.second.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.second.description") %>
+          </p>
+          <p class="introduction-item-text">
+          <%= link_to t("introduction.second.link_text"),
+            "#{locale_prefix}/advanced/configuration",
+              class: "cta-link-body" %>
+          </p>
+        </div>
+        <div class="introduction-item-graphic-wrapper box-right">
+          <div class="introduction-browser browser">
+            <div class="introduction-browser-body">
+              <div class="browser-text-editor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.async = true;
-          script.src = "//swiftype.com/embed.js";
-          var entry = document.getElementsByTagName('script')[0];
-          entry.parentNode.insertBefore(script, entry);
-        }());
-      </script>
+      <div class="introduction-item fourth-graphic">
+        <div class="introduction-item-graphic-wrapper box-left">
+          <div class="introduction-browser browser">
+            <div class="introduction-browser-body introduction-browser-window browser-body">
+            </div>
+          </div>
+        </div>
+        <div class="introduction-item-text-wrapper box-right">
+          <h4 class="introduction-item-header">
+            <%= t("introduction.third.header") %>
+          </h4>
+          <p class="introduction-item-text">
+            <%= t("introduction.third.description") %>
+          </p>
+          <p class="introduction-item-text">
+          <%= link_to t("introduction.third.link_text"),
+            "#{locale_prefix}/basics/build_and_deploy", class:
+            "cta-link-body" %>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+    <hr>
+  </section>
+  <section class="community-preview">
+    <h4 class="community-title">
+      <%= t("community.title") %>
+    </h4>
+    <h5 class="community-subtitle">
+      <%= t("community.subtitle") %>
+    </h5>
+    <article class="centered-content">
+      <%= link_to "Contribute to the open-source community",
+        "#{locale_prefix}/community", class: "community-cta" %>
+    </article>
+    <hr>
+  </section>
 
-  <div class="container">
-    <p class="intro"><%= t("index.description") %> <%= link_to t("index.getting_started"), "#{locale_prefix}/basics/getting-started/" %>.</p>
-    <p class="intro sns">
-      <span><i class="icon-github"> <%= link_to 'Watch', 'https://github.com/middleman/middleman' %></i></span>
-      <span><i class="icon-twitter"> <%= link_to 'Follow @middlemanapp', 'http://twitter.com/middlemanapp' %></i></span>
-    </p>
-
-    <nav class="grid">
-      <%= partial 'layouts/nav' %>
-    </nav>
-
-    <%= partial "layouts/support" %>
-  </div>
-</section>
+  <%= partial "partials/logos" %>
+</div>

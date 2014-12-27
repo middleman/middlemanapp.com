@@ -3,30 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <%= stylesheet_link_tag "site" %>
-    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Questrial|Arvo" %>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
     <title><%= page_title %></title>
   </head>
   <body>
     <%= yield %>
-    
-    <footer id="footer">
-      <div class="container">
-        <p class="copyright">
-          &copy; 2011-2014 <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>.<br>
-          Hosting graciously provided by <%= link_to "Divshot", "http://www.divshot.com" %>.
-        </p>
-        <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
-      </div>
-    </footer>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <%= javascript_include_tag "highlight.pack" %>
-    <%= javascript_include_tag "toc" %>
-    <%= stylesheet_link_tag "solarized_light" %>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <%= partial 'layouts/tracking' %>
+    <%= partial "localizable/footer" %>
+    <%= javascript_include_tag :site %>
+    <%= partial "layouts/tracking" %>
   </body>
 </html>

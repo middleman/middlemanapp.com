@@ -1,7 +1,22 @@
 source "https://rubygems.org"
 
+# Core
+gem "middleman", '4.0.0.alpha.5'
+# gem "middleman", path: '~/Sites/middleman'
+gem "middleman-autoprefixer"
+gem "middleman-livereload"
+
+# Templating Engines
 gem "redcarpet"
 gem "builder"
-gem "susy"
-gem "middleman", "~> 3.3.2"
-gem "middleman-livereload"
+
+# Asset Pipeline Gems
+gem "font-awesome-middleman"
+gem "neat"
+gem "bourbon"
+gem "jquery-middleman"
+
+# Debug
+# gem "pry"
+# gem "pry-byebug"
+# gem "pry-stack_explorer"

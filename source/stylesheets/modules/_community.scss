@@ -1,0 +1,130 @@
+.community-main-icon {
+  background: image-url("community-main-icon.svg") no-repeat;
+  background-size: 9em;
+  height: 7.5em;
+  margin: 0.5em auto 0;
+  text-align: center;
+  width: em(145);
+}
+
+.community-main-title {
+  margin-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.contributions-title {
+  color: $dark-gray;
+  font-size: $base-font-size * 1.5;
+  padding-bottom: 1em;
+
+  @include media($medium-screen-up) {
+    padding-bottom: 1em;
+  }
+}
+
+.contributions-feature-header {
+  color: $dark-gray;
+  font-size: $base-font-size * 1.2;
+  margin: 0.5em 0;
+}
+
+.community-cta {
+  @include button-filled($secondary-accent-color);
+}
+
+.contributions-feature-icon-wrapper img {
+  width: 6rem;
+}
+
+.contributions-feature-item {
+  @include span-columns(3 of 4);
+  @include shift(1.5);
+  margin-bottom: 2em;
+  padding: 1em 0;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media($large-screen-up) {
+    @include span-columns(4 of 12);
+    @include shift(0);
+    margin-bottom: 0;
+  }
+}
+
+.forum {
+  background-color: $navy;
+  padding: 4em 0;
+  margin: 6em 0;
+}
+
+.forum-item-graphic-wrapper,
+.forum-text-wrapper {
+  padding: 0;
+
+  @include media($medium-screen-up) {
+    @include span-columns(6 of 12);
+    @include omega(2n);
+    padding: 2em;
+  }
+}
+
+.forum-item-graphic-wrapper {
+  margin: 0 auto;
+  display: none;
+
+  @include media($medium-screen-up) {
+    display: block;
+    float: right;
+  }
+}
+
+.forum-browser {
+  width: em(300);
+
+  @include media($medium-screen-up) {
+    width: auto;
+  }
+
+}
+.forum-text-wrapper {
+  color: white;
+  text-align: center;
+
+  .contributions-title {
+    color: white;
+  }
+
+  @include media($medium-screen-up) {
+    text-align: left;
+  }
+}
+
+.forum-item-text {
+  font-size: $base-font-size;
+  padding: 0 0 1em;
+}
+
+.forum-cta {
+  @include button-outline("fill", white, $navy);
+}
+
+.logos-title {
+  padding-bottom: 2em;
+}
+
+.logo-block {
+  text-align: center;
+}
+
+.logo-block li {
+  padding: 2em;
+  display: inline-block;
+}
+
+.logo-block img {
+  height: 50px;
+  opacity: 0.2;
+}

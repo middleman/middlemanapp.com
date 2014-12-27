@@ -1,0 +1,98 @@
+---
+layout: layout
+---
+
+<%= partial 'partials/global_nav' %>
+
+<div class="body-content-container">
+  <section class="community-preview wrap-container">
+    <div class="community-main-icon">
+    </div>
+    <h1 class="community-main-title">
+      <%= t("community.title") %>
+    </h1>
+    <h5 class="community-subtitle">
+      <%= t("community.main_text") %>
+    </h5>
+    <ul class="centered-content">
+      <li class="community-social-link-item github-link">
+        <%= link_to "Fork on GitHub",
+          "https://github.com/middleman/middleman", class: "community-social-link" %>
+      </li>
+  </section>
+
+  <hr>
+
+  <section class="contributions">
+    <div class="wrap-container">
+      <h4 class="contributions-title centered-content">
+        <%= t("contributions.title") %>
+      </h4>
+      <article class="contributions-feature-list">
+        <div class="contributions-feature-item">
+          <div class="contributions-feature-icon-wrapper">
+            <%= image_tag ("contributions-icons/icon-extensions.svg") %>
+          </div>
+          <div class="contributions-feature-text-wrapper">
+            <h5 class="contributions-feature-header">
+              <%= t("contributions.extensions.header") %>
+            </h5>
+            <p><%= t("contributions.extensions.description") %></p>
+            <%= link_to t("contributions.extensions.link_text"),
+              "http://directory.middlemanapp.com/#/extensions/all", class: "cta-link-body" %>
+          </div>
+        </div>
+        <div class="contributions-feature-item">
+          <div class="contributions-feature-icon-wrapper">
+              <%= image_tag ("contributions-icons/icon-project-templates.svg") %>
+          </div>
+          <div class="contributions-feature-text-wrapper">
+            <h5 class="contributions-feature-header">
+              <%= t("contributions.templates.header") %>
+            </h5>
+            <p><%= t("contributions.templates.description") %></p>
+            <%= link_to t("contributions.templates.link_text"),
+              "http://directory.middlemanapp.com/#/templates/all", class: "cta-link-body" %>
+          </div>
+        </div>
+        <div class="contributions-feature-item">
+          <div class="contributions-feature-icon-wrapper">
+            <%= image_tag ("contributions-icons/icon-deployment-solutions.svg") %>
+          </div>
+          <div class="contributions-feature-text-wrapper">
+            <h5 class="contributions-feature-header">
+              <%= t("contributions.deployment.header") %>
+            </h5>
+            <p><%= t("contributions.deployment.description") %></p>
+            <%= link_to t("contributions.deployment.link_text"),
+              "http://directory.middlemanapp.com/#/deployment/all", class: "cta-link-body" %>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="forum">
+    <div class="wrap-container">
+      <div class="forum-item-graphic-wrapper">
+        <div class="forum-browser browser">
+          <img src="/images/community-forum.jpg">
+        </div>
+      </div>
+      <div class="forum-text-wrapper">
+        <h4 class="contributions-title forum-item-header">
+          <%= t("community.forum.header") %>
+        </h4>
+        <p class="forum-item-text">
+          <%= t("community.forum.description") %>
+        </p>
+        <p class="forum-item-text">
+          <%= link_to t("community.forum.link_text"),
+            "http://forum.middlemanapp.com/", class: "forum-cta" %>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <%= partial "partials/logos" %>
+</div>
