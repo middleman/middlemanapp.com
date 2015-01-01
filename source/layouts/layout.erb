@@ -10,11 +10,11 @@
   </head>
   <body>
     <%= yield %>
-    
+
     <footer id="footer">
       <div class="container">
         <p class="copyright">
-          &copy; 2011-2014 <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>.<br>
+          &copy; 2011-<%= Time.now.year %> <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>.<br>
           Hosting graciously provided by <%= link_to "Divshot", "http://www.divshot.com" %>.
         </p>
         <p class="link"><%= link_to "Fork and edit this guide on Github", edit_guide_url %></p>
