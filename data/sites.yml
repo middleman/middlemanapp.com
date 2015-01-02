@@ -121,6 +121,10 @@ built:
   - url: http://pomocni.owocni.org
   - url: http://echobind.com
     title: "Echobind"
+  - url: http://benjamintan.io
+    title: Benjamin Tan Wei Hao
+  - url: http://rubyclosur.es
+    title: The Ruby Closures Book
 mobile:
   - url: http://pollev.com
 blogs:
@@ -197,3 +201,5 @@ blogs:
   - url: http://jacbac.github.io/bibliotech/
     title: "JacBac's bibliotech"
     source: https://github.com/jacbac/bibliotech
+  - url: http://benjamintan.io/blog
+    title: Benjamin Tan – Learnings and Writings
