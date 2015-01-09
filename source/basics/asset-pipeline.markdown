@@ -62,6 +62,14 @@ Once you've added a dependency on these gems, any images and fonts from the gem 
 
 If you want to refer to a gem stylesheet or JS file directly from your HTML rather than including it in your own assets, you'll need to import it explicitly in `config.rb`:
 
+**Note:** You should add this line to `config.rb`:
+
+```ruby
+require "bootstrap-sass/sass_functions.rb"
+```
+
+ It's hotfix for bootstrap-sass specific.
+
 ```ruby
 sprockets.import_asset 'jquery-mobile'
 ```
