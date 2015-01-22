@@ -204,4 +204,4 @@ set :layout, false
 page '/foo.html', :layout => false
 ```
 
-[Frontmatter]: /jp/basics/frontmatter/
+[Frontmatter]: /ja/basics/frontmatter/

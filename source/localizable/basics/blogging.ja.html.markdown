@@ -42,7 +42,7 @@ GitHub で確認できます。
 `http://localhost:4567/__middleman/config/` にアクセスするとすべてのオプションが
 確認できます。
 
-**Note:** [ディレクトリインデックス](/jp/basics/pretty-urls/)
+**Note:** [ディレクトリインデックス](/ja/basics/pretty-urls/)
 拡張を使いたい場合, ブログ拡張を有効化した *後に* 有効化するように
 してください。
 
@@ -52,7 +52,7 @@ Middleman 自体がそうであるように, ブログ拡張は個別ファイ�
 それぞれの記事はファイルごとに好きなテンプレート言語を使用できます。
 記事のデフォルトのファイル名構造は `{year}-{month}-{day}-{title}.html` です。
 新しい記事を作りたい場合, 正しいパスに配置し, 動作させるために
-基本的な [Frontmatter](/jp/basics/frontmatter/) を記述します。
+基本的な [Frontmatter](/ja/basics/frontmatter/) を記述します。
 `config.rb` で `:blog` が有効化されている場合, どのファイル形式で Middleman が記事を探すのか変更する
 `blog.sources` オプションを設定できます。
 
@@ -155,13 +155,13 @@ Frontmatter で `category` を指定しなくても
 ソースパスから抽出されたカテゴリにアクセスすることもできます。
 
 ブログ記事を HTML ファイルとしてではなくディレクトリとして
-表示させたい場合には,[きれいな URL](/jp/basics/pretty-urls/) 機能を
+表示させたい場合には,[きれいな URL](/ja/basics/pretty-urls/) 機能を
 有効化することも検討しましょう。
 
 
 ## レイアウト
 
-`config.rb` ですべての記事に使われる [レイアウト](/jp/basics/templates/#レイアウト) を
+`config.rb` ですべての記事に使われる [レイアウト](/ja/basics/templates/#レイアウト) を
 指定することができます。
 
 ``` ruby
@@ -172,7 +172,7 @@ end
 
 レイアウトに挿入する前に記事ごとにちょっとした構造で囲みたい場合,
 記事レイアウトを構成してからメインのレイアウトで囲むために,
-Middleman の [入れ子レイアウト](/jp/basics/templates/#入れ子レイアウト) 機能を
+Middleman の [入れ子レイアウト](/ja/basics/templates/#入れ子レイアウト) 機能を
 使うことができます。
 
 ## 記事一覧
@@ -185,9 +185,9 @@ Middleman の [入れ子レイアウト](/jp/basics/templates/#入れ子レイ�
 [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)
 ごとに便利なメソッドを持っています。
 同時にさらに多くの情報
-([Frontmatter](/jp/basics/frontmatter) の
+([Frontmatter](/ja/basics/frontmatter) の
 [`data`](http://rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter/ResourceInstanceMethods#data-instance_method)
-のような) をもつ [サイトマップ](/jp/advanced/sitemap) の
+のような) をもつ [サイトマップ](/ja/advanced/sitemap) の
 [`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource) でもあります。
 レイアウトやその記事の中からは `current_article` を介して
 現在の記事を取得することができます。
@@ -261,7 +261,7 @@ Frontmatter に `public` フラグを追加している場合:
 ## タグ
 
 タグを使った記事の整理なしに何がブログ機能でしょうか?
-単に記事の [Frontmatter](/jp/basics/frontmatter/) に `tag` を
+単に記事の [Frontmatter](/ja/basics/frontmatter/) に `tag` を
 追加するだけです。
 [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)
 の
@@ -478,7 +478,7 @@ Time.zone = "Tokyo"
 
 ## カスタム記事コレクション
 
-Middleman ブログは [Frontmatter](/jp/basics/frontmatter/) に定義した
+Middleman ブログは [Frontmatter](/ja/basics/frontmatter/) に定義した
 データによって記事をグループ分けする機能に対応しています。
 次の一般的な例では *category* 属性を使って記事をグループ分けします。
 
@@ -526,7 +526,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-この出力 ([`directory_indexes`](/jp/basics/pretty-urls/) が有効化された場合) は次のようになります:
+この出力 ([`directory_indexes`](/ja/basics/pretty-urls/) が有効化された場合) は次のようになります:
 
 ```
 build/2011/10/18/middleman/index.html
@@ -554,7 +554,7 @@ Right: [私の写真][2011-10-18-middleman/photo.jpg]
 ## ロケール指定記事と特定言語の表示
 
 ブログ機能はロケールに対応しています。まず, `:blog` 拡張を有効化する *前に*
-[`:i18n`](/jp/advanced/localization/) 拡張を有効化します。
+[`:i18n`](/ja/advanced/localization/) 拡張を有効化します。
 これであなたの記事はロケールに対応します。つまり記事の中で
 `t()` のようなヘルパが使えるということです。
 

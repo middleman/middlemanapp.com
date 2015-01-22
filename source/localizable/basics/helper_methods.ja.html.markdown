@@ -26,10 +26,10 @@ Padrino はリンクタグを作るための `link_to` メソッドを提供し�
 <% end %>
 ```
 
-Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
+Middleman は `link_to` に [サイトマップ](/ja/advanced/sitemap/) を
 把握させることで強化します。 source フォルダ
 (ファイル拡張子からテンプレート言語拡張子を除いた状態で) のページへの
-参照を与えると,`link_to` は [`:directory_indexes`](/jp/basics/pretty-urls/) 拡張が
+参照を与えると,`link_to` は [`:directory_indexes`](/ja/basics/pretty-urls/) 拡張が
 有効化されていたとしても, 正しいリンクを生成します。例えば,
 `source/about.html` ファイルがあり `:directory_indexes` が有効化されている場合, 次のように
 リンクします:
@@ -74,8 +74,8 @@ set :relative_links, true
 無視されますが, `:relative => true` を指定している場合は
 エラーが発生します。
 
-[サイトマップ](/jp/advanced/sitemap/) リソースの [`url` メソッド][`url` method]
-([Blog 機能](/jp/basics/blogging/) の BlogArticle に継承される) は
+[サイトマップ](/ja/advanced/sitemap/) リソースの [`url` メソッド][`url` method]
+([Blog 機能](/ja/basics/blogging/) の BlogArticle に継承される) は
 *出力 URL* を返すことに注意してください。`link_to` ヘルパは対応する page/article の *ソースパス*
 に一致させることができず, 相対 URL に
 変換できない場合があります。

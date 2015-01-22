@@ -9,7 +9,7 @@ Middleman は HTML の開発を簡単にするためにたくさんのテンプ�
 ページを HTML に変換するまったく異なったフォーマットを提供するものにまで
 及びます。 Middleman は ERb, Haml, Sass, Scss や CoffeeScript の
 サポートを搭載しています。Tilt が有効な gem であればその他にも多くのエンジンが
-有効化できます。[次のリスト](/jp/basics/template_engine_options/) を
+有効化できます。[次のリスト](/ja/basics/template_engine_options/) を
 参照してください。
 
 ## テンプレートの基礎

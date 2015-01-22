@@ -36,4 +36,4 @@ $ middleman build
 ```
 
 それぞれのコマンドの使用方法は次のセクションで説明します。[新しい
-サイトの作成](/basics/start_new_site) へ。
+サイトの作成](/ja/basics/start_new_site) へ。
