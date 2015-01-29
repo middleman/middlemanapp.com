@@ -55,7 +55,7 @@ $ middleman init my_new_mobile_project --template=mobile
 
 ### コミュニティプロジェクトテンプレート
 
-こちらにもいくつか [コミュニティで開発されたテンプレート](http://directory.middlemanapp.com/# /templates/all) があります。
+こちらにもいくつか [コミュニティで開発されたテンプレート](https://directory.middlemanapp.com/# /templates/all) があります。
 
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 [SMACSS]: http://smacss.com/

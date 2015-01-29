@@ -64,7 +64,7 @@ gem 'oj' # faster JS compiles
 ## テキストファイルの GZIP 化
 
 対応するユーザエージェントに
-[圧縮ファイルを配信する](http://developer.yahoo.com/performance/rules.html#gzip) のはいい方法です。
+[圧縮ファイルを配信する](https://developer.yahoo.com/performance/rules.html#gzip) のはいい方法です。
 多くの web サーバはオンザフライでファイルを gzip にする機能を持っていますが,
 ファイルが配信される度に CPU を使う必要があり, その結果としてほとんどのサーバでは
 最大圧縮が実行されません。 Middleman は通常のファイルと一緒に gzip バージョンの

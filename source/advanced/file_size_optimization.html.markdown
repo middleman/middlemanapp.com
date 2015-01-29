@@ -64,7 +64,7 @@ gem 'oj' # faster JS compiles
 ## GZIP text files
 
 It's a good idea to [serve compressed
-files](http://developer.yahoo.com/performance/rules.html#gzip) to user agents
+files](https://developer.yahoo.com/performance/rules.html#gzip) to user agents
 that can handle it. Many web servers have the ability to gzip files on the fly,
 but that requires CPU work every time the file is served, and as a result most
 servers don't perform the maximum compression. Middleman can produce gzipped

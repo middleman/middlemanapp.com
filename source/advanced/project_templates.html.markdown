@@ -55,7 +55,7 @@ $ middleman init my_new_mobile_project --template=mobile
 
 ### Community Project Templates
 
-There are also a number of [community-developed project templates](http://directory.middlemanapp.com/#/templates/all).
+There are also a number of [community-developed project templates](https://directory.middlemanapp.com/#/templates/all).
 
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 [SMACSS]: http://smacss.com/
