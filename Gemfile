@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Core
 gem "middleman", '4.0.0.alpha.5'

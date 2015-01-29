@@ -1,7 +1,7 @@
 Middleman Guides
 ================
 
-These are the source files that power the [Middleman guides site](http://middlemanapp.com/),
+These are the source files that power the [Middleman guides site](https://middlemanapp.com/),
 which is itself a [Middleman](https://github.com/middleman/middleman)-powered static page.
 
 The guides are the primary documentation for Middleman, explaining the core features and extensions as well as pointing out community extensions.
