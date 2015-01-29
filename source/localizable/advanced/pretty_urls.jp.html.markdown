@@ -66,7 +66,7 @@ page "/i-really-want-the-extension.html", :directory_index => false
 
 1 度にたくさんのファイルのインデックスを無効化にしたい場合, `page` には正規表現かファイルのパターンマッチを与えることができます。
 
-ページ毎に [YAML 形式の Frontmatter](/ja/basics/frontmatter/) に
+ページ毎に [YAML 形式の Frontmatter](/jp/basics/frontmatter/) に
 `directory_index: false` を追加することもできます。
 
 ## 手動インデックス

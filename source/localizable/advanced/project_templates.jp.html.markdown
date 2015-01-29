@@ -3,7 +3,7 @@
 デフォルトの基本スケルトンに加え, Middleman は
 [HTML5 Boilerplate], [SMACSS], や [Mobile Boilerplate](http://html5boilerplate.com/mobile/)
 ベースのオプションテンプレートが付属します。
-Middleman 拡張 ([middleman-blog](/ja/basics/blogging/) のような) は同じように
+Middleman 拡張 ([middleman-blog](/jp/basics/blogging/) のような) は同じように
 独自のテンプレートを使用することができます。
 テンプレート変更は `-T` や `--template` コマンドラインフラグを使用してアクセスできます。
 例えば, HTML5 Boilerplate ベースのプロジェクトを始める場合, 次のコマンドを使用します:

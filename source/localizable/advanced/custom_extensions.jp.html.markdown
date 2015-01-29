@@ -163,10 +163,10 @@ ERb テンプレートでの使用例を示します:
 
 ## サイトマップ拡張
 
-サイトマップ拡張を作ることで [サイトマップ](/ja/advanced/sitemap/) で
-ページを変更したり追加したりできます。 [ディレクトリインデックス](/ja/basics/pretty_urls/) 拡張は
+サイトマップ拡張を作ることで [サイトマップ](/jp/advanced/sitemap/) で
+ページを変更したり追加したりできます。 [ディレクトリインデックス](/jp/basics/pretty_urls/) 拡張は
 ページをディレクトリインデックス版に再ルーティングするためにこの機能を使い,
-[ブログ拡張](/ja/basics/blogging/) はタグやカレンダーページを作成するために
+[ブログ拡張](/jp/basics/blogging/) はタグやカレンダーページを作成するために
 いくつかのプラグインを使っています。詳細は
 [`Sitemap::Store` クラス](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method)
 を参照してください。
