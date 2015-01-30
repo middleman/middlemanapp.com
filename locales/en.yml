@@ -96,7 +96,7 @@ help you do that."
     github: GitHub Repository
     templates:
       header: Project Templates
-      description: Create a project with pre-made templates usig your favorite code libraries.
+      description: Create a project with pre-made templates using your favorite code libraries.
       link_text: See project templates
 
   # index
