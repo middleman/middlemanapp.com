@@ -129,6 +129,9 @@ built:
     title: Benjamin Tan Wei Hao
   - url: http://rubyclosur.es
     title: The Ruby Closures Book
+  - url: http://www.lacroixdesign.net
+    title: "LaCroix Design Co."
+    source: https://github.com/lacroixdesign/lacroixdesign.net
 mobile:
   - url: http://pollev.com
 blogs:
