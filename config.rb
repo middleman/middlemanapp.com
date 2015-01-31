@@ -10,6 +10,8 @@ activate :autoprefixer
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
 set :markdown_engine, :redcarpet
 
+redirect "basics/pretty_urls.html", to: "advanced/pretty_urls.html"
+
 configure :development do
   set :debug_assets, true
 end
