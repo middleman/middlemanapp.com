@@ -214,3 +214,6 @@ blogs:
     title: Site Validator
   - url: https://cheersapp.io
     title: Cheers app
+  - url: https://nhutdm.com
+    title: "NhutDM"
+    source: https://github.com/nhutdm/nhutdm.github.io
