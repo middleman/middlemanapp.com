@@ -224,3 +224,6 @@ blogs:
     title: "TootDeck"
   - url: http://parkland.io/
     title: "The Parkland"
+  - url: http://davidl.fr
+    title: "davidl.fr - Front-end advices and best practices (in french)"
+    source: https://github.com/flexbox/davidl
