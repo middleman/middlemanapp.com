@@ -19,7 +19,7 @@ h6 {
   font-weight: normal;
   line-height: $header-line-height;
   margin-bottom: 0.3em;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -61,7 +61,8 @@ a {
     color: $hover-link-color;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: $hover-link-color;
     outline: none;
   }
@@ -104,4 +105,9 @@ code {
   font-size: 1rem;
   padding:  0.05em 0.5em;
   overflow: auto;
+}
+
+::selection {
+  background-color: $mm-yellow;
+  color: #fff;
 }
