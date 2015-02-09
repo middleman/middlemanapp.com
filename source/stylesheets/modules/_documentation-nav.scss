@@ -19,11 +19,14 @@
   margin-bottom: 0;
   padding: 1em 1.9em;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     border: 1px solid $mm-blue;
   }
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     box-shadow: none;
   }
 
@@ -39,7 +42,7 @@
 .docs-section-heading {
   color: $mm-light-gray;
   font-size: $base-font-size * 0.85;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-bold;
   letter-spacing: 2px;
   padding: 0.75em 0.5em;
   text-transform: uppercase;

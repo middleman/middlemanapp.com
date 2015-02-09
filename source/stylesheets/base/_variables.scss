@@ -7,7 +7,6 @@ $prefix-for-spec:      false;
 
 // Typography
 $sans-serif: "Lato", $helvetica;
-$serif: $georgia;
 $monospace-font-family: "Source Code Pro", $monospace;
 
 $base-font-family: $sans-serif;
@@ -24,9 +23,7 @@ $h6-font-size: $base-font-size;
 
 // Font Weights
 $font-weight-bold: 700;
-$font-weight-semibold: 600;
 $font-weight-normal: 400;
-$font-weight-light: 200;
 
 // Line height
 $base-line-height: 1.5;
