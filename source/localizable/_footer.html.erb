@@ -3,22 +3,22 @@
     <div class="footer-column">
       <article class="footer-site-information">
         <p>
-          &copy; 2011&ndash;2015 <%= link_to "Thomas Reynolds", "http://awardwinningfjords.com" %>
+          &copy; 2011&ndash;<%= Date.today.year %> <%= link_to "Thomas Reynolds", "//awardwinningfjords.com" %>
         </p>
         <p class="footer-open-source-credit">
           Maintained by the <%= link_to "core team",
-            "https://github.com/orgs/middleman/people" %> with help from
+            "//github.com/orgs/middleman/people" %> with help from
             <%= link_to "contributors",
-              "https://github.com/middleman/middleman/graphs/contributors" %>.
+              "//github.com/middleman/middleman/graphs/contributors" %>.
         </p>
       </article>
       <article class="footer-contact">
         <ul class="footer-contact-list">
           <li class="footer-contact-list-item twitter-link">
-            <%= link_to t("built.twitter"), "https://twitter.com/middlemanapp" %>
+            <%= link_to t("built.twitter"), "//twitter.com/middlemanapp" %>
           </li>
           <li class="footer-contact-list-item github-link">
-            <%= link_to t("built.github"), "https://github.com/middleman/middleman" %>
+            <%= link_to t("built.github"), "//github.com/middleman/middleman" %>
           </li>
         </ul>
       </article>
