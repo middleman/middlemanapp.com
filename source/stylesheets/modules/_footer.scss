@@ -68,19 +68,6 @@
   }
 }
 
-.twitter-link {
-  a {
-    @include icon($twitter-icon);
-  }
-}
-
-.github-link {
-  a {
-    @include icon($github-icon);
-  }
-
-}
-
 .footer-credit {
   margin-top: 2em;
   margin-bottom: 0;

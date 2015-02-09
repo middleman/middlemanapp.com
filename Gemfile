@@ -11,10 +11,9 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'font-awesome-middleman'
-gem 'neat'
 gem 'bourbon'
 gem 'jquery-middleman'
+gem 'neat'
 
 # Windows Support
 gem 'wdm' if Gem.win_platform?
