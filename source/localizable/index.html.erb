@@ -2,7 +2,7 @@
 layout: layout
 ---
 
-<header class="hero">
+<header class="hero" role="banner">
   <%= partial 'partials/global_nav' %>
   <section class="body-content-container wrap-container" data-waypoint="hero-content">
     <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
@@ -20,7 +20,7 @@ layout: layout
   </section>
 </header>
 
-<div class="body-content-container wrap-container">
+<div class="body-content-container wrap-container" role="main">
   <section class="introduction">
     <div class="introduction-container" data-waypoint="introduction-container">
       <div class="introduction-item second-graphic">
