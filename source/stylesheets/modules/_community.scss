@@ -55,7 +55,7 @@
 }
 
 .forum {
-  background-color: $navy;
+  background-color: $mm-navy;
   padding: 4em 0;
   margin: 6em 0;
 }
@@ -108,7 +108,7 @@
 }
 
 .forum-cta {
-  @include button-outline("fill", white, $navy);
+  @include button-outline("fill", white, $mm-navy);
 }
 
 .logos-title {
