@@ -8,9 +8,10 @@ $prefix-for-spec:      false;
 // Typography
 $sans-serif: "Lato", $helvetica;
 $serif: $georgia;
+$monospace-font-family: "Source Code Pro", $monospace;
+
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
-$monospace-font-family: "Source Code Pro", "lucida console", monospace;
 
 // Font Sizes
 $base-font-size: 1em;
