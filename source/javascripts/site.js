@@ -1,4 +1,4 @@
-//=require "_vendor/jquery"
+//= require jquery
 //=require "_vendor/highlight.pack"
 //=require "_vendor/waypoints"
 //=require "_vendor/waypoints-sticky"
