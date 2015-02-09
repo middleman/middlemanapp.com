@@ -4,7 +4,6 @@
 //=require "_vendor/waypoints-sticky"
 
 //=require "_toc"
-//=require "_global-nav-animation"
 //=require "_docs-nav-animation"
 
 hljs.initHighlightingOnLoad();
