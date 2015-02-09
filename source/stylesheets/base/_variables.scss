@@ -1,9 +1,5 @@
 // Project Settings
-$prefix-for-webkit:    false;
-$prefix-for-mozilla:   false;
-$prefix-for-microsoft: false;
-$prefix-for-opera:     false;
-$prefix-for-spec:      false;
+@include disable-prefix-for-all;
 
 // Typography
 $sans-serif: "Lato", $helvetica;
