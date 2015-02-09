@@ -8,7 +8,7 @@ published: true
   <h2><%= t("built.title") %></h2>
   <ul class="built-with-middleman-list">
     <% for site in data.sites.built.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-      <%= partial "layouts/site", locals: { site: site } %>
+      <%= partial "partials/site", locals: { site: site } %>
     <% end %>
   </ul>
 </article>
@@ -17,7 +17,7 @@ published: true
   <h2><%= t("built.mobile") %></h2>
   <ul class="built-with-middleman-list">
     <% for site in data.sites.mobile.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-      <%= partial "layouts/site", locals: { site: site } %>
+      <%= partial "partials/site", locals: { site: site } %>
     <% end %>
   </ul>
 </article>
@@ -26,7 +26,7 @@ published: true
   <h2><%= t("built.blog") %></h2>
   <ul class="built-with-middleman-list">
     <% for site in data.sites.blogs.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-      <%= partial "layouts/site", locals: { site: site } %>
+      <%= partial "partials/site", locals: { site: site } %>
     <% end %>
   </ul>
 </article>
