@@ -12,8 +12,9 @@
 }
 
 .browser-body {
-  background: $browser-body-color;
+  background-color: $browser-body-color;
   font-weight: $font-weight-bold;
+  margin: 0;
   padding: 1em;
 }
 
@@ -28,7 +29,8 @@
 }
 
 .browser-text-editor-sidebar {
-  @include position(absolute, em(32) null 0px 0px);
+  @include position(absolute, em(32) null 0 0);
+  @include position(absolute, em(32) null 0 0);
   @include size(em(80) auto);
   background: lighten($browser-body-color, 10);
 
@@ -38,14 +40,13 @@
 }
 
 .browser-text-editor {
-  @include position(absolute, em(27) null 0px 0px);
+  @include position(absolute, em(27) null 0 0);
   @include size(100% 90%);
   background-image: image-url("text-editor.jpg");
   background-size: 100% 200px;
   background-repeat: no-repeat;
 
   @include media($medium-screen-up) {
-    // width: em(442);
     background-size: 100% 100%;
   }
 }

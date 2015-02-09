@@ -11,8 +11,8 @@
 }
 
 .global-nav.active {
-  @include position(fixed, null 0px null 0px);
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.25);
+  @include position(fixed, null 0 null 0);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
   transform: translate(0);
   z-index: 1;
 }
