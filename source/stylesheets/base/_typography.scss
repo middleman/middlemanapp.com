@@ -1,9 +1,8 @@
 body {
-  line-height: 2;
   -webkit-font-smoothing: antialiased;
-  background-color: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
@@ -19,7 +18,6 @@ h6 {
   font-weight: normal;
   line-height: $header-line-height;
   margin-bottom: 0.3em;
-  text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -73,29 +71,18 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: ($base-spacing * 2) auto;
+  width: 75%;
+
+  @include media($medium-screen-up) {
+    margin: ($base-spacing * 4) auto;
+  }
 }
 
 img,
 picture {
   margin: 0;
   max-width: 100%;
-}
-
-blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15%);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
-}
-
-cite {
-  color: lighten($base-font-color, 25%);
-  font-style: italic;
-
-  &:before {
-    content: "\2014 \00A0";
-  }
 }
 
 code {
