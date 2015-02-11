@@ -1,5 +1,5 @@
 .footer {
-  background: $base-footer-color;
+  background-color: tint($mm-light-gray, 90%);
   color: $medium-gray;
   padding: 1em 0;
 
@@ -66,19 +66,6 @@
   &:last-child {
     margin-right: 0;
   }
-}
-
-.twitter-link {
-  a {
-    @include icon($twitter-icon);
-  }
-}
-
-.github-link {
-  a {
-    @include icon($github-icon);
-  }
-
 }
 
 .footer-credit {

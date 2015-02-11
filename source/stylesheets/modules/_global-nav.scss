@@ -1,20 +1,8 @@
 .global-nav {
   height: $global-nav-height;
-  transition: 0.3s ease all;
-  background-color: $golden-yellow;
+  background-color: $mm-yellow;
   padding: 1em 0;
   position: relative;
-}
-
-.global-nav.hidden {
-  transform: translate(0, -($global-nav-height));
-}
-
-.global-nav.active {
-  @include position(fixed, null 0px null 0px);
-  box-shadow: 0 1px 3px 0px rgba(0,0,0,0.25);
-  transform: translate(0);
-  z-index: 1;
 }
 
 .global-nav-middleman-signature {
