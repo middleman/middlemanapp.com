@@ -47,5 +47,3 @@ helpers do
     link_to(caption, url, options)
   end
 end
-
-page "/localizable/community/built_using_middleman", layout: :example

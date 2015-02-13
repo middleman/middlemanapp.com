@@ -1,29 +1,14 @@
-// Project Settings
-@include disable-prefix-for-all;
-
 // Typography
-$sans-serif: "Lato", $helvetica;
-$monospace-font-family: "Source Code Pro", $monospace;
-
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$base-font-family: $helvetica;
+$heading-font-family: $base-font-family;
+$code-font-family: "Source Code Pro", $monospace;
 
 // Font Sizes
 $base-font-size: 1em;
-$h1-font-size: $base-font-size * 2.2;
-$h2-font-size: $base-font-size * 1.6;
-$h3-font-size: $base-font-size * 1.3;
-$h4-font-size: $base-font-size * 1.25;
-$h5-font-size: $base-font-size * 1.15;
-$h6-font-size: $base-font-size;
-
-// Font Weights
-$font-weight-bold: 700;
-$font-weight-normal: 400;
 
 // Line height
 $base-line-height: 1.5;
-$header-line-height: 1.25;
+$heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -32,8 +17,9 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$dark-gray: #4a4e56;
+$dark-gray: #333;
 $medium-gray: #999;
+$light-gray: #ddd;
 
 // Middleman colors
 $mm-yellow: #f3c859;
@@ -43,38 +29,16 @@ $mm-light-gray: #c0c0c0;
 $mm-blue: #4280ca;
 
 // Font Colors
-$base-font-color: darken($mm-slate-gray, 8%);
-$base-accent-color: $mm-yellow;
-$header-font-color: $dark-gray;
-$secondary-accent-color: $mm-blue;
+$base-font-color: $dark-gray;
+$action-color: $mm-yellow;
 
-// Link Colors
-$base-link-color: $secondary-accent-color;
-$hover-link-color: darken($base-link-color, 15%);
-$base-button-color: $base-link-color;
-$hover-button-color: $hover-link-color;
-
-// Background Color
+// Backgrounds
 $base-background-color: #fff;
-$base-hero-color: $base-accent-color;
+$secondary-background-color: $mm-light-gray;
 
-// Border color
-$base-border-color: tint($mm-light-gray, 75%);
+// Border
+$base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($base-accent-color, $lightness: -5%, $alpha: -0.3);
-
-// Browser Colors
-$browser-bar-color: #dedede;
-$browser-body-color: $dark-gray;
-
-// Global Nav Variables
-$global-nav-height: em(64);
-$global-nav-link-color: #fff;
-$global-nav-link-hover-color: rgba($global-nav-link-color, 0.75);
-
-// Footer Variables
-$footer-link-color: $medium-gray;
-$footer-link-hover-color: darken($footer-link-color, 10%);
+$form-box-shadow-focus: 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);

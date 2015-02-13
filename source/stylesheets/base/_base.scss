@@ -1,15 +1,17 @@
-/* Bitters 0.10.0
- * http://bitters.bourbon.io
- * Copyright 2013–2014 thoughtbot, inc.
- * MIT License */
+// Bitters 1.0.0
+// http://bitters.bourbon.io
+// Copyright 2013-2015 thoughtbot, inc.
+// MIT License
 
-// Variables
+@include disable-prefix-for-all;
+
 @import "variables";
 
-@import "grid-settings";
-
-// Typography and Elements
-@import "typography";
 @import "forms";
-@import "tables";
 @import "lists";
+@import "tables";
+@import "typography";
+
+body {
+  background-color: $base-background-color;
+}

@@ -2,110 +2,92 @@
 layout: layout
 ---
 
-<header class="hero" role="banner">
-  <%= partial 'partials/global_nav' %>
-  <section class="body-content-container wrap-container" data-waypoint="hero-content">
-    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
-      class: "hero-content-logo" %>
-    <h2 class="hero-headline"><%= t("index.headline") %></h2>
-    <h3 class="hero-description"><%= t("index.description") %></h3>
+<%= partial 'partials/site_nav' %>
 
-    <div class="hero-banner-container">
-      <div class="browser">
-        <pre class="browser-body">
-          <code class="browser-code">$ gem install middleman</code>
-        </pre>
-      </div>
-    </div>
-  </section>
+<header class="" role="banner">
+  <div class="container">
+    <%= partial 'partials/middleman_logo' %>
+    <h2><%= t("index.headline") %></h2>
+    <h3><%= t("index.description") %></h3>
+    <pre class="">
+      <code class="">$ gem install middleman</code>
+    </pre>
+  </div>
 </header>
 
-<div class="body-content-container wrap-container" role="main">
-  <section class="introduction">
-    <div class="introduction-container" data-waypoint="introduction-container">
-      <div class="introduction-item second-graphic">
-        <div class="introduction-item-graphic-wrapper">
-          <div class="introduction-browser browser">
-            <pre class="introduction-browser-body browser-body">
-              <code class="browser-code">$ middleman init project</code>
-            </pre>
-          </div>
-        </div>
-        <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
-            <%= t("introduction.first.header") %>
-          </h4>
-          <p class="introduction-item-text">
-            <%= t("introduction.first.description") %>
-          </p>
-          <p class="introduction-item-text">
-          <%= link_to t("introduction.first.link_text"),
-            "#{locale_prefix}/basics/install/", class: "cta-link-body" %>
-          </p>
-        </div>
-      </div>
+<main class="screen-main" role="main">
+  <div class="container">
 
-      <div class="introduction-item third-graphic">
-        <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
-            <%= t("introduction.second.header") %>
-          </h4>
-          <p class="introduction-item-text">
-            <%= t("introduction.second.description") %>
-          </p>
-          <p class="introduction-item-text">
-          <%= link_to t("introduction.second.link_text"),
-            "#{locale_prefix}/advanced/configuration",
-              class: "cta-link-body" %>
-          </p>
-        </div>
-        <div class="introduction-item-graphic-wrapper">
-          <div class="introduction-browser browser">
-            <div class="introduction-browser-body">
-              <div class="browser-text-editor">
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="">
+      <div class="">
+        <figure class="">
+          <pre class="">
+            <code class="">$ middleman init project</code>
+          </pre>
+        </figure>
       </div>
-
-      <div class="introduction-item fourth-graphic">
-        <div class="introduction-item-graphic-wrapper">
-          <div class="introduction-browser browser">
-            <div class="introduction-browser-body introduction-browser-window browser-body">
-            </div>
-          </div>
-        </div>
-        <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
-            <%= t("introduction.third.header") %>
-          </h4>
-          <p class="introduction-item-text">
-            <%= t("introduction.third.description") %>
-          </p>
-          <p class="introduction-item-text">
-          <%= link_to t("introduction.third.link_text"),
-            "#{locale_prefix}/basics/build_and_deploy", class:
-            "cta-link-body" %>
-          </p>
-        </div>
+      <div class="">
+        <h4 class="">
+          <%= t("introduction.first.header") %>
+        </h4>
+        <p class="">
+          <%= t("introduction.first.description") %>
+        </p>
+        <%= link_to t("introduction.first.link_text"),"#{locale_prefix}/basics/install/", class: "button" %>
       </div>
-    </div>
-    <hr>
-  </section>
-  <section class="community-preview">
-    <h4 class="community-title">
-      <%= t("community.title") %>
-    </h4>
-    <h5 class="community-subtitle">
-      <%= t("community.subtitle") %>
-    </h5>
-    <article class="centered-content">
-      <%= link_to t("index.contribute"),
-        "#{locale_prefix}/community/", class: "community-cta" %>
-    </article>
-    <hr>
-  </section>
+    </section>
 
-  <%= partial "partials/logos" %>
-</div>
+    <section class="">
+      <div class="">
+        <figure class="">
+          <pre class="">
+            <code class=""></code>
+          </pre>
+        </figure>
+      </div>
+      <div class="">
+        <h4 class="">
+          <%= t("introduction.second.header") %>
+        </h4>
+        <p class="">
+          <%= t("introduction.second.description") %>
+        </p>
+        <%= link_to t("introduction.second.link_text"), "#{locale_prefix}/advanced/configuration", class: "button" %>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="">
+        <figure class="">
+          <pre class="">
+            <code class=""></code>
+          </pre>
+        </figure>
+      </div>
+      <div class="">
+        <h4 class="">
+          <%= t("introduction.third.header") %>
+        </h4>
+        <p class="">
+          <%= t("introduction.third.description") %>
+        </p>
+        <%= link_to t("introduction.third.link_text"), "#{locale_prefix}/basics/build_and_deploy", class: "button" %>
+      </div>
+    </section>
+
+    <section class="community">
+      <h4 class="">
+        <%= t("community.title") %>
+      </h4>
+      <p>
+        <%= t("community.subtitle") %>
+      </p>
+      <%= link_to t("index.contribute"), "#{locale_prefix}/community", class: "button" %>
+    </section>
+
+    <section class="companies">
+      <%= partial "partials/users" %>
+    </section>
+
+  </div>
+</main>

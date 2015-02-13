@@ -1,0 +1,6 @@
+<li>
+  <%= link_to site.title || site.url, site.url %>
+  <% if site.source %>
+    <%= link_to t("built.source_code"), site.source %>
+  <% end %>
+</li>

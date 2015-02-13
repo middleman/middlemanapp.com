@@ -1,28 +1,20 @@
 ul,
 ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 ($base-spacing / 1.5);
+  padding-left: $base-spacing / 1.25;
 
-  &%default-ul {
-    list-style-type: disc;
-    margin-bottom: $small-spacing;
-    padding-left: $base-spacing;
-  }
-
-  &%default-ol {
-    list-style-type: decimal;
-    margin-bottom: $small-spacing;
-    padding-left: $base-spacing;
+  li {
+    padding-bottom: $base-spacing * 0.1;
+    padding-top: $base-spacing * 0.1;
   }
 }
 
 dl {
-  margin-bottom: $small-spacing;
+  margin: 0 0 ($base-spacing / 1.5);
 
   dt {
     font-weight: bold;
-    margin-top: $small-spacing;
+    margin-top: $base-spacing / 2;
   }
 
   dd {

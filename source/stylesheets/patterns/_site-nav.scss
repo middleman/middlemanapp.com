@@ -1,0 +1,8 @@
+.site-nav {
+  @include padding(null $base-spacing);
+  background-color: $action-color;
+
+  a {
+    color: #fff;
+  }
+}

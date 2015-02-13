@@ -1,15 +1,13 @@
 <% wrap_layout :layout do %>
-  <header id="header">
-    <%= partial 'partials/global_nav' %>
-  </header>
 
-  <div class="body-content-container wrap-container" role="main">
-    <nav id="toc" class="sidebar" data-waypoint="sidebar">
-      <%= partial 'partials/documentation_nav' %>
-    </nav>
+  <%= partial 'partials/site_nav' %>
 
-    <main class="main" role="main" data-waypoint="main">
-      <%= yield %>
-    </main>
-  </div>
+  <nav class="docs-nav" role="navigation">
+    <%= partial 'partials/docs-nav' %>
+  </nav>
+
+  <main class="screen-main" role="main">
+    <%= yield %>
+  </main>
+
 <% end %>

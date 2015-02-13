@@ -1,0 +1,21 @@
+<section>
+
+  <h4>
+    <%= t("community.built_using_middleman") %>
+  </h4>
+
+  <ul>
+    <li>
+      <%= image_tag("/images/users/basho_logo.png", alt: "Basho logo")%>
+    </li>
+    <li>
+      <%= image_tag("/images/users/mailchimp_logo.png", alt: "MailChimp logo")%>
+    </li>
+    <li>
+      <%= image_tag("/images/users/thoughtbot_logo.png", alt: "thoughtbot logo")%>
+    </li>
+  </ul>
+
+  <%= link_to t("index.see_middleman_sites"), "#{locale_prefix}/community/user_sites", class: "button" %>
+
+</section>

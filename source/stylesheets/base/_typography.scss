@@ -1,9 +1,9 @@
 body {
-  -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
 }
 
@@ -13,55 +13,28 @@ h3,
 h4,
 h5,
 h6 {
-  color: $header-font-color;
-  font-family: $header-font-family;
-  font-weight: normal;
-  line-height: $header-line-height;
-  margin-bottom: 0.3em;
-}
-
-h1 {
-  font-size: $h1-font-size;
-}
-
-h2 {
-  font-size: $h2-font-size;
-}
-
-h3 {
-  font-size: $h3-font-size;
-}
-
-h4 {
-  font-size: $h4-font-size;
-}
-
-h5 {
-  font-size: $h5-font-size;
-}
-
-h6 {
-  font-size: $h6-font-size;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
 }
 
 p {
-  font-size: $base-font-size * 1.02;
-  margin: 0 0 ($base-spacing / 1.5);
-  line-height: 1.75;
+  margin: 0 0 $small-spacing;
 }
 
 a {
-  color: $base-link-color;
+  color: $action-color;
   text-decoration: none;
   transition: color 0.1s linear;
 
+  &:active,
+  &:focus,
   &:hover {
-    color: $hover-link-color;
+    color: darken($action-color, 15%);
   }
 
   &:active,
   &:focus {
-    color: $hover-link-color;
     outline: none;
   }
 }
@@ -71,30 +44,15 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: ($base-spacing * 2) auto;
-  width: 75%;
+  margin: $base-spacing 0;
+}
 
-  @include media($medium-screen-up) {
-    margin: ($base-spacing * 4) auto;
-  }
+figure {
+  margin: $base-spacing 0;
 }
 
 img,
 picture {
   margin: 0;
   max-width: 100%;
-}
-
-code {
-  background-color: lighten($mm-slate-gray, 37%);
-  border-radius: $base-border-radius;
-  font-family: $monospace-font-family;
-  font-size: 1rem;
-  padding:  0.05em 0.5em;
-  overflow: auto;
-}
-
-::selection {
-  background-color: $mm-yellow;
-  color: #fff;
 }

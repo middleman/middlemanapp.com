@@ -1,0 +1,22 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+
+    <p class="site-copyright">
+      &copy; 2011&ndash;<%= Date.today.year %> <%= link_to "Thomas Reynolds", "//awardwinningfjords.com" %>
+    </p>
+
+    <p class="">
+      Maintained by the <%= link_to "core team",
+        "//github.com/orgs/middleman/people" %> with help from
+        <%= link_to "contributors",
+          "//github.com/middleman/middleman/graphs/contributors" %>.
+    </p>
+
+    <%= link_to t("built.twitter"), "//twitter.com/middlemanapp" %>
+    <%= link_to t("built.github"), "//github.com/middleman/middleman" %>
+
+    <p class="">Site proudly designed by</p>
+    <%= partial 'partials/thoughtbot_logo' %>
+
+  </div>
+</footer>

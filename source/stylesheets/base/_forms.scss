@@ -30,7 +30,7 @@ label {
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
+  box-shadow: none;
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -44,7 +44,7 @@ label {
   }
 
   &:focus {
-    border-color: $base-accent-color;
+    border-color: $action-color;
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
@@ -52,6 +52,10 @@ label {
 
 textarea {
   resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
 }
 
 input[type="checkbox"],
