@@ -1,4 +1,7 @@
 built:
+  - url: http://cocoapods.org
+    title: "CocoaPods"
+    source: https://github.com/CocoaPods/cocoapods.org
   - url: http://www.eventxtra.com
     title: "EventXtra - Simple, Impactful, event last forever"
   - url: http://flammlachs.de
