@@ -146,6 +146,8 @@ built:
   - url: http://www.lacroixdesign.net
     title: "LaCroix Design Co."
     source: https://github.com/lacroixdesign/lacroixdesign.net
+  - url: https://mojaveapp.com
+    title: "Mojaveapp"
 mobile:
   - url: http://pollev.com
 blogs:
