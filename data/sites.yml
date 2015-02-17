@@ -1,4 +1,7 @@
 built:
+  - url: http://www.modularscale.com
+    title: "Modular Scale"
+    source: https://github.com/modularscale/modularscale.com
   - url: http://cocoapods.org
     title: "CocoaPods"
     source: https://github.com/CocoaPods/cocoapods.org
