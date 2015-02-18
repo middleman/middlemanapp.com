@@ -1,26 +1,29 @@
 #{$all-buttons},
 .button {
   @include appearance(none);
-  background-color: $action-color;
+  background-color: $mm-teal;
   border-radius: $base-border-radius;
   border: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: modular-scale(-1);
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
+  letter-spacing: 0.05em;
   line-height: 1;
-  padding: 0.75em 1em;
+  padding: $small-spacing $base-spacing;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 100ms ease-out;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: shade($mm-teal, 20%);
     color: #fff;
   }
 

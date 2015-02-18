@@ -35,7 +35,7 @@ label {
   font-family: $base-font-family;
   font-size: $base-font-size;
   margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
+  padding: ($small-spacing / 1.5) $small-spacing;
   transition: border-color;
   width: 100%;
 
@@ -55,7 +55,7 @@ textarea {
 }
 
 input[type="search"] {
-  @include appearance(none);
+  // @include appearance(none);
 }
 
 input[type="checkbox"],

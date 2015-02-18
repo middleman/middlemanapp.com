@@ -1,0 +1,40 @@
+.docs .container {
+  display: flex;
+}
+
+.docs-article {
+  margin-top: $base-spacing * 3;
+}
+
+
+.docs-nav {
+  margin-right: $base-spacing * 2;
+  margin-top: $base-spacing * 3;
+  min-width: 25%;
+
+  a {
+    color: tint($base-font-color, 25%);
+    text-decoration: none;
+  }
+}
+
+.docs-nav-section:not(:last-of-type) {
+  margin-bottom: $base-spacing * 2;
+}
+
+.docs-nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.docs-nav-heading {
+  border-bottom: $base-border;
+  font-size: modular-scale(-1);
+  letter-spacing: 0.05em;
+  padding-bottom: $small-spacing / 2;
+  text-transform: uppercase;
+}
+
+.docs-nav-item {
+  font-size: modular-scale(-1);
+}

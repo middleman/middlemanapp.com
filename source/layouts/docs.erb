@@ -1,0 +1,12 @@
+<% wrap_layout :layout do %>
+
+  <main class="screen-main docs" role="main">
+    <div class="container">
+      <%= partial "partials/docs_nav" %>
+      <article class="docs-article">
+        <%= yield %>
+      </article>
+    </div>
+  </main>
+
+<% end %>

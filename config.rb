@@ -1,6 +1,6 @@
 require "builder"
 
-set :layout, :article
+set :layout, :docs
 
 activate :livereload
 activate :i18n

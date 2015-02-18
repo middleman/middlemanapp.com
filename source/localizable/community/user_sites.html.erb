@@ -1,10 +1,7 @@
 ---
-title: Sites Built Using Middleman
 layout: layout
+title: Sites Built Using Middleman
 ---
-
-<%= partial 'partials/site_nav' %>
-
 <main class="screen-main" role="main">
   <div class="container">
 
@@ -14,7 +11,7 @@ layout: layout
       </h2>
       <ul>
         <% for site in data.sites.built.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-          <%= partial 'partials/user_site', locals: { site: site } %>
+          <%= partial "partials/user_site", locals: { site: site } %>
         <% end %>
       </ul>
     </section>
@@ -25,7 +22,7 @@ layout: layout
       </h2>
       <ul>
         <% for site in data.sites.mobile.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-          <%= partial 'partials/user_site', locals: { site: site } %>
+          <%= partial "partials/user_site", locals: { site: site } %>
         <% end %>
       </ul>
     </section>
@@ -36,7 +33,7 @@ layout: layout
       </h2>
       <ul>
         <% for site in data.sites.blogs.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
-          <%= partial 'partials/user_site', locals: { site: site } %>
+          <%= partial "partials/user_site", locals: { site: site } %>
         <% end %>
       </ul>
     </section>

@@ -11,9 +11,9 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$modular-scale-ratio: $minor-third;
+$modular-scale-ratio: $major-second;
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: modular-scale(1);
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -23,22 +23,23 @@ $medium-gray: #999;
 $light-gray: #ddd;
 
 // Middleman colors
-$mm-yellow: #fecc4e;
+$mm-yellow: shade(#fecc4e, 3%);
 $mm-navy: #446184;
 $mm-slate-gray: #8990a1;
 $mm-light-gray: #c0c0c0;
 $mm-blue: #4280ca;
+$mm-teal: #39bda9;
 
 // Font Colors
-$base-font-color: $dark-gray;
+$base-font-color: shade($mm-slate-gray, 35%);
 $action-color: $mm-yellow;
 
 // Backgrounds
 $base-background-color: #fff;
-$secondary-background-color: $mm-light-gray;
+$secondary-background-color: tint($mm-light-gray, 90%);
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: tint($mm-light-gray, 75%);
 $base-border: 1px solid $base-border-color;
 
 // Forms

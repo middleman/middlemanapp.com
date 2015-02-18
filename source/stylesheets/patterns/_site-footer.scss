@@ -1,4 +1,5 @@
 .site-footer {
   @include padding(null $base-spacing);
   background-color: $secondary-background-color;
+  margin-top: $base-spacing * 4;
 }

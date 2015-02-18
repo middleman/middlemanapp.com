@@ -2,7 +2,7 @@
 jp:
   title: Middleman
   navigation:
-    contribute: Contribute
+    community: Community
     docs: Docs
     search_placeholder: ドキュメント検索
     basics:
@@ -36,14 +36,6 @@ jp:
       project_templates: プロジェクトテンプレート
       rack_middleware: Rack ミドルウェア
       sitemap: サイトマップ
-    community:
-      title: コミュニティ
-      built_using_middleman: Middleman 採用サイト
-      community_forum: コミュニティフォーラム
-      custom_extensions: 拡張機能
-      deployment_solution: デプロイ方法
-      github: GitHub リポジトリ
-      project_templates: プロジェクトテンプレート
   open_source:
     title: オープンソースへの貢献
     service: サービスの追加

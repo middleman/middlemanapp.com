@@ -13,6 +13,10 @@ body {
   @media screen and (min-width: $large-screen) {
     font-size: $base-font-size * 1.1875;
   }
+
+  @media screen and (min-width: $extra-large-screen) {
+    font-size: $base-font-size * 1.3125;
+  }
 }
 
 h1,
@@ -21,20 +25,24 @@ h3,
 h4,
 h5,
 h6 {
+  color: shade($base-font-color, 30%);
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
 
 h1 {
-  font-size: modular-scale(3);
+  font-size: modular-scale(5);
 }
 
 h2 {
+  font-size: modular-scale(3);
+}
+
+h3 {
   font-size: modular-scale(2);
 }
 
-h3,
 h4,
 h5,
 h6 {
@@ -42,18 +50,17 @@ h6 {
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $base-spacing;
 }
 
 a {
-  color: $action-color;
-  text-decoration: none;
-  transition: color 0.1s linear;
+  color: $base-font-color;
+  transition: color 0.1s ease-out;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: shade($action-color, 5%);
   }
 
   &:active,
@@ -78,6 +85,26 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+code {
+  background-color: tint($secondary-background-color, 50%);
+  border: $base-border;
+  border-radius: $base-border-radius;
+  font-family: $code-font-family;
+  font-size: modular-scale(-1);
+  margin: 0;
+  overflow: auto;
+  padding: 0.08em 0.25em;
+}
+
+pre {
+  margin: 0 0 $base-spacing;
+  padding: 0;
+
+  code {
+    padding: ($base-spacing / 1.5) $base-spacing;
+  }
 }
 
 ::selection {
