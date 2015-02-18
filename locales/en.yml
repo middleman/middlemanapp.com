@@ -102,7 +102,7 @@ help you do that."
   # index
   index:
     sub_title: Hand-crafted frontend development
-    headline: Build static websites with an easy-to-use framework
+    tagline: Build static websites with an easy-to-use framework
     description: Middleman is a static site generator using all the shortcuts
       and tools in modern web development.
     getting_started: Getting started

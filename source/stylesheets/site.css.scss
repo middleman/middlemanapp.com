@@ -1,15 +1,11 @@
 @charset "utf-8";
 
-@import "vendor/normalize";
-@import "vendor/solarized-light";
+@import "vendor/vendor";
 
 @import "bourbon";
 @import "base/grid-settings";
 @import "neat";
 @import "base/base";
 
-@import "components/buttons";
-
-@import "patterns/container";
-@import "patterns/site-footer";
-@import "patterns/site-nav";
+@import "components/components";
+@import "patterns/patterns";

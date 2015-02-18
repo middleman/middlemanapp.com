@@ -1,0 +1,31 @@
+.site-hero {
+  background-color: $action-color;
+
+  .container {
+    @include padding(6% null);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .middleman-logo-svg {
+    margin-bottom: $base-spacing * 2;
+    max-width: $max-width / 4;
+  }
+}
+
+.site-hero-tagline,
+.site-hero-description {
+  text-align: center;
+}
+
+.site-hero-tagline {
+  color: #fff;
+  max-width: $max-width / 3.5;
+}
+
+.site-hero-description {
+  color: rgba(#000, 0.6);
+  font-weight: 400;
+  max-width: $max-width / 2;
+}

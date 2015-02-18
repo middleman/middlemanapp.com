@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: "Source Sans Pro", $helvetica;
 $heading-font-family: $base-font-family;
 $code-font-family: "Source Code Pro", $monospace;
 
@@ -11,6 +11,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
+$modular-scale-ratio: $minor-third;
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
@@ -22,7 +23,7 @@ $medium-gray: #999;
 $light-gray: #ddd;
 
 // Middleman colors
-$mm-yellow: #f3c859;
+$mm-yellow: #fecc4e;
 $mm-navy: #446184;
 $mm-slate-gray: #8990a1;
 $mm-light-gray: #c0c0c0;

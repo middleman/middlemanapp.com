@@ -15,7 +15,8 @@
 }
 
 .site-title {
-  font-weight: 700;
+  font-size: modular-scale(1);
+  font-weight: 600;
 }
 
 .site-nav-list {
@@ -26,6 +27,7 @@
 }
 
 .site-nav-item {
+  font-weight: 600;
   margin: 0;
   padding: 0;
 

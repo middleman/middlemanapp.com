@@ -101,7 +101,7 @@ jp:
   # index
   index:
     sub_title: 作業を効率化するフロントエンド開発ツール
-    headline: 静的サイトを構築する<br> 使いやすいフレームワーク
+    tagline: 静的サイトを構築する<br> 使いやすいフレームワーク
     description: Middleman はモダンな web 開発のショートカットやツールを
       採用した静的サイトジェネレータです
     getting_started: はじめに
