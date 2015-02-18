@@ -1,8 +1,35 @@
 .site-nav {
-  @include padding(null $base-spacing);
   background-color: $action-color;
+
+  .container {
+    @include padding(($base-spacing / 1.5) null);
+    align-items: center;
+    display: flex;
+  }
 
   a {
     color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.site-title {
+  font-weight: 700;
+}
+
+.site-nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+}
+
+.site-nav-item {
+  margin: 0;
+  padding: 0;
+
+  &:not(:last-of-type) {
+    margin-right: $base-spacing;
   }
 }

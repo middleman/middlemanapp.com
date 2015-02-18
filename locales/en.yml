@@ -1,9 +1,9 @@
 ---
 en:
+  title: Middleman
   navigation:
     contribute: Contribute
     docs: Docs
-    logo: Middleman
     search_placeholder: Search the docs
     basics:
       title: Basics

@@ -1,16 +1,15 @@
 <nav class="site-nav" role="navigation">
   <div class="container">
-
-    <ol class="">
-      <li class="">
+    <%= link_to t("title"), "#{locale_prefix}/", class: "site-title" %>
+    <ol class="site-nav-list">
+      <li class="site-nav-item">
         <%= link_to t("navigation.contribute"),
           "#{locale_prefix}/community/" %>
       </li>
-      <li class="">
+      <li class="site-nav-item">
         <%= link_to t("navigation.docs"),
-          "#{locale_prefix}/basics/install/", class: "cta-link-nav" %>
+          "#{locale_prefix}/basics/install/" %>
       </li>
     </ol>
-
   </div>
 </nav>

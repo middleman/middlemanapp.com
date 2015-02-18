@@ -5,6 +5,14 @@ body {
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: $base-font-size * 1.0625;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    font-size: $base-font-size * 1.1875;
+  }
 }
 
 h1,
@@ -16,6 +24,21 @@ h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h1 {
+  font-size: modular-scale(3);
+}
+
+h2 {
+  font-size: modular-scale(2);
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: modular-scale(1);
 }
 
 p {
@@ -55,4 +78,9 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+::selection {
+  background-color: $mm-yellow;
+  color: #fff;
 }

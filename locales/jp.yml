@@ -1,9 +1,9 @@
 ---
 jp:
+  title: Middleman
   navigation:
     contribute: Contribute
     docs: Docs
-    logo: Middleman
     search_placeholder: ドキュメント検索
     basics:
       title: 基礎

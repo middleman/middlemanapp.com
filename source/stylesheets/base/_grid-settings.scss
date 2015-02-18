@@ -1,9 +1,10 @@
 @import "neat-helpers";
 
+$gutter: 1.5em;
 $max-width: 50em;
 
-$medium-screen: em(640);
-$large-screen: em(860);
+$medium-screen: 40em;
+$large-screen: 60em;
 
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
