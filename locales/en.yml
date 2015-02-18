@@ -2,25 +2,7 @@
 en:
   title: Middleman
   navigation:
-    community: Community
-    docs: Docs
-    search_placeholder: Search the docs
-    basics:
-      title: Basics
-      blogging: Blogging
-      build_deploy: "Build & Deploy"
-      development_cycle: Development Cycle
-      directory_structure: Directory Structure
-      frontmatter: Frontmatter
-      helper_methods: Helper Methods
-      install: Install
-      upgrade-v4: Upgrading to v4
-      layouts: Layouts
-      partials: Partials
-      start_new_site: Start a New Site
-      templates: Templating Language
     advanced:
-      title: Advanced
       asset_pipeline: Asset Pipeline
       configuration: Configuring Your Site
       custom_extensions: Custom Extensions
@@ -36,77 +18,98 @@ en:
       project_templates: Project Templates
       rack_middleware: Rack Middleware
       sitemap: The Sitemap
-  open_source:
-    title: Contribute to Open Souce
-    service: Add Your Service
-    template: Create a Template
+      title: Advanced
+    basics:
+      blogging: Blogging
+      build_deploy: "Build & Deploy"
+      development_cycle: Development Cycle
+      directory_structure: Directory Structure
+      frontmatter: Frontmatter
+      helper_methods: Helper Methods
+      install: Install
+      layouts: Layouts
+      partials: Partials
+      start_new_site: Start a New Site
+      templates: Templating Language
+      title: Basics
+      upgrade_v4: Upgrading to v4
+    community: Community
+    docs: Docs
+    search_placeholder: Search the docs
 
   introduction:
     first:
+      description:
+        "Install the gem and run <code>middleman init my_project</code>
+        to create a new Middleman site from the command line."
       header: Installation
-      description: Install the gem and run <code>middleman init
-        my_project</code> to create a new Middleman site from the command line.
       link_text: See full install instructions
     second:
+      description:
+        "Check out the directory <code>cd my_project</code>. Middleman
+        works right out of the box. Start reading the docs to find out
+        what each directory is doing and how to customize your site."
       header: Customize Your Site
-      description: Check out the directory <code>cd my_project</code>.
-        Middleman works right out of the box. Start reading the docs to find
-        out what each directory is doing and how to customize your site.
       link_text: See advanced customizations
     third:
+      description:
+        "Running one command, <code>bundle exec middleman build</code>,
+        exports the site in a production-ready format. Choose from open
+        source deployment solutions to get your site live."
       header: Build and Deploy
-      description: Running one command, <code>bundle exec middleman
-        build</code>, exports the site in a production-ready format. Choose
-        from open source deployment solutions to get your site live.
       link_text: See description of build
 
   community:
-    title: Open-Source Community
-    subtitle: Middleman benefits from an active community. Whether you need a
-      question answered or want to contribute to open-source features, our
-      community page will lead you in the right direction.
-    main_text: Middleman benefits from an active community. Whether you need a
-      question answered or want to contribute to open-source features, browse
-      the features below to make the most of Middleman.
-    built_using_middleman: Companies Using Middleman
     forum:
-      header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
+      header: Community Forum
       link_text: Visit forum
+    main_text:
+      "Middleman benefits from an active community. Whether you need a
+      question answered or want to contribute to open-source features,
+      browse the features below to make the most of Middleman."
+    subtitle:
+      "Middleman benefits from an active community. Whether you need a
+      question answered or want to contribute to open-source features,
+      our community page will lead you in the right direction."
+    title: Open-Source Community
+    using_middleman: Companies Using Middleman
 
   contributions:
-    title: Contributions from Middleman Users
     deployment:
       header: Deployment Solutions
-      description: "Whether you use Heroku or anything else to deploy, we'll
-help you do that."
+      description:
+        "Whether you use Heroku or anything else to deploy, we’ll help
+        you do that."
       link_text: See deployment solutions
     extensions:
       header: Extensions
-      description: Add interesting new capabilities and features to your Middleman website.
+      description:
+        "Add interesting new capabilities and features to your
+        Middleman website."
       link_text: See all extensions
-    github: GitHub Repository
     templates:
       header: Project Templates
-      description: Create a project with pre-made templates using your favorite code libraries.
+      description:
+        "Create a project with pre-made templates using your favorite
+        code libraries."
       link_text: See project templates
+    title: Contributions from Middleman Users
 
-  # index
   index:
+    contribute: Contribute to the open-source community
+    description:
+      "Middleman is a static site generator using all the shortcuts
+      and tools in modern web development."
+    getting_started: Getting started
+    see_middleman_sites: See More Middleman Sites
     sub_title: Hand-crafted frontend development
     tagline: Build static websites with an easy-to-use framework
-    description: Middleman is a static site generator using all the shortcuts
-      and tools in modern web development.
-    getting_started: Getting started
-    contribute: Contribute to the open-source community
-    see_middleman_sites: See All Middleman Sites
 
-  # community/built-using-middleman
-  built:
-    title: Sites Built Using Middleman
-    mobile: Mobile Apps Built Using Middleman
-    blog: Blogs Using Middleman
-    twitter: "@middlemanapp"
-    github: GitHub
-    source_code: source code
-    fork: Fork and add your site on GitHub
+  made_with:
+    blogs: Blogs
+    mobile: Mobile Apps
+    sites: Websites
+    source: View Source
+    submit: Submit a Site
+    title: Made With Middleman

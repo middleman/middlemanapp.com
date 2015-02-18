@@ -2,25 +2,7 @@
 jp:
   title: Middleman
   navigation:
-    community: Community
-    docs: Docs
-    search_placeholder: ドキュメント検索
-    basics:
-      title: 基礎
-      blogging: ブログ機能
-      build_deploy: ビルド & デプロイ
-      development_cycle: 開発サイクル
-      directory_structure: ディレクトリ構造
-      frontmatter: Frontmatter
-      helper_methods: ヘルパーメソッド
-      install: インストール
-      upgrade-v4: v4 へのアップグレード
-      layouts: レイアウト
-      partials: パーシャル
-      start_new_site: 新しいサイトの作成
-      templates: テンプレート言語
     advanced:
-      title: 高度な機能
       asset_pipeline: アセットパイプライン
       configuration: 設定
       custom_extensions: カスタム拡張
@@ -36,76 +18,87 @@ jp:
       project_templates: プロジェクトテンプレート
       rack_middleware: Rack ミドルウェア
       sitemap: サイトマップ
-  open_source:
-    title: オープンソースへの貢献
-    service: サービスの追加
-    template: テンプレートを作る
+      title: 高度な機能
+    basics:
+      blogging: ブログ機能
+      build_deploy: ビルド & デプロイ
+      development_cycle: 開発サイクル
+      directory_structure: ディレクトリ構造
+      frontmatter: Frontmatter
+      helper_methods: ヘルパーメソッド
+      install: インストール
+      layouts: レイアウト
+      partials: パーシャル
+      start_new_site: 新しいサイトの作成
+      templates: テンプレート言語
+      title: 基礎
+      upgrade_v4: v4 へのアップグレード
+    community: Community
+    docs: Docs
+    search_placeholder: ドキュメント検索
 
   introduction:
     first:
-      header: インストール
       description: gem をインストールし, 新たに Middleman を使ったサイトを作成するために
         CLI から <code>middleman initmy_project</code> を実行します。
+      header: インストール
       link_text: インストール方法を参照する
     second:
-      header: サイトのカスタマイズ
       description: <code>cd my_project</code> してください。
         Middleman は細かい設定なしに動作します。各ディレクトリの意味や
         サイトのカスタマイズの行い方を理解するためにドキュメントを読んでください。
+      header: サイトのカスタマイズ
       link_text: カスタマイズ方法を参照する
     third:
-      header: ビルドとデプロイ
       description: <code>bundle exec middleman build</code> を実行するだけで,
         プロダクション用のサイトデータを出力できます。
         オープンソースのデプロイツールを利用することでサイトを公開できます。
+      header: ビルドとデプロイ
       link_text: ビルド方法の説明を参照する
 
   community:
-    title: オープンソースコミュニティ
-    subtitle: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
-      オープンソースの機能に貢献したい時, コミュニティページが
-      正しい場所にあなたを導くでしょう。
+    forum:
+      description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
+      header: コミュニティフォーラム
+      link_text: フォーラムに移動する
     main_text: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
       オープンソースの機能に貢献したい時, Middleman を
       最大限に活用するには以下の機能を参照してください。
-    built_using_middleman: Middleman 採用企業
-    forum:
-      header: コミュニティフォーラム
-      description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
-      link_text: フォーラムに移動する
+    subtitle: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
+      オープンソースの機能に貢献したい時, コミュニティページが
+      正しい場所にあなたを導くでしょう。
+    title: オープンソースコミュニティ
+    using_middleman: Middleman 採用企業
 
   contributions:
-    title: Middleman ユーザによる貢献
     deployment:
-      header: デプロイ方法
       description: "デプロイ先に Heroku やその他のサービスを使う場合, 私たちはそのデプロイを助けます。"
+      header: デプロイ方法
       link_text: デプロイ方法を参照する
     extensions:
-      header: 拡張機能
       description: あなたの Middleman を使ったサイトに新しい機能を追加します。
+      header: 拡張機能
       link_text: すべての拡張機能を参照する
-    github: GitHub リポジトリ
     templates:
-      header: プロジェクトテンプレート
       description: あなたの好きなライブラリを採用しているテンプレートでプロジェクトを作成できます。
+      header: プロジェクトテンプレート
       link_text: プロジェクトテンプレートを参照する
+    title: Middleman ユーザによる貢献
 
-  # index
   index:
+    contribute: オープンソースコミュニティに貢献する
+    description:
+      "Middleman はモダンな web 開発のショートカットやツールを
+      採用した静的サイトジェネレータです"
+    getting_started: はじめに
+    see_middleman_sites: Middleman 採用サイトを見る
     sub_title: 作業を効率化するフロントエンド開発ツール
     tagline: 静的サイトを構築する<br> 使いやすいフレームワーク
-    description: Middleman はモダンな web 開発のショートカットやツールを
-      採用した静的サイトジェネレータです
-    getting_started: はじめに
-    contribute: オープンソースコミュニティに貢献する
-    see_middleman_sites: Middleman 採用サイトを見る
 
-  # community/built-using-middleman
-  built:
-    title: Middleman 採用サイト
+  made_with:
+    blogs: Middleman 採用ブログ
     mobile: Middleman 採用モバイルアプリケーション
-    blog: Middleman 採用ブログ
-    twitter: "@middlemanapp"
-    github: GitHub
-    source_code: ソースコード
-    fork: Github で Fork しサイトを追加してください
+    sites: Websites
+    source: ソースコード
+    submit: Github で Fork しサイトを追加してください
+    title: Middleman 採用サイト
