@@ -2,7 +2,7 @@
   background-color: $action-color;
 
   .container {
-    @include padding(($base-spacing / 1.5) null);
+    @include padding(($base-spacing / 1.25) null);
     align-items: center;
     display: flex;
   }

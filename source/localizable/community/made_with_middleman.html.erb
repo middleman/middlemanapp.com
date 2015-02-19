@@ -1,0 +1,54 @@
+---
+layout: layout
+---
+<header class="screen-header">
+  <div class="container">
+    <h1 class="screen-title">
+      <%= t("made_with.title") %>
+    </h1>
+    <div class="screen-actions">
+      <%= link_to t("made_with.submit"),
+        "//github.com/middleman/middleman-guides/blob/master/data/sites.yml",
+        class: "button" %>
+    </div>
+  </div>
+</header>
+
+<main class="screen-main" role="main">
+  <div class="container">
+
+    <section>
+      <h2>
+        <%= t("made_with.sites") %>
+      </h2>
+      <ul class="made-with-list">
+        <% for site in data.sites.built.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+          <%= partial "partials/made_with_site", locals: { site: site } %>
+        <% end %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>
+        <%= t("made_with.blogs") %>
+      </h2>
+      <ul class="made-with-list">
+        <% for site in data.sites.blogs.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+          <%= partial "partials/made_with_site", locals: { site: site } %>
+        <% end %>
+      </ul>
+    </section>
+
+    <section>
+      <h2>
+        <%= t("made_with.mobile") %>
+      </h2>
+      <ul class="made-with-list">
+        <% for site in data.sites.mobile.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase } %>
+          <%= partial "partials/made_with_site", locals: { site: site } %>
+        <% end %>
+      </ul>
+    </section>
+
+  </div>
+</main>

@@ -11,14 +11,15 @@ title: Community
     <p>
       <%= t("community.main_text") %>
     </p>
-    <%= link_to "Fork on GitHub", "//github.com/middleman/middleman", class: "button" %>
+    <%= link_to "Fork on GitHub", "//github.com/middleman/middleman",
+      class: "button" %>
   </div>
 </header>
 
 <main class="screen-main" role="main">
-  <div class="container">
 
-    <section>
+  <section>
+    <div class="container">
 
       <h2>
         <%= t("contributions.title") %>
@@ -33,7 +34,9 @@ title: Community
           <p>
             <%= t("contributions.extensions.description") %>
           </p>
-          <%= link_to t("contributions.extensions.link_text"), "//directory.middlemanapp.com/#/extensions/all", class: "button" %>
+          <%= link_to t("contributions.extensions.link_text"),
+            "//directory.middlemanapp.com/#/extensions/all",
+            class: "button" %>
         </li>
         <li>
           <%= partial "partials/icons/icon_project_templates" %>
@@ -43,7 +46,9 @@ title: Community
           <p>
             <%= t("contributions.templates.description") %>
           </p>
-          <%= link_to t("contributions.templates.link_text"), "//directory.middlemanapp.com/#/templates/all", class: "button" %>
+          <%= link_to t("contributions.templates.link_text"),
+            "//directory.middlemanapp.com/#/templates/all",
+            class: "button" %>
         </li>
         <li>
           <%= partial "partials/icons/icon_deployment_solutions" %>
@@ -53,13 +58,17 @@ title: Community
           <p>
             <%= t("contributions.deployment.description") %>
           </p>
-          <%= link_to t("contributions.deployment.link_text"), "//directory.middlemanapp.com/#/deployment/all", class: "button" %>
+          <%= link_to t("contributions.deployment.link_text"),
+            "//directory.middlemanapp.com/#/deployment/all",
+            class: "button" %>
         </li>
       </ul>
 
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section>
+    <div class="container">
       <img src="/images/community-forum.jpg">
       <h4>
         <%= t("community.forum.header") %>
@@ -68,11 +77,9 @@ title: Community
         <%= t("community.forum.description") %>
       </p>
       <%= link_to t("community.forum.link_text"), "//forum.middlemanapp.com", class: "button" %>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <%= partial "partials/users" %>
-    </section>
+  <%= partial "partials/company_users" %>
 
-  </div>
 </main>

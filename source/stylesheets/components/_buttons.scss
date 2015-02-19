@@ -15,7 +15,6 @@
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-decoration: none;
-  text-transform: uppercase;
   transition: background-color 100ms ease-out;
   user-select: none;
   vertical-align: middle;
@@ -23,7 +22,7 @@
 
   &:hover,
   &:focus {
-    background-color: shade($mm-teal, 20%);
+    background-color: shade($mm-teal, 15%);
     color: #fff;
   }
 

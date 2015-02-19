@@ -9,3 +9,35 @@
 
 @import "components/components";
 @import "patterns/patterns";
+
+
+
+.screen-header {
+
+  .container {
+    display: flex;
+    padding-top: 6%;
+  }
+
+  .screen-title {
+    margin: 0;
+  }
+
+  .screen-actions {
+    margin-left: auto;
+  }
+}
+
+.made-with-list {
+  columns: 200px 3;
+}
+
+.users-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  .user-logo {
+    max-width: 14em;
+  }
+}

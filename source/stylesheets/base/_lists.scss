@@ -1,11 +1,11 @@
 ul,
 ol {
   margin: 0 0 ($base-spacing / 1.5);
-  padding-left: $base-spacing / 1.25;
+  padding: 0;
 
   li {
-    padding-bottom: $base-spacing * 0.1;
-    padding-top: $base-spacing * 0.1;
+    padding-bottom: $small-spacing * 0.4;
+    padding-top: $small-spacing * 0.4;
   }
 }
 

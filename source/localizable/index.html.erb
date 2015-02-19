@@ -13,9 +13,9 @@ layout: layout
 </header>
 
 <main class="screen-main" role="main">
-  <div class="container">
 
-    <section class="">
+  <section class="">
+    <div class="container">
       <div class="">
         <figure class="">
           <pre class="">
@@ -32,9 +32,11 @@ layout: layout
         </p>
         <%= link_to t("introduction.first.link_text"),"#{locale_prefix}/basics/install/", class: "button" %>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="">
+  <section class="">
+    <div class="container">
       <div class="">
         <figure class="">
           <pre class="">
@@ -51,9 +53,11 @@ layout: layout
         </p>
         <%= link_to t("introduction.second.link_text"), "#{locale_prefix}/advanced/configuration", class: "button" %>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="">
+  <section>
+    <div class="container">
       <div class="">
         <figure class="">
           <pre class="">
@@ -70,9 +74,11 @@ layout: layout
         </p>
         <%= link_to t("introduction.third.link_text"), "#{locale_prefix}/basics/build_and_deploy", class: "button" %>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="community">
+  <section>
+    <div class="container">
       <h4 class="">
         <%= t("community.title") %>
       </h4>
@@ -80,11 +86,9 @@ layout: layout
         <%= t("community.subtitle") %>
       </p>
       <%= link_to t("index.contribute"), "#{locale_prefix}/community", class: "button" %>
-    </section>
+    </div>
+  </section>
 
-    <section class="companies">
-      <%= partial "partials/users" %>
-    </section>
+  <%= partial "partials/company_users" %>
 
-  </div>
 </main>

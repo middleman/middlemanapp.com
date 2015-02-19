@@ -3,13 +3,13 @@
 }
 
 .docs-article {
-  margin-top: $base-spacing * 3;
+  h1:first-of-type {
+    margin-top: 0;
+  }
 }
-
 
 .docs-nav {
   margin-right: $base-spacing * 2;
-  margin-top: $base-spacing * 3;
   min-width: 25%;
 
   a {
@@ -31,6 +31,7 @@
   border-bottom: $base-border;
   font-size: modular-scale(-1);
   letter-spacing: 0.05em;
+  margin: 0 0 ($small-spacing / 2);
   padding-bottom: $small-spacing / 2;
   text-transform: uppercase;
 }

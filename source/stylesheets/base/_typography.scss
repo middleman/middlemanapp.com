@@ -27,8 +27,9 @@ h5,
 h6 {
   color: shade($base-font-color, 30%);
   font-family: $heading-font-family;
+  font-weight: 400;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: ($base-spacing * 1.5) 0 $small-spacing;
 }
 
 h1 {
@@ -95,6 +96,7 @@ code {
   font-size: modular-scale(-1);
   margin: 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 0.08em 0.25em;
 }
 
@@ -103,6 +105,7 @@ pre {
   padding: 0;
 
   code {
+    margin: 0;
     padding: ($base-spacing / 1.5) $base-spacing;
   }
 }
