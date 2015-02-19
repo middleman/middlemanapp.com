@@ -1,5 +1,21 @@
 .site-footer {
-  @include padding(null $base-spacing);
   background-color: $secondary-background-color;
-  margin-top: $base-spacing * 4;
+  margin-top: 6%;
+
+  .container {
+    @include padding(6% null);
+  }
+
+  .thoughtbot-logo-svg {
+    max-width: 10em;
+  }
+}
+
+.site-copyright {
+  font-size: modular-scale(-1);
+  margin: 0;
+}
+
+.site-design-credit {
+  font-size: modular-scale(-1);
 }
