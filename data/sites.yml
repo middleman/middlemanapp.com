@@ -1,4 +1,7 @@
 built:
+  - url: http://richardkall.se
+    title: "Richard Käll"
+    source: https://github.com/richardkall/richardkall.se
   - url: http://www.modularscale.com
     title: "Modular Scale"
     source: https://github.com/modularscale/modularscale.com
