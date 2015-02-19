@@ -1,0 +1,27 @@
+<section class="companies">
+  <div class="container">
+
+    <h3>
+      <%= t("community.using_middleman") %>
+    </h3>
+
+    <ul class="users-list">
+      <li class="user-logo">
+        <%= partial "partials/users/mailchimp_logo" %>
+      </li>
+      <li class="user-logo">
+        <%= partial "partials/users/nest_logo" %>
+      </li>
+      <li class="user-logo">
+        <%= partial "partials/users/vox_media_logo" %>
+      </li>
+      <li class="user-logo">
+        <%= partial "partials/thoughtbot_logo" %>
+      </li>
+    </ul>
+
+    <%= link_to t("index.see_middleman_sites"),
+      "#{locale_prefix}/community/made_with_middleman", class: "button" %>
+
+  </div>
+</section>
