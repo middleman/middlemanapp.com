@@ -1,4 +1,6 @@
 built:
+  - url: http://chu.is
+    title: "Eric Chu is..."
   - url: http://www.modularscale.com
     title: "Modular Scale"
     source: https://github.com/modularscale/modularscale.com
