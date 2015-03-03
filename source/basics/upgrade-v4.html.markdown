@@ -24,6 +24,7 @@ Here's the list:
 * Remove deprecated `request` instance
 * Remove old module-style extension support
 * Moved Compass into an extension, still bundled by default.
+* The `after_build` block now returns a `Middleman::Builder` instance which is completely abstracted away from the CLI and Thor. If you need a copy of Thor to run addition also tasks or do a simple `create_file`, it is available as `.thor`. For example: `after_build { |builder| builder.thor.create_file(...) }`
 
 Lots of code was touched during the v4 refactors. If you were relying on internal methods which were not mentioned above or described on this documentation site, there is a possibility things have changed. Please reach out if you have questions.
 
