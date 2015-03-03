@@ -11,10 +11,9 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'font-awesome-middleman'
-gem 'neat'
 gem 'bourbon'
-gem 'jquery-middleman'
+gem 'neat'
+gem 'rails-assets-jquery', '2.1.3', source: 'http://rails-assets.org'
 
 # Windows Support
 gem 'wdm' if Gem.win_platform?

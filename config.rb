@@ -12,19 +12,20 @@ set :markdown_engine, :redcarpet
 
 # Redirect from old paths
 {
-  "basics/pretty-urls.html" => "advanced/pretty_urls.html",
-  "advanced/custom.html" => "advanced/custom_extensions.html",
-  "basics/templates.html" => "basics/templating_language.html",
-  "basics/helpers.html" => "basics/helper_methods.html",
-  "basics/getting-started.html" => "basics/install.html",
-  "basics/asset-pipeline.html" => "advanced/asset_pipeline.html",
+  "basics/dynamic-pages.html"            => "advanced/dynamic_pages.html",
+  "basics/pretty-urls.html"              => "advanced/pretty_urls.html",
+  "advanced/custom.html"                 => "advanced/custom_extensions.html",
+  "basics/templates.html"                => "basics/templating_language.html",
+  "basics/helpers.html"                  => "basics/helper_methods.html",
+  "basics/getting-started.html"          => "basics/install.html",
+  "basics/asset-pipeline.html"           => "advanced/asset_pipeline.html",
   "advanced/improving-cacheability.html" => "advanced/improving_cacheability.html",
-  "advanced/local-data.html" => "advanced/data_files.html",
-  "advanced/rack-middleware.html" => "advanced/rack_middleware.html",
+  "advanced/local-data.html"             => "advanced/data_files.html",
+  "advanced/rack-middleware.html"        => "advanced/rack_middleware.html",
   "advanced/file-size-optimization.html" => "advanced/file_size_optimization.html",
   "community/built-using-middleman.html" => "community/built_using_middleman.html"
 }.each do |old_path, new_path|
-  ['', 'jp/'].each do |prefix|
+  ["", "jp/"].each do |prefix|
     redirect "#{prefix}#{old_path}", to: "#{prefix}#{new_path}"
   end
 end

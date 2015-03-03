@@ -1,4 +1,12 @@
 built:
+  - url: http://chu.is
+    title: "Eric Chu is..."
+  - url: http://www.modularscale.com
+    title: "Modular Scale"
+    source: https://github.com/modularscale/modularscale.com
+  - url: http://cocoapods.org
+    title: "CocoaPods"
+    source: https://github.com/CocoaPods/cocoapods.org
   - url: http://www.eventxtra.com
     title: "EventXtra - Simple, Impactful, event last forever"
   - url: http://flammlachs.de
@@ -143,9 +151,16 @@ built:
   - url: http://www.lacroixdesign.net
     title: "LaCroix Design Co."
     source: https://github.com/lacroixdesign/lacroixdesign.net
+  - url: https://mojaveapp.com
+    title: "Mojaveapp"
+  - url: http://www.cheapboardgamer.com
+    title: "the Cheap Boardgamer"
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: http://richardkall.se
+    title: "Richard Käll"
+    source: https://github.com/richardkall/richardkall.se
   - url: https://www.simple.com/blog
   - url: http://snwh.org/
   - url: http://awardwinningfjords.com
@@ -239,3 +254,8 @@ blogs:
     source: https://github.com/flexbox/davidl
   - url: http://www.clearhaus.com/
     title: "Clearhaus"
+  - url: http://www.zoomshift.com/
+    title: "ZoomShift - Employee Scheduling Software"
+  - url: http://pixyzehn.github.io/
+    title: "pixyzehn profile"
+    source: https://github.com/pixyzehn/pixyzehn.github.io

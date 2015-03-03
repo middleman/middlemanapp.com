@@ -1,9 +1,8 @@
 body {
-  line-height: 2;
   -webkit-font-smoothing: antialiased;
-  background-color: $base-background-color;
   color: $base-font-color;
   font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
@@ -16,9 +15,9 @@ h5,
 h6 {
   color: $header-font-color;
   font-family: $header-font-family;
+  font-weight: normal;
   line-height: $header-line-height;
   margin-bottom: 0.3em;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
@@ -52,15 +51,16 @@ p {
 }
 
 a {
-  transition: color 0.1s linear;
   color: $base-link-color;
   text-decoration: none;
+  transition: color 0.1s linear;
 
   &:hover {
     color: $hover-link-color;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     color: $hover-link-color;
     outline: none;
   }
@@ -71,7 +71,12 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: ($base-spacing * 2) auto;
+  width: 75%;
+
+  @include media($medium-screen-up) {
+    margin: ($base-spacing * 4) auto;
+  }
 }
 
 img,
@@ -80,27 +85,16 @@ picture {
   max-width: 100%;
 }
 
-blockquote {
-  border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15);
-  margin: $base-spacing 0;
-  padding-left: $base-spacing / 2;
-}
-
-cite {
-  color: lighten($base-font-color, 25);
-  font-style: italic;
-
-  &:before {
-    content: "\2014 \00A0";
-  }
-}
-
 code {
-  background-color: lighten($slate-gray, 37);
+  background-color: lighten($mm-slate-gray, 37%);
   border-radius: $base-border-radius;
   font-family: $monospace-font-family;
   font-size: 1rem;
   padding:  0.05em 0.5em;
   overflow: auto;
+}
+
+::selection {
+  background-color: $mm-yellow;
+  color: #fff;
 }

@@ -15,20 +15,23 @@
 #st-search-input {
   @extend input[type="search"];
   @include fill-parent;
-  border: 1px solid $slate-gray;
+  border: 1px solid $mm-slate-gray;
   margin-bottom: 0;
   padding: 1em 1.9em;
 
-  &:focus, &:hover {
-    border: 1px solid $saturated-blue;
+  &:focus,
+  &:hover {
+    border: 1px solid $mm-blue;
   }
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     box-shadow: none;
   }
 
   @include placeholder {
-    color: $translucent-gray;
+    color: $mm-light-gray;
   }
 }
 
@@ -37,9 +40,9 @@
 }
 
 .docs-section-heading {
-  color: $translucent-gray;
+  color: $mm-light-gray;
   font-size: $base-font-size * 0.85;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-bold;
   letter-spacing: 2px;
   padding: 0.75em 0.5em;
   text-transform: uppercase;
@@ -53,7 +56,7 @@
   }
 
   a {
-    color: darken($slate-gray, 10);
+    color: darken($mm-slate-gray, 10);
     display: block;
     padding: 0.34em 0.5em;
     transition: all 0.15s ease;

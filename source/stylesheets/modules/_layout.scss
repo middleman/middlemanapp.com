@@ -1,3 +1,7 @@
+body {
+  background-color: $base-background-color;
+}
+
 .wrap-container {
   @include outer-container;
   padding: 0 $gutter;
@@ -76,14 +80,5 @@
 
   ul {
     @extend %default-ul;
-  }
-}
-
-hr {
-  width: 75%;
-  margin: 2em auto;
-
-  @include media($medium-screen-up) {
-    margin: 4em auto;
   }
 }

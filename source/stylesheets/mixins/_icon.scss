@@ -1,7 +1,0 @@
-@mixin icon($content) {
-  &:before {
-    content: $content;
-    font-family: "FontAwesome";
-    padding-right: 0.25em;
-  }
-}
