@@ -265,3 +265,5 @@ blogs:
   - url: http://turing.cool
     source: https://github.com/turing-incomplete/turing-incomplete
     title: "Turing Incomplete - A Podcast About Programming"
+  - url: https://www.fedux.org
+    title: "fedux.org - Lovely crafted ideas"
