@@ -259,3 +259,9 @@ blogs:
   - url: http://pixyzehn.github.io/
     title: "pixyzehn profile"
     source: https://github.com/pixyzehn/pixyzehn.github.io
+  - url: http://phillyrb.org
+    source: https://github.com/phillyrb/phillyrb.org
+    title: "Philadelphia Ruby user group"
+  - url: http://turing.cool
+    source: https://github.com/turing-incomplete/turing-incomplete
+    title: "A podcast about programming"
