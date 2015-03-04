@@ -24,40 +24,19 @@ over from earlier builds but would no longer be produced.
 ## Deploying the site
 
 After building the site you have everything you need within the
-`build`-directory. Now you've got different options to deploy your site:
+`build`-directory. There are nearly limitless ways to deploy a static build. So
+we present our very own solution for this here. Feel free to search the web or
+look at our [extension
+directory](https://directory.middlemanapp.com/#/extensions/deployment) for more
+alternatives to deploy `middleman`. If you are an author of a deployment tool
+suitable to deploy `middleman`, please make a PR
+[here](https://directory.middlemanapp.com/#/extensions/deployment).
 
-1. Use `tar` and pipe it to `ssh`
-2. Copy the `build`-directory using `scp`
-3. Use `capistrano` to deploy your app
-
-### Use "tar" and pipe it to "ssh"
-
-You can copy the file to the server by piping `tar`'s output via `ssh` to a
-remote `tar`.
-
-```bash
-$ bundle exec middleman build
-$ tar -vczf - -C build/ . | ssh user@server 'tar -xvzf - -C /srv/http'  
-```
-
-### Copy the "build"-directory using "scp"
-
-Another alternative is to copy files using `scp`.
+A very handy tool to deploy a build is
+[`middleman-deploy`](https://github.com/middleman-contrib/middleman-deploy). It
+can deploy a site via rsync, ftp, sftp, or git.
 
 ```bash
-$ bundle exec middleman build
-$ scp -pr build/* user@server:/srv/http/
-```
-
-### Use "capistrano" to deploy your app
-
-If you like [`capistrano`](https://github.com/capistrano/capistrano) to deploy
-your apps, you will like
-[`capistrano-middleman`](https://github.com/fedux-org/capistrano-middleman).
-Just follow the instructions in the
-[README](https://github.com/fedux-org/capistrano-middleman/blob/master/README.md)
-to install that gem.
-
-```bash
-$ bundle exec capistrano production deploy
+$ middleman build [--clean]
+$ middleman deploy [--build-before]
 ```
