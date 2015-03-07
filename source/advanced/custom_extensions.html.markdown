@@ -10,6 +10,24 @@ some of what's available, but you should read the middleman source and the
 source of plugins like middleman-blog to discover all the hooks and extension
 points.
 
+## Bootstrapping a new extension
+
+To bootstrap a new extension you can use the `extension`-command. This will
+create all needed files.
+
+```ruby
+middleman extension middleman-my_extension
+
+# create  middleman-my_extension/.gitignore
+# create  middleman-my_extension/Rakefile
+# create  middleman-my_extension/middleman-my_extension.gemspec
+# create  middleman-my_extension/Gemfile
+# create  middleman-my_extension/lib/middleman_extension.rb
+# create  middleman-my_extension/lib/middleman-my_extension.rb
+# create  middleman-my_extension/features/support/env.rb
+# create  middleman-my_extension/fixtures
+```
+
 ## Basic Extension
 
 The most basic extension looks like:
