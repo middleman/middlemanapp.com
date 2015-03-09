@@ -24,8 +24,15 @@
       </article>
     </div>
     <div class="footer-column footer-right">
-      <p class="footer-credit">Site proudly designed by</p>
-      <span class="footer-thoughtbot-logo"></span>
+      <a href="https://thoughtbot.com?utm_source=middleman">
+        <span class="footer-thoughtbot-logo"></span>
+      </a>
+      <p class="footer-credit">
+        thoughtbot designed this site and is
+
+        <%= link_to "available for hire",
+          "https://thoughtbot.com/hire-us?utm_source=middleman" %>.
+      </p>
     </div>
   </div>
 </footer>

@@ -49,7 +49,9 @@
   }
 }
 
-.footer-open-source-credit a {
+.footer-credit a,
+.footer-open-source-credit a,
+{
   font-weight: $font-weight-normal;
   text-decoration: underline;
 }
