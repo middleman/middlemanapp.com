@@ -10,6 +10,24 @@ Middleman の拡張機能は Middleman の特定のポイントにフックし,
 Middleman のソースや middleman-blog のようなプラグインのソースを
 読むべきです。
 
+## 拡張の雛形を用意
+
+新しい拡張の雛形は `extension` コマンドで用意できます。このコマンドは
+必要なファイルを作成します。
+
+```ruby
+middleman extension middleman-my_extension
+
+# create  middleman-my_extension/.gitignore
+# create  middleman-my_extension/Rakefile
+# create  middleman-my_extension/middleman-my_extension.gemspec
+# create  middleman-my_extension/Gemfile
+# create  middleman-my_extension/lib/middleman_extension.rb
+# create  middleman-my_extension/lib/middleman-my_extension.rb
+# create  middleman-my_extension/features/support/env.rb
+# create  middleman-my_extension/fixtures
+```
+
 ## 拡張の基本
 
 基本的な拡張機能は次のようになります:
