@@ -165,6 +165,12 @@ built:
     title: "Lean Panda Ruby on Rails Web Agency"
   - url: http://2015.bettersoftware.it
     title: "Better Software Management Conference in Italy"
+  - url: http://vaporwa.re/
+    title: "Vaporware Inc."
+  - url: http://www.tootdeck.com/
+    title: "TootDeck"
+  - url: http://parkland.io/
+    title: "The Parkland"
 mobile:
   - url: http://pollev.com
 blogs:
@@ -253,12 +259,6 @@ blogs:
   - url: https://nhutdm.com
     title: "NhutDM"
     source: https://github.com/nhutdm/nhutdm.github.io
-  - url: http://vaporwa.re/
-    title: "Vaporware Inc."
-  - url: http://www.tootdeck.com/
-    title: "TootDeck"
-  - url: http://parkland.io/
-    title: "The Parkland"
   - url: http://davidl.fr
     title: "davidl.fr - Front-end advices and best practices (in french)"
     source: https://github.com/flexbox/davidl
