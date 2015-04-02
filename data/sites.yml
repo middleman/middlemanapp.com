@@ -279,5 +279,8 @@ blogs:
     title: "fedux.org - Lovely crafted ideas"
   - url: http://bidah.github.io/blog
     title: "BIDAH'S DIGITAL CRIB"
+  - url: https://rlafranchi.github.io
+    source: https://github.com/rlafranchi/rlafranchi.github.io
+    title: "Dreaming of Code"
     
 
