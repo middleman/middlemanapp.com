@@ -174,6 +174,8 @@ built:
   - url: http://webmontag-schwerin.de
     title: "Webmontag Schwerin"
     source: https://github.com/WebmontagSN/webmontag-schwerin.de
+  - url: http://www.e2esound.com
+    title: "e2esound.com"
 mobile:
   - url: http://pollev.com
 blogs:
