@@ -171,6 +171,9 @@ built:
     title: "TootDeck"
   - url: http://parkland.io/
     title: "The Parkland"
+  - url: http://webmontag-schwerin.de
+    title: "Webmontag Schwerin"
+    source: https://github.com/WebmontagSN/webmontag-schwerin.de
 mobile:
   - url: http://pollev.com
 blogs:
