@@ -287,5 +287,8 @@ blogs:
   - url: https://rlafranchi.github.io
     source: https://github.com/rlafranchi/rlafranchi.github.io
     title: "Dreaming of Code"
+  - url: http://ikuwow.website
+    title: Query OK.
+    source: https://github.com/ikuwow/query_ok
     
 
