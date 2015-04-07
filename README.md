@@ -28,7 +28,7 @@ The guides are written in [Markdown](http://daringfireball.net/projects/markdown
 
 ## Donate
 
-Please, [help support the Middleman team with a donation](https://spb.io/s/4dXbHBorC3).
+Please, [help support the Middleman team with a donation](https://plasso.co/s/4dXbHBorC3).
 
 ## Copyright
 
