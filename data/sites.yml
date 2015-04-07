@@ -176,6 +176,8 @@ built:
     source: https://github.com/WebmontagSN/webmontag-schwerin.de
   - url: http://www.e2esound.com
     title: "e2esound.com"
+  - url: http://smahr.net
+    title: "Scott Mahr"
 mobile:
   - url: http://pollev.com
 blogs:
