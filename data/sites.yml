@@ -184,6 +184,9 @@ built:
     title: "spmbook"
   - url: http://www.ict4g.net/adolfo/
     title: "Adolfo Villafiorita's Home Page"
+  - url: http://www.nishanths.me
+    title: "Nishanth Shanmugham"
+    source: https://github.com/nishanths/nishanths.github.io
 mobile:
   - url: http://pollev.com
 blogs:
