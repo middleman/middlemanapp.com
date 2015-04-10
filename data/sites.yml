@@ -303,4 +303,7 @@ blogs:
     source: https://github.com/ikuwow/query_ok
   - url: http://blog.lowermychurn.com
     title: Customer Success Blog
+  - url: http://http://vyber-tydne.kle.cz
+    title: "Výběr týdne"
+    source: https://github.com/petrkle/vyber-tydne
 
