@@ -1,4 +1,10 @@
 built:
+  - url: http://madtreebrewing.com/
+    title: "MadTree Brewing"
+    source: https://github.com/procload/madtree-brewing
+  - url: http://ryanmerrill.net/
+    title: "Ryan Clark Merrill"
+    source: https://github.com/procload/rcm
   - url: http://chu.is
     title: "Eric Chu is..."
   - url: http://www.modularscale.com
