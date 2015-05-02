@@ -2,6 +2,8 @@
 title: Upgrading to v4
 ---
 
+**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.beta.1`**
+
 # Upgrading to v4
 
 With version 4, we're removing a lot of lesser used features in the core and replacing them with either better-supporting approaches which already existed or moving that functionality into an extension.
@@ -147,4 +149,41 @@ end
 ```
 
 Again, Collections are very new and experimental. You can help influence the direction of the feature over the beta period.
+
+## Extension API Improvements
+
+### Context Methods
+
+In v4, the Application, Template Context and Config Context are all separated to avoid poluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.
+
+Now, each context has it's own sandbox. Extensions may want to add methods to these scopes:
+
+* `expose_to_application :external_name => :internal_name` will create an `app.external_name` method which maps to the extension's public `internal_name` method. This should probably never be used outside of Middleman core (`app.data` primarily), but it's here if you need it.
+
+* `expose_to_config :external_name => :internal_name` will create a `external_name` method which maps to the extension's public `internal_name` method. This method will be available inside `config.rb`.
+
+* `expose_to_template :external_name => :internal_name` will create a `external_name` method which maps to the extension's public `internal_name` method. This method will be available inside the templating engines. This is very similar to the `helpers` method (which still exists), but this version will auto-bind the method into your extension context.
+
+### Simple Resource Creation
+
+`manipulate_resource_list` is great, but often more complex than most extensions need. Now, we have a way to simply create a resource with string contents.
+
+* `resources :more_pages` will call the `more_pages` method inside your extension. That method is expected to return a Hash where the keys are the output URLs and the values are either a String of a Symbol representing another internal method.
+	
+	```
+	resources :more_pages
+	
+	def more_pages
+		{
+			"/page1.html" => :page1,
+			"/page2.html" => "Hello"
+		}
+	end
+	
+	def page1
+		"Page 1"
+	end
+	```
+
+* `resources "/page1.html" => "greetings"` is a shorthand form of the above. The method takes a Hash of paths to symbols or strings.
 
