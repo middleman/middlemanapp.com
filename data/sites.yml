@@ -1,4 +1,6 @@
 built:
+  - url: http://htmlarrows.com/
+    title: "HTML Arrows"
   - url: http://madtreebrewing.com/
     title: "MadTree Brewing"
     source: https://github.com/procload/madtree-brewing
