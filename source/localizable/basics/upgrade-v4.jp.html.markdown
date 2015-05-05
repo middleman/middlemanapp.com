@@ -2,6 +2,8 @@
 title: v4 へのアップグレード
 ---
 
+**v4 シリーズは現在ベータ版です。すぐにアップグレードする必要はありません。拡張機能の開発者には新しい API を使用してみて欲しいです。最新のリリースバージョンは `v4.0.0.beta.1` です。**
+
 # v4 へのアップグレード
 
 v4 では, コアのあまり使われない機能を削除し, より良いアプローチに変更するか拡張機能に置き換えています。
@@ -147,4 +149,41 @@ end
 ```
 
 繰り返しますが, コレクションは新しく実験的です。あなたはベータ期間中にこの機能に影響を与えることができます。
+
+## 拡張 API の改善
+
+### コンテキストメソッド
+
+v4 では, Application, Template Context や Config Context は単一の共有インスタンスの汚染を避けるためにすべて異なる関心ごとに分離されています。過去には, テンプレートは App にインスタンス変数を追加することが可能でしたが, これによっていくつかの厄介な名前衝突をもたらしました。
+
+現在では, それぞれのコンテキストは独自のサンドボックスがあります。拡張機能はこれらのスコープにメソッドを追加することもできます:
+
+* `expose_to_application :external_name => :internal_name` は拡張の public メソッド `internal_name` にマップする `app.external_name` メソッドを作ります。これはおそらく Middleman core の外側 (主に `app.data`) で使用されることはありません。必要とする場合にはこれを使ってください。
+
+* `expose_to_config :external_name => :internal_name` は拡張の public メソッド `internal_name` にマップする `external_name` メソッドを作ります。このメソッドは `config.rb` の中で利用できるようになります。
+
+* `expose_to_template :external_name => :internal_name` は拡張の public メソッド `internal_name` にマップする `external_name` メソッドを作ります。このメソッドはテンプレートエンジンの中で利用できるようになります。この方法は (まだ存在する) `helpers` メソッドにとても似ています。こちらのバージョンはメソッドを拡張コンテキストに自動的にバインドします。
+
+### 簡単なリソース作成
+
+`manipulate_resource_list` は素晴らしいですが, ほとんどの場合には拡張機能が必要としているよりも複雑です。今, 文字列コンテンツのリソースを簡単に作成することができます。
+
+* `resources :more_pages` は拡張の中の `more_pages` メソッドを呼びます。このメソッドは Hash を返します。キーには出力先 URL, 値には別の内部メソッドを表す文字列または Symbol です。
+
+	```
+	resources :more_pages
+	
+	def more_pages
+		{
+			"/page1.html" => :page1,
+			"/page2.html" => "Hello"
+		}
+	end
+	
+	def page1
+		"Page 1"
+	end
+	```
+
+* `resources "/page1.html" => "greetings"` は上記の短縮形です。このメソッドはページのパスと Symbol または文字列の Hash をとります。
 
