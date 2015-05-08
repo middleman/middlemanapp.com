@@ -202,6 +202,8 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: http://www.downrightlies.net
+    title: 'Downright Lies'
   - url: http://richardkall.se
     title: "Richard Käll"
     source: https://github.com/richardkall/richardkall.se
