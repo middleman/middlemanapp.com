@@ -154,7 +154,7 @@ having to specify a `category` in frontmatter. You can also access the category
 extracted from the source path via
 `current_article.metadata[:page]['category']`.
 
-You might also consider enabling the [pretty urls](/basics/pretty_urls/)
+You might also consider enabling the [pretty urls](/basics/pretty-urls/)
 feature if you want your blog posts to appear as directories instead of HTML
 files.
 
@@ -526,7 +526,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-might be output (if [`directory_indexes`](/basics/pretty_urls/) is turned on) as:
+might be output (if [`directory_indexes`](/basics/pretty-urls/) is turned on) as:
 
 ```
 build/2011/10/18/middleman/index.html
