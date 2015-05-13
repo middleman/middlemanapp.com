@@ -182,7 +182,7 @@ Here's an example using an ERb template:
 ## Sitemap Manipulators
 
 You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a
-Sitemap extension. The [`:directory_indexes`](/basics/pretty_urls/) extension
+Sitemap extension. The [`:directory_indexes`](/basics/pretty-urls/) extension
 uses this feature to reroute normal pages to their directory-index version, and
 the [blog extension](/basics/blogging/) uses several plugins to generate tag
 and calendar pages. See [the `Sitemap::Store`

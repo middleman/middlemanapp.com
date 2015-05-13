@@ -50,7 +50,7 @@ like this:
 ```
 
 To slightly automate this process, the markdown may be processed by ERB first.
-For exemple, in a file named `/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
+For example, in a file named `/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
 
 ``` ruby
 ![Amazing picture](<%= current_page.url %>some-image.png)
