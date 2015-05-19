@@ -207,6 +207,8 @@ built:
     source: https://github.com/nishanths/nishanths.github.io
   - url: https://funio.com
     title: "Funio Web Hosting"
+  - url: http://summit.nativeadvertising.com
+    title: The Native Advertising Summit
 mobile:
   - url: http://pollev.com
 blogs:
@@ -332,3 +334,5 @@ blogs:
     title: "mizukiabe.net"
   - url: https://mexbt.com
     title: "meXBT: Mexican Bitcoin Exchange"
+  - url: http://engineering.sharethrough.com
+    title: Sharethrough Engineering
