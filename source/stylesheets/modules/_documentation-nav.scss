@@ -31,7 +31,7 @@
   }
 
   @include placeholder {
-    color: $mm-light-gray;
+    color: lighten($base-font-color, 30%);
   }
 }
 
@@ -40,7 +40,7 @@
 }
 
 .docs-section-heading {
-  color: $mm-light-gray;
+  color: lighten($base-font-color, 25%);
   font-size: $base-font-size * 0.85;
   font-weight: $font-weight-bold;
   letter-spacing: 2px;
@@ -56,7 +56,7 @@
   }
 
   a {
-    color: darken($mm-slate-gray, 10);
+    color: $base-font-color;
     display: block;
     padding: 0.34em 0.5em;
     transition: all 0.15s ease;

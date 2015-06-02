@@ -86,7 +86,8 @@ picture {
 }
 
 code {
-  background-color: lighten($mm-slate-gray, 37%);
+  color: darken($base-font-color, 20%);
+  background-color: lighten($base-font-color, 64%);
   border-radius: $base-border-radius;
   font-family: $monospace-font-family;
   font-size: 1rem;
