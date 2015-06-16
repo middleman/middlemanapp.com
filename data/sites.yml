@@ -212,6 +212,9 @@ built:
   - url: https://laurendorman.io
     title: "Lauren Dorman"
     source: https://github.com/laurendorman/laurendorman.github.io/tree/dev
+  - url: http://ggw-prototype.goalgorilla.com/
+    title: "Greenpeace Greenwire style guide & prototype"
+    source: https://github.com/greenpeace/ggw_styleguide
 mobile:
   - url: http://pollev.com
 blogs:
