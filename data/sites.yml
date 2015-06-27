@@ -218,6 +218,8 @@ built:
   - url: http://ggw-prototype.goalgorilla.com/
     title: "Greenpeace Greenwire style guide & prototype"
     source: https://github.com/greenpeace/ggw_styleguide
+  - url: http://bst.yokohama/
+    title: "BST - Boat Seabass Tournament"
 mobile:
   - url: http://pollev.com
 blogs:
