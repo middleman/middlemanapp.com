@@ -232,6 +232,9 @@ blogs:
   - url: http://blog.troutwine.us
   - url: http://blog.vanutsteen.nl
     source: https://github.com/LeonB/blog.vanutsteen.nl
+  - url: http://aranair.github.io
+    title: "Boa Ho Man"
+    source: https://github.com/aranair/aranair.github.io
   - url: http://luebke-wohnen.de
   - url: http://benhollis.net
   - url: http://darrenknewton.com
