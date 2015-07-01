@@ -218,6 +218,10 @@ built:
   - url: http://ggw-prototype.goalgorilla.com/
     title: "Greenpeace Greenwire style guide & prototype"
     source: https://github.com/greenpeace/ggw_styleguide
+  - url: https://derautopilot.com/
+    title: "derAutopilot A/B Testing, UX Design und Ruby on Rails Consultancy"
+  - url: https://candygerman.com/
+    title: "German candy subscription box - candy every month"
 mobile:
   - url: http://pollev.com
 blogs:
