@@ -1,4 +1,7 @@
 built:
+  - url: https://martinschurig.com
+    title: "Martin Schurig"
+    source: https://github.com/schurig/martinschurig-com-website
   - url: http://www.nickrttn.me
     title: "Portfolio :: Nick Rutten"
   - url: http://www.startae.com
