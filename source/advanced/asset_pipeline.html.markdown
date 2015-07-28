@@ -200,11 +200,11 @@ end
 
 There are helpers available to be used within your `*.scss` files:
 
-* `image-path()`, `image-url()`
-* `font-path()`, `font-url()`
+* `image_path()`, `image_url()`
+* `font_path()`, `font_url()`
 
 Those helpers prepend the correct directory/url to your asset, e.g.
-`image-path('lightbox2/img/close.png')` becomes
+`image_path('lightbox2/img/close.png')` becomes
 `images/lightbox2/img/close.png`. To reference a bower controlled asset you
 need to use its relative name `lightbox2/img/close.png` for an image which is
 part of the `lightbox2`-component.
@@ -214,7 +214,7 @@ part of the `lightbox2`-component.
 Middleman comes with [Compass] support out of the box. Compass is a powerful
 framework for writing cross-browser stylesheets in Sass. Compass also has its
 own extensions, like [Susy], which you can use in Middleman. All of Sprockets'
-path helpers like `image-url` are hooked into the Middleman Sitemap, so other
+path helpers like `image_url` are hooked into the Middleman Sitemap, so other
 extensions (like `:asset_hash`) will affect your stylesheets too.
 
 [Sprockets]: https://github.com/sstephenson/sprockets
