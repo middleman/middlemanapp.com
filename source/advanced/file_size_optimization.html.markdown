@@ -28,13 +28,22 @@ filename, Middleman won't touch it. This can be good for libraries like jQuery
 which are carefully compressed by their authors ahead of time.
 
 You can customize how the JavaScript compressor works by setting the
-`:compressor` option when activating the `:minify_javascript` extension in
+`:js_compressor` option after activating the `:minify_javascript` extension in
 `config.rb` to a custom instance of Uglifier. See [Uglifier's
-docs](https://github.com/lautis/uglifier) for details. For example, you could
+docs](https://github.com/lautis/uglifier) for details. 
+
+For example, you could
 enable unsafe optimizations and mangle top-level variable names like this:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
+activate :minify_javascript
+set :js_compressor, Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+```
+
+Do not forget to put this in your Gemfile:
+
+``` ruby
+gem "uglifier"
 ```
 
 If you have `asset_hash` activated, are building your site on multiple servers
@@ -108,3 +117,24 @@ activate :minify_html
 ```
 
 You should notice whilst view-source:'ing that your HTML is now being minified.
+
+
+## Using source sets
+
+One of the more recent additions to HTML is the `srcset` attribute for the `img` or `picture` tag. It allows you to define for the browser to load different images with different sizes dependent on either the viewport (using width such as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser display (using factors `1x, 2x, 3x, ...`). 
+
+
+```html
+<img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
+<img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
+
+```
+
+If you want to use `srcset` in conjunction with the `:asset_hash` option, you need to employ the `image_path` helper, which is described [in this middleman section](/advanced/asset_pipeline.html):
+
+```html
+<img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
+```
+
+
+The `srcset` attribute is not yet supported by all browsers as you can see at [caniuse.com](http://caniuse.com/#feat=srcset). If it is not supported the browser uses the `src` attribute as fallback. We noted, that some browsers use the first entry of the `srcset` as fallback. This is why we have put the largest image first in our example.
