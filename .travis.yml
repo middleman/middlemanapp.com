@@ -1,7 +1,8 @@
 language: ruby
 rvm:
-- 2.1.1
+- 2.2.1
 script: bundle exec middleman build --verbose
+sudo: false
 deploy:
   provider: divshot
   environment:
