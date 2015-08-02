@@ -61,6 +61,9 @@ built:
   - url: http://dahal.github.io
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
+  - url: https://saltstack.cz
+    title: "Saltstack.cz"
+    source: https://github.com/petrkle/saltstack.cz
   - url: http://sass-lang.com
     title: "Sass"
     source: https://github.com/sass/sass-site
