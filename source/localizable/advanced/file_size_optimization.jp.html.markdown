@@ -27,14 +27,23 @@ end
 Middleman はそのファイルを最適化しません。作者によって事前に配慮された
 圧縮をおこなう jQuery のようなライブラリにはとても良い方法です。
 
-`config.rb` で `:minify_javascript` 拡張を有効化する場合,
-`:compressor` オプションに Uglifier のカスタムインスタンスを設定することで
+`config.rb` で `:minify_javascript` 拡張を有効化した後に,
+`:js_compressor` オプションに Uglifier のカスタムインスタンスを設定することで
 JavaScript の圧縮方法をカスタマイズできます。詳細は [Uglifier's
 docs](https://github.com/lautis/uglifier) を参照してください。
-例えば, 次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:
+
+例えば,
+次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:toplevel => true, :unsafe => true)
+activate :minify_javascript
+set :js_compressor, Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+```
+
+Gemfile に次の行を追加することを忘れないでください:
+
+``` ruby
+gem "uglifier"
 ```
 
 `asset_hash` を有効にし, ロードバランサを使って複数サーバにサイトを構築,
@@ -108,3 +117,24 @@ activate :minify_html
 ```
 
 ソースを確認すると HTML が圧縮されていることがわかります。
+
+
+## source sets (srcset) の使用
+
+HTML に最近追加されたものに `img` や `picture` タグの `srcset` 属性があります。この属性は viewport (`1024w, 800w, 600w, や 320w` のような幅指定) やブラウザの解像度 (`1x, 2x, 3x, ...` のような値) によって異なる画像を異なるサイズでブラウザにロードできます。
+
+
+```html
+<img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
+<img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
+
+```
+
+`:asset_hash` オプションと一緒に `secset` を使用したい場合, [アセットパイプラインのページ](/jp/advanced/asset_pipeline.html) に書かれている `image_path` ヘルパーを使用する必要があります。
+
+```html
+<img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
+```
+
+
+[caniuse.com](http://caniuse.com/#feat=srcset) で確認できるように `srcset` 属性はまだすべてのブラウザでサポートされていません。`srcset` をサポートしないブラウザの場合フォールバックとして `src` 属性を使います。注意するポイントとして, 一部のブラウザではフォールバックとして `srcset` 属性の最初の値を使用します。上記の例で属性値の最初に最大の画像を入れているのはこのためです。

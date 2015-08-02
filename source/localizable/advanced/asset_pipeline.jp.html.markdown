@@ -200,11 +200,11 @@ end
 
 `*.scss` ファイルの中で利用できるヘルパがあります:
 
-* `image-path()`, `image-url()`
-* `font-path()`, `font-url()`
+* `image_path()`, `image_url()`
+* `font_path()`, `font_url()`
 
 これらのヘルパはアセットファイルへの正しいディレクトリ/url をファイルパスとして追加します。
-例えば, `image-path('lightbox2/img/close.png')` が
+例えば, `image_path('lightbox2/img/close.png')` が
 `images/lightbox2/img/close.png` になります。 bower 管理下のアセットファイルを参照するには
 `lightbox2`-component のファイルの 1 つである画像ファイル `lightbox2/img/close.png`
 を相対的な名前を指定する必要があります。
@@ -214,7 +214,7 @@ end
 Middleman は柔軟な [Compass] サポートを備えています。
 Compass は Sass でクロスブラウザなスタイルシートを書くためのパワフルなフレームワークです。
 Compass は, [Susy] のように, Middleman で使用できる拡張機能です。
-`image-url` のような Sprockets パスヘルパは Middleman のサイトマップにフックされるので,
+`image_url` のような Sprockets パスヘルパは Middleman のサイトマップにフックされるので,
 その他の拡張( :asset_hash のような) もスタイルシートに影響します。
 
 [Sprockets]: https://github.com/sstephenson/sprockets
