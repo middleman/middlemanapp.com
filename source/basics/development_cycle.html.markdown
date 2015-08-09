@@ -43,8 +43,8 @@ This will do exactly the same thing as `middleman server`.
 
 ## LiveReload
 
-Middleman comes with an extension that will automatically refresh your browser
-whenever you edit files in your site. Simply open your `config.rb` and add
+Middleman has an extension that will automatically refresh your browser
+whenever you edit files in your site. First make sure that you have `middleman-livereload` in your Gemfile. Then simply open your `config.rb` and add
 
 ``` ruby
 activate :livereload
