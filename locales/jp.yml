@@ -53,7 +53,7 @@ jp:
     first:
       header: インストール
       description: gem をインストールし, 新たに Middleman を使ったサイトを作成するために
-        CLI から <code>middleman initmy_project</code> を実行します。
+        CLI から <code>middleman init my_project</code> を実行します。
       link_text: インストール方法を参照する
     second:
       header: サイトのカスタマイズ
