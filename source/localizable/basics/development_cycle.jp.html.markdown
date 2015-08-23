@@ -43,8 +43,8 @@ $ bundle exec middleman
 
 ## LiveReload
 
-Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする拡張が
-ついています。`config.rb` を開いて次の行を追加してください。
+Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする拡張がついています。
+まず Gemfile に `middleman-livereload` があることを確認してください。続いて `config.rb` を開いて次の行を追加してください。
 
 ``` ruby
 activate :livereload
