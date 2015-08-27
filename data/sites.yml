@@ -1,4 +1,6 @@
 built:
+  - url: http://hull.io
+    title: "Hull.io"
   - url: https://martinschurig.com
     title: "Martin Schurig"
     source: https://github.com/schurig/martinschurig-com-website
