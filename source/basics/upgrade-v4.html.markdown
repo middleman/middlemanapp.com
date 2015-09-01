@@ -2,7 +2,7 @@
 title: Upgrading to v4
 ---
 
-**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.beta.1`**
+**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.beta.2`** Check the (changelog)[https://github.com/middleman/middleman/blob/master/CHANGELOG.md] for a list of merged changes.
 
 # Upgrading to v4
 
@@ -169,21 +169,20 @@ Now, each context has it's own sandbox. Extensions may want to add methods to th
 `manipulate_resource_list` is great, but often more complex than most extensions need. Now, we have a way to simply create a resource with string contents.
 
 * `resources :more_pages` will call the `more_pages` method inside your extension. That method is expected to return a Hash where the keys are the output URLs and the values are either a String of a Symbol representing another internal method.
-	
+
 	```
 	resources :more_pages
-	
+
 	def more_pages
 		{
 			"/page1.html" => :page1,
 			"/page2.html" => "Hello"
 		}
 	end
-	
+
 	def page1
 		"Page 1"
 	end
 	```
 
 * `resources "/page1.html" => "greetings"` is a shorthand form of the above. The method takes a Hash of paths to symbols or strings.
-
