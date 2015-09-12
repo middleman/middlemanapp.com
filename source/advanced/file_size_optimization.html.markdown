@@ -37,13 +37,7 @@ enable unsafe optimizations and mangle top-level variable names like this:
 
 ``` ruby
 activate :minify_javascript
-set :js_compressor, Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
-```
-
-Do not forget to put this in your Gemfile:
-
-``` ruby
-gem "uglifier"
+set :js_compressor, ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
 ```
 
 If you have `asset_hash` activated, are building your site on multiple servers
