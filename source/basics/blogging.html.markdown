@@ -221,6 +221,7 @@ You can also get access to the tag data for a tag archive:
           <li><a href="<%= article.url %>"><%= article.title %></a></li>
         <% end %>
       </ul>
+    </li>
   <% end %>
 </ul>
 ```
