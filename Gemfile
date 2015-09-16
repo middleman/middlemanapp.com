@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman', '4.0.0.alpha.5'
+gem 'middleman', github: 'middleman/middleman', branch: 'master'
+gem 'middleman-sprockets', github: 'middleman/middleman-sprockets', branch: 'master'
 gem 'middleman-autoprefixer'
 gem 'middleman-livereload'
 
