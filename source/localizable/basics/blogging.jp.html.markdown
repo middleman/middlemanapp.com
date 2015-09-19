@@ -221,6 +221,7 @@ Middleman の [入れ子レイアウト](/jp/basics/templates/#入れ子レイ�
           <li><a href="<%= article.url %>"><%= article.title %></a></li>
         <% end %>
       </ul>
+    </li>
   <% end %>
 </ul>
 ```
