@@ -52,5 +52,9 @@ activate :livereload
 
 Your browser will now reload changed pages automatically.
 
+### Reloading CSS
+By default, Middleman will reload `stylesheets/application.css` when detecting a CSS partial was changed.
+Use `:bundle_file_css` option to set a different filename or `nil` to force a full page refresh.
+
 [HTML5 Boilerplate]: http://html5boilerplate.com
 [SMACSS]: http://smacss.com
