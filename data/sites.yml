@@ -233,7 +233,10 @@ built:
   - url: https://candygerman.com/
     title: "German candy subscription box - candy every month"
   - url: http://www.codateam.com
-    title: "Custom Software Development House and Dedicated PHP Developers from Poland"    
+    title: "Custom Software Development House and Dedicated PHP Developers from Poland"
+  - url: http://lrug.org
+    title: "London Ruby User Group"
+    source: https://github.com/lrug/lrug.org
 mobile:
   - url: http://pollev.com
 blogs:
