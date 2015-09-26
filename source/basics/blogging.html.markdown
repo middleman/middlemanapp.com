@@ -42,10 +42,6 @@ The blog extension has many configuration options - you can see what they all
 are and what they do by going to `http://localhost:4567/__middleman/config/` in
 your preview server.
 
-**Note:** If you are using the [`directory_indexes`](/basics/pretty-urls/)
-extension, you'll want to make sure that you activate it *after* you activate
-the blog extension.
-
 ## Articles
 
 Like Middleman itself, the blog extension is focused on individual files. Each
@@ -154,10 +150,14 @@ having to specify a `category` in frontmatter. You can also access the category
 extracted from the source path via
 `current_article.metadata[:page]['category']`.
 
+### Pretty URLs (Directory Indexes)
+
 You might also consider enabling the [pretty urls](/basics/pretty-urls/)
 feature if you want your blog posts to appear as directories instead of HTML
 files.
 
+**Note:** Make sure that you activate `directory_indexes` **after** you activate
+the blog extension.
 
 ## Layouts
 
