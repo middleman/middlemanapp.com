@@ -237,6 +237,9 @@ built:
   - url: http://lrug.org
     title: "London Ruby User Group"
     source: https://github.com/lrug/lrug.org
+  - url: http://www.krivoydesigner.com/
+    title: "Sergey Krivoy | Web Designer from Saint P."
+    source: https://github.com/nostrism/nostrism.github.io/tree/middleman
 mobile:
   - url: http://pollev.com
 blogs:
