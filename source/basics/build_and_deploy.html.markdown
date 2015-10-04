@@ -41,7 +41,7 @@ $ middleman build [--clean]
 $ middleman deploy [--build-before]
 ```
 
-## Production Assets Hashing & CDN Configuration
+## Production Asset Hashing & CDN Configuration
 
 A common setup for production is to hash your assets and serve them through a CDN. You can do this easily with middleman:
 
