@@ -59,7 +59,6 @@ $ middleman init my_new_project --rack
 config.ru が欲しい場合は, 次の内容を記述してください:
 
 ```
-require 'rubygems'
 require 'middleman/rack'
 run Middleman.server
 ```
