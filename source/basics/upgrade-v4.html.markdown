@@ -2,7 +2,7 @@
 title: Upgrading to v4
 ---
 
-**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.beta.2`** Check the (changelog)[https://github.com/middleman/middleman/blob/master/CHANGELOG.md] for a list of merged changes.
+**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.rc.1`** Check the [changelog](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) for a list of merged changes.
 
 # Upgrading to v4
 

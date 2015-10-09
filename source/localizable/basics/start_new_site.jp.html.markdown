@@ -55,11 +55,10 @@ config.ru ファイルは Rack 対応の Web サーバによってどのよう�
 $ middleman init my_new_project --rack
 ```
 
-すでにプロジェクトの初期化が完了しいて, 後から pow やその他開発サーバと連携させるために
+すでにプロジェクトの初期化が完了していて, 後から pow やその他開発サーバと連携させるために
 config.ru が欲しい場合は, 次の内容を記述してください:
 
 ```
-require 'rubygems'
 require 'middleman/rack'
 run Middleman.server
 ```

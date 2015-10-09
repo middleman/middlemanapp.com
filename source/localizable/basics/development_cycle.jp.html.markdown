@@ -52,5 +52,9 @@ activate :livereload
 
 これであなたのブラウザはページ内容に変更があると自動的にリロードされます。
 
+### CSS のリロード
+デフォルト設定では middleman は `stylesheets/application.css` の CSS パーシャルが変更された場合リロードします。
+`:bundle_file_css` に異なるファイル名を設定することができます。`nil` を指定するとすべての CSS ファイルでリロードが行われます。
+
 [HTML5 Boilerplate]: http://html5boilerplate.com
 [SMACSS]: http://smacss.com

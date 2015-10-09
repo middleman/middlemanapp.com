@@ -9,8 +9,9 @@
 .built-with-middleman-list-item {
   display: block;
   border-bottom: 1px solid $base-border-color;
-  height: 60px;
-  line-height: 60px;
+  min-height: 60px;
+  line-height: 30px;
+  padding: 14px 0;
 }
 
 .built-with-middleman-link, .source-code-link {
@@ -33,17 +34,15 @@
 }
 
 .source-code-link {
-  background: transparent;
+  background: white;
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
   color: lighten($medium-gray, 10);
-  display: inline-block;
-  float: right;
+  position: absolute;
+  right: 26px;
   font-size: $base-font-size * 0.75;
   font-weight: $font-weight-bold;
   line-height: 30px;
-  margin: 15px auto 0;
-  overflow: hidden;
   padding: 0 0.75em;
   text-transform: uppercase;
 }

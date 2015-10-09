@@ -37,13 +37,7 @@ docs](https://github.com/lautis/uglifier) を参照してください。
 
 ``` ruby
 activate :minify_javascript
-set :js_compressor, Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
-```
-
-Gemfile に次の行を追加することを忘れないでください:
-
-``` ruby
-gem "uglifier"
+set :js_compressor, ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
 ```
 
 `asset_hash` を有効にし, ロードバランサを使って複数サーバにサイトを構築,
