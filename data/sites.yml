@@ -1,4 +1,6 @@
 built:
+  - url: http://htmlcolorcodes.com/
+    title: "HTML Color Codes"
   - url: http://hull.io
     title: "Hull.io"
   - url: https://martinschurig.com
@@ -231,7 +233,13 @@ built:
   - url: https://candygerman.com/
     title: "German candy subscription box - candy every month"
   - url: http://www.codateam.com
-    title: "Custom Software Development House and Dedicated PHP Developers from Poland"    
+    title: "Custom Software Development House and Dedicated PHP Developers from Poland"
+  - url: http://lrug.org
+    title: "London Ruby User Group"
+    source: https://github.com/lrug/lrug.org
+  - url: http://www.krivoydesigner.com/
+    title: "Sergey Krivoy | Web Designer from Saint P."
+    source: https://github.com/nostrism/nostrism.github.io/tree/middleman
 mobile:
   - url: http://pollev.com
 blogs:
@@ -322,6 +330,7 @@ blogs:
     title: Site Validator
   - url: https://cheersapp.io
     title: Cheers app
+    source: https://github.com/angelbotto/cheersapp-web
   - url: https://nhutdm.com
     title: "NhutDM"
     source: https://github.com/nhutdm/nhutdm.github.io
@@ -379,3 +388,7 @@ blogs:
   - url: http://ashfurrow.com/
     title: Ash Furrow
     source: https://github.com/ashfurrow/blog
+  - url: http://www.sistrall.it/
+    title: sistrall.it - Mainly a photoblog
+  - url: http://louisnovick.com
+    title: Louis Novick
