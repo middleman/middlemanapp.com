@@ -40,3 +40,22 @@ PR をしてください。
 $ middleman build [--clean]
 $ middleman deploy [--build-before]
 ```
+
+## プロダクション環境のアセットハッシュ & CDN 設定
+
+プロダクション環境では一般的にアセットファイル名にハッシュ文字列を付与し CDN でそのファイルを提供します。Middleman を使うことで簡単に対応することができます:
+
+```ruby
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+
+  # アセットファイルの URL にハッシュを追加 (URL ヘルパの使用が必要)
+  activate :asset_hash
+
+  activate :asset_host
+  set :asset_host do
+    '//YOURDOMAIN.cloudfront.net'
+  end
+end
+```
