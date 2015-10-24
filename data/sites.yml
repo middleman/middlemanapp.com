@@ -396,3 +396,6 @@ blogs:
     title: sistrall.it - Mainly a photoblog
   - url: http://louisnovick.com
     title: Louis Novick
+  - url: http://otequip.info
+    title: OT Equipment Info
+    source: https://github.com/AmyHilaire/otequip-info
