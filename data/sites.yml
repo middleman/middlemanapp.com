@@ -244,6 +244,8 @@ built:
   - url: http://www.krivoydesigner.com/
     title: "Sergey Krivoy | Web Designer from Saint P."
     source: https://github.com/nostrism/nostrism.github.io/tree/middleman
+  - url: http://madewithenvy.com
+    title: "Envy, a web consultancy"
 mobile:
   - url: http://pollev.com
 blogs:
