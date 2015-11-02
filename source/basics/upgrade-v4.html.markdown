@@ -49,7 +49,7 @@ configure :development { # enable some sass debug settings }
 configure :production { activate :minify_html }
 ```
 
-This adaptation will probably effect the largest number of Middleman users.
+This adaptation will probably affect the largest number of Middleman users.
 
 Like Rails, we support automatically loading environment specific config from a predefined path. If you have a lot of production config, create a file at `environments/production.rb` and its contents will automatically be evaluated when in production.
 
