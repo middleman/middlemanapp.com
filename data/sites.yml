@@ -212,7 +212,7 @@ built:
   - url: http://smahr.net
     title: "Scott Mahr"
   - url: http://www.dearandrewkim.com
-    title: "Dear Andrew Kim"  
+    title: "Dear Andrew Kim"
   - url: http://ict4g.fbk.eu/
     title: "ICT4G - FBK"
   - url: http://spmbook.com/
@@ -339,9 +339,9 @@ blogs:
   - url: https://cheersapp.io
     title: Cheers app
     source: https://github.com/angelbotto/cheersapp-web
-  - url: https://nhutdm.com
-    title: "NhutDM"
-    source: https://github.com/nhutdm/nhutdm.github.io
+  - url: http://nhutdm.com
+    title: "Nhut Duong"
+    source: https://github.com/nhutdm/nhutdm.com
   - url: http://davidl.fr
     title: "davidl.fr - Front-end advices and best practices (in french)"
     source: https://github.com/flexbox/davidl
