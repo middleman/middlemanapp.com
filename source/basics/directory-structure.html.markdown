@@ -29,7 +29,7 @@ mymiddlemansite/
 ## Main Directories
 
 Middleman makes use of the `source`, `build`, `data` and `lib` directories for
-specific purposes. Each of these directories are siblings of the main Middleman
+specific purposes. Each of these directories are children of the main Middleman
 directory.
 
 ### Source Directory
