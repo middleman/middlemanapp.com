@@ -253,6 +253,8 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: https://viljamis.com
+    title: "Viljami Salminen"
   - url: http://www.downrightlies.net
     title: 'Downright Lies'
   - url: http://richardkall.se
