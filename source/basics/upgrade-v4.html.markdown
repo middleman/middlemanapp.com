@@ -2,7 +2,7 @@
 title: Upgrading to v4
 ---
 
-**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.rc.1`** Check the [changelog](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) for a list of merged changes.
+**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.rc.2`** Check the [changelog](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) for a list of merged changes.
 
 # Upgrading to v4
 
@@ -27,6 +27,7 @@ Here's the list:
 * Remove old module-style extension support
 * Moved Compass into an extension, still bundled by default.
 * The `after_build` block now returns a `Middleman::Builder` instance which is completely abstracted away from the CLI and Thor. If you need a copy of Thor to run addition also tasks or do a simple `create_file`, it is available as `.thor`. For example: `after_build { |builder| builder.thor.create_file(...) }`
+* Removed sprockets, add `gem "middleman-sprockets", "~> 4.0.0.rc"` to `Gemfile`
 
 Lots of code was touched during the v4 refactors. If you were relying on internal methods which were not mentioned above or described on this documentation site, there is a possibility things have changed. Please reach out if you have questions.
 
