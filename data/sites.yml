@@ -250,6 +250,9 @@ built:
     source: https://github.com/nostrism/nostrism.github.io/tree/middleman
   - url: http://madewithenvy.com
     title: "Envy, a web consultancy"
+  - url: http://cmoproject.org
+    title: "Carpathian Mountain Outreach"
+    source: https://github.com/joshukraine/cmoproject.org
 mobile:
   - url: http://pollev.com
 blogs:
