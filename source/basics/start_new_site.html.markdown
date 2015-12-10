@@ -8,12 +8,15 @@ To get started we will need to create a project folder for Middleman to work
 out of. You can do this using an existing folder or have Middleman create one
 for you using the `middleman init` command.
 
-Simply point the command at the folder for your new site and Middleman will
-build a skeleton project in that folder (or create the folder for you).
+``` bash
+$ middleman init
+```
+builds a Middleman skeleton project in your current folder.
 
 ``` bash
 $ middleman init my_new_project
 ```
+creates a subfolder my_new_project with the Middleman skeleton project.
 
 ### The Skeleton
 
