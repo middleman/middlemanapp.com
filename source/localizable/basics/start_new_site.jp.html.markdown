@@ -8,12 +8,15 @@ title: 新しいサイトの作成
 すでに存在するフォルダを使うか, `middleman init` コマンドで Middleman が作成する
 フォルダを使うことができます。
 
-コマンドで新しいサイト用のフォルダを指定することで, Middleman はそのフォルダの中に
-プロジェクトのスケルトンを作ります (場合によってはフォルダ自体も)。
+``` bash
+$ middleman init
+```
+カレントディレクトリに Middleman のスケルトンプロジェクトを作ります。
 
 ``` bash
 $ middleman init my_new_project
 ```
+my_new_project ディレクトリに Mmiddleman のスケルトンプロジェクトを作ります。
 
 ### スケルトン
 
