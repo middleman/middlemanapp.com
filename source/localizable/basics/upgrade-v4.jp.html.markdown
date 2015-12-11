@@ -2,7 +2,7 @@
 title: v4 へのアップグレード
 ---
 
-**v4 シリーズは現在ベータ版です。すぐにアップグレードする必要はありません。拡張機能の開発者には新しい API を使用してみて欲しいです。最新のリリースバージョンは `v4.0.0.rc.1` です。** マージされた変更点のリストについては [CHANGELOG](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) を確認して下さい。
+**v4 シリーズは現在ベータ版です。すぐにアップグレードする必要はありません。拡張機能の開発者には新しい API を使用してみて欲しいです。最新のリリースバージョンは `v4.0.0.rc.2` です。** マージされた変更点のリストについては [CHANGELOG](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) を確認して下さい。
 
 # v4 へのアップグレード
 
@@ -27,6 +27,7 @@ v4 では, コアのあまり使われない機能を削除し, より良いア�
 * 古いモジュールスタイルの拡張のサポートは削除されました。
 * Compass は拡張機能になりました。デフォルトでは同梱されます。
 * `after_build` ブロックは CLI と Thor から取り出された `Middleman::Builder` インスタンスを返すようになりました。追加でタスクを実行したい場合や `create_file` のような処理をするために Thor のコピーが必要な場合は, `.thor` で対応できます。例えば `after_build { |builder| builder.thor.create_file(...) }` のように呼び出せます。
+* sprockets は削除されました。使用する場合は `Gemfile` に `gem "middleman-sprockets", "~> 4.0.0.rc"` を追加してください。
 
 v4 へのリファクタリングによって多くのコードが変更されています。上記リストまたは当サイトに記載されていない内部メソッドを利用していた場合には, 変更されている可能性があります。質問がある場合には気軽に聞いてください。
 
@@ -186,4 +187,3 @@ v4 では, Application, Template Context や Config Context は単一の共有�
 	```
 
 * `resources "/page1.html" => "greetings"` は上記の短縮形です。このメソッドはページのパスと Symbol または文字列の Hash をとります。
-
