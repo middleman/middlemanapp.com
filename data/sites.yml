@@ -258,6 +258,8 @@ built:
   - url: http://cmoproject.org
     title: "Carpathian Mountain Outreach"
     source: https://github.com/joshukraine/cmoproject.org
+  - url: http://oleg.codes
+    title: Oleg Mokhniuk
 mobile:
   - url: http://pollev.com
 blogs:
@@ -415,3 +417,4 @@ blogs:
   - url: http://otequip.info
     title: OT Equipment Info
     source: https://github.com/AmyHilaire/otequip-info
+  
