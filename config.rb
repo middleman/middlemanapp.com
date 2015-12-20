@@ -1,5 +1,3 @@
-require "builder"
-
 set :layout, :article
 
 activate :livereload
@@ -7,7 +5,7 @@ activate :i18n
 activate :directory_indexes
 activate :autoprefixer
 
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true, :with_toc_data => true
+set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: true
 set :markdown_engine, :redcarpet
 
 # Redirect from old paths
@@ -30,11 +28,16 @@ set :markdown_engine, :redcarpet
   end
 end
 
-configure :development do
-  set :debug_assets, true
-end
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
+  source: ".tmp/dist",
+  latency: 1
 
 configure :build do
+  # "Ignore" JS so webpack has full control.
+  ignore { |path| path =~ /\/(.*)\.js$/ && $1 != 'site' }
+
   activate :minify_css
   activate :minify_javascript
 end

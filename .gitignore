@@ -10,3 +10,5 @@ bin
 build
 Gemfile.lock
 source/mint/config/db.php
+/.tmp/
+/node_modules/

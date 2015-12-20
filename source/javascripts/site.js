@@ -1,11 +1,11 @@
-//= require jquery
-//=require "_vendor/highlight.pack"
-//=require "_vendor/waypoints"
-//=require "_vendor/waypoints-sticky"
-//= require anchor-js
+import hljs from 'highlight.js';
+import anchors from 'exports?anchors!anchor-js/anchor';
+import setupDocsNavAnimation from './docs-nav-animation';
+import setupTOC from './toc';
 
-//=require "_toc"
-//=require "_docs-nav-animation"
+setupDocsNavAnimation();
+setupTOC();
 
-hljs.initHighlightingOnLoad();
+hljs.initHighlighting();
+
 anchors.add('.main h2, .main h3, .main h4, .main h5, .main h6');

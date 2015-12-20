@@ -44,32 +44,21 @@ body {
 }
 
 .main {
-  @include media($medium-screen-up) {
-    float: right;
-    width: $medium-main-content-width;
 
-    &.stuck {
-      margin-left: $medium-sidebar-width;
-    }
+  @include media($medium-screen-up) {
+    padding-left: $medium-sidebar-width + 3em;
   }
 
   @include media($large-screen-up) {
-    width: $large-main-content-width;
-
-    &.stuck {
-      margin-left: $large-sidebar-width;
-    }
+    padding-left: $large-sidebar-width + 3em;
   }
 
   @include media($larger-screen-up) {
-    width: $larger-main-content-width;
-
-    &.stuck {
-      margin-left: $larger-sidebar-width;
-    }
+    padding-left: $larger-sidebar-width + 3em;
   }
 
   h1 {
+    margin-top: 0.15em;
     padding-bottom: 0.35em;
     margin-bottom: 0.35em;
   }
