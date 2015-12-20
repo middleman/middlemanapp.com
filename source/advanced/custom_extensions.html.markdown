@@ -99,7 +99,7 @@ class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
 
-    app.set :css_dir, "lib/my/css"
+    app.config[:css_dir] = "lib/my/css"
   end
 end
 ```
@@ -112,21 +112,16 @@ class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
 
-    app.set :my_feature_setting, %w(one two three)
+    app.config[:my_feature_setting] = %w(one two three)
   end
 
   helpers do
     def my_helper
-      my_feature_setting.to_sentence
+      app.config[:my_feature_setting].to_sentence
     end
   end
 end
 ```
-
-`set` adds a new method to `Middleman::Application`, meaning you can read the
-value of your variable via `my_feature_setting` elsewhere. However, consider
-using `activate` options instead of global settings when only your extension
-needs a particular value.
 
 ## Adding Methods to config.rb
 
@@ -163,7 +158,7 @@ class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
   end
-  
+
   helpers do
     def make_a_link(url, text)
       "<a href='#{url}'>#{text}</a>"
@@ -219,10 +214,10 @@ class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
   end
-  
+
   def after_configuration
     the_users_setting = app.settings.css_dir
-    app.set :my_setting, "#{the_users_setting}_with_my_suffix"
+    app.config[:my_setting] = "#{the_users_setting}_with_my_suffix"
   end
 end
 ```
@@ -240,7 +235,7 @@ class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
     app.before do
-      app.set :currently_requested_path, request.path_info
+      app.config[:currently_requested_path] = request.path_info
       true
     end
   end
