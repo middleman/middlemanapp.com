@@ -23,6 +23,7 @@ en:
     advanced:
       title: Advanced
       asset_pipeline: Asset Pipeline
+      external_pipeline: External Pipeline
       configuration: Configuring Your Site
       custom_extensions: Custom Extensions
       custom_templates: Custom Templates
