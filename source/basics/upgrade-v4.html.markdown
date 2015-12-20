@@ -2,15 +2,11 @@
 title: Upgrading to v4
 ---
 
-**The v4 series is currently in beta. You don't need to upgrade any time soon, but we'd love extension authors to begin experimenting with the new APIs. The current release is `v4.0.0.rc.2`** Check the [changelog](https://github.com/middleman/middleman/blob/master/CHANGELOG.md) for a list of merged changes.
-
 # Upgrading to v4
 
-With version 4, we're removing a lot of lesser used features in the core and replacing them with either better-supporting approaches which already existed or moving that functionality into an extension.
+With version 4, we've removed a lot of lesser used features in the core and replaced them with better-supported approaches which already existed or moving that functionality into an extension.
 
-This upgrade documentation is a work in progress and will evolve along side the v4 betas. If the upgrade path for any of the removed features is confusing or not an option for your codebase, please let us know and we can take another look at either the docs or the decision to remove it.
-
-Here's the list:
+Here's the list of API changes:
 
 * Removed the `proxy` and `ignore` options for the `page` command in `config.rb`. Use the `proxy` and `ignore` commands instead of passing these options to `page`.
 * Removed `with_layout` in config. Use loops of `page` instead.
@@ -29,7 +25,7 @@ Here's the list:
 * The `after_build` block now returns a `Middleman::Builder` instance which is completely abstracted away from the CLI and Thor. If you need a copy of Thor to run addition also tasks or do a simple `create_file`, it is available as `.thor`. For example: `after_build { |builder| builder.thor.create_file(...) }`
 * Removed sprockets, add `gem "middleman-sprockets", "~> 4.0.0.rc"` to `Gemfile`
 
-Lots of code was touched during the v4 refactors. If you were relying on internal methods which were not mentioned above or described on this documentation site, there is a possibility things have changed. Please reach out if you have questions.
+Lots of code was touched during the v4 refactor. If you were relying on internal methods which were not mentioned above or described on this documentation site, there is a possibility things have changed. Please reach out if you have questions.
 
 ## Environments and Changes to `configure` blocks.
 
@@ -88,10 +84,10 @@ activate :external_pipeline,
   latency: 2
 ```
 
-This is pretty experimental and will need a lot of love before the final release. This feature is hosted on top of a lower-level feature which allows multiple directories to be overlaid to create the combined sitemap for Middleman. This is great for keeping things like `bower_components` separate from your source directory, but still available to Middleman:
+This feature is hosted on top of a lower-level feature which allows multiple directories to be overlaid to create the combined sitemap for Middleman. This is great for keeping things like `bower_components` separate from your source directory, but still available to Middleman:
 
 ```
-files.watch :source, path: File.expand_path('bower_components', app.root)
+import_path File.expand_path('bower_components', app.root)
 ```
 
 ## Collections
