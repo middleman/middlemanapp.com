@@ -17,6 +17,7 @@ en:
       upgrade-v4: Upgrading to v4
       layouts: Layouts
       partials: Partials
+      redirects: Redirects
       start_new_site: Start a New Site
       templates: Templating Language
     advanced:

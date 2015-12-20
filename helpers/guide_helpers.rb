@@ -46,6 +46,6 @@ module GuideHelpers
   end
 
   def sort_sites(sites)
-      sites.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase }
+    sites.sort_by{ |s| (s.title || URI(s.url).host.sub('www.', '')).downcase }
   end
 end
