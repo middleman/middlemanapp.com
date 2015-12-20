@@ -25,6 +25,7 @@ en:
       asset_pipeline: Asset Pipeline
       configuration: Configuring Your Site
       custom_extensions: Custom Extensions
+      custom_templates: Custom Templates
       data_files: Data Files
       development_optimization: Development Optimization
       dynamic_pages: Dynamic Pages
