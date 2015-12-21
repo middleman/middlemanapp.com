@@ -167,7 +167,7 @@ This callback is used to execute code after the build process has finished. The 
 
 ``` ruby
 class MyFeature < Middleman::Extension
-  def after_build do |builder|
+  def after_build(builder)
     builder.thor.run './my_deploy_script.sh'
   end
 end
