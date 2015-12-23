@@ -17,6 +17,7 @@ jp:
       upgrade-v4: v4 へのアップグレード
       layouts: レイアウト
       partials: パーシャル
+      redirects: リダイレクト
       start_new_site: 新しいサイトの作成
       templates: テンプレート言語
     advanced:
