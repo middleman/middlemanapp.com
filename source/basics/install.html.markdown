@@ -9,7 +9,7 @@ Middleman is distributed using the RubyGems package manager. This means you will
 Mac OS X comes prepackaged with both Ruby and Rubygems, however, some of the Middleman's dependencies need to be compiled during installation and on OS X that requires Xcode Command Line Tools. Xcode can be installed from the terminal:
 
 ```bash
-xcode-select --install
+$ xcode-select --install
 ```
 
 Once you have Ruby and RubyGems up and running, execute the following from the command line:
