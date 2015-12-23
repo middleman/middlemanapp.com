@@ -23,6 +23,7 @@ jp:
     advanced:
       title: 高度な機能
       asset_pipeline: アセットパイプライン
+      external_pipeline: 外部パイプライン
       configuration: 設定
       custom_extensions: カスタム拡張
       custom_templates: カスタムテンプレート
