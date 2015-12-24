@@ -260,6 +260,8 @@ built:
     source: https://github.com/joshukraine/cmoproject.org
   - url: http://oleg.codes
     title: Oleg Mokhniuk
+  - url: https://dapulse.com
+    title: dapulse
 mobile:
   - url: http://pollev.com
 blogs:
