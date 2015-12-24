@@ -1,5 +1,7 @@
 language: ruby
 rvm:
 - 2.2.1
+before_install:
+- "npm install"
 script: bundle exec middleman build --verbose
 sudo: false
