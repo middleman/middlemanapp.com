@@ -1,4 +1,6 @@
 built:
+  - url: https://www.bodypil.de/
+    title: "Bodypil Zuckerpaste"
   - url: http://opensource.locaweb.com.br/locawebstyle/
     title: Documentation of Locaweb Style Framework
     source: https://github.com/locaweb/locawebstyle
