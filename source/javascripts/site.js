@@ -1,10 +1,10 @@
 import hljs from 'highlight.js';
 import anchors from 'exports?anchors!anchor-js/anchor';
 import setupDocsNavAnimation from './docs-nav-animation';
-import setupTOC from './toc';
+// import setupTOC from './toc';
 
 setupDocsNavAnimation();
-setupTOC();
+// setupTOC();
 
 hljs.initHighlighting();
 
