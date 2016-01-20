@@ -12,7 +12,7 @@ markup.
 
 ## How to run the site locally
 
-Make sure you have Ruby 1.9.3+ and Bundler installed, then clone this repo and run `bundle install`.
+Make sure you have Ruby 1.9.3+, Bundler and [npm](https://docs.npmjs.com) installed. Then clone this repo, run `npm install` and `bundle install`.
 Then run `bundle exec middleman server` to start the server at `http://localhost:4567`
 
 ## Mailing List
