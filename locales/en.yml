@@ -102,6 +102,10 @@ help you do that."
       description: Create a project with pre-made templates using your favorite code libraries.
       link_text: See project templates
 
+  donate:
+    title: Support Middleman Development
+    subtitle: If you'd like to show your support, you can make a donation or purchase stickers to show your love.
+
   # index
   index:
     sub_title: Hand-crafted frontend development
@@ -111,6 +115,8 @@ help you do that."
     getting_started: Getting started
     contribute: Contribute to the open-source community
     see_middleman_sites: See All Middleman Sites
+    stickers: Buy Middleman stickers
+    donate: Donate to Middleman
 
   # community/built-using-middleman
   built:

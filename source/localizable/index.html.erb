@@ -107,5 +107,21 @@ layout: layout
     <hr>
   </section>
 
+  <section class="donate-preview">
+    <h4 class="donate-title">
+      <%= t("donate.title") %>
+    </h4>
+    <h5 class="donate-subtitle">
+      <%= t("donate.subtitle") %>
+    </h5>
+    <article class="centered-content">
+      <%= link_to t("index.donate"),
+        "https://plasso.co/s/4dXbHBorC3", class: "donate-cta", target: "_blank" %>
+      <%= link_to t("index.stickers"),
+        "http://devswag.com/products/middleman-stickers-4-new", class: "stickers-cta", target: "_blank" %>
+    </article>
+    <hr>
+  </section>
+
   <%= partial "partials/logos" %>
 </div>

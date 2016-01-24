@@ -1,0 +1,32 @@
+.donate-preview {
+  text-align: center;
+}
+
+.donate-title {
+  color: $dark-gray;
+  padding-bottom: 0.5em;
+
+  @include media($medium-screen-up) {
+    padding-bottom: 1em;
+  }
+}
+
+.donate-subtitle {
+  font-size: $base-font-size * 1.2;
+  line-height: 1.9em;
+  margin: 0 auto 1.5em;
+
+  @include media($medium-screen-up) {
+    margin-bottom: 3em;
+    width: em(550);
+  }
+}
+
+.donate-cta {
+  @include button-filled($secondary-accent-color);
+}
+
+.stickers-cta {
+  @include button-filled($secondary-accent-color);
+}
+
