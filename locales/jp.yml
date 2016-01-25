@@ -89,7 +89,8 @@ jp:
     title: Middleman ユーザによる貢献
     deployment:
       header: デプロイ方法
-      description: "デプロイ先に Heroku やその他のサービスを使う場合, 私たちはそのデプロイを助けます。"
+      description: "デプロイ先に Heroku やその他のサービスを使う場合,
+私たちはそのデプロイを助けます。"
       link_text: デプロイ方法を参照する
     extensions:
       header: 拡張機能
@@ -101,6 +102,10 @@ jp:
       description: あなたの好きなライブラリを採用しているテンプレートでプロジェクトを作成できます。
       link_text: プロジェクトテンプレートを参照する
 
+  donate:
+    title: Middleman の開発をサポートしてください
+    subtitle: 寄付または Middleman ステッカーを購入することで, 開発をサポートすることができます。
+
   # index
   index:
     sub_title: 作業を効率化するフロントエンド開発ツール
@@ -110,6 +115,8 @@ jp:
     getting_started: はじめに
     contribute: オープンソースコミュニティに貢献する
     see_middleman_sites: Middleman 採用サイトを見る
+    stickers: Middleman ステッカーを購入
+    donate: Middleman に寄付
 
   # community/built-using-middleman
   built:
