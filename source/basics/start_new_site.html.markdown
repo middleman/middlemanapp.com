@@ -38,7 +38,7 @@ compression and "blog mode".
 Middleman will respect a Bundler `Gemfile` for specifying and controlling your
 gem dependencies. When creating a new project, Middleman will generate a
 `Gemfile` for you which specifies the same version of Middleman you are using.
-This will lock Middleman to this specific release series (the 3.0.x series, for
+This will lock Middleman to this specific release series (the 4.0.x series, for
 example). You can also use your `Gemfile` to use cutting-edge versions of
 Middleman from GitHub using the `:git` option. All plugins and extra libraries
 you use in your project should be listed in your Gemfile, and Middleman will
