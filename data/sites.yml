@@ -52,6 +52,8 @@ built:
     title: "Delicious fire broiled fish speciality"
   - url: http://filepicker.com
     title: "Filepicker - image infrastructure"
+  - url: http://volume7.io
+    title: "Volume7"
   - url: http://thisiscapra.com/
     title: "Capra Design"
     source: https://github.com/thisiscapra/thisiscapra.com
