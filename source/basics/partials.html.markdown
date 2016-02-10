@@ -72,6 +72,6 @@ Then, within the partial, you can set the text appropriately as follows:
 </form>
 ```
 
-Read the [Padrino partial helper] documentation for more information.
+Read the [Padrino Render Helpers] documentation for more information (located towards the bottom of the Application Helpers guide).
 
-[Padrino partial helper]: http://www.padrinorb.com/api/classes/Padrino/Helpers/RenderHelpers.html
+[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/
