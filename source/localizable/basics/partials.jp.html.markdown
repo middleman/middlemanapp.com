@@ -72,6 +72,6 @@ admin レイアウトでは次のように:
 </form>
 ```
 
-詳細については [Padrino partial helper] のドキュメントを読んでください。
+詳細については [Padrino Render Helpers] のドキュメントを参照してください。(リンク先ページの下の方にあります)
 
-[Padrino partial helper]: http://www.padrinorb.com/api/classes/Padrino/Helpers/RenderHelpers.html
+[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/
