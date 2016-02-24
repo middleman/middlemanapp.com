@@ -390,7 +390,7 @@ them after their module (i.e., `CustomHelpers` lives in
 `helpers/custom_helpers.rb`). Then, Middleman will automatically load them and
 register them as helpers. 
 
-[view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
+[view the full documentation here]: http://padrinorb.com/guides/application-helpers/overview/
 [Frank project]: https://github.com/blahed/frank
 [`url` method]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#url-instance_method
 [`path` attribute]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#path-instance_method
