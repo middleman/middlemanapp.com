@@ -427,4 +427,7 @@ blogs:
   - url: http://otequip.info
     title: OT Equipment Info
     source: https://github.com/AmyHilaire/otequip-info
+  - url: http://manageiq.org/
+    title: ManageIQ
+    source: https://github.com/ManageIQ/manageiq.org
   
