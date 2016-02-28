@@ -4,13 +4,15 @@ ol {
   margin: 0;
   padding: 0;
 
-  &%default-ul {
+  &%default-ul,
+  &.default-ul {
     list-style-type: disc;
     margin-bottom: $small-spacing;
     padding-left: $base-spacing;
   }
 
-  &%default-ol {
+  &%default-ol,
+  &.default-ol {
     list-style-type: decimal;
     margin-bottom: $small-spacing;
     padding-left: $base-spacing;

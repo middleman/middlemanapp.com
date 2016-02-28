@@ -37,8 +37,6 @@
 }
 
 .contributions-feature-item {
-  @include span-columns(3 of 4);
-  @include shift(1.5);
   margin-bottom: 2em;
   padding: 1em 0;
   text-align: center;

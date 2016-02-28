@@ -1,6 +1,7 @@
 ---
 en:
   navigation:
+    support: Support
     contribute: Contribute
     docs: Docs
     logo: Middleman
@@ -84,6 +85,16 @@ en:
       header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
       link_text: Visit forum
+
+  support:
+    title: "Paid Consultation & Development"
+    main_text: "Help support open source development by <a href=\"mailto:me@tdreyno.com\">contracting the developer</a> to improve your project."
+    services: "Services offered:"
+    service_code_review: "Code Reviews and Team Education"
+    service_extension_development: "Custom extension development"
+    service_architecture_planning: "Large project architecure planning"
+    service_else: "...and anything else that helps. <a href=\"mailto:me@tdreyno.com\">Just reach out</a>."
+    service_cta: "<a href=\"mailto:me@tdreyno.com\">Email me. Let's talk.</a>"
 
   contributions:
     title: Contributions from Middleman Users
