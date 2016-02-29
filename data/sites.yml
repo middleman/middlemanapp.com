@@ -273,6 +273,8 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: http://code.hireart.com
+    title: Code at HireArt
   - url: https://viljamis.com
     title: "Viljami Salminen"
   - url: http://www.downrightlies.net
