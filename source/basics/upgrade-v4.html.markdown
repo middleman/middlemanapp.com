@@ -8,6 +8,7 @@ With version 4, we've removed a lot of lesser used features in the core and repl
 
 Here's the list of API changes:
 
+* Removed `partials_dir` config option. Please reference all partials from the `source/` directory. `partial 'partials/my-partial'` would map to `source/partials/_my-partial.erb`.
 * Removed the `proxy` and `ignore` options for the `page` command in `config.rb`. Use the `proxy` and `ignore` commands instead of passing these options to `page`.
 * Removed `with_layout` in config. Use loops of `page` instead.
 * Removed Queryable Sitemap API
