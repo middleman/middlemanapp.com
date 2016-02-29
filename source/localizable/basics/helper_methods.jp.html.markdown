@@ -390,7 +390,7 @@ helpers CustomHelpers
 `helpers/custom_helpers.rb` として配置)。 Middleman は自動的にファイルを読込み,
 ヘルパーとして受け取ります。
 
-[view the full documentation here]: http://www.padrinorb.com/guides/application-helpers
+[view the full documentation here]: http://padrinorb.com/guides/application-helpers/overview/
 [Frank project]: https://github.com/blahed/frank
 [`url` method]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#url-instance_method
 [`path` attribute]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#path-instance_method
