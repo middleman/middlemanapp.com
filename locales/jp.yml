@@ -1,6 +1,7 @@
 ---
 jp:
   navigation:
+    support: サポート
     contribute: Contribute
     docs: Docs
     logo: Middleman
@@ -84,6 +85,16 @@ jp:
       header: コミュニティフォーラム
       description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
       link_text: フォーラムに移動する
+
+  support:
+    title: "有料相談 & 開発"
+    main_text: "あなたのプロジェクトを改善するために, <a href=\"mailto:me@tdreyno.com\">開発者と契約して</a>オープンソースの開発を支援しましょう。"
+    services: "提供されるサービス:"
+    service_code_review: "コードレビューおよびチーム教育"
+    service_extension_development: "カスタム拡張の開発"
+    service_architecture_planning: "大規模プロジェクトのアーキテクチャの設計"
+    service_else: "...この他お役に立てること。 <a href=\"mailto:me@tdreyno.com\">お手伝いできます</a>。"
+    service_cta: "<a href=\"mailto:me@tdreyno.com\">メールしてください。話をしましょう。</a>"
 
   contributions:
     title: Middleman ユーザによる貢献
