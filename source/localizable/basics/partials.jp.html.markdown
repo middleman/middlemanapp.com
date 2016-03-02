@@ -74,4 +74,4 @@ admin レイアウトでは次のように:
 
 詳細については [Padrino Render Helpers] のドキュメントを参照してください。(リンク先ページの下の方にあります)
 
-[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/
+[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/
