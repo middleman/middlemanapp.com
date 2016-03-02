@@ -74,4 +74,4 @@ Then, within the partial, you can set the text appropriately as follows:
 
 Read the [Padrino Render Helpers] documentation for more information (located towards the bottom of the Application Helpers guide).
 
-[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/
+[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/
