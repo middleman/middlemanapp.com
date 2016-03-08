@@ -8,6 +8,7 @@ v4 では, コアのあまり使われない機能を削除し, より良いア�
 
 API の変更リストです:
 
+* `partials_dir` 設定オプションが削除されました。 `source/` ディレクトリからすべてのパーシャルを参照するようにしてください。`partial 'partials/my-partial'` の場合 `source/partials/_my-partial.erb` を参照します。
 * `config.rb` で使用する `page` コマンドの `proxy` と `ignore` オプションは削除されました。`page` のオプションに代わりに `proxy` または `ignore` コマンドを使用してください。
 * 設定の `with_layout` が削除されました。代わりに `page` のループを使ってください。
 * Queryable Sitemap API は削除されました。
