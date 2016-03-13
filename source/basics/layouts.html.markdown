@@ -164,13 +164,19 @@ tell all the blog articles to use a `article_layout` layout instead of the
 default `layout`. In `config.rb`:
 
 ``` ruby
+activate :blog do |blog|
+  blog.layout = "article_layout"
+end
+
+# Or:
+
 page "blog/*", :layout => :article_layout
 ```
 
 That `layouts/article_layout.erb` layout would look like this
 
 ``` html
-<% wrap_layout :layout do %>
+<%= wrap_layout :layout do %>
   <article>
     <%= yield %>
   </article>
