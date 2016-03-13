@@ -164,6 +164,12 @@ blog 記事が blog/my-article.html.markdown に置かれているとします�
 指定します。 config.rb を編集:
 
 ``` ruby
+activate :blog do |blog|
+  blog.layout = "article_layout"
+end
+
+# または:
+
 page "blog/*", :layout => :article_layout
 ```
 

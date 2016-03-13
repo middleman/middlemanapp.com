@@ -164,6 +164,12 @@ tell all the blog articles to use a `article_layout` layout instead of the
 default `layout`. In `config.rb`:
 
 ``` ruby
+activate :blog do |blog|
+  blog.layout = "article_layout"
+end
+
+# Or:
+
 page "blog/*", :layout => :article_layout
 ```
 
