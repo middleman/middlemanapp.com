@@ -169,6 +169,7 @@ built:
     source: https://github.com/ruby-conferences/ruby-conferences-site
   - url: http://theartificial.nl/
     title: "The Artificial"
+    source: https://github.com/TheArtificial/theartificial.nlsha
   - url: http://www.vpsland.com
   - url: http://docs.fraudrankr.com/
   - url: http://waterforpeople.org
@@ -346,6 +347,7 @@ blogs:
   - url: http://emaxime.com
   - url: http://www.shannonethomas.com/
     title: "Shannon E Thomas"
+    source: https://github.com/shannonethomas/shannonethomas.com
   - url: http://hans.gerwitz.com/
     title: "Hans Gerwitz"
     source: https://github.com/gerwitz/hans.gerwitz.com
