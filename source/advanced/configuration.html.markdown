@@ -62,3 +62,37 @@ configure :build do
   activate :minify_css
 end
 ```
+
+## Access Configuration from Templates and Helpers
+
+Configuration is exposed in the context of templates and helpers.
+
+First, make a configuration setting.
+
+```ruby
+# config.rb
+
+configure :build do
+  config[:host] = "http://www.example.com"
+end
+```
+
+Then, access it by invoking `config`.
+
+```erb
+<!-- layouts/application.erb -->
+
+<h1>
+  Thanks for visiting <%= config[:host] %>!
+</h1>
+```
+
+```ruby
+# helpers/custom_helpers.rb
+
+module CustomHelpers
+  def home_link
+    link_to "Home", config[:host]
+  end
+end
+```
