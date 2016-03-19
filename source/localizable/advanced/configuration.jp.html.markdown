@@ -62,3 +62,37 @@ configure :build do
   activate :minify_css
 end
 ```
+
+## テンプレートやヘルパーから設定にアクセスする
+
+Configuration オブジェクトはテンプレートやヘルパーのコンテキストにおいてもアクセスできます。
+
+まず, 設定を追加します。
+
+```ruby
+# config.rb
+
+configure :build do
+  config[:host] = "http://www.example.com"
+end
+```
+
+そして, `config` を呼び出すことでアクセスします。
+
+```erb
+<!-- layouts/application.erb -->
+
+<h1>
+  <%= config[:host] %> に来てくれてありがとう!
+</h1>
+```
+
+```ruby
+# helpers/custom_helpers.rb
+
+module CustomHelpers
+  def home_link
+    link_to "Home", config[:host]
+  end
+end
+```
