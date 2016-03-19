@@ -53,9 +53,6 @@ configure :build do
   # アセットファイルの URL にハッシュを追加 (URL ヘルパの使用が必要)
   activate :asset_hash
 
-  activate :asset_host
-  set :asset_host do
-    '//YOURDOMAIN.cloudfront.net'
-  end
+  activate :asset_host, :host => '//YOURDOMAIN.cloudfront.net'
 end
 ```
