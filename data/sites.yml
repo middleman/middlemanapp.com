@@ -29,8 +29,6 @@ built:
     title: "Startaê - We’re your UX Design Team on demand"
   - url: http://www.nickholden.io
     source: https://github.com/nholden/nickholdenio
-  - url: https://smartcoin.com.br/
-    title: "Smartcoin - Web Payments"
   - url: http://bakecalc.com/
     title: "BakeCalc"
   - url: http://polytronixglass.com/
@@ -83,7 +81,6 @@ built:
   - url: http://frontcube.com
   - url: http://ravisuhag.com/
   - url: http://www.theverge.com/a/the-verge-50/intro
-  - url: http://dahal.github.io
   - url: http://noconformity.com/
     source: https://github.com/chrishough/myblog
   - url: https://saltstack.cz
@@ -92,17 +89,13 @@ built:
   - url: http://sass-lang.com
     title: "Sass"
     source: https://github.com/sass/sass-site
-  - url: http://startexploding.com
   - url: http://sassandcompass.com
   - url: http://craftyblues.com
   - url: http://www.mandadream.com
-  - url: http://sidewalkland.com
   - url: http://aktagon.com
-  - url: http://hyperipsum.se
   - url: http://pixelunion.net
   - url: http://syrinxoon.net
   - url: http://nathanleray.me
-  - url: http://dbooom.com/themes/html/stronghold/
   - url: http://www.inkwellian.com
   - url: https://plan.io
   - url: http://tactless.inkwellian.com
@@ -130,12 +123,10 @@ built:
   - url: http://jrubyconf.eu
   - url: http://voormedia.com
   - url: http://hotelpostalongarone.it
-  - url: http://happybeelab.com
   - url: http://massgardinen.de
   - url: http://v25media.com
   - url: http://thirteen23.com
   - url: http://hypervers.es
-  - url: http://matthieu-keller.info
   - url: http://davesdings.co.uk
   - url: http://hyfn.com
   - url: http://www.heitzke.com
@@ -149,7 +140,6 @@ built:
   - url: http://converser.io
   - url: http://davidanguita.name
     source: https://github.com/danguita/davidanguita.name
-  - url: http://www.nyanstagram.com
   - url: http://tarebyte.github.io
   - url: http://gilesthompson.co.nz
   - url: http://archiverapp.com
@@ -162,7 +152,6 @@ built:
     title: "MailChimp"
   - url: http://mandrill.com
   - url: http://www.librario.de
-  - url: http://www.madebytally.com
   - url: http://www.alpine-lab.com
   - url: http://omegaverse.info
     source: http://github.com/movitto/omega
@@ -214,8 +203,6 @@ built:
     title: "Cantiere Creativo Ruby on Rails Web Agency"
   - url: http://www.leanpanda.com
     title: "Lean Panda Ruby on Rails Web Agency"
-  - url: http://2015.bettersoftware.it
-    title: "Better Software Management Conference in Italy"
   - url: http://vaporwa.re/
     title: "Vaporware Inc."
   - url: http://www.tootdeck.com/
@@ -370,12 +357,7 @@ blogs:
     title: Benjamin Tan – Learnings and Writings
   - url: https://sitevalidator.com
     title: Site Validator
-  - url: https://cheersapp.io
-    title: Cheers app
     source: https://github.com/angelbotto/cheersapp-web
-  - url: http://nhutdm.com
-    title: "Nhut Duong"
-    source: https://github.com/nhutdm/nhutdm.com
   - url: http://davidl.fr
     title: "davidl.fr - Front-end advices and best practices (in french)"
     source: https://github.com/flexbox/davidl
