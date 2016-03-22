@@ -28,7 +28,7 @@ filename, Middleman won't touch it. This can be good for libraries like jQuery
 which are carefully compressed by their authors ahead of time.
 
 You can customize how the JavaScript compressor works by setting the
-`:js_compressor` option after activating the `:minify_javascript` extension in
+`:compressor` option for the `:minify_javascript` extension in
 `config.rb` to a custom instance of Uglifier. See [Uglifier's
 docs](https://github.com/lautis/uglifier) for details. 
 
@@ -36,8 +36,11 @@ For example, you could
 enable unsafe optimizations and mangle top-level variable names like this:
 
 ``` ruby
-activate :minify_javascript
-set :js_compressor, ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+require "uglifier"
+activate :minify_javascript,
+  compressor: proc {
+    ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+  }
 ```
 
 If you have `asset_hash` activated, are building your site on multiple servers
@@ -48,7 +51,8 @@ leading to different hashes in the filename and different references in each
 version of the HTML. For example:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:mangle => false)
+require "uglifier"
+activate :minify_javascript, compressor: -> { Uglifier.new(:mangle => false) }
 ```
 
 If you want to exclude any files from being minified, pass the `:ignore` option
