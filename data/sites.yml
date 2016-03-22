@@ -440,4 +440,7 @@ blogs:
   - url: http://manageiq.org/
     title: ManageIQ
     source: https://github.com/ManageIQ/manageiq.org
-  
+  - url: https://isfeargoidte.me.uk
+    title: Fear Goidte
+    source: https://github.com/FearGoidte/feargoidte.github.io
+
