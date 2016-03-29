@@ -27,8 +27,8 @@ end
 Middleman はそのファイルを最適化しません。作者によって事前に配慮された
 圧縮をおこなう jQuery のようなライブラリにはとても良い方法です。
 
-`config.rb` で `:minify_javascript` 拡張を有効化した後に,
-`:js_compressor` オプションに Uglifier のカスタムインスタンスを設定することで
+`config.rb` で `:minify_javascript` の
+`:compressor` オプションに Uglifier のカスタムインスタンスを設定することで
 JavaScript の圧縮方法をカスタマイズできます。詳細は [Uglifier's
 docs](https://github.com/lautis/uglifier) を参照してください。
 
@@ -36,8 +36,11 @@ docs](https://github.com/lautis/uglifier) を参照してください。
 次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:
 
 ``` ruby
-activate :minify_javascript
-set :js_compressor, ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+require "uglifier"
+activate :minify_javascript,
+  compressor: proc {
+    ::Uglifier.new(:mangle => {:toplevel => true}, :compress => {:unsafe => true})
+  }
 ```
 
 `asset_hash` を有効にし, ロードバランサを使って複数サーバにサイトを構築,
@@ -48,7 +51,8 @@ JavaScript の圧縮を行う場合には, mangle オプションが無効に指
 バージョン毎に異なります。次のように設定します:
 
 ``` ruby
-set :js_compressor, Uglifier.new(:mangle => false)
+require "uglifier"
+activate :minify_javascript, compressor: -> { Uglifier.new(:mangle => false) }
 ```
 
 特定のファイルをミニファイ処理から除外したい場合, これらの拡張を有効化する際に
