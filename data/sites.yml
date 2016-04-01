@@ -1,4 +1,7 @@
-built:
+built :
+  - url    : http://codeblender.net
+    title  : "CodeBlender - atomic Middleman bootstrap partials"
+    source : https://github.com/iwarner/CodeBlender-Middleman
   - url: https://www.PromptWorks.com/
     title: PromptWorks - Test-driven, agile software developers specializing in Ruby, Python, and JavaScript.
   - url: http://www.liveslides.com/
