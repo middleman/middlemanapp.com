@@ -176,7 +176,7 @@ page "blog/*", :layout => :article_layout
 `layouts/article_layout.erb` は次のようになります:
 
 ``` html
-<%= wrap_layout :layout do %>
+<% wrap_layout :layout do %>
   <article>
     <%= yield %>
   </article>
