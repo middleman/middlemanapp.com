@@ -427,4 +427,6 @@ blogs:
   - url: https://isfeargoidte.me.uk
     title: Fear Goidte
     source: https://github.com/FearGoidte/feargoidte.github.io
-
+  - url: http://ngs.io
+    title: Atsushi Nagase
+    source: https://github.com/ngs/sources.ngs.io
