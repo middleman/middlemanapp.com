@@ -156,7 +156,7 @@ Again, Collections are very new and experimental. You can help influence the dir
 
 ### Context Methods
 
-In v4, the Application, Template Context and Config Context are all separated to avoid poluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.
+In v4, the Application, Template Context and Config Context are all separated to avoid polluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.
 
 Now, each context has it's own sandbox. Extensions may want to add methods to these scopes:
 

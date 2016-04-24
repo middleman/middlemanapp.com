@@ -8,7 +8,7 @@ We are in the middle of an explosion of front-end languages and tooling. Since t
 
 In the past few years, the community has moved away from Rails and is now focused on task runners (Gulp, Grunt), dependency management (Browserify, Webpack) via NPM, official tooling (ember-cli, react-native) and transpilers (ClojureScript, Elm).
 
-Middleman cannot accomodate all these different solutions and languages, so we've decided to allow all of them to live inside Middleman. This feature is called `external_pipeline` and it allows Middleman to run multiple subprocesses which output content to temporary folders which are then merged into the Middleman sitemap.
+Middleman cannot accommodate all these different solutions and languages, so we've decided to allow all of them to live inside Middleman. This feature is called `external_pipeline` and it allows Middleman to run multiple subprocesses which output content to temporary folders which are then merged into the Middleman sitemap.
 
 # Ember Example
 
