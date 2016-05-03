@@ -266,6 +266,9 @@ built:
     title: Tofugu
   - url: https://pubacademy.com/
     title: Pub Academy
+  - url: http://getbiblefirst.com/
+    title: "Bible First"
+    source: https://github.com/joshukraine/getbiblefirst.com
 mobile:
   - url: http://pollev.com
 blogs:
