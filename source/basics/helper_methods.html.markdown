@@ -191,7 +191,7 @@ The input_tag is used to build tags that are related to accepting input from
 the user:
 
 ``` ruby
-input_tag :text, :class => "demo" 
+input_tag :text, :class => "demo"
   # => <input type='text' class='demo'>
 input_tag :password, :value => "secret", :class => "demo"
   # => <input type='password' value='secret' class='demo'>
@@ -276,17 +276,17 @@ Format helpers also includes a number of useful text manipulation functions
 such as `simple_format`, `pluralize`, `word_wrap`, and `truncate`.
 
 ``` ruby
-simple_format("hello\nworld") 
+simple_format("hello\nworld")
   # => "<p>hello<br/>world</p>"
-pluralize(2, 'person') 
+pluralize(2, 'person')
   # => '2 people'
-word_wrap('Once upon a time', :line_width => 8) 
+word_wrap('Once upon a time', :line_width => 8)
   # => "Once upon\na time"
-truncate("Once upon a time in a world far far away", :length => 8) 
+truncate("Once upon a time in a world far far away", :length => 8)
   # => "Once upon..."
 truncate_words("Once upon a time in a world far far away", :length => 4)
   # => "Once upon a time..."
-highlight('Lorem dolor sit', 'dolor') 
+highlight('Lorem dolor sit', 'dolor')
   # => "Lorem <strong class="highlight">dolor</strong> sit"
 ```
 
@@ -308,7 +308,7 @@ Other methods available to be used for text:
 lorem.sentence      # returns a single sentence
 lorem.words 5       # returns 5 individual words
 lorem.word
-lorem.paragraphs 10 # returns 10 paragraphs 
+lorem.paragraphs 10 # returns 10 paragraphs
 lorem.paragraph
 lorem.date          # accepts a strftime format argument
 lorem.name
@@ -349,6 +349,19 @@ You'll get:
 This makes it easy to apply project-specific, or rocket-specific styles to the
 page.
 
+## Environment Helpers
+
+Middleman comes with two environment helpers `build?` and `development?`. These
+helpers can be used to only include code for certain environments. One common
+example is Google Analytics tracking code. If you want to avoid sending events
+when trying out your website on localhost, only include it in your production build.
+
+```html
+<% if build? %>
+  <% partial "tracking_snippet" %>
+<% end %>
+```
+
 ## Custom Defined Helpers
 
 In addition to the helpers provided by Middleman out of the box, you can also
@@ -388,7 +401,7 @@ helpers CustomHelpers
 An even easier way is to put your helpers in the `helpers` directory and name
 them after their module (i.e., `CustomHelpers` lives in
 `helpers/custom_helpers.rb`). Then, Middleman will automatically load them and
-register them as helpers. 
+register them as helpers.
 
 [view the full documentation here]: http://padrinorb.com/guides/application-helpers/overview/
 [Frank project]: https://github.com/blahed/frank
