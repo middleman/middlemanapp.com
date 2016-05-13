@@ -349,6 +349,19 @@ lorem.image('300x400', :text => 'blah')
 これにより簡単にページに project-specific や rocket-specific のスタイルを
 適用できます。
 
+## 環境モードヘルパ
+
+Middleman は `build?` と `development?` の 2 つのヘルパを用意しています。これらの
+ヘルパは特定の環境モードで動作させるコードのために使われます。例の 1 つとして
+Google Analytics のトラッキングコードが挙げられます。イベントを
+ローカルホストの Web サイトからは送信せず, プロダクションビルドでのみ送信したい場合です。
+
+```html
+<% if build? %>
+  <% partial "tracking_snippet" %>
+<% end %>
+```
+
 ## カスタム定義ヘルパ
 
 Middleman によって提供されるヘルパに加え,
