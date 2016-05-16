@@ -435,3 +435,6 @@ blogs:
   - url: http://ngs.io
     title: Atsushi Nagase
     source: https://github.com/ngs/sources.ngs.io
+  - url: https://dtcristo.com/
+    title: David Cristofaro
+    source: https://github.com/dtcristo/dtcristo.com
