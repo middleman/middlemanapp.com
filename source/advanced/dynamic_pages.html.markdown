@@ -49,3 +49,20 @@ ignore "/ignore-this-template.html"
 ```
 
 You can give ignore exact source paths, filename globs, or regexes.
+
+## Pretty URLs (Directory Indexes)
+
+To use Dynamic Pages with [Directory Indexes](/advanced/pretty_urls) specify the proxy path followed by ```/index.html```
+
+Following the example above, the proxy path would become ```/about/#{name}/index.html```:
+``` ruby
+["tom", "dick", "harry"].each do |name|
+  proxy "/about/#{name}/index.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
+end
+```
+
+When this project is built, three files will be output:
+
+* `/about/tom/index.html` (with `person_name` equalling "tom" in the template)
+* `/about/dick/index.html` (with `person_name` equalling "dick" in the template)
+* `/about/harry/index.html` (with `person_name` equalling "harry" in the template)
