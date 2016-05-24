@@ -55,6 +55,7 @@ You can give ignore exact source paths, filename globs, or regexes.
 To use Dynamic Pages with [Directory Indexes](/advanced/pretty_urls) specify the proxy path followed by ```/index.html```
 
 Following the example above, the proxy path would become ```/about/#{name}/index.html```:
+
 ``` ruby
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}/index.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
