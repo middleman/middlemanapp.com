@@ -271,6 +271,9 @@ built:
   - url: http://getbiblefirst.com/
     title: "Bible First"
     source: https://github.com/joshukraine/getbiblefirst.com
+  - url: http://euroteamoutreach.org/
+    title: "Euro Team Outreach"
+    source: https://github.com/joshukraine/euroteamoutreach.org
 mobile:
   - url: http://pollev.com
 blogs:
