@@ -105,7 +105,7 @@ end
 
 ## Adding Helpers
 
-Another way to add methods to templates are as helpers. Unlike "exposed methods" above, helpers do not have access to the rest of your extension. These are good for large packages of "pure" methods grouped into a module. In most cases, the above "exposed methods" are prefered.
+Another way to add methods to templates are as helpers. Unlike "exposed methods" above, helpers do not have access to the rest of your extension. These are good for large packages of "pure" methods grouped into a module. In most cases, the above "exposed methods" are preferred.
 
 ``` ruby
 class MyFeature < Middleman::Extension

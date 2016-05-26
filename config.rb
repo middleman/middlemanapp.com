@@ -17,6 +17,7 @@ set :markdown_engine, :redcarpet
   "basics/helpers.html"                  => "basics/helper_methods.html",
   "basics/getting-started.html"          => "basics/install.html",
   "basics/asset-pipeline.html"           => "advanced/asset_pipeline.html",
+  "advanced/custom-templates/index.html" => "advanced/project_templates.html",
   "advanced/improving-cacheability.html" => "advanced/improving_cacheability.html",
   "advanced/local-data.html"             => "advanced/data_files.html",
   "advanced/rack-middleware.html"        => "advanced/rack_middleware.html",

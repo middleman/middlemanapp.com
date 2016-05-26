@@ -59,18 +59,22 @@ The `-e` environment flag is also used for custom environments. Say you want to 
 
 This refactor allows Middleman to run as a Rack server and still update on file changes normally. This makes mounting inside Rails or using the Pow server much nicer.
 
-## Installing Templates from Git
+## Installing Project Templates from Git
 
-We're removed the ability to create custom reusable templates from either `~/.middleman` or gems. Instead, `middleman init` now takes the `-T` flag which points to any Git repository. If the path does not contain a protocol `://`, then we will assume it is hosted on Github.
+[Documentation](https://middlemanapp.com/advanced/project_templates/)
 
+During `middleman init`, custom project templates from `~/.middleman` or gems are no longer supported. Project templates must be git repositories.
+
+Project template repository on GitHub:
+
+```bash
+middleman init MY_PROJECT_FOLDER -T username/repo-name
 ```
-middleman init -T tdreyno/my-middleman-starter ~/Sites/new-site
-```
 
-This should make sharing templates much easier. We also allow the mapping of custom names to Git repositors for all projects submitted to our Directory site. For example:
+Local project template repository:
 
-```
-middleman init -T amicus ~/Sites/new-site
+```bash
+middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 ```
 
 ## External Tools
@@ -152,7 +156,7 @@ Again, Collections are very new and experimental. You can help influence the dir
 
 ### Context Methods
 
-In v4, the Application, Template Context and Config Context are all separated to avoid poluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.
+In v4, the Application, Template Context and Config Context are all separated to avoid polluting a single shared instance with different concerns. In the past, it was possible for templates to add instance variables to the App, which resulted in some nasty naming collisions.
 
 Now, each context has it's own sandbox. Extensions may want to add methods to these scopes:
 
