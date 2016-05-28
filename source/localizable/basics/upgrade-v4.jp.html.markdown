@@ -59,18 +59,22 @@ Rails のように, あらかじめ決められているパスから環境固有
 
 リファクタリングによって, Middleman は Rack サーバとして動作し, 通常通りファイルの変更に対応することができます。この変更によって Rails 内へのマウントや Pow の使い勝手が良くなります。
 
-## Git によるテンプレートのインストール
+## Git によるプロジェクトテンプレートのインストール
 
-`~/.middleman` や gem から再利用可能なテンプレートを作成する機能を削除しました。代わりに, `middleman init` は Git リポジトリを指し示す `-T` フラグを利用できるようになります。与えられたパスに `://` のようなプロトコルが含まれない場合, Github にホストされているものだと仮定し処理します。
+[プロジェクトテンプレート](https://middlemanapp.com/jp/advanced/project_templates/)
 
+`middleman init` 実行時の `~/.middleman` や gem からのカスタムテンプレートの取得はサポートされなくなりました。プロジェクトテンプレートは git リポジトリに用意する必要があります。
+
+Github のプロジェクトテンプレートの場合:
+
+```bash
+middleman init MY_PROJECT_FOLDER -T username/repo-name
 ```
-middleman init -T tdreyno/my-middleman-starter ~/Sites/new-site
-```
 
-この変更によりテンプレートの共有がより簡単になります。さらに Directory サイトに登録された Git リポジトリは登録された名称でアクセスできるようにマッピングされています。例えば:
+ローカルのプロジェクトテンプレートの場合:
 
-```
-middleman init -T amicus ~/Sites/new-site
+```bash
+middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 ```
 
 ## 外部ツール
