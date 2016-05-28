@@ -22,10 +22,10 @@ end
 
 プロジェクトがビルドされる際に, 4 つのファイルが出力されることになります:
 
-* '/about/tom.html' (テンプレートの中の `person_name` は "tom" として)
-* '/about/dick.html' (テンプレートの中の `person_name` は "dick" として)
-* '/about/harry.html' (テンプレートの中の `person_name` は "harry" として)
-* '/about/template.html' (テンプレートの中の `person_name` は nil になる)
+* '/about/tom.html' (テンプレート中の `person_name` は "tom")
+* '/about/dick.html' (テンプレート中の `person_name` は "dick")
+* '/about/harry.html' (テンプレート中の `person_name` は "harry")
+* '/about/template.html' (テンプレート中の `person_name` は nil)
 
 ほとんどの場合, `person_name` 変数なしにテンプレートを出力したくはないでしょう。
 Middleman に `person_name` 変数なしを無視するように指定できます::
@@ -49,3 +49,21 @@ ignore "/ignore-this-template.html"
 ```
 
 正確なファイルパス, ファイル名のパターンマッチや正規表現を ignore で指定することができます。
+
+## きれいな URL (ディレクトリインデックス)
+
+動的ページと [ディレクトリインデックス](/jp/advanced/pretty_urls/) を併用するには `/index.html` が続いたプロキシパスを指定します。
+
+次の例では, プロキシパスは `/about/#{name}/index.html` になります:
+
+``` ruby
+["tom", "dick", "harry"].each do |name|
+  proxy "/about/#{name}/index.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
+end
+```
+
+このプロジェクトがビルドされると, 動的ページによって 3 ファイルが生成されます:
+
+* `/about/tom/index.html` (テンプレート中の `person_name` は "tom")
+* `/about/dick/index.html` (テンプレート中の `person_name` は "dick")
+* `/about/harry/index.html` (テンプレート中の `person_name` は "harry")
