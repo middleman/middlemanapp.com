@@ -1,4 +1,7 @@
 built:
+  - url: http://evmorov.github.io/lang-compare/
+    title: "Side-by-side language comparison"
+    source: https://github.com/evmorov/lang-compare
   - url: https://www.fabricationgem.org
     title: Fabrication - simple and powerful object generation gem for Ruby
   - url: https://marsbased.com
