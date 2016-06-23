@@ -276,6 +276,12 @@ built:
   - url: http://euroteamoutreach.org/
     title: "Euro Team Outreach"
     source: https://github.com/joshukraine/euroteamoutreach.org
+  - url: http://www.defacto.nl
+    title: Defacto
+    source: https://github.com/DefactoSoftware/website
+  - url: http://www.learningspaces.io
+    title: LearningSpaces
+    source: https://github.com/DefactoSoftware/LearningSpaces-Landing
 mobile:
   - url: http://pollev.com
 blogs:
