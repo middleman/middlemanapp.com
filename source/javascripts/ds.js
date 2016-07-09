@@ -10,8 +10,7 @@ export default function () {
   var ds = docsearch({
     apiKey: 'a1e1ce4270154213659b1056053824cd',
     indexName: 'middleman',
-    inputSelector: '#search-input',
-    debug: true
+    inputSelector: '#search-input'
   });
 
   var $input = document.querySelector('.searchbox__input');
