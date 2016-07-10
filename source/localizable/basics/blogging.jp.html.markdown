@@ -161,7 +161,7 @@ Frontmatter で `category` を指定しなくても
 
 ## レイアウト
 
-`config.rb` ですべての記事に使われる [レイアウト](/jp/basics/templates/#レイアウト) を
+`config.rb` ですべての記事に使われる [レイアウト](/jp/basics/layouts/) を
 指定することができます。
 
 ``` ruby
@@ -172,7 +172,7 @@ end
 
 レイアウトに挿入する前に記事ごとにちょっとした構造で囲みたい場合,
 記事レイアウトを構成してからメインのレイアウトで囲むために,
-Middleman の [入れ子レイアウト](/jp/basics/templates/#入れ子レイアウト) 機能を
+Middleman の [入れ子レイアウト](/jp/basics/layouts/#nested-layouts) 機能を
 使うことができます。
 
 ## 記事一覧
