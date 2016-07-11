@@ -18,6 +18,7 @@ gem 'neat'
 gem 'wdm' if Gem.win_platform?
 
 # Debug
+# gem 'byebug'
 # gem 'pry'
 # gem 'pry-byebug'
 # gem 'pry-stack_explorer'

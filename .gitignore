@@ -12,3 +12,4 @@ Gemfile.lock
 source/mint/config/db.php
 /.tmp/
 /node_modules/
+.byebug_history
