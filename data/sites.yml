@@ -1,4 +1,6 @@
 built:
+  - url: https://getprintastic.com/
+    title: "Printastic - Print your memories"
   - url: http://evmorov.github.io/lang-compare/
     title: "Side-by-side language comparison"
     source: https://github.com/evmorov/lang-compare
