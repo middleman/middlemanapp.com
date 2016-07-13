@@ -285,6 +285,9 @@ built:
   - url: http://www.learningspaces.io
     title: LearningSpaces
     source: https://github.com/DefactoSoftware/LearningSpaces-Landing
+  - url: http://rubybelgium.be/
+    title: Ruby Belgium
+    source: https://github.com/brug-be/rubybelgium
 mobile:
   - url: http://pollev.com
 blogs:
