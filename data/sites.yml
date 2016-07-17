@@ -459,3 +459,6 @@ blogs:
   - url: https://dtcristo.com/
     title: David Cristofaro
     source: https://github.com/dtcristo/dtcristo.com
+  - url: http://aboutcoder.com/blog/
+    title: Jerome Chan
+    source: https://github.com/jeromechan/jeromechan.github.io
