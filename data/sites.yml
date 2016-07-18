@@ -292,6 +292,8 @@ built:
   - url: http://rubybelgium.be/
     title: Ruby Belgium
     source: https://github.com/brug-be/rubybelgium
+  - url: http://www.citusdata.com
+    title: "Citus Data"
 mobile:
   - url: http://pollev.com
 blogs:
