@@ -48,14 +48,6 @@ Each page can also find other pages related to it in the site hierarchy. The
 `parent`, `siblings`, and `children` methods are particularly useful in
 building navigation menus and breadcrumbs.
 
-The sitemap can also be queried via an ActiveRecord-like syntax:
-
-```ruby
-sitemap.where(:tags.include => "homepage").order_by(:priority).limit(10)
-```
-
-See [Middleman::Sitemap::Queryable](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Queryable) for more on the query interface.
-
 ## Using the Sitemap in config.rb
 
 You can use the sitemap information to create new [dynamic pages] from
