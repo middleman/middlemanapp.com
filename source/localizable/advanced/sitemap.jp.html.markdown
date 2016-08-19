@@ -48,14 +48,6 @@ Resource オブジェクトのプロパティは Middleman の内部レンダリ
 `parent`, `siblings` や `children` メソッドはナビゲーションメニューやパンくずリストを
 作る場合に特に便利です。
 
-サイトマップは ActiveRecord ライクな構文で照会できます:
-
-```ruby
-sitemap.where(:tags.include => "homepage").order_by(:priority).limit(10)
-```
-
-クエリのインターフェイスは [Middleman::Sitemap::Queryable](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Queryable) を確認してください。
-
 ## config.rb の中でサイトマップを使う
 
 サイトマップの情報を使って `config.rb` から新しい
