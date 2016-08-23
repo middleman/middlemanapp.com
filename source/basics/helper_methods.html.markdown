@@ -6,7 +6,7 @@ title: Helper Methods
 
 Template helpers are methods which can be used in your dynamic templates to
 simplify common HTML tasks. Most of the basic methods should be very familiar
-to anyone who has used rails view helpers. These helpers are all built on the
+to anyone who has used Rails view helpers. These helpers are all built on the
 Padrino Framework, [view the full documentation here].
 
 ## Link Helpers
