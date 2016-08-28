@@ -358,7 +358,7 @@ Google Analytics のトラッキングコードが挙げられます。イベン
 
 ```html
 <% if build? %>
-  <% partial "tracking_snippet" %>
+  <%= partial "tracking_snippet" %>
 <% end %>
 ```
 

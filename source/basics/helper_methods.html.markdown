@@ -358,7 +358,7 @@ when trying out your website on localhost, only include it in your production bu
 
 ```html
 <% if build? %>
-  <% partial "tracking_snippet" %>
+  <%= partial "tracking_snippet" %>
 <% end %>
 ```
 
