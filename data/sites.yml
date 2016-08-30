@@ -296,6 +296,8 @@ built:
     source: https://github.com/brug-be/rubybelgium
   - url: http://www.citusdata.com
     title: "Citus Data"
+  - url: https://www.trailpost.com/
+    title: "Trailpost Outdoors"
 mobile:
   - url: http://pollev.com
 blogs:
