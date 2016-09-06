@@ -298,6 +298,9 @@ built:
     title: "Citus Data"
   - url: https://www.trailpost.com/
     title: "Trailpost Outdoors"
+  - url: https://zadevchat.io
+    title: "The ZADevChat Podcast"
+    source: https://github.com/zadevchat/website
 mobile:
   - url: http://pollev.com
 blogs:
@@ -470,3 +473,6 @@ blogs:
   - url: http://aboutcoder.com/blog/
     title: Jerome Chan
     source: https://github.com/jeromechan/jeromechan.github.io
+  - url: https://www.opensourcery.co.za
+    title: Open Sourcery by Kenneth Kalmer
+    source: https://github.com/kennethkalmer/opensourcery.co.za
