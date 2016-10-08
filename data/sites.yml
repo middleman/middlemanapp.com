@@ -301,6 +301,9 @@ built:
   - url: https://zadevchat.io
     title: "The ZADevChat Podcast"
     source: https://github.com/zadevchat/website
+  - url: http://www.cafescidurham.co.uk
+    title: "Cafe Sci Durham City"
+    source: https://github.com/JBorrow/Cafe-Sci-2016
 mobile:
   - url: http://pollev.com
 blogs:
