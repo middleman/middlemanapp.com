@@ -9,7 +9,7 @@ Middleman has an official extension to support blogging, articles and tagging.
 specify the gem in your `Gemfile`:
 
 ``` ruby
-gem "middleman-blog"
+gem "middleman-blog", "~> 4.0"
 ```
 
 Then activate the extension in your `config.rb`:
@@ -29,13 +29,13 @@ middleman init MY_BLOG_PROJECT --template=blog
 
 If you already have a Middleman project, you can re-run `middleman init` with
 the blog template option to generate the sample
-[`index.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/index.html.erb),
-[`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb),
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb),
+[`index.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/index.html.erb),
+[`tag.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/tag.html.erb),
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/calendar.html.erb),
 and
-[`feed.xml`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/feed.xml.builder),
+[`feed.xml`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/feed.xml.builder),
 or you can write those yourself. You can see [what gets
-generated](https://github.com/middleman/middleman-blog/tree/master/lib/middleman-blog/template/source)
+generated](https://github.com/middleman/middleman-templates-blog/tree/master/template/source)
 on GitHub.
 
 The blog extension has many configuration options - you can see what they all
