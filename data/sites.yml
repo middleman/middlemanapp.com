@@ -308,6 +308,9 @@ built:
   - url: http://www.cafescidurham.co.uk
     title: "Cafe Sci Durham City"
     source: https://github.com/JBorrow/Cafe-Sci-2016
+  - url: http://www.softwareniagara.com
+    title: "Software Niagara"
+    source: https://github.com/softwareniagara/softwareniagara.com
 mobile:
   - url: http://pollev.com
 blogs:
