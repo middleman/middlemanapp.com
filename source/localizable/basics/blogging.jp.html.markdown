@@ -9,7 +9,7 @@ Middleman にはブログ, つまり記事投稿とタグ付けに対応した�
 単に `Gemfile` で gem を指定するだけです:
 
 ``` ruby
-gem "middleman-blog"
+gem "middleman-blog", "~> 4.0"
 ```
 
 そして `config.rb` で拡張機能を有効化します:
@@ -29,13 +29,13 @@ middleman init MY_BLOG_PROJECT --template=blog
 
 すでに Middleman のプロジェクトがある場合,
 サンプルの
-[`index.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/index.html.erb),
-[`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb),
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb)
+[`index.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/index.html.erb),
+[`tag.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/tag.html.erb),
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/calendar.html.erb)
 や
-[`feed.xml`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/feed.xml.builder)
+[`feed.xml`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/feed.xml.builder)
 を作る必要があるため, blog テンプレートオプションとともに `middleman init` を再実行するか,自分で作ってください。
-[何が作られるのか](https://github.com/middleman/middleman-blog/tree/master/lib/middleman-blog/template/source) は
+[何が作られるのか](https://github.com/middleman/middleman-templates-blog/tree/master/template/source) は
 GitHub で確認できます。
 
 ブログ拡張にはたくさんの設定オプションがあります。プレビューサーバを起動し
