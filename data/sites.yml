@@ -317,6 +317,8 @@ built:
   - url: http://www.softwareniagara.com
     title: "Software Niagara"
     source: https://github.com/softwareniagara/softwareniagara.com
+  - url: https://eazybi.com/
+    title: "eazyBI"
 mobile:
   - url: http://pollev.com
 blogs:
