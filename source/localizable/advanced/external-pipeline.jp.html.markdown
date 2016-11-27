@@ -35,3 +35,132 @@ activate :external_pipeline,
   source: ".tmp/dist",
   latency: 1
 ```
+
+# Broccoli の例
+
+Broccoli は node エコシステムの強力なアセットパイプラインツールです。無数のプラグインを使うことで多くのプリプロセッサニーズに対応することができます: CSS (SCSS, compass), ミニファイ (uglifyJS 他), モジュールローダ, トランスパイル (babel 他) など用意されています。
+
+Broccoli についてはこちらを参照してください: https://github.com/broccolijs/broccoli
+
+*config.rb*
+
+```
+activate :external_pipeline,
+  :name => 'broccoli',
+  :command => (build? ? 'broccoli build pipeline-build' : 'broccoli-timepiece pipeline-build'),
+  :source => 'pipeline-build',
+  :latency => 2
+```
+
+
+*Brocfile.js*
+
+Brocfile 例です (babel, SCSS や同様のプラグインで拡張可能)。
+
+```
+/* globals module,require,process */
+
+var Funnel            = require('broccoli-funnel');
+var mergeTrees        = require('broccoli-merge-trees');
+var concatFiles       = require('broccoli-concat');
+var uglifyJavaScript  = require('broccoli-uglify-js');
+
+var env = process.env.BROCCOLI_ENV || 'production';
+
+var SOURCE_DIR = 'assets';
+var OUTPUT_DIR = 'res';
+
+var VENDOR_JS = [
+  'jquery-1.11.0.js',
+];
+
+var VENDOR_CSS = [
+  'normalize-2.1.2.css',
+];
+
+
+// javascript
+var jsVendorTree = concatFiles(SOURCE_DIR + '/vendor/js', {
+  outputFile: 'vendor.js',
+  headerFiles: VENDOR_JS,
+});
+
+var jsOurTree = new Funnel(SOURCE_DIR + '/js');
+
+// vendor merge vendor and our js
+var jsTree = mergeTrees([jsVendorTree, jsOurTree]);
+
+// concat vendor and our js
+jsTree = concatFiles(jsTree, {
+  outputFile: 'js/all.js',
+  headerFiles: ['vendor.js'], // headerFiles are ordered
+  inputFiles: ['**/*.js'], // inputFiles are un-ordered
+  sourceMapConfig: { enabled: (env === 'development') },
+});
+
+if (env !== 'development') {
+  jsTree = uglifyJavaScript(jsTree);
+}
+
+
+// CSS
+var cssVendorTree = concatFiles(SOURCE_DIR + '/vendor/css', {
+  outputFile: 'vendor.css',
+  headerFiles: VENDOR_CSS,
+});
+
+var cssOurTree = new Funnel(SOURCE_DIR + '/css');
+
+// merge vendor and our css
+var cssTree = mergeTrees([cssVendorTree, cssOurTree]);
+
+// concat vendor and our css
+cssTree = concatFiles(cssTree, {
+  outputFile: 'css/all.css',
+  headerFiles: ['vendor.css'], // headerFiles are ordered
+  inputFiles: ['**/*.css'], // inputFiles are un-ordered
+  sourceMapConfig: { enabled: (env === 'development') },
+});
+
+
+// images
+var imagesTree = new Funnel(SOURCE_DIR + '/images', {
+  destDir: 'images',
+});
+
+
+// merge everything
+var everythingTree = mergeTrees([jsTree, cssTree, imagesTree]);
+
+var finalTree = new Funnel(everythingTree, {
+  destDir: OUTPUT_DIR,
+});
+
+module.exports = finalTree;
+```
+
+
+*package.json*
+
+```
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "Website assets",
+  "private": true,
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Middleman Team",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "broccoli": "0.16.9",
+    "broccoli-babel-transpiler": "5.5.0",
+    "broccoli-concat": "^3.0.1",
+    "broccoli-funnel": "1.0.3",
+    "broccoli-merge-trees": "1.1.2",
+    "broccoli-timepiece": "rwjblue/broccoli-timepiece",
+    "broccoli-uglify-js": "0.2.0"
+  }
+}
+```
