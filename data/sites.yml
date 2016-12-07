@@ -1,4 +1,7 @@
 built:
+  - url: http://www.beerfestivalbuddy.com
+    title: Beer Festival Buddy
+    source: https://github.com/matoakley/beer-festival-buddy-middleman
   - url: https://loremipsumgenerator.com/
     title: Lorem Ipsum Generator
   - url: https://www.digitalocean.com
@@ -327,7 +330,7 @@ mobile:
   - url: http://pollev.com
 blogs:
   - url: http://erickuhn19.com
-    title: erickuhn19.com 
+    title: erickuhn19.com
   - url: http://code.hireart.com
     title: Code at HireArt
   - url: https://viljamis.com
