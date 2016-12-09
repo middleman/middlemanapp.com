@@ -326,6 +326,8 @@ built:
 mobile:
   - url: http://pollev.com
 blogs:
+  - url: http://gnotc.com
+    title: G, not C.
   - url: http://lunestaconfessions.com
     title: "Lunesta Confessions"
   - url: http://erickuhn19.com
