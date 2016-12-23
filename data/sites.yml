@@ -1,4 +1,7 @@
 built:
+  - url: http://www.beerfestivalbuddy.com
+    title: Beer Festival Buddy
+    source: https://github.com/matoakley/beer-festival-buddy-middleman
   - url: http://aroaminggeek.com
     title: A Roaming Geek
   - url: https://loremipsumgenerator.com/
@@ -336,7 +339,7 @@ blogs:
   - url: http://lunestaconfessions.com
     title: "Lunesta Confessions"
   - url: http://erickuhn19.com
-    title: erickuhn19.com 
+    title: erickuhn19.com
   - url: http://code.hireart.com
     title: Code at HireArt
   - url: https://viljamis.com
