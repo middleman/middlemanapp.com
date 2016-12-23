@@ -3,7 +3,6 @@
 .DS_Store
 .mm-pid-*
 .rbenv-version
-.ruby-version
 .rvmrc
 .sass-cache
 bin
