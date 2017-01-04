@@ -331,6 +331,8 @@ built:
     source: https://github.com/softwareniagara/softwareniagara.com
   - url: https://eazybi.com/
     title: "eazyBI"
+  - url: http://ichack.org/
+    title: "IC Hack"
 mobile:
   - url: http://pollev.com
 blogs:
