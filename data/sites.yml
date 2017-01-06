@@ -333,6 +333,12 @@ built:
     title: "eazyBI"
   - url: http://ichack.org/
     title: "IC Hack"
+  - url: http://ruby-nord.org/
+    title: Ruby Nord - RUG from Lille, France
+  - url: http://www.nomadrides.com/
+    title: Nomad Rides
+  - url: http://cecilitse.org/
+    title: Cecile Veneziani - Rails Developer
 mobile:
   - url: http://pollev.com
 blogs:
