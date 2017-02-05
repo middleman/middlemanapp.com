@@ -14,7 +14,7 @@ Here's the list of API changes:
 * Removed Queryable Sitemap API
 * Removed `css_compressor` setting, use `activate :minify_css, :compressor =>` instead.
 * Removed `js_compressor` setting, use `activate :minify_javascript, :compressor =>` instead.
-* Removed ability to server folders of content statically (non-Middleman projects).
+* Removed ability to serve folders of content statically (non-Middleman projects).
 * Removed "Implied Extension feature", all templates must include a full file name plus the list of desired templating extensions.
 * Remove `upgrade` and `install` CLI commands.
 * Remove `page` template local. Use `current_resource` instead.
