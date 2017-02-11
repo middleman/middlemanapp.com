@@ -1,8 +1,8 @@
 .bundle
+.byebug_history
 .DS_Store
 .rvmrc
 .sass-cache
-build
 /.tmp/
+/build/
 /node_modules/
-.byebug_history
