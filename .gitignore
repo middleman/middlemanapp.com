@@ -1,6 +1,5 @@
 .bundle
 .DS_Store
-.mm-pid-*
 .rvmrc
 .sass-cache
 build
