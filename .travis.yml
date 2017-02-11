@@ -1,5 +1,5 @@
 language: ruby
 before_install:
-- "npm install"
-script: bundle exec middleman build --verbose
+  - "npm install"
+script: "bundle exec middleman build --verbose"
 sudo: false
