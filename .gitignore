@@ -5,7 +5,6 @@
 .rbenv-version
 .rvmrc
 .sass-cache
-bin
 build
 source/mint/config/db.php
 /.tmp/
