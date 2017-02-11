@@ -2,7 +2,6 @@
 .divshot-cache
 .DS_Store
 .mm-pid-*
-.rbenv-version
 .rvmrc
 .sass-cache
 build
