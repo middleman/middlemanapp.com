@@ -6,7 +6,6 @@
 .rvmrc
 .sass-cache
 build
-source/mint/config/db.php
 /.tmp/
 /node_modules/
 .byebug_history
