@@ -1,6 +1,5 @@
 set :layout, :article
 
-activate :livereload
 activate :i18n
 activate :directory_indexes
 activate :autoprefixer
@@ -34,6 +33,12 @@ activate :external_pipeline,
   command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
   source: ".tmp/dist",
   latency: 1
+
+configure :development do
+  activate :livereload do |reload|
+    reload.no_swf = true
+  end
+end
 
 configure :build do
   # "Ignore" JS so webpack has full control.
