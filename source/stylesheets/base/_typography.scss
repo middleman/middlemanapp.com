@@ -86,13 +86,25 @@ picture {
 }
 
 code {
-  color: darken($base-font-color, 20%);
-  background-color: lighten($base-font-color, 64%);
+  background-color: rgba(#000, 0.03);
   border-radius: $base-border-radius;
   font-family: $monospace-font-family;
-  font-size: 1rem;
-  padding:  0.05em 0.5em;
-  overflow: auto;
+
+  :not(pre) > & {
+    margin: 0 0.125em;
+    padding: 0.1875em 0.375em;
+  }
+}
+
+pre {
+  tab-size: 2;
+
+  > code {
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    padding: 0.75em;
+  }
 }
 
 ::selection {
