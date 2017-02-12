@@ -3,6 +3,9 @@ set :layout, :article
 activate :i18n
 activate :directory_indexes
 activate :autoprefixer
+activate :syntax do |syntax|
+  syntax.css_class = "syntax-highlight"
+end
 
 set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: false
 set :markdown_engine, :redcarpet

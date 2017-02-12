@@ -19,7 +19,6 @@
   "homepage": "https://github.com/middleman/middleman-guides#readme",
   "dependencies": {
     "anchor-js": "^2.0.0",
-    "highlight.js": "^9.0.0",
     "jquery": "^2.1.4",
     "waypoints": "^4.0.0",
     "babel": "^6.1.18",
