@@ -1,12 +1,8 @@
 .bundle
-.divshot-cache
+.byebug_history
 .DS_Store
-.mm-pid-*
-.rbenv-version
 .rvmrc
 .sass-cache
-build
-source/mint/config/db.php
 /.tmp/
+/build/
 /node_modules/
-.byebug_history
