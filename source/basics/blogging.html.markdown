@@ -8,13 +8,13 @@ Middleman has an official extension to support blogging, articles and tagging.
 `middleman-blog` ships as an extension and must be installed to use. Simply
 specify the gem in your `Gemfile`:
 
-``` ruby
+```ruby
 gem "middleman-blog", "~> 4.0"
 ```
 
 Then activate the extension in your `config.rb`:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   # set options on blog
 end
@@ -23,7 +23,7 @@ end
 Alternatively, once you've installed `middleman-blog` you can generate a fresh
 project already setup for blogging:
 
-``` bash
+```bash
 middleman init MY_BLOG_PROJECT --template=blog
 ```
 
@@ -56,7 +56,7 @@ Let's say I want to create a new post about Middleman. I would create a file at
 `source/2011-10-18-middleman.html.markdown`. The minimum contents of this file
 are a `title` entry in the frontmatter:
 
-``` html
+```yaml
 ---
 title: My Middleman Blog Post
 ---
@@ -84,7 +84,7 @@ by `middleman article`. This template can use the instance variables `@title`,
 The base path for your blog defaults to `/` (the root of your website) but can
 be overridden in `config.rb`:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.prefix = "blog"
 end
@@ -99,7 +99,7 @@ articles you should add the same prefix to those settings.
 
 The permalink for viewing your posts can be changed on its own as well:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.permalink = "blog/{year}/{title}.html"
 end
@@ -116,7 +116,7 @@ You can also use any other frontmatter data that is used throughout your
 articles. For example, if you have a `category` frontmatter key in your
 articles and wanted to include that in your permalinks:
 
-```html
+```yaml
 ---
 title: My Middleman Blog Post
 date: 2013/10/13
@@ -126,7 +126,7 @@ category: HTML5
 Hello World
 ```
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.permalink = "blog/{category}/{title}.html"
 end
@@ -137,7 +137,7 @@ The article above would now be under: `blog/html5/my-middleman-blog-post.html`.
 Information extracted from your `blog.sources` URL template can also be used in
 `blog.permalinks`. So for example if you had a config like this:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.sources = "{category}/{year}-{month}-{day}-{title}.html"
   blog.permalink = "{category}/{year}/{month}/{day}/{title}.html"
@@ -164,7 +164,7 @@ the blog extension.
 You can set a specific [layout](/basics/layouts) to be used for all articles in
 your `config.rb`:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.layout = "blog_layout"
 end
@@ -194,7 +194,7 @@ articles themselves you can get the current article via `current_article`.
 
 For example, the following shows the 5 most-recent articles and their summaries:
 
-``` html
+```erb
 <% blog.articles[0...5].each do |article| %>
   <article>
     <h1>
@@ -211,7 +211,7 @@ For example, the following shows the 5 most-recent articles and their summaries:
 
 You can also get access to the tag data for a tag archive:
 
-``` html
+```erb
 <ul>
   <% blog.tags.each do |tag, articles| %>
     <li>
@@ -228,7 +228,7 @@ You can also get access to the tag data for a tag archive:
 
 Or similarly for a calendar list:
 
-``` html
+```erb
 <ul>
   <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
     <li>
@@ -245,7 +245,7 @@ Or similarly for a calendar list:
 
 Or if you added a `public` flag to your front matter:
 
-``` html
+```erb
 <h1>Public Articles</h1>
 <% blog.articles.select {|a| a.data[:public] }.each do |article| %>
   ...
@@ -282,7 +282,7 @@ The default template produces a [`tag.html`](https://github.com/middleman/middle
 template for you that produces a page for each tag at `tags/{tag}.html`. Adding
 a couple tags to the above example would look like this:
 
-``` html
+```yaml
 ---
 title: My Middleman Blog Post
 date: 2011/10/18
@@ -296,7 +296,7 @@ Now you can find this article listed on `tags/blogging.html`.
 
 This path can be changed in `config.rb`:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.taglink = "categories/{tag}.html"
 end
@@ -344,7 +344,7 @@ the permalink page, this data is then stripped out.
 You can configure the text that the blogging extension looks for to tell it to
 truncate in the `config.rb` file:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
 end
@@ -354,7 +354,7 @@ You can then show just the article summary, accompanied by a link to the full
 article, by adding the following lines on your homepage template (or wherever
 you'd like the summary to appear):
 
-```ruby
+```erb
 <%= article.summary %>
 <%= link_to 'Read more…', article %>
 ```
@@ -369,7 +369,7 @@ attribute of a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-bl
 `summary` can also take an optional length to chop summaries down to, and a
 string to use when the text is truncated:
 
-```ruby
+```erb
 <%= article.summary(250, '>>') %>
 ```
 
@@ -390,7 +390,7 @@ length, and ellipsis string and produces a summary.
 Long lists of articles can be split across multiple pages. A template will be
 split into pages if it has:
 
-```html
+```yaml
 ---
 pageable: true
 ---
@@ -451,7 +451,7 @@ without pagination enabled.
 
 Articles can be marked as draft in the frontmatter:
 
-``` html
+```yaml
 ---
 title: Work In Progress
 published: false
@@ -473,7 +473,7 @@ To get accurate publication times in your RSS feed, and for automatically
 publishing articles on a precise schedule, set your blog's timezone in
 `config.rb`:
 
-``` ruby
+```ruby
 Time.zone = "Tokyo"
 ```
 
@@ -483,7 +483,7 @@ Middleman-Blog also supports the ability to group articles by other
 [frontmatter](/basics/frontmatter/) data as well. A somewhat contrived example
 would be the ability to group articles by a *category* attribute:
 
-```html
+```yaml
 ---
 title: My Middleman Blog Post
 date: 2013/10/13

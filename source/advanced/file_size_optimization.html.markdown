@@ -16,7 +16,7 @@ project, Middleman will handle all the optimization for you.
 In your `config.rb`, activate the `minify_css` and `minify_javascript` features
 during the build of your site.
 
-``` ruby
+```ruby
 configure :build do
   activate :minify_css
   activate :minify_javascript
@@ -30,12 +30,12 @@ which are carefully compressed by their authors ahead of time.
 You can customize how the JavaScript compressor works by setting the
 `:compressor` option for the `:minify_javascript` extension in
 `config.rb` to a custom instance of Uglifier. See [Uglifier's
-docs](https://github.com/lautis/uglifier) for details. 
+docs](https://github.com/lautis/uglifier) for details.
 
 For example, you could
 enable unsafe optimizations and mangle top-level variable names like this:
 
-``` ruby
+```ruby
 require "uglifier"
 activate :minify_javascript,
   compressor: proc {
@@ -50,7 +50,7 @@ will create different compressed versions of the Javascript on each machine,
 leading to different hashes in the filename and different references in each
 version of the HTML. For example:
 
-``` ruby
+```ruby
 require "uglifier"
 activate :minify_javascript, compressor: -> { Uglifier.new(:mangle => false) }
 ```
@@ -79,7 +79,7 @@ versions of your HTML, CSS, and JavaScript alongside your regular files, and
 you can instruct your web server to serve those pre-gzipped files directly.
 First, enable the `:gzip` extension:
 
-``` ruby
+```ruby
 activate :gzip
 ```
 
@@ -98,19 +98,19 @@ If you also want to compress images on build, try
 Middleman provides an official extension for minifying its HTML output. Simply
 install the gem:
 
-``` bash
+```bash
 gem install middleman-minify-html
 ```
 
 Add `middleman-minify-html` to your `Gemfile`: 
 
-``` ruby
+```ruby
 gem "middleman-minify-html"
 ```
 
 Then open your `config.rb` and add:
 
-``` ruby
+```ruby
 activate :minify_html
 ```
 
@@ -130,7 +130,7 @@ One of the more recent additions to HTML is the `srcset` attribute for the `img`
 
 If you want to use `srcset` in conjunction with the `:asset_hash` option, you need to employ the `image_path` helper, which is described [in this middleman section](/advanced/asset_pipeline.html):
 
-```html
+```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
 

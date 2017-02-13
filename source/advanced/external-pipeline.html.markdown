@@ -14,7 +14,7 @@ Middleman cannot accommodate all these different solutions and languages, so we'
 
 A simple Ember example looks like this:
 
-```
+```ruby
 activate :external_pipeline,
   name: :ember,
   command: "cd test-app/ && ember #{build? ? :build : :serve} --environment #{config[:environment]}",
@@ -28,7 +28,7 @@ Ember compiles this information to the `test-app/dist` folder, who's contents we
 
 # Webpack Example
 
-```
+```ruby
 activate :external_pipeline,
   name: :webpack,
   command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
@@ -44,7 +44,7 @@ Read more about broccoli: https://github.com/broccolijs/broccoli
 
 *config.rb*
 
-```
+```ruby
 activate :external_pipeline,
   :name => 'broccoli',
   :command => (build? ? 'broccoli build pipeline-build' : 'broccoli-timepiece pipeline-build'),
@@ -57,7 +57,7 @@ activate :external_pipeline,
 
 Brocfile example (this can be expanded with babel, SCSS and similar plugins).
 
-```
+```javascript
 /* globals module,require,process */
 
 var Funnel            = require('broccoli-funnel');
@@ -142,7 +142,7 @@ module.exports = finalTree;
 
 *package.json*
 
-```
+```json
 {
   "name": "assets",
   "version": "1.0.0",

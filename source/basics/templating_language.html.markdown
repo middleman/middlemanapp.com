@@ -25,13 +25,13 @@ extension.
 
 To begin, this file would just contain normal HTML:
 
-``` html
+```html
 <h1>Welcome</h1>
 ```
 
 If we wanted to get fancy, we could add a loop:
 
-``` html
+```erb
 <h1>Welcome</h1>
 <ul>
   <% 5.times do |num| %>

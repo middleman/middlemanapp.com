@@ -6,7 +6,7 @@ title: Localization (i18n)
 
 The `:i18n` extension provides a way to localize your site. Activate it in your `config.rb`:
 
-``` ruby
+```ruby
 activate :i18n
 ```
 
@@ -19,7 +19,7 @@ files.
 
 `locales/en.yml`:
 
-``` yaml
+```yaml
 ---
 en:
   hello: "Hello"
@@ -27,7 +27,7 @@ en:
 
 `locales/es.yml`:
 
-``` yaml
+```yaml
 ---
 es:
   hello: "Hola"
@@ -39,8 +39,8 @@ access to the `I18n` helper. Using this helper, you can refer to keys from your
 YAML files and inject the language-specific values into your template. Here's a
 simple `source/localizable/hello_world.html.erb` template:
 
-``` html
-    <%= I18n.t(:hello) %> World
+```erb
+<%= I18n.t(:hello) %> World
 ```
 
 This would output two files:
@@ -50,8 +50,8 @@ This would output two files:
 
 You can use `t` as a shortcut for `I18n.t` in your templates:
 
-``` html
-    <%= t(:hello) %> World
+```erb
+<%= t(:hello) %> World
 ```
 
 
@@ -63,14 +63,14 @@ option). The default path is to simply use the language name (the name of the
 YAML file) in the path:
 
 ```
- /en/index.html
- /es/index.html
- /fr/index.html
+/en/index.html
+/es/index.html
+/fr/index.html
 ```
 
 You can change this with the `:path` option, but remember: the URL will always include the name of the YAML file:
 
-``` ruby
+```ruby
 activate :i18n, :path => "/langs/:locale/"
 ```
 
@@ -85,7 +85,7 @@ Now the paths would be:
 If you are unhappy using the YAML file names as part of your path, you can
 remap them to different values.
 
-``` ruby
+```ruby
 activate :i18n, :path => "/langs/:locale/",
   :lang_map => { :en => :english, :es => :spanish, :fr => :french }
 ```
@@ -115,7 +115,7 @@ will output as:
 If we want to rename that file to `hola.html` for Spanish only, we can use the
 `paths` key in `locales/es.yml`:
 
-``` yaml
+```yaml
 ---
 es:
   hello: "Hola"
@@ -136,7 +136,7 @@ By default, the contents of `source/localizable` will be built in multiple
 languages while the rest of your templates will continue to work normally. The
 name of this folder can be changed with the `:templates_dir` option:
 
-``` ruby
+```ruby
 # Look in `source/language_specific` instead
 activate :i18n, :templates_dir => "language_specific"
 ```
@@ -146,7 +146,7 @@ activate :i18n, :templates_dir => "language_specific"
 If you'd prefer specify a list of supported languages rather than automatically
 discovering files in `locales/`, you can use the `:langs` option:
 
-``` ruby
+```ruby
 activate :i18n, :langs => [:en] # Ignore all languages except :en
 ```
 
@@ -164,7 +164,7 @@ be at the root:
 You can change the default or disable mounting a specific language at the root
 entirely using the `:mount_at_root` option:
 
-``` ruby
+```ruby
 activate :i18n, :mount_at_root => :es # Mount spanish at root instead
 # or
 activate :i18n, :mount_at_root => false # All languages will be prefixed

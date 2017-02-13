@@ -16,33 +16,33 @@ templates will place their contents.
 
 Here is an example layout using ERb:
 
-``` html
+```erb
 <html>
-<head>
-  <title>My Site</title>
-</head>
-<body>
-  <%= yield %>
-</body>
+  <head>
+    <title>My Site</title>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
 </html>
 ```
 
 Given a page template in ERb:
 
-``` html
+```erb
 <h1>Hello World</h1>
 ```
 
 The combined final output in HTML will be:
 
-``` html
+```html
 <html>
-<head>
-  <title>My Site</title>
-</head>
-<body>
-  <h1>Hello World</h1>
-</body>
+  <head>
+    <title>My Site</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+  </body>
 </html>
 ```
 
@@ -78,15 +78,15 @@ has the extension of the templating language you are using. The default is
 To create a new layout for admin, add another file to your `source/layouts`
 folder called "admin.erb". Let's assume the contents are:
 
-``` html
-    <html>
-    <head>
-      <title>Admin Area</title>
-    </head>
-    <body>
-      <%= yield %>
-    </body>
-    </html>
+```erb
+<html>
+  <head>
+    <title>Admin Area</title>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
 ```
 
 Now, you need to specify which pages use this alternative layout. You can do
@@ -95,7 +95,7 @@ you can use the "page" command in your `config.rb`. Let's assume you have a
 folder called "admin" in your `source` folder and all the templates in admin
 should use the admin layout. The `config.rb` would look like:
 
-``` ruby
+```ruby
 page "/admin/*", :layout => "admin"
 ```
 
@@ -106,7 +106,7 @@ You can also reference pages directly. For example, let's say we have a
 `login.html.erb` template which lives in the source folder, but should also
 have the admin layout. Let's use this example page template:
 
-``` html
+```html
 <h1>Login</h1>
 <form>
   <input type="text" placeholder="Email">
@@ -117,7 +117,7 @@ have the admin layout. Let's use this example page template:
 
 Now you can specify that this specific page has a custom layout like this:
 
-``` ruby
+```ruby
 page "/login.html", :layout => "admin"
 ```
 
@@ -126,7 +126,7 @@ specifying everything in the `config.rb`, you can set the layout on individual
 pages in their template file using [Frontmatter]. Here is an example
 `login.html.erb` page which specifies its own layout.
 
-``` html
+```html
 ---
 layout: admin
 ---
@@ -149,7 +149,7 @@ footer, etc).
 
 Here's what a simple default layout might look like:
 
-``` html
+```erb
 <html>
   <body>
     <header>Header</header>
@@ -163,7 +163,7 @@ Let's say we have a blog article `blog/my-article.html.markdown`. I could then
 tell all the blog articles to use a `article_layout` layout instead of the
 default `layout`. In `config.rb`:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.layout = "article_layout"
 end
@@ -175,7 +175,7 @@ page "blog/*", :layout => :article_layout
 
 That `layouts/article_layout.erb` layout would look like this
 
-``` html
+```erb
 <% wrap_layout :layout do %>
   <article>
     <%= yield %>
@@ -186,7 +186,7 @@ That `layouts/article_layout.erb` layout would look like this
 Like a normal layout, `yield` is where the resulting template content is
 placed. In this example, you've end up with the following output:
 
-``` html
+```html
 <html>
   <body>
     <header>Header</header>
@@ -203,7 +203,7 @@ placed. In this example, you've end up with the following output:
 In some cases, you may not want to use a layout at all. This can be
 accomplished by setting the default layout to false in your `config.rb`:
 
-``` ruby
+```ruby
 set :layout, false
 
 # Or for an individual file:

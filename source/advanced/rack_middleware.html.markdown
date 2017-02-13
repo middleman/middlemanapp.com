@@ -24,7 +24,7 @@ over and enhances those blocks with syntax highlight. The middleware in use is
 called [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter).
 Here's how it can be used in your `config.rb`:
 
-``` ruby
+```ruby
 require 'rack/codehighlighter'
 require "pygments"
 use Rack::Codehighlighter,
@@ -36,7 +36,7 @@ use Rack::Codehighlighter,
 
 Make sure you add the right dependencies to your `Gemfile` to make those work:
 
-``` ruby
+```ruby
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 gem "pygments.rb"
 ```

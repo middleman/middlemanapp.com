@@ -13,7 +13,7 @@ proxy, you use the `proxy` method in your `config.rb`, and give the path you
 want to create, and then the path to the template you want to use (without any
 templating file extensions). Here's an example `config.rb` setup:
 
-``` ruby
+```ruby
 # Assumes the file source/about/template.html.erb exists
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }
@@ -30,7 +30,7 @@ When this project is built, four files will be output:
 In most cases, you will not want to generate the template itself without the
 `person_name` variable, so you can tell Middleman to ignore it:
 
-``` ruby
+```ruby
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
 end
@@ -44,7 +44,7 @@ will be output.
 It is also possible to ignore arbitrary paths when building a site using the
 new `ignore` method in your `config.rb`:
 
-``` ruby
+```ruby
 ignore "/ignore-this-template.html"
 ```
 
@@ -56,7 +56,7 @@ To use Dynamic Pages with [Directory Indexes](/advanced/pretty_urls) specify the
 
 Following the example above, the proxy path would become `/about/#{name}/index.html`:
 
-``` ruby
+```ruby
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}/index.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
 end

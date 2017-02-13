@@ -81,7 +81,7 @@ middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 
 We want to support as many possible tools as we can. Want to run Grunt? Maybe ClojureScript JVM in the background? How about browserify or ember-cli? That's what the goal of `external_pipeline` is. Here's an example of how Middleman v4 can control an external process, which outputs into an arbitrary directory and is then consumed by Middleman:
 
-```
+```ruby
 activate :external_pipeline,
   name: :ember,
   command: "cd test-app/ && ember #{build? ? :build : :serve} --environment #{config[:environment]}",
@@ -91,7 +91,7 @@ activate :external_pipeline,
 
 This feature is hosted on top of a lower-level feature which allows multiple directories to be overlaid to create the combined sitemap for Middleman. This is great for keeping things like `bower_components` separate from your source directory, but still available to Middleman:
 
-```
+```ruby
 import_path File.expand_path('bower_components', app.root)
 ```
 
@@ -101,7 +101,7 @@ The final new feature is "Collections". Collections abstract some logic from Mid
 
 Lets say you want to implement tagging:
 
-```
+```ruby
 def get_tags(resource)
   if resource.data.tags.is_a? String
     resource.data.tags.split(',').map(&:strip)
@@ -129,7 +129,7 @@ collection :first_tag, tags.keys.sort.first
 
 This will give you an always up-to-date hash called `all_tags` and an always up-to-date array representing the current resources which have the first alphabetical tag. As you can see, all the code is normal Ruby, so you can write your implementation however you'd like. The only 2 constraints are that a collection must be made from a chained collection starting with `resources` and that the `collection` method must be called when you are done to pass the information into your templates.
 
-```
+```erb
 <% collection(:tags).each do |k, items| %>
   Tag: <%= k %> (<%= items.length %>)
   <% items.each do |article| %>
@@ -142,7 +142,7 @@ First Tag: <%= collection(:first_tag) %>
 
 Collections can also be used, directly in `config.rb` to keep dynamic pages up-to-date:
 
-```
+```ruby
 tags.each do |k, articles|
   proxy "/tags/#{k}.html", "/tags/list.html", locals: {
     articles: articles
@@ -172,7 +172,7 @@ Now, each context has it's own sandbox. Extensions may want to add methods to th
 
 * `resources :more_pages` will call the `more_pages` method inside your extension. That method is expected to return a Hash where the keys are the output URLs and the values are either a String of a Symbol representing another internal method.
 
-	```
+	```ruby
 	resources :more_pages
 
 	def more_pages

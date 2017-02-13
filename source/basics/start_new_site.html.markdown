@@ -54,14 +54,14 @@ Remember that Middleman is built to generate *static* sites, though.
 To include a boilerplate `config.ru` file in your project, add the `--rack`
 flag to the init command:
 
-``` bash
+```bash
 $ middleman init my_new_project --rack
 ```
 
 If you've already initialized a project and just want the config.ru for linking
 with pow or other development server its contents are simply:
 
-```
+```ruby
 require 'middleman/rack'
 run Middleman.server
 ```

@@ -6,7 +6,7 @@ title: Directory Structure
 
 The default Middleman installation consists of a directory structure which looks like this:
 
-``` ruby
+```
 mymiddlemansite/
 +-- .gitignore
 +-- Gemfile
@@ -55,4 +55,3 @@ Data](/advanced/data_files/) docs for more information.
 The `lib` directory enables you to include external Ruby modules which contain
 [helpers](/basics/helper_methods/) for building your application. If you use Rails
 then you will be familiar with this layout.
-
