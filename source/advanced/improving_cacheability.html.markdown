@@ -22,7 +22,7 @@ that would be a pain to do by hand, Middleman comes with an `:asset_hash`
 extension that does it for you. First, activate the extension in your
 `config.rb`:
 
-``` ruby
+```ruby
 activate :asset_hash
 ```
 

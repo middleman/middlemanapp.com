@@ -12,7 +12,7 @@ template using the YAML or JSON format.
 Let's take a simple ERb template, adding some frontmatter variables to change
 the layout for this specific page.
 
-``` html
+```yaml
 ---
 layout: "custom"
 title: "My Title"
@@ -37,7 +37,7 @@ Frontmatter must come at the very top of the template and be separated from the 
 You can also use JSON for your frontmatter. It's delimited by `;;;` and looks
 like this:
 
-``` json
+```json
 ;;;
 "layout": "custom",
 "my_list": [

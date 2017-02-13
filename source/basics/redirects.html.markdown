@@ -10,6 +10,6 @@ However, in some cases, you will not have access to the server to add this featu
 
 To generate a redirect in Middleman:
 
-``` ruby
+```ruby
 redirect "/my/old/path.html", to: "/my/new/path.html"
 ```

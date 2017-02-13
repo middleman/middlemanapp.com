@@ -10,7 +10,7 @@ Middleman extensions are Ruby classes which can hook into various points of the 
 
 To bootstrap a new extension you can use the `extension`-command. This will create all needed files.
 
-```ruby
+```bash
 middleman extension middleman-my_extension
 
 # create  middleman-my_extension/.gitignore
@@ -27,7 +27,7 @@ middleman extension middleman-my_extension
 
 The most basic extension looks like:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
@@ -42,18 +42,18 @@ This module must be accessible to your `config.rb` file. Either define it direct
 
 Finally, once your module is included, you must activate it in `config.rb`:
 
-``` ruby
+```ruby
 activate :my_feature
 ```
 
 The [`register`](http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method) method lets you choose the name your extension is activated with. It can also take a block if you want to require files only when your extension is activated.
 
-In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is an instance of 
+In the `MyFeature` extension, the `initialize` method will be called as soon as the `activate` command is run. The `app` variable is an instance of
 [`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application) class.
 
 `activate` can also take an options hash (which are passed to `register`) or a block which can be used to configure your extension. You define options with the `options` class method and then access them with `options`:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   # All the options for this extension
   option :foo, false, 'Controls whether we foo'
@@ -79,7 +79,7 @@ Passing options to `activate` is preferred to setting global or singleton variab
 
 Methods within your extension can be made available to `config.rb` with the `expose_to_config` method.
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   expose_to_config :say_hello
 
@@ -93,7 +93,7 @@ end
 
 Similar to config, methods can be exposed to the template context:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   expose_to_template :say_hello
 
@@ -107,7 +107,7 @@ end
 
 Another way to add methods to templates are as helpers. Unlike "exposed methods" above, helpers do not have access to the rest of your extension. These are good for large packages of "pure" methods grouped into a module. In most cases, the above "exposed methods" are preferred.
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
@@ -123,7 +123,7 @@ end
 
 Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERb template:
 
-``` html
+```erb
 <h1><%= make_a_link("http://example.com", "Click me") %></h1>
 ```
 
@@ -133,7 +133,7 @@ You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a S
 
 **Note:** `manipulate_resource_list` is a "reducer". It is required to return the full set of resources to be passed to the next step of the pipeline.
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def manipulate_resource_list(resources)
     resources.each do |resource|
@@ -153,7 +153,7 @@ There are many parts of the Middleman lifecycle that can be hooked into by exten
 
 Sometimes you will want to wait until the `config.rb` has been executed to run code. For example, if you rely on the `:css_dir` variable, you should wait until it has been set. For this, we'll use a callback:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def after_configuration
     puts app.config[:css_dir]
@@ -165,7 +165,7 @@ end
 
 This callback is used to execute code after the build process has finished. The [middleman-smusher](https://github.com/middleman/middleman-smusher) extension uses this feature to compress all the images in the build folder after it has been built. It's also conceivable to integrate a deployment script after build.
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def after_build(builder)
     builder.thor.run './my_deploy_script.sh'

@@ -14,7 +14,7 @@ folder as your project's `source` folder.
 
 Here's an example file at `data/people.yml` with the contents:
 
-``` yaml
+```yaml
 friends:
   - Tom
   - Dick
@@ -23,7 +23,7 @@ friends:
 
 Now, anywhere in our template files, we will have access to this data:
 
-``` html
+```erb
 <h1>Friends</h1>
 <ol>
   <% data.people.friends.each do |f| %>
@@ -34,7 +34,7 @@ Now, anywhere in our template files, we will have access to this data:
 
 Which will render:
 
-``` html
+```html
 <h1>Friends</h1>
 <ol>
   <li>Tom</li>
@@ -51,7 +51,7 @@ access it with `data.people.tom`.
 You can use JSON to store your data instead of YAML. The above example could be
 `data/people.json` instead:
 
-``` json
+```json
 {
   "friends": [
     "Tom",

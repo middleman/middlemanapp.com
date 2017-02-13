@@ -58,7 +58,7 @@ example, let's say we've added a "category" element to the [frontmatter] of our
 pages, and we want to create category pages dynamically for each category. To
 do that, we'd add this to `config.rb`:
 
-``` ruby
+```ruby
 ready do
   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
     proxy "/categories/#{category}.html", "category.html", 

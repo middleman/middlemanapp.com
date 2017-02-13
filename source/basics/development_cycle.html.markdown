@@ -19,7 +19,7 @@ Cycle.
 From the command-line, start the preview web-server from inside your project
 folder:
 
-``` bash
+```bash
 $ cd my_project
 $ bundle exec middleman server
 ```
@@ -35,7 +35,7 @@ You can stop the preview server from the command-line using `CTRL-C`.
 
 Running `middleman` without any commands is the same as starting a server.
 
-``` bash
+```bash
 $ bundle exec middleman
 ```
 
@@ -46,14 +46,14 @@ This will do exactly the same thing as `middleman server`.
 Middleman has an extension that will automatically refresh your browser
 whenever you edit files in your site. First make sure that you have `middleman-livereload` in your Gemfile. Then simply open your `config.rb` and add
 
-``` ruby
+```ruby
 activate :livereload
 ```
 
 Your browser will now reload changed pages automatically.
 
 ### Reloading CSS
-By default, Middleman will reload `stylesheets/all.css` when detecting a CSS import was changed.  
+By default, Middleman will reload `stylesheets/all.css` when detecting a CSS import was changed.
 Use `:livereload_css_target` option to set a different target or `nil` to force a full page refresh.
 
 [HTML5 Boilerplate]: http://html5boilerplate.com
