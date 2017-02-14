@@ -1,11 +1,12 @@
 ---
 jp:
-  navigation:
-    support: サポート
-    contribute: Contribute
+  global_navigation:
+    community: Community
     docs: Docs
     logo: Middleman
     search_placeholder: ドキュメント検索
+    support: サポート
+  navigation:
     basics:
       title: 基礎
       blogging: ブログ機能
