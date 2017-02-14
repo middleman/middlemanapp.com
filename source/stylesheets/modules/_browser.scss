@@ -5,7 +5,7 @@
 
 .browser:before {
   @include size(100% em(27));
-  background: $browser-bar-color inline-image("browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
+  background: $browser-bar-color url("../images/browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
   border-radius: $base-border-radius $base-border-radius 0 0;
   content: "";
   display: block;
