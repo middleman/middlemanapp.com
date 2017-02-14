@@ -1,10 +1,11 @@
 ---
 jp:
   global_navigation:
-    support: サポート
     community: Community
     docs: Docs
     logo: Middleman
+    search_placeholder: ドキュメント検索
+    support: サポート
   navigation:
     basics:
       title: 基礎

@@ -1,10 +1,11 @@
 ---
 en:
   global_navigation:
-    support: Support
     community: Community
     docs: Docs
     logo: Middleman
+    search_placeholder: Search the docs
+    support: Support
   navigation:
     basics:
       title: Basics
