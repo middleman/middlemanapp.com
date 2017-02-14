@@ -1,11 +1,11 @@
 ---
 en:
-  navigation:
+  global_navigation:
     support: Support
-    contribute: Contribute
+    community: Community
     docs: Docs
     logo: Middleman
-    search_placeholder: Search the docs
+  navigation:
     basics:
       title: Basics
       blogging: Blogging
