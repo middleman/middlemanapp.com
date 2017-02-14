@@ -12,7 +12,7 @@ feeds, etc.
 The [sitemap](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap) is a
 repository of every page in your site, including HTML, CSS, JavaScript, images
 - everything. It also includes any [dynamic pages] you've created using
-`:proxy`. 
+`:proxy`.
 
 ## Seeing the Sitemap
 
@@ -61,7 +61,7 @@ do that, we'd add this to `config.rb`:
 ```ruby
 ready do
   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
-    proxy "/categories/#{category}.html", "category.html", 
+    proxy "/categories/#{category}.html", "category.html",
       :locals => { :category => category, :pages => pages }
   end
 end

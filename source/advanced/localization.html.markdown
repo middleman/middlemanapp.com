@@ -54,7 +54,6 @@ You can use `t` as a shortcut for `I18n.t` in your templates:
 <%= t(:hello) %> World
 ```
 
-
 ## Localized Paths
 
 Each individual language is accessible in its own namespaced path. By default,

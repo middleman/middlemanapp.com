@@ -9,7 +9,7 @@ template using the YAML or JSON format.
 
 ## YAML Frontmatter
 
-Let's take a simple ERb template, adding some frontmatter variables to change
+Let's take a simple ERB template, adding some frontmatter variables to change
 the layout for this specific page.
 
 ```yaml

@@ -65,7 +65,7 @@ class MyFeature < Middleman::Extension
   end
 end
 
-## Two ways to configure this extension
+# Two ways to configure this extension
 activate :my_feature, foo: 'whatever'
 activate :my_feature do |f|
   f.foo = 'whatever'
@@ -121,7 +121,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERb template:
+Now, inside your templates, you will have access to a `make_a_link` method. Here's an example using an ERB template:
 
 ```erb
 <h1><%= make_a_link("http://example.com", "Click me") %></h1>
@@ -161,7 +161,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-### after_build
+### `after_build`
 
 This callback is used to execute code after the build process has finished. The [middleman-smusher](https://github.com/middleman/middleman-smusher) extension uses this feature to compress all the images in the build folder after it has been built. It's also conceivable to integrate a deployment script after build.
 

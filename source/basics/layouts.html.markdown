@@ -14,7 +14,7 @@ content.
 The most basic layout has some shared content and a `yield` call where
 templates will place their contents.
 
-Here is an example layout using ERb:
+Here is an example layout using ERB:
 
 ```erb
 <html>
@@ -27,7 +27,7 @@ Here is an example layout using ERb:
 </html>
 ```
 
-Given a page template in ERb:
+Given a page template in ERB:
 
 ```erb
 <h1>Hello World</h1>
@@ -109,7 +109,7 @@ have the admin layout. Let's use this example page template:
 ```html
 <h1>Login</h1>
 <form>
-  <input type="text" placeholder="Email">
+  <input type="email">
   <input type="password">
   <input type="submit">
 </form>
@@ -133,7 +133,7 @@ layout: admin
 
 <h1>Login</h1>
 <form>
-  <input type="text" placeholder="Email">
+  <input type="email">
   <input type="password">
   <input type="submit">
 </form>
