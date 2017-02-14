@@ -35,7 +35,7 @@ directory.
 ### Source Directory
 
 The `source` directory contains your main website source files to be built,
-including your templates javascript, CSS and images.
+including your templates JavaScript, CSS and images.
 
 ### Build Directory
 

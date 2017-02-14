@@ -75,7 +75,7 @@ a new article for you in the right place with the right filename. You can pass
 `--date`, `--lang`, and `--blog` options to this command.
 
 If you want to use your own template, you can set `blog.new_article_template`
-to the path (relative to the project root) of an ERb template that will be used
+to the path (relative to the project root) of an ERB template that will be used
 by `middleman article`. This template can use the instance variables `@title`,
 `@slug`, `@date`, and `@lang` to generate your new article.
 

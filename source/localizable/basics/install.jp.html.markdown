@@ -6,7 +6,7 @@ title: インストール
 
 Middleman は RubyGems のパッケージマネージャを使って配布されます。つまり Middleman を使うには Ruby のランタイムと RubyGems の両方が必要だということです。
 
-Mac OS X には Ruby と RubyGems の両方がパッケージされていますが, Middleman の依存ライブラリの一部はインストール時にコンパイルする必要があります。OS X ではコンパイルに Xcode の Command Line Tools が必要です。Xcode がインストールされている場合 Terminal から実行してください:
+macOS には Ruby と RubyGems の両方がパッケージされていますが, Middleman の依存ライブラリの一部はインストール時にコンパイルする必要があります。macOS ではコンパイルに Xcode の Command Line Tools が必要です。Xcode がインストールされている場合 Terminal から実行してください:
 
 ```bash
 $ xcode-select --install

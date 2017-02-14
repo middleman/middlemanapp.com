@@ -22,7 +22,6 @@ Pass `file://` followed by the path to your local git repository. **Note**: Ther
 middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 ```
 
-
 ## Template Directory
 
 In addition to the default project template, the Middleman community has created a lot of custom templates. There are a number of community-developed project templates in the [Directory](https://directory.middlemanapp.com/).
@@ -32,7 +31,6 @@ If you would like to have your template added to the Directory, please read the 
 ```bash
 middleman init MY_NEW_BLOG -T blog
 ```
-
 
 ## Thor Template
 

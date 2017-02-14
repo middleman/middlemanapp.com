@@ -102,7 +102,7 @@ install the gem:
 gem install middleman-minify-html
 ```
 
-Add `middleman-minify-html` to your `Gemfile`: 
+Add `middleman-minify-html` to your `Gemfile`:
 
 ```ruby
 gem "middleman-minify-html"
@@ -116,11 +116,9 @@ activate :minify_html
 
 You should notice whilst view-source:'ing that your HTML is now being minified.
 
-
 ## Using source sets
 
-One of the more recent additions to HTML is the `srcset` attribute for the `img` or `picture` tag. It allows you to define for the browser to load different images with different sizes dependent on either the viewport (using width such as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser display (using factors `1x, 2x, 3x, ...`). 
-
+One of the more recent additions to HTML is the `srcset` attribute for the `img` or `picture` tag. It allows you to define for the browser to load different images with different sizes dependent on either the viewport (using width such as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser display (using factors `1x, 2x, 3x, ...`).
 
 ```html
 <img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
@@ -133,6 +131,5 @@ If you want to use `srcset` in conjunction with the `:asset_hash` option, you ne
 ```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
-
 
 The `srcset` attribute is not yet supported by all browsers as you can see at [caniuse.com](http://caniuse.com/#feat=srcset). If it is not supported the browser uses the `src` attribute as fallback. We noted, that some browsers use the first entry of the `srcset` as fallback. This is why we have put the largest image first in our example.

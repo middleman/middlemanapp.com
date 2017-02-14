@@ -79,7 +79,7 @@ var VENDOR_CSS = [
 ];
 
 
-// javascript
+// JavaScript
 var jsVendorTree = concatFiles(SOURCE_DIR + '/vendor/js', {
   outputFile: 'vendor.js',
   headerFiles: VENDOR_JS,

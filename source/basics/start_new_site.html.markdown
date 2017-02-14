@@ -8,15 +8,17 @@ To get started we will need to create a project folder for Middleman to work
 out of. You can do this using an existing folder or have Middleman create one
 for you using the `middleman init` command.
 
-``` bash
+```bash
 $ middleman init
 ```
+
 builds a Middleman skeleton project in your current folder.
 
-``` bash
+```bash
 $ middleman init my_new_project
 ```
-creates a subfolder my_new_project with the Middleman skeleton project.
+
+creates a subfolder `my_new_project` with the Middleman skeleton project.
 
 ### The Skeleton
 
@@ -26,7 +28,7 @@ you can use in all of your projects.
 
 A brand-new project will contain a `source` folder and a `config.rb` file. The
 source folder is where you will build your website. The skeleton project
-contains folders for javascript, CSS and images, but you can change these to
+contains folders for JavaScript, CSS and images, but you can change these to
 match your own personal preferences.
 
 The `config.rb` file contains settings for Middleman and commented
