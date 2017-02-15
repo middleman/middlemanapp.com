@@ -49,7 +49,7 @@ like this:
 ![Amazing picture](/posts/2013-09-23-some-interesting-post/amazing-image.png)
 ```
 
-To slightly automate this process, the markdown may be processed by ERB first.
+To slightly automate this process, the Markdown may be processed by ERB first.
 For example, in a file named `/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
 
 ```ruby

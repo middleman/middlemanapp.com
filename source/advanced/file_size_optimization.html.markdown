@@ -6,7 +6,7 @@ title: File Size Optimization
 
 ## Compressing CSS and JavaScript
 
-Middleman handles CSS minification and Javascript compression so you don't have
+Middleman handles CSS minification and JavaScript compression so you don't have
 to worry about it. Most libraries ship minified and compressed versions of
 their files for users to deploy, but these files are unreadable or editable.
 Middleman allows you to keep the original, commented files in our project so
@@ -44,9 +44,9 @@ activate :minify_javascript,
 ```
 
 If you have `asset_hash` activated, are building your site on multiple servers
-during deploy to sit behind a load balancer, and are compressing Javascript,
+during deploy to sit behind a load balancer, and are compressing JavaScript,
 ensure that mangling variables is disabled. If mangling is enabled, Uglifier
-will create different compressed versions of the Javascript on each machine,
+will create different compressed versions of the JavaScript on each machine,
 leading to different hashes in the filename and different references in each
 version of the HTML. For example:
 
@@ -68,7 +68,7 @@ gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 ```
 
-## GZIP text files
+## gzip text files
 
 It's a good idea to [serve compressed
 files](https://developer.yahoo.com/performance/rules.html#gzip) to user agents
@@ -116,17 +116,16 @@ activate :minify_html
 
 You should notice whilst view-source:'ing that your HTML is now being minified.
 
-## Using source sets
+## Responsive images with `srcset`
 
 One of the more recent additions to HTML is the `srcset` attribute for the `img` or `picture` tag. It allows you to define for the browser to load different images with different sizes dependent on either the viewport (using width such as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser display (using factors `1x, 2x, 3x, ...`).
 
 ```html
 <img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
 <img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
-
 ```
 
-If you want to use `srcset` in conjunction with the `:asset_hash` option, you need to employ the `image_path` helper, which is described [in this middleman section](/advanced/asset_pipeline.html):
+If you want to use `srcset` in conjunction with the `:asset_hash` option, you need to employ the `image_path` helper:
 
 ```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
