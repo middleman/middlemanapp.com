@@ -4,7 +4,7 @@ title: Build & Deploy
 
 # Exporting the Static Site
 
-## Building the site with "middleman build"
+## Building the site with `middleman build`
 
 Finally, when you are ready to deliver static code or, in the case of "blog
 mode", host a static blog, you will need to build the site. Using the
@@ -28,13 +28,13 @@ After building the site you have everything you need within the
 we present our very own solution for this here. Feel free to search the web or
 look at our [extension
 directory](https://directory.middlemanapp.com/#/extensions/deployment) for more
-alternatives to deploy `middleman`. If you are an author of a deployment tool
-suitable to deploy `middleman`, please make a PR
+alternatives to deploy Middleman. If you are an author of a deployment tool
+suitable to deploy Middleman, please make a PR
 [here](https://directory.middlemanapp.com/#/extensions/deployment).
 
 A very handy tool to deploy a build is
 [`middleman-deploy`](https://github.com/middleman-contrib/middleman-deploy). It
-can deploy a site via rsync, ftp, sftp, or git.
+can deploy a site via rsync, FTP, SFTP, or Git.
 
 ```bash
 $ middleman build [--clean]
@@ -43,7 +43,8 @@ $ middleman deploy [--build-before]
 
 ## Production Asset Hashing & CDN Configuration
 
-A common setup for production is to hash your assets and serve them through a CDN. You can do this easily with middleman:
+A common setup for production is to hash your assets and serve them through a
+CDN. You can do this easily with Middleman:
 
 ```ruby
 configure :build do

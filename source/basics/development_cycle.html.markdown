@@ -6,7 +6,7 @@ title: The Development Cycle
 
 ## Middleman Server
 
-The Middleman separates your development and production code from the start.
+Middleman separates your development and production code from the start.
 This allows you to utilize a bevy of tools (such as
 [Haml](http://haml.info), [Sass](http://sass-lang.com),
 [CoffeeScript](http://coffeescript.org/), etc.) during development that are
@@ -29,9 +29,10 @@ This will start a local web server running at: `http://localhost:4567/`
 You can create and edit files in the `source` folder and see the changes
 reflected on the preview web-server.
 
-You can stop the preview server from the command-line using `CTRL-C`.
+You can stop the preview server from the command-line using
+<kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-### Unadorned middleman command
+### Unadorned `middleman` command
 
 Running `middleman` without any commands is the same as starting a server.
 

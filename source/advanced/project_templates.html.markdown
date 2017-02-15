@@ -34,7 +34,7 @@ middleman init MY_NEW_BLOG -T blog
 
 ## Thor Template
 
-Templates that require process can be implemented with Thor. The [default template](https://github.com/middleman/middleman-templates-default) is implemented this way so it can ask questions as initialization.
+Templates that require process can be implemented with [Thor]. The [default template](https://github.com/middleman/middleman-templates-default) is implemented this way so it can ask questions as initialization.
 
 Place a `Thorfile` at the root of your repository:
 
@@ -55,3 +55,5 @@ end
 ```
 
 Inside this Ruby class, all public methods will be executed in order. The simplest example above just copies a folder. So if you placed your default template in the `template` directory, it would work exactly like the non-Thor option above.
+
+[Thor]: http://whatisthor.com/
