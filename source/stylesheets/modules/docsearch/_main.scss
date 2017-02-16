@@ -8,8 +8,13 @@ $searchbox: true!default;
   @include searchbox($searchbox-config...);
 }
 
+.search {
+  background-color: tint($mm-light-gray, 90%);
+  padding: 2rem;
+}
+
 .searchbox {
-  color: white;
+  @include margin(null auto);
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -20,17 +25,16 @@ $searchbox: true!default;
   -ms-flex-direction: row;
   -o-flex-direction: row;
   flex-direction: row;
-  float: left;
-  padding-left: 6em;
-  align-items: center
+  align-items: center;
+  max-width: 40rem;
 }
 
 .searchbox__input[type=search] {
-  padding-left: 2.8em;
+  padding-left: 2em;
 }
 
 .searchbox__input[type=search], .searchbox__input[type=search]:hover, .searchbox__input[type=search]:focus, .searchbox__input[type=search]:active {
-  border-bottom: 2px solid rgba(#fff, 0.5);
+  border-bottom: 2px solid rgba(#000, 0.1);
 }
 
 .searchbox__reset {
@@ -38,7 +42,7 @@ $searchbox: true!default;
 }
 
 .searchbox__reset svg {
-  fill: white;
+  fill: #000;
 }
 
 @media (max-width: 960px) {
