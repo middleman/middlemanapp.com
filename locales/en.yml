@@ -2,7 +2,7 @@
 en:
   global_navigation:
     community: Community
-    docs: Docs
+    docs: Documentation
     logo: Middleman
     search_placeholder: Search the docs
     support: Support
