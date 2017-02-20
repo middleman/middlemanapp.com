@@ -172,19 +172,19 @@ Now, each context has it's own sandbox. Extensions may want to add methods to th
 
 * `resources :more_pages` will call the `more_pages` method inside your extension. That method is expected to return a Hash where the keys are the output URLs and the values are either a String of a Symbol representing another internal method.
 
-	```ruby
-	resources :more_pages
+```ruby
+resources :more_pages
 
-	def more_pages
-		{
-			"/page1.html" => :page1,
-			"/page2.html" => "Hello"
-		}
-	end
+def more_pages
+  {
+    "/page1.html" => :page1,
+    "/page2.html" => "Hello"
+  }
+end
 
-	def page1
-		"Page 1"
-	end
-	```
+def page1
+  "Page 1"
+end
+```
 
 * `resources "/page1.html" => "greetings"` is a shorthand form of the above. The method takes a Hash of paths to symbols or strings.
