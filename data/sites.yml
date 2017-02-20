@@ -343,6 +343,10 @@ built:
     title: Cecile Veneziani - Rails Developer
   - url: https://www.prx.co/
     title: "PRX.co: PR for startups and small businesses"
+  - url: https://www.ecommwar.com/
+    title: eCommWar - Top Open-Source E-Commerce Platforms
+    source: https://github.com/ecommwar/ecommwar
+    
 mobile:
   - url: http://pollev.com
 blogs:
