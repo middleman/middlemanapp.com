@@ -57,7 +57,7 @@ Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 結果:
 
 ```html
-<a href='../about/'>About</a>
+<a href="../about/">About</a>
 ```
 
 `link_to` で作られるあらゆる URL を相対パスにしたい場合, `config.rb` に次を追加します:

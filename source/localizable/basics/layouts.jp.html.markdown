@@ -14,7 +14,7 @@ Ruby の世界と Middleman では逆のアプローチを取ります。
 最も基本的なレイアウトは共有コンテンツとそのテンプレートの内容を
 配置する yield を含みます。
 
-ERb を使ったレイアウトの例です:
+ERB を使ったレイアウトの例です:
 
 ```erb
 <html>
@@ -27,7 +27,7 @@ ERb を使ったレイアウトの例です:
 </html>
 ```
 
-ERb で書かれたページテンプレートが与えられます:
+ERB で書かれたページテンプレートが与えられます:
 
 ```erb
 <h1>Hello World</h1>
@@ -109,7 +109,7 @@ admin レイアウトを適用したい場合です。ページテンプレー�
 ```html
 <h1>Login</h1>
 <form>
-  <input type="text" placeholder="Email">
+  <input type="email">
   <input type="password">
   <input type="submit">
 </form>
@@ -133,7 +133,7 @@ layout: admin
 
 <h1>Login</h1>
 <form>
-  <input type="text" placeholder="Email">
+  <input type="email">
   <input type="password">
   <input type="submit">
 </form>

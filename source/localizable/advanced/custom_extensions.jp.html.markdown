@@ -121,7 +121,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。ERb テンプレートでの使用例を示します:
+これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。ERB テンプレートでの使用例を示します:
 
 ```erb
 <h1><%= make_a_link("http://example.com", "クリックしてください") %></h1>
@@ -161,7 +161,7 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-### after_build
+### `after_build`
 
 このコールバックはビルドプロセスが完了した後にコードを実行するために使われます。[middleman-smusher](https://github.com/middleman/middleman-smusher) 拡張はビルド完了後に build フォルダのすべての画像を圧縮するためにこの機能を使います。ビルド後に展開したスクリプトを結合することも考えられます。
 

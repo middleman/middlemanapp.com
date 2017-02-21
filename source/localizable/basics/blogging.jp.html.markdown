@@ -75,7 +75,7 @@ Middleman は新しい記事を正しいファイル名で正しい場所に作�
 `--date`, `--lang` や `--blog` オプションを渡すことができます。
 
 独自のテンプレートを使いたい場合, `middleman article` コマンドで使われる
-ERb テンプレートのパス (プロジェクトルートからの相対パス) を `blog.new_article_template` に
+ERB テンプレートのパス (プロジェクトルートからの相対パス) を `blog.new_article_template` に
 設定することができます。このテンプレートでは新しい記事を生成するための `@title`,
 `@slug`, `@date` や `@lang` といったインスタンス変数を使うことができます。
 
