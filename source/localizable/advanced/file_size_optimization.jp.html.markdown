@@ -68,10 +68,10 @@ gem 'therubyracer' # faster JS compiles
 gem 'oj' # faster JS compiles
 ```
 
-## テキストファイルの GZIP 化
+## テキストファイルの gzip 圧縮
 
-対応するユーザエージェントに
-[圧縮ファイルを配信する](https://developer.yahoo.com/performance/rules.html#gzip) のはいい方法です。
+対応するユーザエージェントに対して
+[圧縮ファイルを配信する](https://developer.yahoo.com/performance/rules.html#gzip) のはより良い方法です。
 多くの web サーバはオンザフライでファイルを gzip にする機能を持っていますが,
 ファイルが配信される度に CPU を使う必要があり, その結果としてほとんどのサーバでは
 最大圧縮が実行されません。 Middleman は通常のファイルと一緒に gzip バージョンの
@@ -116,7 +116,7 @@ activate :minify_html
 
 ソースを確認すると HTML が圧縮されていることがわかります。
 
-## source sets (srcset) の使用
+## `srcset` を使ったレスポンシブ画像
 
 HTML に最近追加されたものに `img` や `picture` タグの `srcset` 属性があります。この属性は viewport (`1024w, 800w, 600w, や 320w` のような幅指定) やブラウザの解像度 (`1x, 2x, 3x, ...` のような値) によって異なる画像を異なるサイズでブラウザにロードできます。
 
@@ -125,7 +125,7 @@ HTML に最近追加されたものに `img` や `picture` タグの `srcset` �
 <img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
 ```
 
-`:asset_hash` オプションと一緒に `secset` を使用したい場合, [アセットパイプラインのページ](/jp/advanced/asset_pipeline.html) に書かれている `image_path` ヘルパーを使用する必要があります。
+`:asset_hash` オプションと一緒に `secset` を使用したい場合, `image_path` ヘルパーを使用する必要があります。
 
 ```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">

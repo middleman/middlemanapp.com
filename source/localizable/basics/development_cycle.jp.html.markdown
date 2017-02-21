@@ -32,7 +32,7 @@ $ bundle exec middleman server
 コマンドラインから <kbd>Ctrl</kbd> + <kbd>C</kbd> を使って
 プレビューサーバを停止できます。
 
-### 飾りのない middleman コマンド
+### 飾りのない `middleman` コマンド
 
 コマンド指定なしの `middleman` の使用はサーバの起動と同じです。
 

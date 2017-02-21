@@ -11,6 +11,7 @@ title: 新しいサイトの作成
 ```bash
 $ middleman init
 ```
+
 カレントディレクトリに Middleman のスケルトンプロジェクトを作ります。
 
 ```bash
@@ -36,14 +37,13 @@ JavaScript, CSS や画像のフォルダを含みますが, あなたの好み�
 
 #### Gemfile
 
-Middleman は gem の依存関係の管理に Bundler の Gemfile を使えるように配慮してくれます。
-新しいプロジェクトを作ると, Middleman はあなたが使用している
-Middleman のバージョンを指定した Gemfile を生成します。
-これにより Middleman を特定のリリースシリーズに固定します (例えば 3.0.x シリーズ)。
-もちろん `Gemfile` の `:git` オプションを使用して Github から最新版の
-Middleman を使用することもできます。プロジェクトで使用するプラグインや
-追加ライブラリはすべて Gemfile にリストアップされるべきであり,
-起動時に Middleman はそれらのプラグインやライブラリを自動的に `require` します。
+Middleman は gem 依存関係の管理に Bundler の `Gemfile` を使えるように配慮してくれます。
+新しいプロジェクトを作ると, Middleman はあなたが使用する
+Middleman のバージョンを指定した `Gemfile` を生成します。
+これにより Middleman を特定のリリースシリーズに固定します (例えば 4.0.x シリーズ)。
+プロジェクトで使用するプラグインや追加ライブラリはすべて `Gemfile` に
+リストアップされるべきであり,起動時に Middleman はそれらのプラグインやライブラリを
+自動的に `require` します。
 
 #### config.ru
 
@@ -60,7 +60,7 @@ $ middleman init my_new_project --rack
 ```
 
 すでにプロジェクトの初期化が完了していて, 後から pow やその他開発サーバと連携させるために
-config.ru が欲しい場合は, 次の内容を記述してください:
+`config.ru` が欲しい場合, 次の内容を記述してください:
 
 ```ruby
 require 'middleman/rack'
