@@ -1,8 +1,8 @@
 ---
 jp:
   global_navigation:
-    community: Community
-    docs: Docs
+    community: コミュニティ
+    docs: ドキュメント
     logo: Middleman
     search_placeholder: ドキュメント検索
     support: サポート
