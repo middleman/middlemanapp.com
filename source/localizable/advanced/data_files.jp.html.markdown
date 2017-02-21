@@ -14,7 +14,7 @@ title: データファイル
 
 データが用意された `data/people.yml` を例として示します:
 
-``` yaml
+```yaml
 friends:
   - Tom
   - Dick
@@ -23,7 +23,7 @@ friends:
 
 テンプレートファイルの中ならどこからでも, このデータにアクセスできます:
 
-``` html
+```erb
 <h1>友だち一覧</h1>
 <ol>
   <% data.people.friends.each do |f| %>
@@ -34,7 +34,7 @@ friends:
 
 次のようにレンダリングされます:
 
-``` html
+```html
 <h1>友だち一覧</h1>
 <ol>
   <li>Tom</li>
@@ -51,7 +51,7 @@ friends:
 データを保存のために YAML の代わりに JSON を使うこともできます。
 上記の例では `data/people.json` を使うことができます:
 
-``` json
+```json
 {
   "friends": [
     "Tom",

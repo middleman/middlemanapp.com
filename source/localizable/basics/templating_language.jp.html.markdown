@@ -7,31 +7,31 @@ title: テンプレート
 Middleman は HTML の開発を簡単にするためにたくさんのテンプレート言語へのアクセスを
 提供します。テンプレート言語はページ内で変数やループを使えるようにするシンプルなものから,
 ページを HTML に変換するまったく異なったフォーマットを提供するものにまで
-及びます。 Middleman は ERb, Haml, Sass, Scss や CoffeeScript の
+及びます。 Middleman は ERB, Haml, Sass, SCSS や CoffeeScript の
 サポートを搭載しています。Tilt が有効な gem であればその他にも多くのエンジンが
-有効化できます。[次のリスト](/jp/basics/template_engine_options/) を
-参照してください。
+有効化できます。
+詳しくは [リスト](/jp/basics/template_engine_options/) を参照してください。
 
 ## テンプレートの基礎
 
-デフォルトのテンプレート言語は ERb です。ERb は変数の追加,
+デフォルトのテンプレート言語は ERB です。ERB は変数の追加,
 メソッド呼び出し, ループの使用や if 文を除き, そのままの HTML です。
-このガイドの次のセクションでは使用例として ERb を使います。
+このガイドの次のセクションでは使用例として ERB を使います。
 
 Middleman で使うテンプレートはそのファイル名にテンプレート言語の拡張子を
-含みます。ERb で書かれたシンプルな index ページはファイル名の
-`index.html` と ERb の拡張子を含む `index.html.erb` という名前に
+含みます。ERB で書かれたシンプルな index ページはファイル名の
+`index.html` と ERB の拡張子を含む `index.html.erb` という名前に
 なります。
 
 まず, このファイルには単純な HTML が書かれています:
 
-``` html
+```html
 <h1>ようこそ</h1>
 ```
 
 思いつきでループを追加することができます:
 
-``` html
+```erb
 <h1>ようこそ</h1>
 <ul>
   <% 5.times do |num| %>
@@ -39,4 +39,3 @@ Middleman で使うテンプレートはそのファイル名にテンプレー�
   <% end %>
 </ul>
 ```
-

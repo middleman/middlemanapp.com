@@ -22,7 +22,6 @@ middleman init MY_PROJECT_FOLDER -T username/repo-name
  +middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 ```
 
-
 ## テンプレートディレクトリ
 
 デフォルトのプロジェクトテンプレートに加え, Middleman コミュニティにはたくさんのカスタムテンプレートがあります。コミュニティによって開発されたプロジェクトテンプレートは [ディレクトリ](https://directory.middlemanapp.com/) で確認できます。
@@ -33,10 +32,9 @@ middleman init MY_PROJECT_FOLDER -T username/repo-name
 middleman init MY_NEW_BLOG -T blog
 ```
 
-
 ## Thor テンプレート
 
-処理を必要とするテンプレートは Thor で実現することができます。[デフォルトテンプレート](https://github.com/middleman/middleman-templates-default) はこの方法で作られているのでプロジェクト初期化時に質問をすることができます。
+処理を必要とするテンプレートは [Thor] で実現することができます。[デフォルトテンプレート](https://github.com/middleman/middleman-templates-default) はこの方法で作られているのでプロジェクト初期化時に質問をすることができます。
 
 `Thorfile` はリポジトリの root に配置してください:
 
@@ -57,3 +55,5 @@ end
 ```
 
 この Ruby クラスの中の public メソッドは順に実行されます。上記の簡単な例ではフォルダをコピーしています。`template` ディレクトリにあなたが使用したいデフォルトテンプレートがある場合, 先述した Thor を使用しないテンプレートのように動作します。
+
+[Thor]: http://whatisthor.com/

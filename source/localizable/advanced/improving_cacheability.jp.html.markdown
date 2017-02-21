@@ -22,7 +22,7 @@ Middleman はこの問題解決のために 2 つの方法を提供します。
 `:asset_hash` 拡張が付属しています。
 まず `config.rb` で拡張機能を有効化します:
 
-``` ruby
+```ruby
 activate :asset_hash
 ```
 

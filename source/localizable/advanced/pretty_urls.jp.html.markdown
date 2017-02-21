@@ -14,7 +14,7 @@ Middleman は `.html` 毎にフォルダを作り, そのフォルダの index �
 出力するディレクトリインデックス拡張を提供します。
 `config.rb` で次のように指定します:
 
-``` ruby
+```ruby
 activate :directory_indexes
 ```
 
@@ -22,20 +22,20 @@ activate :directory_indexes
 `about-us/index.html` として出力されます。"index ファイル" 対応の Web サーバに置かれた場合
 (Apache や Amazon S3), このページは次の URL でアクセスできます:
 
-``` ruby
+```ruby
 http://example.com/about-us
 ```
 
 別のファイル名で出力したい場合, `index_file` 変数が設定できます。
 例えば IIS では default.html が使用されます:
 
-``` ruby
+```ruby
 set :index_file, "default.html"
 ```
 
 もしくは PHP ファイルにしたい場合:
 
-``` ruby
+```ruby
 set :index_file, "index.php"
 ```
 
@@ -45,14 +45,14 @@ set :index_file, "index.php"
 アセットファイルの呼び出し (例: 画像ファイル) を行うと失敗します。
 次のように完全な抽象パスを使って呼び出す必要があります:
 
-``` ruby
+```ruby
 ![すごい画像](/posts/2013-09-23-some-interesting-post/amazing-image.png)
 ```
 
 わずかにこのプロセスを自動化するには, Markdown をまずは ERB で作成します。
 例えば `/posts/2013-09-23-some-interesting-post.html.markdown.erb` ファイルがあるとします:
 
-``` ruby
+```ruby
 ![すごい画像](<%= current_page.url %>some-image.png)
 ```
 
@@ -60,7 +60,7 @@ set :index_file, "index.php"
 
 自動的に名前を変更したくないページがある場合, 除外できます:
 
-``` ruby
+```ruby
 page "/i-really-want-the-extension.html", :directory_index => false
 ```
 

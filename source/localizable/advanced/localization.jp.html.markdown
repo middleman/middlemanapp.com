@@ -6,7 +6,7 @@ title: 多言語化 (i18n)
 
 `:i18n` 拡張はサイトに多言語化対応機能を提供します。`config.rb` で次のように有効化します:
 
-``` ruby
+```ruby
 activate :i18n
 ```
 
@@ -19,7 +19,7 @@ YAML ファイルは多言語化する必要がある文字列ごとのキーと
 
 `locales/en.yml`:
 
-``` yaml
+```yaml
 ---
 en:
   hello: "Hello"
@@ -27,7 +27,7 @@ en:
 
 `locales/es.yml`:
 
-``` yaml
+```yaml
 ---
 es:
   hello: "Hola"
@@ -39,8 +39,8 @@ es:
 このヘルパを使うと,  YAML ファイルからキーを参照し, 言語固有の値をテンプレートに差し込みます。
 簡単な `source/localizable/hello_world.html.erb` テンプレートの例です:
 
-``` html
-    <%= I18n.t(:hello) %> World
+```erb
+<%= I18n.t(:hello) %> World
 ```
 
 この場合 2 つのファイルが出力されます:
@@ -50,10 +50,9 @@ es:
 
 テンプレートで `I18n.t` のショートカットとして `t` を使うこともできます:
 
-``` html
-    <%= t(:hello) %> World
+```erb
+<%= t(:hello) %> World
 ```
-
 
 ## 多言語化された場合のパス
 
@@ -63,9 +62,9 @@ es:
 使用します:
 
 ```
- /en/index.html
- /es/index.html
- /fr/index.html
+/en/index.html
+/es/index.html
+/fr/index.html
 ```
 
 `:path` オプションで変更できますが, URL は YAML ファイルの名前を含むことを覚えておいてください:
@@ -85,7 +84,7 @@ activate :i18n, :path => "/langs/:locale/"
 パスの一部に YAML ファイル名を使いたくない場合,
 違う値で書き換えることができます。
 
-``` ruby
+```ruby
 activate :i18n, :path => "/langs/:locale/",
   :lang_map => { :en => :english, :es => :spanish, :fr => :french }
 ```
@@ -115,7 +114,7 @@ activate :i18n, :path => "/langs/:locale/",
 スペイン語の場合に限りファイル名を `hola.html` に書き換えたい場合,
 `locales/es.yml` の中で `paths` キーを使うことができます:
 
-``` yaml
+```yaml
 ---
 es:
   hello: "Hola"
@@ -136,7 +135,7 @@ es:
 その他のテンプレートはそのままビルドされます。
 このフォルダの名前を `:templates_dir` オプションで変更できます:
 
-``` ruby
+```ruby
 # `source/language_specific` を探す設定
 activate :i18n, :templates_dir => "language_specific"
 ```
@@ -146,7 +145,7 @@ activate :i18n, :templates_dir => "language_specific"
 `locales/` フォルダのファイルを自動で探し出す方法よりも,
 対応する言語のリストを指定したい場合, `:langs` オプションを指定できます:
 
-``` ruby
+```ruby
 activate :i18n, :langs => [:en] # :en 以外のすべての言語を無視
 ```
 
@@ -164,7 +163,7 @@ activate :i18n, :langs => [:en] # :en 以外のすべての言語を無視
 `:mount_at_root` を使うことで, この設定を変更したり
 特定言語のルート指定を無効化できます:
 
-``` ruby
+```ruby
 activate :i18n, :mount_at_root => :es # スペイン語をルートに設定
 # または
 activate :i18n, :mount_at_root => false # すべての言語ファイル URL に prefix がつく

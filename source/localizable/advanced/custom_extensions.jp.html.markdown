@@ -10,7 +10,7 @@ Middleman の拡張機能は Middleman の特定のポイントにフックし, 
 
 新しい拡張の雛形は `extension` コマンドで用意できます。このコマンドは必要なファイルを作成します。
 
-```ruby
+```bash
 middleman extension middleman-my_extension
 
 # create  middleman-my_extension/.gitignore
@@ -27,7 +27,7 @@ middleman extension middleman-my_extension
 
 基本的な拡張機能は次のようになります:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
@@ -42,7 +42,7 @@ end
 
 もちろんモジュールが読み込まれてから `config.rb` で有効化しなければなりません:
 
-``` ruby
+```ruby
 activate :my_feature
 ```
 
@@ -53,7 +53,7 @@ activate :my_feature
 
 `activate` は拡張機能を設定するのためにオプションのハッシュ (`register` に渡される) やブロックを渡すことができます。`options` クラスメソッドでオプションを定義することで `options` でアクセスすることができます:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   # この拡張機能のオプション
   option :foo, false, 'Controls whether we foo'
@@ -79,7 +79,7 @@ end
 
 拡張の中のメソッドは `expose_to_config` メソッドを使うことで `config.rb` で利用できるようになります。
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   expose_to_config :say_hello
 
@@ -93,7 +93,7 @@ end
 
 config と同じように, テンプレートに対して追加することができます:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   expose_to_template :say_hello
 
@@ -107,7 +107,7 @@ end
 
 この他のテンプレートにメソッドを追加する方法はヘルパです。ヘルパはテンプレート以外の拡張機能で使用することができません。この方法は module にグループ化されたメソッド群をヘルパにする場合に適した方法です。ほとんどの場合, 先述の expose メソッドを使用した方がよいです。
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def initialize(app, options_hash={}, &block)
     super
@@ -121,9 +121,9 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。ERb テンプレートでの使用例を示します:
+これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。ERB テンプレートでの使用例を示します:
 
-``` html
+```erb
 <h1><%= make_a_link("http://example.com", "クリックしてください") %></h1>
 ```
 
@@ -133,7 +133,7 @@ end
 
 **Note:** `manipulate_resource_list` は "継ぎ手" にあたる処理です。パイプラインの次の処理に渡すために完全なリソースを返す必要があります。
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def manipulate_resource_list(resources)
     resources.each do |resource|
@@ -153,7 +153,7 @@ Middleman には拡張によってフックできる場所があります。い�
 
 コードを実行するために `config.rb` が読み込まれるまで待ちたい場合があります。例えば, `:css_dir` 変数に依存する場合, 設定されるまで待つべきです。次の例ではこのコールバックを使っています:
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def after_configuration
     puts app.config[:css_dir]
@@ -161,11 +161,11 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-### after_build
+### `after_build`
 
 このコールバックはビルドプロセスが完了した後にコードを実行するために使われます。[middleman-smusher](https://github.com/middleman/middleman-smusher) 拡張はビルド完了後に build フォルダのすべての画像を圧縮するためにこの機能を使います。ビルド後に展開したスクリプトを結合することも考えられます。
 
-``` ruby
+```ruby
 class MyFeature < Middleman::Extension
   def after_build(builder)
     builder.thor.run './my_deploy_script.sh'

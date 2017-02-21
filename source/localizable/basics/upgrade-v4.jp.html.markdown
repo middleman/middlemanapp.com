@@ -81,7 +81,7 @@ middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 
 私たちはできるだけ多くのツールをサポートしたいと考えています。Grunt を使いたい? バックグラウンドで ClojureScript JVM? browserify や ember-cli はどうでしょう? `external_pipeline` を使うことで実現できます。Middleman v4 がどうやって外部プロセスをコントロールするかの例です。任意のディレクトリにファイルを出力し, Middleman によって利用されます。
 
-```
+```ruby
 activate :external_pipeline,
   name: :ember,
   command: "cd test-app/ && ember #{build? ? :build : :serve} --environment #{config[:environment]}",
@@ -91,7 +91,7 @@ activate :external_pipeline,
 
 この機能は Middleman のサイトマップを作るための複数のディレクトリを組み合わせる下位レベルの機能によって提供されています。`bower_component` のようなディレクトリを source ディレクトリから分けておくのは良い習慣です。Middleman ではこれが可能です。
 
-```
+```ruby
 import_path File.expand_path('bower_components', app.root)
 ```
 
@@ -101,7 +101,7 @@ import_path File.expand_path('bower_components', app.root)
 
 タグ付けを実装したいとしましょう:
 
-```
+```ruby
 def get_tags(resource)
   if resource.data.tags.is_a? String
     resource.data.tags.split(',').map(&:strip)
@@ -129,7 +129,7 @@ collection :first_tag, tags.keys.sort.first
 
 この設定は常に最新の `all_tags` ハッシュと常に最新のアルファベット順で 1 番最初にくるタグをもつリソースを表す配列を与えます。見るとわかるように, コードは Ruby で書かれているので, あなたのやりたいように実装することができます。2 つだけ制約があります。1 つはコレクションは `resources` から始まるコレクションチェーンから作られること。もう 1 つは `collection` メソッドはテンプレートに情報を渡した後に呼び出されなければなりません。
 
-```
+```erb
 <% collection(:tags).each do |k, items| %>
   Tag: <%= k %> (<%= items.length %>)
   <% items.each do |article| %>
@@ -142,7 +142,7 @@ collection :first_tag, tags.keys.sort.first
 
 コレクションは動的ページを作るために `config.rb` に直接書くこともできます:
 
-```
+```ruby
 tags.each do |k, articles|
   proxy "/tags/#{k}.html", "/tags/list.html", locals: {
     articles: articles
@@ -172,19 +172,19 @@ v4 では, Application, Template Context や Config Context は単一の共有�
 
 * `resources :more_pages` は拡張の中の `more_pages` メソッドを呼びます。このメソッドは Hash を返します。キーには出力先 URL, 値には別の内部メソッドを表す文字列または Symbol です。
 
-	```
-	resources :more_pages
-	
-	def more_pages
-		{
-			"/page1.html" => :page1,
-			"/page2.html" => "Hello"
-		}
-	end
-	
-	def page1
-		"Page 1"
-	end
-	```
+```ruby
+resources :more_pages
+
+def more_pages
+	{
+		"/page1.html" => :page1,
+		"/page2.html" => "Hello"
+	}
+end
+
+def page1
+	"Page 1"
+end
+```
 
 * `resources "/page1.html" => "greetings"` は上記の短縮形です。このメソッドはページのパスと Symbol または文字列の Hash をとります。

@@ -14,13 +14,13 @@ Padrino フレームワークによって組み込まれています。[完全�
 Padrino はリンクタグを作るための `link_to` メソッドを提供します。
 基本的な使い方では `link_to` が引数にリンク名とリンク URL を取ります:
 
-``` html
+```erb
 <%= link_to '私のサイト', 'http://mysite.com' %>
 ```
 
 `link_to` はより複雑な内容のリンクを生成できるように, ブロックをとることもできます:
 
-``` html
+```erb
 <% link_to 'http://mysite.com' do %>
   <%= image_tag 'mylogo.png' %>
 <% end %>
@@ -34,13 +34,13 @@ Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 `source/about.html` ファイルがあり `:directory_indexes` が有効化されている場合, 次のように
 リンクします:
 
-``` html
+```erb
 <%= link_to 'About', '/about.html' %>
 ```
 
 結果:
 
-```
+```html
 <a href='/about/'>About</a>
 ```
 
@@ -50,19 +50,19 @@ Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 
 `:directory_indexes` が有効化され, source/foo/index.html.erb の中から相対パスを得る場合:
 
-``` html
+```erb
 <%= link_to 'About', '/about.html', :relative => true %>
 ```
 
 結果:
 
-``` html
-<a href='../about/'>About</a>
+```html
+<a href="../about/">About</a>
 ```
 
 `link_to` で作られるあらゆる URL を相対パスにしたい場合, `config.rb` に次を追加します:
 
-``` ruby
+```ruby
 set :relative_links, true
 ```
 
@@ -85,7 +85,7 @@ Resource/Blogarticle の [`path` 属性][`path` attribute] を介した *ソー�
 与えるか, 単にリソース自体のパスを与えます。どちらの方法も `link_to` に
 相対 URL を生成させます:
 
-``` html
+```erb
 <ul>
   <% blog.articles.each do |article| %>
     <li>
@@ -107,7 +107,7 @@ Resource/Blogarticle の [`path` 属性][`path` attribute] を介した *ソー�
 
 リンクのクエリパラメータや URL フラグメントを次のように含めることができます:
 
-```ruby
+```erb
 <%= link_to '私のフォーム', '/form.html', :query => { :foo => 'bar' }, :fragment => 'deep' %>
 ```
 
@@ -131,7 +131,7 @@ Resource/Blogarticle の [`path` 属性][`path` attribute] を介した *ソー�
 レンダリングをサポートします。その 1 つの例はテンプレートからレイアウトに
 assets を含めるものです:
 
-``` html
+```erb
 <% content_for :assets do %>
   <%= stylesheet_link_tag 'index', 'custom' %>
 <% end %>
@@ -140,7 +140,7 @@ assets を含めるものです:
 テンプレートに追加することで, ブロックに含まれる部分をキャプチャしレイアウトで
 yield を用いて出力します:
 
-``` html
+```erb
 <head>
   <title>例</title>
   <%= stylesheet_link_tag 'style' %>
@@ -154,7 +154,7 @@ yield を用いて出力します:
 `content_for?` にキーを与えることで `content_for` ブロックが存在するか
 確認することもできます:
 
-``` html
+```erb
 <% if content_for?(:assets) %>
   <div><%= yield_content :assets %></div>
 <% end %>
@@ -162,7 +162,7 @@ yield を用いて出力します:
 
 ブロック引数にも対応します。
 
-``` ruby
+```erb
 yield_content :head, param1, param2
 content_for(:head) { |param1, param2| ...content... }
 ```
@@ -177,7 +177,7 @@ content_for(:head) { |param1, param2| ...content... }
 任意の html タグを生成します。 html タグが "中身" を含む場合, `content_tag` が使われます。
 例:
 
-``` html
+```erb
 <%= tag :img, :src => "/my_image.png" %>
   # => <img src='/my_image.png'>
 
@@ -190,7 +190,7 @@ content_for(:head) { |param1, param2| ...content... }
 `input_tag` はユーザからの入力を受け付けるタグを生成するために
 使われます:
 
-``` ruby
+```erb
 input_tag :text, :class => "demo"
   # => <input type='text' class='demo'>
 input_tag :password, :value => "secret", :class => "demo"
@@ -203,7 +203,7 @@ input_tag :password, :value => "secret", :class => "demo"
 html をビューテンプレートに挿入する手助けをします。簡単なビューテンプレートでの使用方法は
 次のようになります:
 
-``` html
+```erb
 <html>
 <head>
   <%= stylesheet_link_tag 'layout' %>
@@ -227,7 +227,7 @@ html をビューテンプレートに挿入する手助けをします。簡単
 Form ヘルパは form を作る際に使うであろう "一般的な" form タグのヘルパです。
 非オブジェクトの form が作られる場合の簡単な例は次のように:
 
-``` html
+```erb
 <% form_tag '/destroy', :class => 'destroy-form', :method => 'delete' do %>
   <% field_set_tag do %>
     <p>
@@ -265,7 +265,7 @@ HTML/XML のアンパサンド, 括弧や引用符をエスケープします。
 表示する前にユーザコンテンツをエスケープするのに便利です。 `js_escape_html` は
 JS テンプレートから JavaScript の関数に情報を与える場合に使用されます。
 
-``` ruby
+```erb
 escape_html('<hello>&<goodbye>') # => &lt;hello&gt;&amp;&lt;goodbye&gt;
 ```
 
@@ -275,7 +275,7 @@ escape_html('<hello>&<goodbye>') # => &lt;hello&gt;&amp;&lt;goodbye&gt;
 フォーマットヘルパは `simple_format`, `pluralize`, `word_wrap` や `truncate`
 のようなテキストの加工に便利な機能も含みます。
 
-``` ruby
+```erb
 simple_format("hello\nworld")
   # => "<p>hello<br/>world</p>"
 pluralize(2, '人')
@@ -298,13 +298,13 @@ Sinatra の影響も受けた静的ツール [Frank プロジェクト][Frank pr
 
 例えば, ダミーテキストを 5 文出力したい場合, 次のように書けます。
 
-``` ruby
+```erb
 <%= lorem.sentences 5 %>
 ```
 
 その他のメソッドについてもテキストに関して利用できます:
 
-``` ruby
+```ruby
 lorem.sentence      # 1 文を返す
 lorem.words 5       # 5 つの単語を返す
 lorem.word
@@ -319,7 +319,7 @@ lorem.email
 
 プレースホルダ画像の使用方法:
 
-``` ruby
+```ruby
 lorem.image('300x400')
   #=> http://placehold.it/300x400
 lorem.image('300x400', :background_color => '333', :color => 'fff')
@@ -336,13 +336,13 @@ lorem.image('300x400', :text => 'blah')
 `page_classes` はこれらの属性名を生成します。`projects/rockets/saturn-v.html`
 にページがあるとすると, レイアウトには次のように表示されます:
 
-``` erb
+```erb
 <body class="<%= page_classes %>">
 ```
 
 結果:
 
-``` html
+```html
 <body class="projects rockets saturn-v">
 ```
 
@@ -356,7 +356,7 @@ Middleman は `build?` と `development?` の 2 つのヘルパを用意して�
 Google Analytics のトラッキングコードが挙げられます。イベントを
 ローカルホストの Web サイトからは送信せず, プロダクションビルドでのみ送信したい場合です。
 
-```html
+```erb
 <% if build? %>
   <%= partial "tracking_snippet" %>
 <% end %>
@@ -370,7 +370,7 @@ Middleman によって提供されるヘルパに加え,
 
 ヘルパメソッドを定義するには, `config.rb` の中で `helpers` ブロックを使います:
 
-``` ruby
+```ruby
 helpers do
   def some_method
     # ...何らかの処理を追加...
@@ -383,7 +383,7 @@ end
 `lib/custom_helpers.rb` という名前のファイルに上記のヘルパを抽出する場合には,
 モジュールを作ることができます:
 
-``` ruby
+```ruby
 module CustomHelpers
   def some_method
     # ...何らかの処理を追加...
@@ -393,7 +393,7 @@ end
 
 次に `config.rb` に追加:
 
-``` ruby
+```ruby
 require "lib/custom_helpers"
 helpers CustomHelpers
 ```
