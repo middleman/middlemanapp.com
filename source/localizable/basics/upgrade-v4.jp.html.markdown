@@ -172,19 +172,19 @@ v4 では, Application, Template Context や Config Context は単一の共有�
 
 * `resources :more_pages` は拡張の中の `more_pages` メソッドを呼びます。このメソッドは Hash を返します。キーには出力先 URL, 値には別の内部メソッドを表す文字列または Symbol です。
 
-	```ruby
-	resources :more_pages
-	
-	def more_pages
-		{
-			"/page1.html" => :page1,
-			"/page2.html" => "Hello"
-		}
-	end
-	
-	def page1
-		"Page 1"
-	end
-	```
+```ruby
+resources :more_pages
+
+def more_pages
+	{
+		"/page1.html" => :page1,
+		"/page2.html" => "Hello"
+	}
+end
+
+def page1
+	"Page 1"
+end
+```
 
 * `resources "/page1.html" => "greetings"` は上記の短縮形です。このメソッドはページのパスと Symbol または文字列の Hash をとります。
