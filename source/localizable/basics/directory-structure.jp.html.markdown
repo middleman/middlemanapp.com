@@ -6,7 +6,7 @@ title: ディレクトリ構造
 
 デフォルトの Middleman インストールではディレクトリ構造は次のようになります:
 
-``` ruby
+```
 mymiddlemansite/
 +-- .gitignore
 +-- Gemfile
@@ -55,4 +55,3 @@ Middleman は特定の目的のために `source`, `build`, `data` と `lib` デ
 `lib` ディレクトリには, アプリケーションを構築するための [テンプレートヘルパ](/jp/basics/helpers/) を含む
 外部 Ruby モジュールを配置することができます。Rails を利用されているのであれば,
 この配置方法は同じです。
-

@@ -16,7 +16,7 @@ Middleman は CSS のミニファイや JavaScript の圧縮処理を行うの�
 `config.rb` で, サイトのビルド時に `minify_css` 機能と `minify_javascript` 機能を
 有効化します。
 
-``` ruby
+```ruby
 configure :build do
   activate :minify_css
   activate :minify_javascript
@@ -35,7 +35,7 @@ docs](https://github.com/lautis/uglifier) を参照してください。
 例えば,
 次のように危険な最適化やトップレベル変数名のシンボル化を有効化できます:
 
-``` ruby
+```ruby
 require "uglifier"
 activate :minify_javascript,
   compressor: proc {
@@ -50,7 +50,7 @@ JavaScript の圧縮を行う場合には, mangle オプションが無効に指
 そのファイルは異なるハッシュを含むファイル名で HTML の中の参照も
 バージョン毎に異なります。次のように設定します:
 
-``` ruby
+```ruby
 require "uglifier"
 activate :minify_javascript, compressor: -> { Uglifier.new(:mangle => false) }
 ```
@@ -79,7 +79,7 @@ HTML, CSS や JavaScript を作ることができ, Web サーバに GZIP ファ�
 直接配信するように命じることができます。
 まず, `:gzip` 拡張を有効化します:
 
-``` ruby
+```ruby
 activate :gzip
 ```
 
@@ -98,41 +98,37 @@ Apache の場合, 少しトリッキーなことをしなければなりませ�
 Middleman は HTML 出力を圧縮する公式の拡張機能を提供しています。
 gem で簡単にインストールします:
 
-``` bash
+```bash
 gem install middleman-minify-html
 ```
 
 `Gemfile` に `middleman-minify-html` を追加します:
 
-``` ruby
+```ruby
 gem "middleman-minify-html"
 ```
 
 そして `config.rb` を開いて次を追加します:
 
-``` ruby
+```ruby
 activate :minify_html
 ```
 
 ソースを確認すると HTML が圧縮されていることがわかります。
 
-
 ## source sets (srcset) の使用
 
 HTML に最近追加されたものに `img` や `picture` タグの `srcset` 属性があります。この属性は viewport (`1024w, 800w, 600w, や 320w` のような幅指定) やブラウザの解像度 (`1x, 2x, 3x, ...` のような値) によって異なる画像を異なるサイズでブラウザにロードできます。
 
-
 ```html
 <img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
 <img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
-
 ```
 
 `:asset_hash` オプションと一緒に `secset` を使用したい場合, [アセットパイプラインのページ](/jp/advanced/asset_pipeline.html) に書かれている `image_path` ヘルパーを使用する必要があります。
 
-```html
+```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
-
 
 [caniuse.com](http://caniuse.com/#feat=srcset) で確認できるように `srcset` 属性はまだすべてのブラウザでサポートされていません。`srcset` をサポートしないブラウザの場合フォールバックとして `src` 属性を使います。注意するポイントとして, 一部のブラウザではフォールバックとして `srcset` 属性の最初の値を使用します。上記の例で属性値の最初に最大の画像を入れているのはこのためです。

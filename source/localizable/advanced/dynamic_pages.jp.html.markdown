@@ -13,7 +13,7 @@ Proxy を作るには, `config.rb` で `proxy` メソッドを使い, 作りた�
 使いたいテンプレートのパスを与えます(テンプレートファイル自体の拡張子は除く)。
 次の例は `config.rb` の設定例の 1 つです:
 
-``` ruby
+```ruby
 # source/about/template.html.erb が存在することを想定
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }
@@ -30,7 +30,7 @@ end
 ほとんどの場合, `person_name` 変数なしにテンプレートを出力したくはないでしょう。
 Middleman に `person_name` 変数なしを無視するように指定できます::
 
-``` ruby
+```ruby
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
 end
@@ -44,7 +44,7 @@ end
 `config.rb` に `ignore` メソッドを追加することで,
 ビルド時に任意のパスを無視することも可能です。
 
-``` ruby
+```ruby
 ignore "/ignore-this-template.html"
 ```
 
@@ -56,7 +56,7 @@ ignore "/ignore-this-template.html"
 
 次の例では, プロキシパスは `/about/#{name}/index.html` になります:
 
-``` ruby
+```ruby
 ["tom", "dick", "harry"].each do |name|
   proxy "/about/#{name}/index.html", "/about/template.html", :locals => { :person_name => name }, :ignore => true
 end

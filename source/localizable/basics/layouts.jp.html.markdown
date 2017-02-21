@@ -16,7 +16,7 @@ Ruby の世界と Middleman では逆のアプローチを取ります。
 
 ERb を使ったレイアウトの例です:
 
-``` html
+```erb
 <html>
 <head>
   <title>私のサイト</title>
@@ -29,13 +29,13 @@ ERb を使ったレイアウトの例です:
 
 ERb で書かれたページテンプレートが与えられます:
 
-``` html
+```erb
 <h1>Hello World</h1>
 ```
 
 組み合わされた最終的な HTML 出力は次のように:
 
-``` html
+```html
 <html>
 <head>
   <title>私のサイト</title>
@@ -78,15 +78,15 @@ ERb で書かれたページテンプレートが与えられます:
 admin 用の新しいレイアウトを作るには, `source/layouts` フォルダに
 新たに "admin.erb" ファイルを追加します。次の内容だったとします:
 
-``` html
-    <html>
-    <head>
-      <title>Admin Area</title>
-    </head>
-    <body>
-      <%= yield %>
-    </body>
-    </html>
+```erb
+<html>
+<head>
+  <title>Admin Area</title>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
 ```
 
 次に, どのページがこのレイアウトを使用するのか指定する必要があります。
@@ -95,7 +95,7 @@ admin 用の新しいレイアウトを作るには, `source/layouts` フォル�
 `source` フォルダの中に "admin" フォルダがある状態で "admin" の中のテンプレートは
 admin レイアウトを使うとしましょう。`config.rb` は次のようになります:
 
-``` ruby
+```ruby
 page "/admin/*", :layout => "admin"
 ```
 
@@ -106,7 +106,7 @@ page "/admin/*", :layout => "admin"
 `login.html.erb` が置かれているが,
 admin レイアウトを適用したい場合です。ページテンプレートの例として次を使います。
 
-``` html
+```html
 <h1>Login</h1>
 <form>
   <input type="text" placeholder="Email">
@@ -117,7 +117,7 @@ admin レイアウトを適用したい場合です。ページテンプレー�
 
 この特別なページには次のようにカスタムレイアウトを指定できます:
 
-``` ruby
+```ruby
 page "/login.html", :layout => "admin"
 ```
 
@@ -126,7 +126,7 @@ page "/login.html", :layout => "admin"
 ページ毎にレイアウトを指定することもできます。
 `login.html.erb` ページ自身にレイアウトを指定する例です。
 
-``` html
+```html
 ---
 layout: admin
 ---
@@ -149,7 +149,7 @@ footer など) 。
 
 シンプルなデフォルトのレイアウトは次のようになります:
 
-``` html
+```erb
 <html>
   <body>
     <header>ヘッダ</header>
@@ -163,7 +163,7 @@ blog 記事が blog/my-article.html.markdown に置かれているとします�
 すべての blog 記事が デフォルトの `layout` に代わり `article_layout` を使うように
 指定します。 config.rb を編集:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.layout = "article_layout"
 end
@@ -175,7 +175,7 @@ page "blog/*", :layout => :article_layout
 
 `layouts/article_layout.erb` は次のようになります:
 
-``` html
+```erb
 <% wrap_layout :layout do %>
   <article>
     <%= yield %>
@@ -186,7 +186,7 @@ page "blog/*", :layout => :article_layout
 通常のレイアウトと同じように, `yield` はテンプレートの出力内容が
 配置される場所です。この例では次の出力になります:
 
-``` html
+```html
 <html>
   <body>
     <header>ヘッダ</header>
@@ -203,7 +203,7 @@ page "blog/*", :layout => :article_layout
 いくつかの場合では, まったくレイアウトを使いたくない場合があります。
 `config.rb` でデフォルトのレイアウトを無効化することで対応できます:
 
-``` ruby
+```ruby
 set :layout, false
 
 # もしくは個別のファイルで:

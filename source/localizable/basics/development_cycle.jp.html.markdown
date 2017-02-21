@@ -19,7 +19,7 @@ Middleman を使う時間の大半は開発サイクルに
 コマンドラインから, プロジェクトフォルダの中でプレビューサーバを
 起動してください:
 
-``` bash
+```bash
 $ cd my_project
 $ bundle exec middleman server
 ```
@@ -29,13 +29,14 @@ $ bundle exec middleman server
 `source` フォルダでファイルを作成編集し, プレビュー Web サーバ上で
 反映された変更を確認することができます。
 
-コマンドラインから `CTRL-C` を使ってプレビューサーバを停止できます。
+コマンドラインから <kbd>Ctrl</kbd> + <kbd>C</kbd> を使って
+プレビューサーバを停止できます。
 
 ### 飾りのない middleman コマンド
 
 コマンド指定なしの `middleman` の使用はサーバの起動と同じです。
 
-``` bash
+```bash
 $ bundle exec middleman
 ```
 
@@ -46,7 +47,7 @@ $ bundle exec middleman
 Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする拡張がついています。
 まず Gemfile に `middleman-livereload` があることを確認してください。続いて `config.rb` を開いて次の行を追加してください。
 
-``` ruby
+```ruby
 activate :livereload
 ```
 

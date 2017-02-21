@@ -14,7 +14,7 @@ footer パーシャルを作成し, これらのレイアウトで使ってみ�
 拡張子を含みます。例として `source` フォルダに置かれる `_footer.erb` と名付けられた
 footer パーシャルを示します:
 
-``` html
+```html
 <footer>
   Copyright 2011
 </footer>
@@ -23,7 +23,7 @@ footer パーシャルを示します:
 次に, "partial" メソッドを使ってデフォルトのレイアウトにパーシャルを
 配置します:
 
-``` html
+```erb
 <html>
 <head>
   <title>私のサイト</title>
@@ -37,7 +37,7 @@ footer パーシャルを示します:
 
 admin レイアウトでは次のように:
 
-``` html
+```erb
 <html>
 <head>
   <title>Admin エリア</title>
@@ -58,14 +58,14 @@ admin レイアウトでは次のように:
 パーシャルを使い始めると, 変数を渡すことで異なった呼び出しを
 行いたくなるかもしれません。次の方法で対応出来ます:
 
-``` html
+```erb
 <%= partial(:paypal_donate_button, :locals => { :amount => 1, :amount_text => "Pay $1" }) %>
 <%= partial(:paypal_donate_button, :locals => { :amount => 2, :amount_text => "Pay $2" }) %>
 ```
 
 すると, パーシャルの中で次のようにテキストを設定することができます:
 
-``` html
+```erb
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
   <input name="amount" type="hidden" value="<%= "#{amount}.00" %>" >
   <input type="submit" value="<%= amount_text %>" >

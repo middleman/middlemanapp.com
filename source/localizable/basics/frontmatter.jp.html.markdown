@@ -12,7 +12,7 @@ Frontmatter は YAML または JSON フォーマットでテンプレート上�
 簡単な ERb テンプレートに固有のページのレイアウトを変更する
 Frontmatter を追加します。
 
-``` html
+```yaml
 ---
 layout: "custom"
 title: "私のタイトル"
@@ -37,7 +37,7 @@ Frontmatter はテンプレートの最上部に記述し, 行頭から行末ま
 Frontmatter に JSON を使うこともできます。`;;;` で区切られ
 次のようになります:
 
-``` html
+```json
 ;;;
 "layout": "custom",
 "my_list": [

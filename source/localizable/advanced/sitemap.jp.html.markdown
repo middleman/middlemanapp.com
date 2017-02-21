@@ -58,7 +58,7 @@ Resource オブジェクトのプロパティは Middleman の内部レンダリ
 追加されているものとして, カテゴリーごとに動的にカテゴリーページを作ります。
 `config.rb` に次の内容を追加:
 
-``` ruby
+```ruby
 ready do
   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
     proxy "/categories/#{category}.html", "category.html",

@@ -8,12 +8,12 @@ title: 新しいサイトの作成
 すでに存在するフォルダを使うか, `middleman init` コマンドで Middleman が作成する
 フォルダを使うことができます。
 
-``` bash
+```bash
 $ middleman init
 ```
 カレントディレクトリに Middleman のスケルトンプロジェクトを作ります。
 
-``` bash
+```bash
 $ middleman init my_new_project
 ```
 my_new_project ディレクトリに Mmiddleman のスケルトンプロジェクトを作ります。
@@ -54,14 +54,14 @@ config.ru ファイルは Rack 対応の Web サーバによってどのよう�
 プロジェクト内に `config.ru` ファイルの雛形を含めるには, init コマンドに `--rack`
 フラグを追加してください:
 
-``` bash
+```bash
 $ middleman init my_new_project --rack
 ```
 
 すでにプロジェクトの初期化が完了していて, 後から pow やその他開発サーバと連携させるために
 config.ru が欲しい場合は, 次の内容を記述してください:
 
-```
+```ruby
 require 'middleman/rack'
 run Middleman.server
 ```

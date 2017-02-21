@@ -10,7 +10,7 @@ title: ビルド & デプロイ
 静的ブログをホストするような場合, サイトをビルドする必要があります。
 コマンドラインを使い, プロジェクトフォルダの中から `middleman build` を実行してください:
 
-``` bash
+```bash
 $ cd my_project
 $ bundle exec middleman build
 ```
@@ -43,7 +43,8 @@ $ middleman deploy [--build-before]
 
 ## プロダクション環境のアセットハッシュ & CDN 設定
 
-プロダクション環境では一般的にアセットファイル名にハッシュ文字列を付与し CDN でそのファイルを提供します。Middleman を使うことで簡単に対応することができます:
+プロダクション環境では一般的にアセットファイル名にハッシュ文字列を付与し CDN でそのファイルを提供します。
+Middleman を使うことで簡単に対応することができます:
 
 ```ruby
 configure :build do

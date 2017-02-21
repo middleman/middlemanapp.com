@@ -8,13 +8,13 @@ Middleman にはブログ, つまり記事投稿とタグ付けに対応した�
 `middleman-blog` は拡張機能の 1 つで, 使用するにはインストールする必要があります。
 単に `Gemfile` で gem を指定するだけです:
 
-``` ruby
+```ruby
 gem "middleman-blog", "~> 4.0"
 ```
 
 そして `config.rb` で拡張機能を有効化します:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   # ブログ機能のオプションを設定
 end
@@ -23,7 +23,7 @@ end
 また, `middleman-blog` を一度インストールすれば
 ブログ機能がセットアップされた新しいプロジェクトを作れるようになります:
 
-``` bash
+```bash
 middleman init MY_BLOG_PROJECT --template=blog
 ```
 
@@ -56,7 +56,7 @@ Middleman に関する新しい投稿を作るとしましょう。
 `source/2011-10-18-middleman.html.markdown` を作ります。このファイルの最小限の内容は
 Frontmatter に `title` を追加したものです:
 
-``` html
+```yaml
 ---
 title: Middleman ブログの投稿
 ---
@@ -84,7 +84,7 @@ ERb テンプレートのパス (プロジェクトルートからの相対パ�
 ブログのデフォルトのパスは `/` (Web サイトのルート) ですが,
 `config.rb` で上書きできます:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.prefix = "blog"
 end
@@ -99,7 +99,7 @@ end
 
 投稿を閲覧のためのパーマリンクは次のように簡単に変更できます:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.permalink = "blog/{year}/{title}.html"
 end
@@ -116,7 +116,7 @@ end
 例えば, `category` が記事の Frontmatter に定義されている場合に
 パーマリンクに含めることができます:
 
-```html
+```yaml
 ---
 title: Middleman のブログ投稿
 date: 2013/10/13
@@ -126,7 +126,7 @@ category: HTML5
 Hello World
 ```
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.permalink = "blog/{category}/{title}.html"
 end
@@ -164,7 +164,7 @@ Frontmatter で `category` を指定しなくても
 `config.rb` ですべての記事に使われる [レイアウト](/jp/basics/layouts/) を
 指定することができます。
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.layout = "blog_layout"
 end
@@ -194,7 +194,7 @@ Middleman の [入れ子レイアウト](/jp/basics/layouts/#入れ子レイア�
 
 例えば, 最新 5 件の記事と要約の一覧を表示する例です:
 
-``` html
+```erb
 <% blog.articles[0...5].each do |article| %>
   <article>
     <h1>
@@ -211,7 +211,7 @@ Middleman の [入れ子レイアウト](/jp/basics/layouts/#入れ子レイア�
 
 タグアーカイブのタグデータへアクセスすることもできます:
 
-``` html
+```erb
 <ul>
   <% blog.tags.each do |tag, articles| %>
     <li>
@@ -228,7 +228,7 @@ Middleman の [入れ子レイアウト](/jp/basics/layouts/#入れ子レイア�
 
 同様にカレンダー形式の一覧もできます:
 
-``` html
+```erb
 <ul>
   <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
     <li>
@@ -245,7 +245,7 @@ Middleman の [入れ子レイアウト](/jp/basics/layouts/#入れ子レイア�
 
 Frontmatter に `public` フラグを追加している場合:
 
-``` html
+```erb
 <h1>Public Articles</h1>
 <% blog.articles.select {|a| a.data[:public] }.each do |article| %>
   ...
@@ -282,7 +282,7 @@ Frontmatter に `public` フラグを追加している場合:
 を作り, タグごとにページを `tags/{tag}.html` を作ります。
 上記の例にいくつかのタグを追加すると次のようになります:
 
-``` html
+```yaml
 ---
 title: Middleman のブログ投稿
 date: 2011/10/18
@@ -296,7 +296,7 @@ Hello World
 
 パスは `config.rb` で変更できます:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.taglink = "categories/{tag}.html"
 end
@@ -344,7 +344,7 @@ Middleman は記事を切り取る機能を提供しています。
 ブログ拡張が検索し切り取る区切り文字列は
 `config.rb` で設定できます:
 
-``` ruby
+```ruby
 activate :blog do |blog|
   blog.summary_separator = /SPLIT_SUMMARY_BEFORE_THIS/
 end
@@ -354,7 +354,7 @@ end
 次の行を追加することで記事ページヘのリンクをともなった要約を
 表示することができます:
 
-``` erb
+```erb
 <%= article.summary %>
 <%= link_to 'もっと読む…', article %>
 ```
@@ -390,7 +390,7 @@ HTML 対応の要約の提供には, 要約を使うために `gem 'nokogiri'` �
 長い記事の一覧は複数ページに分割できます。テンプレートは
 次の設定がされているとページ分割されます。
 
-```html
+```yaml
 ---
 pageable: true
 ---
@@ -451,7 +451,7 @@ prev_page      # 隣接するページが存在しない場合 nil
 
 Frontmatter で下書きを指定できます:
 
-``` html
+```yaml
 ---
 title: 作成中
 published: false
@@ -473,7 +473,7 @@ RSS フィードの正確な公開時刻の取得や,
 自動で正確なスケジュールで記事を公開するために, ブログのタイムゾーンを
 `config.rb` で設定できます:
 
-``` ruby
+```ruby
 Time.zone = "Tokyo"
 ```
 
@@ -483,7 +483,7 @@ Middleman ブログは [Frontmatter](/jp/basics/frontmatter/) に定義した
 データによって記事をグループ分けする機能に対応しています。
 次の一般的な例では *category* 属性を使って記事をグループ分けします。
 
-```html
+```yaml
 ---
 title: Middleman のブログ投稿
 date: 2013/10/13

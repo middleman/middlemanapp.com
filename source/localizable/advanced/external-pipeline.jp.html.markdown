@@ -14,7 +14,7 @@ Middleman はこれらすべてのソリューションや言語に対応する�
 
 簡単な Ember の例は次のようになります:
 
-```
+```ruby
 activate :external_pipeline,
   name: :ember,
   command: "cd test-app/ && ember #{build? ? :build : :serve} --environment #{config[:environment]}",
@@ -28,7 +28,7 @@ Ember はコードを `test-app/dist` にコンパイルし, このコードは 
 
 # Webpack の例
 
-```
+```ruby
 activate :external_pipeline,
   name: :webpack,
   command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch -d',
@@ -44,7 +44,7 @@ Broccoli についてはこちらを参照してください: https://github.com
 
 *config.rb*
 
-```
+```ruby
 activate :external_pipeline,
   :name => 'broccoli',
   :command => (build? ? 'broccoli build pipeline-build' : 'broccoli-timepiece pipeline-build'),
@@ -57,7 +57,7 @@ activate :external_pipeline,
 
 Brocfile 例です (babel, SCSS や同様のプラグインで拡張可能)。
 
-```
+```javascript
 /* globals module,require,process */
 
 var Funnel            = require('broccoli-funnel');
@@ -142,7 +142,7 @@ module.exports = finalTree;
 
 *package.json*
 
-```
+```json
 {
   "name": "assets",
   "version": "1.0.0",

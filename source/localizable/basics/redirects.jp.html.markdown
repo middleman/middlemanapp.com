@@ -10,6 +10,6 @@ title: リダイレクト
 
 Middleman でリダイレクト指定のファイルを生成:
 
-``` ruby
+```ruby
 redirect "/my/old/path.html", to: "/my/new/path.html"
 ```

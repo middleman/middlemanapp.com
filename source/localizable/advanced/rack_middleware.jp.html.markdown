@@ -24,7 +24,7 @@ code ブロックからできています。構文ハイライトは Middleman �
 呼び出されるミドルウェアは [`Rack::Codehighlighter`](https://github.com/wbzyl/rack-codehighlighter) です。
 `config.rb` での使用方法を示します:
 
-``` ruby
+```ruby
 require 'rack/codehighlighter'
 require "pygments"
 use Rack::Codehighlighter,
@@ -36,7 +36,7 @@ use Rack::Codehighlighter,
 
 この処理を行うために `Gemfile` に正しい依存関係を追加してください:
 
-``` ruby
+```ruby
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 gem "pygments.rb"
 ```
