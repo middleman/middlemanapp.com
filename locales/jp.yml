@@ -28,7 +28,6 @@ jp:
       external_pipeline: 外部パイプライン
       configuration: 設定
       custom_extensions: カスタム拡張
-      custom_templates: カスタムテンプレート
       data_files: データファイル
       development_optimization: 開発の最適化
       dynamic_pages: 動的ページ
