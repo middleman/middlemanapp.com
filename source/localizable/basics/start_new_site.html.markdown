@@ -31,11 +31,11 @@ source folder is where you will build your website. The skeleton project
 contains folders for JavaScript, CSS and images, but you can change these to
 match your own personal preferences.
 
-The `config.rb` file contains settings for Middleman and commented
-documentation on how to enable complex features such as compile-time
-compression and "blog mode".
+The `config.rb` file contains [settings for Middleman].
 
-#### Gemfile
+[settings for Middleman]: /advanced/configuration/
+
+#### `Gemfile`
 
 Middleman will respect a Bundler `Gemfile` for specifying and controlling your
 gem dependencies. When creating a new project, Middleman will generate a
