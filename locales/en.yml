@@ -81,7 +81,7 @@ en:
     main_text: Middleman benefits from an active community. Whether you need a
       question answered or want to contribute to open-source features, browse
       the features below to make the most of Middleman.
-    built_using_middleman: Companies Using Middleman
+    built_using_middleman: People Using Middleman
     forum:
       header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
@@ -126,7 +126,7 @@ help you do that."
       and tools in modern web development.
     getting_started: Getting started
     contribute: Contribute to the open-source community
-    see_middleman_sites: See All Middleman Sites
+    see_middleman_sites: See More
     stickers: Buy Middleman stickers
     donate: Donate to Middleman
 
