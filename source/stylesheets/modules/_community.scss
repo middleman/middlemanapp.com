@@ -118,9 +118,11 @@
 }
 
 .logo-block li {
+  padding: 2em;
   display: inline-block;
 }
 
 .logo-block img {
-  width: 200px;
+  height: 50px;
+  opacity: 0.2;
 }
