@@ -1,0 +1,27 @@
+/basics/dynamic-pages                  /advanced/dynamic_pages               301
+/basics/pretty-urls                    /advanced/pretty_urls                 301
+/advanced/custom                       /advanced/custom_extensions           301
+/basics/templates                      /basics/templating_language           301
+/basics/helpers                        /basics/helper_methods                301
+/basics/getting-started                /basics/install                       301
+/basics/asset-pipeline                 /advanced/asset_pipeline              301
+/advanced/custom-templates             /advanced/project_templates           301
+/advanced/improving-cacheability       /advanced/improving_cacheability      301
+/advanced/local-data                   /advanced/data_files                  301
+/advanced/rack-middleware              /advanced/rack_middleware             301
+/advanced/file-size-optimization       /advanced/file_size_optimization      301
+/community/built-using-middleman       /community/built_using_middleman      301
+
+/jp/basics/dynamic-pages               /jp/advanced/dynamic_pages            301
+/jp/basics/pretty-urls                 /jp/advanced/pretty_urls              301
+/jp/advanced/custom                    /jp/advanced/custom_extensions        301
+/jp/basics/templates                   /jp/basics/templating_language        301
+/jp/basics/helpers                     /jp/basics/helper_methods             301
+/jp/basics/getting-started             /jp/basics/install                    301
+/jp/basics/asset-pipeline              /jp/advanced/asset_pipeline           301
+/jp/advanced/custom-templates          /jp/advanced/project_templates        301
+/jp/advanced/improving-cacheability    /jp/advanced/improving_cacheability   301
+/jp/advanced/local-data                /jp/advanced/data_files               301
+/jp/advanced/rack-middleware           /jp/advanced/rack_middleware          301
+/jp/advanced/file-size-optimization    /jp/advanced/file_size_optimization   301
+/jp/community/built-using-middleman    /jp/community/built_using_middleman   301
