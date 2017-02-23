@@ -31,11 +31,11 @@ source folder is where you will build your website. The skeleton project
 contains folders for JavaScript, CSS and images, but you can change these to
 match your own personal preferences.
 
-The `config.rb` file contains settings for Middleman and commented
-documentation on how to enable complex features such as compile-time
-compression and "blog mode".
+The `config.rb` file contains [settings for Middleman].
 
-#### Gemfile
+[settings for Middleman]: /advanced/configuration/
+
+#### `Gemfile`
 
 Middleman will respect a Bundler `Gemfile` for specifying and controlling your
 gem dependencies. When creating a new project, Middleman will generate a
@@ -45,24 +45,17 @@ example). All plugins and extra libraries you use in your project should be
 listed in your `Gemfile`, and Middleman will automatically `require` all of them
 when it starts.
 
-#### config.ru
+#### `config.ru`
 
 A `config.ru` file describes how the site should be loaded by a Rack-enabled
-webserver. This file is provided as a convenience for users wishing to host
-their Middleman site in development mode on a Rack-based host such as Heroku.
-Remember that Middleman is built to generate *static* sites, though.
-
-To include a boilerplate `config.ru` file in your project, add the `--rack`
-flag to the init command:
-
-```bash
-$ middleman init my_new_project --rack
-```
-
-If you've already initialized a project and just want the `config.ru` for
-linking with pow or other development server its contents are simply:
+web server. If you'd like to host your Middleman site in development mode on a
+Rack-based host such as Heroku, you can add a `config.ru` file at the root of
+your project with the following contents:
 
 ```ruby
 require 'middleman/rack'
 run Middleman.server
 ```
+
+Remember that Middleman is built to generate *static* sites, though. This
+scenario is not a primary use-case.
