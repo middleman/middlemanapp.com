@@ -1,0 +1,15 @@
+.c-site-footer {
+  background-color: tint($mm-light-gray, 90%);
+  padding: 6rem 1rem;
+  text-align: center;
+
+  a {
+    color: $base-font-color;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}

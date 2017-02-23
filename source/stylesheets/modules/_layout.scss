@@ -1,7 +1,3 @@
-body {
-  background-color: $base-background-color;
-}
-
 .wrap-container {
   @include outer-container;
   padding: 0 $gutter;
