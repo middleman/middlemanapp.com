@@ -48,10 +48,10 @@ Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder
 called `data` and makes this information available in your templates. The
 `data` folder should be placed in the root of your project i.e. in the same
 folder as your project's `source` folder. See the [Local
-Data](/advanced/data_files/) docs for more information.
+Data](/advanced/data-files/) docs for more information.
 
 ### Lib Directory
 
 The `lib` directory enables you to include external Ruby modules which contain
-[helpers](/basics/helper_methods/) for building your application. If you use Rails
+[helpers](/basics/helper-methods/) for building your application. If you use Rails
 then you will be familiar with this layout.

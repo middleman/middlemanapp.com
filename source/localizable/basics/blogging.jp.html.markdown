@@ -153,7 +153,7 @@ Frontmatter で `category` を指定しなくても
 ### きれいな URL (ディレクトリインデックス)
 
 ブログ記事を HTML ファイルとしてではなくディレクトリとして
-表示させたい場合には,[きれいな URL](/jp/basics/pretty-urls/) 機能を
+表示させたい場合には,[きれいな URL](/jp/advanced/pretty-urls/) 機能を
 有効化することも検討しましょう。
 
 **Note:** `directory_indexes` を有効化する場合, ブログ拡張を有効化した *後に* 設定するように
@@ -527,7 +527,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-この出力 ([`directory_indexes`](/jp/basics/pretty-urls/) が有効化された場合) は次のようになります:
+この出力 ([`directory_indexes`](/jp/advanced/pretty-urls/) が有効化された場合) は次のようになります:
 
 ```
 build/2011/10/18/middleman/index.html

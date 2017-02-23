@@ -28,4 +28,4 @@ $ middleman server
 $ middleman build
 ```
 
-The uses of each of these commands will be covered in the next section, [Start a New Site](/basics/start_new_site).
+The uses of each of these commands will be covered in the next section, [Start a New Site](/basics/start-new-site).

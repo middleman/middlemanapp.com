@@ -28,4 +28,4 @@ $ middleman server
 $ middleman build
 ```
 
-それぞれのコマンドの使用方法は次のセクションで説明します。[新しいサイトの作成](/jp/basics/start_new_site) へ。
+それぞれのコマンドの使用方法は次のセクションで説明します。[新しいサイトの作成](/jp/basics/start-new-site) へ。

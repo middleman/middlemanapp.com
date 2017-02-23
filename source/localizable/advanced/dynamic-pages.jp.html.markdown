@@ -52,7 +52,7 @@ ignore "/ignore-this-template.html"
 
 ## きれいな URL (ディレクトリインデックス)
 
-動的ページと [ディレクトリインデックス](/jp/advanced/pretty_urls/) を併用するには `/index.html` が続いたプロキシパスを指定します。
+動的ページと [ディレクトリインデックス](/jp/advanced/pretty-urls/) を併用するには `/index.html` が続いたプロキシパスを指定します。
 
 次の例では, プロキシパスは `/about/#{name}/index.html` になります:
 

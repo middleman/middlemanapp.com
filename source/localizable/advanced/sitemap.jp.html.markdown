@@ -70,5 +70,5 @@ end
 そして, 取得したカテゴリごとにページをビルドするために, `category` と `pages` 変数を使う
 `category.html.erb` を作ります。
 
-[dynamic pages]: /jp/basics/dynamic_pages/
+[dynamic pages]: /jp/advanced/dynamic-pages/
 [frontmatter]: /jp/basics/frontmatter/

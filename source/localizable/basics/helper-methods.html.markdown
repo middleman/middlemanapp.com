@@ -30,7 +30,7 @@ Middleman enhances the `link_to` helper to be aware of the
 [sitemap](/advanced/sitemap/). If you refer to pages in your source folder
 (with their file extension minus all the template extensions) then `link_to`
 will generate the correct link, even if you have extensions like
-[`:directory_indexes`](/advanced/pretty_urls/) on. For example, if you had a file
+[`:directory_indexes`](/advanced/pretty-urls/) on. For example, if you had a file
 `source/about.html` and `:directory_indexes` on, you could link to it like
 this:
 

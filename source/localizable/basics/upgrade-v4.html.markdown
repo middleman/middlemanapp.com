@@ -61,7 +61,7 @@ This refactor allows Middleman to run as a Rack server and still update on file 
 
 ## Installing Project Templates from Git
 
-[Documentation](https://middlemanapp.com/advanced/project_templates/)
+[Documentation](https://middlemanapp.com/advanced/project-templates/)
 
 During `middleman init`, custom project templates from `~/.middleman` or gems are no longer supported. Project templates must be git repositories.
 

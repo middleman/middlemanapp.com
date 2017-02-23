@@ -61,7 +61,7 @@ Rails のように, あらかじめ決められているパスから環境固有
 
 ## Git によるプロジェクトテンプレートのインストール
 
-[プロジェクトテンプレート](https://middlemanapp.com/jp/advanced/project_templates/)
+[プロジェクトテンプレート](https://middlemanapp.com/jp/advanced/project-templates/)
 
 `middleman init` 実行時の `~/.middleman` や gem からのカスタムテンプレートの取得はサポートされなくなりました。プロジェクトテンプレートは git リポジトリに用意する必要があります。
 

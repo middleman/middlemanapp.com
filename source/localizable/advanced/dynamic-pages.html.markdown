@@ -52,7 +52,7 @@ You can give ignore exact source paths, filename globs, or regexes.
 
 ## Pretty URLs (Directory Indexes)
 
-To use Dynamic Pages with [Directory Indexes](/advanced/pretty_urls) specify the proxy path followed by `/index.html`.
+To use Dynamic Pages with [Directory Indexes](/advanced/pretty-urls/) specify the proxy path followed by `/index.html`.
 
 Following the example above, the proxy path would become `/about/#{name}/index.html`:
 

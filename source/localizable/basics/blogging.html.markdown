@@ -152,7 +152,7 @@ extracted from the source path via
 
 ### Pretty URLs (Directory Indexes)
 
-You might also consider enabling the [pretty urls](/basics/pretty-urls/)
+You might also consider enabling the [pretty urls](/advanced/pretty-urls/)
 feature if you want your blog posts to appear as directories instead of HTML
 files.
 
@@ -527,7 +527,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-might be output (if [`directory_indexes`](/basics/pretty-urls/) is turned on) as:
+might be output (if [`directory_indexes`](/advanced/pretty-urls/) is turned on) as:
 
 ```
 build/2011/10/18/middleman/index.html

@@ -129,7 +129,7 @@ Now, inside your templates, you will have access to a `make_a_link` method. Here
 
 ## Sitemap Manipulators
 
-You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/basics/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/basics/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
+You can modify or add pages in the [sitemap](/advanced/sitemap/) by creating a Sitemap extension. The [`:directory_indexes`](/advanced/pretty-urls/) extension uses this feature to reroute normal pages to their directory-index version, and the [blog extension](/basics/blogging/) uses several plugins to generate tag and calendar pages. See [the `Sitemap::Store` class](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) for more details.
 
 **Note:** `manipulate_resource_list` is a "reducer". It is required to return the full set of resources to be passed to the next step of the pipeline.
 

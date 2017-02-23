@@ -29,7 +29,7 @@ Padrino はリンクタグを作るための `link_to` メソッドを提供し�
 Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 把握させることで強化します。 source フォルダ
 (ファイル拡張子からテンプレート言語拡張子を除いた状態で) のページへの
-参照を与えると,`link_to` は [`:directory_indexes`](/jp/basics/pretty-urls/) 拡張が
+参照を与えると,`link_to` は [`:directory_indexes`](/jp/advanced/pretty-urls/) 拡張が
 有効化されていたとしても, 正しいリンクを生成します。例えば,
 `source/about.html` ファイルがあり `:directory_indexes` が有効化されている場合, 次のように
 リンクします:
