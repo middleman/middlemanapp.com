@@ -1,0 +1,7 @@
+jshint:
+  enabled: false
+ruby:
+  enabled: false
+scss:
+  config_file: .scss-lint.yml
+  enabled: true
