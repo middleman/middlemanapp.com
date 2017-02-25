@@ -13,7 +13,7 @@ module GuideHelpers
 
   def edit_guide_url
     p = Pathname(current_page.source_file).relative_path_from(Pathname(root))
-    "https://github.com/middleman/middleman-guides/blob/master/#{p}"
+    "https://github.com/middleman/middlemanapp.com/blob/master/#{p}"
   end
 
   def locale_prefix
