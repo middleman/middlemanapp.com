@@ -117,6 +117,13 @@ help you do that."
     title: Support Middleman Development
     subtitle: If you'd like to show your support, you can make a donation or purchase stickers to show your love.
 
+  footer:
+    maintained:
+      Maintained by the <a href="https://github.com/orgs/middleman/people">core
+      team</a> with help from
+      <a href="https://github.com/middleman/middleman/graphs/contributors">
+      contributors</a>.
+
   # index
   index:
     sub_title: Hand-crafted frontend development
@@ -134,7 +141,7 @@ help you do that."
     title: Sites Built Using Middleman
     mobile: Mobile Apps Built Using Middleman
     blog: Blogs Using Middleman
-    twitter: "@middlemanapp"
+    twitter: Twitter
     github: GitHub
     source_code: source code
     fork: Fork and add your site on GitHub

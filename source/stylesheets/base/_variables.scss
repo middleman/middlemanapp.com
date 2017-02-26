@@ -47,7 +47,7 @@ $mm-light-gray: #c0c0c0;
 $mm-blue: #4280ca;
 
 // Font Colors
-$base-font-color: darken($mm-slate-gray, 25%);
+$base-font-color: shade($mm-slate-gray, 65%);
 $base-accent-color: $mm-yellow;
 $header-font-color: $dark-gray;
 $secondary-accent-color: $mm-blue;
@@ -59,7 +59,6 @@ $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
 // Background Color
-$base-background-color: #fff;
 $base-hero-color: $base-accent-color;
 
 // Border color
@@ -78,7 +77,3 @@ $browser-body-color: $dark-gray;
 $global-nav-height: em(64);
 $global-nav-link-color: #fff;
 $global-nav-link-hover-color: rgba($global-nav-link-color, 0.75);
-
-// Footer Variables
-$footer-link-color: $medium-gray;
-$footer-link-hover-color: darken($footer-link-color, 10%);
