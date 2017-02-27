@@ -2,31 +2,22 @@
 @import "dropdown";
 @import "searchbox";
 
-$searchbox: true!default;
+$searchbox: true !default;
 
 @if($searchbox == true){
   @include searchbox($searchbox-config...);
 }
 
 .search {
+  @include padding(1rem null);
   background-color: tint($mm-light-gray, 90%);
-  padding: 2rem;
+  flex-grow: 0;
 }
 
 .searchbox {
   @include margin(null auto);
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  -o-flex-direction: row;
-  flex-direction: row;
-  align-items: center;
-  max-width: 40rem;
+  display: block;
+  max-width: 29rem;
 }
 
 .searchbox__input[type=search] {
@@ -46,10 +37,6 @@ $searchbox: true!default;
 }
 
 @media (max-width: 960px) {
-
-  .searchbox {
-    max-width: calc(100% - 450px);
-  }
   .searchbox__input {
     min-width: 100%;
     white-space: nowrap;
@@ -88,11 +75,6 @@ $searchbox: true!default;
   }
   .ds-hint, .searchbox__input {
     min-width: inherit;
-  }
-  .searchbox {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 4em;
   }
 }
 

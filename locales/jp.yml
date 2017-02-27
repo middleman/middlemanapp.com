@@ -1,6 +1,6 @@
 ---
 jp:
-  global_navigation:
+  site_navigation:
     community: コミュニティ
     docs: ドキュメント
     logo: Middleman

@@ -1,6 +1,6 @@
 ---
 en:
-  global_navigation:
+  site_navigation:
     community: Community
     docs: Documentation
     logo: Middleman

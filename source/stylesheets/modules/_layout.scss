@@ -9,50 +9,7 @@
   text-align: center;
 }
 
-.body-content-container {
-  margin-bottom: 1em;
-  padding-top: 1em;
-  position: relative;
-
-  @include media($medium-screen-up) {
-    padding-top: 4em;
-    margin-bottom: 4em;
-  }
-}
-
-.sidebar-container {
-  float: left;
-  height: 100%;
-  width: 100%;
-  word-wrap: break-word;
-
-  @include media($medium-screen-up) {
-    width: $medium-sidebar-width;
-  }
-
-  @include media($large-screen-up) {
-    width: $large-sidebar-width;
-  }
-
-  @include media($larger-screen-up) {
-    width: $larger-sidebar-width;
-  }
-}
-
 .main {
-
-  @include media($medium-screen-up) {
-    padding-left: $medium-sidebar-width + 3em;
-  }
-
-  @include media($large-screen-up) {
-    padding-left: $large-sidebar-width + 3em;
-  }
-
-  @include media($larger-screen-up) {
-    padding-left: $larger-sidebar-width + 3em;
-  }
-
   h1 {
     margin-top: 0.15em;
     padding-bottom: 0.35em;

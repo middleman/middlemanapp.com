@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge,chrome=1" http-equiv="x-ua-compatible">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title><%= page_title %></title>
+    <%= stylesheet_link_tag "site" %>
+  </head>
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag "site" %>
+    <%= partial "partials/tracking" %>
+  </body>
+</html>
