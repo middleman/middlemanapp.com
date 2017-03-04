@@ -4,7 +4,7 @@
   height: 7.5em;
   margin: 0.5em auto 0;
   text-align: center;
-  width: em(145);
+  width: 9.0625em;
 }
 
 .community-main-title {
@@ -80,7 +80,7 @@
 }
 
 .forum-browser {
-  width: em(300);
+  width: 18.75em;
 
   @include media($medium-screen-up) {
     width: auto;

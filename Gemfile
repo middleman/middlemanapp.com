@@ -12,7 +12,7 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'bourbon'
+gem 'bourbon', '>= 5.0.0.beta.7'
 gem 'neat'
 
 # Windows Support
