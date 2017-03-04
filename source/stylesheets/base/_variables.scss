@@ -34,14 +34,13 @@ $dark-gray: #4a4e56;
 $medium-gray: #999;
 
 // Middleman colors
-$mm-yellow: #fbc547;
-$mm-navy: #446184;
-$mm-slate-gray: #8990a1;
+$mm-yellow: #fac03d;
+$mm-navy: #2e4157;
 $mm-light-gray: #c0c0c0;
 $mm-blue: #4280ca;
 
 // Font Colors
-$base-font-color: shade($mm-slate-gray, 65%);
+$base-font-color: $mm-navy;
 $base-accent-color: $mm-yellow;
 $header-font-color: $dark-gray;
 $secondary-accent-color: $mm-blue;
