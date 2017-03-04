@@ -22,20 +22,14 @@
   }
 }
 
-
 @mixin button-outline($type: "darken", $font-color: $mm-navy, $secondary-color:
 transparent) {
   @include button;
-  border: 2px solid $font-color;
-  color: $font-color;
-  background: -webkit-linear-gradient($secondary-color 50%, $font-color 50%);
-  background: -moz-linear-gradient($secondary-color 50%, $font-color 50%);
-  background: -o-linear-gradient($secondary-color 50%, $font-color 50%);
   background: linear-gradient($secondary-color 50%, $font-color 50%);
   background-repeat: repeat;
-  -webkit-background-size: 100% 200%;
-  -moz-background-size: 100% 200%;
   background-size: 100% 200%;
+  border: 2px solid $font-color;
+  color: $font-color;
   transition: all .3s ease-in-out;
 
   @if $type == "fill" {
@@ -56,4 +50,3 @@ transparent) {
     }
   }
 }
-
