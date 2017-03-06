@@ -1,4 +1,4 @@
-.c-global-navigation {
+.c-site-navigation {
   background-color: $mm-yellow;
   font-weight: $font-weight-semibold;
   -webkit-overflow-scrolling: touch;
@@ -14,11 +14,11 @@
   }
 }
 
-.c-global-navigation__site-name {
+.c-site-navigation__site-name {
   font-weight: $font-weight-bold;
   margin-right: 1rem;
 }
 
-.c-global-navigation__link {
+.c-site-navigation__link {
   margin-left: 1rem;
 }

@@ -11,7 +11,9 @@
 @import "mixins/button";
 @import "modules/modules";
 
-@import "components/global-navigation";
+@import "components/container";
 @import "components/site-footer";
+@import "components/site-frame";
+@import "components/site-navigation";
 
 @import "utilities/flex";
