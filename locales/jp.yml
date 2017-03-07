@@ -117,6 +117,13 @@ jp:
     title: Middleman の開発をサポートしてください
     subtitle: 寄付または Middleman ステッカーを購入することで, 開発をサポートすることができます。
 
+  footer:
+    maintained:
+      <a href="https://github.com/middleman/middleman/graphs/contributors">コントリビュータ</a>
+      の助けを借りて
+      <a href="https://github.com/orgs/middleman/people">コアチーム</a> によって
+      メンテナンスされています。
+
   # index
   index:
     sub_title: 作業を効率化するフロントエンド開発ツール
@@ -134,7 +141,7 @@ jp:
     title: Middleman 採用サイト
     mobile: Middleman 採用モバイルアプリケーション
     blog: Middleman 採用ブログ
-    twitter: "@middlemanapp"
+    twitter: Twitter
     github: GitHub
     source_code: ソースコード
     fork: Github で Fork しサイトを追加してください
