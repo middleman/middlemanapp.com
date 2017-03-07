@@ -129,7 +129,7 @@ DEPENDENCIES
   middleman-autoprefixer
   middleman-livereload
   middleman-syntax
-  neat
+  neat (~> 1.8)
   redcarpet
   sass
 
