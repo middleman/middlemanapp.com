@@ -19,6 +19,9 @@ proxy "_redirects", "netlify-redirects", ignore: true
 page "/", layout: "home"
 page "/advanced/*", layout: "documentation"
 page "/basics/*", layout: "documentation"
+page "/jp/", layout: "home"
+page "/jp/advanced/*", layout: "documentation"
+page "/jp/basics/*", layout: "documentation"
 
 configure :development do
   activate :livereload do |reload|

@@ -31,11 +31,11 @@ source フォルダは Web サイトを作る場所です。スケルトンプ�
 JavaScript, CSS や画像のフォルダを含みますが, あなたの好みに合わせて
 変更することができます。
 
-`config.rb` ファイルには Middleman の設定や
-コンパイル時の圧縮や "ブログモード" などの複雑な機能を有効化する方法が
-コメントアウトされたドキュメントとして含まれます。
+`config.rb` には [Middleman の設定] が含まれます。
 
-#### Gemfile
+[Middleman の設定]: /advanced/configuration/
+
+#### `Gemfile`
 
 Middleman は gem 依存関係の管理に Bundler の `Gemfile` を使えるように配慮してくれます。
 新しいプロジェクトを作ると, Middleman はあなたが使用する
@@ -45,24 +45,17 @@ Middleman のバージョンを指定した `Gemfile` を生成します。
 リストアップされるべきであり,起動時に Middleman はそれらのプラグインやライブラリを
 自動的に `require` します。
 
-#### config.ru
+#### `config.ru`
 
 config.ru ファイルは Rack 対応の Web サーバによってどのようにサイトが読み込まれるか
-記述します。このファイルは Middleman で作るサイトの開発時に Heroku のような Rack ベースのサーバにホスティングしたい
-ユーザの便宜のために提供されています。
-しかし Middleman は *静的* サイト生成のために作られていることを忘れないでください。
-
-プロジェクト内に `config.ru` ファイルの雛形を含めるには, init コマンドに `--rack`
-フラグを追加してください:
-
-```bash
-$ middleman init my_new_project --rack
-```
-
-すでにプロジェクトの初期化が完了していて, 後から pow やその他開発サーバと連携させるために
-`config.ru` が欲しい場合, 次の内容を記述してください:
+記述します。開発モードで Middleman サイトを Heroku のような Rack 対応ホストに
+ホスティングしたい場合, 次の内容の `config.ru` ファイルをプロジェクトルートに
+配置することで対応できます。
 
 ```ruby
 require 'middleman/rack'
 run Middleman.server
 ```
+
+Middleman は *静的* サイト生成のために作られていることを忘れないでください。
+この方法は一時的な利用方法に過ぎません。
