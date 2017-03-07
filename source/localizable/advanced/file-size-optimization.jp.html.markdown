@@ -84,7 +84,7 @@ activate :gzip
 ```
 
 そして, GZIP ファイルを配信するようにサーバを設定します。 Nginx を使用する場合,
-[gzip_static](http://wiki.nginx.org/NginxHttpGzipStaticModule) モジュールを確認してください。
+[gzip_static](https://www.nginx.com/resources/wiki/extending/compiling/) モジュールを確認してください。
 Apache の場合, 少しトリッキーなことをしなければなりません。
 例として [Gist](https://gist.github.com/2200790) を確認してください。
 

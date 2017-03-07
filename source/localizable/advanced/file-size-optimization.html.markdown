@@ -84,7 +84,7 @@ activate :gzip
 ```
 
 Then configure your server to serve those files. If you use Nginx, check out
-[the gzip_static](http://wiki.nginx.org/NginxHttpGzipStaticModule) module. For
+[the gzip_static](https://www.nginx.com/resources/wiki/extending/compiling/) module. For
 Apache, you'll have to do something a little trickier - see [this
 Gist](https://gist.github.com/2200790) for an example.
 
