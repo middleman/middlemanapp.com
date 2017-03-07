@@ -188,7 +188,7 @@ has some informative methods on it, and it is also a
 [`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource)
 from the [sitemap](/advanced/sitemap) which has even more information (such as
 the
-[`data`](http://rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter/ResourceInstanceMethods#data-instance_method)
+[`data`](http://www.rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter#data-instance_method)
 from your [frontmatter](/basics/frontmatter/)). Within layouts and even your
 articles themselves you can get the current article via `current_article`.
 
@@ -271,14 +271,14 @@ method, and you can get a list of all tags with their associated articles from
 [`blog.tags`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method).
 If you set the `blog.tag_template` setting in `config.rb` to a template (see
 [the default
-config.rb](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/config.tt))
+`config.rb`](https://github.com/middleman/middleman-templates-blog/blob/master/template/config.rb))
 you can render a page for each tag. The tag template has the local variable
 `tagname` set to the current tag and `articles` set to a list of articles with
 that tag, and you can use the
 [`tag_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method)
 helper to generate links to a particular tag page.
 
-The default template produces a [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb)
+The default template produces a [`tag.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/tag.html.erb)
 template for you that produces a page for each tag at `tags/{tag}.html`. Adding
 a couple tags to the above example would look like this:
 
@@ -308,10 +308,10 @@ Now you can find this article listed on `categories/blogging.html`.
 
 Many blogging engines produce pages that list out all articles for a specific
 year, month, or day. Middleman does this using a
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb)
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
 template and the `blog.calendar_template` setting. The default template
 generates
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb)
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
 for you. This template gets `year`, `month`, and `day` variables set in it, as
 well as `articles` which is a list of articles for that day.
 

@@ -57,11 +57,6 @@ built:
     title: "HTML Color Codes"
   - url: http://hull.io
     title: "Hull.io"
-  - url: https://martinschurig.com
-    title: "Martin Schurig"
-    source: https://github.com/schurig/martinschurig-com-website
-  - url: http://www.nickrttn.me
-    title: "Portfolio :: Nick Rutten"
   - url: http://www.startae.com
     title: "Startaê - We’re your UX Design Team on demand"
   - url: http://www.nickholden.io
@@ -117,8 +112,6 @@ built:
   - url: http://frontcube.com
   - url: http://ravisuhag.com/
   - url: http://www.theverge.com/a/the-verge-50/intro
-  - url: http://noconformity.com/
-    source: https://github.com/chrishough/myblog
   - url: https://saltstack.cz
     title: "Saltstack.cz"
     source: https://github.com/petrkle/saltstack.cz
@@ -167,7 +160,6 @@ built:
   - url: http://hyfn.com
   - url: http://www.heitzke.com
   - url: http://www.incubatebang.com
-  - url: http://www.cileos.com
   - url: http://euruko2013.org
   - url: http://kesseki.harahara.org
   - url: http://mrcthms.com
@@ -197,9 +189,6 @@ built:
   - url: http://nebulab.it
   - url: http://rubyconferences.org
     source: https://github.com/ruby-conferences/ruby-conferences-site
-  - url: http://theartificial.nl/
-    title: "The Artificial"
-    source: https://github.com/TheArtificial/theartificial.nlsha
   - url: http://www.vpsland.com
   - url: http://docs.fraudrankr.com/
   - url: http://waterforpeople.org
@@ -208,12 +197,8 @@ built:
   - url: http://sourcey.com
     source: https://github.com/sourcey/sourcey.com
   - url: https://www.rainforestqa.com/
-  - url: https://docs.rainforestqa.com/
-    source: https://github.com/rainforestapp/docs
   - url: http://www.project-atomic.io/
     source: https://github.com/projectatomic/atomic-site
-  - url: http://pi.tafkas.net/
-    source: https://github.com/Tafkas/my-raspberry-pi-site
   - url: http://jina.me
     source: https://github.com/jina/jina.me
   - url: http://distantfutu.re
@@ -225,8 +210,6 @@ built:
     title: "Echobind"
   - url: http://benjamintan.io
     title: Benjamin Tan Wei Hao
-  - url: http://rubyclosur.es
-    title: The Ruby Closures Book
   - url: http://www.lacroixdesign.net
     title: "LaCroix Design Co."
     source: https://github.com/lacroixdesign/lacroixdesign.net
@@ -244,8 +227,6 @@ built:
     title: "Lean Panda Ruby on Rails Web Agency"
   - url: http://vaporwa.re/
     title: "Vaporware Inc."
-  - url: http://www.tootdeck.com/
-    title: "TootDeck"
   - url: http://parkland.io/
     title: "The Parkland"
   - url: http://webmontag-schwerin.de
@@ -265,16 +246,10 @@ built:
     title: "Adolfo Villafiorita's Home Page"
   - url: http://ecota.co
     title: "EcoTa.co - book a mini cab"
-  - url: http://www.nishanths.me
-    title: "Nishanth Shanmugham"
-    source: https://github.com/nishanths/nishanths.github.io
   - url: https://funio.com
     title: "Funio Web Hosting"
   - url: http://summit.nativeadvertising.com
     title: The Native Advertising Summit
-  - url: https://laurendorman.io
-    title: "Lauren Dorman"
-    source: https://github.com/laurendorman/laurendorman.github.io/tree/dev
   - url: http://ggw-prototype.goalgorilla.com/
     title: "Greenpeace Greenwire style guide & prototype"
     source: https://github.com/greenpeace/ggw_styleguide
@@ -346,7 +321,7 @@ built:
   - url: https://www.ecommwar.com/
     title: eCommWar - Top Open-Source E-Commerce Platforms
     source: https://github.com/ecommwar/ecommwar
-    
+
 mobile:
   - url: http://pollev.com
 blogs:
@@ -378,8 +353,8 @@ blogs:
   - url: http://benhollis.net
   - url: http://darrenknewton.com
   - url: http://thirteen23.com/garage/
-  - url: https://www.bionicspirit.com/
-    source: https://github.com/bionicspirit/bionicspirit.com
+  - url: https://alexn.org/
+    source: https://github.com/alexandru/alexn.org
   - url: http://mattolson.com
   - url: http://carl.hoyer.ca
     source: https://github.com/choyer/carl.hoyer.ca
@@ -393,7 +368,6 @@ blogs:
     source: https://github.com/nathema/4pdj.nl
   - url: https://Andrew.Kvalhe.im
   - url: http://epochwolf.com
-  - url: http://www.adevelopingstory.com
   - url: http://oli-g.me
     source: https://github.com/oli-g/oli-g.github.io/tree/source
   - url: http://michaelboeke.com
@@ -407,7 +381,6 @@ blogs:
   - url: http://schukin.com
   - url: http://fearmediocrity.co.uk
     source: https://github.com/FearMediocrity/fearmediocrity.co.uk
-  - url: http://www.anthonycandaele.com/blog/
   - url: http://lord.io
     title: "Robert Lord"
     source: https://github.com/lord/blog
@@ -416,8 +389,6 @@ blogs:
   - url: http://www.4l3c.org
   - url: http://davidmles.com
   - url: https://blog.rainforestqa.com/
-  - url: http://syui.github.io/middleman/
-    source: https://github.com/syui/middleman-simple-template
   - url: http://limekin.github.io/
   - url: https://chareice.com
   - url: http://www.ecosio.com/de/blog
@@ -434,9 +405,6 @@ blogs:
   - url: http://cball.me
     title: "Level Up"
     source: https://github.com/cball/cball.me
-  - url: http://devahoy.com/
-    title: "DevAhoy"
-    source: https://github.com/devahoy/devahoy-blog
   - url: https://tikhon.com/
     title: "Tikhon Bernstam"
   - url: http://jacbac.github.io/bibliotech/
@@ -473,15 +441,11 @@ blogs:
   - url: http://ikuwow.website
     title: Query OK.
     source: https://github.com/ikuwow/query_ok
-  - url: http://blog.lowermychurn.com
-    title: Customer Success Blog
   - url: http://vyber-tydne.kle.cz
     title: "Výběr týdne"
     source: https://github.com/petrkle/vyber-tydne
   - url: http://mizukiabe.net
     title: "mizukiabe.net"
-  - url: https://mexbt.com
-    title: "meXBT: Mexican Bitcoin Exchange"
   - url: http://engineering.sharethrough.com
     title: Sharethrough Engineering
   - url: http://www.valiantghost.com/

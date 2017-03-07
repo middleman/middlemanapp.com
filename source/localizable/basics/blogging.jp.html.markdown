@@ -186,7 +186,7 @@ Middleman の [入れ子レイアウト](/jp/basics/layouts/#入れ子レイア�
 ごとに便利なメソッドを持っています。
 同時にさらに多くの情報
 ([Frontmatter](/jp/basics/frontmatter) の
-[`data`](http://rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter/ResourceInstanceMethods#data-instance_method)
+[`data`](http://www.rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter#data-instance_method)
 のような) をもつ [サイトマップ](/jp/advanced/sitemap) の
 [`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource) でもあります。
 レイアウトやその記事の中からは `current_article` を介して
@@ -271,14 +271,14 @@ Frontmatter に `public` フラグを追加している場合:
 [`blog.tags`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method)
 から記事に関連するタグリストを取得できます。`config.rb` で `blog.tag_template` に
 テンプレートを設定した場合
-([デフォルトの config.rb](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/config.tt) 参照),
+([デフォルトの `config.rb`](https://github.com/middleman/middleman-templates-blog/blob/master/template/config.rb) 参照),
 タグごとにページをレンダリングできます。タグテンプレートはローカル変数を持ちます。
 現在のタグがセットされた `tagname` とそのタグの記事リストがセットされた `articles`です。
 また特定のタグページへのリンクを作るために
 [`tag_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method)
 ヘルパを使うことができます。
 
-デフォルトテンプレートでは [`tag.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/tag.html.erb)
+デフォルトテンプレートでは [`tag.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/tag.html.erb)
 を作り, タグごとにページを `tags/{tag}.html` を作ります。
 上記の例にいくつかのタグを追加すると次のようになります:
 
@@ -308,10 +308,10 @@ end
 
 多くのブログエンジンは年月日ごとの全記事を載せたページを
 作ります。Middleman は
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb)
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
 テンプレートと `blog.calendar_template` 設定を使ってこれを実現します。
 デフォルトのテンプレートは
-[`calendar.html`](https://github.com/middleman/middleman-blog/blob/master/lib/middleman-blog/template/source/calendar.html.erb)
+[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
 を作ります。このテンプレートでは `year`, `month` と `day` 変数が設定され,
 その日付の記事一覧を出力します。
 
