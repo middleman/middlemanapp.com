@@ -1,16 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.1)
+    activesupport (5.0.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
-    autoprefixer-rails (6.7.2)
+    autoprefixer-rails (6.7.6)
       execjs
     backports (3.6.8)
+    borrower (0.10.0)
     bourbon (5.0.0.beta.7)
       sass (~> 3.4.22)
       thor (~> 0.19.1)
@@ -21,24 +22,23 @@ GEM
     coffee-script-source (1.12.2)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
-    concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.5)
     contracts (0.13.0)
     dotenv (2.2.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.2)
+    eventmachine (1.2.3)
     execjs (2.7.0)
     fast_blank (1.0.0)
-    fastimage (2.0.1)
-      addressable (~> 2)
-    ffi (1.9.17)
+    fastimage (2.1.0)
+    ffi (1.9.18)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashie (3.5.2)
+    hashie (3.5.5)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
     kramdown (1.13.2)
@@ -82,6 +82,10 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
+    middleman-data_source (0.8.1)
+      borrower (~> 0.9)
+      middleman (>= 3.1)
+      rack-test (~> 0.6.2)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -90,8 +94,8 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 2.0)
     minitest (5.10.1)
-    neat (1.8.0)
-      sass (>= 3.3)
+    neat (2.0.0)
+      sass (~> 3.4)
       thor (~> 0.19)
     padrino-helpers (0.13.3.3)
       i18n (~> 0.6, >= 0.6.7)
@@ -104,19 +108,21 @@ GEM
     rack (2.0.1)
     rack-livereload (0.3.16)
       rack
+    rack-test (0.6.3)
+      rack (>= 1.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redcarpet (3.4.0)
-    rouge (2.0.5)
+    rouge (2.0.7)
     sass (3.4.23)
     servolux (0.12.0)
     thor (0.19.4)
-    thread_safe (0.3.5)
+    thread_safe (0.3.6)
     tilt (2.0.6)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.4)
+    uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
 
 PLATFORMS
@@ -127,6 +133,7 @@ DEPENDENCIES
   builder
   middleman
   middleman-autoprefixer
+  middleman-data_source
   middleman-livereload
   middleman-syntax
   neat (~> 1.8)

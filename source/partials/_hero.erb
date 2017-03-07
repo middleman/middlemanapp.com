@@ -10,7 +10,13 @@
         <pre class="browser-body">
           <code class="browser-code"><span class="variable">$</span> <span class="identifier">gem install middleman</span></code>
         </pre>
-        <a class="badge" href="https://badge.fury.io/rb/middleman" target="_blank"><img src="https://badge.fury.io/rb/middleman.svg" alt="Gem Version" height="18"></a>
+
+        <%= link_to(
+          "Current version: #{data.gem_info.version}",
+          data.gem_info.project_uri,
+          class: "version-number",
+          target: "_blank"
+        ) %>
       </div>
     </div>
   </section>

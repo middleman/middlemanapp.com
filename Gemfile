@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Core
 gem 'middleman'
 gem 'middleman-autoprefixer'
+gem 'middleman-data_source'
 gem 'middleman-livereload'
 gem 'middleman-syntax'
 

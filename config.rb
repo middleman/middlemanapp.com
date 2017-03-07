@@ -14,6 +14,15 @@ activate :external_pipeline,
   source: ".tmp/dist",
   latency: 1
 
+activate :data_source do |d|
+  d.sources = [
+    {
+      alias: "gem_info",
+      path: "https://rubygems.org/api/v1/gems/middleman.json"
+    }
+  ]
+end
+
 proxy "_redirects", "netlify-redirects", ignore: true
 
 page "/", layout: "home"
