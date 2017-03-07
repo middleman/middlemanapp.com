@@ -18,7 +18,7 @@
   },
   "homepage": "https://www.middlemanapp.com/",
   "dependencies": {
-    "anchor-js": "^3.2.2",
+    "anchor-js": "^2.1.0",
     "jquery": "^3.1.1",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
