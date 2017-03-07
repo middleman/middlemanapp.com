@@ -9,7 +9,11 @@
     <%= stylesheet_link_tag "site" %>
   </head>
   <body>
-    <%= yield %>
+    <div class="c-site-frame">
+      <%= partial "partials/site_navigation" %>
+      <%= yield %>
+      <%= partial "partials/site_footer" %>
+    </div>
     <%= javascript_include_tag "site" %>
     <%= partial "partials/tracking" %>
   </body>

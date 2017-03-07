@@ -1,11 +1,5 @@
 <% wrap_layout :core do %>
-  <div class="c-site-frame">
-    <%= partial "partials/site_navigation" %>
-
-    <main class="c-site-frame__body" role="main">
-      <%= yield %>
-    </main>
-
-    <%= partial "partials/site_footer" %>
-  </div>
+  <main class="c-site-frame__body" role="main">
+    <%= yield %>
+  </main>
 <% end %>
