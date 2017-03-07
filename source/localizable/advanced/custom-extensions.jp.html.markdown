@@ -129,7 +129,7 @@ end
 
 ## サイトマップ拡張
 
-サイトマップ拡張を作ることで [サイトマップ](/jp/advanced/sitemap/) でページを変更したり追加したりできます。 [ディレクトリインデックス](/jp/basics/pretty_urls/) 拡張はページをディレクトリインデックス版に再ルーティングするためにこの機能を使い, [ブログ拡張](/jp/basics/blogging/) はタグやカレンダーページを作成するためにいくつかのプラグインを使っています。詳細は [`Sitemap::Store` クラス](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) を参照してください。
+サイトマップ拡張を作ることで [サイトマップ](/jp/advanced/sitemap/) でページを変更したり追加したりできます。 [ディレクトリインデックス](/jp/advanced/pretty-urls/) 拡張はページをディレクトリインデックス版に再ルーティングするためにこの機能を使い, [ブログ拡張](/jp/basics/blogging/) はタグやカレンダーページを作成するためにいくつかのプラグインを使っています。詳細は [`Sitemap::Store` クラス](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) を参照してください。
 
 **Note:** `manipulate_resource_list` は "継ぎ手" にあたる処理です。パイプラインの次の処理に渡すために完全なリソースを返す必要があります。
 
