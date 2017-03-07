@@ -1,12 +1,6 @@
-// Project Settings
-@include disable-prefix-for-all;
-
 // Typography
-$sans-serif: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-  "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-  "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-  "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-$monospace-font-family: "Consolas", "monaco", monospace;
+$sans-serif: $font-stack-system;
+$monospace-font-family: $font-stack-consolas;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;

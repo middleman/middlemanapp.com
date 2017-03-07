@@ -18,13 +18,13 @@
 
   @include media($medium-screen-up) {
     margin-bottom: 3em;
-    width: em(550);
+    width: 34.375em;
   }
 }
 
 .community-social-block {
   @include media($medium-screen-up) {
-    width: em(550);
+    width: 34.375em;
   }
 }
 
