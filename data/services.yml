@@ -22,8 +22,8 @@
   tags:
     - Free
     - Paid
-    - AutomaticDeployment
-    - GithubPages
+    - Continuous Deployment
+    - GitHub Pages
 -
   name: DatoCMS
   description: >
@@ -42,6 +42,6 @@
     a single click.
   url: https://www.netlify.com/
   tags:
-    - AutomaticDeployment
+    - Continuous Deployment
     - Free
     - Paid
