@@ -4,7 +4,6 @@
   url: https://github.com/middleman/middleman-templates-blog
   tags: ['Blog']
   official: true
-  slug: blog
   supports_v4: true
 -
   name: middleman-web-starter-kit
@@ -36,21 +35,18 @@
   description: Casper theme (Ghost) for Middleman-Blog.
   url: https://github.com/danielbayerlein/middleman-casper
   tags: [Theme, Blog]
-  slug: casper
   supports_v4: true
 -
   name: middleman-impress
   description: A Middleman Project Template built with impress.js, Haml, Sass and CoffeeScript.
   url: https://github.com/danielbayerlein/middleman-impress
   tags: [Presentation]
-  slug: impress
   supports_v4: true
 -
   name: middleman-pattern-library
   description: A Middleman project template for creating and managing your front-end pattern library / style guide.
   url: https://github.com/danielbayerlein/middleman-pattern-library
   tags: [Pattern Library, Style Guide]
-  slug: pattern-library
   supports_v4: true
 -
   name: Slimmer
