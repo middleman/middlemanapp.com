@@ -619,7 +619,6 @@
     images.
   links:
     github: https://github.com/middlemac/middleman-targets
-    site: https://rubygems.org/gems/middleman-targets
   tags:
     - Assets
     - Environments
@@ -631,7 +630,6 @@
     Children, Breadcrumbs, and more.
   links:
     github: https://github.com/middlemac/middleman-pagegroups
-    site: https://rubygems.org/gems/middleman-pagegroups
   tags:
     - Assets
     - Helpers
@@ -643,7 +641,6 @@
     admin interface. Images are managed by Imgix.
   links:
     github: https://github.com/datocms/middleman-dato
-    site: https://www.datocms.com/docs/tutorials/middleman_netlify/
   tags:
     - Deployment
     - Assets
