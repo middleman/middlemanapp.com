@@ -1,0 +1,41 @@
+-
+  name: OpenShift Online
+  description: "The Open Hybrid Cloud Application Platform by Red Hat.  Launch a Middleman application from the <a href='https://hub.openshift.com/quickstarts/160-middleman'>OpenShift Hub</a> for free."
+  links:
+    site: http://openshift.com
+  tags:
+    - Free
+    - Paid
+-
+  name: Zammu
+  description: |-
+    <a href='https://zammu.in/middleman?invitation_code=MIDDLEMAN'>Automatically build and deploy Middleman websites to Github Pages.</a>
+    Once set up, your website will be deployed to Github Pages whenver you push new content to your Github Repository.
+    <a href='https://zammu.in/middleman?invitation_code=MIDDLEMAN'>Signup now and start publishing with ease, use the invitation code MIDDLEMAN.
+  links:
+    site: https://zammu.in/middleman
+  tags:
+    - Free
+    - Paid
+    - AutomaticDeployment
+    - GithubPages
+-
+  name: DatoCMS
+  description: "DatoCMS is a fully customizable web-based administrative area for your Middleman static websites. Let your clients publish new content independently, host the site anywhere you like."
+  links:
+    site: http://www.datocms.com
+  tags:
+    - Free
+    - Paid
+-
+  name: Netlify
+  description:
+    Deploy modern static websites with our automated platform. Add best
+    practices like SSL, CDN distribution, caching and continuous deployment with
+    a single click.
+  links:
+    site: https://www.netlify.com/
+  tags:
+    - AutomaticDeployment
+    - Free
+    - Paid
