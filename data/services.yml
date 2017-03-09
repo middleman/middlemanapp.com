@@ -1,16 +1,23 @@
 -
   name: OpenShift Online
-  description: "The Open Hybrid Cloud Application Platform by Red Hat.  Launch a Middleman application from the <a href='https://hub.openshift.com/quickstarts/160-middleman'>OpenShift Hub</a> for free."
+  description: >
+    The Open Hybrid Cloud Application Platform by Red Hat. Launch a Middleman
+    application from the
+    <a href="https://hub.openshift.com/quickstarts/160-middleman">OpenShift Hub</a>
+    for free.
   url: https://www.openshift.com/
   tags:
     - Free
     - Paid
 -
   name: Zammu
-  description: |-
-    <a href='https://zammu.in/middleman?invitation_code=MIDDLEMAN'>Automatically build and deploy Middleman websites to Github Pages.</a>
-    Once set up, your website will be deployed to Github Pages whenver you push new content to your Github Repository.
-    <a href='https://zammu.in/middleman?invitation_code=MIDDLEMAN'>Signup now and start publishing with ease, use the invitation code MIDDLEMAN.
+  description: >
+    <a href="https://zammu.in/middleman?invitation_code=MIDDLEMAN">Automatically
+    build and deploy Middleman websites to GitHub Pages</a>. Once set up, your
+    website will be deployed to GitHub Pages whenever you push new content to
+    your GitHub Repository.
+    <a href="https://zammu.in/middleman?invitation_code=MIDDLEMAN">Sign up now
+    and start publishing with ease, use the invitation code MIDDLEMAN</a>.
   url: https://zammu.in/middleman
   tags:
     - Free
@@ -19,7 +26,10 @@
     - GithubPages
 -
   name: DatoCMS
-  description: "DatoCMS is a fully customizable web-based administrative area for your Middleman static websites. Let your clients publish new content independently, host the site anywhere you like."
+  description: >
+    DatoCMS is a fully customizable web-based administrative area for your
+    Middleman static websites. Let your clients publish new content
+    independently, host the site anywhere you like.
   url: https://www.datocms.com/
   tags:
     - Free
