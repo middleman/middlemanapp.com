@@ -1,6 +1,8 @@
 -
   name: middleman-imgix
-  description: Run all of your images (or only some) through imgix for all sorts of fun features.
+  description: >
+    Run all of your images (or only some) through imgix for all sorts of fun
+    features.
   links:
     github: https://github.com/bigcartel/middleman-imgix
   supported_api_versions:
@@ -33,7 +35,9 @@
     - Crawler
 -
   name: liquid-bourbon-middleman
-  description: Use Middleman static site generator with Bourbon and Liquid templates out of the box.
+  description: >
+    Use Middleman static site generator with Bourbon and Liquid templates out of
+    the box.
   links:
     github: https://github.com/Palmaswell/liquid-bourbon-middleman
   supported_api_versions:
@@ -45,7 +49,10 @@
     - Environments
 -
   name: bh · Bootstrap Helpers
-  description: "Include Bootstrap components in your Middleman views with short, documented, tested helpers. Supports alert boxes, modals, panels, navs, navbars, progress bars, dropdowns, icons, buttons and links."
+  description: >
+    Include Bootstrap components in your Middleman views with short, documented,
+    tested helpers. Supports alert boxes, modals, panels, navs, navbars,
+    progress bars, dropdowns, icons, buttons and links.
   links:
     github: https://github.com/Fullscreen/bh
   supported_api_versions:
@@ -54,7 +61,9 @@
     - Tooling
 -
   name: middleman-aws
-  description: Simple set of rake tasks to build and deploy to AWS using s3_sync and cloudfront invalidation extensions.
+  description: >
+    Simple set of rake tasks to build and deploy to AWS using s3_sync and
+    cloudfront invalidation extensions.
   links:
     github: https://github.com/alienfast/middleman-aws
   supported_api_versions:
@@ -75,7 +84,8 @@
     - Environments
 -
   name: middleman-settings
-  description: Use config files to manage your settings in your app with multi environments
+  description: >
+    Use config files to manage your settings in your app with multi environments
   links:
     github: https://github.com/gregory/middleman-settings
   supported_api_versions:
@@ -95,7 +105,9 @@
     - Generator
 -
   name: middleman-presentation
-  description: Helps you to build wonderful presentations based on HTML and JavaScript. It is powered by middleman and reveal.js
+  description: >
+    Helps you to build wonderful presentations based on HTML and JavaScript. It
+    is powered by middleman and reveal.js
   links:
     github: https://github.com/fedux-org/middleman-presentation
   supported_api_versions:
@@ -113,7 +125,8 @@
     - Generator
 -
   name: middleman-imageoptim
-  description: Automatically compress and optimise your imagery during 'middleman build'.
+  description: >
+    Automatically compress and optimise your imagery during 'middleman build'.
   links:
     github: https://github.com/plasticine/middleman-imageoptim
   supported_api_versions:
@@ -123,7 +136,9 @@
     - Optimization
 -
   name: middleman-blog-drafts
-  description: An addon for middleman-blog that simplifies draft posts creation and publishing.
+  description: >
+    An addon for middleman-blog that simplifies draft posts creation and
+    publishing.
   links:
     github: https://github.com/fgrehm/middleman-blog-drafts
   supported_api_versions:
@@ -132,7 +147,9 @@
     - Tooling
 -
   name: middleman-cloudfront
-  description: An Amazon CloudFront extension for middleman which allows you to invalidate CloudFront CDN cache.
+  description: >
+    An Amazon CloudFront extension for middleman which allows you to invalidate
+    CloudFront CDN cache.
   links:
     github: https://github.com/andrusha/middleman-cloudfront
   supported_api_versions:
@@ -141,7 +158,9 @@
     - Deployment
 -
   name: middleman-deploy
-  description: Deploy a middleman built site over rsync, ftp, sftp, or git (e.g. gh-pages on github).
+  description: >
+    Deploy a middleman built site over rsync, ftp, sftp, or git (e.g. gh-pages
+    on github).
   links:
     github: https://github.com/middleman-contrib/middleman-deploy
   supported_api_versions:
@@ -159,7 +178,8 @@
     - Generator
 -
   name: middleman-vcard
-  description: A Middleman extension to generate VCards and useful helpers to work with..
+  description: >
+    A Middleman extension to generate VCards and useful helpers to work with..
   links:
     github: https://github.com/alem0lars/middleman-vcard
   supported_api_versions:
@@ -196,7 +216,9 @@
     - Deployment
 -
   name: middleman-s3_sync
-  description: Tries really hard not to push files to S3 (but will gladly do it if it must).
+  description: >
+    Tries really hard not to push files to S3 (but will gladly do it if it
+    must).
   links:
     github: https://github.com/fredjean/middleman-s3_sync
   supported_api_versions:
@@ -261,7 +283,9 @@
     - Tooling
 -
   name: middleman-ember
-  description: Adds Ember assets to a Middleman project. Support for production version of Ember when building.
+  description: >
+    Adds Ember assets to a Middleman project. Support for production version of
+    Ember when building.
   links:
     github: https://github.com/mrship/middleman-ember
   official: false
@@ -270,7 +294,10 @@
     - Ember
 -
   name: Emberman
-  description: "(Middleman + Ember)'s love child. Adds Ember, Ember Data and Handlebars to your project, pre-compiles Handlebars templates, uses production versions and ignores ingredient assets on build."
+  description: >
+    (Middleman + Ember)'s love child. Adds Ember, Ember Data and Handlebars to
+    your project, pre-compiles Handlebars templates, uses production versions
+    and ignores ingredient assets on build."
   links:
     github: https://github.com/minusfive/emberman
   official: false
@@ -279,7 +306,8 @@
     - Ember
 -
   name: middleman-slim-foundation-emberjs-emblemjs
-  description: Base setup for an emberjs application using foundation, emblemjs, and slim.
+  description: >
+    Base setup for an emberjs application using foundation, emblemjs, and slim.
   links:
     github: https://github.com/chrishough/middleman-slim-foundation-emberjs-emblemjs
   official: false
@@ -298,7 +326,9 @@
     - Generator
 -
   name: middleman-simple-thumbnailer
-  description: Generate thumbnails of images, by providing resize_to option to image_tag helper.
+  description: >
+    Generate thumbnails of images, by providing resize_to option to image_tag
+    helper.
   links:
     github: https://github.com/kubenstein/middleman-simple-thumbnailer
   supported_api_versions:
@@ -323,7 +353,8 @@
     - Tooling
 -
   name: middleman-autoprefixer
-  description: Autoprefixer integration to automatically vendor-prefix stylesheets.
+  description: >
+    Autoprefixer integration to automatically vendor-prefix stylesheets.
   links:
     github: https://github.com/middleman/middleman-autoprefixer
   official: true
@@ -332,7 +363,8 @@
     - Assets
 -
   name: middleman-gibberish
-  description: Password protected senstive web content with javascript only - even on s3!.
+  description: >
+    Password protected senstive web content with javascript only - even on s3!.
   links:
     github: https://github.com/ahoward/middleman-gibberish
   official: false
@@ -341,7 +373,7 @@
     - Generator
 -
   name: middleman-spellcheck
-  description: "Run the aspell spell checker after the assets have been built"
+  description: Run the aspell spell checker after the assets have been built
   links:
     github: https://github.com/minivan/middleman-spellcheck
   official: false
@@ -349,7 +381,9 @@
     - Tooling
 -
   name: middleman-alias
-  description: Add alias info to your frontmatter and Middleman will generate SEO friendly redirect pages.
+  description: >
+    Add alias info to your frontmatter and Middleman will generate SEO friendly
+    redirect pages.
   links:
     github: https://github.com/Octo-Labs/middleman-alias
   supported_api_versions:
@@ -376,7 +410,8 @@
     - Tooling
 -
   name: middleman-ngmin
-  description: Transform AngularJS code in the asset pipeline to be safe for minification.
+  description: >
+    Transform AngularJS code in the asset pipeline to be safe for minification.
   official: false
   links:
     github: https://github.com/bhollis/middleman-ngmin
@@ -385,7 +420,8 @@
     - Assets
 -
   name: middleman-search_engine_sitemap
-  description: Tell search engines which pages are most important in your Middleman site.
+  description: >
+    Tell search engines which pages are most important in your Middleman site.
   official: false
   links:
     github: https://github.com/Aupajo/middleman-search_engine_sitemap
@@ -393,7 +429,8 @@
     - Generator
 -
   name: middleman-sitemap
-  description: Generate sitemaps for your Middleman site with options for GZIP and hostname
+  description: >
+    Generate sitemaps for your Middleman site with options for GZIP and hostname
   official: false
   links:
     github: https://github.com/statonjr/middleman-sitemap
@@ -401,7 +438,9 @@
     - Generator
 -
   name: contentful_middleman
-  description: Load content from the Contentful CMS and let business users/editors manage the content in a Web UI.
+  description: >
+    Load content from the Contentful CMS and let business users/editors manage
+    the content in a Web UI.
   links:
     github: https://github.com/contentful/contentful_middleman
   supported_api_versions:
@@ -456,7 +495,8 @@
     - Tooling
 -
   name: middleman-blog-similar
-  description: An extension for middleman-blog that adds method to lookup similar article.
+  description: >
+    An extension for middleman-blog that adds method to lookup similar article.
   links:
     github: https://github.com/ngs/middleman-blog-similar
   supported_api_versions:
@@ -499,7 +539,8 @@
     - Assets
 -
   name: middleman-navtree
-  description: Automatically generate navigation trees and menus in your middleman site.
+  description: >
+    Automatically generate navigation trees and menus in your middleman site.
   official: false
   links:
     github: https://github.com/bryanbraun/middleman-navtree
@@ -507,7 +548,9 @@
     - Generator
 -
   name: middleman-cdn
-  description: Automatic invalidation of CloudFlare, MaxCDN, AWS CloudFront, Fastly and Rackspace CDN cache.
+  description: >
+    Automatic invalidation of CloudFlare, MaxCDN, AWS CloudFront, Fastly and
+    Rackspace CDN cache.
   official: false
   links:
     github: https://github.com/leighmcculloch/middleman-cdn
@@ -515,7 +558,9 @@
     - Deployment
 -
   name: middleman-disqus
-  description: "A Middleman extension to integrate Disqus into your site, supporting Disqus configuration variables and comment counts."
+  description: >
+    A Middleman extension to integrate Disqus into your site, supporting Disqus
+    configuration variables and comment counts.
   official: false
   links:
     github: https://github.com/simonrice/middleman-disqus
@@ -534,7 +579,9 @@
     - Optimization
 -
   name: middleman-knockoutjs
-  description: Adds KnockoutJS assets to a Middleman project. Also includes support for Jasmine unit testing.
+  description: >
+    Adds KnockoutJS assets to a Middleman project. Also includes support for
+    Jasmine unit testing.
   links:
     github: https://github.com/bnadlerjr/middleman-knockoutjs
   supported_api_versions:
@@ -568,7 +615,8 @@
     - Navigation
 -
   name: statistrano
-  description: Deploy any static site via rsync as versioned releases or feature branches.
+  description: >
+    Deploy any static site via rsync as versioned releases or feature branches.
   official: false
   links:
     github: https://github.com/mailchimp/statistrano
@@ -583,7 +631,6 @@
   tags:
     - Email
     - Security
-
 -
   name: Mail2FrontMatter
   description: allows you to email updates to your blog
@@ -604,8 +651,8 @@
   name: middleman-pry
   description: >
     Replaces Middleman's built-in console with
-    <a href='http://pryrepl.org/'>Pry</a>, à la
-    <a href='https://github.com/rweng/pry-rails'>pry-rails</a>.
+    <a href="http://pryrepl.org/">Pry</a>, à la
+    <a href="https://github.com/rweng/pry-rails">pry-rails</a>.
   links:
     github: https://github.com/AndrewKvalheim/middleman-pry/
   official: no
@@ -660,7 +707,7 @@
 
 -
   name: middleman-es6
-  description: "ES6 for Middleman"
+  description: ES6 for Middleman
   links:
     github: https://github.com/vast/middleman-es6
   supported_api_versions:
@@ -742,7 +789,9 @@
     - Deployment
 -
   name: Surf-N-Perf
-  description: Micro-library for gathering front-end web performance data. Includes helpers for Middleman projects.
+  description: >
+    Micro-library for gathering front-end web performance data. Includes helpers
+    for Middleman projects.
   links:
     github: https://github.com/Comcast/Surf-N-Perf
   supported_api_versions:
@@ -754,7 +803,10 @@
     - WebPerf
 -
   name: middleman-foxycart
-  description: FoxyCart (hosted eCommerce) helpers to generate product links (including HMAC verficiation links) and include the required Javascript in your templates.
+  description: >
+    FoxyCart (hosted eCommerce) helpers to generate product links (including
+    HMAC verficiation links) and include the required Javascript in your
+    templates.
   links:
     github: https://github.com/rjocoleman/middleman-foxycart
   supported_api_versions:
@@ -785,7 +837,9 @@
     - Github
 -
   name: middleman-targets
-  description: Build and serve multiple targets with granular feature control and automatic images.
+  description: >
+    Build and serve multiple targets with granular feature control and automatic
+    images.
   links:
     github: https://github.com/middlemac/middleman-targets
     site: https://rubygems.org/gems/middleman-targets
@@ -799,7 +853,9 @@
     - Tooling
 -
   name: middleman-pagegroups
-  description: Simple, automatic navigation for groups of Middleman pages. Siblings, Children, Breadcrumbs, and more.
+  description: >
+    Simple, automatic navigation for groups of Middleman pages. Siblings,
+    Children, Breadcrumbs, and more.
   links:
     github: https://github.com/middlemac/middleman-pagegroups
     site: https://rubygems.org/gems/middleman-pagegroups
@@ -813,7 +869,9 @@
     - Tooling
 -
   name: middleman-dato
-  description: Let your clients manage the content of your Middleman website from a web admin interface. Images are managed by Imgix.
+  description: >
+    Let your clients manage the content of your Middleman website from a web
+    admin interface. Images are managed by Imgix.
   links:
     github: https://github.com/datocms/middleman-dato
     site: https://www.datocms.com/docs/tutorials/middleman_netlify/
