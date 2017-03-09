@@ -28,7 +28,7 @@
     - normalize
     - modernizr
     - haml
-    - scss
+    - sass
     - ejs
     - autoprefixer
 -
@@ -135,7 +135,7 @@
   url: https://github.com/axyz/middleman-zurb-foundation
   tags:
     - ZURB Foundation
-    - Sass
+    - sass
     - bower
 -
   name: middleman-by-lifepillar
@@ -146,7 +146,7 @@
   tags:
     - ZURB Foundation
     - Font Awesome
-    - Sass
+    - sass
     - Disqus
     - Analytics
     - MathJax
@@ -166,7 +166,7 @@
   tags:
     - ZURB Foundation
     - Foundation 5
-    - Sass
+    - sass
     - HAML
     - CoffeeScript
 -
@@ -204,7 +204,7 @@
   url: https://github.com/nikiliu/sauce
   tags:
     - Haml
-    - Sass
+    - sass
     - CoffeeScript
     - Autoprefixer
     - Normalize
@@ -285,7 +285,7 @@
   url: https://github.com/PaBLoX-CL/slender-man
   tags:
     - slim
-    - Sass
+    - sass
     - bower
     - coffeescript
 -
@@ -304,7 +304,7 @@
   url: https://github.com/techpeace/personal-site-template
   tags:
     - ZURB Foundation
-    - Sass
+    - sass
     - theming
     - github pages
 -
@@ -328,7 +328,7 @@
     - Font Awesome
     - slim
     - coffeescript
-    - Sass
+    - sass
 -
   name: Thane
   description: >
@@ -339,7 +339,7 @@
   tags:
     - Bootstrap
     - Slim
-    - SCSS
+    - sass
 -
   name: Duo Color
   description: >
@@ -351,7 +351,7 @@
     - bootstrap
     - slim
     - markdown
-    - SCSS
+    - sass
     - mobile
     - compass
     - Blog
@@ -362,7 +362,7 @@
     template Landed by HTML5 UP. Demo online at http://html5up.net/landed
   url: https://github.com/rriemann/html5-up-landed-middleman4
   tags:
-    - Sass
+    - sass
     - Font Awesome
     - Skel
     - Slim
@@ -373,7 +373,7 @@
     Starter template with: Bower, Sass, Bourbon, Neat, CoffeeScript, jQuery
   url: https://github.com/juanghurtado/middleman-bower-bourbon-neat
   tags:
-    - Sass
+    - sass
     - Bower
     - Coffeescript
     - jQuery
@@ -387,7 +387,7 @@
   url: https://github.com/webBoxio/middleman-confman
   tags:
     - CoffeeScript
-    - Sass
+    - sass
     - Bourbon
     - Conference
 -
@@ -416,7 +416,7 @@
     - Heroku
     - Livereload
     - Bower
-    - Sass
+    - sass
     - Bourbon
     - Susy
     - Slim
@@ -457,7 +457,7 @@
   url: https://github.com/hello-jason/middleman-bss.git
   tags:
     - Bootstrap
-    - SCSS
+    - sass
     - Slim
     - Font Awesome
 -
@@ -481,7 +481,7 @@
   tags:
     - Blog
     - Heroku
-    - SCSS
+    - sass
     - Slim
     - Font Awesome
 -
@@ -491,7 +491,7 @@
   url: https://github.com/austinlchang/middleman-haml-heroku
   tags:
     - HAML
-    - SCSS
+    - sass
     - Heroku
 -
   name: middleman-haml-boilerplate
@@ -501,7 +501,7 @@
   url: https://github.com/elfacht/middleman-haml-boilerplate
   tags:
     - HAML
-    - SCSS
+    - sass
     - Grunt
     - Foundation
     - RSS
@@ -518,7 +518,7 @@
     - Blog
     - Slim
     - Bower
-    - Sass
+    - sass
     - Bourbon
     - Normalize.css
 -
@@ -532,7 +532,7 @@
     - Bootstrap
     - Prototyping
     - Font Awesome
-    - Sass
+    - sass
     - BEM
 -
   name: middleman-cactus
@@ -550,7 +550,7 @@
   tags:
     - Rails Assets
     - HAML
-    - Sass
+    - sass
     - Compass
     - Boostrap
     - jQuery
@@ -562,7 +562,7 @@
   url: https://github.com/paperdigits/middleman-foundation-6
   tags:
     - ZURB Foundation
-    - Sass
+    - sass
     - bower
     - haml
 -
@@ -571,8 +571,8 @@
   url: https://github.com/guemidiborhane/middleman-template
   tags:
     - HAML
-    - Sass
-    - libSass
+    - sass
+    - libsass
     - Browserify
     - Coffeeify
     - Bootstrap
@@ -586,7 +586,7 @@
     - ZURB Foundation
     - Foundation 6
     - Haml
-    - Sass
+    - sass
 -
   name: Middleman Semantic UI
   description: >
@@ -595,7 +595,7 @@
   tags:
     - Semantic UI
     - Haml
-    - Sass
+    - sass
 -
   name: Middleman Blog Template for XHTML served as application/xhtml+xml
   description: >
@@ -617,7 +617,7 @@
     - Lightweight
     - LiveReload
     - Responsive
-    - SCSS
+    - sass
     - Sitemap
     - Theme
 -
@@ -627,7 +627,7 @@
   tags:
     - Gulp
     - Haml
-    - Sass
+    - sass
     - Browserify
     - BrowserSync
     - S3
@@ -642,7 +642,7 @@
   url: https://github.com/james-weaver/middleman-pinterest-blog-template
   tags:
     - Haml
-    - Sass
+    - sass
     - Pinterest
     - Masonry
     - Blog
@@ -656,7 +656,7 @@
   tags:
     - Bower
     - Slim
-    - Sass
+    - sass
     - Coffeescript
     - Bourbon
     - Bootstrap
