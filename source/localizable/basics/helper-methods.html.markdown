@@ -219,8 +219,8 @@ their uses would be on a simple view template:
 ```
 
 You can use `auto_stylesheet_link_tag` and `auto_javascript_include_tag` to
-generate stylesheet and JS includes based on the current path, so if your page
-is "contact.html", you'll get "contact.css" and "contact.js".
+generate stylesheet and JavaScript includes based on the current path. So if
+your page is `contact.html`, you'll get `contact.css` and `contact.js`.
 
 ## Form Helpers
 
