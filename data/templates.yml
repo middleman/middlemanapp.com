@@ -302,7 +302,7 @@
   description: >
     A personal website using Zurb Foundation. Features a portfolio, blog, easy
     configuration-based setup, and Sass-based theming.
-  url: http://github.com/techpeace/personal-site-template
+  url: https://github.com/techpeace/personal-site-template
   tags:
     - ZURB Foundation
     - Sass

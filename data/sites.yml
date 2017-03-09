@@ -182,7 +182,7 @@ built:
   - url: http://www.librario.de
   - url: http://www.alpine-lab.com
   - url: http://omegaverse.info
-    source: http://github.com/movitto/omega
+    source: https://github.com/movitto/omega
   - url: http://nebulab.it
   - url: http://rubyconferences.org
     source: https://github.com/ruby-conferences/ruby-conferences-site
