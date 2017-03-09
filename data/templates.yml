@@ -4,7 +4,6 @@
   url: https://github.com/middleman/middleman-templates-blog
   tags:
     - blog
-  official: true
   supports_v4: true
 -
   name: middleman-web-starter-kit
@@ -379,7 +378,6 @@
   description: >
     Starter template with: Bower, Sass, Bourbon, Neat, Coffeescript, jQuery
   url: https://github.com/juanghurtado/middleman-bower-bourbon-neat
-  official: false
   tags:
     - Sass
     - Bower
