@@ -54,7 +54,7 @@
 -
   name: Snappy
   description: >
-    Super fast prototyping for Middleman. Foundation, HAML, SASS, CoffeeScript,
+    Super fast prototyping for Middleman. Foundation, Haml, Sass, CoffeeScript,
     Capistrano and more.
   url: https://github.com/corewebdesign/snappy
   tags:
@@ -70,7 +70,7 @@
   name: middleman-backbone-react
   description: >
     Simple template using React with Backbone for easy API integration. Includes
-    Backbone, React, Coffeescript, Slim, Bootstrap, Backbone React Component,
+    Backbone, React, CoffeeScript, Slim, Bootstrap, Backbone React Component,
     and Bower.
   url: https://github.com/jbhatab/middleman-backbone-react-template
   tags:
@@ -108,7 +108,7 @@
 -
   name: Slimmer
   description: >
-    Starter Template ~ Slim, Sass, Coffeescript precompilers ~ Bower, Compass &
+    Starter Template ~ Slim, Sass, CoffeeScript precompilers ~ Bower, Compass &
     Github Pages tools ~ Sublime Text project file
   url: https://github.com/polymatt/slimmer
   tags:
@@ -161,7 +161,7 @@
 -
   name: Middleman-Foundation5-Basic
   description: >
-    Foundation 5, SCSS, HAML and Coffee Script. Modular structure for css/scss
+    Foundation 5, SCSS, Haml and CoffeeScript. Modular structure for CSS/SCSS
     files. Rails like assets structure.
   url: https://github.com/RalphAtHamburg/middleman-foundation5-basic
   tags:
@@ -173,7 +173,7 @@
 -
   name: Middleman-Foundation-SMACSS
   description: >
-    ZURB Foundation in Compass, SCSS & HAML & following the SMACSS style guide.
+    ZURB Foundation in Compass, SCSS & Haml & following the SMACSS style guide.
   url: https://github.com/hhg2288/foundation-smacss-middleman
   tags:
     - ZURB Foundation
@@ -186,7 +186,7 @@
 -
   name: middleman-phonegap
   description: >
-    Phonegap integration template with Haml, Sass, Coffeescript. Automatically
+    Phonegap integration template with Haml, Sass, CoffeeScript. Automatically
     compiles and emulates Phonegap application after build.
   url: https://github.com/pixelsonly/middleman-phonegap
   tags:
@@ -236,7 +236,7 @@
     <a href="http://framelessgrid.com/">Frameless</a>.
   url: https://github.com/BryanSchuetz/middleman-blog-frameless
 -
-  name: Middleman setup with Haml, Sass and Coffeescript
+  name: Middleman setup with Haml, Sass and CoffeeScript
   url: https://github.com/pixelsonly/middleman-hamlsasscoffee
 -
   name: middleman-impress
@@ -258,8 +258,8 @@
 -
   name: Middleman-Prototype
   description: >
-    Create first prototype with less-hassle-possible. Bootstrap-scss, Scss,
-    jquery, html5shiv, haml
+    Create first prototype with less-hassle-possible. Bootstrap for Sass, SCSS,
+    jQuery, HTML5 Shiv, Haml
   url: https://github.com/skatkov/middleman-prototype
 -
   name: Middleman-Neato
@@ -275,7 +275,7 @@
 -
   name: middleman-bower
   description: >
-    A middleman template that includes easy asset package managment with bower,
+    A Middleman template that includes easy asset package managment with bower,
     among other cool features.
   url: https://github.com/headcanon/middleman-bower-template
 -
@@ -320,7 +320,7 @@
   name: Middleman-blog-bootstrap-template
   description: >
     Blog starter template ~ Bootswatch theme selector, Bootstrap-scss /
-    FontAwesome / jQuery / Html5shiv with Bower, Slim / Sass / Coffeescript
+    FontAwesome / jQuery / HTML5 Shiv with Bower, Slim / Sass / CoffeeScript
     precompilers
   url: https://github.com/biblichor/middleman-blog-bootstrap-template
   tags:
@@ -372,7 +372,7 @@
 -
   name: middleman-bower-bourbon-neat
   description: >
-    Starter template with: Bower, Sass, Bourbon, Neat, Coffeescript, jQuery
+    Starter template with: Bower, Sass, Bourbon, Neat, CoffeeScript, jQuery
   url: https://github.com/juanghurtado/middleman-bower-bourbon-neat
   tags:
     - Sass
@@ -490,7 +490,7 @@
 -
   name: middleman-haml-heroku
   description: >
-    A Middleman HAML, SASS, production ready Heroku Boilerplate Template.
+    A Middleman Haml, Sass, production ready Heroku Boilerplate Template.
   url: https://github.com/austinlchang/middleman-haml-heroku
   tags:
     - HAML
@@ -547,7 +547,7 @@
 -
   name: middleman-starter-kit
   description: >
-    Middleman v4 frond-end starter kit. Includes; HAML, Sass, Compass, jQuery,
+    Middleman v4 frond-end starter kit. Includes; Haml, Sass, Compass, jQuery,
     Bootstrap and ready to use Rails assets, partials.
   url: https://github.com/coskuntekin/middleman_starter_kit
   tags:
@@ -626,7 +626,7 @@
     - Theme
 -
   name: middleman-gulp
-  description: A Middleman 4 template using Gulp.js via the external pipeline
+  description: A Middleman 4 template using gulp via the external pipeline
   url: https://github.com/joshukraine/middleman-gulp
   tags:
     - Gulp
@@ -653,7 +653,8 @@
     - Theme
 -
   name: middleboy
-  description: The ultimate Middleman Boilerplate with SASS, COFFEE, SLIM & more
+  description: >
+    The ultimate Middleman Boilerplate with Sass, CoffeeScript, Slim & more
   links:
     github: https://github.com/crtvhd/middleboy
   tags:
