@@ -4,7 +4,6 @@
     Autoprefixer integration to automatically vendor-prefix stylesheets.
   links:
     github: https://github.com/middleman/middleman-autoprefixer
-  official: true
   tags:
     - Tooling
     - Assets
@@ -17,7 +16,6 @@
     - original
   tags:
     - Tooling
-    - Official
 -
   name: middleman-syntax
   description: Code syntax highlighting.
@@ -27,7 +25,6 @@
     - original
   tags:
     - Tooling
-    - Official
 -
   name: middleman-blog
   description: Middleman blogging extension
@@ -36,8 +33,6 @@
   supported_api_versions:
     - original
     - v4
-  tags:
-    - Official
 -
   name: middleman-minify-html
   description: Minifies whitespace around HTML via Htmlcompressor.
@@ -47,7 +42,6 @@
     - original
   tags:
     - Tooling
-    - Official
     - Optimization
 -
   name: middleman-imgix
@@ -309,7 +303,6 @@
     Ember when building.
   links:
     github: https://github.com/mrship/middleman-ember
-  official: false
   tags:
     - Tooling
     - Ember
@@ -321,7 +314,6 @@
     and ignores ingredient assets on build."
   links:
     github: https://github.com/minusfive/emberman
-  official: false
   tags:
     - Tooling
     - Ember
@@ -331,7 +323,6 @@
     Base setup for an emberjs application using foundation, emblemjs, and slim.
   links:
     github: https://github.com/chrishough/middleman-slim-foundation-emberjs-emblemjs
-  official: false
   tags:
     - Tooling
     - Ember
@@ -361,7 +352,6 @@
   description: Easily generate a Twitter Bootstrap navbar
   links:
     github: https://github.com/bootstrap-ruby/middleman-bootstrap-navbar
-  official: false
   tags:
     - Tooling
 -
@@ -369,7 +359,6 @@
   description: Sublime Text Build Systems for middleman
   links:
     github: https://github.com/recomp/middleman-sublime
-  official: false
   tags:
     - Tooling
 -
@@ -378,7 +367,6 @@
     Password protected senstive web content with javascript only - even on s3!.
   links:
     github: https://github.com/ahoward/middleman-gibberish
-  official: false
   tags:
     - Tooling
     - Generator
@@ -387,7 +375,6 @@
   description: Run the aspell spell checker after the assets have been built
   links:
     github: https://github.com/minivan/middleman-spellcheck
-  official: false
   tags:
     - Tooling
 -
@@ -423,7 +410,6 @@
   name: middleman-ngmin
   description: >
     Transform AngularJS code in the asset pipeline to be safe for minification.
-  official: false
   links:
     github: https://github.com/bhollis/middleman-ngmin
   tags:
@@ -433,7 +419,6 @@
   name: middleman-search_engine_sitemap
   description: >
     Tell search engines which pages are most important in your Middleman site.
-  official: false
   links:
     github: https://github.com/Aupajo/middleman-search_engine_sitemap
   tags:
@@ -442,7 +427,6 @@
   name: middleman-sitemap
   description: >
     Generate sitemaps for your Middleman site with options for GZIP and hostname
-  official: false
   links:
     github: https://github.com/statonjr/middleman-sitemap
   tags:
@@ -461,7 +445,6 @@
 -
   name: middleman-meta-tags
   description: Easy integration of meta tags into your Middleman applications
-  official: false
   links:
     github: https://github.com/tiste/middleman-meta-tags
   tags:
@@ -469,7 +452,6 @@
 -
   name: middleman-webp
   description: Generates WebP alternatives for each image file during build.
-  official: false
   links:
     github: https://github.com/iiska/middleman-webp
   tags:
@@ -478,7 +460,6 @@
 -
   name: middleman-ogp
   description: Adds OpenGraph Helper.
-  official: false
   links:
     github: https://github.com/ngs/middleman-ogp
   tags:
@@ -486,7 +467,6 @@
 -
   name: middleman-google-analytics
   description: Generate your Google Analytics tracking code.
-  official: false
   supported_api_versions:
     - original
     - v4
@@ -498,7 +478,6 @@
 -
   name: middleman-piwik
   description: Generate a Piwik tracking code.
-  official: false
   links:
     github: https://github.com/mscherer/middleman-piwik
   tags:
@@ -518,7 +497,6 @@
 -
   name: middleman-bitballoon
   description: Deploy to BitBalloon
-  official: false
   links:
     github: https://github.com/BitBalloon/middleman-bitballoon
   tags:
@@ -526,7 +504,6 @@
 -
   name: middleman-title
   description: Easily set page titles for your website.
-  official: false
   links:
     github: https://github.com/jcypret/middleman-title
   tags:
@@ -534,7 +511,6 @@
 -
   name: middleman-build-info
   description: Incremental build information for Middleman.
-  official: false
   links:
     github: https://github.com/mcavallo/middleman-build-info
   tags:
@@ -542,7 +518,6 @@
 -
   name: middleman-inliner
   description: Inline JS/CSS for frontend performance.
-  official: false
   links:
     github: https://github.com/kaiinui/middleman-inliner
   tags:
@@ -552,7 +527,6 @@
   name: middleman-navtree
   description: >
     Automatically generate navigation trees and menus in your middleman site.
-  official: false
   links:
     github: https://github.com/bryanbraun/middleman-navtree
   tags:
@@ -562,7 +536,6 @@
   description: >
     Automatic invalidation of CloudFlare, MaxCDN, AWS CloudFront, Fastly and
     Rackspace CDN cache.
-  official: false
   links:
     github: https://github.com/leighmcculloch/middleman-cdn
   tags:
@@ -572,7 +545,6 @@
   description: >
     A Middleman extension to integrate Disqus into your site, supporting Disqus
     configuration variables and comment counts.
-  official: false
   links:
     github: https://github.com/simonrice/middleman-disqus
   tags:
@@ -592,7 +564,6 @@
 -
   name: middleman-inline-style
   description: Inline all css into style attributes. Useful for email templates.
-  official: false
   links:
     github: https://github.com/trenton42/middleman-inline-style
   tags:
@@ -600,7 +571,6 @@
 -
   name: middleman-typescript
   description: TypeScript for Middleman.
-  official: false
   links:
     github: https://github.com/okayamarb/middleman-typescript
   tags:
@@ -608,7 +578,6 @@
 -
   name: middleman-breadcrumbs
   description: Breadcrumbs helper for Middleman.
-  official: false
   links:
     github: https://github.com/marnen/middleman-breadcrumbs
   tags:
@@ -617,7 +586,6 @@
   name: statistrano
   description: >
     Deploy any static site via rsync as versioned releases or feature branches.
-  official: false
   links:
     github: https://github.com/mailchimp/statistrano
   tags:
@@ -625,7 +593,6 @@
 -
   name: middleman-protect-emails
   description: Email link protection and obfuscation
-  official: false
   links:
     github: https://github.com/amsardesai/middleman-protect-emails
   tags:
@@ -634,7 +601,6 @@
 -
   name: Mail2FrontMatter
   description: allows you to email updates to your blog
-  official: false
   links:
     github: https://github.com/whistlerbrk/mail2frontmatter
   tags:
@@ -642,7 +608,6 @@
 -
   name: middleman-patterns
   description: An implementation of Pattern Lab for Middleman
-  official: false
   links:
     github: https://github.com/beardedstudio/middleman-patterns
   tags:
@@ -655,7 +620,6 @@
     <a href="https://github.com/rweng/pry-rails">pry-rails</a>.
   links:
     github: https://github.com/AndrewKvalheim/middleman-pry/
-  official: no
   tags:
     - Tooling
 -
@@ -720,7 +684,6 @@
   description: Deploy a middleman site to a Dokku instance
   links:
     github: https://github.com/ngmaloney/middleman-dokku
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -731,7 +694,6 @@
   description: Ping search engines (Google and Bing) with a sitemap URL
   links:
     github: https://github.com/krautcomputing/middleman-sitemap-ping
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -743,7 +705,6 @@
   description: Add support for JSPM to Middleman
   links:
     github: https://github.com/oncomouse/middleman-jspm
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -753,7 +714,6 @@
   description: Middleman fragment caching extension like Rails.
   links:
     github: https://github.com/organicadigital/middleman-fragment-caching
-  official: false
   tags:
     - Operations
     - Deployment
@@ -763,7 +723,6 @@
   description: Lunr.js based search engine for Middleman sites
   links:
     github: https://github.com/manastech/middleman-search
-  official: false
   tags:
     - Tooling
     - Search
@@ -773,7 +732,6 @@
   description: Automatically create and use SVG sprite sheets
   links:
     github: https://github.com/varvet/middleman-scavenger
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -784,7 +742,6 @@
   description: Deploy your Middleman site to Rackspace Cloud Files.
   links:
     github: https://github.com/dtcristo/middleman-rackspace
-  official: false
   tags:
     - Deployment
 -
@@ -819,7 +776,6 @@
   description: ember-middleman supports using Ember.js with Middleman in easily.
   links:
     github: https://github.com/tricknotes/ember-middleman
-  official: false
   tags:
     - Tooling
     - Assets
@@ -829,7 +785,6 @@
   description: Build your Middleman site and push it to your gh-pages branch
   links:
     github: https://github.com/hovancik/middleman-github-deploy
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -843,7 +798,6 @@
   links:
     github: https://github.com/middlemac/middleman-targets
     site: https://rubygems.org/gems/middleman-targets
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -859,7 +813,6 @@
   links:
     github: https://github.com/middlemac/middleman-pagegroups
     site: https://rubygems.org/gems/middleman-pagegroups
-  official: false
   supported_api_versions:
     - original
   tags:
@@ -886,7 +839,6 @@
   description: Deploy middleman sites via rsync.
   links:
     github: https://github.com/hardhatdigital/middleman-rsync
-  official: false
   tags:
     - Deployment
 -
@@ -894,7 +846,6 @@
   description: Purge a KeyCDN zone cache
   links:
     github: https://github.com/ideasasylum/middleman-keycdn
-  official: false
   tags:
     - Deployment
     - CDN
@@ -903,7 +854,6 @@
   description: Mount remote JSON & YAML to the Middleman data object.
   links:
     github: https://github.com/stevenosloan/middleman-data_source
-  official: false
   tags:
     - Tooling
 -
@@ -911,7 +861,6 @@
   description: Load content from Google Drive.
   links:
     github: https://github.com/voxmedia/middleman-google_drive
-  official: false
   tags:
     - Tooling
 -
@@ -919,6 +868,5 @@
   description: Creates a `robots.txt` file on build based on a configuration.
   links:
     github: https://github.com/yterajima/middleman-robots
-  official: false
   tags:
     - Tooling
