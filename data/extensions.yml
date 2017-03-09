@@ -5,7 +5,6 @@
   links:
     github: https://github.com/middleman/middleman-autoprefixer
   tags:
-    - Tooling
     - Assets
 -
   name: middleman-livereload
@@ -14,8 +13,6 @@
     github: https://github.com/middleman/middleman-livereload
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-syntax
   description: Code syntax highlighting.
@@ -23,8 +20,6 @@
     github: https://github.com/middleman/middleman-syntax
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-blog
   description: Middleman blogging extension
@@ -41,7 +36,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Optimization
 -
   name: middleman-imgix
@@ -53,7 +47,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Assets
 -
   name: middleman-facebook-pixel
@@ -64,7 +57,6 @@
     - original
   tags:
     - Generator
-    - Tooling
 -
   name: middleman-crawler
   description: Use a crawler to search error codes for your Middleman site
@@ -73,7 +65,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Operations
     - Environments
     - CLI
@@ -88,7 +79,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Operations
     - Deployment
     - Environments
@@ -102,8 +92,6 @@
     github: https://github.com/Fullscreen/bh
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-aws
   description: >
@@ -123,7 +111,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Operations
     - Deployment
     - Environments
@@ -177,7 +164,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Optimization
 -
   name: middleman-blog-drafts
@@ -188,8 +174,6 @@
     github: https://github.com/fgrehm/middleman-blog-drafts
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-cloudfront
   description: >
@@ -238,8 +222,6 @@
     github: https://github.com/matt-hh/middleman-jammit
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-s3_redirect
   description: Configure S3 to redirect URLs to a new location.
@@ -294,8 +276,6 @@
     github: https://github.com/xunker/middleman-target
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-ember
   description: >
@@ -304,7 +284,6 @@
   links:
     github: https://github.com/mrship/middleman-ember
   tags:
-    - Tooling
     - Ember
 -
   name: Emberman
@@ -315,7 +294,6 @@
   links:
     github: https://github.com/minusfive/emberman
   tags:
-    - Tooling
     - Ember
 -
   name: middleman-slim-foundation-emberjs-emblemjs
@@ -324,9 +302,7 @@
   links:
     github: https://github.com/chrishough/middleman-slim-foundation-emberjs-emblemjs
   tags:
-    - Tooling
     - Ember
-
 -
   name: middleman-thumbnailer
   description: Generate thumbnails of images
@@ -352,15 +328,11 @@
   description: Easily generate a Twitter Bootstrap navbar
   links:
     github: https://github.com/bootstrap-ruby/middleman-bootstrap-navbar
-  tags:
-    - Tooling
 -
   name: middleman-build-sublime
   description: Sublime Text Build Systems for middleman
   links:
     github: https://github.com/recomp/middleman-sublime
-  tags:
-    - Tooling
 -
   name: middleman-gibberish
   description: >
@@ -368,15 +340,12 @@
   links:
     github: https://github.com/ahoward/middleman-gibberish
   tags:
-    - Tooling
     - Generator
 -
   name: middleman-spellcheck
   description: Run the aspell spell checker after the assets have been built
   links:
     github: https://github.com/minivan/middleman-spellcheck
-  tags:
-    - Tooling
 -
   name: middleman-alias
   description: >
@@ -386,8 +355,6 @@
     github: https://github.com/Octo-Labs/middleman-alias
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-automatic-clowncar
   description: The easiest way to use responsive images in your Middleman site.
@@ -396,7 +363,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Assets
     - Generator
 -
@@ -404,8 +370,6 @@
   description: Use PHP files in Middleman
   links:
     github: https://github.com/lord/middleman-php
-  tags:
-    - Tooling
 -
   name: middleman-ngmin
   description: >
@@ -413,7 +377,6 @@
   links:
     github: https://github.com/bhollis/middleman-ngmin
   tags:
-    - Tooling
     - Assets
 -
   name: middleman-search_engine_sitemap
@@ -440,22 +403,17 @@
     github: https://github.com/contentful/contentful_middleman
   supported_api_versions:
     - original
-  tags:
-    - Tooling
 -
   name: middleman-meta-tags
   description: Easy integration of meta tags into your Middleman applications
   links:
     github: https://github.com/tiste/middleman-meta-tags
-  tags:
-    - Tooling
 -
   name: middleman-webp
   description: Generates WebP alternatives for each image file during build.
   links:
     github: https://github.com/iiska/middleman-webp
   tags:
-    - Tooling
     - Assets
 -
   name: middleman-ogp
@@ -474,7 +432,6 @@
     github: https://github.com/danielbayerlein/middleman-google-analytics
   tags:
     - Generator
-    - Tooling
 -
   name: middleman-piwik
   description: Generate a Piwik tracking code.
@@ -482,7 +439,6 @@
     github: https://github.com/mscherer/middleman-piwik
   tags:
     - Generator
-    - Tooling
 -
   name: middleman-blog-similar
   description: >
@@ -493,7 +449,6 @@
     - original
   tags:
     - Generator
-    - Tooling
 -
   name: middleman-bitballoon
   description: Deploy to BitBalloon
@@ -506,15 +461,11 @@
   description: Easily set page titles for your website.
   links:
     github: https://github.com/jcypret/middleman-title
-  tags:
-    - Tooling
 -
   name: middleman-build-info
   description: Incremental build information for Middleman.
   links:
     github: https://github.com/mcavallo/middleman-build-info
-  tags:
-    - Tooling
 -
   name: middleman-inliner
   description: Inline JS/CSS for frontend performance.
@@ -560,21 +511,16 @@
     - original
   tags:
     - Generator
-    - Tooling
 -
   name: middleman-inline-style
   description: Inline all css into style attributes. Useful for email templates.
   links:
     github: https://github.com/trenton42/middleman-inline-style
-  tags:
-    - Tooling
 -
   name: middleman-typescript
   description: TypeScript for Middleman.
   links:
     github: https://github.com/okayamarb/middleman-typescript
-  tags:
-    - Tooling
 -
   name: middleman-breadcrumbs
   description: Breadcrumbs helper for Middleman.
@@ -610,8 +556,6 @@
   description: An implementation of Pattern Lab for Middleman
   links:
     github: https://github.com/beardedstudio/middleman-patterns
-  tags:
-    - Tooling
 -
   name: middleman-pry
   description: >
@@ -620,8 +564,6 @@
     <a href="https://github.com/rweng/pry-rails">pry-rails</a>.
   links:
     github: https://github.com/AndrewKvalheim/middleman-pry/
-  tags:
-    - Tooling
 -
   name: capistrano-middleman
   description: Deploy a middleman using capistrano
@@ -699,7 +641,6 @@
   tags:
     - Deployment
     - Operations
-    - Tooling
 -
   name: middleman-jspm
   description: Add support for JSPM to Middleman
@@ -724,7 +665,6 @@
   links:
     github: https://github.com/manastech/middleman-search
   tags:
-    - Tooling
     - Search
     - Lunr.js
 -
@@ -736,7 +676,6 @@
     - original
   tags:
     - Assets
-    - Tooling
 -
   name: middleman-rackspace
   description: Deploy your Middleman site to Rackspace Cloud Files.
@@ -754,7 +693,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Assets
     - Helpers
     - WebPerf
@@ -777,7 +715,6 @@
   links:
     github: https://github.com/tricknotes/ember-middleman
   tags:
-    - Tooling
     - Assets
     - Ember
 -
@@ -804,7 +741,6 @@
     - Assets
     - Environments
     - Helpers
-    - Tooling
 -
   name: middleman-pagegroups
   description: >
@@ -819,7 +755,6 @@
     - Assets
     - Helpers
     - Navigation
-    - Tooling
 -
   name: middleman-dato
   description: >
@@ -831,7 +766,6 @@
   supported_api_versions:
     - original
   tags:
-    - Tooling
     - Deployment
     - Assets
 -
@@ -854,19 +788,13 @@
   description: Mount remote JSON & YAML to the Middleman data object.
   links:
     github: https://github.com/stevenosloan/middleman-data_source
-  tags:
-    - Tooling
 -
   name: middleman-google_drive
   description: Load content from Google Drive.
   links:
     github: https://github.com/voxmedia/middleman-google_drive
-  tags:
-    - Tooling
 -
   name: middleman-robots
   description: Creates a `robots.txt` file on build based on a configuration.
   links:
     github: https://github.com/yterajima/middleman-robots
-  tags:
-    - Tooling
