@@ -19,6 +19,10 @@ gem 'neat', '~> 1.8'
 # Windows Support
 gem 'wdm' if Gem.win_platform?
 
+group :development do
+  gem 'html-proofer'
+end
+
 # Debug
 # gem 'byebug'
 # gem 'pry'
