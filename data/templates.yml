@@ -662,3 +662,21 @@
     - Blog
     - Theme
   supports_v4: true
+-
+  name: middleboy
+  description: The ultimate Middleman Boilerplate with SASS, COFFEE, SLIM & more
+  links:
+    github: https://github.com/crtvhd/middleboy
+  supported_api_versions:
+    - original
+  tags:
+    - Bower
+    - Slim
+    - Sass
+    - Coffeescript
+    - Bourbon
+    - Bootstrap
+    - jQuery
+    - Font Awesome
+    - Analytics
+    - Mobile
