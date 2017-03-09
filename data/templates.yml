@@ -11,7 +11,6 @@
     static site building.
   url: https://github.com/ianabalus/middleman-web-starter-kit
   tags:
-    - html5
     - sass
     - bower
     - bourbon
@@ -338,7 +337,6 @@
     initiate the process of web-development .
   url: https://github.com/denisfl/thane/
   tags:
-    - HTML5 Boilerplate
     - Bootstrap
     - Slim
     - SCSS
@@ -448,7 +446,6 @@
   tags:
     - mvcss
     - sass
-    - html5
     - h5bp
     - normalize.css
     - autoprefixer
@@ -617,7 +614,6 @@
   tags:
     - Autoprefixer
     - ERB
-    - HTML5
     - Lightweight
     - LiveReload
     - Responsive
