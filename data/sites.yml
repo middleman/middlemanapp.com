@@ -422,9 +422,6 @@ blogs:
     title: "Clearhaus"
   - url: http://www.zoomshift.com/
     title: "ZoomShift - Employee Scheduling Software"
-  - url: http://pixyzehn.github.io/
-    title: "pixyzehn profile"
-    source: https://github.com/pixyzehn/pixyzehn.github.io
   - url: http://phillyrb.org
     source: https://github.com/phillyrb/phillyrb.org
     title: "Philadelphia Ruby user group"
