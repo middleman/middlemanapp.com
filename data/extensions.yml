@@ -1,4 +1,55 @@
 -
+  name: middleman-autoprefixer
+  description: >
+    Autoprefixer integration to automatically vendor-prefix stylesheets.
+  links:
+    github: https://github.com/middleman/middleman-autoprefixer
+  official: true
+  tags:
+    - Tooling
+    - Assets
+-
+  name: middleman-livereload
+  description: LiveReload for Middleman.
+  links:
+    github: https://github.com/middleman/middleman-livereload
+  supported_api_versions:
+    - original
+  tags:
+    - Tooling
+    - Official
+-
+  name: middleman-syntax
+  description: Code syntax highlighting.
+  links:
+    github: https://github.com/middleman/middleman-syntax
+  supported_api_versions:
+    - original
+  tags:
+    - Tooling
+    - Official
+-
+  name: middleman-blog
+  description: Middleman blogging extension
+  links:
+    github: https://github.com/middleman/middleman-blog
+  supported_api_versions:
+    - original
+    - v4
+  tags:
+    - Official
+-
+  name: middleman-minify-html
+  description: Minifies whitespace around HTML via Htmlcompressor.
+  links:
+    github: https://github.com/middleman/middleman-minify-html
+  supported_api_versions:
+    - original
+  tags:
+    - Tooling
+    - Official
+    - Optimization
+-
   name: middleman-imgix
   description: >
     Run all of your images (or only some) through imgix for all sorts of fun
@@ -196,16 +247,6 @@
   tags:
     - Tooling
 -
-  name: middleman-livereload
-  description: LiveReload for Middleman.
-  links:
-    github: https://github.com/middleman/middleman-livereload
-  supported_api_versions:
-    - original
-  tags:
-    - Tooling
-    - Official
--
   name: middleman-s3_redirect
   description: Configure S3 to redirect URLs to a new location.
   links:
@@ -252,26 +293,6 @@
     - original
   tags:
     - Environments
--
-  name: middleman-syntax
-  description: Code syntax highlighting.
-  links:
-    github: https://github.com/middleman/middleman-syntax
-  supported_api_versions:
-    - original
-  tags:
-    - Tooling
-    - Official
--
-  name: middleman-blog
-  description: Middleman blogging extension
-  links:
-    github: https://github.com/middleman/middleman-blog
-  supported_api_versions:
-    - original
-    - v4
-  tags:
-    - Official
 -
   name: middleman-target
   description: Create and build source for separate build targets.
@@ -351,16 +372,6 @@
   official: false
   tags:
     - Tooling
--
-  name: middleman-autoprefixer
-  description: >
-    Autoprefixer integration to automatically vendor-prefix stylesheets.
-  links:
-    github: https://github.com/middleman/middleman-autoprefixer
-  official: true
-  tags:
-    - Tooling
-    - Assets
 -
   name: middleman-gibberish
   description: >
@@ -566,17 +577,6 @@
     github: https://github.com/simonrice/middleman-disqus
   tags:
     - Generator
--
-  name: middleman-minify-html
-  description: Minifies whitespace around HTML via Htmlcompressor.
-  links:
-    github: https://github.com/middleman/middleman-minify-html
-  supported_api_versions:
-    - original
-  tags:
-    - Tooling
-    - Official
-    - Optimization
 -
   name: middleman-knockoutjs
   description: >
