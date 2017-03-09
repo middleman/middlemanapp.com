@@ -4,7 +4,6 @@
   url: https://github.com/middleman/middleman-templates-blog
   tags:
     - blog
-  supports_v4: true
 -
   name: middleman-web-starter-kit
   description: >
@@ -89,7 +88,6 @@
   tags:
     - Theme
     - Blog
-  supports_v4: true
 -
   name: middleman-impress
   description: >
@@ -98,7 +96,6 @@
   url: https://github.com/danielbayerlein/middleman-impress
   tags:
     - Presentation
-  supports_v4: true
 -
   name: middleman-pattern-library
   description: >
@@ -108,7 +105,6 @@
   tags:
     - Pattern Library
     - Style Guide
-  supports_v4: true
 -
   name: Slimmer
   description: >
@@ -554,9 +550,7 @@
     Middleman v4 frond-end starter kit. Includes; HAML, Sass, Compass, jQuery,
     Bootstrap and ready to use Rails assets, partials.
   url: https://github.com/coskuntekin/middleman_starter_kit
-  supports_v4: true
   tags:
-    - Middleman v4
     - Rails Assets
     - HAML
     - Sass
@@ -630,7 +624,6 @@
     - SCSS
     - Sitemap
     - Theme
-  supports_v4: true
 -
   name: middleman-gulp
   description: A Middleman 4 template using Gulp.js via the external pipeline
@@ -644,7 +637,6 @@
     - S3
     - Pry
     - Rspec
-  supports_v4: true
 -
   name: Middleman Pinterest Blog Template
   description: >
@@ -659,14 +651,11 @@
     - Masonry
     - Blog
     - Theme
-  supports_v4: true
 -
   name: middleboy
   description: The ultimate Middleman Boilerplate with SASS, COFFEE, SLIM & more
   links:
     github: https://github.com/crtvhd/middleboy
-  supported_api_versions:
-    - original
   tags:
     - Bower
     - Slim

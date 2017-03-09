@@ -11,30 +11,21 @@
   description: LiveReload for Middleman.
   links:
     github: https://github.com/middleman/middleman-livereload
-  supported_api_versions:
-    - original
 -
   name: middleman-syntax
   description: Code syntax highlighting.
   links:
     github: https://github.com/middleman/middleman-syntax
-  supported_api_versions:
-    - original
 -
   name: middleman-blog
   description: Middleman blogging extension
   links:
     github: https://github.com/middleman/middleman-blog
-  supported_api_versions:
-    - original
-    - v4
 -
   name: middleman-minify-html
   description: Minifies whitespace around HTML via Htmlcompressor.
   links:
     github: https://github.com/middleman/middleman-minify-html
-  supported_api_versions:
-    - original
   tags:
     - Optimization
 -
@@ -44,8 +35,6 @@
     features.
   links:
     github: https://github.com/bigcartel/middleman-imgix
-  supported_api_versions:
-    - original
   tags:
     - Assets
 -
@@ -53,8 +42,6 @@
   description: Generate your Facebook Pixel code.
   links:
     github: https://github.com/xcopy/middleman-facebook-pixel
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -62,8 +49,6 @@
   description: Use a crawler to search error codes for your Middleman site
   links:
     github: https://github.com/welaika/middleman-crawler
-  supported_api_versions:
-    - original
   tags:
     - Operations
     - Environments
@@ -76,8 +61,6 @@
     the box.
   links:
     github: https://github.com/Palmaswell/liquid-bourbon-middleman
-  supported_api_versions:
-    - original
   tags:
     - Operations
     - Deployment
@@ -90,8 +73,6 @@
     progress bars, dropdowns, icons, buttons and links.
   links:
     github: https://github.com/Fullscreen/bh
-  supported_api_versions:
-    - original
 -
   name: middleman-aws
   description: >
@@ -99,8 +80,6 @@
     cloudfront invalidation extensions.
   links:
     github: https://github.com/alienfast/middleman-aws
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -108,8 +87,6 @@
   description: Surface build-time and version details in your Middleman build.
   links:
     github: https://github.com/mdb/middleman-build-reporter
-  supported_api_versions:
-    - original
   tags:
     - Operations
     - Deployment
@@ -120,8 +97,6 @@
     Use config files to manage your settings in your app with multi environments
   links:
     github: https://github.com/gregory/middleman-settings
-  supported_api_versions:
-    - original
   tags:
     - Config
     - Settings
@@ -131,8 +106,6 @@
   description: A low-drama portfolio generator for your middleman site.
   links:
     github: https://github.com/dhulihan/middleman-portfolio
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -142,8 +115,6 @@
     is powered by middleman and reveal.js
   links:
     github: https://github.com/fedux-org/middleman-presentation
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -151,8 +122,6 @@
   description: Generate webfont files automatically.
   links:
     github: https://github.com/oame/middleman-fontcustom
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -161,8 +130,6 @@
     Automatically compress and optimise your imagery during 'middleman build'.
   links:
     github: https://github.com/plasticine/middleman-imageoptim
-  supported_api_versions:
-    - original
   tags:
     - Optimization
 -
@@ -172,8 +139,6 @@
     publishing.
   links:
     github: https://github.com/fgrehm/middleman-blog-drafts
-  supported_api_versions:
-    - original
 -
   name: middleman-cloudfront
   description: >
@@ -181,8 +146,6 @@
     CloudFront CDN cache.
   links:
     github: https://github.com/andrusha/middleman-cloudfront
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -192,8 +155,6 @@
     on github).
   links:
     github: https://github.com/middleman-contrib/middleman-deploy
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -201,8 +162,6 @@
   description: Generate favicon files in various sizes from a base image.
   links:
     github: https://github.com/follmann/middleman-favicon-maker
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -211,24 +170,17 @@
     A Middleman extension to generate VCards and useful helpers to work with..
   links:
     github: https://github.com/alem0lars/middleman-vcard
-  supported_api_versions:
-    - original
-  tags:
     - Generator
 -
   name: middleman-jammit
   description: Use Jammit in Middleman.
   links:
     github: https://github.com/matt-hh/middleman-jammit
-  supported_api_versions:
-    - original
 -
   name: middleman-s3_redirect
   description: Configure S3 to redirect URLs to a new location.
   links:
     github: https://github.com/fredjean/middleman-s3_redirect
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -238,8 +190,6 @@
     must).
   links:
     github: https://github.com/fredjean/middleman-s3_sync
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -247,8 +197,6 @@
   description: Generate nice JPEG and PNG files from any SVG files.
   links:
     github: https://github.com/yeah/middleman-svg-fallback
-  supported_api_versions:
-    - original
   tags:
     - Optimization
 -
@@ -256,8 +204,6 @@
   description: Synchronise your Middleman build to S3 and more.
   links:
     github: https://github.com/middleman-contrib/middleman-sync
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -265,8 +211,6 @@
   description: Integrates Dotenv into Middleman
   links:
     github: https://github.com/middleman-contrib/middleman-dotenv
-  supported_api_versions:
-    - original
   tags:
     - Environments
 -
@@ -274,8 +218,6 @@
   description: Create and build source for separate build targets.
   links:
     github: https://github.com/xunker/middleman-target
-  supported_api_versions:
-    - original
 -
   name: middleman-ember
   description: >
@@ -308,8 +250,6 @@
   description: Generate thumbnails of images
   links:
     github: https://github.com/nhemsley/middleman-thumbnailer
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -319,8 +259,6 @@
     helper.
   links:
     github: https://github.com/kubenstein/middleman-simple-thumbnailer
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -353,15 +291,11 @@
     redirect pages.
   links:
     github: https://github.com/Octo-Labs/middleman-alias
-  supported_api_versions:
-    - original
 -
   name: middleman-automatic-clowncar
   description: The easiest way to use responsive images in your Middleman site.
   links:
     github: https://github.com/Octo-Labs/middleman-automatic-clowncar
-  supported_api_versions:
-    - original
   tags:
     - Assets
     - Generator
@@ -401,8 +335,6 @@
     the content in a Web UI.
   links:
     github: https://github.com/contentful/contentful_middleman
-  supported_api_versions:
-    - original
 -
   name: middleman-meta-tags
   description: Easy integration of meta tags into your Middleman applications
@@ -425,9 +357,6 @@
 -
   name: middleman-google-analytics
   description: Generate your Google Analytics tracking code.
-  supported_api_versions:
-    - original
-    - v4
   links:
     github: https://github.com/danielbayerlein/middleman-google-analytics
   tags:
@@ -445,8 +374,6 @@
     An extension for middleman-blog that adds method to lookup similar article.
   links:
     github: https://github.com/ngs/middleman-blog-similar
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -507,8 +434,6 @@
     Jasmine unit testing.
   links:
     github: https://github.com/bnadlerjr/middleman-knockoutjs
-  supported_api_versions:
-    - original
   tags:
     - Generator
 -
@@ -569,8 +494,6 @@
   description: Deploy a middleman using capistrano
   links:
     github: https://github.com/fedux-org/capistrano-middleman
-  supported_api_versions:
-    - original
   tags:
     - Deployment
 -
@@ -578,8 +501,6 @@
   description: Integrate geo_pattern-gem into middleman
   links:
     github: https://github.com/fedux-org/middleman-geo_pattern
-  supported_api_versions:
-    - original
   tags:
     - Helpers
     - Design
@@ -588,8 +509,6 @@
   description: Middleman org-mode extension
   links:
     github: https://github.com/xiaoxinghu/middleman-org
-  supported_api_versions:
-    - original
   tags:
     - org-mode
 
@@ -598,8 +517,6 @@
   description: ES6 for Middleman
   links:
     github: https://github.com/vast/middleman-es6
-  supported_api_versions:
-    - original
   tags:
     - Assets
 
@@ -608,8 +525,6 @@
   description: Deploy a middleman site to a Dokku instance
   links:
     github: https://github.com/ngmaloney/middleman-dokku
-  supported_api_versions:
-    - original
   tags:
     - Deployment
     - Dokku
@@ -618,8 +533,6 @@
   description: Ping search engines (Google and Bing) with a sitemap URL
   links:
     github: https://github.com/krautcomputing/middleman-sitemap-ping
-  supported_api_versions:
-    - original
   tags:
     - Deployment
     - Operations
@@ -628,8 +541,6 @@
   description: Add support for JSPM to Middleman
   links:
     github: https://github.com/oncomouse/middleman-jspm
-  supported_api_versions:
-    - original
   tags:
     - Assets
 -
@@ -654,8 +565,6 @@
   description: Automatically create and use SVG sprite sheets
   links:
     github: https://github.com/varvet/middleman-scavenger
-  supported_api_versions:
-    - original
   tags:
     - Assets
 -
@@ -672,8 +581,6 @@
     for Middleman projects.
   links:
     github: https://github.com/Comcast/Surf-N-Perf
-  supported_api_versions:
-    - original
   tags:
     - Assets
     - Helpers
@@ -686,8 +593,6 @@
     templates.
   links:
     github: https://github.com/rjocoleman/middleman-foxycart
-  supported_api_versions:
-    - original
   tags:
     - Helpers
     - Operations
@@ -704,8 +609,6 @@
   description: Build your Middleman site and push it to your gh-pages branch
   links:
     github: https://github.com/hovancik/middleman-github-deploy
-  supported_api_versions:
-    - original
   tags:
     - Deployment
     - Github
@@ -717,8 +620,6 @@
   links:
     github: https://github.com/middlemac/middleman-targets
     site: https://rubygems.org/gems/middleman-targets
-  supported_api_versions:
-    - original
   tags:
     - Assets
     - Environments
@@ -731,8 +632,6 @@
   links:
     github: https://github.com/middlemac/middleman-pagegroups
     site: https://rubygems.org/gems/middleman-pagegroups
-  supported_api_versions:
-    - original
   tags:
     - Assets
     - Helpers
@@ -745,8 +644,6 @@
   links:
     github: https://github.com/datocms/middleman-dato
     site: https://www.datocms.com/docs/tutorials/middleman_netlify/
-  supported_api_versions:
-    - original
   tags:
     - Deployment
     - Assets
