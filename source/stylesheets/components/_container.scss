@@ -3,3 +3,7 @@
   @include padding(null 1rem);
   max-width: 64rem;
 }
+
+.c-container--narrow {
+  max-width: 36rem;
+}

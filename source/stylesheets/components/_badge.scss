@@ -1,0 +1,13 @@
+.c-badge {
+  border: 1px solid tint($mm-light-gray, 50%);
+  border-radius: 3px;
+  color: $base-font-color;
+  display: inline-block;
+  font-size: $base-font-size * 0.8;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  margin: 0;
+  padding: 0.3em;
+  text-align: center;
+  vertical-align: middle;
+}

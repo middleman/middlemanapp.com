@@ -1,22 +1,23 @@
-<div class="c-container">
+<div class="c-container c-container--narrow">
+  <h1>Resources: <%= resource_type %></h1>
 
   <ol>
-    <% data.send(resource_type.to_sym).each do |r| %>
+    <% data.send(resource_type.to_sym).each do |resource| %>
       <li>
-        <h3><a href="<%= r.url %>"><%= r.name %></a></h3>
+        <h3>
+          <a href="<%= resource.url %>"><%= resource.name %></a>
+        </h3>
 
-        <p><%= r.description %></p>
-
-        <% if r.tags.present? %>
-        <p><strong>Tags:</strong>
-          <% r.tags.each do |t| %>
-            <%= t %>,
-          <% end %>
-        </p>
+        <% if resource.tags.present? %>
+          <ol aria-label="Tags: ">
+            <% resource.tags.each do |t| %>
+              <li class="c-badge"><%= t.downcase %></li>
+            <% end %>
+          </ol>
         <% end %>
 
+        <p><%= resource.description %></p>
       </li>
     <% end %>
   </ol>
-
 </div>
