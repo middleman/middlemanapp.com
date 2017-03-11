@@ -24,6 +24,15 @@ activate :data_source do |d|
   ]
 end
 
+["extensions", "services", "templates"].each do |resource_type|
+  proxy(
+    "/resources/#{resource_type}/index.html",
+    "/resources/index.html",
+    locals: { resource_type: resource_type },
+    ignore: true,
+  )
+end
+
 proxy "_redirects", "netlify-redirects", ignore: true
 
 page "/", layout: "home"

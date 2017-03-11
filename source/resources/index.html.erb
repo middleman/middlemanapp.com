@@ -1,0 +1,22 @@
+<div class="c-container">
+
+  <ol>
+    <% data.send(resource_type.to_sym).each do |r| %>
+      <li>
+        <h3><a href="<%= r.url %>"><%= r.name %></a></h3>
+        <!--
+        <p><%= r.description %></p>
+
+        <% if r.tags.present? %>
+        <p><strong>Tags:</strong>
+          <% r.tags.each do |t| %>
+            <%= t %>,
+          <% end %>
+        </p>
+        <% end %>
+        -->
+      </li>
+    <% end %>
+  </ol>
+
+</div>
