@@ -4,7 +4,7 @@
     <% data.send(resource_type.to_sym).each do |r| %>
       <li>
         <h3><a href="<%= r.url %>"><%= r.name %></a></h3>
-        <!--
+
         <p><%= r.description %></p>
 
         <% if r.tags.present? %>
@@ -14,7 +14,7 @@
           <% end %>
         </p>
         <% end %>
-        -->
+
       </li>
     <% end %>
   </ol>

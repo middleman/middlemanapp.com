@@ -6,6 +6,8 @@
     <a href="https://hub.openshift.com/quickstarts/160-middleman">OpenShift Hub</a>
     for free.
   url: https://www.openshift.com/
+  tags:
+    - deployment
 -
   name: Zammu
   description: >
@@ -17,8 +19,8 @@
     and start publishing with ease, use the invitation code MIDDLEMAN</a>.
   url: https://zammu.in/middleman
   tags:
-    - Continuous Deployment
-    - GitHub Pages
+    - deployment
+    - github pages
 -
   name: DatoCMS
   description: >
@@ -26,6 +28,8 @@
     Middleman static websites. Let your clients publish new content
     independently, host the site anywhere you like.
   url: https://www.datocms.com/
+  tags:
+    - content management
 -
   name: Netlify
   description:
@@ -34,4 +38,5 @@
     a single click.
   url: https://www.netlify.com/
   tags:
-    - Continuous Deployment
+    - cdn
+    - deployment
