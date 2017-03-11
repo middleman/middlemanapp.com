@@ -40,14 +40,6 @@ en:
       project_templates: Project Templates
       rack_middleware: Rack Middleware
       sitemap: The Sitemap
-    community:
-      title: Open-Source Community
-      built_using_middleman: Sites Built Using Middleman
-      community_forum: Community Forum
-      custom_extensions: Custom Extensions
-      deployment_solution: Deployment Solution
-      github: GitHub Repository
-      project_templates: Project Templates
   open_source:
     title: Contribute to Open Souce
     service: Add Your Service

@@ -38,8 +38,8 @@
       background: lighten($base-accent-color, 30);
     }
   }
-}
 
-.doc-item-active {
-  background: lighten($base-accent-color, 27);
+  [aria-current] {
+    font-weight: $font-weight-bold;
+  }
 }

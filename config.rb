@@ -45,13 +45,3 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 end
-
-helpers do
-  def active_link_to(caption, url, options = {})
-    if current_page.url == "#{url}/"
-      options[:class] = "doc-item-active"
-    end
-
-    link_to(caption, url, options)
-  end
-end

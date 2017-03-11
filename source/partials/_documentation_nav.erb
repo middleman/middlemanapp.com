@@ -2,7 +2,11 @@
   <h3 class="docs-section-heading"><%= t("navigation.basics.title") %></h3>
   <ul>
     <li class="doc-item">
-      <%= active_link_to t("navigation.basics.install"), "#{locale_prefix}/basics/install/"%> </li>
+      <%= active_link_to(
+        t("navigation.basics.install"),
+        "#{locale_prefix}/basics/install/"
+      ) %>
+    </li>
     <li class="doc-item">
       <%= active_link_to t("navigation.basics.upgrade-v4"), "#{locale_prefix}/basics/upgrade-v4/"%> </li>
     <li class="doc-item">
