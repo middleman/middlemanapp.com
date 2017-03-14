@@ -2,7 +2,7 @@ require "pathname"
 
 module GuideHelpers
   def active_link_to(name, url)
-    if current_page.url == "#{url}/"
+    if current_page.url.include?(url)
       link_to(name, url, "aria-current": "page")
     else
       link_to(name, url)
