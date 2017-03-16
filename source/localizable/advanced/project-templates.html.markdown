@@ -4,7 +4,9 @@ title: Project Templates
 
 # Project Templates
 
-When starting a new project, `middleman init` will create a folder with our default project template. Unlike previous versions of middleman, custom project templates are simply a folder of files, or a Thor command, in a git repository. If you want to use a non-default project template then you must use the `-T` option and use a path to a git repository. Make sure you have git installed.
+When starting a new project, `middleman init` will create a folder with our [default project template]. Unlike previous versions of Middleman, custom project templates are simply a folder of files, or a Thor command, in a Git repository. If you want to use a non-default project template then you must use the `-T` option and use a path to a Git repository. Make sure you have Git installed.
+
+[default project template]: https://github.com/middleman/middleman-templates-default/
 
 ## GitHub Template
 
@@ -16,7 +18,7 @@ middleman init MY_PROJECT_FOLDER -T username/repo-name
 
 ## Local Template
 
-Pass `file://` followed by the path to your local git repository. **Note**: There are *three* slashes `///`.
+Pass `file://` followed by the path to your local Git repository. **Note**: There are *three* slashes `///`.
 
 ```bash
 middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
