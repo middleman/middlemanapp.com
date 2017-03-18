@@ -1,14 +1,6 @@
 require "pathname"
 
 module GuideHelpers
-  def active_link_to(name, url)
-    if current_page.url.include?(url)
-      link_to(name, url, "aria-current": "page")
-    else
-      link_to(name, url)
-    end
-  end
-
   def page_title
     title = "Middleman: "
     if current_page.data.title
