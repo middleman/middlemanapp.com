@@ -4,7 +4,12 @@ title: Project Templates
 
 # Project Templates
 
-When starting a new project, `middleman init` will create a folder with our [default project template]. Unlike previous versions of Middleman, custom project templates are simply a folder of files, or a Thor command, in a Git repository. If you want to use a non-default project template then you must use the `-T` option and use a path to a Git repository. Make sure you have Git installed.
+When starting a new project, `middleman init` will create a folder with our
+[default project template]. Unlike previous versions of Middleman, custom
+project templates are simply a folder of files, or a Thor command, in a Git
+repository. If you want to use a non-default project template then you must use
+the `-T` option and use a path to a Git repository. Make sure you have
+Git installed.
 
 [default project template]: https://github.com/middleman/middleman-templates-default/
 
@@ -18,7 +23,8 @@ middleman init MY_PROJECT_FOLDER -T username/repo-name
 
 ## Local Template
 
-Pass `file://` followed by the path to your local Git repository. **Note**: There are *three* slashes `///`.
+Pass `file://` followed by the path to your local Git repository.
+**Note**: There are *three* slashes `///`.
 
 ```bash
 middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
@@ -26,17 +32,29 @@ middleman init MY_PROJECT_FOLDER -T file:///path/to/local/repo/
 
 ## Template Directory
 
-In addition to the default project template, the Middleman community has created a lot of custom templates. There are a number of community-developed project templates in the [Directory](https://directory.middlemanapp.com/).
+In addition to the default project template, the Middleman community has created
+a lot of custom templates. There are a number of community-developed project
+templates in the [Directory].
 
-If you would like to have your template added to the Directory, please read the instructions on the [Middleman Directory](https://github.com/middleman/middleman-directory) GitHub page. When you add your project, you can provide a short name to simplify the `init` command. For example, our official [Middleman Blog](https://github.com/middleman/middleman-blog) template registered the `blog` name, so it can be initialized like this:
+If you would like to have your template added to the Directory, please read the
+instructions on the [Middleman Directory GitHub page][directory_github]. When
+you add your project, you can provide a short name to simplify the `init`
+command. For example, our official [Middleman Blog] template registered the
+`blog` name, so it can be initialized like this:
 
 ```bash
 middleman init MY_NEW_BLOG -T blog
 ```
 
+[Directory]: https://directory.middlemanapp.com/
+[directory_github]: https://github.com/middleman/middleman-directory
+[Middleman Blog]: https://github.com/middleman/middleman-blog
+
 ## Thor Template
 
-Templates that require process can be implemented with [Thor]. The [default template](https://github.com/middleman/middleman-templates-default) is implemented this way so it can ask questions as initialization.
+Templates that require process can be implemented with [Thor].
+The [default project template] is implemented this way so it can ask questions
+as initialization.
 
 Place a `Thorfile` at the root of your repository:
 
@@ -56,6 +74,9 @@ module Middleman
 end
 ```
 
-Inside this Ruby class, all public methods will be executed in order. The simplest example above just copies a folder. So if you placed your default template in the `template` directory, it would work exactly like the non-Thor option above.
+Inside this Ruby class, all public methods will be executed in order. The
+simplest example above just copies a folder. So if you placed your default
+template in the `template` directory, it would work exactly like the non-Thor
+option above.
 
 [Thor]: http://whatisthor.com/
