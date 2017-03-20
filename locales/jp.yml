@@ -80,7 +80,7 @@ jp:
     main_text: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
       オープンソースの機能に貢献したい時, Middleman を
       最大限に活用するには以下の機能を参照してください。
-    built_using_middleman: Middleman 採用企業
+    built_using_middleman: Middleman 利用者
     forum:
       header: コミュニティフォーラム
       description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
@@ -132,7 +132,7 @@ jp:
       採用した静的サイトジェネレータです
     getting_started: はじめに
     contribute: オープンソースコミュニティに貢献する
-    see_middleman_sites: Middleman 採用サイトを見る
+    see_middleman_sites: もっと見る
     stickers: Middleman ステッカーを購入
     donate: Middleman に寄付
 
