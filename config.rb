@@ -1,6 +1,7 @@
-activate :i18n
-activate :directory_indexes
+activate :aria_current
 activate :autoprefixer
+activate :directory_indexes
+activate :i18n
 activate :syntax do |syntax|
   syntax.css_class = "syntax-highlight"
 end
@@ -44,14 +45,4 @@ configure :build do
 
   activate :minify_css
   activate :minify_javascript
-end
-
-helpers do
-  def active_link_to(caption, url, options = {})
-    if current_page.url == "#{url}/"
-      options[:class] = "doc-item-active"
-    end
-
-    link_to(caption, url, options)
-  end
 end
