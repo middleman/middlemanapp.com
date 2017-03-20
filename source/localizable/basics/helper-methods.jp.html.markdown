@@ -219,8 +219,8 @@ html をビューテンプレートに挿入する手助けをします。簡単
 ```
 
 `auto_stylesheet_link_tag` や `auto_javascript_include_tag` は
-現在ページのパスを元にスタイルシートや JS のタグを生成します。ページが
-"contact.html" の場合, "contact.css" や "contact.js" の参照になります。
+現在ページのパスを元にスタイルシートや JavaScript のタグを生成します。
+ページが `contact.html` の場合, `contact.css` や `contact.js` の参照になります。
 
 ## Form ヘルパ
 
