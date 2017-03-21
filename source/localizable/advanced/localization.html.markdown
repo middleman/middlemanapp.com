@@ -34,8 +34,26 @@ es:
 ```
 
 Localizable templates live in the `source/localizable` folder by default (see
-below on how to change this option). Each template in that folder will have
-access to the `I18n` helper. Using this helper, you can refer to keys from your
+below on how to change this option).
+
+```
+mymiddlemansite/
+  +-- ...
+  +-- locales
+  |   +-- en.yml
+  |   +-- es.yml
+  +-- source
+  |   +-- images
+  |   +-- javascripts
+  |   +-- layouts
+  |   +-- localizable
+  |   |   +-- hello_world.html.erb
+  |   |   +-- hello_world.es.html.erb
+  |   +-- stylesheets
+  +-- ...
+```
+
+Each template in that folder will have access to the `I18n` helper. Using this helper, you can refer to keys from your
 YAML files and inject the language-specific values into your template. Here's a
 simple `source/localizable/hello_world.html.erb` template:
 
