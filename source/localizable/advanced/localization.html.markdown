@@ -129,6 +129,18 @@ Now, the files would be output as:
 /es/hola.html
 ```
 
+To localize directories, you have to split up the paths. For example, to localize `/services/software-development.html` to `/es/servicios/desarrollo-de-software.html`, you could use the following structure in `locales/es.yml`:
+
+```yaml
+---
+es:
+  paths:
+    services: "servicios"
+    "software-development": "desarrollo-de-software"
+```
+
+    
+
 ## Localizable Templates
 
 By default, the contents of `source/localizable` will be built in multiple
