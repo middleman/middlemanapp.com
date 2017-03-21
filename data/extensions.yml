@@ -584,3 +584,10 @@
   name: middleman-robots
   description: Creates a `robots.txt` file on build based on a configuration.
   url: https://github.com/yterajima/middleman-robots
+-
+  name: middleman-aria_current
+  description: Indicate current (active) links using `aria-current`.
+  url: https://github.com/thoughtbot/middleman-aria_current
+  tags:
+    - accessibility
+    - helpers
