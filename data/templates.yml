@@ -664,3 +664,18 @@
     - mobile
     - sass
     - slim
+-
+  name: thoughtbot Middleman Template
+  description: >
+    The base Middleman application used at thoughtbot, ready to deploy
+    to Netlify.
+  links:
+    github: https://github.com/thoughtbot/middleman-template
+  tags:
+    - accessibility
+    - Bourbon
+    - Bitters
+    - ERB
+    - Neat
+    - Netlify
+    - Sass
