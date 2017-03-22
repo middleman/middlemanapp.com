@@ -83,32 +83,24 @@ First, enable the `:gzip` extension:
 activate :gzip
 ```
 
-Then configure your server to serve those files. If you use Nginx, check out
-[the gzip_static](https://www.nginx.com/resources/wiki/extending/compiling/) module. For
-Apache, you'll have to do something a little trickier - see [this
-Gist](https://gist.github.com/2200790) for an example.
+Then configure your server to serve those files. If you use NGINX, check out the
+[gzip_static] module. For Apache, you'll have to do something a little trickier;
+see [this Gist][apache_gist] for an example.
 
 ## Compressing Images
 
-If you also want to compress images on build, try
-[`middleman-imageoptim`](https://github.com/plasticine/middleman-imageoptim).
+If you also want to compress images on build, try [middleman-imageoptim].
 
 ## Minify HTML
 
 Middleman provides an official extension for minifying its HTML output. Simply
-install the gem:
-
-```bash
-gem install middleman-minify-html
-```
-
-Add `middleman-minify-html` to your `Gemfile`:
+add `middleman-minify-html` to your `Gemfile`:
 
 ```ruby
 gem "middleman-minify-html"
 ```
 
-Then open your `config.rb` and add:
+Then run `bundle install`, open your `config.rb` and add:
 
 ```ruby
 activate :minify_html
@@ -118,17 +110,30 @@ You should notice whilst view-source:'ing that your HTML is now being minified.
 
 ## Responsive images with `srcset`
 
-One of the more recent additions to HTML is the `srcset` attribute for the `img` or `picture` tag. It allows you to define for the browser to load different images with different sizes dependent on either the viewport (using width such as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser display (using factors `1x, 2x, 3x, ...`).
+One of the more recent additions to HTML is the `srcset` attribute for the `img`
+or `picture` tag. It allows you to define for the browser to load different
+images with different sizes dependent on either the viewport (using width such
+as `1024w, 800w, 600w, or 320w`) or the resolution of the current browser
+display (using factors `1x, 2x, 3x, ...`).
 
 ```html
 <img src="img/100px.jpg" srcset="img/300px.jpg 3x, img/200px.jpg 2x, img/100px.jpg 1x">
 <img src="img/100px.jpg" srcset="img/300px.jpg 300w, img/200px.jpg 200w, img/100px.jpg 100w">
 ```
 
-If you want to use `srcset` in conjunction with the `:asset_hash` option, you need to employ the `image_path` helper:
+If you want to use `srcset` in conjunction with the `:asset_hash` option, you
+need to employ the `image_path` helper:
 
 ```erb
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
 
-The `srcset` attribute is not yet supported by all browsers as you can see at [caniuse.com](http://caniuse.com/#feat=srcset). If it is not supported the browser uses the `src` attribute as fallback. We noted, that some browsers use the first entry of the `srcset` as fallback. This is why we have put the largest image first in our example.
+The `srcset` attribute is not yet supported by all browsers as you can see at
+[Can I Use]. If it is not supported, the browser uses the `src` attribute as
+a fallback. We noted, that some browsers use the first entry of the `srcset` as
+a fallback. This is why we have put the largest image first in our example.
+
+  [gzip_static]: https://www.nginx.com/resources/wiki/extending/compiling/
+  [apache_gist]: https://gist.github.com/2200790
+  [middleman-imageoptim]: https://github.com/plasticine/middleman-imageoptim
+  [Can I Use]: http://caniuse.com/

@@ -9,15 +9,14 @@ information about all the pages and resources in your site and how they relate
 to each other. This can be used to create navigation, build search pages and
 feeds, etc.
 
-The [sitemap](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap) is a
-repository of every page in your site, including HTML, CSS, JavaScript, images
-- everything. It also includes any [dynamic pages] you've created using
-`:proxy`.
+The [sitemap] is a repository of every page in your site, including HTML, CSS,
+JavaScript, images - everything. It also includes any [dynamic pages] you've
+created using `:proxy`.
 
 ## Seeing the Sitemap
 
 To understand exactly how Middleman sees your site, start the preview server
-and load up http://localhost:4567/__middleman/sitemap/. You'll be able to
+and load up `http://localhost:4567/__middleman/sitemap/`. You'll be able to
 browse the whole sitemap and see the source path, destination (build) path,
 URL, and more for each resource in the sitemap. Pay special attention to the
 "path": you'll use that path to refer to files from `page`, `ignore` and
@@ -26,23 +25,20 @@ URL, and more for each resource in the sitemap. Pay special attention to the
 ## Accessing the Sitemap from Code
 
 Within templates `sitemap` gets you the sitemap object. From there, you can
-look at every page via the
-[`resources`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#resources-instance_method)
-method or grab individual resources via
-[`find_resource_by_path`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#find_resource_by_path-instance_method).
-You can also always get the page object for the page you're currently in via
-`current_resource`. Once you've got the list of pages from the sitemap, you can
-filter on various properties using the individual page objects.
+look at every page via the [`resources`] method or grab individual resources via
+[`find_resource_by_path`]. You can also always get the page object for the page
+you're currently in via `current_resource`. Once you've got the list of pages
+from the sitemap, you can filter on various properties using the individual page
+objects.
 
 ## Sitemap Resources
 
-Each resource in the sitemap is a
-[Resource](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource)
-object. Resources can tell you all kinds of interesting things about
-themselves. You can access [frontmatter] data, file extension, source and
-output paths, a linkable url, etc. Some of the properties of the Resource are
-mostly useful for Middleman's rendering internals, but you could imagine
-filtering pages on file extension to find all `.html` files, for example.
+Each resource in the sitemap is a [Resource] object. Resources can tell you all
+kinds of interesting things about themselves. You can access [frontmatter] data,
+file extension, source and output paths, a linkable url, etc. Some of the
+properties of the Resource are mostly useful for Middleman's rendering
+internals, but you could imagine filtering pages on file extension to find all
+`.html` files, for example.
 
 Each page can also find other pages related to it in the site hierarchy. The
 `parent`, `siblings`, and `children` methods are particularly useful in
@@ -70,5 +66,9 @@ end
 Then I could make a `category.html.erb` that uses the `category` and `pages`
 variables to build a category listing for each category.
 
-[dynamic pages]: /advanced/dynamic-pages/
-[frontmatter]: /basics/frontmatter/
+  [sitemap]: http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap
+  [dynamic pages]: /advanced/dynamic-pages/
+  [`resources`]: http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#resources-instance_method
+  [`find_resource_by_path`]: http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#find_resource_by_path-instance_method
+  [Resource]: http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource
+  [frontmatter]: /basics/frontmatter/

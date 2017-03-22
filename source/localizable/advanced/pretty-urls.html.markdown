@@ -50,7 +50,8 @@ like this:
 ```
 
 To slightly automate this process, the Markdown may be processed by ERB first.
-For example, in a file named `/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
+For example, in a file named
+`/posts/2013-09-23-some-interesting-post.html.markdown.erb`:
 
 ```ruby
 ![Amazing picture](<%= current_page.url %>some-image.png)
@@ -64,13 +65,16 @@ If there are pages which you don't want automatically renamed, you can opt-out:
 page "/i-really-want-the-extension.html", :directory_index => false
 ```
 
-`page` works with regexes or file globs if you want to turn off indexes for many files at once.
+`page` works with regexes or file globs if you want to turn off indexes for many
+files at once.
 
-You can also add a `directory_index: false` key to your page's
-[Frontmatter](/basics/frontmatter/) to disable directory indexes.
+You can also add a `directory_index: false` key to your page's [Frontmatter] to
+disable directory indexes.
 
 ## Manual Indexes
 
 If your template file is already named `index.html` it will pass through
 Middleman untouched. For example, `my-page/index.html.erb` will generate
 `my-page/index.html` as you would expect.
+
+  [Frontmatter]: /basics/frontmatter/

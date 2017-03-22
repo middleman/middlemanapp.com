@@ -11,8 +11,6 @@ repository. If you want to use a non-default project template then you must use
 the `-T` option and use a path to a Git repository. Make sure you have
 Git installed.
 
-[default project template]: https://github.com/middleman/middleman-templates-default/
-
 ## GitHub Template
 
 Pass the GitHub `username/repo-name` to the `init` command.
@@ -46,10 +44,6 @@ command. For example, our official [Middleman Blog] template registered the
 middleman init MY_NEW_BLOG -T blog
 ```
 
-[Directory]: https://directory.middlemanapp.com/
-[directory_github]: https://github.com/middleman/middleman-directory
-[Middleman Blog]: https://github.com/middleman/middleman-blog
-
 ## Thor Template
 
 Templates that require process can be implemented with [Thor].
@@ -79,4 +73,8 @@ simplest example above just copies a folder. So if you placed your default
 template in the `template` directory, it would work exactly like the non-Thor
 option above.
 
-[Thor]: http://whatisthor.com/
+  [default project template]: https://github.com/middleman/middleman-templates-default/
+  [Directory]: https://directory.middlemanapp.com/
+  [directory_github]: https://github.com/middleman/middleman-directory
+  [Middleman Blog]: https://github.com/middleman/middleman-blog
+  [Thor]: http://whatisthor.com/

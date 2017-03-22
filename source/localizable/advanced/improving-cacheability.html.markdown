@@ -6,9 +6,8 @@ title: Improving Cacheability
 
 To make your website render as quickly as possible, you should serve any
 assets, like JavaScript, CSS, or images, with proper headers that instruct web
-browsers to [cache them for a very long
-time](https://code.google.com/speed/page-speed/docs/caching.html). This means
-that when users visit your site again (or even just go to another page in your
+browsers to [cache them for a very long time][caching]. This means that when
+users visit your site again (or even just go to another page in your
 site) they don't have to re-download those assets. However, setting a
 far-future `Expires` or `Cache-Control` header can cause problems when you
 change your assets but users are still using their cached versions. Middleman
@@ -48,9 +47,11 @@ change which file extensions are renamed.
 ## Configuring your server
 
 Configuring your server to use far-future `Expires` and `Cache-Control` headers
-is different depending on which server you use. See Google's [page speed
-docs](https://code.google.com/speed/page-speed/docs/caching.html) for links on
-how to configure your particular server, and run [Google Page
-Speed](https://code.google.com/speed/page-speed/docs/extension.html) or
-[YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) to check that
-you've configured things correctly.
+is different depending on which server you use. See Google's
+[page speed docs][caching] for links on how to configure your particular server,
+and run [Google PageSpeed Insights] or [YSlow] to check that you've configured
+things correctly.
+
+  [caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
+  [Google PageSpeed Insights]: https://developers.google.com/speed/pagespeed/insights/
+  [YSlow]: http://yslow.org/

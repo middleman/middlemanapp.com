@@ -4,7 +4,8 @@ title: Localization (i18n)
 
 # Localization (i18n)
 
-The `:i18n` extension provides a way to localize your site. Activate it in your `config.rb`:
+The `:i18n` extension provides a way to localize your site. Activate it in your
+`config.rb`:
 
 ```ruby
 activate :i18n
@@ -67,7 +68,8 @@ YAML file) in the path:
 /fr/index.html
 ```
 
-You can change this with the `:path` option, but remember: the URL will always include the name of the YAML file:
+You can change this with the `:path` option, but remember: the URL will always
+include the name of the YAML file:
 
 ```ruby
 activate :i18n, :path => "/langs/:locale/"
@@ -182,4 +184,5 @@ build/index.html is English
 build/es/index.html is Spanish
 ```
 
-To use this localization method, be sure to put your files inside the `localizable` folder.
+To use this localization method, be sure to put your files inside the
+`localizable` folder.

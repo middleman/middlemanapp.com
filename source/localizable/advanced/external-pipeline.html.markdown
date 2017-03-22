@@ -4,13 +4,22 @@ title: External Pipeline
 
 # External Pipeline
 
-We are in the middle of an explosion of front-end languages and tooling. Since the beginning, Middleman has defaulted to Rails' Asset Pipeline as our solution for frontend dependency management and compilation.
+We are in the middle of an explosion of front-end languages and tooling. Since
+the beginning, Middleman has defaulted to Rails' Asset Pipeline as our solution
+for frontend dependency management and compilation.
 
-In the past few years, the community has moved away from Rails and is now focused on task runners (Gulp, Grunt), dependency management (Browserify, Webpack) via NPM, official tooling (ember-cli, react-native) and transpilers (ClojureScript, Elm).
+In the past few years, the community has moved away from Rails and is now
+focused on task runners ([gulp], [Grunt]), dependency management ([Browserify],
+[webpack]) via npm, official tooling ([EmberCLI], [React Native]) and
+transpilers ([ClojureScript], [Elm]).
 
-Middleman cannot accommodate all these different solutions and languages, so we've decided to allow all of them to live inside Middleman. This feature is called `external_pipeline` and it allows Middleman to run multiple subprocesses which output content to temporary folders which are then merged into the Middleman sitemap.
+Middleman cannot accommodate all these different solutions and languages, so
+we've decided to allow all of them to live inside Middleman. This feature is
+called `external_pipeline` and it allows Middleman to run multiple subprocesses
+which output content to temporary folders which are then merged into the
+Middleman sitemap.
 
-# Ember Example
+## Ember Example
 
 A simple Ember example looks like this:
 
@@ -22,11 +31,14 @@ activate :external_pipeline,
   latency: 2
 ```
 
-This assumes that you have a `test-app` folder in your Middleman project which contains the Ember frontend code. When in build mode, we tell Ember to do a static build. When in dev, we get a dev build.
+This assumes that you have a `test-app` folder in your Middleman project which
+contains the Ember frontend code. When in build mode, we tell Ember to do a
+static build. When in dev, we get a dev build.
 
-Ember compiles this information to the `test-app/dist` folder, who's contents we merge into the Middleman sitemap.
+Ember compiles this information to the `test-app/dist` folder, who's contents we
+merge into the Middleman sitemap.
 
-# Webpack Example
+## webpack Example
 
 ```ruby
 activate :external_pipeline,
@@ -36,13 +48,14 @@ activate :external_pipeline,
   latency: 1
 ```
 
-# Broccoli Example
+## Broccoli Example
 
-Broccoli is a powerful asset pipeline in the node ecosystem. With a myriad of plugins it can accomodate most pre-processing needs: CSS-languages (SCSS, compass), minification (uglifyJS et. al), module loaders, transpilation (babel etc) and much more.
+[Broccoli] is a powerful asset pipeline in the Node ecosystem. With a myriad of
+plugins it can accomodate most pre-processing needs: CSS-languages (SCSS,
+Compass), minification (UglifyJS et. al), module loaders, transpilation (Babel,
+etc.) and much more.
 
-Read more about broccoli: https://github.com/broccolijs/broccoli
-
-*config.rb*
+`config.rb`
 
 ```ruby
 activate :external_pipeline,
@@ -52,12 +65,9 @@ activate :external_pipeline,
   :latency => 2
 ```
 
+`Brocfile.js` (this can be expanded with Babel, SCSS and similar plugins)
 
-*Brocfile.js*
-
-Brocfile example (this can be expanded with babel, SCSS and similar plugins).
-
-```javascript
+```js
 /* globals module,require,process */
 
 var Funnel            = require('broccoli-funnel');
@@ -140,7 +150,7 @@ module.exports = finalTree;
 ```
 
 
-*package.json*
+`package.json`
 
 ```json
 {
@@ -164,3 +174,13 @@ module.exports = finalTree;
   }
 }
 ```
+
+  [gulp]: http://gulpjs.com/
+  [Grunt]: https://gruntjs.com/
+  [Browserify]: http://browserify.org/
+  [webpack]: https://webpack.github.io/
+  [EmberCLI]: https://ember-cli.com/
+  [React Native]: https://facebook.github.io/react-native/
+  [ClojureScript]: https://clojurescript.org/
+  [Elm]: http://elm-lang.org/
+  [Broccoli]: http://broccolijs.com/
