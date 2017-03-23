@@ -4,7 +4,8 @@ title: Directory Structure
 
 # Directory Structure
 
-The default Middleman installation consists of a directory structure which looks like this:
+The default Middleman installation consists of a directory structure which looks
+like this:
 
 ```
 mymiddlemansite/
@@ -32,26 +33,28 @@ Middleman makes use of the `source`, `build`, `data` and `lib` directories for
 specific purposes. Each of these directories are children of the main Middleman
 directory.
 
-### Source Directory
+### `source` Directory
 
 The `source` directory contains your main website source files to be built,
 including your templates JavaScript, CSS and images.
 
-### Build Directory
+### `build` Directory
 
 The `build` directory is where your static website files will be compiled and
 exported to.
 
-### Data Directory
+### `data` Directory
 
-Local Data allows you to create `.yml`, `.yaml` or `.json` files in a folder
-called `data` and makes this information available in your templates. The
-`data` folder should be placed in the root of your project i.e. in the same
-folder as your project's `source` folder. See the [Local
-Data](/advanced/data-files/) docs for more information.
+Local Data allows you to create YAML or JSON files in a folder called `data` and
+makes this information available in your templates. The `data` folder should be
+placed in the root of your project (i.e. in the same folder as your project's
+`source` folder). See the [Data Files] docs for more information.
 
-### Lib Directory
+### `lib` Directory
 
 The `lib` directory enables you to include external Ruby modules which contain
-[helpers](/basics/helper-methods/) for building your application. If you use Rails
-then you will be familiar with this layout.
+[helpers] for building your application. If you use Rails then you will be
+familiar with this layout.
+
+  [Data Files]: /advanced/data-files/
+  [helpers]: /basics/helper-methods/

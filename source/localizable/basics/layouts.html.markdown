@@ -168,7 +168,7 @@ activate :blog do |blog|
   blog.layout = "article_layout"
 end
 
-# Or:
+# or:
 
 page "blog/*", :layout => :article_layout
 ```
@@ -206,8 +206,8 @@ accomplished by setting the default layout to false in your `config.rb`:
 ```ruby
 set :layout, false
 
-# Or for an individual file:
+# or for an individual file:
 page '/foo.html', :layout => false
 ```
 
-[Frontmatter]: /basics/frontmatter/
+  [Frontmatter]: /basics/frontmatter/

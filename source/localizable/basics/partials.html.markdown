@@ -20,7 +20,7 @@ language extension you are using. Here is an example footer partial named
 </footer>
 ```
 
-Now, we can include this partial in the default layout using the "partial"
+Now, we can include this partial in the default layout using the `partial`
 method:
 
 ```erb
@@ -72,6 +72,6 @@ Then, within the partial, you can set the text appropriately as follows:
 </form>
 ```
 
-Read the [Padrino Render Helpers] documentation for more information (located towards the bottom of the Application Helpers guide).
+Read the [Padrino Render Helpers] documentation for more information.
 
-[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/
+  [Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/

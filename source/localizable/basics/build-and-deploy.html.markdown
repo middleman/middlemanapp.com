@@ -26,15 +26,12 @@ over from earlier builds but would no longer be produced.
 After building the site you have everything you need within the
 `build`-directory. There are nearly limitless ways to deploy a static build. So
 we present our very own solution for this here. Feel free to search the web or
-look at our [extension
-directory](https://directory.middlemanapp.com/#/extensions/deployment) for more
-alternatives to deploy Middleman. If you are an author of a deployment tool
-suitable to deploy Middleman, please make a PR
-[here](https://directory.middlemanapp.com/#/extensions/deployment).
+look at our [extension directory] for more alternatives to deploy Middleman. If
+you are an author of a deployment tool suitable to deploy Middleman, please
+[open a pull request to the directory][directory].
 
-A very handy tool to deploy a build is
-[`middleman-deploy`](https://github.com/middleman-contrib/middleman-deploy). It
-can deploy a site via rsync, FTP, SFTP, or Git.
+A very handy tool to deploy a build is [`middleman-deploy`]. It can deploy a
+site via rsync, FTP, SFTP, or Git.
 
 ```bash
 $ middleman build [--clean]
@@ -57,3 +54,7 @@ configure :build do
   activate :asset_host, :host => '//YOURDOMAIN.cloudfront.net'
 end
 ```
+
+  [extension directory]: https://directory.middlemanapp.com/#/extensions/deployment
+  [directory]: https://github.com/middleman/middleman-directory
+  [`middleman-deploy`]: https://github.com/middleman-contrib/middleman-deploy

@@ -5,7 +5,7 @@ title: Blogging
 # Blogging
 
 Middleman has an official extension to support blogging, articles and tagging.
-`middleman-blog` ships as an extension and must be installed to use. Simply
+[`middleman-blog`] ships as an extension and must be installed to use. Simply
 specify the gem in your `Gemfile`:
 
 ```ruby
@@ -28,15 +28,10 @@ middleman init MY_BLOG_PROJECT --template=blog
 ```
 
 If you already have a Middleman project, you can re-run `middleman init` with
-the blog template option to generate the sample
-[`index.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/index.html.erb),
-[`tag.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/tag.html.erb),
-[`calendar.html`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/calendar.html.erb),
-and
-[`feed.xml`](https://github.com/middleman/middleman-templates-blog/tree/master/template/source/feed.xml.builder),
-or you can write those yourself. You can see [what gets
-generated](https://github.com/middleman/middleman-templates-blog/tree/master/template/source)
-on GitHub.
+the blog template option to generate the sample [`index.html`][blog_index],
+[`tag.html`][blog_tag], [`calendar.html`][blog_caldendar], and
+[`feed.xml`][blog_feed], or you can write those yourself. You can see
+[what gets generated][blog_generated] on GitHub.
 
 The blog extension has many configuration options - you can see what they all
 are and what they do by going to `http://localhost:4567/__middleman/config/` in
@@ -46,11 +41,11 @@ your preview server.
 
 Like Middleman itself, the blog extension is focused on individual files. Each
 article is its own file, using any template language you like. The default
-filename structure for articles is  `{year}-{month}-{day}-{title}.html`. When
+filename structure for articles is `{year}-{month}-{day}-{title}.html`. When
 you want to create a new article, place it in the correct path and include some
-basic [frontmatter](/basics/frontmatter/) to get going. You can set the
-`blog.sources` option while activating `:blog` in your `config.rb` to change
-where and in what format Middleman should look for articles.
+basic [frontmatter] to get going. You can set the `blog.sources` option while
+activating `:blog` in your `config.rb` to change where and in what format
+Middleman should look for articles.
 
 Let's say I want to create a new post about Middleman. I would create a file at
 `source/2011-10-18-middleman.html.markdown`. The minimum contents of this file
@@ -152,17 +147,15 @@ extracted from the source path via
 
 ### Pretty URLs (Directory Indexes)
 
-You might also consider enabling the [pretty urls](/advanced/pretty-urls/)
-feature if you want your blog posts to appear as directories instead of HTML
-files.
+You might also consider enabling the [pretty urls] feature if you want your blog
+posts to appear as directories instead of HTML files.
 
 **Note:** Make sure that you activate `directory_indexes` **after** you activate
 the blog extension.
 
 ## Layouts
 
-You can set a specific [layout](/basics/layouts) to be used for all articles in
-your `config.rb`:
+You can set a specific [layout] to be used for all articles in your `config.rb`:
 
 ```ruby
 activate :blog do |blog|
@@ -171,26 +164,18 @@ end
 ```
 
 If you want to wrap each article in a bit of structure before inserting it into
-a layout, you can use Middleman's [nested
-layouts](/basics/layouts/#nested-layouts) feature to create an article layout
-that is then wrapped with your main layout.
+a layout, you can use Middleman's [nested layouts] feature to create an article
+layout that is then wrapped with your main layout.
 
 ## Listing Articles
 
 The list of articles in your blog is accessible from templates as
-[`blog.articles`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#articles-instance_method),
-which returns a list of
-[`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)s.
+[`blog.articles`], which returns a list of [`BlogArticle`]s.
 
-Each
-[`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)
-has some informative methods on it, and it is also a
-[`Resource`](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource)
-from the [sitemap](/advanced/sitemap) which has even more information (such as
-the
-[`data`](http://www.rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter#data-instance_method)
-from your [frontmatter](/basics/frontmatter/)). Within layouts and even your
-articles themselves you can get the current article via `current_article`.
+Each `BlogArticle` has some informative methods on it, and it is also a
+[`Resource`] from the [sitemap] which has even more information (such as the
+[`data`] from your [frontmatter]). Within layouts and even your articles
+themselves you can get the current article via `current_article`.
 
 For example, the following shows the 5 most-recent articles and their summaries:
 
@@ -243,7 +228,7 @@ Or similarly for a calendar list:
 </ul>
 ```
 
-Or if you added a `public` flag to your front matter:
+Or if you added a `public` flag to your frontmatter:
 
 ```erb
 <h1>Public Articles</h1>
@@ -254,33 +239,25 @@ Or if you added a `public` flag to your front matter:
 
 ## Helpers
 
-There are [several helpers](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers)
-to use in your templates to make things simpler. They allow you to do things
-like get the current article, see if the current page is a blog article, or
-build paths for tag and calendar pages.
+There are [several helpers][helpers] to use in your templates to make things
+simpler. They allow you to do things like get the current article, see if the
+current page is a blog article, or build paths for tag and calendar pages.
 
 ## Tags
 
 What would blogging be without organizing articles around tags? Simply add a
-`tag` entry to your articles' [frontmatter](/basics/frontmatter/). Then, you
-can access the tags for a
-[`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle)
-using the
-[`tag`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#tags-instance_method)
-method, and you can get a list of all tags with their associated articles from
-[`blog.tags`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method).
-If you set the `blog.tag_template` setting in `config.rb` to a template (see
-[the default
-`config.rb`](https://github.com/middleman/middleman-templates-blog/blob/master/template/config.rb))
-you can render a page for each tag. The tag template has the local variable
-`tagname` set to the current tag and `articles` set to a list of articles with
-that tag, and you can use the
-[`tag_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method)
-helper to generate links to a particular tag page.
+`tag` entry to your articles' [frontmatter]. Then, you can access the tags for a
+[`BlogArticle`] using the [`tag`] method, and you can get a list of all tags
+with their associated articles from [`blog.tags`]. If you set the
+`blog.tag_template` setting in `config.rb` to a template (see
+[the default `config.rb`][default_config]) you can render a page for each tag.
+The tag template has the local variable `tagname` set to the current tag and
+`articles` set to a list of articles with that tag, and you can use the
+[`tag_path`] helper to generate links to a particular tag page.
 
-The default template produces a [`tag.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/tag.html.erb)
-template for you that produces a page for each tag at `tags/{tag}.html`. Adding
-a couple tags to the above example would look like this:
+The default template produces a [`tag.html`] template for you that produces a
+page for each tag at `tags/{tag}.html`. Adding a couple tags to the above
+example would look like this:
 
 ```yaml
 ---
@@ -307,13 +284,10 @@ Now you can find this article listed on `categories/blogging.html`.
 ## Calendar Pages
 
 Many blogging engines produce pages that list out all articles for a specific
-year, month, or day. Middleman does this using a
-[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
-template and the `blog.calendar_template` setting. The default template
-generates
-[`calendar.html`](https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb)
-for you. This template gets `year`, `month`, and `day` variables set in it, as
-well as `articles` which is a list of articles for that day.
+year, month, or day. Middleman does this using a [`calendar.html`] template and
+the `blog.calendar_template` setting. The default project template comes with a
+`calendar.html` for you. This template gets `year`, `month`, and `day` variables
+set in it, as well as `articles` which is a list of articles for that day.
 
 If you only want certain calendar pages (say, year but not day), or if you want
 different templates for each type of calendar page, you can set
@@ -321,17 +295,12 @@ different templates for each type of calendar page, you can set
 individually. Setting `blog.calendar_template` is just a shortcut for setting
 them all to the same thing.
 
-In templates, you can use the
-[`blog_year_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_year_path-instance_method),
-[`blog_month_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_month_path-instance_method),
-and
-[`blog_day_path`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_day_path-instance_method)
-helpers to generate links to your calendar pages. You can customize what those
-links look like with the `blog.year_link`, `blog.month_link`, and
-`blog.day_link` settings. By default, your calendar pages will look like
-`/2012.html`, `/2012/03.html`, and `/2012/03/15.html` for year, month, and day,
-respectively.
-
+In templates, you can use the [`blog_year_path`], [`blog_month_path`], and
+[`blog_day_path`] helpers to generate links to your calendar pages. You can
+customize what those links look like with the `blog.year_link`,
+`blog.month_link`, and `blog.day_link` settings. By default, your calendar pages
+will look like `/2012.html`, `/2012/03.html`, and `/2012/03/15.html` for year,
+month, and day, respectively.
 
 ## Article Summaries
 
@@ -362,9 +331,8 @@ you'd like the summary to appear):
 This will then link to the article, where `READMORE` (or the text you have
 configured the extension to match on) will be removed.
 
-You can use the summary in templates from the
-[`summary`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#summary-instance_method)
-attribute of a [`BlogArticle`](http://rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle).
+You can use the summary in templates from the [`summary`] attribute of a
+[`BlogArticle`].
 
 `summary` can also take an optional length to chop summaries down to, and a
 string to use when the text is truncated:
@@ -480,8 +448,8 @@ Time.zone = "Tokyo"
 ## Custom Article Collections
 
 Middleman-Blog also supports the ability to group articles by other
-[frontmatter](/basics/frontmatter/) data as well. A somewhat contrived example
-would be the ability to group articles by a *category* attribute:
+[frontmatter] data as well. A somewhat contrived example would be the ability to
+group articles by a *category* attribute:
 
 ```yaml
 ---
@@ -527,7 +495,7 @@ source/2011-10-18-middleman/photo.jpg
 source/2011-10-18-middleman/source_code.rb
 ```
 
-might be output (if [`directory_indexes`](/advanced/pretty-urls/) is turned on) as:
+might be output (if [`directory_indexes`] is turned on) as:
 
 ```
 build/2011/10/18/middleman/index.html
@@ -550,14 +518,14 @@ Right: [My Photo](2011-10-18-middleman/photo.jpg)
 ```
 
 If you don't do this, it may still work, but other Middleman features like
-`:asset_hash` won't work. See [this issue](https://github.com/middleman/middleman/issues/818) for more details.
+`:asset_hash` won't work. See [this issue][issue_818] for more details.
 
 ## Locale-specific articles and localization
 
 The blogging extension can be locale-aware. First, you'll want to activate the
-[`:i18n`](/advanced/localization/) extension *before* you activate your `:blog`
-extension. Then, your articles will be locale-aware. This means that you can
-use helpers like `t()` inside them.
+[`:i18n`] extension *before* you activate your `:blog` extension. Then, your
+articles will be locale-aware. This means that you can use helpers like `t()`
+inside them.
 
 Blog articles can have a specific language stated in their frontmatter, or via
 their path using the `{lang}` variable in `blog.sources`. For example, if
@@ -601,3 +569,33 @@ tell all helpers which blog to use.
 
 Other than that, your blogs act as normal, and can be configured totally
 independently.
+
+  [`middleman-blog`]: https://github.com/middleman/middleman-blog
+  [blog_index]: https://github.com/middleman/middleman-templates-blog/tree/master/template/source/index.html.erb
+  [blog_tag]: https://github.com/middleman/middleman-templates-blog/tree/master/template/source/tag.html.erb
+  [blog_calendar]: https://github.com/middleman/middleman-templates-blog/tree/master/template/source/calendar.html.erb
+  [blog_feed]: https://github.com/middleman/middleman-templates-blog/tree/master/template/source/feed.xml.builder
+  [blog_generated]: https://github.com/middleman/middleman-templates-blog/tree/master/template/source
+  [frontmatter]: /basics/frontmatter/
+  [pretty urls]: /advanced/pretty-urls/
+  [layout]: /basics/layouts
+  [nested layouts]: /basics/layouts/#nested-layouts
+  [`blog.articles`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#articles-instance_method
+  [`BlogArticle`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle
+  [`Resource`]: http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource
+  [sitemap]: /advanced/sitemap
+  [`data`]: http://www.rubydoc.info/gems/middleman-core/Middleman/CoreExtensions/FrontMatter#data-instance_method
+  [helpers]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers
+  [`tag`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#tags-instance_method
+  [`blog.tags`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogData#tags-instance_method
+  [default_config]: https://github.com/middleman/middleman-templates-blog/blob/master/template/config.rb
+  [`tag_path`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#tag_path-instance_method
+  [`tag.html`]: https://github.com/middleman/middleman-templates-blog/blob/master/template/source/tag.html.erb
+  [`calendar.html`]: https://github.com/middleman/middleman-templates-blog/blob/master/template/source/calendar.html.erb
+  [`blog_year_path`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_year_path-instance_method
+  [`blog_month_path`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_month_path-instance_method
+  [`blog_day_path`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/Helpers#blog_day_path-instance_method
+  [`summary`]: http://www.rubydoc.info/github/middleman/middleman-blog/master/Middleman/Blog/BlogArticle#summary-instance_method
+  [`directory_indexes`]: /advanced/pretty-urls/
+  [issue_818]: https://github.com/middleman/middleman/issues/818
+  [`:i18n`]: /advanced/localization/

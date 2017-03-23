@@ -9,8 +9,7 @@ development. The languages range from simply allowing you to use Ruby variables
 and loops in your pages, to providing a completely different format to write
 your pages in which compiles to HTML. Middleman ships with support for the ERB,
 Haml, Sass, SCSS and CoffeeScript engines. Many more engines can be enabled by
-including their Tilt-enabled gems.
-[See the list](/basics/template-engine-options/).
+including their Tilt-enabled gems ([see the list]).
 
 ## Template Basics
 
@@ -39,3 +38,5 @@ If we wanted to get fancy, we could add a loop:
   <% end %>
 </ul>
 ```
+
+  [see the list]: /basics/template-engine-options/

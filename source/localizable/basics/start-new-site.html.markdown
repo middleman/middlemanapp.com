@@ -20,7 +20,7 @@ $ middleman init my_new_project
 
 creates a subfolder `my_new_project` with the Middleman skeleton project.
 
-### The Skeleton
+## The Skeleton
 
 Every new project creates a basic web development skeleton for you. This
 automates the construction of a standard hierarchy of folders and files that
@@ -31,11 +31,9 @@ source folder is where you will build your website. The skeleton project
 contains folders for JavaScript, CSS and images, but you can change these to
 match your own personal preferences.
 
-The `config.rb` file contains [settings for Middleman].
+The `config.rb` file contains [settings for Middleman][settings].
 
-[settings for Middleman]: /advanced/configuration/
-
-#### `Gemfile`
+### `Gemfile`
 
 Middleman will respect a Bundler `Gemfile` for specifying and controlling your
 gem dependencies. When creating a new project, Middleman will generate a
@@ -45,7 +43,7 @@ example). All plugins and extra libraries you use in your project should be
 listed in your `Gemfile`, and Middleman will automatically `require` all of them
 when it starts.
 
-#### `config.ru`
+### `config.ru`
 
 A `config.ru` file describes how the site should be loaded by a Rack-enabled
 web server. If you'd like to host your Middleman site in development mode on a
@@ -59,3 +57,5 @@ run Middleman.server
 
 Remember that Middleman is built to generate *static* sites, though. This
 scenario is not a primary use-case.
+
+  [settings]: /advanced/configuration/
