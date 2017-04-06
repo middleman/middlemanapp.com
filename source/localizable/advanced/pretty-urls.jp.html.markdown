@@ -5,8 +5,8 @@ title: きれいな URL (ディレクトリインデックス)
 # きれいな URL (ディレクトリインデックス)
 
 デフォルト設定では Middleman はプロジェクトの中であなたが記述したとおり正確に
-ファイルを出力します。例えば `source` フォルダの中の `about-us.html.erb` ファイルは
-プロジェクトのビルド時に `about-us.html` として出力されます。
+ファイルを出力します。例えば `source` フォルダの中の `about-us.html.erb`
+ファイルはプロジェクトのビルド時に `about-us.html` として出力されます。
 `example.com` の Web サーバのルートディレクトリにプロジェクトを配置すれば,
 このページは次の URL でアクセスできます: `http://example.com/about-us.html`
 
@@ -19,8 +19,8 @@ activate :directory_indexes
 ```
 
 このプロジェクトがビルドされた時,  `about-us.html.erb` ファイルは
-`about-us/index.html` として出力されます。"index ファイル" 対応の Web サーバに置かれた場合
-(Apache や Amazon S3), このページは次の URL でアクセスできます:
+`about-us/index.html` として出力されます。"index ファイル" 対応の Web サーバに
+置かれた場合 (Apache や Amazon S3), このページは次の URL でアクセスできます:
 
 ```ruby
 http://example.com/about-us
@@ -50,7 +50,8 @@ set :index_file, "index.php"
 ```
 
 わずかにこのプロセスを自動化するには, Markdown をまずは ERB で作成します。
-例えば `/posts/2013-09-23-some-interesting-post.html.markdown.erb` ファイルがあるとします:
+例えば `/posts/2013-09-23-some-interesting-post.html.markdown.erb` ファイルが
+あるとします:
 
 ```ruby
 ![すごい画像](<%= current_page.url %>some-image.png)
@@ -64,13 +65,16 @@ set :index_file, "index.php"
 page "/i-really-want-the-extension.html", :directory_index => false
 ```
 
-1 度にたくさんのファイルのインデックスを無効化にしたい場合, `page` には正規表現かファイルのパターンマッチを与えることができます。
+1 度にたくさんのファイルのインデックスを無効化にしたい場合, `page` には
+正規表現かファイルのパターンマッチを与えることができます。
 
-ページ毎に [YAML 形式の Frontmatter](/jp/basics/frontmatter/) に
+ページ毎に [Frontmatter] に
 `directory_index: false` を追加することもできます。
 
 ## 手動インデックス
 
-テンプレートのファイル名がすでに `index.html` の場合,
-Middleman は手をつけません。例えば, `my-page/index.html.erb` はあなたの予想どおり
+テンプレートのファイル名がすでに `index.html` の場合, Middleman は
+手をつけません。例えば, `my-page/index.html.erb` はあなたの予想どおり
 `my-page/index.html` としてビルドされます。
+
+  [Frontmatter]: /jp/basics/frontmatter/

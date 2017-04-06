@@ -29,8 +29,8 @@ which are carefully compressed by their authors ahead of time.
 
 You can customize how the JavaScript compressor works by setting the
 `:compressor` option for the `:minify_javascript` extension in
-`config.rb` to a custom instance of Uglifier. See [Uglifier's
-docs](https://github.com/lautis/uglifier) for details.
+`config.rb` to a custom instance of Uglifier. See [Uglifier's docs]
+for details.
 
 For example, you could
 enable unsafe optimizations and mangle top-level variable names like this:
@@ -70,8 +70,7 @@ gem 'oj' # faster JS compiles
 
 ## gzip text files
 
-It's a good idea to [serve compressed
-files](https://developer.yahoo.com/performance/rules.html#gzip) to user agents
+It's a good idea to [serve compressed files] to user agents
 that can handle it. Many web servers have the ability to gzip files on the fly,
 but that requires CPU work every time the file is served, and as a result most
 servers don't perform the maximum compression. Middleman can produce gzipped
@@ -133,6 +132,8 @@ The `srcset` attribute is not yet supported by all browsers as you can see at
 a fallback. We noted, that some browsers use the first entry of the `srcset` as
 a fallback. This is why we have put the largest image first in our example.
 
+  [Uglifier's docs]: https://github.com/lautis/uglifier
+  [serve compressed files]: https://developer.yahoo.com/performance/rules.html#gzip
   [gzip_static]: https://www.nginx.com/resources/wiki/extending/compiling/
   [apache_gist]: https://gist.github.com/2200790
   [middleman-imageoptim]: https://github.com/plasticine/middleman-imageoptim

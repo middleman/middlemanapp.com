@@ -4,15 +4,15 @@ title: パーシャル
 
 # パーシャル
 
-パーシャルはコンテンツの重複を避けるためにページ全体にわたってそのコンテンツを共有する方法です。
-パーシャルはページテンプレートとレイアウトで使うことができます。上記 2 つの
-レイアウトをもつ例を続けましょう: 通常のページと admin ページです。
+パーシャルはコンテンツの重複を避けるためにページ全体にわたってそのコンテンツを
+共有する方法です。パーシャルはページテンプレートとレイアウトで使うことができます。
+上記 2 つのレイアウトをもつ例を続けましょう: 通常のページと admin ページです。
 この 2 つのレイアウトには footer のように重複する内容があります。
 footer パーシャルを作成し, これらのレイアウトで使ってみましょう。
 
-パーシャルのファイル名は prefix にアンダースコアが付き, 使用するテンプレート言語の
-拡張子を含みます。例として `source` フォルダに置かれる `_footer.erb` と名付けられた
-footer パーシャルを示します:
+パーシャルのファイル名は prefix にアンダースコアが付き, 使用するテンプレート言語
+の拡張子を含みます。例として `source` フォルダに置かれる `_footer.erb` と
+名付けられた footer パーシャルを示します:
 
 ```html
 <footer>
@@ -72,6 +72,6 @@ admin レイアウトでは次のように:
 </form>
 ```
 
-詳細については [Padrino Render Helpers] のドキュメントを参照してください。(リンク先ページの下の方にあります)
+詳細については [Padrino Render Helpers] を参照してください。
 
-[Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/
+  [Padrino Render Helpers]: http://padrinorb.com/guides/application-helpers/render-helpers/

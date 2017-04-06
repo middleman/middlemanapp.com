@@ -52,9 +52,11 @@ ignore "/ignore-this-template.html"
 
 ## きれいな URL (ディレクトリインデックス)
 
-動的ページと [ディレクトリインデックス](/jp/advanced/pretty-urls/) を併用するには `/index.html` が続いたプロキシパスを指定します。
+動的ページと [ディレクトリインデックス][Directory Indexes] を併用するには
+`/index.html` が続いたプロキシパスを指定します。
 
-次の例では, プロキシパスは `/about/#{name}/index.html` になります:
+次の例では, プロキシパスは `/about/#{name}/index.html`
+になります:
 
 ```ruby
 ["tom", "dick", "harry"].each do |name|
@@ -67,3 +69,5 @@ end
 * `/about/tom/index.html` (テンプレート中の `person_name` は "tom")
 * `/about/dick/index.html` (テンプレート中の `person_name` は "dick")
 * `/about/harry/index.html` (テンプレート中の `person_name` は "harry")
+ 
+  [Directory Indexes]: /jp/advanced/pretty-urls/

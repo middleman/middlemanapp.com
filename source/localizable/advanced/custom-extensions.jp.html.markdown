@@ -4,11 +4,16 @@ title: カスタム拡張
 
 # カスタム拡張
 
-Middleman の拡張機能は Middleman の特定のポイントにフックし, 新しい機能を追加しコンテンツを操作する Ruby のクラスです。このガイドではどのようなことが可能か説明しますが, すべてのフックや拡張ポイントを探すには Middleman のソースや middleman-blog のようなプラグインのソースを読むべきです。
+Middleman の拡張機能は Middleman の特定のポイントにフックし,
+新しい機能を追加しコンテンツを操作する Ruby のクラスです。このガイドでは
+どのようなことが可能か説明しますが, すべてのフックや拡張ポイントを探すには
+Middleman のソースや middleman-blog のようなプラグインのソースを
+読むべきです。
 
 ## 拡張の雛形を用意
 
-新しい拡張の雛形は `extension` コマンドで用意できます。このコマンドは必要なファイルを作成します。
+新しい拡張の雛形は `extension` コマンドで用意できます。このコマンドは
+必要なファイルを作成します。
 
 ```bash
 middleman extension middleman-my_extension
@@ -38,7 +43,9 @@ end
 ::Middleman::Extensions.register(:my_feature, MyFeature)
 ```
 
-このモジュールは `config.rb` からアクセスできなければなりません。`config.rb` に直接定義するか, 別の Ruby ファイルに定義し `config.rb` で `require` します。
+このモジュールは `config.rb` からアクセスできなければなりません。`config.rb` に
+直接定義するか, 別の Ruby ファイルに定義し `config.rb` で
+`require` します。
 
 もちろんモジュールが読み込まれてから `config.rb` で有効化しなければなりません:
 
@@ -46,12 +53,17 @@ end
 activate :my_feature
 ```
 
-[`register`](http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method) メソッドは有効化される拡張機能に名前を与えます。拡張機能を有効化するときに限りブロックを与えることもできます。
+[`register`][register_class_method] メソッドは有効化される拡張機能に
+名前を与えます。拡張機能を有効化するときに限りブロックを
+与えることもできます。
 
-`MyFeature` 拡張では, `registered` メソッドは `activate` コマンドが実行されるとすぐに呼び出されます。 `app` 変数は
-[`Middleman::Application`](http://rubydoc.info/gems/middleman-core/Middleman/Application) クラスのインスタンスです。
+`MyFeature` 拡張では, `registered` メソッドは `activate` コマンドが実行されると
+すぐに呼び出されます。 `app` 変数は [`Middleman::Application`][application_class]
+クラスのインスタンスです。
 
-`activate` は拡張機能を設定するのためにオプションのハッシュ (`register` に渡される) やブロックを渡すことができます。`options` クラスメソッドでオプションを定義することで `options` でアクセスすることができます:
+`activate` は拡張機能を設定するのためにオプションのハッシュ (`register` に
+渡される) やブロックを渡すことができます。`options` クラスメソッドでオプションを
+定義することで `options` でアクセスすることができます:
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -73,11 +85,13 @@ activate :my_feature do |f|
 end
 ```
 
-`activate` へ渡すオプションはグローバルまたはシングルトン変数を設定することが好ましいです。
+`activate` へ渡すオプションはグローバルまたはシングルトン変数を設定することが
+好ましいです。
 
-## config.rb にメソッドを追加
+## `config.rb` にメソッドを追加
 
-拡張の中のメソッドは `expose_to_config` メソッドを使うことで `config.rb` で利用できるようになります。
+拡張の中のメソッドは `expose_to_config` メソッドを使うことで `config.rb` で
+利用できるようになります。
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -105,7 +119,10 @@ end
 
 ## ヘルパの追加
 
-この他のテンプレートにメソッドを追加する方法はヘルパです。ヘルパはテンプレート以外の拡張機能で使用することができません。この方法は module にグループ化されたメソッド群をヘルパにする場合に適した方法です。ほとんどの場合, 先述の expose メソッドを使用した方がよいです。
+この他のテンプレートにメソッドを追加する方法はヘルパです。ヘルパは
+テンプレート以外の拡張機能で使用することができません。この方法は
+module にグループ化されたメソッド群をヘルパにする場合に適した方法です。
+ほとんどの場合, 先述の expose メソッドを使用した方がよいです。
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -121,7 +138,8 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。ERB テンプレートでの使用例を示します:
+これでテンプレートの中で, `make_a_link` メソッドにアクセスできるようになります。
+ERB テンプレートでの使用例を示します:
 
 ```erb
 <h1><%= make_a_link("http://example.com", "クリックしてください") %></h1>
@@ -129,9 +147,14 @@ end
 
 ## サイトマップ拡張
 
-サイトマップ拡張を作ることで [サイトマップ](/jp/advanced/sitemap/) でページを変更したり追加したりできます。 [ディレクトリインデックス](/jp/advanced/pretty-urls/) 拡張はページをディレクトリインデックス版に再ルーティングするためにこの機能を使い, [ブログ拡張](/jp/basics/blogging/) はタグやカレンダーページを作成するためにいくつかのプラグインを使っています。詳細は [`Sitemap::Store` クラス](http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method) を参照してください。
+サイトマップ拡張を作ることで [サイトマップ][sitemap] でページを変更したり
+追加したりできます。 [ディレクトリインデックス][directory_indexes] 拡張は
+ページをディレクトリインデックス版に再ルーティングするためにこの機能を使い,
+[ブログ拡張][blog extension] はタグやカレンダーページを作成するためにいくつかの
+プラグインを使っています。詳細は [`Sitemap::Store` クラス][sitemap_store_class] を参照してください。
 
-**Note:** `manipulate_resource_list` は "継ぎ手" にあたる処理です。パイプラインの次の処理に渡すために完全なリソースを返す必要があります。
+**Note:** `manipulate_resource_list` は "継ぎ手" にあたる処理です。
+パイプラインの次の処理に渡すために完全なリソースを返す必要があります。
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -147,11 +170,14 @@ end
 
 ## コールバック
 
-Middleman には拡張によってフックできる場所があります。いくつか例を示しますが, ここに記述するよりも数多くあります。
+Middleman には拡張によってフックできる場所があります。いくつか例を示しますが,
+ここに記述するよりも数多くあります。
 
-### after_configuration
+### `after_configuration`
 
-コードを実行するために `config.rb` が読み込まれるまで待ちたい場合があります。例えば, `:css_dir` 変数に依存する場合, 設定されるまで待つべきです。次の例ではこのコールバックを使っています:
+コードを実行するために `config.rb` が読み込まれるまで待ちたい場合があります。
+例えば, `:css_dir` 変数に依存する場合, 設定されるまで待つべきです。
+次の例ではこのコールバックを使っています:
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -163,7 +189,10 @@ end
 
 ### `after_build`
 
-このコールバックはビルドプロセスが完了した後にコードを実行するために使われます。[middleman-smusher](https://github.com/middleman/middleman-smusher) 拡張はビルド完了後に build フォルダのすべての画像を圧縮するためにこの機能を使います。ビルド後に展開したスクリプトを結合することも考えられます。
+このコールバックはビルドプロセスが完了した後にコードを実行するために使われます。
+[middleman-smusher] 拡張はビルド完了後に build フォルダのすべての画像を
+圧縮するためにこの機能を使います。ビルド後に展開したスクリプトを結合することも
+考えられます。
 
 ```ruby
 class MyFeature < Middleman::Extension
@@ -173,4 +202,16 @@ class MyFeature < Middleman::Extension
 end
 ```
 
-[`builder`](http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build) パラメータは CLI のビルドを実行するクラスで, そこから [Thor のアクション](http://rubydoc.info/github/wycats/thor/master/Thor/Actions) を使用できます。
+[`builder.thor`][build] パラメータは CLI のビルドを実行するクラスで,
+そこから [Thor のアクション][Thor action] を使用できます。
+
+  [middleman-blog]: https://github.com/middleman/middleman-blog
+  [register_class_method]: http://rubydoc.info/gems/middleman-core/Middleman/Extensions#register-class_method
+  [application_class]: http://rubydoc.info/gems/middleman-core/Middleman/Application
+  [sitemap]: /jp/advanced/sitemap/
+  [directory_indexes]: /jp/advanced/pretty-urls/
+  [blog extension]: /jp/basics/blogging/
+  [sitemap_store_class]: http://rubydoc.info/gems/middleman-core/Middleman/Sitemap/Store#register_resource_list_manipulator-instance_method
+  [middleman-smusher]: https://github.com/middleman/middleman-smusher
+  [build]: http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build
+  [Thor actions]: http://rubydoc.info/github/wycats/thor/master/Thor/Actions
