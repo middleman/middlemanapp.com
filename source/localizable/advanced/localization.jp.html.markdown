@@ -129,6 +129,18 @@ es:
 /es/hola.html
 ```
 
+ディレクトリ名を多言語化したい場合, パスを分ける必要があります。例えば, `/services/software-development.html` を `/es/servicios/desarrollo-de-software.html` に変更したい場合, `locales/es.yml` に次のように書くことができます:
+
+```yaml
+---
+es:
+  paths:
+    services: "servicios"
+    "software-development": "desarrollo-de-software"
+```
+
+
+
 ## 多言語化対象のテンプレート
 
 デフォルト設定では, `source/localizable` の中身が複数の言語でビルドされ,
