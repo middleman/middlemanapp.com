@@ -93,7 +93,7 @@ activate :gzip
 ## HTML 圧縮
 
 Middleman は HTML 出力を圧縮する公式の拡張機能を提供しています。
-`Gemfile` に `middleman-minify-html` を追加します::
+`Gemfile` に `middleman-minify-html` を追加します:
 
 ```ruby
 gem "middleman-minify-html"
