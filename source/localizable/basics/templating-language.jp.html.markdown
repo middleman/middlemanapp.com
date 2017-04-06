@@ -4,13 +4,12 @@ title: テンプレート
 
 # テンプレート
 
-Middleman は HTML の開発を簡単にするためにたくさんのテンプレート言語へのアクセスを
-提供します。テンプレート言語はページ内で変数やループを使えるようにするシンプルなものから,
-ページを HTML に変換するまったく異なったフォーマットを提供するものにまで
-及びます。 Middleman は ERB, Haml, Sass, SCSS や CoffeeScript の
-サポートを搭載しています。Tilt が有効な gem であればその他にも多くのエンジンが
-有効化できます。
-詳しくは [リスト](/jp/basics/template-engine-options/) を参照してください。
+Middleman は HTML の開発を簡単にするためにたくさんのテンプレート言語への
+アクセスを提供します。テンプレート言語はページ内で変数やループを使えるように
+するシンプルなものから, ページを HTML に変換するまったく異なったフォーマットを
+提供するものにまで及びます。 Middleman は ERB, Haml, Sass, SCSS や CoffeeScript
+のサポートを搭載しています。Tilt が有効な gem であればその他にも多くのエンジンが
+有効化できます ([リスト参照][see the list])。
 
 ## テンプレートの基礎
 
@@ -39,3 +38,5 @@ Middleman で使うテンプレートはそのファイル名にテンプレー�
   <% end %>
 </ul>
 ```
+
+  [see the list]: /jp/basics/template-engine-options/

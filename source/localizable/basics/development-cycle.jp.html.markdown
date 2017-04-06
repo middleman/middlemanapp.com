@@ -7,11 +7,10 @@ title: 開発サイクル
 ## Middleman Server
 
 Middleman は開発のスタート時点から開発コードとプロダクションコードを分離します。
-これにより開発中にプロダクションでは
-不要もしくは望ましくないツール群 ([Haml](http://haml.info) や
-[Sass](http://sass-lang.com) などのような) を開発中に利用することが
-できます。開発サイクルや静的サイトのビルドを
-これらの環境に依存することができます。
+これにより開発中にプロダクションでは不要もしくは望ましくないツール群
+([Haml], [Sass] や [CoffeeScript] などのような) を開発中に利用することができます。
+開発サイクルや静的サイトのビルドをこれらの環境に
+依存することができます。
 
 Middleman を使う時間の大半は開発サイクルに
 なります。
@@ -34,18 +33,19 @@ $ bundle exec middleman server
 
 ### 飾りのない `middleman` コマンド
 
-コマンド指定なしの `middleman` の使用はサーバの起動と同じです。
+コマンド指定なしの `middleman` の使用は `middleman server` と同じコマンドを
+意味します。
 
 ```bash
 $ bundle exec middleman
 ```
 
-このコマンドは `middleman server` と同じ動作をします。
-
 ## LiveReload
 
-Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする拡張がついています。
-まず Gemfile に `middleman-livereload` があることを確認してください。続いて `config.rb` を開いて次の行を追加してください。
+Middleman にはサイト内のファイルを編集するたびにブラウザを自動的にリロードする
+拡張がついています。まず Gemfile に `middleman-livereload` があることを
+確認してください。続いて `config.rb` を開いて次の行を
+追加してください。
 
 ```ruby
 activate :livereload
@@ -54,8 +54,11 @@ activate :livereload
 これであなたのブラウザはページ内容に変更があると自動的にリロードされます。
 
 ### CSS のリロード
-デフォルト設定では middleman は `stylesheets/all.css` の import された CSS が変更された場合リロードします。
-`:livereload_css_target` に異なるファイル名を設定することができます。`nil` を指定するとすべての CSS ファイルでリロードが行われます。
 
-[HTML5 Boilerplate]: http://html5boilerplate.com
-[SMACSS]: http://smacss.com
+デフォルト設定では middleman は `stylesheets/all.css` の import された CSS が変更
+された場合リロードします。`:livereload_css_target` に異なるファイル名を設定する
+ことができます。`nil` を指定するとすべての CSS ファイルでリロードが行われます。
+
+  [Haml]: http://haml.info
+  [Sass]: http://sass-lang.com
+  [CoffeeScript]: http://coffeescript.org/

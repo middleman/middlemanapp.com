@@ -5,9 +5,9 @@ title: ヘルパーメソッド
 # ヘルパーメソッド
 
 テンプレートヘルパはよくある HTML の作業を簡単にするため, 動的テンプレートの中で
-使用できるメソッドです。基本的なメソッドのほとんどは Rails のビューヘルパを
-利用したことのある人にはお馴染みのものです。これらのヘルパは
-Padrino フレームワークによって組み込まれています。[完全なドキュメントはこちらを参照してください。][view the full documentation here]
+使用できるメソッドです。基本的なメソッドのほとんどは Rails のビューヘルパを利用
+したことのある人にはお馴染みのものです。これらのヘルパは Padrino フレームワーク
+によって組み込まれています。[完全なドキュメントはこちら。][padrino_helpers]
 
 ## リンクヘルパ
 
@@ -18,7 +18,8 @@ Padrino はリンクタグを作るための `link_to` メソッドを提供し�
 <%= link_to '私のサイト', 'http://mysite.com' %>
 ```
 
-`link_to` はより複雑な内容のリンクを生成できるように, ブロックをとることもできます:
+`link_to` はより複雑な内容のリンクを生成できるように, ブロックをとることも
+できます:
 
 ```erb
 <% link_to 'http://mysite.com' do %>
@@ -26,12 +27,11 @@ Padrino はリンクタグを作るための `link_to` メソッドを提供し�
 <% end %>
 ```
 
-Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
-把握させることで強化します。 source フォルダ
-(ファイル拡張子からテンプレート言語拡張子を除いた状態で) のページへの
-参照を与えると,`link_to` は [`:directory_indexes`](/jp/advanced/pretty-urls/) 拡張が
-有効化されていたとしても, 正しいリンクを生成します。例えば,
-`source/about.html` ファイルがあり `:directory_indexes` が有効化されている場合, 次のように
+Middleman は `link_to` に [サイトマップ][sitemap] を把握させることでより強力に
+します。source フォルダ (ファイル拡張子からテンプレート言語拡張子を除いた状態で)
+のページへの参照を与えると,`link_to` は [きれいな URL][Directory Indexes] 拡張が
+有効化されていたとしても, 正しいリンクを生成します。例えば, `source/about.html`
+ファイルがあり `:directory_indexes` が有効化されている場合, 次のように
 リンクします:
 
 ```erb
@@ -44,11 +44,11 @@ Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 <a href='/about/'>About</a>
 ```
 
-現在ページから相対パスで参照することもできます。
-リンクを現在ページからの相対パスにしたいと考える人もいるでしょう。
-`:relative => true` を渡すことで, `link_to` は相対 URL になります。
+現在ページから相対パスで参照することもできます。リンクを現在ページからの
+相対パスにしたいと考える人もいるでしょう。`:relative => true` を渡すことで,
+`link_to` は相対 URL になります。
 
-`:directory_indexes` が有効化され, source/foo/index.html.erb の中から相対パスを得る場合:
+`:directory_indexes` を有効状態で, source/foo/index.html.erb からパスを得る場合:
 
 ```erb
 <%= link_to 'About', '/about.html', :relative => true %>
@@ -60,25 +60,25 @@ Middleman は `link_to` に [サイトマップ](/jp/advanced/sitemap/) を
 <a href="../about/">About</a>
 ```
 
-`link_to` で作られるあらゆる URL を相対パスにしたい場合, `config.rb` に次を追加します:
+`link_to` で作られるあらゆる URL を相対パスにしたい場合,
+`config.rb` に次を追加します:
 
 ```ruby
 set :relative_links, true
 ```
 
-相対パスにしたくないリンクに `:relative => false` を追加することで個別に上書きすることも
-できます。
+相対パスにしたくないリンクに `:relative => false` を追加することで個別に
+上書きすることもできます。
 
 `link_to` ヘルパが与えられた URL の属するページの決定に失敗した場合,
 指定された URL を変更せず使います。この場合 `:relative_links` オプションは
-無視されますが, `:relative => true` を指定している場合は
-エラーが発生します。
+無視されますが, `:relative => true` を指定している場合はエラーが
+発生します。
 
-[サイトマップ](/jp/advanced/sitemap/) リソースの [`url` メソッド][`url` method]
-([Blog 機能](/jp/basics/blogging/) の BlogArticle に継承される) は
-*出力 URL* を返すことに注意してください。`link_to` ヘルパは対応する page/article の *ソースパス*
-に一致させることができず, 相対 URL に
-変換できない場合があります。
+[サイトマップ][sitema] リソースの [`url` メソッド][`url` method]
+([Blog 機能][Blogging] の BlogArticle に継承される) は *出力 URL* を返すことに
+注意してください。`link_to` ヘルパは対応する page/article の *ソースパス*
+に一致させることができず, 相対 URL に変換できない場合があります。
 
 `link_to` に出力 URL を与える代わりに, `link_to` の URL 引数として
 Resource/Blogarticle の [`path` 属性][`path` attribute] を介した *ソースパス* を
@@ -114,7 +114,7 @@ Resource/Blogarticle の [`path` 属性][`path` attribute] を介した *ソー�
 結果:
 
 ```html
-<a href='/form.html?foo=bar#deep'>私のフォーム</a>
+<a href="/form.html?foo=bar#deep">私のフォーム</a>
 ```
 
 リンクタグなしのページ URL が必要な場合, `url_for` を使ってください。
@@ -169,13 +169,13 @@ content_for(:head) { |param1, param2| ...content... }
 
 ## タグヘルパ
 
-タグヘルパはビューテンプレート内の html "タグ" を生成するために使われる
+タグヘルパはビューテンプレート内の HTML "タグ" を生成するために使われる
 基本的なメソッドです。このカテゴリには 3 つの主要メソッドがあります: `tag`,
 `content_tag` と `input_tag`。
 
-`tag` と `content_tag` はタグ名と指定されたオプションで
-任意の html タグを生成します。 html タグが "中身" を含む場合, `content_tag` が使われます。
-例:
+`tag` と `content_tag` はタグ名と指定されたオプションで任意の HTML タグを
+生成します。 HTML タグが "中身" を含む場合, `content_tag` が
+使われます。例:
 
 ```erb
 <%= tag :img, :src => "/my_image.png" %>
@@ -199,9 +199,9 @@ input_tag :password, :value => "secret", :class => "demo"
 
 ## アセットヘルパ
 
-アセットヘルパはハイパーリンク, mail_to リンク, 画像, スタイルシートや JavaScript のような
-html をビューテンプレートに挿入する手助けをします。簡単なビューテンプレートでの使用方法は
-次のようになります:
+アセットヘルパはハイパーリンク, mail_to リンク, 画像, スタイルシートや
+JavaScript のような html  をビューテンプレートに挿入する手助けをします。
+簡単なビューテンプレートでの使用方法は次のようになります:
 
 ```erb
 <html>
@@ -263,7 +263,8 @@ Form ヘルパは form を作る際に使うであろう "一般的な" form タ
 取得し, 特定の文字をエスケープするものです。`escape_html` は
 HTML/XML のアンパサンド, 括弧や引用符をエスケープします。テンプレートに
 表示する前にユーザコンテンツをエスケープするのに便利です。 `js_escape_html` は
-JS テンプレートから JavaScript の関数に情報を与える場合に使用されます。
+JS テンプレートから JavaScript の関数に情報を与える場合に
+使用されます。
 
 ```erb
 escape_html('<hello>&<goodbye>') # => &lt;hello&gt;&amp;&lt;goodbye&gt;
@@ -292,11 +293,12 @@ highlight('Lorem dolor sit', 'dolor')
 
 ## ダミーテキスト & Placehold.it ヘルパ
 
-Sinatra の影響も受けた静的ツール [Frank プロジェクト][Frank project] は,
-ランダムなテキストコンテンツとプレースホルダ画像を生成する素晴らしいヘルパセットです。 私たちは
-このコードを Middleman に適合させました (MIT ライセンスを祝福します)。
+Sinatra の影響も受けた静的ツール [Frank プロジェクト][Frank project] は, ランダム
+なテキストコンテンツとプレースホルダ画像を生成する素晴らしいヘルパセットです。
+私たちはこのコードを Middleman に適合させました (MIT ライセンスを歓迎します)。
 
-例えば, ダミーテキストを 5 文出力したい場合, 次のように書けます。
+例えば, ダミーテキストを 5 文出力したい場合, 次のように
+書けます。
 
 ```erb
 <%= lorem.sentences 5 %>
@@ -354,7 +356,8 @@ lorem.image('300x400', :text => 'blah')
 Middleman は `build?` と `development?` の 2 つのヘルパを用意しています。これらの
 ヘルパは特定の環境モードで動作させるコードのために使われます。例の 1 つとして
 Google Analytics のトラッキングコードが挙げられます。イベントを
-ローカルホストの Web サイトからは送信せず, プロダクションビルドでのみ送信したい場合です。
+ローカルホストの Web サイトからは送信せず, プロダクションビルドでのみ
+送信したい場合です。
 
 ```erb
 <% if build? %>
@@ -403,7 +406,10 @@ helpers CustomHelpers
 `helpers/custom_helpers.rb` として配置)。 Middleman は自動的にファイルを読込み,
 ヘルパーとして受け取ります。
 
-[view the full documentation here]: http://padrinorb.com/guides/application-helpers/overview/
-[Frank project]: https://github.com/blahed/frank
-[`url` method]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#url-instance_method
-[`path` attribute]: http://rdoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#path-instance_method
+  [padrino_helpers]: http://padrinorb.com/guides/application-helpers/overview/
+  [sitemap]: /jp/advanced/sitemap/
+  [Directory Indexes]: /jp/advanced/pretty-urls/
+  [`url` method]: http://www.rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#url-instance_method
+  [Blogging]: /jp/basics/blogging/
+  [`path` attribute]: http://www.rubydoc.info/github/middleman/middleman/Middleman/Sitemap/Resource#path-instance_method
+  [Frank project]: https://github.com/blahed/frank

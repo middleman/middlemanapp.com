@@ -6,12 +6,11 @@ title: キャッシュ機能の改善
 
 Web サイトのレンダリングを可能な限り高速化するには,
 JavaScript, CSS や画像のようなアセットファイルを Web ブラウザに
-[長時間キャッシュするように](https://code.google.com/speed/page-speed/docs/caching.html)
-命令する適切なヘッダとともに配信すべきです。
+[長時間キャッシュするように][caching] 命令する適切なヘッダとともに配信すべきです。
 ヘッダによってユーザがサイトを再度訪問する時 (またサイトのその他のページを訪問する時)
-これらのアセットファイルを再ダウンロードしません。長期間の `Expires` や `Cache-Control` ヘッダの
-設定は, アセットファイルを変更した時にユーザがまだキャッシュされたバージョンを使っていると
-問題を引き起こ可能性があります。
+これらのアセットファイルを再ダウンロードしません。長期間の `Expires` や
+`Cache-Control` ヘッダの設定は, アセットファイルを変更した時にユーザが
+まだキャッシュされたバージョンを使っていると問題を引き起こ可能性があります。
 Middleman はこの問題解決のために 2 つの方法を提供します。
 
 ## 一意の名前のアセットファイル
@@ -48,9 +47,11 @@ activate :asset_hash
 ## サーバの設定
 
 長期間の `Expires` と `Cache-Control` ヘッダを使うサーバ設定は使うサーバに
-よって異なります。あなたが使うサーバの設定方法は Google の [page speed
-docs](https://code.google.com/speed/page-speed/docs/caching.html) を参照し,
-設定が正しく行われているか確認するために [Google Page
-Speed](https://code.google.com/speed/page-speed/docs/extension.html) や
-[YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) を
+よって異なります。あなたが使うサーバの設定方法は Google の
+[page speed docs][caching] を参照し, 設定が正しく行われているか確認するために
+[Google PageSpeed Insights] や [YSlow] を
 使ってください。
+
+  [caching]: https://developers.google.com/speed/docs/insights/LeverageBrowserCaching
+  [Google PageSpeed Insights]: https://developers.google.com/speed/pagespeed/insights/
+  [YSlow]: http://yslow.org/

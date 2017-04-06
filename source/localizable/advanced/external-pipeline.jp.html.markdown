@@ -4,13 +4,22 @@ title: 外部パイプライン
 
 # 外部パイプライン
 
-私たちはフロントエンド言語とツールの爆発的増加のただ中にいます。開発が始まって以来, Middleman はフロントエンドの依存関係の管理とコンパイルに対するソリューションとして Rails のアセットパイプライン機能を備えていました。
+私たちはフロントエンド言語とツールの爆発的増加のただ中にいます。
+開発が始まって以来, Middleman はフロントエンドの依存関係の管理とコンパイルに
+対するソリューションとして Rails のアセットパイプライン機能を備えていました。
 
-ここ数年で, コミュニティは Rails から離れ NPM のタスクランナー (Gulp, Grunt) や依存管理 (Browserify, Webpack), 公式ツール (ember-cli, react-native) やトランスパイラ(ClojureScript, Elm) に焦点を合わせるようになりました。
+ここ数年で, コミュニティは Rails から離れ NPM のタスクランナー
+([gulp], [Grunt]) や依存管理 ([Browserify], [webpack]), 公式ツール
+([EmberCLI], [React Native]) やトランスパイラ([ClojureScript], [Elm]) に焦点を
+合わせるようになりました。
 
-Middleman はこれらすべてのソリューションや言語に対応することはできません。そこで私たちはこれらのツールが Middleman の中で動作できるようにすることにしました。この機能は `external_pipeline` (外部パイプライン) と呼ばれ, Middleman の複数のサブプロセスで動作します。一時フォルダにコンテンツを出力し Middleman のサイトマップに取り込むことで実現しています。
+Middleman はこれらすべてのソリューションや言語に対応することはできません。
+そこで私たちはこれらのツールが Middleman の中で動作できるようにすることにしました。
+この機能は `external_pipeline` (外部パイプライン) と呼ばれ, Middleman の
+複数のサブプロセスで動作します。一時フォルダにコンテンツを出力し Middleman の
+サイトマップに取り込むことで実現しています。
 
-# Ember の例
+## Ember の例
 
 簡単な Ember の例は次のようになります:
 
@@ -22,11 +31,14 @@ activate :external_pipeline,
   latency: 2
 ```
 
-これは Middleman プロジェクトの中に Ember のフロントエンド用コードを含む `test-app` フォルダがある場合です。build モードでは, 静的ビルドするように Ember に命令しています。dev モードでは dev ビルドを取得できます。
+これは Middleman プロジェクトの中に Ember のフロントエンド用コードを含む
+`test-app` フォルダがある場合です。build モードでは, 静的ビルドするように
+Ember に命令しています。dev モードでは dev ビルドを取得できます。
 
-Ember はコードを `test-app/dist` にコンパイルし, このコードは Middleman サイトマップに取り込まれます。
+Ember はコードを `test-app/dist` にコンパイルし, このコードは
+Middleman サイトマップに取り込まれます。
 
-# Webpack の例
+## webpack の例
 
 ```ruby
 activate :external_pipeline,
@@ -36,13 +48,14 @@ activate :external_pipeline,
   latency: 1
 ```
 
-# Broccoli の例
+## Broccoli の例
 
-Broccoli は node エコシステムの強力なアセットパイプラインツールです。無数のプラグインを使うことで多くのプリプロセッサニーズに対応することができます: CSS (SCSS, compass), ミニファイ (uglifyJS 他), モジュールローダ, トランスパイル (babel 他) など用意されています。
+[Broccoli] は node エコシステムの強力なアセットパイプラインツールです。
+無数のプラグインを使うことで多くのプリプロセッサニーズに対応することができます:
+CSS (SCSS, compass), ミニファイ (uglifyJS 他), モジュールローダ,
+トランスパイル (babel 他) など用意されています。
 
-Broccoli についてはこちらを参照してください: https://github.com/broccolijs/broccoli
-
-*config.rb*
+`config.rb`
 
 ```ruby
 activate :external_pipeline,
@@ -52,10 +65,7 @@ activate :external_pipeline,
   :latency => 2
 ```
 
-
-*Brocfile.js*
-
-Brocfile 例です (babel, SCSS や同様のプラグインで拡張可能)。
+`Brocfile.js` (babel, SCSS や同様のプラグインで拡張可能)
 
 ```javascript
 /* globals module,require,process */
@@ -140,7 +150,7 @@ module.exports = finalTree;
 ```
 
 
-*package.json*
+`package.json`
 
 ```json
 {
@@ -164,3 +174,13 @@ module.exports = finalTree;
   }
 }
 ```
+
+  [gulp]: http://gulpjs.com/
+  [Grunt]: https://gruntjs.com/
+  [Browserify]: http://browserify.org/
+  [webpack]: https://webpack.github.io/
+  [EmberCLI]: https://ember-cli.com/
+  [React Native]: https://facebook.github.io/react-native/
+  [ClojureScript]: https://clojurescript.org/
+  [Elm]: http://elm-lang.org/
+  [Broccoli]: http://broccolijs.com/

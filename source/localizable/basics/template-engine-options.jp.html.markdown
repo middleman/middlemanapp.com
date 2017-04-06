@@ -2,7 +2,7 @@
 title: テンプレートエンジンオプション
 ---
 
-## テンプレートエンジンオプション
+# テンプレートエンジンオプション
 
 `config.rb` にテンプレートエンジンのオプションを設定することができます:
 
@@ -12,18 +12,24 @@ set :haml, { :ugly => true, :format => :html5 }
 
 ## Markdown
 
-`config.rb` で一番好きな Markdown ライブラリを選び, オプションを設定することができます:
+`config.rb` で一番好きな Markdown ライブラリを選び, オプションを設定することが
+できます:
 
 ```ruby
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 ```
 
-RedCarpet を使う場合, Middleman はヘルパを用いて `:relative_links` や `:asset_hash` が行うようにリンクや画像タグを処理します。しかし, デフォルトの Markdown エンジンはインストールが簡単なことから Kramdown になっています。
+RedCarpet を使う場合, Middleman はヘルパを用いて `:relative_links` や
+`:asset_hash` が行うようにリンクや画像タグを処理します。しかし,
+デフォルトの Markdown エンジンはインストールが簡単なことから Kramdown に
+なっています。
 
 ## その他のテンプレート言語
 
-[Tilt](https://github.com/rtomayko/tilt/) 対応のテンプレート言語と RubyGems のリストです。動作させるにはインストール (`config.rb` で読み込む) しなければなりません。
+[Tilt] 対応のテンプレート言語と RubyGems のリストです。
+動作させるにはインストール (`config.rb` で読み込む) しなければ
+なりません。
 
 エンジン                | ファイル拡張子         | 必要なライブラリ
 ------------------------|------------------------|----------------------------
@@ -47,3 +53,5 @@ Creole (Wiki markup)    | .wiki, .creole         | creole
 WikiCloth (Wiki markup) | .wiki, .mediawiki, .mw | wikicloth
 Yajl                    | .yajl                  | yajl-ruby
 Stylus                  | .styl                  | stylus
+
+  [Tilt]: https://github.com/rtomayko/tilt/
