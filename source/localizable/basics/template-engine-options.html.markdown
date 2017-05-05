@@ -7,7 +7,7 @@ title: Template Engine Options
 You can set options for the various template engines in your `config.rb`:
 
 ```ruby
-set :haml, { :ugly => true, :format => :html5 }
+set :haml, { :format => :html5 }
 ```
 
 ## Markdown
