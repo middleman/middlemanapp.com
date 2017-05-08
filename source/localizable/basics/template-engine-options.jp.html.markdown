@@ -7,7 +7,7 @@ title: テンプレートエンジンオプション
 `config.rb` にテンプレートエンジンのオプションを設定することができます:
 
 ```ruby
-set :haml, { :ugly => true, :format => :html5 }
+set :haml, { :format => :html5 }
 ```
 
 ## Markdown
