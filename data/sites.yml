@@ -320,6 +320,8 @@ built:
     source: https://github.com/ecommwar/ecommwar
   - url: https://www.simpleloans.ca
     title: SimpleLoans.ca
+  - url: https://martinschurig.com
+    title: "Martin Schurig"
 
 mobile:
   - url: http://pollev.com
