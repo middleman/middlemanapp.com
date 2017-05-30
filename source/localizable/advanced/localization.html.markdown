@@ -54,9 +54,10 @@ mymiddlemansite/
   +-- ...
 ```
 
-Each template in that folder will have access to the `I18n` helper. Using this helper, you can refer to keys from your
-YAML files and inject the language-specific values into your template. Here's a
-simple `source/localizable/hello_world.html.erb` template:
+Each template in that folder will have access to the `I18n` helper.
+Using this helper, you can refer to keys from your YAML files and inject
+the language-specific values into your template. Here's a simple
+`source/localizable/hello_world.html.erb` template:
 
 ```erb
 <%= I18n.t(:hello) %> World
@@ -159,7 +160,7 @@ es:
     "software-development": "desarrollo-de-software"
 ```
 
-    
+
 
 ## Localizable Templates
 
