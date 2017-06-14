@@ -21,6 +21,18 @@ build-time features (such as compression) will be executed. Middleman will
 automatically clean out files from the build directory for you that are left
 over from earlier builds but would no longer be produced.
 
+To speed up the build time, you can expose the variable `NO_CONTRACTS=true`:
+
+```bash
+$ cd my_project
+$ NO_CONTRACTS=true bundle exec middleman build
+```
+
+[Contracts] are used to add type signatures to certain methods, and Middleman
+uses them to override and clear the gems' classes so no type checking is
+performed - they're only used internally. For a more in depth description,
+you can [watch a video explaining this behavior][youtube].
+
 ## Deploying the site
 
 After building the site you have everything you need within the
@@ -58,3 +70,5 @@ end
   [extension directory]: https://directory.middlemanapp.com/#/extensions/deployment
   [directory]: https://github.com/middleman/middleman-directory
   [`middleman-deploy`]: https://github.com/middleman-contrib/middleman-deploy
+  [youtube]: https://www.youtube.com/watch?v=W7qj_WFClls
+  [contracts]: https://github.com/egonSchiele/contracts.ruby
