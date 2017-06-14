@@ -34,10 +34,29 @@ es:
   hello: "Hola"
 ```
 
-多言語化するテンプレートは, デフォルト設定では `source/localizable` フォルダの中に
-置きます (このオプションの変更方法はページ下部で)。このフォルダにある
-テンプレートごとに `I18n` ヘルパにアクセスします。このヘルパを使うと,  YAML
-ファイルからキーを参照し, 言語固有の値をテンプレートに差し込みます。
+多言語化対象のテンプレートは, デフォルト設定では `source/localizable` フォルダの
+中に置きます (このオプションの変更方法はページ下部で)。
+
+```
+mymiddlemansite/
+  +-- ...
+  +-- locales
+  |   +-- en.yml
+  |   +-- es.yml
+  +-- source
+  |   +-- images
+  |   +-- javascripts
+  |   +-- layouts
+  |   +-- localizable
+  |   |   +-- hello_world.html.erb
+  |   |   +-- hello_world.es.html.erb
+  |   +-- stylesheets
+  +-- ...
+```
+
+このフォルダにあるテンプレートごとに `I18n` ヘルパにアクセスします。
+このヘルパを使うと,  YAMLファイルからキーを参照し,
+言語固有の値をテンプレートに差し込みます。
 簡単な `source/localizable/hello_world.html.erb` テンプレートの例です:
 
 ```erb

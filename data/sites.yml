@@ -320,6 +320,8 @@ built:
     source: https://github.com/ecommwar/ecommwar
   - url: https://www.simpleloans.ca
     title: SimpleLoans.ca
+  - url: https://martinschurig.com
+    title: "Martin Schurig"
 
 mobile:
   - url: http://pollev.com
@@ -486,3 +488,6 @@ blogs:
     source: https://github.com/kennethkalmer/opensourcery.co.za
   - url: https://supermercadosgrupal.com.uy
     title: Supermarkets Grupal
+  - url: http://OFReport.com
+    title: Our family blog, documenting our work in Ukraine.
+    source: https://github.com/joshukraine/ofreport.com
