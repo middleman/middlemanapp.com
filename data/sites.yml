@@ -1,4 +1,8 @@
 built:
+  - url: https://transparency.wikimedia.org/
+    title: Wikimedia Foundation Transparency Report
+  - url: https://wordcounter.io
+    title: Word Counter
   - url: http://dev.welaika.com
     title: weLaika Software Development
   - url: http://www.beerfestivalbuddy.com
@@ -320,6 +324,8 @@ built:
     source: https://github.com/ecommwar/ecommwar
   - url: https://www.simpleloans.ca
     title: SimpleLoans.ca
+  - url: https://martinschurig.com
+    title: "Martin Schurig"
 
 mobile:
   - url: http://pollev.com
@@ -486,3 +492,8 @@ blogs:
     source: https://github.com/kennethkalmer/opensourcery.co.za
  -  url: https://stormforger.com
     title: Load Testing and Performance Analysis for Agile- and DevOps-Teams
+  - url: https://supermercadosgrupal.com.uy
+    title: Supermarkets Grupal
+  - url: http://OFReport.com
+    title: Our family blog, documenting our work in Ukraine.
+    source: https://github.com/joshukraine/ofreport.com

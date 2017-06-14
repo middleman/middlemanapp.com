@@ -29,7 +29,7 @@ middleman init MY_BLOG_PROJECT --template=blog
 
 If you already have a Middleman project, you can re-run `middleman init` with
 the blog template option to generate the sample [`index.html`][blog_index],
-[`tag.html`][blog_tag], [`calendar.html`][blog_caldendar], and
+[`tag.html`][blog_tag], [`calendar.html`][blog_calendar], and
 [`feed.xml`][blog_feed], or you can write those yourself. You can see
 [what gets generated][blog_generated] on GitHub.
 
