@@ -183,6 +183,12 @@ That `layouts/article_layout.erb` layout would look like this
 <% end %>
 ```
 
+**Note:** With Haml/Slim, it is necessary to use the equals sign as follows:
+
+```haml
+= wrap_layout :layout do
+```
+
 Like a normal layout, `yield` is where the resulting template content is
 placed. In this example, you've end up with the following output:
 
