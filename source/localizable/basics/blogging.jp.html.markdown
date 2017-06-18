@@ -28,7 +28,7 @@ middleman init MY_BLOG_PROJECT --template=blog
 ```
 
 すでに Middleman のプロジェクトがある場合,サンプルの [`index.html`][blog_index],
-[`tag.html`][blog_tag], [`calendar.html`][blog_caldendar] や [`feed.xml`][blog_feed],
+[`tag.html`][blog_tag], [`calendar.html`][blog_calendar] や [`feed.xml`][blog_feed],
 を作る必要があるため, blog テンプレートオプションとともに `Middleman init` を
 再実行するか, 自分でファイルを作ってください。[何が作られるか][blog_generated] は
 GitHub で確認できます。
