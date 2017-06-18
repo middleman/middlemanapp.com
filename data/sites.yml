@@ -490,7 +490,7 @@ blogs:
   - url: https://www.opensourcery.co.za
     title: Open Sourcery by Kenneth Kalmer
     source: https://github.com/kennethkalmer/opensourcery.co.za
- -  url: https://stormforger.com
+  - url: https://stormforger.com
     title: Load Testing and Performance Analysis for Agile- and DevOps-Teams
   - url: https://supermercadosgrupal.com.uy
     title: Supermarkets Grupal

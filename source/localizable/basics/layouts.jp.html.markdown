@@ -183,6 +183,12 @@ page "blog/*", :layout => :article_layout
 <% end %>
 ```
 
+**Note:** Haml や Slim では次のように等号を使う必要があります:
+
+```haml
+= wrap_layout :layout do
+```
+
 通常のレイアウトと同じように, `yield` はテンプレートの出力内容が
 配置される場所です。この例では次の出力になります:
 
