@@ -14,7 +14,7 @@ feature. Middleman can generate HTML files which will redirect your visitors,
 but, these old paths are likely to still appear in search engines and will
 negatively impact your SEO.
 
-To generate a redirect in Middleman:
+To generate a redirect in Middleman, add the following to `config.rb`:
 
 ```ruby
 redirect "/my/old/path.html", to: "/my/new/path.html"
