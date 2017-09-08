@@ -78,8 +78,6 @@ built:
     source: https://github.com/procload/rcm
   - url: http://chu.is
     title: "Eric Chu is..."
-    - url: https://www.getprowl.com.com
-    title: Prowl
   - url: http://www.modularscale.com
     title: "Modular Scale"
     source: https://github.com/modularscale/modularscale.com
