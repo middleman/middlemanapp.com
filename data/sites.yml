@@ -1,6 +1,11 @@
 built:
   - url: https://www.skcript.com/
     title: Skcript - Design and AI
+  - url: https://jet.js.org
+    title: Jet.js Open Source Library
+    source: https://github.com/alexanderbartels/jet-website
+  - url: https://pochertmedia.com
+    title: "Software-Firma für digitale Individual-Lösungen aus Köln"
   - url: https://transparency.wikimedia.org/
     title: Wikimedia Foundation Transparency Report
   - url: https://wordcounter.io
@@ -92,6 +97,8 @@ built:
   - url: http://thisiscapra.com/
     title: "Capra Design"
     source: https://github.com/thisiscapra/thisiscapra.com
+  - url: https://henkubao.com/
+    title: "Henkubao"
   - url: http://hiphopquoted.com/
     title: "Hip-Hop Quoted"
     source: https://github.com/olliekav/hiphopquoted.com

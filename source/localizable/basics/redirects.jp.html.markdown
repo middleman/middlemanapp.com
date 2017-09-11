@@ -14,7 +14,7 @@ web サーバを設定するべきです。
 Middleman は訪問者をリダイレクトさせる HTML ファイルを
 生成します。
 
-Middleman でリダイレクト指定のファイルを生成:
+Middleman でリダイレクト HTML を生成するために, 次のコードを `config.rb` に追加:
 
 ```ruby
 redirect "/my/old/path.html", to: "/my/new/path.html"
