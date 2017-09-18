@@ -9,6 +9,8 @@ simplify common HTML tasks. Most of the basic methods should be very familiar
 to anyone who has used Rails view helpers. These helpers are all built on the
 Padrino framework ([view Padrino's documentation][padrino_helpers]).
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-1-ULey5ORA?rel=0" frameborder="0" allowfullscreen></iframe>
+
 ## Link Helpers
 
 Padrino provides a `link_to` function that you can use to make link tags. At
