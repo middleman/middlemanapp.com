@@ -512,3 +512,6 @@ blogs:
   - url: https://oswaldlabs.com
     title: Oswald Labs
     source: https://github.com/OswaldFoundation/oswaldlabs.com
+  - url: http://blog.wildsky.cc
+    title: "ws://wildsky.cc"
+    source: https://github.com/wildskyf/blog.wildsky.cc
