@@ -51,7 +51,7 @@ activate :external_pipeline,
 ## Broccoli Example
 
 [Broccoli] is a powerful asset pipeline in the Node ecosystem. With a myriad of
-plugins it can accomodate most pre-processing needs: CSS-languages (SCSS,
+plugins it can accommodate most pre-processing needs: CSS-languages (SCSS,
 Compass), minification (UglifyJS et. al), module loaders, transpilation (Babel,
 etc.) and much more.
 
