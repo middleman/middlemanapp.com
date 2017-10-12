@@ -11,6 +11,8 @@ every page. The Ruby world, and Middleman, take an inverse approach. The
 "layout" includes both the header and footer and then wraps the individual page
 content.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jHDZkYaqtSo?rel=0" frameborder="0" allowfullscreen></iframe>
+
 The most basic layout has some shared content and a `yield` call where
 templates will place their contents.
 

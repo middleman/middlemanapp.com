@@ -6,6 +6,8 @@ title: Build & Deploy
 
 ## Building the site with `middleman build`
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/S8b-aKlRdOs?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Finally, when you are ready to deliver static code or, in the case of "blog
 mode", host a static blog, you will need to build the site. Using the
 command-line, from the project folder, run `middleman build`:

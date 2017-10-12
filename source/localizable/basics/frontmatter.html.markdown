@@ -7,6 +7,8 @@ title: Frontmatter
 Frontmatter allows page-specific variables to be included at the top of a
 template using the YAML or JSON format.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hbSAcbTa_bo?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 ## YAML Frontmatter
 
 Let's take a simple ERB template, adding some frontmatter variables to change

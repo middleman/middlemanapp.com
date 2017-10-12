@@ -4,6 +4,8 @@ title: Blogging
 
 # Blogging
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/4P1y67FvmHg?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Middleman has an official extension to support blogging, articles and tagging.
 [`middleman-blog`] ships as an extension and must be installed to use. Simply
 specify the gem in your `Gemfile`:
