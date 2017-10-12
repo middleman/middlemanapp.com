@@ -13,6 +13,8 @@ Git installed.
 
 ## GitHub Template
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/EcIUrMTwPI8?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Pass the GitHub `username/repo-name` to the `init` command.
 
 ```bash

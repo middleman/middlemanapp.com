@@ -509,3 +509,6 @@ blogs:
   - url: http://www.makersacademy.com
     title: Learn to code in 12 weeks and get a job as a software developer
     source: https://github.com/makersacademy/website
+  - url: http://www.rmanev.com/
+    title: A personal website for Rumen Manev
+    source: https://github.com/rum-n/rman3

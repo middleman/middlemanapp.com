@@ -12,6 +12,8 @@ folder called `data` and makes this information available in your templates.
 The `data` folder should be placed in the root of your project i.e. in the same
 folder as your project's `source` folder.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5YHwLKxSB2I?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Here's an example file at `data/people.yml` with the contents:
 
 ```yaml

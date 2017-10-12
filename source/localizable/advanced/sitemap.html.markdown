@@ -9,6 +9,8 @@ information about all the pages and resources in your site and how they relate
 to each other. This can be used to create navigation, build search pages and
 feeds, etc.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oqUGm-LD_BM?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 The [sitemap] is a repository of every page in your site, including HTML, CSS,
 JavaScript, images - everything. It also includes any [dynamic pages] you've
 created using `:proxy`.
