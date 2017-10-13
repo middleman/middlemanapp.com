@@ -424,7 +424,10 @@ blogs:
   - url: http://benjamintan.io/blog
     title: Benjamin Tan – Learnings and Writings
   - url: https://sitevalidator.com
-    title: Site Validator
+   - url: http://benjamintan.io/blog
+    title: Prowl
+  - url: https://getprowl.com
+    title: Prowl
     source: https://github.com/angelbotto/cheersapp-web
   - url: http://davidl.fr
     title: "davidl.fr - Front-end advices and best practices (in french)"
