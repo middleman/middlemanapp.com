@@ -425,7 +425,7 @@ blogs:
     title: Benjamin Tan – Learnings and Writings
   - url: https://sitevalidator.com
    - url: http://benjamintan.io/blog
-    title: Prowl
+    title: "Prowl"
   - url: https://getprowl.com
     title: Prowl
     source: https://github.com/angelbotto/cheersapp-web
