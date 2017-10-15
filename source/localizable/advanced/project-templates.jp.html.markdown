@@ -13,6 +13,8 @@ git リポジトリのパスを指定する必要があります。
 
 ## Github テンプレート
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/EcIUrMTwPI8?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 `init` コマンドに Github の `username/repo-name` を渡します。
 
 ```bash

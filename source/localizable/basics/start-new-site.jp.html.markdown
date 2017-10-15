@@ -5,6 +5,9 @@ title: 新しいサイトの作成
 # 新しいサイトの作成
 
 開発を始めるに Middleman が動作するプロジェクトフォルダを作る必要があります。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mi86OOf_Dkg?rel=0" frameborder="0" allowfullscreen></iframe>
+
 すでに存在するフォルダを使うか, `middleman init` コマンドで Middleman が
 作成するフォルダを使うことができます。
 

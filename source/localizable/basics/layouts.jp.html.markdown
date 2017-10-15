@@ -11,6 +11,8 @@ Ruby の世界と Middleman では逆のアプローチを取ります。
 "layout" は "header" や "footer" 両方を含むことで個別ページのコンテンツを
 囲みます。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jHDZkYaqtSo?rel=0" frameborder="0" allowfullscreen></iframe>
+
 最も基本的なレイアウトは共有コンテンツとそのテンプレートの内容を
 配置する `yield` を含みます。
 

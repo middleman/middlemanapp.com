@@ -4,6 +4,8 @@ title: ブログ機能
 
 # ブログ機能
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/4P1y67FvmHg?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Middleman にはブログ, つまり記事投稿とタグ付けに対応した公式拡張があります。
 [`middleman-blog`] は拡張機能の 1 つで, 使用するにはインストールする必要があります。
 単に `Gemfile` で gem を指定するだけです:

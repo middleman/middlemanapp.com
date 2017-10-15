@@ -9,6 +9,8 @@ title: ヘルパーメソッド
 したことのある人にはお馴染みのものです。これらのヘルパは Padrino フレームワーク
 によって組み込まれています。[完全なドキュメントはこちら。][padrino_helpers]
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-1-ULey5ORA?rel=0" frameborder="0" allowfullscreen></iframe>
+
 ## リンクヘルパ
 
 Padrino はリンクタグを作るための `link_to` メソッドを提供します。

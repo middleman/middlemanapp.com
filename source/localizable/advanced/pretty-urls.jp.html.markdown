@@ -10,6 +10,8 @@ title: きれいな URL (ディレクトリインデックス)
 `example.com` の Web サーバのルートディレクトリにプロジェクトを配置すれば,
 このページは次の URL でアクセスできます: `http://example.com/about-us.html`
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BEbw-RqmjOw?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 Middleman は `.html` 毎にフォルダを作り, そのフォルダの index としてテンプレートを
 出力するディレクトリインデックス拡張を提供します。
 `config.rb` で次のように指定します:
