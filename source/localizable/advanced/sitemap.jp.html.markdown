@@ -9,6 +9,8 @@ Middleman にはテンプレートからアクセスできる,
 サイトマップがあります。これはナビゲーションの作成, 検索ページや
 フィードの作成に使うことができます。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oqUGm-LD_BM?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 [サイトマップ][sitemap] はページごとの HTML, CSS, JavaScript, 画像など
 すべての情報のリポジトリです。`:proxy` を使って作る [動的ページ][dynamic pages]
 も含みます。

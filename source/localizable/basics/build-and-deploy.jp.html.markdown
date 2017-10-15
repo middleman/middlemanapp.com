@@ -6,6 +6,8 @@ title: ビルド & デプロイ
 
 ## `middleman build` でサイトをビルド
 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/S8b-aKlRdOs?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 静的サイトのコードを出力する準備ができている, または "ブログモード" で静的ブログ
 をホストするような場合, サイトをビルドする必要があります。コマンドラインを使い,
 プロジェクトフォルダの中から `middleman build` を実行してください:

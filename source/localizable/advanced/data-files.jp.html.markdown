@@ -12,6 +12,8 @@ title: データファイル
 `data` フォルダは, `source` フォルダと同じように,
 プロジェクトのルートに置かれます。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5YHwLKxSB2I?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 データが用意された `data/people.yml` を例として示します:
 
 ```yaml

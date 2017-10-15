@@ -8,6 +8,10 @@ Middleman は RubyGems のパッケージマネージャを使って配布され
 つまり Middleman を使うには Ruby のランタイムと RubyGems の両方が
 必要だということです。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nNc5Pm4IYeE?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gayJFzi0rfg?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 macOS には Ruby と RubyGems の両方がパッケージされていますが, Middleman の
 依存ライブラリの一部はインストール時にコンパイルする必要があります。macOS では
 コンパイルに Xcode の Command Line Tools が必要です。Xcode がインストール

@@ -7,6 +7,8 @@ title: Frontmatter
 Frontmatter は YAML または JSON フォーマットでテンプレート上部に記述することが
 できるページ固有の変数です。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hbSAcbTa_bo?rel=0" frameborder="0" allowfullscreen></iframe><br>
+
 ## YAML フォーマット
 
 簡単な ERB テンプレートに固有のページのレイアウトを変更する
