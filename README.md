@@ -16,15 +16,15 @@ Make sure you have Ruby 1.9.3+, [Bundler] and [npm] installed.
 
 1. Set up your machine:
 
-  ```bash
-  bin/setup
-  ```
+    ```bash
+    bin/setup
+    ```
 
 1. Start the server:
 
-  ```bash
-  bundle exec middleman server
-  ```
+    ```bash
+    bundle exec middleman server
+    ```
 
 1. Open <http://localhost:4567>.
 
