@@ -509,3 +509,7 @@ blogs:
   - url: http://www.rmanev.com/
     title: A personal website for Rumen Manev
     source: https://github.com/rum-n/rman3
+      - url: https://hellogustav.com/
+    title: Gustav - Contract Staffing for Startups
+  - url: https://talentbird.ai/
+    title: Talentbird - Contract Staffing for System Integrators and IT Consultancies
