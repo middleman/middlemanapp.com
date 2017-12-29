@@ -65,7 +65,7 @@ including these gems in your `Gemfile`:
 
 ```ruby
 gem 'therubyracer' # faster JS compiles
-gem 'oj' # faster JS compiles
+gem 'oj' # faster JSON parser and object serializer
 ```
 
 ## gzip text files
