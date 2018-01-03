@@ -1,33 +1,10 @@
----
-layout: layout
----
-
-<header class="hero" role="banner">
-  <%= partial 'partials/global_nav' %>
-  <section class="body-content-container wrap-container" data-waypoint="hero-content">
-    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
-      class: "hero-content-logo" %>
-    <h2 class="hero-headline"><%= t("index.headline") %></h2>
-    <h3 class="hero-description"><%= t("index.description") %></h3>
-
-    <div class="hero-banner-container">
-      <div class="browser">
-        <pre class="browser-body no-highlight">
-          <code class="browser-code"><span class="variable">$</span> <span class="identifier">gem install middleman</span></code>
-        </pre>
-        <a class="badge" href="https://badge.fury.io/rb/middleman" target="_blank"><img src="https://badge.fury.io/rb/middleman.svg" alt="Gem Version" height="18"></a>
-      </div>
-    </div>
-  </section>
-</header>
-
-<div class="body-content-container wrap-container" role="main">
+<div class="wrap-container">
   <section class="introduction">
-    <div class="introduction-container" data-waypoint="introduction-container">
+    <div class="introduction-container">
       <div class="introduction-item second-graphic">
         <div class="introduction-item-graphic-wrapper">
           <div class="introduction-browser browser">
-            <pre class="introduction-browser-body browser-body no-highlight">
+            <pre class="introduction-browser-body browser-body">
               <code class="browser-code"><span class="variable">$</span> <span class="identifier">middleman init project</span></code>
             </pre>
           </div>
@@ -86,7 +63,7 @@ layout: layout
           </p>
           <p class="introduction-item-text">
           <%= link_to t("introduction.third.link_text"),
-            "#{locale_prefix}/basics/build_and_deploy", class:
+            "#{locale_prefix}/basics/build-and-deploy", class:
             "cta-link-body" %>
           </p>
         </div>

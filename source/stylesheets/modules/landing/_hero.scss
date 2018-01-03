@@ -12,7 +12,7 @@
 }
 
 .hero-content-logo img {
-  @include size(em(300));
+  @include size(14.375em);
 }
 
 .hero-headline {
@@ -48,9 +48,12 @@
       @include shift(2);
     }
 
-    .badge {
-      position: absolute;
+    .version-number {
       bottom: 0.75em;
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: 500;
+      position: absolute;
       right: 1em;
     }
   }

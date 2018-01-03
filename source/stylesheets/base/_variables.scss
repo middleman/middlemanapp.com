@@ -1,9 +1,6 @@
-// Project Settings
-@include disable-prefix-for-all;
-
 // Typography
-$sans-serif: "Lato", $helvetica;
-$monospace-font-family: "Source Code Pro", $monospace;
+$sans-serif: $font-stack-system;
+$monospace-font-family: $font-stack-consolas;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
@@ -18,8 +15,9 @@ $h5-font-size: $base-font-size * 1.15;
 $h6-font-size: $base-font-size;
 
 // Font Weights
-$font-weight-bold: 700;
 $font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
 
 // Line height
 $base-line-height: 1.5;
@@ -36,14 +34,14 @@ $dark-gray: #4a4e56;
 $medium-gray: #999;
 
 // Middleman colors
-$mm-yellow: #f3c859;
+$mm-yellow: #fbc547;
 $mm-navy: #446184;
 $mm-slate-gray: #8990a1;
 $mm-light-gray: #c0c0c0;
 $mm-blue: #4280ca;
 
 // Font Colors
-$base-font-color: darken($mm-slate-gray, 25%);
+$base-font-color: shade($mm-slate-gray, 65%);
 $base-accent-color: $mm-yellow;
 $header-font-color: $dark-gray;
 $secondary-accent-color: $mm-blue;
@@ -55,7 +53,6 @@ $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
 // Background Color
-$base-background-color: #fff;
 $base-hero-color: $base-accent-color;
 
 // Border color
@@ -69,12 +66,3 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($base-accent-colo
 // Browser Colors
 $browser-bar-color: #dedede;
 $browser-body-color: $dark-gray;
-
-// Global Nav Variables
-$global-nav-height: em(64);
-$global-nav-link-color: #fff;
-$global-nav-link-hover-color: rgba($global-nav-link-color, 0.75);
-
-// Footer Variables
-$footer-link-color: $medium-gray;
-$footer-link-hover-color: darken($footer-link-color, 10%);

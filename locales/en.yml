@@ -1,11 +1,12 @@
 ---
 en:
-  navigation:
-    support: Support
-    contribute: Contribute
-    docs: Docs
+  site_navigation:
+    community: Community
+    docs: Documentation
     logo: Middleman
     search_placeholder: Search the docs
+    support: Support
+  navigation:
     basics:
       title: Basics
       blogging: Blogging
@@ -27,7 +28,6 @@ en:
       external_pipeline: External Pipeline
       configuration: Configuring Your Site
       custom_extensions: Custom Extensions
-      custom_templates: Custom Templates
       data_files: Data Files
       development_optimization: Development Optimization
       dynamic_pages: Dynamic Pages
@@ -40,14 +40,6 @@ en:
       project_templates: Project Templates
       rack_middleware: Rack Middleware
       sitemap: The Sitemap
-    community:
-      title: Open-Source Community
-      built_using_middleman: Sites Built Using Middleman
-      community_forum: Community Forum
-      custom_extensions: Custom Extensions
-      deployment_solution: Deployment Solution
-      github: GitHub Repository
-      project_templates: Project Templates
   open_source:
     title: Contribute to Open Souce
     service: Add Your Service
@@ -80,7 +72,7 @@ en:
     main_text: Middleman benefits from an active community. Whether you need a
       question answered or want to contribute to open-source features, browse
       the features below to make the most of Middleman.
-    built_using_middleman: Companies Using Middleman
+    built_using_middleman: People Using Middleman
     forum:
       header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
@@ -117,6 +109,13 @@ help you do that."
     title: Support Middleman Development
     subtitle: If you'd like to show your support, you can make a donation or purchase stickers to show your love.
 
+  footer:
+    maintained:
+      Maintained by the <a href="https://github.com/orgs/middleman/people">core
+      team</a> with help from
+      <a href="https://github.com/middleman/middleman/graphs/contributors">
+      contributors</a>.
+
   # index
   index:
     sub_title: Hand-crafted frontend development
@@ -125,7 +124,7 @@ help you do that."
       and tools in modern web development.
     getting_started: Getting started
     contribute: Contribute to the open-source community
-    see_middleman_sites: See All Middleman Sites
+    see_middleman_sites: See More
     stickers: Buy Middleman stickers
     donate: Donate to Middleman
 
@@ -134,7 +133,7 @@ help you do that."
     title: Sites Built Using Middleman
     mobile: Mobile Apps Built Using Middleman
     blog: Blogs Using Middleman
-    twitter: "@middlemanapp"
+    twitter: Twitter
     github: GitHub
     source_code: source code
     fork: Fork and add your site on GitHub

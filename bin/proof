@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+bundle exec middleman build --verbose
+
+bundle exec htmlproofer --check-html --url-ignore "/localhost:4567/" ./build

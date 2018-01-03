@@ -1,0 +1,27 @@
+<section class="logos">
+  <div class="wrap-container">
+    <h4 class="contributions-title centered-content">
+      <%= t("community.built_using_middleman") %>
+    </h4>
+
+    <div class="logo-block">
+      <ul>
+        <li>
+          <%= image_tag("/images/vox-media-logo.svg", alt: "Vox Media")%>
+        </li>
+        <li>
+          <%= image_tag("/images/mailchimp-logo.svg", alt: "MailChimp")%>
+        </li>
+        <li>
+          <%= image_tag("/images/thoughtbot-logo.svg", alt: "thoughtbot")%>
+        </li>
+      </ul>
+
+      <%= link_to(
+        t("index.see_middleman_sites"),
+        "#{locale_prefix}/community/built-using-middleman/",
+        class: "community-social-link"
+      ) %>
+    </div>
+  </div>
+</section>

@@ -4,8 +4,8 @@
 }
 
 .browser:before {
-  @include size(100% em(27));
-  background: $browser-bar-color inline-image("browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
+  @include size(100%, 1.6875em);
+  background: $browser-bar-color url("../images/browser-bar-button-set.svg") no-repeat 0.5em 0.5em;
   border-radius: $base-border-radius $base-border-radius 0 0;
   content: "";
   display: block;
@@ -34,19 +34,18 @@
 }
 
 .browser-text-editor-sidebar {
-  @include position(absolute, em(32) null 0 0);
-  @include position(absolute, em(32) null 0 0);
-  @include size(em(80) auto);
+  @include position(absolute, 2em null 0 0);
+  @include size(5em, auto);
   background: lighten($browser-body-color, 10);
 
   @include media($medium-screen-up) {
-    width: em(120);
+    width: 7.5em;
   }
 }
 
 .browser-text-editor {
-  @include position(absolute, em(27) null 0 0);
-  @include size(100% 90%);
+  @include position(absolute, 1.6875em null 0 0);
+  @include size(100%, 90%);
   background-image: image-url("text-editor.jpg");
   background-size: 100% 200px;
   background-repeat: no-repeat;

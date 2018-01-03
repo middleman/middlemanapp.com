@@ -1,0 +1,23 @@
+<header class="hero" role="banner">
+  <section class="wrap-container">
+    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
+      class: "hero-content-logo" %>
+    <h2 class="hero-headline"><%= t("index.headline") %></h2>
+    <h3 class="hero-description"><%= t("index.description") %></h3>
+
+    <div class="hero-banner-container">
+      <div class="browser">
+        <pre class="browser-body">
+          <code class="browser-code"><span class="variable">$</span> <span class="identifier">gem install middleman</span></code>
+        </pre>
+
+        <%= link_to(
+          "Current version: #{data.gem_info.version}",
+          data.gem_info.project_uri,
+          class: "version-number",
+          target: "_blank"
+        ) %>
+      </div>
+    </div>
+  </section>
+</header>

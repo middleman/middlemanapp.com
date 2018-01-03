@@ -4,15 +4,17 @@ title: Frontmatter
 
 # Frontmatter
 
-Frontmatter は YAML または JSON フォーマットでテンプレート上部に記述することができる
-ページ固有の変数です。
+Frontmatter は YAML または JSON フォーマットでテンプレート上部に記述することが
+できるページ固有の変数です。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hbSAcbTa_bo?rel=0" frameborder="0" allowfullscreen></iframe><br>
 
 ## YAML フォーマット
 
-簡単な ERb テンプレートに固有のページのレイアウトを変更する
+簡単な ERB テンプレートに固有のページのレイアウトを変更する
 Frontmatter を追加します。
 
-``` html
+```yaml
 ---
 layout: "custom"
 title: "私のタイトル"
@@ -30,14 +32,20 @@ my_list:
 </ol>
 ```
 
-Frontmatter はテンプレートの最上部に記述し, 行頭から行末まで 3 つのハイフン `---` によって, その他の部分から分離されなければなりません。このブロックの中ではテンプレート内で `current_page.data` ハッシュとして使えるデータを作ることができます。例: `title: "私のタイトル"` は `current_page.data.title` で取得できます。`layout` の設定は Middleman に直接渡され, レンダリングに使用されるレイアウトを変更します。`ignore`, `directory_index` やその他のページプロパティもこの方法で設定することができます。
+Frontmatter はテンプレートの最上部に記述し, 行頭から行末まで 3 つのハイフン
+`---` によって, その他の部分から分離されなければなりません。このブロックの中では
+テンプレート内で `current_page.data` ハッシュとして使えるデータを作ることが
+できます。例: `title: "私のタイトル"` は `current_page.data.title` で取得
+できます。`layout` の設定は Middleman に直接渡され, レンダリングに使用される
+レイアウトを変更します。`ignored`, `directory_index` やその他の
+ページプロパティもこの方法で設定することができます。
 
 ## JSON フォーマット
 
 Frontmatter に JSON を使うこともできます。`;;;` で区切られ
 次のようになります:
 
-``` html
+```json
 ;;;
 "layout": "custom",
 "my_list": [

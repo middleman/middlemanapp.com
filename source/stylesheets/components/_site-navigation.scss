@@ -1,0 +1,24 @@
+.c-site-navigation {
+  background-color: $mm-yellow;
+  font-weight: $font-weight-semibold;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  padding: 1rem;
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.c-site-navigation__site-name {
+  font-weight: $font-weight-bold;
+  margin-right: 1rem;
+}
+
+.c-site-navigation__link {
+  margin-left: 1rem;
+}

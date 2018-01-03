@@ -1,0 +1,19 @@
+<% wrap_layout :core do %>
+  <div class="search">
+    <div class="c-container">
+      <%= partial "partials/docsearch" %>
+    </div>
+  </div>
+
+  <main class="c-site-frame__body" role="main">
+    <div class="c-container">
+      <nav class="c-site-frame__content-sidebar">
+        <%= partial "partials/documentation_nav" %>
+      </nav>
+
+      <div class="c-site-frame__content-main js-anchor-links">
+        <%= yield %>
+      </div>
+    </div>
+  </main>
+<% end %>

@@ -1,0 +1,29 @@
+<nav class="c-site-frame__navigation
+            c-site-navigation
+            u-flex
+            u-flex-align-items-center
+            u-flex-justify-space-between">
+  <%= link_to(
+    "Middleman",
+    "#{locale_prefix}/",
+    class: "c-site-navigation__site-name"
+  ) %>
+
+  <div class="u-flex u-flex-nowrap">
+    <%= link_to(
+      t("site_navigation.support"),
+      "#{locale_prefix}/support/",
+      class: "c-site-navigation__link"
+    ) %>
+    <%= link_to(
+      t("site_navigation.community"),
+      "#{locale_prefix}/community/",
+      class: "c-site-navigation__link"
+    ) %>
+    <%= link_to(
+      t("site_navigation.docs"),
+      "#{locale_prefix}/basics/install/",
+      class: "c-site-navigation__link"
+    ) %>
+  </div>
+</nav>

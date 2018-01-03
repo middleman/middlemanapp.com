@@ -1,7 +1,3 @@
-.introduction-container.active {
-  margin-top: $global-nav-height;
-}
-
 .introduction-item {
   display: flex;
   flex-wrap: wrap;
@@ -76,18 +72,18 @@
 }
 
 .introduction-browser-body {
-  height: em(200);
+  height: 12.5em;
 
   @include media($medium-screen-up) {
-    height: em(300);
+    height: 18.75em;
   }
 }
 
 .introduction-browser-window {
   background: image_url("middleman-logo.svg"), $base-accent-color;
-  background-size: em(80);
-  background-repeat: no-repeat;
   background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 5em;
 }
 
 .introduction-item-header {

@@ -1,11 +1,12 @@
 ---
 jp:
-  navigation:
-    support: サポート
-    contribute: Contribute
-    docs: Docs
+  site_navigation:
+    community: コミュニティ
+    docs: ドキュメント
     logo: Middleman
     search_placeholder: ドキュメント検索
+    support: サポート
+  navigation:
     basics:
       title: 基礎
       blogging: ブログ機能
@@ -27,7 +28,6 @@ jp:
       external_pipeline: 外部パイプライン
       configuration: 設定
       custom_extensions: カスタム拡張
-      custom_templates: カスタムテンプレート
       data_files: データファイル
       development_optimization: 開発の最適化
       dynamic_pages: 動的ページ
@@ -40,14 +40,6 @@ jp:
       project_templates: プロジェクトテンプレート
       rack_middleware: Rack ミドルウェア
       sitemap: サイトマップ
-    community:
-      title: コミュニティ
-      built_using_middleman: Middleman 採用サイト
-      community_forum: コミュニティフォーラム
-      custom_extensions: 拡張機能
-      deployment_solution: デプロイ方法
-      github: GitHub リポジトリ
-      project_templates: プロジェクトテンプレート
   open_source:
     title: オープンソースへの貢献
     service: サービスの追加
@@ -80,7 +72,7 @@ jp:
     main_text: Middleman は活発なコミュニティに支えられています。あなたに質問がある時,
       オープンソースの機能に貢献したい時, Middleman を
       最大限に活用するには以下の機能を参照してください。
-    built_using_middleman: Middleman 採用企業
+    built_using_middleman: Middleman 利用者
     forum:
       header: コミュニティフォーラム
       description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
@@ -117,6 +109,13 @@ jp:
     title: Middleman の開発をサポートしてください
     subtitle: 寄付または Middleman ステッカーを購入することで, 開発をサポートすることができます。
 
+  footer:
+    maintained:
+      <a href="https://github.com/middleman/middleman/graphs/contributors">コントリビュータ</a>
+      の助けを借りて
+      <a href="https://github.com/orgs/middleman/people">コアチーム</a> によって
+      メンテナンスされています。
+
   # index
   index:
     sub_title: 作業を効率化するフロントエンド開発ツール
@@ -125,7 +124,7 @@ jp:
       採用した静的サイトジェネレータです
     getting_started: はじめに
     contribute: オープンソースコミュニティに貢献する
-    see_middleman_sites: Middleman 採用サイトを見る
+    see_middleman_sites: もっと見る
     stickers: Middleman ステッカーを購入
     donate: Middleman に寄付
 
@@ -134,7 +133,7 @@ jp:
     title: Middleman 採用サイト
     mobile: Middleman 採用モバイルアプリケーション
     blog: Middleman 採用ブログ
-    twitter: "@middlemanapp"
+    twitter: Twitter
     github: GitHub
     source_code: ソースコード
     fork: Github で Fork しサイトを追加してください

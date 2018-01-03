@@ -1,14 +1,8 @@
 .bundle
-.divshot-cache
+.byebug_history
 .DS_Store
-.mm-pid-*
-.rbenv-version
 .rvmrc
 .sass-cache
-bin
-build
-Gemfile.lock
-source/mint/config/db.php
 /.tmp/
+/build/
 /node_modules/
-.byebug_history

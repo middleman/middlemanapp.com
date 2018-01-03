@@ -1,0 +1,48 @@
+// SEARCHBOX
+$searchbox-config: (
+  input-width: 100%,
+  input-height: 32px,
+  border-width: 0px,
+  border-radius: 0px,
+  input-border-color: transparent,
+  input-focus-border-color: transparent,
+  input-background: transparent,
+  input-focus-background: transparent,
+  font-size: 16px,
+  placeholder-color: $base-font-color,
+  icon: 'sbx-icon-search-21',
+  icon-size: 18px,
+  icon-position: left,
+  icon-color: #000,
+  icon-background: #458EE1,
+  icon-background-opacity: 0,
+  icon-clear: 'sbx-icon-clear-1',
+  icon-clear-size: 14px
+) !default;
+
+// DROPDOWN
+$dropdown-config: (
+  main-color: #D9B24F,
+  layout-type: center,
+  layout-width: full,
+  layout-alignment: center,
+  background-color: #fff,
+  border-radius: 6,
+  border-width: 1,
+  border-color: #d9d9d9,
+  box-shadow: light,
+  branding-position: bottom,
+  spacing: normal,
+  include-desc: yes,
+  background-category-header: #ffffff,
+  font-size: normal,
+  header-color: #D9B24F,
+  title-color: #02060C,
+  subtitle-color: #94979E,
+  text-color: #63676D,
+  highlight-color: rgb(248, 219, 140),
+  highlight-opacity: .5,
+  highlight-type: underline
+) !default;
+
+$builder-height: 260px;
