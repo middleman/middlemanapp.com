@@ -502,10 +502,11 @@ blogs:
   - url: https://stormforger.com
     title: Load Testing and Performance Analysis for Agile- and DevOps-Teams
   - url: https://supermercadosgrupal.com.uy
-    title: Supermarkets Grupal
   - url: http://OFReport.com
     title: Our family blog, documenting our work in Ukraine.
     source: https://github.com/joshukraine/ofreport.com
   - url: http://www.rmanev.com/
     title: A personal website for Rumen Manev
     source: https://github.com/rum-n/rman3
+  - url: https://www.shadeomatic.com
+    title: Canada’s leading supplier of premier quality window coverings
