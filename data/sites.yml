@@ -341,6 +341,9 @@ built:
     title: SimpleLoans.ca
   - url: https://martinschurig.com
     title: "Martin Schurig"
+  - url: https://www.nhutduong.com/
+    title: "Nhut Duong"
+    source: https://github.com/nhutdm/nhutduong.com
 
 mobile:
   - url: http://pollev.com
