@@ -509,3 +509,6 @@ blogs:
   - url: http://www.rmanev.com/
     title: A personal website for Rumen Manev
     source: https://github.com/rum-n/rman3
+  - url: https://oswaldlabs.com
+    title: Oswald Labs
+    source: https://github.com/OswaldFoundation/oswaldlabs.com
