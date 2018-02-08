@@ -506,6 +506,9 @@ blogs:
   - url: http://OFReport.com
     title: Our family blog, documenting our work in Ukraine.
     source: https://github.com/joshukraine/ofreport.com
+  - url: http://blog.wildsky.cc
+    title: "ws://wildsky.cc"
+    source: https://github.com/wildskyf/blog.wildsky.cc
   - url: http://www.rmanev.com/
     title: A personal website for Rumen Manev
     source: https://github.com/rum-n/rman3
