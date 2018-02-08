@@ -14,7 +14,7 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'bourbon', '>= 5.0.0.beta.7'
+gem 'bourbon', '~> 5.0'
 gem 'neat', '~> 1.8'
 
 # Windows Support
