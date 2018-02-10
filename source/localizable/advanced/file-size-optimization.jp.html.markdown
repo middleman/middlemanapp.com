@@ -64,8 +64,8 @@ activate :minify_javascript, compressor: -> { Uglifier.new(:mangle => false) }
 のビルド) を高速化できます。
 
 ```ruby
-gem 'therubyracer' # faster JS compiles
-gem 'oj' # faster JS compiles
+gem 'therubyracer' # より高速な JS コンパイル
+gem 'oj' # より高速な JSON パーサとオブジェクトシリアライザ
 ```
 
 ## テキストファイルの gzip 圧縮
