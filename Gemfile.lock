@@ -111,8 +111,8 @@ GEM
       rouge (~> 2.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    neat (1.9.0)
-      sass (>= 3.3)
+    neat (2.1.0)
+      sass (~> 3.4)
       thor (~> 0.19)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
@@ -161,7 +161,7 @@ DEPENDENCIES
   middleman-data_source
   middleman-livereload
   middleman-syntax
-  neat (~> 1.9)
+  neat (~> 2.1)
   redcarpet
   sass
 
