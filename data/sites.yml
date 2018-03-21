@@ -350,6 +350,8 @@ built:
   - url: https://www.nhutduong.com/
     title: "Nhut Duong"
     source: https://github.com/nhutdm/nhutduong.com
+  - url: http://cssborders.com
+    title: "CSS Borders"
 
 mobile:
   - url: http://pollev.com
