@@ -352,6 +352,8 @@ built:
     source: https://github.com/nhutdm/nhutduong.com
   - url: http://cssborders.com
     title: "CSS Borders"
+  - url: https://www.affirm.com
+    title: "Affirm"
 
 mobile:
   - url: http://pollev.com
