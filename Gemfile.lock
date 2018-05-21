@@ -1,9 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.0.6)
+    activesupport (5.0.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
+      i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
@@ -36,14 +36,14 @@ GEM
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.1)
-    ffi (1.9.21)
+    ffi (1.9.23)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     hashie (3.5.7)
-    html-proofer (3.8.0)
+    html-proofer (3.9.0)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
       colorize (~> 0.8)
