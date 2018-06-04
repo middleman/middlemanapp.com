@@ -1,4 +1,6 @@
 built:
+  - url: https://wasai.co
+    title: Wasai — Digital Ventures
   - url: https://gpacalculator.io
     title: GPA Calculator
   - url: https://cssgradient.io/
@@ -356,6 +358,8 @@ built:
     title: "CSS Borders"
   - url: https://www.affirm.com
     title: "Affirm"
+  - url: https://docs.mapwize.io
+    title: "Mapwize - Indoor mapping platform | Support Center"
 
 mobile:
   - url: http://pollev.com
@@ -549,3 +553,5 @@ blogs:
     title: Moe Amaya — Product Designer in San Francisco
   - url: https://www.livechatlabs.com/
     title: Live Chat Labs
+  - url: https://bastienrobert.fr
+    title: Bastien Robert - Creative developer from Paris
