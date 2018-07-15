@@ -9,22 +9,20 @@ like this:
 
 ```
 mymiddlemansite/
-+-- .gitignore
-+-- Gemfile
-+-- Gemfile.lock
-+-- config.rb
-+-- source
-    +-- images
-    ¦   +-- background.png
-    ¦   +-- middleman.png
-    +-- index.html.erb
-    +-- javascripts
-    ¦   +-- all.js
-    +-- layouts
-    ¦   +-- layout.erb
-    +-- stylesheets
-        +-- all.css
-        +-- normalize.css
+├── .gitignore
+├── Gemfile
+├── Gemfile.lock
+├── config.rb
+└── source
+    ├── images
+    │   └── .keep
+    ├── index.html.erb
+    ├── javascripts
+    │   └── site.js
+    ├── layouts
+    │   └── layout.erb
+    └── stylesheets
+        └── site.css.scss
 ```
 
 ## Main Directories
