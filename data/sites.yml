@@ -28,6 +28,8 @@ built:
     title: Word Counter
   - url: http://dev.welaika.com
     title: weLaika Software Development
+  - url: http://www.enaweg.at
+    title: Enaweg - Web, Prototype & Software Development
   - url: http://www.beerfestivalbuddy.com
     title: Beer Festival Buddy
     source: https://github.com/matoakley/beer-festival-buddy-middleman
