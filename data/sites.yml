@@ -368,6 +368,9 @@ built:
     title: "Bundlify - Send professional invoices and get paid online"
   - url: https://www.lionit.co.uk/
     title: Lion IT - Ecommerce Platforms
+  - url: https://mikerogers.io/
+    title: Mike Rogers - Ruby on Rails Developer
+    source: https://github.com/MikeRogers0/MikeRogersIO
 
 mobile:
   - url: http://pollev.com
