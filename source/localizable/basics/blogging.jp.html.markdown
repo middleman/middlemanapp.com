@@ -515,8 +515,8 @@ source 内で一緒に保管し出力することができます。
 ディレクトリ名を含むことに注意してください:
 
 ```markdown
-Wrong: [私の写真][photo.jpg]
-Right: [私の写真][2011-10-18-middleman/photo.jpg]
+Wrong: ![私の写真][photo.jpg]
+Right: ![私の写真][2011-10-18-middleman/photo.jpg]
 ```
 
 この方法で動作するはずですが, `:asset_hash` のようなその他の Middleman の機能では
