@@ -515,8 +515,8 @@ Note that if you want to link to anything in your article subdirectory from
 your blog post, you should include the directory name:
 
 ```markdown
-Wrong: [My Photo](photo.jpg)
-Right: [My Photo](2011-10-18-middleman/photo.jpg)
+Wrong: ![My Photo](photo.jpg)
+Right: ![My Photo](2011-10-18-middleman/photo.jpg)
 ```
 
 If you don't do this, it may still work, but other Middleman features like
