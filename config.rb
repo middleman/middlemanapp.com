@@ -33,12 +33,6 @@ page "/jp/", layout: "home"
 page "/jp/advanced/*", layout: "documentation"
 page "/jp/basics/*", layout: "documentation"
 
-configure :development do
-  activate :livereload do |reload|
-    reload.no_swf = true
-  end
-end
-
 configure :build do
   # "Ignore" JS so webpack has full control.
   ignore { |path| path =~ /\/(.*)\.js$/ && $1 != 'site' }
