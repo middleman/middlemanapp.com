@@ -1,0 +1,249 @@
+[[redirects]]
+  from = "/advanced/asset_pipeline"
+  to = "/advanced/asset-pipeline"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/asset_pipeline"
+  to = "/jp/advanced/asset-pipeline"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/custom"
+  to = "/advanced/custom-extensions"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/custom"
+  to = "/jp/advanced/custom-extensions"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/custom-templates"
+  to = "/advanced/project-templates"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/custom-templates"
+  to = "/jp/advanced/project-templates"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/custom_extensions"
+  to = "/advanced/custom-extensions"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/custom_extensions"
+  to = "/jp/advanced/custom-extensions"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/data_files"
+  to = "/advanced/data-files"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/data_files"
+  to = "/jp/advanced/data-files"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/dynamic_pages"
+  to = "/advanced/dynamic-pages"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/dynamic_pages"
+  to = "/jp/advanced/dynamic-pages"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/file_size_optimization"
+  to = "/advanced/file-size-optimization"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/file_size_optimization"
+  to = "/jp/advanced/file-size-optimization"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/improving_cacheability"
+  to = "/advanced/improving-cacheability"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/improving_cacheability"
+  to = "/jp/advanced/improving-cacheability"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/local-data"
+  to = "/advanced/data-files"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/local-data"
+  to = "/jp/advanced/data-files"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/pretty_urls"
+  to = "/advanced/pretty-urls"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/pretty_urls"
+  to = "/jp/advanced/pretty-urls"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/project_templates"
+  to = "/advanced/project-templates"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/project_templates"
+  to = "/jp/advanced/project-templates"
+  status = 301
+
+[[redirects]]
+  from = "/advanced/rack_middleware"
+  to = "/advanced/rack-middleware"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/rack_middleware"
+  to = "/jp/advanced/rack-middleware"
+  status = 301
+
+[[redirects]]
+  from = "/basics/asset-pipeline"
+  to = "/advanced/asset-pipeline"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/asset-pipeline"
+  to = "/jp/advanced/asset-pipeline"
+  status = 301
+
+[[redirects]]
+  from = "/basics/build_and_deploy"
+  to = "/basics/build-and-deploy"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/build_and_deploy"
+  to = "/jp/basics/build-and-deploy"
+  status = 301
+
+[[redirects]]
+  from = "/basics/development_cycle"
+  to = "/basics/development-cycle"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/development_cycle"
+  to = "/jp/basics/development-cycle"
+  status = 301
+
+[[redirects]]
+  from = "/basics/dynamic-pages"
+  to = "/advanced/dynamic-pages"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/dynamic-pages"
+  to = "/jp/advanced/dynamic-pages"
+  status = 301
+
+[[redirects]]
+  from = "/basics/getting-started"
+  to = "/basics/install"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/getting-started"
+  to = "/jp/basics/install"
+  status = 301
+
+[[redirects]]
+  from = "/basics/helper_methods"
+  to = "/basics/helper-methods"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/helper_methods"
+  to = "/jp/basics/helper-methods"
+  status = 301
+
+[[redirects]]
+  from = "/basics/helpers"
+  to = "/basics/helper-methods"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/helpers"
+  to = "/jp/basics/helper-methods"
+  status = 301
+
+[[redirects]]
+  from = "/basics/pretty-urls"
+  to = "/advanced/pretty-urls"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/pretty-urls"
+  to = "/jp/advanced/pretty-urls"
+  status = 301
+
+[[redirects]]
+  from = "/basics/start_new_site"
+  to = "/basics/start-new-site"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/start_new_site"
+  to = "/jp/basics/start-new-site"
+  status = 301
+
+[[redirects]]
+  from = "/basics/templates"
+  to = "/basics/templating-language"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/templates"
+  to = "/jp/basics/templating-language"
+  status = 301
+
+[[redirects]]
+  from = "/basics/templating_language"
+  to = "/basics/templating-language"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/templating_language"
+  to = "/jp/basics/templating-language"
+  status = 301
+
+[[redirects]]
+  from = "/community/built_using_middleman"
+  to = "/community/built-using-middleman"
+  status = 301
+
+[[redirects]]
+  from = "/jp/community/built_using_middleman"
+  to = "/jp/community/built-using-middleman"
+  status = 301
+
+[[redirects]]
+  from = "/getting-started/"
+  to = "/basics/install/"
+  status = 301
+
+[[redirects]]
+  from = "/jp/getting-started/"
+  to = "/jp/basics/install"
+  status = 301
