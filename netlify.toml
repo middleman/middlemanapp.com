@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "/*"
+  to = "/jp/:splat"
+  status = 302
+  conditions = {Language = ["ja"], Country = ["JP"]}
+
+[[redirects]]
   from = "/advanced/asset_pipeline"
   to = "/advanced/asset-pipeline"
   status = 301
