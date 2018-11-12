@@ -127,14 +127,8 @@ need to employ the `image_path` helper:
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
 
-The `srcset` attribute is not yet supported by all browsers as you can see at
-[Can I Use]. If it is not supported, the browser uses the `src` attribute as
-a fallback. We noted, that some browsers use the first entry of the `srcset` as
-a fallback. This is why we have put the largest image first in our example.
-
   [Uglifier's docs]: https://github.com/lautis/uglifier
   [serve compressed files]: https://developer.yahoo.com/performance/rules.html#gzip
   [gzip_static]: https://www.nginx.com/resources/wiki/extending/compiling/
   [apache_gist]: https://gist.github.com/2200790
   [middleman-imageoptim]: https://github.com/plasticine/middleman-imageoptim
-  [Can I Use]: http://caniuse.com/

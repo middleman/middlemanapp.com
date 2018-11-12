@@ -5,7 +5,6 @@ gem 'middleman'
 gem 'middleman-aria_current'
 gem 'middleman-autoprefixer'
 gem 'middleman-data_source'
-gem 'middleman-livereload'
 gem 'middleman-syntax'
 
 # Templating Engines
@@ -14,7 +13,7 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'bourbon', '~> 5.0'
+gem 'bourbon', '~> 5.1'
 gem 'neat', '~> 1.9'
 
 # Windows Support

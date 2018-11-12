@@ -1,4 +1,6 @@
 built:
+  - url: https://christmashq.com
+    title: Christmas HQ
   - url: https://wasai.co
     title: Wasai — Digital Ventures
   - url: https://gpacalculator.io
@@ -28,6 +30,8 @@ built:
     title: Word Counter
   - url: http://dev.welaika.com
     title: weLaika Software Development
+  - url: http://www.enaweg.at
+    title: Enaweg - Web, Prototype & Software Development
   - url: http://www.beerfestivalbuddy.com
     title: Beer Festival Buddy
     source: https://github.com/matoakley/beer-festival-buddy-middleman
@@ -362,6 +366,13 @@ built:
     title: "Mapwize - Indoor mapping platform | Support Center"
   - url: https://www.aaimaa.in
     title: "Aaimaa Web Solutions"
+  - url: https://www.bundlify.com/
+    title: "Bundlify - Send professional invoices and get paid online"
+  - url: https://www.lionit.co.uk/
+    title: Lion IT - Ecommerce Platforms
+  - url: https://mikerogers.io/
+    title: Mike Rogers - Ruby on Rails Developer
+    source: https://github.com/MikeRogers0/MikeRogersIO
 
 mobile:
   - url: http://pollev.com
@@ -557,3 +568,6 @@ blogs:
     title: Live Chat Labs
   - url: https://bastienrobert.fr
     title: Bastien Robert - Creative developer from Paris
+  - url: https://cameronbroe.com
+    title: Cameron Roe - Software engineer from Memphis, TN
+    source: https://github.com/cameronbroe/cameronbroe-com
