@@ -2,7 +2,7 @@
   from = "/*"
   to = "/jp/:splat"
   status = 302
-  conditions = {Language = ["ja"], Country = ["JP"]}
+  conditions = {Language = ["ja"]}
 
 [[redirects]]
   from = "/advanced/asset_pipeline"
