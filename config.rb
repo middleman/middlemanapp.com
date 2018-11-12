@@ -24,8 +24,6 @@ activate :data_source do |d|
   ]
 end
 
-proxy "_redirects", "netlify-redirects", ignore: true
-
 page "/", layout: "home"
 page "/advanced/*", layout: "documentation"
 page "/basics/*", layout: "documentation"
