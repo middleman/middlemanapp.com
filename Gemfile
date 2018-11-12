@@ -5,7 +5,6 @@ gem 'middleman'
 gem 'middleman-aria_current'
 gem 'middleman-autoprefixer'
 gem 'middleman-data_source'
-gem 'middleman-livereload'
 gem 'middleman-syntax'
 
 # Templating Engines
