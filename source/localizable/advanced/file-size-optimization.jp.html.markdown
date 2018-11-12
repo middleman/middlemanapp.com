@@ -127,14 +127,8 @@ HTML に最近追加されたものに `img` や `picture` タグの
 <img src="<%= image_path('100px.jpg') %>" srcset="<%= image_path('300px.jpg') %> 3x, <%= image_path('200px.jpg') %> 2x, <%= image_path('100px.jpg') %> 1x">
 ```
 
-[Can I Use] で確認できるように `srcset` 属性はまだすべてのブラウザでサポートされていません。
-`srcset` をサポートしないブラウザの場合フォールバックとして `src` 属性を使います。
-注意するポイントとして, 一部のブラウザではフォールバックとして `srcset` 属性の
-最初の値を使用します。上記の例で属性値の最初に最大の画像を入れているのはこのためです。
-
   [Uglifier's docs]: https://github.com/lautis/uglifier
   [serve compressed files]: https://developer.yahoo.com/performance/rules.html#gzip
   [gzip_static]: https://www.nginx.com/resources/wiki/extending/compiling/
   [apache_gist]: https://gist.github.com/2200790
   [middleman-imageoptim]: https://github.com/plasticine/middleman-imageoptim
-  [Can I Use]: http://caniuse.com/
