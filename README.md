@@ -1,6 +1,8 @@
 Middleman Guides
 ================
 
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+
 These are the source files that power the [Middleman website](https://middlemanapp.com/),
 which is itself a [Middleman](https://github.com/middleman/middleman)-powered static page.
 
