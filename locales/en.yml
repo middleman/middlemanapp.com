@@ -107,7 +107,7 @@ help you do that."
 
   donate:
     title: Support Middleman Development
-    subtitle: If you'd like to show your support, you can make a donation or purchase stickers to show your love.
+    subtitle: If you'd like to show your support, you can purchase stickers to show your love.
 
   footer:
     maintained:
@@ -126,7 +126,6 @@ help you do that."
     contribute: Contribute to the open-source community
     see_middleman_sites: See More
     stickers: Buy Middleman stickers
-    donate: Donate to Middleman
 
   # community/built-using-middleman
   built:

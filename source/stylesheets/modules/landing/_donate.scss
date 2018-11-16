@@ -22,11 +22,6 @@
   }
 }
 
-.donate-cta {
-  @include button-filled($secondary-accent-color);
-}
-
 .stickers-cta {
   @include button-filled($secondary-accent-color);
 }
-
