@@ -1,4 +1,10 @@
 [[redirects]]
+  from = "https://middlemanapp-dot-com.netlify.com/*"
+  to = "https://middlemanapp.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/advanced/asset_pipeline"
   to = "/advanced/asset-pipeline"
   status = 301
