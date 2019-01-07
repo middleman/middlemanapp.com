@@ -42,7 +42,9 @@ RDiscount               | .markdown, .mkd, .md   | rdiscount
 Redcarpet               | .markdown, .mkd, .md   | redcarpet
 BlueCloth               | .markdown, .mkd, .md   | bluecloth
 Kramdown                | .markdown, .mkd, .md   | kramdown
+Pandoc                  | .markdwon, .mkd, .md   | pandoc
 Maruku                  | .markdown, .mkd, .md   | maruku
+CommonMarker            | .markdown, .mkd, .md   | commonmarker
 RedCloth                | .textile               | redcloth
 RDoc                    | .rdoc                  | rdoc
 Radius                  | .radius                | radius
