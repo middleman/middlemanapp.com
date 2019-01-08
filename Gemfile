@@ -14,7 +14,7 @@ gem 'sass'
 
 # Asset Pipeline Gems
 gem 'bourbon', '~> 5.1'
-gem 'neat', '~> 1.9'
+gem 'neat', '~> 3.0'
 
 # Windows Support
 gem 'wdm' if Gem.win_platform?
