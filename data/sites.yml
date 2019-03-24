@@ -371,6 +371,8 @@ built:
   - url: https://mikerogers.io/
     title: Mike Rogers - Ruby on Rails Developer
     source: https://github.com/MikeRogers0/MikeRogersIO
+  - url: https://apps.inspira.io
+    title: Inspira Apps
 
 mobile:
   - url: http://pollev.com
