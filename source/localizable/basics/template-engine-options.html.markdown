@@ -36,6 +36,7 @@ ENGINE                  | FILE EXTENSIONS        | REQUIRED LIBRARIES
 Slim                    | .slim                  | slim
 Erubis                  | .erb, .rhtml, .erubis  | erubis
 Less CSS                | .less                  | less
+SCSS                    | .scss                  | scss
 Builder                 | .builder               | builder
 Liquid                  | .liquid                | liquid
 RDiscount               | .markdown, .mkd, .md   | rdiscount
@@ -55,3 +56,15 @@ Yajl                    | .yajl                  | yajl-ruby
 Stylus                  | .styl                  | stylus
 
   [Tilt]: https://github.com/rtomayko/tilt/
+
+
+## When to use more than one file extension
+
+You might be wondering when to use multiple file extensions like: `nav.scss.css` vs simply `nav.scss`. Only files which will be seen directly in the build process require the additional extension. In other words, if you plan to manage multiple `scss` files with `@import`, those imports should only use `.scss`.
+
+```
+ stylesheets/
+  |- app.scss.css
+  |- partials/
+  |   |- nav.scss    // consumed with @import "nav";
+```
