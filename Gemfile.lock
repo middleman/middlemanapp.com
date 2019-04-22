@@ -121,7 +121,7 @@ GEM
       ffi (~> 1.0)
     redcarpet (3.4.0)
     rouge (2.2.1)
-    sass (3.7.3)
+    sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
