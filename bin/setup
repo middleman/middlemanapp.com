@@ -9,5 +9,3 @@ set -e
 gem install bundler --conservative
 bundle check || bundle install
 
-# Set up Node dependencies
-npm install

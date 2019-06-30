@@ -1,8 +1,6 @@
 language: ruby
 cache:
   - bundler
-  - npm
-before_install: "nvm install node"
 install: "bin/setup"
 notifications:
   email: false
