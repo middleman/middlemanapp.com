@@ -1,12 +1,14 @@
-PATH
-  remote: ../middleman-syntax
+GIT
+  remote: https://github.com/middleman/middleman-syntax.git
+  revision: 3430bceb635377fbc152d1ae8f5d2f8232362fda
   specs:
     middleman-syntax (3.2.0)
       middleman-core (>= 3.2)
       rouge (~> 3.2)
 
-PATH
-  remote: ../middleman
+GIT
+  remote: https://github.com/middleman/middleman.git
+  revision: f5d2b653cebf8a206d084748eae3e2eedc504900
   specs:
     middleman (4.3.5)
       coffee-script (~> 2.2)
@@ -159,4 +161,4 @@ DEPENDENCIES
   redcarpet
 
 BUNDLED WITH
-   1.17.3
+   2.0.2

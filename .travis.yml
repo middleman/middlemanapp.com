@@ -1,8 +1,10 @@
 language: ruby
 cache:
-  - bundler
+  bundler: true
+  directories:
+    - .deps-cache
 install: "bin/setup"
 notifications:
   email: false
-script: 'bundle exec middleman build --dependency-file="deps-cache/deps.yml" --track-dependencies --only-changed'
+script: 'bundle exec middleman build --dependency-file=".deps-cache/deps.yml" --track-dependencies --only-changed'
 sudo: false

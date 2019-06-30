@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman', path: "~/Sites/middleman"
+gem 'middleman', git: "https://github.com/middleman/middleman.git"
 gem 'middleman-autoprefixer'
-gem 'middleman-syntax', path: "~/Sites/middleman-syntax"
+gem 'middleman-syntax', git: "https://github.com/middleman/middleman-syntax.git"
 
 # Templating Engines
 gem 'redcarpet'
