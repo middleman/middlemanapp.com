@@ -2,6 +2,7 @@ language: ruby
 cache:
   bundler: true
   directories:
+    - build
     - .deps-cache
 install: "bin/setup"
 notifications:
