@@ -29,14 +29,11 @@ en:
       configuration: Configuring Your Site
       custom_extensions: Custom Extensions
       data_files: Data Files
-      development_optimization: Development Optimization
       dynamic_pages: Dynamic Pages
       file_size_optimization: File Size Optimization
       improving_cacheability: Improving Cacheability
       localization: Localization (i18n)
-      performance_optimization: Performance Optimization
       pretty_urls: Pretty URLs (Directory Indexes)
-      production_optimization: Production Optimization
       project_templates: Project Templates
       rack_middleware: Rack Middleware
       sitemap: The Sitemap

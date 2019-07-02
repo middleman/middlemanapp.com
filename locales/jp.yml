@@ -29,14 +29,11 @@ jp:
       configuration: 設定
       custom_extensions: カスタム拡張
       data_files: データファイル
-      development_optimization: 開発の最適化
       dynamic_pages: 動的ページ
       file_size_optimization: ファイルサイズ最適化
       improving_cacheability: キャッシュ機能の改善
       localization: 多言語化 (i18n)
-      performance_optimization: パフォーマンス最適化
       pretty_urls: きれいな URL (ディレクトリインデックス)
-      production_optimization: プロダクションの最適化
       project_templates: プロジェクトテンプレート
       rack_middleware: Rack ミドルウェア
       sitemap: サイトマップ
