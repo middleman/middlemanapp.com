@@ -39,4 +39,4 @@ If we wanted to get fancy, we could add a loop:
 </ul>
 ```
 
-  [see the list]: /basics/template-engine-options/
+  [see the list]: /advanced/template-engine-options/
