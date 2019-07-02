@@ -37,7 +37,7 @@ jp:
       project_templates: プロジェクトテンプレート
       rack_middleware: Rack ミドルウェア
       sitemap: サイトマップ
-      template_engine_options: TBD
+      template_engine_options: テンプレートエンジンオプション
   open_source:
     title: オープンソースへの貢献
     service: サービスの追加
