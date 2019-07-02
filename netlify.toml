@@ -253,3 +253,23 @@
   from = "/jp/getting-started/"
   to = "/jp/basics/install"
   status = 301
+
+[[redirects]]
+  from = "/advanced/template_engine_options"
+  to = "/advanced/template-engine-options"
+  status = 301
+
+[[redirects]]
+  from = "/jp/advanced/template_engine_options"
+  to = "/jp/advanced/template-engine-options"
+  status = 301
+
+[[redirects]]
+  from = "/basics/template-engine-options"
+  to = "/advanced/template-engine-options"
+  status = 301
+
+[[redirects]]
+  from = "/jp/basics/template-engine-options"
+  to = "/jp/advanced/template-engine-options"
+  status = 301
