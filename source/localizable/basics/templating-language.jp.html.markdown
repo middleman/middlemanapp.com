@@ -39,4 +39,4 @@ Middleman で使うテンプレートはそのファイル名にテンプレー�
 </ul>
 ```
 
-  [see the list]: /jp/basics/template-engine-options/
+  [see the list]: /jp/advanced/template-engine-options/
