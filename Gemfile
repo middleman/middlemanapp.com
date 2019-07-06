@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Core
 gem 'middleman', git: "https://github.com/middleman/middleman.git"
 gem 'middleman-autoprefixer'
-gem 'middleman-syntax', git: "https://github.com/middleman/middleman-syntax.git"
+gem 'middleman-syntax', '~> 3.2'
 
 # Templating Engines
 gem 'redcarpet'
