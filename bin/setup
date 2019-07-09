@@ -8,4 +8,3 @@ set -e
 # Set up Ruby dependencies
 gem install bundler --conservative
 bundle check || bundle install
-
