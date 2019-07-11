@@ -13,7 +13,7 @@ gem 'builder'
 gem 'sass'
 
 # Asset Pipeline Gems
-gem 'bourbon', '~> 5.1'
+gem 'bourbon', '~> 6.0'
 gem 'neat', '~> 1.9'
 
 # Windows Support
