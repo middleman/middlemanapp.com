@@ -12,8 +12,7 @@ GEM
       execjs
     backports (3.15.0)
     borrower (0.10.0)
-    bourbon (5.1.0)
-      sass (~> 3.4)
+    bourbon (6.0.0)
       thor (~> 0.19)
     builder (3.2.3)
     coffee-script (2.4.1)
@@ -146,7 +145,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon (~> 5.1)
+  bourbon (~> 6.0)
   builder
   html-proofer
   middleman
