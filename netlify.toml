@@ -1,6 +1,3 @@
-[Settings]
-  ID = "9ace54e5-ea18-4266-bd75-13b3ef3aa653"
-
 [build]
   publish = "build"
 
