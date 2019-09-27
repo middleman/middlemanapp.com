@@ -8,3 +8,5 @@
 /build/
 /node_modules/
 .deps-cache
+# Local Netlify folder
+.netlify
