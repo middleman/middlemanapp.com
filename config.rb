@@ -1,4 +1,3 @@
-activate :aria_current
 activate :autoprefixer
 activate :directory_indexes
 activate :i18n
@@ -9,14 +8,9 @@ end
 set :markdown, tables: true, autolink: true, gh_blockcode: true, fenced_code_blocks: true, with_toc_data: false
 set :markdown_engine, :redcarpet
 
-activate :data_source do |d|
-  d.sources = [
-    {
-      alias: "gem_info",
-      path: "https://rubygems.org/api/v1/gems/middleman.json"
-    }
-  ]
-end
+# Load remote data source
+require 'httparty'
+data.callbacks :gem_info, -> { ::HTTParty.get('https://rubygems.org/api/v1/gems/middleman.json').parsed_response }
 
 page "/", layout: "home"
 page "/advanced/*", layout: "documentation"

@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman'
-gem 'middleman-aria_current'
+gem 'middleman', git: "https://github.com/middleman/middleman.git"
 gem 'middleman-autoprefixer'
-gem 'middleman-data_source'
-gem 'middleman-syntax'
+gem 'middleman-syntax', '~> 3.2'
 
 # Templating Engines
 gem 'redcarpet'
 gem 'builder'
-gem 'sass'
+
+# Helpera
+gem 'httparty'
 
 # Asset Pipeline Gems
 gem 'bourbon', '~> 6.0'

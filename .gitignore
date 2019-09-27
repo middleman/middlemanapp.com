@@ -3,6 +3,8 @@
 .DS_Store
 .rvmrc
 .sass-cache
+.deps-cache
 /.tmp/
 /build/
 /node_modules/
+.deps-cache
