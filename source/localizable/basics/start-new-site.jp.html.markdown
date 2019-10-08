@@ -21,7 +21,7 @@ $ middleman init
 $ middleman init my_new_project
 ```
 
-`my_new_project` ディレクトリに Mmiddleman のスケルトンプロジェクトを作ります。
+`my_new_project` ディレクトリに Middleman のスケルトンプロジェクトを作ります。
 
 ## スケルトン
 
