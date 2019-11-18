@@ -573,3 +573,6 @@ blogs:
     source: https://github.com/cameronbroe/cameronbroe-com
   - url: https://lautarolobo.xyz
     title: Lautaro Jordan Lobo Ravarotto - Web Developer | Computer Science Student
+  - url: https://about.gitlab.com
+    title: The first single application for the entire DevOps lifecycle - GitLab
+    source: https://gitlab.com/gitlab-com/www-gitlab-com
