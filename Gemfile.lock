@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: c93436647765c551284ffdfd3dd2a2289557fe23
+  revision: 5fd6a1efcb7a5f1cb6b3dbe3c930fddc91b3e626
   specs:
     middleman (5.0.0.rc.1)
       coffee-script (~> 2.2)
@@ -13,7 +13,6 @@ GIT
     middleman-core (5.0.0.rc.1)
       activesupport (~> 5.2)
       addressable (~> 2.3)
-      backports (~> 3.11)
       bundler
       contracts (~> 0.16.0)
       dotenv
@@ -47,7 +46,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (9.6.1.1)
       execjs
-    backports (3.15.0)
     bourbon (6.0.0)
       thor (~> 0.19)
     builder (3.2.4)
@@ -55,7 +53,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     contracts (0.16.0)
     dotenv (2.7.5)
     erubis (2.7.0)
@@ -63,7 +61,7 @@ GEM
       ffi (>= 1.3.0)
     execjs (2.7.0)
     fastimage (2.1.7)
-    ffi (1.12.1)
+    ffi (1.12.2)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -109,7 +107,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.1)
+    oj (3.10.2)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
@@ -117,7 +115,7 @@ GEM
     padrino-support (0.14.4)
     parallel (1.19.1)
     public_suffix (4.0.3)
-    rack (2.1.2)
+    rack (2.2.2)
     rainbow (3.0.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
