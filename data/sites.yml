@@ -574,3 +574,5 @@ blogs:
   - url: https://about.gitlab.com
     title: The first single application for the entire DevOps lifecycle - GitLab
     source: https://gitlab.com/gitlab-com/www-gitlab-com
+  - url: http://awebsitefromscratch.com
+    title: A Website From Scratch - a blog about building the blog.
