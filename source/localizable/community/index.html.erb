@@ -4,9 +4,9 @@
   <h1 class="community-main-title">
     <%= t("community.title") %>
   </h1>
-  <h5 class="community-subtitle">
+  <p class="community-subtitle">
     <%= t("community.main_text") %>
-  </h5>
+  </p>
   <ul class="centered-content">
     <li class="community-social-link-item github-link">
       <%= link_to "Fork on GitHub",
@@ -19,18 +19,18 @@
 
 <section class="contributions">
   <div class="wrap-container">
-    <h4 class="contributions-title centered-content">
+    <h2 class="contributions-title centered-content">
       <%= t("contributions.title") %>
-    </h4>
+    </h2>
     <article class="contributions-feature-list">
       <div class="contributions-feature-item">
         <div class="contributions-feature-icon-wrapper">
           <%= image_tag ("contributions-icons/icon-extensions.svg") %>
         </div>
         <div class="contributions-feature-text-wrapper">
-          <h5 class="contributions-feature-header">
+          <h3 class="contributions-feature-header">
             <%= t("contributions.extensions.header") %>
-          </h5>
+          </h3>
           <p><%= t("contributions.extensions.description") %></p>
           <%= link_to t("contributions.extensions.link_text"),
             "https://directory.middlemanapp.com/#/extensions/all", class: "cta-link-body" %>
@@ -41,9 +41,9 @@
             <%= image_tag ("contributions-icons/icon-project-templates.svg") %>
         </div>
         <div class="contributions-feature-text-wrapper">
-          <h5 class="contributions-feature-header">
+          <h3 class="contributions-feature-header">
             <%= t("contributions.templates.header") %>
-          </h5>
+          </h3>
           <p><%= t("contributions.templates.description") %></p>
           <%= link_to t("contributions.templates.link_text"),
             "https://directory.middlemanapp.com/#/templates/all", class: "cta-link-body" %>
@@ -54,9 +54,9 @@
           <%= image_tag ("contributions-icons/icon-deployment-solutions.svg") %>
         </div>
         <div class="contributions-feature-text-wrapper">
-          <h5 class="contributions-feature-header">
+          <h3 class="contributions-feature-header">
             <%= t("contributions.deployment.header") %>
-          </h5>
+          </h3>
           <p><%= t("contributions.deployment.description") %></p>
           <%= link_to t("contributions.deployment.link_text"),
             "https://directory.middlemanapp.com/#/extensions/deployment", class: "cta-link-body" %>
@@ -74,9 +74,9 @@
       </div>
     </div>
     <div class="forum-text-wrapper">
-      <h4 class="contributions-title forum-item-header">
+      <h2 class="contributions-title forum-item-header">
         <%= t("community.forum.header") %>
-      </h4>
+      </h2>
       <p class="forum-item-text">
         <%= t("community.forum.description") %>
       </p>
