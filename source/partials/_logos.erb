@@ -17,11 +17,10 @@
         </li>
       </ul>
 
-      <%= link_to(
-        t("index.see_middleman_sites"),
-        "#{locale_prefix}/community/built-using-middleman/",
-        class: "community-social-link"
-      ) %>
+      <% link_to("#{locale_prefix}/community/built-using-middleman/", class: "community-social-link") do %>
+        <%= t("index.see_middleman_sites") %>
+        <span class="visually-hidden"><%= t("index.use_cases") %></span>
+      <% end %>
     </div>
   </div>
 </section>

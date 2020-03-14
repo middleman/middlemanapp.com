@@ -75,6 +75,7 @@ en:
       header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
       link_text: Visit forum
+      preview_alt: Middleman forum homepage preview
 
   support:
     title: "Paid Consultation & Development"
@@ -124,6 +125,7 @@ help you do that."
     getting_started: Getting started
     contribute: Contribute to the open-source community
     see_middleman_sites: See More
+    use_cases: Middleman use cases
     stickers: Buy Middleman stickers
 
   # community/built-using-middleman
