@@ -1,6 +1,9 @@
 <li class="built-with-middleman-list-item">
   <%= link_to site.title || site.url, site.url, class: "built-with-middleman-link" %>
   <% if site.source %>
-    <%= link_to t("built.source_code"), site.source, class: "source-code-link" %>
+    <% link_to site.source, :class => "source-code-link" do %>
+      <%= t("built.source_code") %>
+      <span class="visually-hidden"> <%= "#{t("built.of")} #{site.title || site.url}" %></span>
+    <% end %>
   <% end %>
 </li>
