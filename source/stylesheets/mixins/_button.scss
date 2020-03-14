@@ -16,7 +16,8 @@
   background-color: $color;
   color: white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: darken($color, 10);
     color: white;
   }
@@ -34,7 +35,8 @@ transparent) {
 
   @if $type == "fill" {
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-position: 200% 100%;
       background-color: $font-color;
       border-color: $font-color;
@@ -44,7 +46,8 @@ transparent) {
 
   @else if $type == "darken" {
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: darken($font-color, 20);
       color: darken($font-color, 20);
     }

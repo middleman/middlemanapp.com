@@ -18,7 +18,8 @@
 .built-with-middleman-link, .source-code-link {
   transition: all .2s linear;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: lighten($mm-blue, 42);
   }
 }
@@ -28,7 +29,8 @@
   display: inline;
   padding: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: transparent;
     border-bottom: 1px dotted $base-border-color;
   }

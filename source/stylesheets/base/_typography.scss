@@ -55,15 +55,15 @@ a {
   text-decoration: none;
   transition: color 0.1s linear;
 
-  &:hover {
+  &:hover,
+  &:active {
     color: $hover-link-color;
   }
+}
 
-  &:active,
-  &:focus {
-    color: $hover-link-color;
-    outline: none;
-  }
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px currentColor;
 }
 
 hr {
