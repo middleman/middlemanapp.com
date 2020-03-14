@@ -37,14 +37,14 @@ $_two-column-gutter: 2rem;
 
 .c-site-frame__skip-link {
   background: $mm-navy;
+  left: 0.5rem;
   padding: 0.5rem 1rem;
   position: absolute;
   top: -10rem;
-  left: 0.5rem;
 
   &:focus,
   &:hover {
-    color: white;
+    color: #ffffff;
     top: 0.5rem;
   }
 }
