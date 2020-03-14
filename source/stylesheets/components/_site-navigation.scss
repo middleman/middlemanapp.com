@@ -15,10 +15,15 @@
 }
 
 .c-site-navigation__site-name {
+  display: inline-block;
   font-weight: $font-weight-bold;
-  margin-right: 1rem;
 }
 
-.c-site-navigation__link {
+.c-site-navigation__item {
   margin-left: 1rem;
+
+  &:first-child {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }

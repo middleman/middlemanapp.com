@@ -1,6 +1,8 @@
 ---
 jp:
   site_navigation:
+    main: メイン
+    home: ホームページ
     community: コミュニティ
     docs: ドキュメント
     logo: Middleman

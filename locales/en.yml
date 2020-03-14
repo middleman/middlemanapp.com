@@ -1,6 +1,8 @@
 ---
 en:
   site_navigation:
+    label: Main
+    home: Home page
     community: Community
     docs: Documentation
     logo: Middleman
