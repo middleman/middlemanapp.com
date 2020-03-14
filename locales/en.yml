@@ -1,6 +1,7 @@
 ---
 en:
   site_navigation:
+    skip_link: Skip to main content
     label: Main
     home: Home page
     community: Community

@@ -1,6 +1,7 @@
 ---
 jp:
   site_navigation:
+    skip_link: メインコンテンツにスキップ
     main: メイン
     home: ホームページ
     community: コミュニティ
