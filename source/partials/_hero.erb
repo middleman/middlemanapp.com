@@ -1,6 +1,6 @@
 <header class="hero" role="banner">
   <section class="wrap-container">
-    <%= link_to image_tag("middleman-logo.svg"), "#{locale_prefix}/",
+    <%= link_to image_tag("middleman-logo.svg", { alt: t("index.logo_alt") }), "#{locale_prefix}/",
       class: "hero-content-logo" %>
     <h1 class="hero-headline"><%= t("index.headline") %></h1>
     <p class="hero-description"><%= t("index.description") %></p>

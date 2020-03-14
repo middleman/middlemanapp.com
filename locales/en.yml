@@ -116,6 +116,7 @@ help you do that."
 
   # index
   index:
+    logo_alt: Middleman home page
     sub_title: Hand-crafted frontend development
     headline: Build static websites <br> with an easy-to-use framework
     description: Middleman is a static site generator using all the shortcuts
