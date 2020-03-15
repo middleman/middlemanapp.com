@@ -78,7 +78,7 @@ jp:
       header: コミュニティフォーラム
       description:  Middleman について他のユーザと交流したい場合フォーラムを使ってください。
       link_text: フォーラムに移動する
-      preview_alt: Middleman フォーラムのホームページのプレビュー
+      preview_alt: Middleman フォーラムのホームページプレビュー
 
   support:
     title: "有料相談 & 開発"
@@ -128,7 +128,7 @@ jp:
     getting_started: はじめに
     contribute: オープンソースコミュニティに貢献する
     see_middleman_sites: もっと見る
-    use_cases: Middleman のユースケース
+    use_cases: Middleman の利用事例
     stickers: Middleman ステッカーを購入
 
   # community/built-using-middleman
