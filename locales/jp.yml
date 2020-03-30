@@ -2,7 +2,7 @@
 jp:
   site_navigation:
     skip_link: メインコンテンツにスキップ
-    main: メイン
+    label: メイン
     home: ホームページ
     community: コミュニティ
     docs: ドキュメント
