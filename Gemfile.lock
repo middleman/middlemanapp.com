@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 5fd6a1efcb7a5f1cb6b3dbe3c930fddc91b3e626
+  revision: 1bea29f8bdd1cde329850dfbfe71c9f4d6af8f63
   specs:
     middleman (5.0.0.rc.1)
       coffee-script (~> 2.2)
@@ -37,7 +37,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.4.1)
+    activesupport (5.2.4.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -107,17 +107,17 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.2)
+    oj (3.10.6)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
       tilt (>= 1.4.1, < 3)
     padrino-support (0.14.4)
     parallel (1.19.1)
-    public_suffix (4.0.4)
+    public_suffix (4.0.5)
     rack (2.2.2)
     rainbow (3.0.0)
-    rb-fsevent (0.10.3)
+    rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.0)
@@ -130,7 +130,7 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sassc (2.2.1)
+    sassc (2.3.0)
       ffi (~> 1.9)
     servolux (0.13.0)
     stream (0.5.2)
@@ -140,7 +140,7 @@ GEM
     tilt (2.0.10)
     typhoeus (1.3.1)
       ethon (>= 0.9.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
