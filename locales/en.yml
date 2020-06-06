@@ -1,6 +1,9 @@
 ---
 en:
   site_navigation:
+    skip_link: Skip to main content
+    label: Main
+    home: Home page
     community: Community
     docs: Documentation
     logo: Middleman
@@ -75,6 +78,7 @@ en:
       header: Community Forum
       description: Use the forum to chat with other folks about Middleman.
       link_text: Visit forum
+      preview_alt: Middleman forum homepage preview
 
   support:
     title: "Paid Consultation & Development"
@@ -116,6 +120,7 @@ help you do that."
 
   # index
   index:
+    logo_alt: Middleman home page
     sub_title: Hand-crafted frontend development
     headline: Build static websites <br> with an easy-to-use framework
     description: Middleman is a static site generator using all the shortcuts
@@ -123,6 +128,7 @@ help you do that."
     getting_started: Getting started
     contribute: Contribute to the open-source community
     see_middleman_sites: See More
+    use_cases: Middleman use cases
     stickers: Buy Middleman stickers
 
   # community/built-using-middleman
@@ -133,4 +139,5 @@ help you do that."
     twitter: Twitter
     github: GitHub
     source_code: source code
+    of: of
     fork: Fork and add your site on GitHub

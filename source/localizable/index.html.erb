@@ -10,9 +10,9 @@
           </div>
         </div>
         <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
+          <h2 class="introduction-item-header">
             <%= t("introduction.first.header") %>
-          </h4>
+          </h2>
           <p class="introduction-item-text">
             <%= t("introduction.first.description") %>
           </p>
@@ -25,9 +25,9 @@
 
       <div class="introduction-item third-graphic">
         <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
+          <h2 class="introduction-item-header">
             <%= t("introduction.second.header") %>
-          </h4>
+          </h2>
           <p class="introduction-item-text">
             <%= t("introduction.second.description") %>
           </p>
@@ -55,9 +55,9 @@
           </div>
         </div>
         <div class="introduction-item-text-wrapper">
-          <h4 class="introduction-item-header">
+          <h2 class="introduction-item-header">
             <%= t("introduction.third.header") %>
-          </h4>
+          </h2>
           <p class="introduction-item-text">
             <%= t("introduction.third.description") %>
           </p>
@@ -72,12 +72,12 @@
     <hr>
   </section>
   <section class="community-preview">
-    <h4 class="community-title">
+    <h2 class="community-title">
       <%= t("community.title") %>
-    </h4>
-    <h5 class="community-subtitle">
+    </h2>
+    <p class="community-subtitle">
       <%= t("community.subtitle") %>
-    </h5>
+    </p>
     <article class="centered-content">
       <%= link_to t("index.contribute"),
         "#{locale_prefix}/community/", class: "community-cta" %>
@@ -86,12 +86,12 @@
   </section>
 
   <section class="donate-preview">
-    <h4 class="donate-title">
+    <h2 class="donate-title">
       <%= t("donate.title") %>
-    </h4>
-    <h5 class="donate-subtitle">
+    </h2>
+    <p class="donate-subtitle">
       <%= t("donate.subtitle") %>
-    </h5>
+    </p>
     <article class="centered-content">
       <%= link_to t("index.stickers"),
         "http://devswag.com/products/middleman-stickers-4-new", class: "stickers-cta", target: "_blank" %>

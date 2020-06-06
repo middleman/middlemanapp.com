@@ -1,8 +1,8 @@
 <section class="logos">
   <div class="wrap-container">
-    <h4 class="contributions-title centered-content">
+    <h2 class="contributions-title centered-content">
       <%= t("community.built_using_middleman") %>
-    </h4>
+    </h2>
 
     <div class="logo-block">
       <ul>
@@ -17,11 +17,10 @@
         </li>
       </ul>
 
-      <%= link_to(
-        t("index.see_middleman_sites"),
-        "#{locale_prefix}/community/built-using-middleman/",
-        class: "community-social-link"
-      ) %>
+      <% link_to("#{locale_prefix}/community/built-using-middleman/", class: "community-social-link") do %>
+        <%= t("index.see_middleman_sites") %>
+        <span class="visually-hidden"><%= t("index.use_cases") %></span>
+      <% end %>
     </div>
   </div>
 </section>

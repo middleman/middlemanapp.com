@@ -18,7 +18,8 @@
 .built-with-middleman-link, .source-code-link {
   transition: all .2s linear;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: lighten($mm-blue, 42);
   }
 }
@@ -28,7 +29,8 @@
   display: inline;
   padding: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: transparent;
     border-bottom: 1px dotted $base-border-color;
   }
@@ -38,7 +40,7 @@
   background: white;
   border-radius: $base-border-radius;
   border: 1px solid $base-border-color;
-  color: lighten($medium-gray, 10);
+  color: $dark-gray;
   position: absolute;
   right: 26px;
   font-size: $base-font-size * 0.75;
