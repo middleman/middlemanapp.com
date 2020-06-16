@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 85523c84bb8b1dd23c85f1e0ad1bf96fad2675ba
+  revision: c8a1c05001412ec16370e906bd0e715fb5817a20
   specs:
     middleman (5.0.0.rc.1)
       coffee-script (~> 2.2)
@@ -116,7 +116,7 @@ GEM
     padrino-support (0.14.4)
     parallel (1.19.1)
     public_suffix (4.0.5)
-    rack (2.2.2)
+    rack (2.2.3)
     rainbow (3.0.0)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
