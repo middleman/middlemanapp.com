@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 169b9459268f200c16487712c2cf5f250f92653a
+  revision: d7f0ed06d3bf10bd8bb7f9abfda87fcdfbb3c363
   specs:
     middleman (5.0.0.rc.1)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
-      kramdown (~> 1.2)
+      kramdown (~> 2.3)
       middleman-cli (= 5.0.0.rc.1)
       middleman-core (= 5.0.0.rc.1)
     middleman-cli (5.0.0.rc.1)
@@ -37,7 +37,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.0.3.1)
+    activesupport (6.0.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -54,14 +54,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.1.7)
     contracts (0.16.0)
-    dotenv (2.7.5)
+    dotenv (2.7.6)
     erubis (2.7.0)
     ethon (0.12.0)
       ffi (>= 1.3.0)
     execjs (2.7.0)
-    fastimage (2.1.7)
+    fastimage (2.2.0)
     ffi (1.13.1)
     haml (5.1.2)
       temple (>= 0.8.0)
@@ -82,7 +82,8 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    kramdown (1.17.0)
+    kramdown (2.3.0)
+      rexml
     lazy_priority_queue (0.1.1)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -108,7 +109,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.6)
+    oj (3.10.8)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
@@ -122,6 +123,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.0)
+    rexml (3.2.4)
     rgl (0.5.6)
       lazy_priority_queue (~> 0.1.0)
       stream (~> 0.5.2)
@@ -146,7 +148,7 @@ GEM
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     yell (2.2.2)
-    zeitwerk (2.3.0)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
