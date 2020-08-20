@@ -7,7 +7,7 @@
   display: none;
 
   @include media($medium-screen-up){
-    display: block;
+    display: inline-block;
   }
 }
 

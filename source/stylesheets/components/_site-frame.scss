@@ -34,3 +34,17 @@ $_two-column-gutter: 2rem;
     width: calc(75% - (#{$_two-column-gutter} / 2));
   }
 }
+
+.c-site-frame__skip-link {
+  background: $mm-navy;
+  left: 0.5rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: -10rem;
+
+  &:focus,
+  &:hover {
+    color: $white;
+    top: 0.5rem;
+  }
+}
