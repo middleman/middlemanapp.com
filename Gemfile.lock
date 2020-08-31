@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 72065341c7572f535b8d8e2d463c1bbf9222ebda
+  revision: 729f72cc9a1b7fe65e062abdd72ab537fe7d547b
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -47,7 +47,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (9.6.1.1)
       execjs
-    bigdecimal (2.0.0)
     bourbon (6.0.0)
       thor (~> 0.19)
     builder (3.2.4)
@@ -110,8 +109,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.12)
-      bigdecimal (>= 1.0, < 3)
+    oj (3.10.13)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
