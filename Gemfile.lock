@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 729f72cc9a1b7fe65e062abdd72ab537fe7d547b
+  revision: d1608e0a990eb12ec89506e470a5fae3ff56d5ce
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -100,7 +100,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
     mini_portile2 (2.4.0)
-    minitest (5.14.1)
+    minitest (5.14.2)
     multi_xml (0.6.0)
     neat (1.9.1)
       sass (>= 3.3)
@@ -116,7 +116,7 @@ GEM
       tilt (>= 1.4.1, < 3)
     padrino-support (0.14.4)
     parallel (1.19.2)
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     rack (2.2.3)
     rainbow (3.0.0)
     rb-fsevent (0.10.4)
