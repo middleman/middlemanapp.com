@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: d1608e0a990eb12ec89506e470a5fae3ff56d5ce
+  revision: b8ba9c5fadc8bfdeb0f6acf39a475461070da5d0
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -109,7 +109,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.2)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.10.13)
+    oj (3.10.14)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
