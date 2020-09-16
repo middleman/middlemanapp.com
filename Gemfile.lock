@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 92b85d2d17716a344a511b5a5e8b0a6b4ff3e2b1
+  revision: d2668741d12d0d4c4ecd502c1e7bb533e405186f
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -37,7 +37,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.0.3.2)
+    activesupport (6.0.3.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
