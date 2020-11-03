@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: e60aa4b6fd8adb9299f311b95ab3b12a49bda77e
+  revision: b25362c4ca04d9852d627907206f289993c5271d
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -148,7 +148,7 @@ GEM
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     yell (2.2.2)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
