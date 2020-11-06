@@ -383,10 +383,13 @@ helpers do
 end
 ```
 
-Alternatively, you can create external Ruby modules which contain helpers and
-include them. You can put files in the `lib` directory. For example, if you
-were to extract the above helpers into a file named `lib/custom_helpers.rb`,
-you could create a module:
+Alternatively, you can create external Ruby modules which contain helpers. If
+you put them in the `helpers` directory and name them after their module
+(i.e., `CustomHelpers` lives in `helpers/custom_helpers.rb`), Middleman will 
+automatically load them and register them as helpers.
+
+For example, if you were to extract the above helpers into a file named
+`helpers/custom_helpers.rb`, you could create a module:
 
 ```ruby
 module CustomHelpers
@@ -396,17 +399,14 @@ module CustomHelpers
 end
 ```
 
-Then in `config.rb`:
+You can also put the extracted module elsewhere in your directory structure,
+for exmample in the `lib` directory. However, doing so you need to manually
+require and register them as helpers in `config.rb`:
 
 ```ruby
 require "lib/custom_helpers"
 helpers CustomHelpers
 ```
-
-An even easier way is to put your helpers in the `helpers` directory and name
-them after their module (i.e., `CustomHelpers` lives in
-`helpers/custom_helpers.rb`). Then, Middleman will automatically load them and
-register them as helpers.
 
   [padrino_helpers]: http://padrinorb.com/guides/application-helpers/overview/
   [sitemap]: /advanced/sitemap/
