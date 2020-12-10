@@ -51,6 +51,7 @@ add:
 activate :livereload
 ```
 
+Run `bundle install` to install the added `middleman-livereload` dependency.  
 Your browser will now reload changed pages automatically.
 
 ### Reloading CSS
