@@ -51,6 +51,7 @@ Middleman にはサイト内のファイルを編集するたびにブラウザ�
 activate :livereload
 ```
 
+`bundle install` を実行し追加した `middleman-livereload` をインストールしてください。
 これであなたのブラウザはページ内容に変更があると自動的にリロードされます。
 
 ### CSS のリロード
