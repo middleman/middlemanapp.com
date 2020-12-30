@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 89511ef1c750565f682bf3bb34cc4acefe4cb309
+  revision: 25021d7ba073658fb270863cb0dd625a8da835ad
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
