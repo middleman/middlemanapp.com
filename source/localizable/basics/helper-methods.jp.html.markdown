@@ -383,10 +383,13 @@ helpers do
 end
 ```
 
-また, 外部の Ruby モジュール含むヘルパを作成し,
-読み込むこともできます。 `lib` ディレクトリにファイルを配置します。例えば,
-`lib/custom_helpers.rb` という名前のファイルに上記のヘルパを抽出する場合には,
-モジュールを作ることができます:
+また, ヘルパメソッドを含む外部モジュールを定義することができます。
+モジュール名に基づいたファイル名で `helpers` ディレクトリに配置
+(例えば `CustomHelpers` の場合には `helpers/custom_helpers.rb`)することで
+Middleman は自動的にファイルを読み込み, ヘルパとして利用可能にします。
+
+例えば, ヘルパを `helpers/custom_helpers.rb` に抽出する場合,
+次のようにモジュールを定義することができます:
 
 ```ruby
 module CustomHelpers
@@ -396,17 +399,14 @@ module CustomHelpers
 end
 ```
 
-次に `config.rb` に追加:
+抽出したモジュールをディレクトリ構造の中で別の場所に配置することもできます。
+例えば `lib` ディレクトリです。しかし, この場合は `config.rb` の中で
+手動でファイルを読み込みヘルパとして利用可能にする必要があります:
 
 ```ruby
 require "lib/custom_helpers"
 helpers CustomHelpers
 ```
-
-より簡単な方法として, `helpers` ディレクトリにヘルパを配置し, モジュールファイルの
-名前をつける方法です (例: `CustomHelpers` は
-`helpers/custom_helpers.rb` として配置)。 Middleman は自動的にファイルを読込み,
-ヘルパーとして受け取ります。
 
   [padrino_helpers]: http://padrinorb.com/guides/application-helpers/overview/
   [sitemap]: /jp/advanced/sitemap/
