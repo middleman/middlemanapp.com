@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 25021d7ba073658fb270863cb0dd625a8da835ad
+  revision: d95171f0f8bcf62b0f4989251895ced9ff4f5abb
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -20,7 +20,7 @@ GIT
       execjs (~> 2.0)
       fastimage (~> 2.0)
       hamster (~> 3.0)
-      hashie (~> 3.4)
+      hashie (~> 4.0)
       i18n (~> 0.9.0)
       listen (~> 3.0)
       memoist (~> 0.14)
@@ -71,7 +71,7 @@ GEM
       tilt
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
-    hashie (3.6.0)
+    hashie (4.1.0)
     html-proofer (3.18.3)
       addressable (~> 2.3)
       mercenary (~> 0.3)
@@ -88,7 +88,7 @@ GEM
     kramdown (2.3.0)
       rexml
     lazy_priority_queue (0.1.1)
-    listen (3.3.3)
+    listen (3.4.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     memoist (0.16.2)
