@@ -215,3 +215,19 @@ you can use [Thor actions] from it.
   [middleman-smusher]: https://github.com/middleman/middleman-smusher
   [build]: http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build
   [Thor actions]: http://rubydoc.info/github/wycats/thor/master/Thor/Actions
+
+### Additional Available Callbacks 
+
+1. `initialized`: called before config is parsed, and before extensions are registered
+1. `configure`: called to run any `configure` blocks (once for current environment, again for the current mode)
+1. `before_extensions`: called before the `ExtensionManager` is instantiated
+1. `before_instance_block`: called before any blocks are passed to the configuration context
+1. `before_sitemap`: called before the `SiteMap::Store` is instantiated, which initializes the sitemap
+1. `before_configuration`: called before configuration is parsed, mostly used for extensions
+1. `after_configuration_eval`: called after the configuration is parsed, before the pre-extension callback
+1. `ready`: called when everything is stable
+1. `before_build`: called before the site build process runs
+1. `before_shutdown`: called in the `shutdown!` method, which lets users know the application is shutting down
+1. `before`: called before Rack requests
+1. `before_server`: called before the `PreviewServer` is created
+1. `reload`: called before the new application is initialized on a reload event
