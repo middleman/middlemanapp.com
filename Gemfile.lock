@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 3ca518d3e17569f01d62d831c7463b14393d8799
+  revision: f888c32214803c57ba6bbb692513ba7585fbe131
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -63,7 +63,7 @@ GEM
     ethon (0.12.0)
       ffi (>= 1.3.0)
     execjs (2.7.0)
-    fastimage (2.2.1)
+    fastimage (2.2.2)
     ffi (1.14.2)
     generator (0.0.1)
     haml (5.2.1)
@@ -113,7 +113,7 @@ GEM
       racc (~> 1.4)
     nokogumbo (2.0.4)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.11.0)
+    oj (3.11.2)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
