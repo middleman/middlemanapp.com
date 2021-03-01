@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 577d0c434181e6da658bbf4919495f677d47e19f
+  revision: 433a4242e411e9f70077aeff5fca51f68b2d0120
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -64,7 +64,7 @@ GEM
     ethon (0.12.0)
       ffi (>= 1.3.0)
     execjs (2.7.0)
-    fastimage (2.2.2)
+    fastimage (2.2.3)
     ffi (1.14.2)
     generator (0.0.1)
     haml (5.2.1)
@@ -104,7 +104,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2020.0512)
     mini_portile2 (2.5.0)
-    minitest (5.14.3)
+    minitest (5.14.4)
     multi_xml (0.6.0)
     neat (1.9.1)
       sass (>= 3.3)
