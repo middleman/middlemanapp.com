@@ -86,7 +86,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     lazy_priority_queue (0.1.1)
     listen (3.4.1)
