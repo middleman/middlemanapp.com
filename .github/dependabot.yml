@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+    timezone: America/New_York
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: neat
+    versions:
+    - "> 1.9.1"
+  - dependency-name: neat
+    versions:
+    - "< 3, >= 2.0.a"
