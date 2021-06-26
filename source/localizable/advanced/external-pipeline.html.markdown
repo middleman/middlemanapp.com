@@ -183,4 +183,4 @@ module.exports = finalTree;
   [React Native]: https://facebook.github.io/react-native/
   [ClojureScript]: https://clojurescript.org/
   [Elm]: http://elm-lang.org/
-  [Broccoli]: http://broccolijs.com/
+  [Broccoli]: https://broccoli.build/
