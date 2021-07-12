@@ -65,4 +65,3 @@ is built.
   [Rack::GoogleAnalytics]: https://github.com/ambethia/rack-google_analytics
   [Rack::Tidy]: https://github.com/rbialek/rack-tidy
   [Rack::Validate]: https://gist.github.com/235715
-  [Rack::SpellCheck]: https://gist.github.com/235097
