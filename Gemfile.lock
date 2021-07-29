@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: e260fff30b116a7ee0827bca667d8f3fe99c4553
+  revision: 960ca08b5e4a8d3387b8d032c4db89b3ff0eb5c5
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -67,7 +67,7 @@ GEM
     fastimage (2.2.4)
     ffi (1.15.3)
     generator (0.0.1)
-    haml (5.2.1)
+    haml (5.2.2)
       temple (>= 0.8.0)
       tilt
     hamster (3.0.0)
@@ -89,7 +89,7 @@ GEM
     kramdown (2.3.1)
       rexml
     lazy_priority_queue (0.1.1)
-    listen (3.5.1)
+    listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     memoist (0.16.2)
@@ -114,7 +114,7 @@ GEM
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.12.1)
+    oj (3.12.2)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
