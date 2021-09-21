@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 4cd26a917ba5713a377e861eaf97e4c4165d12a4
+  revision: a72884aac2a8028df4dd5aafa39e2b63396f197f
   specs:
     middleman (5.0.0.rc.2)
       coffee-script (~> 2.2)
@@ -40,7 +40,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.0.4)
+    activesupport (6.0.4.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -64,8 +64,8 @@ GEM
     ethon (0.14.0)
       ffi (>= 1.15.0)
     execjs (2.7.0)
-    fastimage (2.2.4)
-    ffi (1.15.3)
+    fastimage (2.2.5)
+    ffi (1.15.4)
     generator (0.0.1)
     haml (5.2.2)
       temple (>= 0.8.0)
@@ -89,7 +89,7 @@ GEM
     kramdown (2.3.1)
       rexml
     lazy_priority_queue (0.1.1)
-    listen (3.6.0)
+    listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     memoist (0.16.2)
@@ -114,13 +114,13 @@ GEM
       racc (~> 1.4)
     nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
-    oj (3.12.3)
+    oj (3.13.7)
     padrino-helpers (0.14.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.14.4)
       tilt (>= 1.4.1, < 3)
     padrino-support (0.14.4)
-    parallel (1.20.1)
+    parallel (1.21.0)
     parslet (2.0.0)
     public_suffix (4.0.6)
     racc (1.5.2)
