@@ -17,5 +17,7 @@ negatively impact your SEO.
 To generate a redirect in Middleman, add the following to `config.rb`:
 
 ```ruby
-redirect "/my/old/path.html", to: "/my/new/path.html"
+redirect "my/old/path.html", to: "/my/new/path.html"
 ```
+
+The old path should not have a leading slash and should refer to a file such as `path/index.html`, not just a path.
