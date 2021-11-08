@@ -215,3 +215,19 @@ end
   [middleman-smusher]: https://github.com/middleman/middleman-smusher
   [build]: http://rubydoc.info/gems/middleman-core/Middleman/Cli/Build
   [Thor actions]: http://rubydoc.info/github/wycats/thor/master/Thor/Actions
+
+### その他のコールバック
+
+1. `initialized`: config.rb のパース前, 拡張機能の register 前
+1. `configure`: `configure` ブロックが呼び出される前 (環境設定で 1 度, モード設定でもう 1 度)
+1. `before_extensions`: `ExtensionManager` がインスタンスかされる前
+1. `before_instance_block`: configuration コンテキストにブロックが渡される前
+1. `before_sitemap`: `SiteMap::Store` がインスタンス化される前, つまりサイトマップが初期化される前
+1. `before_configuration`: 設定がパースされる前に呼び出され, 主に拡張機能に利用
+1. `after_configuration_eval`: 設定がパースされた後に呼び出され, pre-extension コールバックの前
+1. `ready`: すべての準備が完了した時
+1. `before_build`: サイトのビルドプロセスの前
+1. `before_shutdown`: アプリケーションの終了をユーザーに通知する `shutdown!` メソッドの前
+1. `before`: Rack リクエストの前
+1. `before_server`: `PreviewServer` が用意される前
+1. `reload`: リロードイベントでアプリケーションが初期化される前

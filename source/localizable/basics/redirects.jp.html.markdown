@@ -17,5 +17,7 @@ Middleman は訪問者をリダイレクトさせる HTML ファイルを
 Middleman でリダイレクト HTML を生成するために, 次のコードを `config.rb` に追加:
 
 ```ruby
-redirect "/my/old/path.html", to: "/my/new/path.html"
+redirect "my/old/path.html", to: "/my/new/path.html"
 ```
+
+リダイレクト前のパスは先頭にスラッシュをつけず, `path/index.html` のようにファイルを参照してください。
