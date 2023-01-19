@@ -123,7 +123,7 @@ GEM
     parslet (2.0.0)
     public_suffix (5.0.0)
     racc (1.6.0)
-    rack (2.2.4)
+    rack (2.2.6.2)
     rainbow (3.1.1)
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
