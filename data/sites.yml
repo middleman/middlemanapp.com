@@ -290,6 +290,9 @@ built:
   - url: http://lrug.org
     title: "London Ruby User Group"
     source: https://github.com/lrug/lrug.org
+  - url: https://ledger-cli.org
+    title: Website for the open source command-line double-entry accounting system named ledger
+    source: https://github.com/ledger/ledger.github.io
   - url: http://www.krivoydesigner.com/
     title: "Sergey Krivoy | Web Designer from Saint P."
     source: https://github.com/nostrism/nostrism.github.io/tree/middleman
